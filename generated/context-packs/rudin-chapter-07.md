@@ -1,11 +1,11 @@
-# Context Pack: rudin Chapter 6
+# Context Pack: rudin Chapter 7
 
 > Auto-generated. Do not edit manually.
 
 ## 1. Extraction Target
 
 - **Source**: Walter Rudin — *Principles of Mathematical Analysis*
-- **Chapter**: 6
+- **Chapter**: 7
 - **Source key**: `rudin`
 - **Mode**: extraction
 
@@ -18,18 +18,18 @@ Nodes from previous chapters most reused across the graph:
 | `definition.neighborhood-limit-point-open-closed` | definition | 16 | Topological Concepts in Metric Spaces |
 | `definition.compact-set` | definition | 13 | Compact Set |
 | `definition.convergent-sequence` | definition | 12 | Convergent Sequence |
+| `definition.riemann-stieltjes-integral` | definition | 11 | Riemann-Stieltjes Integral |
 | `definition.derivative-at-point` | definition | 10 | Derivative of a function at a point |
 | `theorem.mean-value-theorem` | theorem | 10 | The Mean Value Theorem |
 | `definition.continuity-metric` | definition | 9 | Continuity at a Point (Metric Spaces) |
 | `theorem.chain-rule` | theorem | 9 | The Chain Rule |
+| `theorem.riemann-stieltjes-integrability-criterion` | theorem | 9 | Integrability Criterion for the Riemann-Stieltjes Integral |
 | `definition.sequence` | definition | 8 | Sequence |
 | `definition.supremum` | definition | 8 | Supremum (Least Upper Bound) |
 | `theorem.comparison-test-series` | theorem | 8 | The Comparison Test for Series |
 | `definition.field` | definition | 7 | Field |
 | `definition.least-upper-bound-property` | definition | 6 | Least-Upper-Bound Property |
 | `definition.metric-space` | definition | 6 | Metric Space |
-| `theorem.geometric-series` | theorem | 6 | Geometric series |
-| `definition.complex-number` | definition | 5 | Complex Number |
 
 ## 3. Source Locator Map
 
@@ -262,49 +262,31 @@ Textbook locators → MKG node IDs for this source (all chapters up to target):
 
 ## 4. Related Existing Nodes
 
-### Dependencies used by Chapter 5 proofs
+### Dependencies used by Chapter 6 proofs
 
 | Node | Count | Type |
 |------|-------|------|
-| `definition.derivative-at-point` | 6 | definition |
-| `theorem.limit-laws` | 4 | theorem |
-| `theorem.mean-value-theorem` | 4 | theorem |
-| `theorem.extreme-value-theorem-compact-metric` | 2 | theorem |
-| `theorem.fermat-theorem` | 2 | theorem |
-| `theorem.generalized-mean-value-theorem` | 2 | theorem |
-| `theorem.differentiable-implies-continuous` | 2 | theorem |
-| `definition.continuity-metric` | 1 | definition |
-| `theorem.darboux-theorem` | 1 | theorem |
-| `definition.local-maximum` | 1 | definition |
-| `definition.limit-extended-real` | 1 | definition |
-| `definition.second-derivative` | 1 | definition |
+| `definition.riemann-stieltjes-integral` | 11 | definition |
+| `theorem.riemann-stieltjes-integrability-criterion` | 9 | theorem |
+| `theorem.compact-uniform-continuity` | 4 | theorem |
+| `theorem.riemann-stieltjes-integral-properties` | 4 | theorem |
+| `definition.refinement-partition` | 4 | definition |
+| `definition.continuity-metric` | 3 | definition |
+| `theorem.refinement-upper-lower-sums` | 3 | theorem |
+| `definition.vector-valued-integral` | 2 | definition |
+| `theorem.fundamental-theorem-of-calculus` | 2 | theorem |
+| `proposition.integrability-criterion-consequences` | 2 | proposition |
+| `theorem.mean-value-theorem` | 2 | theorem |
+| `theorem.composition-preserves-integrability` | 2 | theorem |
+| `definition.curve-arc-rectifiable` | 1 | definition |
+| `theorem.ftc-vector-valued` | 1 | theorem |
+| `theorem.integral-triangle-inequality-vector` | 1 | theorem |
 
 ### Topic-relevant nodes from other sources
 
-Topic keywords: integral, riemann, stieltjes, partition, integrability, fundamental theorem, integration by parts, rectifiable, arc length
+Topic keywords: sequence of functions, uniform convergence, equicontinuous, stone-weierstrass, pointwise
 
-| Node | Type | Title | Relevance |
-|------|------|-------|-----------|
-| `theorem.integrability-of-continuous-functions` | theorem | Integrability of continuous functions | 2 |
-| `theorem.integration-by-parts-definite` | theorem | Integration by Parts for Definite Integrals | 2 |
-| `definition.arc-length-parametric` | definition | Arc length of a parametric curve | 1 |
-| `definition.arc-length-polar` | definition | Arc length in polar coordinates | 1 |
-| `definition.arc-length` | definition | Arc length | 1 |
-| `definition.definite-integral` | definition | Definite integral | 1 |
-| `definition.improper-integral-type1` | definition | Improper integral (Type 1 — infinite interval) | 1 |
-| `definition.improper-integral-type2` | definition | Improper integral (Type 2 — discontinuous integrand) | 1 |
-| `definition.indefinite-integral` | definition | Indefinite integral | 1 |
-| `proposition.integral-comparison` | proposition | Comparison properties of the integral | 1 |
-| `proposition.integral-properties` | proposition | Properties of the definite integral | 1 |
-| `proposition.integrals-symmetric-functions` | proposition | Integrals of symmetric functions | 1 |
-| `theorem.comparison-theorem-integrals` | theorem | Comparison Theorem for Improper Integrals | 1 |
-| `theorem.ftc-part1` | theorem | The Fundamental Theorem of Calculus, Part 1 | 1 |
-| `theorem.ftc-part2` | theorem | The Fundamental Theorem of Calculus, Part 2 | 1 |
-| `theorem.integral-test` | theorem | The Integral Test | 1 |
-| `theorem.integration-by-parts` | theorem | Integration by Parts | 1 |
-| `theorem.mean-value-theorem-integrals` | theorem | Mean Value Theorem for Integrals | 1 |
-| `theorem.net-change-theorem` | theorem | The Net Change Theorem | 1 |
-| `theorem.substitution-rule-definite` | theorem | The Substitution Rule for Definite Integrals | 1 |
+_No topic-relevant nodes found in other sources._
 
 ## 5. Multi-Source Collision Candidates
 
@@ -342,39 +324,22 @@ Nodes from other sources that may overlap with the target extraction.
 Based on topic keywords and nearby chapters (no truncation):
 
 
-**definition** (14):
+**definition** (9):
 - `definition.arc-length`: Arc length
-- `definition.arc-length-parametric`: Arc length of a parametric curve
-- `definition.arc-length-polar`: Arc length in polar coordinates
 - `definition.area-between-curves`: Area between curves
-- `definition.area-under-curve`: Area under a curve
 - `definition.average-value-of-function`: Average value of a function
-- `definition.definite-integral`: Definite integral
 - `definition.improper-integral-type1`: Improper integral (Type 1 — infinite interval)
 - `definition.improper-integral-type2`: Improper integral (Type 2 — discontinuous integrand)
-- `definition.indefinite-integral`: Indefinite integral
-- `definition.sigma-notation`: Sigma notation
+- `definition.surface-area-of-revolution`: Surface area of revolution
 - `definition.volume-by-cross-sections`: Volume by cross-sections
 - `definition.volume-by-cylindrical-shells`: Volume by cylindrical shells
 - `definition.volume-of-revolution`: Volume of revolution (disk/washer method)
 
-**proposition** (3):
-- `proposition.integral-comparison`: Comparison properties of the integral
-- `proposition.integral-properties`: Properties of the definite integral
-- `proposition.integrals-symmetric-functions`: Integrals of symmetric functions
-
-**theorem** (11):
+**theorem** (4):
 - `theorem.comparison-theorem-integrals`: Comparison Theorem for Improper Integrals
-- `theorem.ftc-part1`: The Fundamental Theorem of Calculus, Part 1
-- `theorem.ftc-part2`: The Fundamental Theorem of Calculus, Part 2
-- `theorem.integrability-of-continuous-functions`: Integrability of continuous functions
-- `theorem.integral-test`: The Integral Test
 - `theorem.integration-by-parts`: Integration by Parts
 - `theorem.integration-by-parts-definite`: Integration by Parts for Definite Integrals
 - `theorem.mean-value-theorem-integrals`: Mean Value Theorem for Integrals
-- `theorem.net-change-theorem`: The Net Change Theorem
-- `theorem.substitution-rule`: The Substitution Rule
-- `theorem.substitution-rule-definite`: The Substitution Rule for Definite Integrals
 
 ## 6. Naming Conventions
 
