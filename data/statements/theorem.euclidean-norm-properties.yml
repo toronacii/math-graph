@@ -1,0 +1,33 @@
+id: theorem.euclidean-norm-properties
+type: theorem
+status: draft
+
+title:
+  en: Properties of the Euclidean Norm
+
+statement:
+  natural:
+    en: >
+      Suppose x, y, z ∈ R^k and α is real. Then (a) |x| ≥ 0,
+      (b) |x| = 0 if and only if x = 0, (c) |αx| = |α||x|,
+      (d) |x · y| ≤ |x||y| (Cauchy-Schwarz), (e) |x + y| ≤ |x| + |y|
+      (triangle inequality), (f) |x - z| ≤ |x - y| + |y - z|
+      (triangle inequality for distance).
+  latex: |
+    |x \cdot y| \leq |x||y|, \quad |x+y| \leq |x|+|y|, \quad |x-z| \leq |x-y|+|y-z|
+
+proved_by:
+  - proof.euclidean-norm-properties.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "1"
+    section: "1.37"
+
+confidence: high
+notes: >
+  Rudin Theorem 1.37. Parts (a), (b), (f) make R^k a metric space
+  (see Chapter 2). Part (d) is an immediate consequence of the
+  Schwarz inequality (Theorem 1.35).

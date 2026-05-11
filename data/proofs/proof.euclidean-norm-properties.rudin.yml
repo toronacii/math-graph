@@ -1,0 +1,23 @@
+id: proof.euclidean-norm-properties.rudin
+type: proof
+status: draft
+
+proves: theorem.euclidean-norm-properties
+
+uses:
+  - definition.euclidean-k-space
+  - theorem.schwarz-inequality
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "1"
+    section: "1.37"
+
+confidence: high
+notes: >
+  (a)-(c) obvious. (d) is the Schwarz inequality applied to
+  real components. (e) |x+y|² = |x|² + 2x·y + |y|² ≤ (|x|+|y|)²
+  using (d). (f) follows from (e) with substitution x→x-y, y→y-z.

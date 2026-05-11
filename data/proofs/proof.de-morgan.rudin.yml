@@ -1,0 +1,21 @@
+id: proof.de-morgan.rudin
+type: proof
+status: draft
+
+proves: proposition.de-morgan
+
+uses:
+  - definition.union-intersection
+  - definition.set-membership-subset
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "2"
+    section: "2.22"
+
+confidence: high
+notes: >
+  x ∈ (⋃Eα)ᶜ iff x ∉ Eα for any α iff x ∈ Eαᶜ for every α iff x ∈ ⋂Eαᶜ.

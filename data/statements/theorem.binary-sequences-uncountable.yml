@@ -1,0 +1,25 @@
+id: theorem.binary-sequences-uncountable
+type: theorem
+status: draft
+
+title:
+  en: The Set of All Binary Sequences is Uncountable
+
+statement:
+  natural:
+    en: >
+      Let A be the set of all sequences whose elements are the digits 0 and 1. Then A is uncountable.
+
+proved_by:
+  - proof.binary-sequences-uncountable.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "2"
+    section: "2.14"
+
+confidence: high
+notes: >
+  Theorem 2.14 in Rudin. Cantor's diagonal argument.

@@ -1,0 +1,23 @@
+id: proof.irrationality-of-sqrt-2.rudin
+type: proof
+status: draft
+
+proves: proposition.irrationality-of-sqrt-2
+
+uses:
+  - definition.rational-numbers
+
+style: contradiction
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "1"
+    section: "1.1"
+
+confidence: high
+notes: >
+  Proof by contradiction: if p = m/n with m, n not both even,
+  then p² = 2 implies m² = 2n², so m is even, hence m² divisible
+  by 4, hence n² even, hence n even — contradiction. The gap in Q
+  is shown by constructing q = (2p+2)/(p+2).

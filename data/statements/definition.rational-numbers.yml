@@ -1,0 +1,22 @@
+id: definition.rational-numbers
+type: definition
+status: draft
+
+title:
+  en: Rational Numbers
+
+statement:
+  natural:
+    en: >
+      The set of all rational numbers is denoted by Q.
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "1"
+    section: "1.4"
+
+confidence: high
+notes: >
+  Rudin 1.4. Notation convention for the rest of the book.

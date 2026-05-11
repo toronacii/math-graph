@@ -1,0 +1,22 @@
+id: proof.unions-intersections-open-closed.rudin
+type: proof
+status: draft
+
+proves: theorem.unions-intersections-open-closed
+
+uses:
+  - definition.neighborhood-limit-point-open-closed
+  - proposition.de-morgan
+  - proposition.open-iff-complement-closed
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "2"
+    section: "2.24"
+
+confidence: high
+notes: >
+  (a) x ∈ ⋃Gα means x ∈ some Gα, interior there, hence interior in union. (b) By De Morgan + (a). (c) Take r = min(r₁,...,rₙ). (d) By De Morgan + (c).

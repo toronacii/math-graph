@@ -1,0 +1,22 @@
+id: proof.closed-intersect-compact.rudin
+type: proof
+status: draft
+
+proves: corollary.closed-intersect-compact
+
+uses:
+  - proposition.compact-is-closed
+  - proposition.closed-subset-compact
+  - theorem.unions-intersections-open-closed
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "2"
+    section: "2.35"
+
+confidence: high
+notes: >
+  F ∩ K is closed (intersection of two closed sets), and F ∩ K ⊂ K, so Theorem 2.35 applies.

@@ -1,0 +1,25 @@
+id: theorem.k-cell-compact
+type: theorem
+status: draft
+
+title:
+  en: Every k-Cell is Compact
+
+statement:
+  natural:
+    en: >
+      Every k-cell is compact.
+
+proved_by:
+  - proof.k-cell-compact.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "2"
+    section: "2.40"
+
+confidence: high
+notes: >
+  Theorem 2.40 in Rudin. Key step toward the Heine-Borel theorem.

@@ -1,0 +1,25 @@
+id: proposition.closed-subset-compact
+type: proposition
+status: draft
+
+title:
+  en: Closed Subsets of Compact Sets are Compact
+
+statement:
+  natural:
+    en: >
+      Closed subsets of compact sets are compact.
+
+proved_by:
+  - proof.closed-subset-compact.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "2"
+    section: "2.35"
+
+confidence: high
+notes: >
+  Theorem 2.35 in Rudin.

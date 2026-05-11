@@ -19,6 +19,7 @@ __pycache__/
 
 # Generated artifacts (kept locally only; CI rebuilds them)
 generated/graph/*.json
+generated/graph/*.db
 generated/exports/*.graphml
 !generated/graph/.gitkeep
 !generated/exports/.gitkeep

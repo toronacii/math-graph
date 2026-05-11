@@ -1,0 +1,12 @@
+work: Principles of Mathematical Analysis
+author: Walter Rudin
+edition: "3"
+language: en
+publisher: McGraw-Hill
+year: 1976
+local_file: "Principles of mathematical analysis - Walter Rudin.pdf"
+notes: >
+  Third edition. Commonly known as "Baby Rudin". One of the standard
+  references for undergraduate real analysis. The PDF is copyrighted
+  and is NOT committed to the repository; contributors must obtain it
+  independently.

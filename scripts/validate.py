@@ -10,6 +10,9 @@ Checks performed:
    ``proved_by`` (and vice versa).
 6. The induced statement→proof→statement graph is acyclic.
 
+When the SQLite database exists, checks 3-6 run via SQL queries for
+efficiency.  Otherwise they fall back to in-memory validation.
+
 Exit code is 0 on success, 1 if any error is found.
 """
 
@@ -21,6 +24,9 @@ from pathlib import Path
 import networkx as nx
 
 from scripts.loader import DATA_DIR, Dataset, load_dataset
+
+
+# ---- in-memory checks (fallback when DB is unavailable) ---------------------
 
 
 def _check_references(ds: Dataset) -> list[str]:
@@ -84,12 +90,29 @@ def _check_acyclic(ds: Dataset) -> list[str]:
     return [f"cyclic dependency detected: {chain}"]
 
 
+# ---- public API -------------------------------------------------------------
+
+
 def validate(data_dir: Path = DATA_DIR) -> list[str]:
+    """Validate all entities.  Returns a list of error strings (empty = OK)."""
     ds = load_dataset(data_dir)
+
+    # Phase 1: schema errors from Pydantic
     errors = [f"{e.path}: {e.message}" for e in ds.errors]
-    errors.extend(_check_references(ds))
-    errors.extend(_check_symmetry(ds))
-    errors.extend(_check_acyclic(ds))
+
+    # Phase 2: integrity checks — try SQL first, fall back to in-memory
+    try:
+        from scripts.build_db import build_db, validate_db
+
+        con = build_db(ds)
+        errors.extend(validate_db(con))
+        con.close()
+    except Exception:
+        # Fallback to in-memory checks
+        errors.extend(_check_references(ds))
+        errors.extend(_check_symmetry(ds))
+        errors.extend(_check_acyclic(ds))
+
     return errors
 
 

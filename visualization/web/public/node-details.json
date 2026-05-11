@@ -1,4 +1,50 @@
 {
+  "corollary.at-most-countable-union": {
+    "confidence": "high",
+    "id": "corollary.at-most-countable-union",
+    "kind": "statement",
+    "natural": {
+      "en": "If A is at most countable, and for every α ∈ A, Bα is at most countable, then T = ⋃α Bα is at most countable."
+    },
+    "notes": "Corollary to Theorem 2.12 in Rudin. Extends the countable union result to at most countable index sets and sets.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.12",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "At Most Countable Union of At Most Countable Sets"
+    },
+    "type": "corollary"
+  },
+  "corollary.closed-intersect-compact": {
+    "confidence": "high",
+    "id": "corollary.closed-intersect-compact",
+    "kind": "statement",
+    "natural": {
+      "en": "If F is closed and K is compact, then F ∩ K is compact."
+    },
+    "notes": "Corollary to Theorem 2.35 in Rudin. Follows from compact-is-closed and closed-subset-compact.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.35",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Intersection of a Closed Set and a Compact Set is Compact"
+    },
+    "type": "corollary"
+  },
   "corollary.difference-rule": {
     "confidence": "high",
     "id": "corollary.difference-rule",
@@ -51,6 +97,52 @@
     },
     "type": "corollary"
   },
+  "corollary.finite-set-no-limit-points": {
+    "confidence": "high",
+    "id": "corollary.finite-set-no-limit-points",
+    "kind": "statement",
+    "natural": {
+      "en": "A finite point set has no limit points."
+    },
+    "notes": "Corollary to Theorem 2.20 in Rudin.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.20",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "A Finite Point Set Has No Limit Points"
+    },
+    "type": "corollary"
+  },
+  "corollary.interval-uncountable": {
+    "confidence": "high",
+    "id": "corollary.interval-uncountable",
+    "kind": "statement",
+    "natural": {
+      "en": "Every interval [a,b] with a < b is uncountable. In particular, the set of all real numbers is uncountable."
+    },
+    "notes": "Corollary to Theorem 2.43 in Rudin. Follows because [a,b] is a perfect set.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.43",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Every Interval [a,b] is Uncountable"
+    },
+    "type": "corollary"
+  },
   "corollary.limit-cosx-minus-1-over-x": {
     "confidence": "medium",
     "id": "corollary.limit-cosx-minus-1-over-x",
@@ -77,6 +169,53 @@
     },
     "type": "corollary"
   },
+  "corollary.nested-compact-nonempty": {
+    "confidence": "high",
+    "id": "corollary.nested-compact-nonempty",
+    "kind": "statement",
+    "natural": {
+      "en": "If {Kₙ} is a sequence of nonempty compact sets with Kₙ ⊃ Kₙ₊₁, then ⋂Kₙ is nonempty."
+    },
+    "notes": "Corollary to Theorem 2.36 in Rudin. Nested decreasing sequence version of the finite intersection property.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.36",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Nested Sequence of Compact Sets Has Nonempty Intersection"
+    },
+    "type": "corollary"
+  },
+  "corollary.nth-root-of-product": {
+    "confidence": "high",
+    "id": "corollary.nth-root-of-product",
+    "kind": "statement",
+    "latex": "(ab)^{1/n} = a^{1/n} \\cdot b^{1/n}\n",
+    "natural": {
+      "en": "If a and b are positive real numbers and n is a positive integer, then (ab)^(1/n) = a^(1/n) · b^(1/n)."
+    },
+    "notes": "Corollary to Theorem 1.21. Follows from the uniqueness assertion and commutativity of multiplication.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "1",
+        "edition": "3",
+        "section": "1.21",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "nth Root of a Product"
+    },
+    "type": "corollary"
+  },
   "corollary.power-rule-combined-chain": {
     "confidence": "high",
     "id": "corollary.power-rule-combined-chain",
@@ -100,6 +239,29 @@
     "title": {
       "en": "The Power Rule combined with the Chain Rule",
       "es": "Regla de la potencia combinada con la regla de la cadena"
+    },
+    "type": "corollary"
+  },
+  "corollary.rationals-countable": {
+    "confidence": "high",
+    "id": "corollary.rationals-countable",
+    "kind": "statement",
+    "natural": {
+      "en": "The set of all rational numbers is countable."
+    },
+    "notes": "Corollary to Theorem 2.13 in Rudin. Follows from the countability of integer pairs.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.13",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "The Rational Numbers are Countable"
     },
     "type": "corollary"
   },
@@ -513,6 +675,125 @@
     },
     "type": "definition"
   },
+  "definition.closure": {
+    "confidence": "high",
+    "id": "definition.closure",
+    "kind": "statement",
+    "latex": "\\bar{E} = E \\cup E'\n",
+    "natural": {
+      "en": "If X is a metric space, E ⊂ X, and E' denotes the set of all limit points of E in X, then the closure of E is the set E̅ = E ∪ E'."
+    },
+    "notes": "Definition 2.26 from Rudin. The closure is the union of a set with its derived set (set of limit points).\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.26",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Closure of a Set"
+    },
+    "type": "definition"
+  },
+  "definition.compact-set": {
+    "confidence": "high",
+    "id": "definition.compact-set",
+    "kind": "statement",
+    "natural": {
+      "en": "A subset K of a metric space X is compact if every open cover of K contains a finite subcover. That is, if {Gα} covers K, then there exist finitely many indices α₁, ..., αₙ such that K ⊂ Gα₁ ∪ ... ∪ Gαₙ."
+    },
+    "notes": "Definition 2.32 from Rudin. The open-cover definition of compactness.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.32",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Compact Set"
+    },
+    "type": "definition"
+  },
+  "definition.complex-absolute-value": {
+    "confidence": "high",
+    "id": "definition.complex-absolute-value",
+    "kind": "statement",
+    "latex": "|z| = (z\\bar{z})^{1/2}\n",
+    "natural": {
+      "en": "If z is a complex number, its absolute value |z| is the nonnegative square root of zz̄; that is, |z| = (zz̄)^(1/2)."
+    },
+    "notes": "Rudin 1.32. Existence and uniqueness of |z| follows from Theorem 1.21 (existence of nth roots) and Theorem 1.31(d) (zz̄ is real and nonnegative).\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "1",
+        "edition": "3",
+        "section": "1.32",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Absolute Value of a Complex Number"
+    },
+    "type": "definition"
+  },
+  "definition.complex-conjugate": {
+    "confidence": "high",
+    "id": "definition.complex-conjugate",
+    "kind": "statement",
+    "latex": "z = a + bi \\implies \\bar{z} = a - bi, \\quad a = \\operatorname{Re}(z), \\quad b = \\operatorname{Im}(z)\n",
+    "natural": {
+      "en": "If a, b are real and z = a + bi, then the complex number z̄ = a - bi is called the conjugate of z. The numbers a and b are the real part and the imaginary part of z, respectively. We write a = Re(z), b = Im(z)."
+    },
+    "notes": "Rudin 1.30.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "1",
+        "edition": "3",
+        "section": "1.30",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Complex Conjugate"
+    },
+    "type": "definition"
+  },
+  "definition.complex-number": {
+    "confidence": "high",
+    "id": "definition.complex-number",
+    "kind": "statement",
+    "latex": "x + y = (a+c,\\; b+d), \\quad xy = (ac - bd,\\; ad + bc)\n",
+    "natural": {
+      "en": "A complex number is an ordered pair (a, b) of real numbers. We write x = y if and only if a = c and b = d, where x = (a, b) and y = (c, d). Addition and multiplication are defined by x + y = (a + c, b + d) and xy = (ac - bd, ad + bc)."
+    },
+    "notes": "Rudin 1.24. Complex numbers defined constructively as ordered pairs of reals, without reference to √(-1).\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "1",
+        "edition": "3",
+        "section": "1.24",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Complex Number"
+    },
+    "type": "definition"
+  },
   "definition.composition-of-functions": {
     "confidence": "medium",
     "id": "definition.composition-of-functions",
@@ -889,6 +1170,53 @@
     },
     "type": "definition"
   },
+  "definition.equivalence-cardinality": {
+    "confidence": "high",
+    "id": "definition.equivalence-cardinality",
+    "kind": "statement",
+    "natural": {
+      "en": "If there exists a 1-1 mapping of A onto B, we say A and B can be put in 1-1 correspondence, or that A and B have the same cardinal number, or that A and B are equivalent, and write A ~ B. This relation is reflexive, symmetric, and transitive (an equivalence relation)."
+    },
+    "notes": "Definition 2.3 from Rudin. Establishes cardinal equivalence as an equivalence relation.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.3",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Cardinal Equivalence"
+    },
+    "type": "definition"
+  },
+  "definition.euclidean-k-space": {
+    "confidence": "high",
+    "id": "definition.euclidean-k-space",
+    "kind": "statement",
+    "latex": "\\mathbf{x} \\cdot \\mathbf{y} = \\sum_{i=1}^{k} x_i y_i, \\quad |\\mathbf{x}| = \\left(\\sum_{i=1}^{k} x_i^2\\right)^{1/2}\n",
+    "natural": {
+      "en": "For each positive integer k, let R^k be the set of all ordered k-tuples x = (x_1, ..., x_k), where x_1, ..., x_k are real numbers called the coordinates of x. Vector addition and scalar multiplication are defined componentwise. The inner product of x and y is x · y = Σ x_i y_i, and the norm of x is |x| = (x · x)^(1/2). The structure (R^k, ·, |·|) is called euclidean k-space."
+    },
+    "notes": "Rudin 1.36. R^1 is the real line, R^2 is the plane (complex plane).\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "1",
+        "edition": "3",
+        "section": "1.36",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Euclidean k-Space"
+    },
+    "type": "definition"
+  },
   "definition.even-function": {
     "confidence": "medium",
     "id": "definition.even-function",
@@ -941,6 +1269,76 @@
     },
     "type": "definition"
   },
+  "definition.extended-reals": {
+    "confidence": "high",
+    "id": "definition.extended-reals",
+    "kind": "statement",
+    "latex": "-\\infty < x < +\\infty \\quad \\text{for every } x \\in \\mathbb{R}\n",
+    "natural": {
+      "en": "The extended real number system consists of the real field R and two symbols, +∞ and -∞, with -∞ < x < +∞ for every x ∈ R. Every nonempty subset of the extended reals has a least upper bound. The extended real number system does not form a field."
+    },
+    "notes": "Rudin 1.23. Arithmetic conventions with ±∞ are defined but the system is not a field.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "1",
+        "edition": "3",
+        "section": "1.23",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Extended Real Number System"
+    },
+    "type": "definition"
+  },
+  "definition.field": {
+    "confidence": "high",
+    "id": "definition.field",
+    "kind": "statement",
+    "natural": {
+      "en": "A field is a set F with two operations, called addition and multiplication, which satisfy the following axioms: (A1) closure under addition, (A2) commutativity of addition, (A3) associativity of addition, (A4) existence of additive identity 0, (A5) existence of additive inverses; (M1) closure under multiplication, (M2) commutativity of multiplication, (M3) associativity of multiplication, (M4) existence of multiplicative identity 1 ≠ 0, (M5) existence of multiplicative inverses for nonzero elements; and (D) the distributive law x(y + z) = xy + xz."
+    },
+    "notes": "Rudin 1.12. Q is a field with the usual arithmetic operations.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "1",
+        "edition": "3",
+        "section": "1.12",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Field"
+    },
+    "type": "definition"
+  },
+  "definition.finite-countable-sets": {
+    "confidence": "high",
+    "id": "definition.finite-countable-sets",
+    "kind": "statement",
+    "natural": {
+      "en": "For any positive integer n, let Jₙ = {1, 2, ..., n} and let J be the set of all positive integers. A set A is: (a) finite if A ~ Jₙ for some n (the empty set is also finite), (b) infinite if A is not finite, (c) countable if A ~ J, (d) uncountable if neither finite nor countable, (e) at most countable if finite or countable."
+    },
+    "notes": "Definition 2.4 from Rudin. Classifies sets by cardinality relative to initial segments of positive integers.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.4",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Finite, Countable, and Uncountable Sets"
+    },
+    "type": "definition"
+  },
   "definition.first-order-linear-equation": {
     "confidence": "high",
     "id": "definition.first-order-linear-equation",
@@ -989,6 +1387,29 @@
     "title": {
       "en": "Function",
       "es": "Función"
+    },
+    "type": "definition"
+  },
+  "definition.function-mapping": {
+    "confidence": "high",
+    "id": "definition.function-mapping",
+    "kind": "statement",
+    "natural": {
+      "en": "Consider two sets A and B. A function f from A to B (a mapping of A into B) assigns to each element x of A exactly one element f(x) of B. A is the domain of f. The set of all values f(x) is the range of f. If f(A) = B, f maps A onto B. If f(x₁) ≠ f(x₂) whenever x₁ ≠ x₂, f is one-to-one. f(E) is the image of E under f; f⁻¹(E) is the inverse image of E under f."
+    },
+    "notes": "Definitions 2.1 and 2.2 from Rudin. Combines function, domain, range, onto, one-to-one, image, and inverse image.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.1",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Function and Mapping"
     },
     "type": "definition"
   },
@@ -1115,6 +1536,30 @@
     "title": {
       "en": "Hyperbola",
       "es": "Hipérbola"
+    },
+    "type": "definition"
+  },
+  "definition.imaginary-unit": {
+    "confidence": "high",
+    "id": "definition.imaginary-unit",
+    "kind": "statement",
+    "latex": "i = (0, 1)\n",
+    "natural": {
+      "en": "The imaginary unit is defined as i = (0, 1)."
+    },
+    "notes": "Rudin 1.27. The notation i = (0,1) connects the ordered-pair construction to the classical a + bi form.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "1",
+        "edition": "3",
+        "section": "1.27",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Imaginary Unit"
     },
     "type": "definition"
   },
@@ -1473,6 +1918,29 @@
     },
     "type": "definition"
   },
+  "definition.least-upper-bound-property": {
+    "confidence": "high",
+    "id": "definition.least-upper-bound-property",
+    "kind": "statement",
+    "natural": {
+      "en": "An ordered set S is said to have the least-upper-bound property if the following is true: if E ⊂ S, E is not empty, and E is bounded above, then sup E exists in S."
+    },
+    "notes": "Rudin 1.10. Example 1.9(a) shows that Q does not have the least-upper-bound property. This is the completeness axiom for R.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "1",
+        "edition": "3",
+        "section": "1.10",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Least-Upper-Bound Property"
+    },
+    "type": "definition"
+  },
   "definition.left-hand-limit": {
     "confidence": "medium",
     "id": "definition.left-hand-limit",
@@ -1728,6 +2196,30 @@
     },
     "type": "definition"
   },
+  "definition.metric-space": {
+    "confidence": "high",
+    "id": "definition.metric-space",
+    "kind": "statement",
+    "latex": "d(p,q) \\geq 0,\\quad d(p,q) = d(q,p),\\quad d(p,q) \\leq d(p,r) + d(r,q)\n",
+    "natural": {
+      "en": "A set X is a metric space if with any two points p and q of X there is associated a real number d(p,q), called the distance, such that: (a) d(p,q) > 0 if p ≠ q and d(p,p) = 0, (b) d(p,q) = d(q,p), (c) d(p,q) ≤ d(p,r) + d(r,q) for any r ∈ X (triangle inequality)."
+    },
+    "notes": "Definition 2.15 from Rudin. Introduces metric spaces via distance function axioms.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.15",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Metric Space"
+    },
+    "type": "definition"
+  },
   "definition.natural-exponential-function": {
     "confidence": "medium",
     "id": "definition.natural-exponential-function",
@@ -1777,6 +2269,29 @@
     "title": {
       "en": "Natural logarithm",
       "es": "Logaritmo natural"
+    },
+    "type": "definition"
+  },
+  "definition.neighborhood-limit-point-open-closed": {
+    "confidence": "high",
+    "id": "definition.neighborhood-limit-point-open-closed",
+    "kind": "statement",
+    "natural": {
+      "en": "In a metric space X: (a) A neighborhood of p is Nr(p) = {q : d(p,q) < r}. (b) p is a limit point of E if every neighborhood of p contains q ≠ p with q ∈ E. (c) p ∈ E is isolated if p is not a limit point of E. (d) E is closed if every limit point of E is in E. (e) p is an interior point of E if some neighborhood of p is contained in E. (f) E is open if every point of E is interior. (g) Eᶜ is the complement of E. (h) E is perfect if E is closed and every point is a limit point. (i) E is bounded if it lies in some ball. (j) E is dense in X if every point of X is a limit point of E or a point of E."
+    },
+    "notes": "Definition 2.18 from Rudin. Central topological definitions for metric spaces including neighborhood, limit point, isolated point, closed, open, interior, complement, perfect, bounded, and dense.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.18",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Topological Concepts in Metric Spaces"
     },
     "type": "definition"
   },
@@ -1855,6 +2370,98 @@
     "title": {
       "en": "One-to-one function",
       "es": "Función inyectiva (uno a uno)"
+    },
+    "type": "definition"
+  },
+  "definition.open-cover": {
+    "confidence": "high",
+    "id": "definition.open-cover",
+    "kind": "statement",
+    "natural": {
+      "en": "An open cover of a set E in a metric space X is a collection {Gα} of open subsets of X such that E ⊂ ⋃α Gα."
+    },
+    "notes": "Definition 2.31 from Rudin. Prerequisite for defining compactness.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.31",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Open Cover"
+    },
+    "type": "definition"
+  },
+  "definition.order-relation": {
+    "confidence": "high",
+    "id": "definition.order-relation",
+    "kind": "statement",
+    "natural": {
+      "en": "Let S be a set. An order on S is a relation, denoted by <, with the following two properties: (i) If x ∈ S and y ∈ S then one and only one of the statements x < y, x = y, y < x is true (trichotomy). (ii) If x, y, z ∈ S, if x < y and y < z, then x < z (transitivity)."
+    },
+    "notes": "Rudin 1.5. This is a total (linear) order. The notation x ≤ y means x < y or x = y.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "1",
+        "edition": "3",
+        "section": "1.5",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Order Relation"
+    },
+    "type": "definition"
+  },
+  "definition.ordered-field": {
+    "confidence": "high",
+    "id": "definition.ordered-field",
+    "kind": "statement",
+    "natural": {
+      "en": "An ordered field is a field F which is also an ordered set, such that (i) x + y < x + z if y < z, for all x, y, z ∈ F, and (ii) xy > 0 if x > 0 and y > 0. If x > 0, we call x positive; if x < 0, x is negative."
+    },
+    "notes": "Rudin 1.17. Q is an ordered field. The compatibility conditions ensure that order interacts properly with the field operations.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "1",
+        "edition": "3",
+        "section": "1.17",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Ordered Field"
+    },
+    "type": "definition"
+  },
+  "definition.ordered-set": {
+    "confidence": "high",
+    "id": "definition.ordered-set",
+    "kind": "statement",
+    "natural": {
+      "en": "An ordered set is a set S in which an order is defined."
+    },
+    "notes": "Rudin 1.6. Q is an ordered set with the usual order r < s defined to mean s - r is a positive rational.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "1",
+        "edition": "3",
+        "section": "1.6",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Ordered Set"
     },
     "type": "definition"
   },
@@ -2110,6 +2717,29 @@
     },
     "type": "definition"
   },
+  "definition.rational-numbers": {
+    "confidence": "high",
+    "id": "definition.rational-numbers",
+    "kind": "statement",
+    "natural": {
+      "en": "The set of all rational numbers is denoted by Q."
+    },
+    "notes": "Rudin 1.4. Notation convention for the rest of the book.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "1",
+        "edition": "3",
+        "section": "1.4",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Rational Numbers"
+    },
+    "type": "definition"
+  },
   "definition.reflection": {
     "confidence": "medium",
     "id": "definition.reflection",
@@ -2237,6 +2867,29 @@
     },
     "type": "definition"
   },
+  "definition.segment-interval-cell-ball": {
+    "confidence": "high",
+    "id": "definition.segment-interval-cell-ball",
+    "kind": "statement",
+    "natural": {
+      "en": "The segment (a,b) is the set of all real x with a < x < b. The interval [a,b] is the set with a ≤ x ≤ b. A k-cell is the set of points in Rk whose coordinates satisfy aᵢ ≤ xᵢ ≤ bᵢ. The open ball B(x,r) is {y ∈ Rk : |y-x| < r}; the closed ball uses ≤. A set E ⊂ Rk is convex if λx + (1-λ)y ∈ E whenever x,y ∈ E and 0 < λ < 1."
+    },
+    "notes": "Definition 2.17 from Rudin. Introduces segments, intervals, k-cells, open and closed balls, and convexity in Euclidean space.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.17",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Segment, Interval, k-Cell, and Ball"
+    },
+    "type": "definition"
+  },
   "definition.separable-equation": {
     "confidence": "high",
     "id": "definition.separable-equation",
@@ -2263,28 +2916,73 @@
     },
     "type": "definition"
   },
-  "definition.sequence": {
+  "definition.separated-connected": {
     "confidence": "high",
-    "id": "definition.sequence",
+    "id": "definition.separated-connected",
     "kind": "statement",
-    "latex": "\\lim_{n \\to \\infty} a_n = L\n\\iff\n\\forall\\,\\varepsilon > 0,\\;\\exists\\,N:\\;\nn > N \\Rightarrow |a_n - L| < \\varepsilon\n",
     "natural": {
-      "en": "A sequence is a list of numbers written in a definite order: a₁, a₂, a₃, ..., aₙ, ... . A sequence {aₙ} has limit L if for every ε > 0 there is an integer N such that |aₙ - L| < ε whenever n > N. We write lim(n→∞) aₙ = L and say the sequence converges. If no such limit exists, the sequence diverges.",
-      "es": "Una sucesión es una lista de números escritos en un orden definido: a₁, a₂, a₃, ..., aₙ, ... . Una sucesión {aₙ} tiene límite L si para todo ε > 0 existe un entero N tal que |aₙ - L| < ε siempre que n > N. Se escribe lim(n→∞) aₙ = L y se dice que la sucesión converge. Si no existe tal límite, la sucesión diverge."
+      "en": "Two subsets A and B of a metric space X are separated if both A ∩ B̅ and A̅ ∩ B are empty. A set E ⊂ X is connected if E is not a union of two nonempty separated sets."
     },
+    "notes": "Definition 2.45 from Rudin. Connectedness defined via separation.\n",
     "sources": [
       {
-        "author": "James Stewart",
-        "chapter": "11",
-        "edition": "7",
-        "section": "11.1",
-        "work": "Cálculo de una variable — Trascendentes tempranas"
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.45",
+        "work": "Principles of Mathematical Analysis"
       }
     ],
     "status": "draft",
     "title": {
-      "en": "Sequence",
-      "es": "Sucesión"
+      "en": "Separated and Connected Sets"
+    },
+    "type": "definition"
+  },
+  "definition.sequence": {
+    "confidence": "high",
+    "id": "definition.sequence",
+    "kind": "statement",
+    "natural": {
+      "en": "A sequence is a function f defined on the set J of all positive integers. If f(n) = xₙ, the sequence is denoted {xₙ}. The values xₙ are called the terms of the sequence. If xₙ ∈ A for all n, then {xₙ} is a sequence in A."
+    },
+    "notes": "Definition 2.7 from Rudin. A sequence is formally a function from positive integers.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.7",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Sequence"
+    },
+    "type": "definition"
+  },
+  "definition.set-membership-subset": {
+    "confidence": "high",
+    "id": "definition.set-membership-subset",
+    "kind": "statement",
+    "latex": "x \\in A, \\quad x \\notin A, \\quad A \\subset B, \\quad A = B\n",
+    "natural": {
+      "en": "If A is any set, we write x in A to indicate that x is a member of A. If x is not a member of A, we write x not in A. The set which contains no element is called the empty set. If A and B are sets, and if every element of A is an element of B, we say that A is a subset of B, and write A ⊂ B. If in addition there is an element of B not in A, then A is a proper subset of B. If A ⊂ B and B ⊂ A, we write A = B."
+    },
+    "notes": "Rudin 1.3. Standard set-theoretic notation used throughout the book.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "1",
+        "edition": "3",
+        "section": "1.3",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Set, Membership, and Subset"
     },
     "type": "definition"
   },
@@ -2310,6 +3008,54 @@
     "title": {
       "en": "Sigma notation",
       "es": "Notación sigma"
+    },
+    "type": "definition"
+  },
+  "definition.summation-notation": {
+    "confidence": "high",
+    "id": "definition.summation-notation",
+    "kind": "statement",
+    "latex": "x_1 + x_2 + \\cdots + x_n = \\sum_{j=1}^{n} x_j\n",
+    "natural": {
+      "en": "If x_1, ..., x_n are complex numbers, we write x_1 + x_2 + ... + x_n = Σ_{j=1}^{n} x_j."
+    },
+    "notes": "Rudin 1.34. Standard notation convention.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "1",
+        "edition": "3",
+        "section": "1.34",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Summation Notation"
+    },
+    "type": "definition"
+  },
+  "definition.supremum": {
+    "confidence": "high",
+    "id": "definition.supremum",
+    "kind": "statement",
+    "latex": "\\alpha = \\sup E, \\quad \\alpha = \\inf E\n",
+    "natural": {
+      "en": "Suppose S is an ordered set, E ⊂ S, and E is bounded above. Suppose there exists an α ∈ S such that (i) α is an upper bound of E, and (ii) if γ < α then γ is not an upper bound of E. Then α is called the least upper bound or supremum of E, and we write α = sup E. The greatest lower bound or infimum is defined analogously: α = inf E means α is a lower bound of E and no β > α is a lower bound of E."
+    },
+    "notes": "Rudin 1.8. Uniqueness of sup follows immediately from property (ii).\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "1",
+        "edition": "3",
+        "section": "1.8",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Supremum (Least Upper Bound)"
     },
     "type": "definition"
   },
@@ -2463,6 +3209,52 @@
     "title": {
       "en": "Trigonometric functions",
       "es": "Funciones trigonométricas"
+    },
+    "type": "definition"
+  },
+  "definition.union-intersection": {
+    "confidence": "high",
+    "id": "definition.union-intersection",
+    "kind": "statement",
+    "natural": {
+      "en": "If {Eα} is a family of sets indexed by A, the union ⋃α Eα is the set of all x belonging to at least one Eα. The intersection ⋂α Eα is the set of all x belonging to every Eα. If A ∩ B is not empty, A and B intersect; otherwise they are disjoint."
+    },
+    "notes": "Definition 2.9 from Rudin. Generalizes union and intersection to arbitrary indexed families.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.9",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Union and Intersection of Families of Sets"
+    },
+    "type": "definition"
+  },
+  "definition.upper-bound": {
+    "confidence": "high",
+    "id": "definition.upper-bound",
+    "kind": "statement",
+    "natural": {
+      "en": "Suppose S is an ordered set, and E ⊂ S. If there exists a β ∈ S such that x ≤ β for every x ∈ E, we say that E is bounded above, and call β an upper bound of E. Lower bounds are defined in the same way (with ≥ in place of ≤)."
+    },
+    "notes": "Rudin 1.7. Dual notion of lower bound is implicit.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "1",
+        "edition": "3",
+        "section": "1.7",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Upper Bound and Bounded Above"
     },
     "type": "definition"
   },
@@ -2620,6 +3412,52 @@
     },
     "type": "definition"
   },
+  "lemma.nested-intervals": {
+    "confidence": "high",
+    "id": "lemma.nested-intervals",
+    "kind": "statement",
+    "natural": {
+      "en": "If {Iₙ} is a sequence of intervals in R¹ with Iₙ ⊃ Iₙ₊₁, then ⋂Iₙ is nonempty."
+    },
+    "notes": "Theorem 2.38 in Rudin. Uses the least upper bound property of R.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.38",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Nested Intervals Theorem"
+    },
+    "type": "lemma"
+  },
+  "lemma.nested-k-cells": {
+    "confidence": "high",
+    "id": "lemma.nested-k-cells",
+    "kind": "statement",
+    "natural": {
+      "en": "If {Iₙ} is a sequence of k-cells with Iₙ ⊃ Iₙ₊₁, then ⋂Iₙ is nonempty."
+    },
+    "notes": "Theorem 2.39 in Rudin. Generalizes the nested intervals theorem to k dimensions.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.39",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Nested k-Cells Theorem"
+    },
+    "type": "lemma"
+  },
   "proof.absolute-convergence-implies-convergence.stewart": {
     "confidence": "high",
     "id": "proof.absolute-convergence-implies-convergence.stewart",
@@ -2644,6 +3482,28 @@
       "theorem.comparison-test-series"
     ]
   },
+  "proof.addition-cancellation.rudin": {
+    "confidence": "high",
+    "id": "proof.addition-cancellation.rudin",
+    "kind": "proof",
+    "notes": "(a) y = 0+y = (-x+x)+y = -x+(x+y) = -x+(x+z) = (-x+x)+z = 0+z = z. (b)-(d) follow from (a) by specialization.\n",
+    "proves": "proposition.addition-cancellation",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "1",
+        "edition": "3",
+        "section": "1.14",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "definition.field"
+    ]
+  },
   "proof.alternating-series-test.stewart": {
     "confidence": "high",
     "id": "proof.alternating-series-test.stewart",
@@ -2666,6 +3526,98 @@
       "definition.infinite-series",
       "definition.sequence",
       "theorem.monotonic-sequence-theorem"
+    ]
+  },
+  "proof.archimedean-density.rudin": {
+    "confidence": "high",
+    "id": "proof.archimedean-density.rudin",
+    "kind": "proof",
+    "notes": "(a) If A = {nx} were bounded above, α = sup A would satisfy α - x < mx for some m, giving α < (m+1)x ∈ A — contradiction. (b) Uses (a) twice to find integer m with m-1 ≤ nx < m, then nx < m ≤ 1 + nx < ny, so x < m/n < y.\n",
+    "proves": "theorem.archimedean-density",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "1",
+        "edition": "3",
+        "section": "1.20",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "contradiction",
+    "type": "proof",
+    "uses": [
+      "theorem.existence-of-reals",
+      "definition.least-upper-bound-property",
+      "definition.supremum"
+    ]
+  },
+  "proof.at-most-countable-union.rudin": {
+    "confidence": "high",
+    "id": "proof.at-most-countable-union.rudin",
+    "kind": "proof",
+    "notes": "T is equivalent to a subset of the countable union.\n",
+    "proves": "corollary.at-most-countable-union",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.12",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "theorem.countable-union-countable"
+    ]
+  },
+  "proof.binary-sequences-uncountable.rudin": {
+    "confidence": "high",
+    "id": "proof.binary-sequences-uncountable.rudin",
+    "kind": "proof",
+    "notes": "Cantor's diagonal argument. Given any countable subset E = {s₁,s₂,...}, construct s differing from sₙ in the nth digit.\n",
+    "proves": "theorem.binary-sequences-uncountable",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.14",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "diagonal",
+    "type": "proof",
+    "uses": [
+      "definition.finite-countable-sets",
+      "definition.sequence"
+    ]
+  },
+  "proof.bolzano-weierstrass.rudin": {
+    "confidence": "high",
+    "id": "proof.bolzano-weierstrass.rudin",
+    "kind": "proof",
+    "notes": "Bounded E ⊂ k-cell I. I is compact. Apply Theorem 2.37.\n",
+    "proves": "theorem.bolzano-weierstrass",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.42",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "theorem.k-cell-compact",
+      "theorem.infinite-subset-compact-limit-point"
     ]
   },
   "proof.cancellation-equations.stewart": {
@@ -2739,6 +3691,125 @@
       "proposition.laws-of-logarithms"
     ]
   },
+  "proof.closed-intersect-compact.rudin": {
+    "confidence": "high",
+    "id": "proof.closed-intersect-compact.rudin",
+    "kind": "proof",
+    "notes": "F ∩ K is closed (intersection of two closed sets), and F ∩ K ⊂ K, so Theorem 2.35 applies.\n",
+    "proves": "corollary.closed-intersect-compact",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.35",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "proposition.compact-is-closed",
+      "proposition.closed-subset-compact",
+      "theorem.unions-intersections-open-closed"
+    ]
+  },
+  "proof.closed-subset-compact.rudin": {
+    "confidence": "high",
+    "id": "proof.closed-subset-compact.rudin",
+    "kind": "proof",
+    "notes": "Adjoin Fᶜ (open) to any cover of F to get a cover of K. Extract finite subcover of K, remove Fᶜ.\n",
+    "proves": "proposition.closed-subset-compact",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.35",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "definition.compact-set",
+      "definition.neighborhood-limit-point-open-closed",
+      "proposition.open-iff-complement-closed"
+    ]
+  },
+  "proof.closure-properties.rudin": {
+    "confidence": "high",
+    "id": "proof.closure-properties.rudin",
+    "kind": "proof",
+    "notes": "(a) If p ∉ E̅, p has neighborhood not intersecting E, so E̅ᶜ is open. (b) E̅ = E iff E' ⊂ E. (c) Closed F ⊃ E implies F ⊃ E', hence F ⊃ E̅.\n",
+    "proves": "proposition.closure-properties",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.27",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "definition.closure",
+      "definition.neighborhood-limit-point-open-closed",
+      "proposition.open-iff-complement-closed"
+    ]
+  },
+  "proof.compact-is-closed.rudin": {
+    "confidence": "high",
+    "id": "proof.compact-is-closed.rudin",
+    "kind": "proof",
+    "notes": "For p ∉ K, cover K by neighborhoods Wq disjoint from neighborhoods Vq of p. Finite subcover gives V ⊂ Kᶜ.\n",
+    "proves": "proposition.compact-is-closed",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.34",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "definition.compact-set",
+      "definition.metric-space",
+      "definition.neighborhood-limit-point-open-closed"
+    ]
+  },
+  "proof.compactness-relative.rudin": {
+    "confidence": "high",
+    "id": "proof.compactness-relative.rudin",
+    "kind": "proof",
+    "notes": "Both directions use Theorem 2.30 to translate between open-in-X and open-relative-to-Y.\n",
+    "proves": "theorem.compactness-relative",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.33",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "definition.compact-set",
+      "theorem.open-relative"
+    ]
+  },
   "proof.comparison-test-series.stewart": {
     "confidence": "high",
     "id": "proof.comparison-test-series.stewart",
@@ -2785,6 +3856,79 @@
       "proposition.integral-comparison"
     ]
   },
+  "proof.complex-absolute-value-properties.rudin": {
+    "confidence": "high",
+    "id": "proof.complex-absolute-value-properties.rudin",
+    "kind": "proof",
+    "notes": "(c) |zw|² = (ac-bd)² + (ad+bc)² = (a²+b²)(c²+d²) = |z|²|w|², then uniqueness of square roots. (e) Triangle inequality: |z+w|² = |z|² + 2Re(zw̄) + |w|² ≤ (|z|+|w|)² using |Re(zw̄)| ≤ |zw̄| = |z||w|.\n",
+    "proves": "theorem.complex-absolute-value-properties",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "1",
+        "edition": "3",
+        "section": "1.33",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "definition.complex-absolute-value",
+      "definition.complex-conjugate",
+      "theorem.conjugate-properties",
+      "theorem.existence-of-nth-roots"
+    ]
+  },
+  "proof.complex-algebraic-form.rudin": {
+    "confidence": "high",
+    "id": "proof.complex-algebraic-form.rudin",
+    "kind": "proof",
+    "notes": "a + bi = (a,0) + (b,0)(0,1) = (a,0) + (0,b) = (a,b).\n",
+    "proves": "theorem.complex-algebraic-form",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "1",
+        "edition": "3",
+        "section": "1.29",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "definition.imaginary-unit",
+      "definition.complex-number",
+      "theorem.real-subfield-of-complex"
+    ]
+  },
+  "proof.complex-field.rudin": {
+    "confidence": "high",
+    "id": "proof.complex-field.rudin",
+    "kind": "proof",
+    "notes": "Direct verification of all field axioms (A1)-(A5), (M1)-(M5), and (D) for ordered pairs with the defined operations. The multiplicative inverse of (a,b) ≠ (0,0) is (a/(a²+b²), -b/(a²+b²)).\n",
+    "proves": "theorem.complex-field",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "1",
+        "edition": "3",
+        "section": "1.25",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "verification",
+    "type": "proof",
+    "uses": [
+      "definition.complex-number",
+      "definition.field",
+      "proposition.ordered-field-properties"
+    ]
+  },
   "proof.concavity-test.stewart": {
     "confidence": "high",
     "id": "proof.concavity-test.stewart",
@@ -2808,6 +3952,53 @@
       "definition.second-derivative",
       "definition.concave-upward",
       "definition.concave-downward"
+    ]
+  },
+  "proof.conjugate-properties.rudin": {
+    "confidence": "high",
+    "id": "proof.conjugate-properties.rudin",
+    "kind": "proof",
+    "notes": "Parts (a), (b), (c) are direct computation. Part (d): if z = a+bi then zz̄ = a² + b², which is real and nonnegative, and zero only when a = b = 0.\n",
+    "proves": "theorem.conjugate-properties",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "1",
+        "edition": "3",
+        "section": "1.31",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "definition.complex-conjugate",
+      "definition.complex-number"
+    ]
+  },
+  "proof.connected-subsets-of-r.rudin": {
+    "confidence": "high",
+    "id": "proof.connected-subsets-of-r.rudin",
+    "kind": "proof",
+    "notes": "If z ∉ E with x < z < y (x,y ∈ E), split E = (E ∩ (-∞,z)) ∪ (E ∩ (z,∞)) — separated. Converse: if E not connected with A ∪ B = E, take x ∈ A, y ∈ B, z = sup(A ∩ [x,y]). By Theorem 2.28, z ∈ A̅, so z ∉ B, find z₁ ∉ E between z and y.\n",
+    "proves": "theorem.connected-subsets-of-r",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.47",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "definition.separated-connected",
+      "definition.supremum",
+      "proposition.sup-in-closure"
     ]
   },
   "proof.constant-multiple-rule.stewart": {
@@ -2878,6 +4069,53 @@
       "definition.continuity-at-point",
       "definition.epsilon-delta-limit",
       "definition.composition-of-functions"
+    ]
+  },
+  "proof.countable-union-countable.rudin": {
+    "confidence": "high",
+    "id": "proof.countable-union-countable.rudin",
+    "kind": "proof",
+    "notes": "Diagonal arrangement of the double array. S is equivalent to a subset of J via Theorem 2.8.\n",
+    "proves": "theorem.countable-union-countable",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.12",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "construction",
+    "type": "proof",
+    "uses": [
+      "definition.finite-countable-sets",
+      "definition.sequence",
+      "proposition.infinite-subset-countable"
+    ]
+  },
+  "proof.de-morgan.rudin": {
+    "confidence": "high",
+    "id": "proof.de-morgan.rudin",
+    "kind": "proof",
+    "notes": "x ∈ (⋃Eα)ᶜ iff x ∉ Eα for any α iff x ∈ Eαᶜ for every α iff x ∈ ⋂Eαᶜ.\n",
+    "proves": "proposition.de-morgan",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.22",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "definition.union-intersection",
+      "definition.set-membership-subset"
     ]
   },
   "proof.derivative-arccos.stewart": {
@@ -3378,6 +4616,81 @@
       "corollary.difference-rule"
     ]
   },
+  "proof.euclidean-norm-properties.rudin": {
+    "confidence": "high",
+    "id": "proof.euclidean-norm-properties.rudin",
+    "kind": "proof",
+    "notes": "(a)-(c) obvious. (d) is the Schwarz inequality applied to real components. (e) |x+y|² = |x|² + 2x·y + |y|² ≤ (|x|+|y|)² using (d). (f) follows from (e) with substitution x→x-y, y→y-z.\n",
+    "proves": "theorem.euclidean-norm-properties",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "1",
+        "edition": "3",
+        "section": "1.37",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "definition.euclidean-k-space",
+      "theorem.schwarz-inequality"
+    ]
+  },
+  "proof.existence-of-nth-roots.rudin": {
+    "confidence": "high",
+    "id": "proof.existence-of-nth-roots.rudin",
+    "kind": "proof",
+    "notes": "Let E = {t > 0 : t^n < x}, y = sup E. Show y^n < x leads to (y+h)^n < x for small h (contradicting sup), and y^n > x leads to y-k being a smaller upper bound (contradicting least). Uses the identity b^n - a^n = (b-a)(b^{n-1} + ... + a^{n-1}).\n",
+    "proves": "theorem.existence-of-nth-roots",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "1",
+        "edition": "3",
+        "section": "1.21",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "contradiction",
+    "type": "proof",
+    "uses": [
+      "theorem.existence-of-reals",
+      "definition.supremum",
+      "definition.least-upper-bound-property",
+      "proposition.ordered-field-properties"
+    ]
+  },
+  "proof.existence-of-reals.rudin": {
+    "confidence": "high",
+    "id": "proof.existence-of-reals.rudin",
+    "kind": "proof",
+    "notes": "Proof via Dedekind cuts (Appendix, Steps 1-9). A cut is a proper nonempty subset α of Q such that: (I) α ≠ Q, (II) if p ∈ α and q < p then q ∈ α, (III) α has no largest member. Addition and multiplication of cuts are defined and verified to satisfy field axioms. The LUB property follows from taking unions of cuts.\n",
+    "proves": "theorem.existence-of-reals",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "1",
+        "edition": "3",
+        "section": "1.19",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "construction",
+    "type": "proof",
+    "uses": [
+      "definition.field",
+      "definition.ordered-field",
+      "definition.least-upper-bound-property",
+      "definition.rational-numbers",
+      "definition.order-relation",
+      "proposition.addition-cancellation"
+    ]
+  },
   "proof.extreme-value-theorem.stewart": {
     "confidence": "low",
     "id": "proof.extreme-value-theorem.stewart",
@@ -3423,6 +4736,74 @@
       "definition.local-maximum",
       "definition.left-hand-limit",
       "definition.right-hand-limit"
+    ]
+  },
+  "proof.field-zero-product.rudin": {
+    "confidence": "high",
+    "id": "proof.field-zero-product.rudin",
+    "kind": "proof",
+    "notes": "(a) 0x + 0x = (0+0)x = 0x, so 0x = 0 by 1.14(b). (b) If xy = 0 and x,y ≠ 0, then 1 = (1/x)(1/y)xy = 0, contradiction. (c) (-x)y + xy = (-x+x)y = 0y = 0, so (-x)y = -(xy) by 1.14(c). (d) (-x)(-y) = -[x(-y)] = -[-(xy)] = xy by (c) and 1.14(d).\n",
+    "proves": "proposition.field-zero-product",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "1",
+        "edition": "3",
+        "section": "1.16",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "definition.field",
+      "proposition.addition-cancellation"
+    ]
+  },
+  "proof.finite-intersection-compact.rudin": {
+    "confidence": "high",
+    "id": "proof.finite-intersection-compact.rudin",
+    "kind": "proof",
+    "notes": "Fix K₁, set Gα = Kαᶜ. If no point of K₁ is in every Kα, then {Gα} covers K₁. Finite subcover contradicts hypothesis.\n",
+    "proves": "theorem.finite-intersection-compact",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.36",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "contradiction",
+    "type": "proof",
+    "uses": [
+      "definition.compact-set",
+      "proposition.compact-is-closed"
+    ]
+  },
+  "proof.finite-set-no-limit-points.rudin": {
+    "confidence": "high",
+    "id": "proof.finite-set-no-limit-points.rudin",
+    "kind": "proof",
+    "notes": "A finite set cannot contain infinitely many points in any neighborhood.\n",
+    "proves": "corollary.finite-set-no-limit-points",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.20",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "proposition.limit-point-infinite-points"
     ]
   },
   "proof.first-derivative-test.stewart": {
@@ -3544,6 +4925,32 @@
       "definition.sequence"
     ]
   },
+  "proof.heine-borel.rudin": {
+    "confidence": "high",
+    "id": "proof.heine-borel.rudin",
+    "kind": "proof",
+    "notes": "(a)→(b): E ⊂ k-cell I (bounded), I compact (2.40), E closed ⊂ I compact (2.35). (b)→(c): Theorem 2.37. (c)→(a): unbounded or not closed contradicts (c).\n",
+    "proves": "theorem.heine-borel",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.41",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "theorem.k-cell-compact",
+      "proposition.closed-subset-compact",
+      "theorem.infinite-subset-compact-limit-point",
+      "definition.neighborhood-limit-point-open-closed",
+      "proposition.limit-point-infinite-points"
+    ]
+  },
   "proof.horizontal-line-test.stewart": {
     "confidence": "medium",
     "id": "proof.horizontal-line-test.stewart",
@@ -3565,6 +4972,29 @@
     "uses": [
       "definition.one-to-one-function",
       "definition.graph-of-function"
+    ]
+  },
+  "proof.i-squared.rudin": {
+    "confidence": "high",
+    "id": "proof.i-squared.rudin",
+    "kind": "proof",
+    "notes": "i² = (0,1)(0,1) = (0·0-1·1, 0·1+1·0) = (-1,0) = -1.\n",
+    "proves": "theorem.i-squared",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "1",
+        "edition": "3",
+        "section": "1.28",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "definition.imaginary-unit",
+      "definition.complex-number"
     ]
   },
   "proof.increasing-decreasing-test.stewart": {
@@ -3589,6 +5019,52 @@
       "theorem.mean-value-theorem",
       "definition.increasing-function",
       "definition.decreasing-function"
+    ]
+  },
+  "proof.infinite-subset-compact-limit-point.rudin": {
+    "confidence": "high",
+    "id": "proof.infinite-subset-compact-limit-point.rudin",
+    "kind": "proof",
+    "notes": "If no point of K is a limit point of E, each q ∈ K has Vq with at most one point of E. No finite subcollection covers E ⊂ K — contradicts compactness.\n",
+    "proves": "theorem.infinite-subset-compact-limit-point",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.37",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "contradiction",
+    "type": "proof",
+    "uses": [
+      "definition.compact-set",
+      "definition.neighborhood-limit-point-open-closed"
+    ]
+  },
+  "proof.infinite-subset-countable.rudin": {
+    "confidence": "high",
+    "id": "proof.infinite-subset-countable.rudin",
+    "kind": "proof",
+    "notes": "Arrange A in sequence {xₙ}. Pick elements of E in order of their indices.\n",
+    "proves": "proposition.infinite-subset-countable",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.8",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "construction",
+    "type": "proof",
+    "uses": [
+      "definition.finite-countable-sets",
+      "definition.sequence"
     ]
   },
   "proof.integrability-of-continuous-functions.stewart": {
@@ -3803,6 +5279,28 @@
       "definition.continuity-on-interval"
     ]
   },
+  "proof.interval-uncountable.rudin": {
+    "confidence": "high",
+    "id": "proof.interval-uncountable.rudin",
+    "kind": "proof",
+    "notes": "[a,b] is a nonempty perfect set. Apply Theorem 2.43.\n",
+    "proves": "corollary.interval-uncountable",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.43",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "theorem.perfect-set-uncountable"
+    ]
+  },
   "proof.inverse-graph-reflection.stewart": {
     "confidence": "medium",
     "id": "proof.inverse-graph-reflection.stewart",
@@ -3824,6 +5322,53 @@
     "uses": [
       "definition.inverse-function",
       "definition.graph-of-function"
+    ]
+  },
+  "proof.irrationality-of-sqrt-2.rudin": {
+    "confidence": "high",
+    "id": "proof.irrationality-of-sqrt-2.rudin",
+    "kind": "proof",
+    "notes": "Proof by contradiction: if p = m/n with m, n not both even, then p² = 2 implies m² = 2n², so m is even, hence m² divisible by 4, hence n² even, hence n even — contradiction. The gap in Q is shown by constructing q = (2p+2)/(p+2).\n",
+    "proves": "proposition.irrationality-of-sqrt-2",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "1",
+        "edition": "3",
+        "section": "1.1",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "contradiction",
+    "type": "proof",
+    "uses": [
+      "definition.rational-numbers"
+    ]
+  },
+  "proof.k-cell-compact.rudin": {
+    "confidence": "high",
+    "id": "proof.k-cell-compact.rudin",
+    "kind": "proof",
+    "notes": "Bisect k-cell repeatedly. Get nested k-cells {Iₙ} with no finite subcover and diameter → 0. Their intersection point x* lies in some Gα, giving Iₙ ⊂ Gα for large n — contradiction.\n",
+    "proves": "theorem.k-cell-compact",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.40",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "contradiction",
+    "type": "proof",
+    "uses": [
+      "definition.compact-set",
+      "definition.segment-interval-cell-ball",
+      "lemma.nested-k-cells",
+      "theorem.archimedean-density"
     ]
   },
   "proof.laws-of-exponents.stewart": {
@@ -4009,6 +5554,29 @@
       "definition.limit-at-infinity"
     ]
   },
+  "proof.limit-point-infinite-points.rudin": {
+    "confidence": "high",
+    "id": "proof.limit-point-infinite-points.rudin",
+    "kind": "proof",
+    "notes": "If N contains only finitely many points q₁,...,qₙ of E distinct from p, take r = min d(p,qₘ) > 0. Then Nr(p) contains no point of E except possibly p.\n",
+    "proves": "proposition.limit-point-infinite-points",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.20",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "contradiction",
+    "type": "proof",
+    "uses": [
+      "definition.neighborhood-limit-point-open-closed",
+      "definition.metric-space"
+    ]
+  },
   "proof.limit-power-law.stewart": {
     "confidence": "medium",
     "id": "proof.limit-power-law.stewart",
@@ -4099,6 +5667,31 @@
       "definition.critical-number"
     ]
   },
+  "proof.lub-implies-glb.rudin": {
+    "confidence": "high",
+    "id": "proof.lub-implies-glb.rudin",
+    "kind": "proof",
+    "notes": "Let L = set of lower bounds of B. Every x ∈ B is an upper bound of L, so L is bounded above. By LUB property, α = sup L exists. Show α ∈ L (α is a lower bound of B) and no β > α is in L.\n",
+    "proves": "theorem.lub-implies-glb",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "1",
+        "edition": "3",
+        "section": "1.11",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "definition.least-upper-bound-property",
+      "definition.supremum",
+      "definition.upper-bound",
+      "definition.ordered-set"
+    ]
+  },
   "proof.mean-value-theorem-integrals.stewart": {
     "confidence": "high",
     "id": "proof.mean-value-theorem-integrals.stewart",
@@ -4174,6 +5767,143 @@
       "definition.sequence"
     ]
   },
+  "proof.multiplication-cancellation.rudin": {
+    "confidence": "high",
+    "id": "proof.multiplication-cancellation.rudin",
+    "kind": "proof",
+    "notes": "Analogous to the proof of Proposition 1.14 but using multiplicative axioms (M1)-(M5).\n",
+    "proves": "proposition.multiplication-cancellation",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "1",
+        "edition": "3",
+        "section": "1.15",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "definition.field"
+    ]
+  },
+  "proof.n-tuples-countable.rudin": {
+    "confidence": "high",
+    "id": "proof.n-tuples-countable.rudin",
+    "kind": "proof",
+    "notes": "Induction on n. Bₙ is union of countable sets of pairs (b,a) for b ∈ Bₙ₋₁.\n",
+    "proves": "proposition.n-tuples-countable",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.13",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "induction",
+    "type": "proof",
+    "uses": [
+      "definition.finite-countable-sets",
+      "theorem.countable-union-countable"
+    ]
+  },
+  "proof.neighborhood-is-open.rudin": {
+    "confidence": "high",
+    "id": "proof.neighborhood-is-open.rudin",
+    "kind": "proof",
+    "notes": "For q ∈ Nr(p), set h = r - d(p,q). Then Nh(q) ⊂ Nr(p) by triangle inequality.\n",
+    "proves": "proposition.neighborhood-is-open",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.19",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "definition.metric-space",
+      "definition.neighborhood-limit-point-open-closed"
+    ]
+  },
+  "proof.nested-compact-nonempty.rudin": {
+    "confidence": "high",
+    "id": "proof.nested-compact-nonempty.rudin",
+    "kind": "proof",
+    "notes": "Nested sequence satisfies finite intersection property trivially.\n",
+    "proves": "corollary.nested-compact-nonempty",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.36",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "theorem.finite-intersection-compact"
+    ]
+  },
+  "proof.nested-intervals.rudin": {
+    "confidence": "high",
+    "id": "proof.nested-intervals.rudin",
+    "kind": "proof",
+    "notes": "Let E = {aₙ}, x = sup E. Then aₘ ≤ x ≤ bₘ for all m, so x ∈ every Iₘ.\n",
+    "proves": "lemma.nested-intervals",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.38",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "definition.supremum",
+      "definition.least-upper-bound-property",
+      "definition.segment-interval-cell-ball"
+    ]
+  },
+  "proof.nested-k-cells.rudin": {
+    "confidence": "high",
+    "id": "proof.nested-k-cells.rudin",
+    "kind": "proof",
+    "notes": "Project each k-cell onto coordinate intervals. Apply Theorem 2.38 to each coordinate.\n",
+    "proves": "lemma.nested-k-cells",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.39",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "lemma.nested-intervals",
+      "definition.segment-interval-cell-ball"
+    ]
+  },
   "proof.net-change-theorem.stewart": {
     "confidence": "high",
     "id": "proof.net-change-theorem.stewart",
@@ -4194,6 +5924,124 @@
     "type": "proof",
     "uses": [
       "theorem.ftc-part2"
+    ]
+  },
+  "proof.nth-root-of-product.rudin": {
+    "confidence": "high",
+    "id": "proof.nth-root-of-product.rudin",
+    "kind": "proof",
+    "notes": "Put α = a^{1/n}, β = b^{1/n}. Then ab = α^n β^n = (αβ)^n by commutativity. Uniqueness gives (ab)^{1/n} = αβ.\n",
+    "proves": "corollary.nth-root-of-product",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "1",
+        "edition": "3",
+        "section": "1.21",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "theorem.existence-of-nth-roots",
+      "definition.field"
+    ]
+  },
+  "proof.open-iff-complement-closed.rudin": {
+    "confidence": "high",
+    "id": "proof.open-iff-complement-closed.rudin",
+    "kind": "proof",
+    "notes": "If Eᶜ closed: x ∈ E means x not limit point of Eᶜ, so some neighborhood misses Eᶜ, i.e. lies in E. If E open: limit point of Eᶜ cannot be interior to E, so must be in Eᶜ.\n",
+    "proves": "proposition.open-iff-complement-closed",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.23",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "definition.neighborhood-limit-point-open-closed"
+    ]
+  },
+  "proof.open-relative.rudin": {
+    "confidence": "high",
+    "id": "proof.open-relative.rudin",
+    "kind": "proof",
+    "notes": "If E open relative to Y: for each p ∈ E take Vp = ball in X with d(p,q) < rp, set G = ⋃Vp. Then G open in X and E = G ∩ Y. Converse: if E = G ∩ Y with G open, each p ∈ E has neighborhood in G, intersect with Y gives E.\n",
+    "proves": "theorem.open-relative",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.30",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "definition.neighborhood-limit-point-open-closed",
+      "definition.metric-space",
+      "proposition.neighborhood-is-open",
+      "theorem.unions-intersections-open-closed"
+    ]
+  },
+  "proof.ordered-field-properties.rudin": {
+    "confidence": "high",
+    "id": "proof.ordered-field-properties.rudin",
+    "kind": "proof",
+    "notes": "Uses order-field compatibility axioms from Definition 1.17 and algebraic properties from Proposition 1.16.\n",
+    "proves": "proposition.ordered-field-properties",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "1",
+        "edition": "3",
+        "section": "1.18",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "definition.ordered-field",
+      "definition.field",
+      "proposition.field-zero-product"
+    ]
+  },
+  "proof.perfect-set-uncountable.rudin": {
+    "confidence": "high",
+    "id": "proof.perfect-set-uncountable.rudin",
+    "kind": "proof",
+    "notes": "Assume P = {x₁,x₂,...}. Build nested closed balls Vₙ with Vₙ₊₁ ⊂ Vₙ, xₙ ∉ Vₙ₊₁, Vₙ ∩ P ≠ ∅. Then ⋂(Vₙ ∩ P) is nonempty but contains no xₙ — contradiction.\n",
+    "proves": "theorem.perfect-set-uncountable",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.43",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "contradiction",
+    "type": "proof",
+    "uses": [
+      "definition.neighborhood-limit-point-open-closed",
+      "corollary.nested-compact-nonempty",
+      "definition.segment-interval-cell-ball"
     ]
   },
   "proof.power-rule-combined-chain.stewart": {
@@ -4361,6 +6209,51 @@
       "theorem.comparison-test-series"
     ]
   },
+  "proof.rationals-countable.rudin": {
+    "confidence": "high",
+    "id": "proof.rationals-countable.rudin",
+    "kind": "proof",
+    "notes": "Every rational r = b/a where (a,b) are integers. Apply Theorem 2.13 with n=2.\n",
+    "proves": "corollary.rationals-countable",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.13",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "proposition.n-tuples-countable",
+      "definition.rational-numbers"
+    ]
+  },
+  "proof.real-subfield-of-complex.rudin": {
+    "confidence": "high",
+    "id": "proof.real-subfield-of-complex.rudin",
+    "kind": "proof",
+    "notes": "Trivial computation: (a,0)+(b,0) = (a+b,0) and (a,0)(b,0) = (ab-0, a·0+0·b) = (ab,0).\n",
+    "proves": "theorem.real-subfield-of-complex",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "1",
+        "edition": "3",
+        "section": "1.26",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "definition.complex-number"
+    ]
+  },
   "proof.rolles-theorem.stewart": {
     "confidence": "high",
     "id": "proof.rolles-theorem.stewart",
@@ -4408,6 +6301,30 @@
       "definition.absolute-convergence",
       "theorem.geometric-series",
       "theorem.comparison-test-series"
+    ]
+  },
+  "proof.schwarz-inequality.rudin": {
+    "confidence": "high",
+    "id": "proof.schwarz-inequality.rudin",
+    "kind": "proof",
+    "notes": "Put A = Σ|a_j|², B = Σ|b_j|², C = Σa_j b̄_j. If B = 0, trivial. Otherwise expand Σ|Ba_j - Cb_j|² = B²A - B|C|² = B(AB-|C|²) ≥ 0. Since B > 0, AB - |C|² ≥ 0.\n",
+    "proves": "theorem.schwarz-inequality",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "1",
+        "edition": "3",
+        "section": "1.35",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "theorem.conjugate-properties",
+      "definition.complex-absolute-value",
+      "definition.summation-notation"
     ]
   },
   "proof.second-derivative-test.stewart": {
@@ -4524,6 +6441,29 @@
       "theorem.limit-laws"
     ]
   },
+  "proof.sup-in-closure.rudin": {
+    "confidence": "high",
+    "id": "proof.sup-in-closure.rudin",
+    "kind": "proof",
+    "notes": "If y ∉ E, for every h > 0 there exists x ∈ E with y-h < x < y (else y-h is upper bound). So y is limit point of E, hence y ∈ E̅.\n",
+    "proves": "proposition.sup-in-closure",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.28",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "definition.closure",
+      "definition.supremum"
+    ]
+  },
   "proof.taylor-convergence.stewart": {
     "confidence": "medium",
     "id": "proof.taylor-convergence.stewart",
@@ -4546,6 +6486,30 @@
       "definition.taylor-series",
       "theorem.mean-value-theorem",
       "theorem.squeeze-theorem"
+    ]
+  },
+  "proof.unions-intersections-open-closed.rudin": {
+    "confidence": "high",
+    "id": "proof.unions-intersections-open-closed.rudin",
+    "kind": "proof",
+    "notes": "(a) x ∈ ⋃Gα means x ∈ some Gα, interior there, hence interior in union. (b) By De Morgan + (a). (c) Take r = min(r₁,...,rₙ). (d) By De Morgan + (c).\n",
+    "proves": "theorem.unions-intersections-open-closed",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.24",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "definition.neighborhood-limit-point-open-closed",
+      "proposition.de-morgan",
+      "proposition.open-iff-complement-closed"
     ]
   },
   "proof.vertical-line-test.stewart": {
@@ -4592,6 +6556,29 @@
     "uses": [
       "theorem.mean-value-theorem"
     ]
+  },
+  "proposition.addition-cancellation": {
+    "confidence": "high",
+    "id": "proposition.addition-cancellation",
+    "kind": "statement",
+    "natural": {
+      "en": "The axioms for addition imply: (a) If x + y = x + z then y = z. (b) If x + y = x then y = 0. (c) If x + y = 0 then y = -x. (d) -(-x) = x."
+    },
+    "notes": "Rudin Proposition 1.14. (b) asserts uniqueness of additive identity, (c) asserts uniqueness of additive inverse.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "1",
+        "edition": "3",
+        "section": "1.14",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Consequences of Addition Axioms"
+    },
+    "type": "proposition"
   },
   "proposition.cancellation-equations": {
     "confidence": "medium",
@@ -4645,6 +6632,75 @@
     },
     "type": "proposition"
   },
+  "proposition.closed-subset-compact": {
+    "confidence": "high",
+    "id": "proposition.closed-subset-compact",
+    "kind": "statement",
+    "natural": {
+      "en": "Closed subsets of compact sets are compact."
+    },
+    "notes": "Theorem 2.35 in Rudin.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.35",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Closed Subsets of Compact Sets are Compact"
+    },
+    "type": "proposition"
+  },
+  "proposition.closure-properties": {
+    "confidence": "high",
+    "id": "proposition.closure-properties",
+    "kind": "statement",
+    "natural": {
+      "en": "If X is a metric space and E ⊂ X, then (a) E̅ is closed, (b) E̅ = E iff E is closed, (c) E̅ ⊂ F for every closed set F ⊃ E. Thus E̅ is the smallest closed set containing E."
+    },
+    "notes": "Theorem 2.27 in Rudin. Characterizes the closure as the smallest closed superset.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.27",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Properties of the Closure of a Set"
+    },
+    "type": "proposition"
+  },
+  "proposition.compact-is-closed": {
+    "confidence": "high",
+    "id": "proposition.compact-is-closed",
+    "kind": "statement",
+    "natural": {
+      "en": "Compact subsets of metric spaces are closed."
+    },
+    "notes": "Theorem 2.34 in Rudin.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.34",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Compact Subsets of Metric Spaces are Closed"
+    },
+    "type": "proposition"
+  },
   "proposition.concavity-test": {
     "confidence": "high",
     "id": "proposition.concavity-test",
@@ -4671,6 +6727,30 @@
     },
     "type": "proposition"
   },
+  "proposition.de-morgan": {
+    "confidence": "high",
+    "id": "proposition.de-morgan",
+    "kind": "statement",
+    "latex": "\\left(\\bigcup_\\alpha E_\\alpha\\right)^c = \\bigcap_\\alpha E_\\alpha^c\n",
+    "natural": {
+      "en": "Let {Eα} be a collection of sets. Then (⋃α Eα)ᶜ = ⋂α Eαᶜ."
+    },
+    "notes": "Theorem 2.22 in Rudin. De Morgan's law for arbitrary collections of sets.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.22",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "De Morgan's Law"
+    },
+    "type": "proposition"
+  },
   "proposition.direct-substitution-property": {
     "confidence": "medium",
     "id": "proposition.direct-substitution-property",
@@ -4694,6 +6774,29 @@
     "title": {
       "en": "Direct substitution property",
       "es": "Propiedad de sustitución directa"
+    },
+    "type": "proposition"
+  },
+  "proposition.field-zero-product": {
+    "confidence": "high",
+    "id": "proposition.field-zero-product",
+    "kind": "statement",
+    "natural": {
+      "en": "The field axioms imply, for any x, y, z ∈ F: (a) 0x = 0. (b) If x ≠ 0 and y ≠ 0 then xy ≠ 0. (c) (-x)y = -(xy) = x(-y). (d) (-x)(-y) = xy."
+    },
+    "notes": "Rudin Proposition 1.16. These are basic consequences of the field axioms that hold in any field.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "1",
+        "edition": "3",
+        "section": "1.16",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Field Properties of Zero and Negation"
     },
     "type": "proposition"
   },
@@ -4770,6 +6873,29 @@
     "title": {
       "en": "Increasing/Decreasing Test",
       "es": "Prueba creciente/decreciente"
+    },
+    "type": "proposition"
+  },
+  "proposition.infinite-subset-countable": {
+    "confidence": "high",
+    "id": "proposition.infinite-subset-countable",
+    "kind": "statement",
+    "natural": {
+      "en": "Every infinite subset of a countable set A is countable."
+    },
+    "notes": "Theorem 2.8 in Rudin. Establishes that countability is inherited by infinite subsets.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.8",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Every Infinite Subset of a Countable Set is Countable"
     },
     "type": "proposition"
   },
@@ -4901,6 +7027,30 @@
     },
     "type": "proposition"
   },
+  "proposition.irrationality-of-sqrt-2": {
+    "confidence": "high",
+    "id": "proposition.irrationality-of-sqrt-2",
+    "kind": "statement",
+    "latex": "p^2 = 2 \\text{ has no solution } p \\in \\mathbb{Q}\n",
+    "natural": {
+      "en": "The equation p² = 2 is not satisfied by any rational p. Moreover, if A is the set of all positive rationals p with p² < 2, then A contains no largest number; and if B is the set of all positive rationals p with p² > 2, then B contains no smallest number."
+    },
+    "notes": "Rudin 1.1 (Example). Demonstrates that Q has gaps. The proof constructs explicit rational witnesses via q = (2p+2)/(p+2).\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "1",
+        "edition": "3",
+        "section": "1.1",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Irrationality of √2"
+    },
+    "type": "proposition"
+  },
   "proposition.laws-of-exponents": {
     "confidence": "medium",
     "id": "proposition.laws-of-exponents",
@@ -4979,6 +7129,29 @@
     },
     "type": "proposition"
   },
+  "proposition.limit-point-infinite-points": {
+    "confidence": "high",
+    "id": "proposition.limit-point-infinite-points",
+    "kind": "statement",
+    "natural": {
+      "en": "If p is a limit point of a set E, then every neighborhood of p contains infinitely many points of E."
+    },
+    "notes": "Theorem 2.20 in Rudin. Proved by contradiction.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.20",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Limit Points Contain Infinitely Many Points"
+    },
+    "type": "proposition"
+  },
   "proposition.local-extremum-at-critical": {
     "confidence": "high",
     "id": "proposition.local-extremum-at-critical",
@@ -5005,6 +7178,121 @@
     },
     "type": "proposition"
   },
+  "proposition.multiplication-cancellation": {
+    "confidence": "high",
+    "id": "proposition.multiplication-cancellation",
+    "kind": "statement",
+    "natural": {
+      "en": "The axioms for multiplication imply: (a) If x ≠ 0 and xy = xz then y = z. (b) If x ≠ 0 and xy = x then y = 1. (c) If x ≠ 0 and xy = 1 then y = 1/x. (d) If x ≠ 0 then 1/(1/x) = x."
+    },
+    "notes": "Rudin Proposition 1.15. Proof is analogous to Proposition 1.14.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "1",
+        "edition": "3",
+        "section": "1.15",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Consequences of Multiplication Axioms"
+    },
+    "type": "proposition"
+  },
+  "proposition.n-tuples-countable": {
+    "confidence": "high",
+    "id": "proposition.n-tuples-countable",
+    "kind": "statement",
+    "natural": {
+      "en": "Let A be a countable set, and let Bₙ be the set of all n-tuples (a₁,...,aₙ) where aₖ ∈ A. Then Bₙ is countable."
+    },
+    "notes": "Theorem 2.13 in Rudin. Proved by induction on n using Theorem 2.12.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.13",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Set of n-Tuples from a Countable Set is Countable"
+    },
+    "type": "proposition"
+  },
+  "proposition.neighborhood-is-open": {
+    "confidence": "high",
+    "id": "proposition.neighborhood-is-open",
+    "kind": "statement",
+    "natural": {
+      "en": "Every neighborhood is an open set."
+    },
+    "notes": "Theorem 2.19 in Rudin. Foundational result in metric space topology.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.19",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Every Neighborhood is an Open Set"
+    },
+    "type": "proposition"
+  },
+  "proposition.open-iff-complement-closed": {
+    "confidence": "high",
+    "id": "proposition.open-iff-complement-closed",
+    "kind": "statement",
+    "natural": {
+      "en": "A set E is open if and only if its complement is closed."
+    },
+    "notes": "Theorem 2.23 in Rudin. Fundamental duality between open and closed sets.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.23",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "A Set is Open Iff Its Complement is Closed"
+    },
+    "type": "proposition"
+  },
+  "proposition.ordered-field-properties": {
+    "confidence": "high",
+    "id": "proposition.ordered-field-properties",
+    "kind": "statement",
+    "natural": {
+      "en": "In every ordered field: (a) If x > 0 then -x < 0, and vice versa. (b) If x > 0 and y < z then xy < xz. (c) If x < 0 and y < z then xy > xz. (d) If x ≠ 0 then x² > 0; in particular 1 > 0. (e) If 0 < x < y then 0 < 1/y < 1/x."
+    },
+    "notes": "Rudin Proposition 1.18. Standard ordering properties that hold in any ordered field.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "1",
+        "edition": "3",
+        "section": "1.18",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Properties of Ordered Fields"
+    },
+    "type": "proposition"
+  },
   "proposition.second-derivative-test": {
     "confidence": "high",
     "id": "proposition.second-derivative-test",
@@ -5028,6 +7316,29 @@
     "title": {
       "en": "The Second Derivative Test",
       "es": "Prueba de la segunda derivada"
+    },
+    "type": "proposition"
+  },
+  "proposition.sup-in-closure": {
+    "confidence": "high",
+    "id": "proposition.sup-in-closure",
+    "kind": "statement",
+    "natural": {
+      "en": "Let E be a nonempty set of real numbers bounded above. Let y = sup E. Then y ∈ E̅. Hence y ∈ E if E is closed."
+    },
+    "notes": "Theorem 2.28 in Rudin. Connects the supremum with topological closure.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.28",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Supremum Belongs to the Closure"
     },
     "type": "proposition"
   },
@@ -5106,6 +7417,76 @@
     },
     "type": "theorem"
   },
+  "theorem.archimedean-density": {
+    "confidence": "high",
+    "id": "theorem.archimedean-density",
+    "kind": "statement",
+    "latex": "(a)\\; \\forall x>0,\\; \\forall y \\in \\mathbb{R},\\; \\exists n \\in \\mathbb{Z}^+:\\; nx > y\n\\qquad\n(b)\\; x < y \\implies \\exists p \\in \\mathbb{Q}:\\; x < p < y\n",
+    "natural": {
+      "en": "(a) If x ∈ R, y ∈ R, and x > 0, then there is a positive integer n such that nx > y (archimedean property). (b) If x ∈ R, y ∈ R, and x < y, then there exists a p ∈ Q such that x < p < y (density of Q in R)."
+    },
+    "notes": "Rudin Theorem 1.20. Both parts are derived from the least-upper-bound property.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "1",
+        "edition": "3",
+        "section": "1.20",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Archimedean Property and Density of Q in R"
+    },
+    "type": "theorem"
+  },
+  "theorem.binary-sequences-uncountable": {
+    "confidence": "high",
+    "id": "theorem.binary-sequences-uncountable",
+    "kind": "statement",
+    "natural": {
+      "en": "Let A be the set of all sequences whose elements are the digits 0 and 1. Then A is uncountable."
+    },
+    "notes": "Theorem 2.14 in Rudin. Cantor's diagonal argument.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.14",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "The Set of All Binary Sequences is Uncountable"
+    },
+    "type": "theorem"
+  },
+  "theorem.bolzano-weierstrass": {
+    "confidence": "high",
+    "id": "theorem.bolzano-weierstrass",
+    "kind": "statement",
+    "natural": {
+      "en": "Every bounded infinite subset of Rk has a limit point in Rk."
+    },
+    "notes": "Theorem 2.42 in Rudin. Immediate consequence of the Heine-Borel theorem.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.42",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Bolzano-Weierstrass Theorem"
+    },
+    "type": "theorem"
+  },
   "theorem.chain-rule": {
     "confidence": "high",
     "id": "theorem.chain-rule",
@@ -5129,6 +7510,29 @@
     "title": {
       "en": "The Chain Rule",
       "es": "Regla de la cadena"
+    },
+    "type": "theorem"
+  },
+  "theorem.compactness-relative": {
+    "confidence": "high",
+    "id": "theorem.compactness-relative",
+    "kind": "statement",
+    "natural": {
+      "en": "Suppose K ⊂ Y ⊂ X. Then K is compact relative to X if and only if K is compact relative to Y."
+    },
+    "notes": "Theorem 2.33 in Rudin. Compactness is an intrinsic property, not dependent on the ambient space.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.33",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Compactness is Independent of the Ambient Space"
     },
     "type": "theorem"
   },
@@ -5180,6 +7584,124 @@
     "title": {
       "en": "Comparison Theorem for Improper Integrals",
       "es": "Teorema de comparación para integrales impropias"
+    },
+    "type": "theorem"
+  },
+  "theorem.complex-absolute-value-properties": {
+    "confidence": "high",
+    "id": "theorem.complex-absolute-value-properties",
+    "kind": "statement",
+    "latex": "|zw| = |z||w|, \\quad |z+w| \\leq |z| + |w|\n",
+    "natural": {
+      "en": "Let z and w be complex numbers. Then (a) |z| > 0 unless z = 0, |0| = 0, (b) |z̄| = |z|, (c) |zw| = |z||w|, (d) |Re z| ≤ |z|, (e) |z + w| ≤ |z| + |w| (triangle inequality)."
+    },
+    "notes": "Rudin Theorem 1.33. Part (e) is the triangle inequality for C.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "1",
+        "edition": "3",
+        "section": "1.33",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Properties of Complex Absolute Value"
+    },
+    "type": "theorem"
+  },
+  "theorem.complex-algebraic-form": {
+    "confidence": "high",
+    "id": "theorem.complex-algebraic-form",
+    "kind": "statement",
+    "latex": "(a, b) = a + bi\n",
+    "natural": {
+      "en": "If a and b are real, then (a, b) = a + bi."
+    },
+    "notes": "Rudin Theorem 1.29. Bridges ordered-pair definition with classical notation.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "1",
+        "edition": "3",
+        "section": "1.29",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Algebraic Form of Complex Numbers"
+    },
+    "type": "theorem"
+  },
+  "theorem.complex-field": {
+    "confidence": "high",
+    "id": "theorem.complex-field",
+    "kind": "statement",
+    "natural": {
+      "en": "The definitions of addition and multiplication of complex numbers (ordered pairs of reals) turn the set of all complex numbers into a field, with (0, 0) and (1, 0) in the role of 0 and 1."
+    },
+    "notes": "Rudin Theorem 1.25. Proof verifies all field axioms directly.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "1",
+        "edition": "3",
+        "section": "1.25",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Complex Numbers Form a Field"
+    },
+    "type": "theorem"
+  },
+  "theorem.conjugate-properties": {
+    "confidence": "high",
+    "id": "theorem.conjugate-properties",
+    "kind": "statement",
+    "latex": "\\overline{z+w} = \\bar{z}+\\bar{w}, \\quad\n\\overline{zw} = \\bar{z}\\bar{w}, \\quad\nz\\bar{z} = |z|^2 \\geq 0\n",
+    "natural": {
+      "en": "If z and w are complex, then (a) conjugate of (z + w) equals conjugate(z) + conjugate(w), (b) conjugate of (zw) equals conjugate(z) · conjugate(w), (c) z + conjugate(z) = 2 Re(z) and z - conjugate(z) = 2i Im(z), (d) z · conjugate(z) is real and positive (except when z = 0)."
+    },
+    "notes": "Rudin Theorem 1.31. Part (d) is crucial for defining |z|.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "1",
+        "edition": "3",
+        "section": "1.31",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Properties of Complex Conjugation"
+    },
+    "type": "theorem"
+  },
+  "theorem.connected-subsets-of-r": {
+    "confidence": "high",
+    "id": "theorem.connected-subsets-of-r",
+    "kind": "statement",
+    "natural": {
+      "en": "A subset E of the real line R¹ is connected if and only if: whenever x ∈ E, y ∈ E, and x < z < y, then z ∈ E."
+    },
+    "notes": "Theorem 2.47 in Rudin. Connected subsets of R are precisely the intervals.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.47",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Characterization of Connected Subsets of R"
     },
     "type": "theorem"
   },
@@ -5256,6 +7778,29 @@
     "title": {
       "en": "Continuity of composite functions",
       "es": "Continuidad de funciones compuestas"
+    },
+    "type": "theorem"
+  },
+  "theorem.countable-union-countable": {
+    "confidence": "high",
+    "id": "theorem.countable-union-countable",
+    "kind": "statement",
+    "natural": {
+      "en": "Let {Eₙ} be a sequence of countable sets and S = ⋃Eₙ. Then S is countable."
+    },
+    "notes": "Theorem 2.12 in Rudin. A fundamental result on the closure of countable sets under countable unions.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.12",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Countable Union of Countable Sets is Countable"
     },
     "type": "theorem"
   },
@@ -5727,6 +8272,78 @@
     },
     "type": "theorem"
   },
+  "theorem.euclidean-norm-properties": {
+    "confidence": "high",
+    "id": "theorem.euclidean-norm-properties",
+    "kind": "statement",
+    "latex": "|x \\cdot y| \\leq |x||y|, \\quad |x+y| \\leq |x|+|y|, \\quad |x-z| \\leq |x-y|+|y-z|\n",
+    "natural": {
+      "en": "Suppose x, y, z ∈ R^k and α is real. Then (a) |x| ≥ 0, (b) |x| = 0 if and only if x = 0, (c) |αx| = |α||x|, (d) |x · y| ≤ |x||y| (Cauchy-Schwarz), (e) |x + y| ≤ |x| + |y| (triangle inequality), (f) |x - z| ≤ |x - y| + |y - z| (triangle inequality for distance)."
+    },
+    "notes": "Rudin Theorem 1.37. Parts (a), (b), (f) make R^k a metric space (see Chapter 2). Part (d) is an immediate consequence of the Schwarz inequality (Theorem 1.35).\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "1",
+        "edition": "3",
+        "section": "1.37",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Properties of the Euclidean Norm"
+    },
+    "type": "theorem"
+  },
+  "theorem.existence-of-nth-roots": {
+    "confidence": "high",
+    "id": "theorem.existence-of-nth-roots",
+    "kind": "statement",
+    "latex": "\\forall x > 0,\\; \\forall n \\in \\mathbb{Z}^+,\\; \\exists!\\; y > 0:\\; y^n = x\n",
+    "natural": {
+      "en": "For every real x > 0 and every integer n > 0 there is one and only one positive real y such that y^n = x. This number y is written ⁿ√x or x^(1/n)."
+    },
+    "notes": "Rudin Theorem 1.21. Proof uses the LUB property: y = sup E where E = {t > 0 : t^n < x}, then shows y^n < x and y^n > x both lead to contradictions.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "1",
+        "edition": "3",
+        "section": "1.21",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Existence and Uniqueness of nth Roots"
+    },
+    "type": "theorem"
+  },
+  "theorem.existence-of-reals": {
+    "confidence": "high",
+    "id": "theorem.existence-of-reals",
+    "kind": "statement",
+    "latex": "\\exists\\; \\mathbb{R} \\text{ ordered field with LUB property}, \\quad \\mathbb{Q} \\subset \\mathbb{R}\n",
+    "natural": {
+      "en": "There exists an ordered field R which has the least-upper-bound property. Moreover, R contains Q as a subfield."
+    },
+    "notes": "Rudin Theorem 1.19. The core existence theorem of Chapter 1. Proof via Dedekind cuts is given in the Appendix (Steps 1-9). Any two ordered fields with the LUB property are isomorphic.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "1",
+        "edition": "3",
+        "section": "1.19",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Existence of the Real Field"
+    },
+    "type": "theorem"
+  },
   "theorem.extreme-value-theorem": {
     "confidence": "low",
     "id": "theorem.extreme-value-theorem",
@@ -5776,6 +8393,29 @@
     "title": {
       "en": "Fermat's Theorem",
       "es": "Teorema de Fermat"
+    },
+    "type": "theorem"
+  },
+  "theorem.finite-intersection-compact": {
+    "confidence": "high",
+    "id": "theorem.finite-intersection-compact",
+    "kind": "statement",
+    "natural": {
+      "en": "If {Kα} is a collection of compact subsets of a metric space such that every finite subcollection has nonempty intersection, then ⋂ Kα is nonempty."
+    },
+    "notes": "Theorem 2.36 in Rudin. The finite intersection property characterization of compactness.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.36",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Finite Intersection Property for Compact Sets"
     },
     "type": "theorem"
   },
@@ -5879,6 +8519,76 @@
     "title": {
       "en": "Geometric series",
       "es": "Serie geométrica"
+    },
+    "type": "theorem"
+  },
+  "theorem.heine-borel": {
+    "confidence": "high",
+    "id": "theorem.heine-borel",
+    "kind": "statement",
+    "natural": {
+      "en": "A set E in Rk has one of the following properties iff it has all three: (a) E is closed and bounded, (b) E is compact, (c) every infinite subset of E has a limit point in E."
+    },
+    "notes": "Theorem 2.41 in Rudin. The Heine-Borel theorem characterizing compact subsets of Euclidean space.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.41",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Heine-Borel Theorem"
+    },
+    "type": "theorem"
+  },
+  "theorem.i-squared": {
+    "confidence": "high",
+    "id": "theorem.i-squared",
+    "kind": "statement",
+    "latex": "i^2 = -1\n",
+    "natural": {
+      "en": "i² = -1."
+    },
+    "notes": "Rudin Theorem 1.28. Direct computation: (0,1)(0,1) = (-1,0) = -1.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "1",
+        "edition": "3",
+        "section": "1.28",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Square of the Imaginary Unit"
+    },
+    "type": "theorem"
+  },
+  "theorem.infinite-subset-compact-limit-point": {
+    "confidence": "high",
+    "id": "theorem.infinite-subset-compact-limit-point",
+    "kind": "statement",
+    "natural": {
+      "en": "If E is an infinite subset of a compact set K, then E has a limit point in K."
+    },
+    "notes": "Theorem 2.37 in Rudin. Proved by contradiction using open covers.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.37",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Infinite Subset of a Compact Set Has a Limit Point"
     },
     "type": "theorem"
   },
@@ -6008,6 +8718,29 @@
     "title": {
       "en": "Intermediate Value Theorem",
       "es": "Teorema del valor intermedio"
+    },
+    "type": "theorem"
+  },
+  "theorem.k-cell-compact": {
+    "confidence": "high",
+    "id": "theorem.k-cell-compact",
+    "kind": "statement",
+    "natural": {
+      "en": "Every k-cell is compact."
+    },
+    "notes": "Theorem 2.40 in Rudin. Key step toward the Heine-Borel theorem.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.40",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Every k-Cell is Compact"
     },
     "type": "theorem"
   },
@@ -6191,6 +8924,30 @@
     },
     "type": "theorem"
   },
+  "theorem.lub-implies-glb": {
+    "confidence": "high",
+    "id": "theorem.lub-implies-glb",
+    "kind": "statement",
+    "latex": "\\alpha = \\sup L = \\inf B\n",
+    "natural": {
+      "en": "Suppose S is an ordered set with the least-upper-bound property, B ⊂ S, B is not empty, and B is bounded below. Let L be the set of all lower bounds of B. Then α = sup L exists in S, and α = inf B. In particular, inf B exists in S."
+    },
+    "notes": "Rudin Theorem 1.11. Shows that the LUB property automatically gives the GLB property. A fundamental duality result.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "1",
+        "edition": "3",
+        "section": "1.11",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "LUB Property Implies GLB Property"
+    },
+    "type": "theorem"
+  },
   "theorem.mean-value-theorem": {
     "confidence": "high",
     "id": "theorem.mean-value-theorem",
@@ -6292,6 +9049,52 @@
     "title": {
       "en": "The Net Change Theorem",
       "es": "Teorema del cambio neto"
+    },
+    "type": "theorem"
+  },
+  "theorem.open-relative": {
+    "confidence": "high",
+    "id": "theorem.open-relative",
+    "kind": "statement",
+    "natural": {
+      "en": "Suppose Y ⊂ X. A subset E of Y is open relative to Y if and only if E = Y ∩ G for some open subset G of X."
+    },
+    "notes": "Theorem 2.30 in Rudin. Characterizes the subspace topology via intersections.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.30",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Characterization of Relatively Open Sets"
+    },
+    "type": "theorem"
+  },
+  "theorem.perfect-set-uncountable": {
+    "confidence": "high",
+    "id": "theorem.perfect-set-uncountable",
+    "kind": "statement",
+    "natural": {
+      "en": "Let P be a nonempty perfect set in Rk. Then P is uncountable."
+    },
+    "notes": "Theorem 2.43 in Rudin. Uses nested compact sets and the Baire category-style argument.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.43",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Nonempty Perfect Sets in Rk are Uncountable"
     },
     "type": "theorem"
   },
@@ -6449,6 +9252,29 @@
     },
     "type": "theorem"
   },
+  "theorem.real-subfield-of-complex": {
+    "confidence": "high",
+    "id": "theorem.real-subfield-of-complex",
+    "kind": "statement",
+    "natural": {
+      "en": "For any real numbers a and b, (a, 0) + (b, 0) = (a + b, 0) and (a, 0)(b, 0) = (ab, 0). Hence the complex numbers of the form (a, 0) have the same arithmetic properties as the corresponding real numbers a."
+    },
+    "notes": "Rudin Theorem 1.26. Identifies (a, 0) with a, making R a subfield of C.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "1",
+        "edition": "3",
+        "section": "1.26",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Real Numbers as Subfield of Complex Numbers"
+    },
+    "type": "theorem"
+  },
   "theorem.rolles-theorem": {
     "confidence": "high",
     "id": "theorem.rolles-theorem",
@@ -6497,6 +9323,30 @@
     "title": {
       "en": "The Root Test",
       "es": "Prueba de la raíz"
+    },
+    "type": "theorem"
+  },
+  "theorem.schwarz-inequality": {
+    "confidence": "high",
+    "id": "theorem.schwarz-inequality",
+    "kind": "statement",
+    "latex": "\\left|\\sum_{j=1}^{n} a_j \\bar{b}_j\\right|^2\n\\leq\n\\left(\\sum_{j=1}^{n} |a_j|^2\\right)\n\\left(\\sum_{j=1}^{n} |b_j|^2\\right)\n",
+    "natural": {
+      "en": "If a_1, ..., a_n and b_1, ..., b_n are complex numbers, then |Σ a_j b̄_j|² ≤ (Σ |a_j|²)(Σ |b_j|²)."
+    },
+    "notes": "Rudin Theorem 1.35. Also known as the Cauchy-Schwarz or Cauchy-Bunyakovsky-Schwarz inequality.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "1",
+        "edition": "3",
+        "section": "1.35",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Schwarz Inequality"
     },
     "type": "theorem"
   },
@@ -6627,6 +9477,29 @@
     "title": {
       "en": "Taylor's theorem (remainder convergence)",
       "es": "Teorema de Taylor (convergencia del residuo)"
+    },
+    "type": "theorem"
+  },
+  "theorem.unions-intersections-open-closed": {
+    "confidence": "high",
+    "id": "theorem.unions-intersections-open-closed",
+    "kind": "statement",
+    "natural": {
+      "en": "(a) Arbitrary unions of open sets are open. (b) Arbitrary intersections of closed sets are closed. (c) Finite intersections of open sets are open. (d) Finite unions of closed sets are closed."
+    },
+    "notes": "Theorem 2.24 in Rudin. Four-part result on stability of open and closed sets under set operations.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "2",
+        "edition": "3",
+        "section": "2.24",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Unions and Intersections of Open and Closed Sets"
     },
     "type": "theorem"
   }

@@ -1,0 +1,22 @@
+id: proof.closure-properties.rudin
+type: proof
+status: draft
+
+proves: proposition.closure-properties
+
+uses:
+  - definition.closure
+  - definition.neighborhood-limit-point-open-closed
+  - proposition.open-iff-complement-closed
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "2"
+    section: "2.27"
+
+confidence: high
+notes: >
+  (a) If p ∉ E̅, p has neighborhood not intersecting E, so E̅ᶜ is open. (b) E̅ = E iff E' ⊂ E. (c) Closed F ⊃ E implies F ⊃ E', hence F ⊃ E̅.

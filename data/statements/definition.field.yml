@@ -1,0 +1,30 @@
+id: definition.field
+type: definition
+status: draft
+
+title:
+  en: Field
+
+statement:
+  natural:
+    en: >
+      A field is a set F with two operations, called addition and
+      multiplication, which satisfy the following axioms: (A1) closure
+      under addition, (A2) commutativity of addition, (A3) associativity
+      of addition, (A4) existence of additive identity 0, (A5) existence
+      of additive inverses; (M1) closure under multiplication,
+      (M2) commutativity of multiplication, (M3) associativity of
+      multiplication, (M4) existence of multiplicative identity 1 ≠ 0,
+      (M5) existence of multiplicative inverses for nonzero elements;
+      and (D) the distributive law x(y + z) = xy + xz.
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "1"
+    section: "1.12"
+
+confidence: high
+notes: >
+  Rudin 1.12. Q is a field with the usual arithmetic operations.

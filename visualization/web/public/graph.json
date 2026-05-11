@@ -28,6 +28,11 @@
     },
     {
       "relation": "uses",
+      "source": "corollary.nested-compact-nonempty",
+      "target": "proof.perfect-set-uncountable.rudin"
+    },
+    {
+      "relation": "uses",
       "source": "corollary.zero-derivative-constant",
       "target": "proof.equal-derivatives-differ-by-constant.stewart"
     },
@@ -75,6 +80,91 @@
       "relation": "uses",
       "source": "definition.average-value-of-function",
       "target": "proof.mean-value-theorem-integrals.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.closure",
+      "target": "proof.closure-properties.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.closure",
+      "target": "proof.sup-in-closure.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.compact-set",
+      "target": "proof.closed-subset-compact.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.compact-set",
+      "target": "proof.compact-is-closed.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.compact-set",
+      "target": "proof.compactness-relative.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.compact-set",
+      "target": "proof.finite-intersection-compact.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.compact-set",
+      "target": "proof.infinite-subset-compact-limit-point.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.compact-set",
+      "target": "proof.k-cell-compact.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.complex-absolute-value",
+      "target": "proof.complex-absolute-value-properties.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.complex-absolute-value",
+      "target": "proof.schwarz-inequality.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.complex-conjugate",
+      "target": "proof.complex-absolute-value-properties.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.complex-conjugate",
+      "target": "proof.conjugate-properties.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.complex-number",
+      "target": "proof.complex-algebraic-form.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.complex-number",
+      "target": "proof.complex-field.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.complex-number",
+      "target": "proof.conjugate-properties.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.complex-number",
+      "target": "proof.i-squared.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.complex-number",
+      "target": "proof.real-subfield-of-complex.rudin"
     },
     {
       "relation": "uses",
@@ -278,6 +368,11 @@
     },
     {
       "relation": "uses",
+      "source": "definition.euclidean-k-space",
+      "target": "proof.euclidean-norm-properties.rudin"
+    },
+    {
+      "relation": "uses",
       "source": "definition.even-function",
       "target": "proof.integrals-symmetric-functions.stewart"
     },
@@ -285,6 +380,61 @@
       "relation": "uses",
       "source": "definition.exponential-function",
       "target": "proof.laws-of-exponents.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.field",
+      "target": "proof.addition-cancellation.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.field",
+      "target": "proof.complex-field.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.field",
+      "target": "proof.existence-of-reals.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.field",
+      "target": "proof.field-zero-product.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.field",
+      "target": "proof.multiplication-cancellation.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.field",
+      "target": "proof.nth-root-of-product.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.field",
+      "target": "proof.ordered-field-properties.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.finite-countable-sets",
+      "target": "proof.binary-sequences-uncountable.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.finite-countable-sets",
+      "target": "proof.countable-union-countable.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.finite-countable-sets",
+      "target": "proof.infinite-subset-countable.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.finite-countable-sets",
+      "target": "proof.n-tuples-countable.rudin"
     },
     {
       "relation": "uses",
@@ -310,6 +460,16 @@
       "relation": "uses",
       "source": "definition.graph-of-function",
       "target": "proof.vertical-line-test.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.imaginary-unit",
+      "target": "proof.complex-algebraic-form.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.imaginary-unit",
+      "target": "proof.i-squared.rudin"
     },
     {
       "relation": "uses",
@@ -398,6 +558,31 @@
     },
     {
       "relation": "uses",
+      "source": "definition.least-upper-bound-property",
+      "target": "proof.archimedean-density.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.least-upper-bound-property",
+      "target": "proof.existence-of-nth-roots.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.least-upper-bound-property",
+      "target": "proof.existence-of-reals.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.least-upper-bound-property",
+      "target": "proof.lub-implies-glb.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.least-upper-bound-property",
+      "target": "proof.nested-intervals.rudin"
+    },
+    {
+      "relation": "uses",
       "source": "definition.left-hand-limit",
       "target": "proof.fermat-theorem.stewart"
     },
@@ -433,6 +618,26 @@
     },
     {
       "relation": "uses",
+      "source": "definition.metric-space",
+      "target": "proof.compact-is-closed.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.metric-space",
+      "target": "proof.limit-point-infinite-points.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.metric-space",
+      "target": "proof.neighborhood-is-open.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.metric-space",
+      "target": "proof.open-relative.rudin"
+    },
+    {
+      "relation": "uses",
       "source": "definition.natural-exponential-function",
       "target": "proof.derivative-exponential.stewart"
     },
@@ -445,6 +650,61 @@
       "relation": "uses",
       "source": "definition.natural-logarithm",
       "target": "proof.derivative-general-exponential.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.neighborhood-limit-point-open-closed",
+      "target": "proof.closed-subset-compact.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.neighborhood-limit-point-open-closed",
+      "target": "proof.closure-properties.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.neighborhood-limit-point-open-closed",
+      "target": "proof.compact-is-closed.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.neighborhood-limit-point-open-closed",
+      "target": "proof.heine-borel.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.neighborhood-limit-point-open-closed",
+      "target": "proof.infinite-subset-compact-limit-point.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.neighborhood-limit-point-open-closed",
+      "target": "proof.limit-point-infinite-points.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.neighborhood-limit-point-open-closed",
+      "target": "proof.neighborhood-is-open.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.neighborhood-limit-point-open-closed",
+      "target": "proof.open-iff-complement-closed.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.neighborhood-limit-point-open-closed",
+      "target": "proof.open-relative.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.neighborhood-limit-point-open-closed",
+      "target": "proof.perfect-set-uncountable.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.neighborhood-limit-point-open-closed",
+      "target": "proof.unions-intersections-open-closed.rudin"
     },
     {
       "relation": "uses",
@@ -473,6 +733,26 @@
     },
     {
       "relation": "uses",
+      "source": "definition.order-relation",
+      "target": "proof.existence-of-reals.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.ordered-field",
+      "target": "proof.existence-of-reals.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.ordered-field",
+      "target": "proof.ordered-field-properties.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.ordered-set",
+      "target": "proof.lub-implies-glb.rudin"
+    },
+    {
+      "relation": "uses",
       "source": "definition.polynomial",
       "target": "proof.direct-substitution-property.stewart"
     },
@@ -493,6 +773,21 @@
     },
     {
       "relation": "uses",
+      "source": "definition.rational-numbers",
+      "target": "proof.existence-of-reals.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.rational-numbers",
+      "target": "proof.irrationality-of-sqrt-2.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.rational-numbers",
+      "target": "proof.rationals-countable.rudin"
+    },
+    {
+      "relation": "uses",
       "source": "definition.right-hand-limit",
       "target": "proof.fermat-theorem.stewart"
     },
@@ -508,8 +803,43 @@
     },
     {
       "relation": "uses",
+      "source": "definition.segment-interval-cell-ball",
+      "target": "proof.k-cell-compact.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.segment-interval-cell-ball",
+      "target": "proof.nested-intervals.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.segment-interval-cell-ball",
+      "target": "proof.nested-k-cells.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.segment-interval-cell-ball",
+      "target": "proof.perfect-set-uncountable.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.separated-connected",
+      "target": "proof.connected-subsets-of-r.rudin"
+    },
+    {
+      "relation": "uses",
       "source": "definition.sequence",
       "target": "proof.alternating-series-test.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.sequence",
+      "target": "proof.binary-sequences-uncountable.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.sequence",
+      "target": "proof.countable-union-countable.rudin"
     },
     {
       "relation": "uses",
@@ -524,12 +854,57 @@
     {
       "relation": "uses",
       "source": "definition.sequence",
+      "target": "proof.infinite-subset-countable.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.sequence",
       "target": "proof.limit-comparison-test.stewart"
     },
     {
       "relation": "uses",
       "source": "definition.sequence",
       "target": "proof.monotonic-sequence-theorem.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.set-membership-subset",
+      "target": "proof.de-morgan.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.summation-notation",
+      "target": "proof.schwarz-inequality.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.supremum",
+      "target": "proof.archimedean-density.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.supremum",
+      "target": "proof.connected-subsets-of-r.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.supremum",
+      "target": "proof.existence-of-nth-roots.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.supremum",
+      "target": "proof.lub-implies-glb.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.supremum",
+      "target": "proof.nested-intervals.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.supremum",
+      "target": "proof.sup-in-closure.rudin"
     },
     {
       "relation": "uses",
@@ -542,14 +917,59 @@
       "target": "proof.limit-sinx-over-x.stewart"
     },
     {
+      "relation": "uses",
+      "source": "definition.union-intersection",
+      "target": "proof.de-morgan.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.upper-bound",
+      "target": "proof.lub-implies-glb.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "lemma.nested-intervals",
+      "target": "proof.nested-k-cells.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "lemma.nested-k-cells",
+      "target": "proof.k-cell-compact.rudin"
+    },
+    {
       "relation": "proves",
       "source": "proof.absolute-convergence-implies-convergence.stewart",
       "target": "theorem.absolute-convergence-implies-convergence"
     },
     {
       "relation": "proves",
+      "source": "proof.addition-cancellation.rudin",
+      "target": "proposition.addition-cancellation"
+    },
+    {
+      "relation": "proves",
       "source": "proof.alternating-series-test.stewart",
       "target": "theorem.alternating-series-test"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.archimedean-density.rudin",
+      "target": "theorem.archimedean-density"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.at-most-countable-union.rudin",
+      "target": "corollary.at-most-countable-union"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.binary-sequences-uncountable.rudin",
+      "target": "theorem.binary-sequences-uncountable"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.bolzano-weierstrass.rudin",
+      "target": "theorem.bolzano-weierstrass"
     },
     {
       "relation": "proves",
@@ -568,6 +988,31 @@
     },
     {
       "relation": "proves",
+      "source": "proof.closed-intersect-compact.rudin",
+      "target": "corollary.closed-intersect-compact"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.closed-subset-compact.rudin",
+      "target": "proposition.closed-subset-compact"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.closure-properties.rudin",
+      "target": "proposition.closure-properties"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.compact-is-closed.rudin",
+      "target": "proposition.compact-is-closed"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.compactness-relative.rudin",
+      "target": "theorem.compactness-relative"
+    },
+    {
+      "relation": "proves",
       "source": "proof.comparison-test-series.stewart",
       "target": "theorem.comparison-test-series"
     },
@@ -578,8 +1023,33 @@
     },
     {
       "relation": "proves",
+      "source": "proof.complex-absolute-value-properties.rudin",
+      "target": "theorem.complex-absolute-value-properties"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.complex-algebraic-form.rudin",
+      "target": "theorem.complex-algebraic-form"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.complex-field.rudin",
+      "target": "theorem.complex-field"
+    },
+    {
+      "relation": "proves",
       "source": "proof.concavity-test.stewart",
       "target": "proposition.concavity-test"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.conjugate-properties.rudin",
+      "target": "theorem.conjugate-properties"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.connected-subsets-of-r.rudin",
+      "target": "theorem.connected-subsets-of-r"
     },
     {
       "relation": "proves",
@@ -595,6 +1065,16 @@
       "relation": "proves",
       "source": "proof.continuity-of-composition.stewart",
       "target": "theorem.continuity-of-composition"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.countable-union-countable.rudin",
+      "target": "theorem.countable-union-countable"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.de-morgan.rudin",
+      "target": "proposition.de-morgan"
     },
     {
       "relation": "proves",
@@ -703,6 +1183,21 @@
     },
     {
       "relation": "proves",
+      "source": "proof.euclidean-norm-properties.rudin",
+      "target": "theorem.euclidean-norm-properties"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.existence-of-nth-roots.rudin",
+      "target": "theorem.existence-of-nth-roots"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.existence-of-reals.rudin",
+      "target": "theorem.existence-of-reals"
+    },
+    {
+      "relation": "proves",
       "source": "proof.extreme-value-theorem.stewart",
       "target": "theorem.extreme-value-theorem"
     },
@@ -710,6 +1205,21 @@
       "relation": "proves",
       "source": "proof.fermat-theorem.stewart",
       "target": "theorem.fermat-theorem"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.field-zero-product.rudin",
+      "target": "proposition.field-zero-product"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.finite-intersection-compact.rudin",
+      "target": "theorem.finite-intersection-compact"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.finite-set-no-limit-points.rudin",
+      "target": "corollary.finite-set-no-limit-points"
     },
     {
       "relation": "proves",
@@ -738,13 +1248,33 @@
     },
     {
       "relation": "proves",
+      "source": "proof.heine-borel.rudin",
+      "target": "theorem.heine-borel"
+    },
+    {
+      "relation": "proves",
       "source": "proof.horizontal-line-test.stewart",
       "target": "proposition.horizontal-line-test"
     },
     {
       "relation": "proves",
+      "source": "proof.i-squared.rudin",
+      "target": "theorem.i-squared"
+    },
+    {
+      "relation": "proves",
       "source": "proof.increasing-decreasing-test.stewart",
       "target": "proposition.increasing-decreasing-test"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.infinite-subset-compact-limit-point.rudin",
+      "target": "theorem.infinite-subset-compact-limit-point"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.infinite-subset-countable.rudin",
+      "target": "proposition.infinite-subset-countable"
     },
     {
       "relation": "proves",
@@ -793,8 +1323,23 @@
     },
     {
       "relation": "proves",
+      "source": "proof.interval-uncountable.rudin",
+      "target": "corollary.interval-uncountable"
+    },
+    {
+      "relation": "proves",
       "source": "proof.inverse-graph-reflection.stewart",
       "target": "proposition.inverse-graph-reflection"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.irrationality-of-sqrt-2.rudin",
+      "target": "proposition.irrationality-of-sqrt-2"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.k-cell-compact.rudin",
+      "target": "theorem.k-cell-compact"
     },
     {
       "relation": "proves",
@@ -838,6 +1383,11 @@
     },
     {
       "relation": "proves",
+      "source": "proof.limit-point-infinite-points.rudin",
+      "target": "proposition.limit-point-infinite-points"
+    },
+    {
+      "relation": "proves",
       "source": "proof.limit-power-law.stewart",
       "target": "theorem.limit-power-law"
     },
@@ -858,6 +1408,11 @@
     },
     {
       "relation": "proves",
+      "source": "proof.lub-implies-glb.rudin",
+      "target": "theorem.lub-implies-glb"
+    },
+    {
+      "relation": "proves",
       "source": "proof.mean-value-theorem-integrals.stewart",
       "target": "theorem.mean-value-theorem-integrals"
     },
@@ -873,8 +1428,63 @@
     },
     {
       "relation": "proves",
+      "source": "proof.multiplication-cancellation.rudin",
+      "target": "proposition.multiplication-cancellation"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.n-tuples-countable.rudin",
+      "target": "proposition.n-tuples-countable"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.neighborhood-is-open.rudin",
+      "target": "proposition.neighborhood-is-open"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.nested-compact-nonempty.rudin",
+      "target": "corollary.nested-compact-nonempty"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.nested-intervals.rudin",
+      "target": "lemma.nested-intervals"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.nested-k-cells.rudin",
+      "target": "lemma.nested-k-cells"
+    },
+    {
+      "relation": "proves",
       "source": "proof.net-change-theorem.stewart",
       "target": "theorem.net-change-theorem"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.nth-root-of-product.rudin",
+      "target": "corollary.nth-root-of-product"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.open-iff-complement-closed.rudin",
+      "target": "proposition.open-iff-complement-closed"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.open-relative.rudin",
+      "target": "theorem.open-relative"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.ordered-field-properties.rudin",
+      "target": "proposition.ordered-field-properties"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.perfect-set-uncountable.rudin",
+      "target": "theorem.perfect-set-uncountable"
     },
     {
       "relation": "proves",
@@ -913,6 +1523,16 @@
     },
     {
       "relation": "proves",
+      "source": "proof.rationals-countable.rudin",
+      "target": "corollary.rationals-countable"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.real-subfield-of-complex.rudin",
+      "target": "theorem.real-subfield-of-complex"
+    },
+    {
+      "relation": "proves",
       "source": "proof.rolles-theorem.stewart",
       "target": "theorem.rolles-theorem"
     },
@@ -920,6 +1540,11 @@
       "relation": "proves",
       "source": "proof.root-test.stewart",
       "target": "theorem.root-test"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.schwarz-inequality.rudin",
+      "target": "theorem.schwarz-inequality"
     },
     {
       "relation": "proves",
@@ -948,8 +1573,18 @@
     },
     {
       "relation": "proves",
+      "source": "proof.sup-in-closure.rudin",
+      "target": "proposition.sup-in-closure"
+    },
+    {
+      "relation": "proves",
       "source": "proof.taylor-convergence.stewart",
       "target": "theorem.taylor-convergence"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.unions-intersections-open-closed.rudin",
+      "target": "theorem.unions-intersections-open-closed"
     },
     {
       "relation": "proves",
@@ -963,13 +1598,53 @@
     },
     {
       "relation": "uses",
+      "source": "proposition.addition-cancellation",
+      "target": "proof.existence-of-reals.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "proposition.addition-cancellation",
+      "target": "proof.field-zero-product.rudin"
+    },
+    {
+      "relation": "uses",
       "source": "proposition.change-of-base-formula",
       "target": "proof.derivative-log-base-a.stewart"
     },
     {
       "relation": "uses",
+      "source": "proposition.closed-subset-compact",
+      "target": "proof.closed-intersect-compact.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "proposition.closed-subset-compact",
+      "target": "proof.heine-borel.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "proposition.compact-is-closed",
+      "target": "proof.closed-intersect-compact.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "proposition.compact-is-closed",
+      "target": "proof.finite-intersection-compact.rudin"
+    },
+    {
+      "relation": "uses",
       "source": "proposition.concavity-test",
       "target": "proof.second-derivative-test.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "proposition.de-morgan",
+      "target": "proof.unions-intersections-open-closed.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "proposition.field-zero-product",
+      "target": "proof.ordered-field-properties.rudin"
     },
     {
       "relation": "uses",
@@ -985,6 +1660,11 @@
       "relation": "uses",
       "source": "proposition.increasing-decreasing-test",
       "target": "proof.first-derivative-test.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "proposition.infinite-subset-countable",
+      "target": "proof.countable-union-countable.rudin"
     },
     {
       "relation": "uses",
@@ -1020,6 +1700,61 @@
       "relation": "uses",
       "source": "proposition.laws-of-logarithms",
       "target": "proof.change-of-base-formula.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "proposition.limit-point-infinite-points",
+      "target": "proof.finite-set-no-limit-points.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "proposition.limit-point-infinite-points",
+      "target": "proof.heine-borel.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "proposition.n-tuples-countable",
+      "target": "proof.rationals-countable.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "proposition.neighborhood-is-open",
+      "target": "proof.open-relative.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "proposition.open-iff-complement-closed",
+      "target": "proof.closed-subset-compact.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "proposition.open-iff-complement-closed",
+      "target": "proof.closure-properties.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "proposition.open-iff-complement-closed",
+      "target": "proof.unions-intersections-open-closed.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "proposition.ordered-field-properties",
+      "target": "proof.complex-field.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "proposition.ordered-field-properties",
+      "target": "proof.existence-of-nth-roots.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "proposition.sup-in-closure",
+      "target": "proof.connected-subsets-of-r.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.archimedean-density",
+      "target": "proof.k-cell-compact.rudin"
     },
     {
       "relation": "uses",
@@ -1093,6 +1828,16 @@
     },
     {
       "relation": "uses",
+      "source": "theorem.conjugate-properties",
+      "target": "proof.complex-absolute-value-properties.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.conjugate-properties",
+      "target": "proof.schwarz-inequality.rudin"
+    },
+    {
+      "relation": "uses",
       "source": "theorem.constant-multiple-rule",
       "target": "proof.derivative-log-base-a.stewart"
     },
@@ -1105,6 +1850,16 @@
       "relation": "uses",
       "source": "theorem.constant-multiple-rule",
       "target": "proof.mean-value-theorem.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.countable-union-countable",
+      "target": "proof.at-most-countable-union.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.countable-union-countable",
+      "target": "proof.n-tuples-countable.rudin"
     },
     {
       "relation": "uses",
@@ -1193,6 +1948,26 @@
     },
     {
       "relation": "uses",
+      "source": "theorem.existence-of-nth-roots",
+      "target": "proof.complex-absolute-value-properties.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.existence-of-nth-roots",
+      "target": "proof.nth-root-of-product.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.existence-of-reals",
+      "target": "proof.archimedean-density.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.existence-of-reals",
+      "target": "proof.existence-of-nth-roots.rudin"
+    },
+    {
+      "relation": "uses",
       "source": "theorem.extreme-value-theorem",
       "target": "proof.mean-value-theorem-integrals.stewart"
     },
@@ -1210,6 +1985,11 @@
       "relation": "uses",
       "source": "theorem.fermat-theorem",
       "target": "proof.rolles-theorem.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.finite-intersection-compact",
+      "target": "proof.nested-compact-nonempty.rudin"
     },
     {
       "relation": "uses",
@@ -1253,6 +2033,16 @@
     },
     {
       "relation": "uses",
+      "source": "theorem.infinite-subset-compact-limit-point",
+      "target": "proof.bolzano-weierstrass.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.infinite-subset-compact-limit-point",
+      "target": "proof.heine-borel.rudin"
+    },
+    {
+      "relation": "uses",
       "source": "theorem.integration-by-parts",
       "target": "proof.integration-by-parts-definite.stewart"
     },
@@ -1260,6 +2050,16 @@
       "relation": "uses",
       "source": "theorem.intermediate-value-theorem",
       "target": "proof.mean-value-theorem-integrals.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.k-cell-compact",
+      "target": "proof.bolzano-weierstrass.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.k-cell-compact",
+      "target": "proof.heine-borel.rudin"
     },
     {
       "relation": "uses",
@@ -1388,6 +2188,16 @@
     },
     {
       "relation": "uses",
+      "source": "theorem.open-relative",
+      "target": "proof.compactness-relative.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.perfect-set-uncountable",
+      "target": "proof.interval-uncountable.rudin"
+    },
+    {
+      "relation": "uses",
       "source": "theorem.power-rule",
       "target": "proof.power-rule-combined-chain.stewart"
     },
@@ -1428,8 +2238,18 @@
     },
     {
       "relation": "uses",
+      "source": "theorem.real-subfield-of-complex",
+      "target": "proof.complex-algebraic-form.rudin"
+    },
+    {
+      "relation": "uses",
       "source": "theorem.rolles-theorem",
       "target": "proof.mean-value-theorem.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.schwarz-inequality",
+      "target": "proof.euclidean-norm-properties.rudin"
     },
     {
       "relation": "uses",
@@ -1465,10 +2285,36 @@
       "relation": "uses",
       "source": "theorem.sum-rule",
       "target": "proof.mean-value-theorem.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.unions-intersections-open-closed",
+      "target": "proof.closed-intersect-compact.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.unions-intersections-open-closed",
+      "target": "proof.open-relative.rudin"
     }
   ],
   "multigraph": true,
   "nodes": [
+    {
+      "id": "corollary.at-most-countable-union",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "At Most Countable Union of At Most Countable Sets",
+      "title_es": "",
+      "type": "corollary"
+    },
+    {
+      "id": "corollary.closed-intersect-compact",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Intersection of a Closed Set and a Compact Set is Compact",
+      "title_es": "",
+      "type": "corollary"
+    },
     {
       "id": "corollary.difference-rule",
       "kind": "statement",
@@ -1486,6 +2332,22 @@
       "type": "corollary"
     },
     {
+      "id": "corollary.finite-set-no-limit-points",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "A Finite Point Set Has No Limit Points",
+      "title_es": "",
+      "type": "corollary"
+    },
+    {
+      "id": "corollary.interval-uncountable",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Every Interval [a,b] is Uncountable",
+      "title_es": "",
+      "type": "corollary"
+    },
+    {
       "id": "corollary.limit-cosx-minus-1-over-x",
       "kind": "statement",
       "status": "draft",
@@ -1494,11 +2356,35 @@
       "type": "corollary"
     },
     {
+      "id": "corollary.nested-compact-nonempty",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Nested Sequence of Compact Sets Has Nonempty Intersection",
+      "title_es": "",
+      "type": "corollary"
+    },
+    {
+      "id": "corollary.nth-root-of-product",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "nth Root of a Product",
+      "title_es": "",
+      "type": "corollary"
+    },
+    {
       "id": "corollary.power-rule-combined-chain",
       "kind": "statement",
       "status": "draft",
       "title_en": "The Power Rule combined with the Chain Rule",
       "title_es": "Regla de la potencia combinada con la regla de la cadena",
+      "type": "corollary"
+    },
+    {
+      "id": "corollary.rationals-countable",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "The Rational Numbers are Countable",
+      "title_es": "",
       "type": "corollary"
     },
     {
@@ -1630,6 +2516,46 @@
       "type": "definition"
     },
     {
+      "id": "definition.closure",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Closure of a Set",
+      "title_es": "",
+      "type": "definition"
+    },
+    {
+      "id": "definition.compact-set",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Compact Set",
+      "title_es": "",
+      "type": "definition"
+    },
+    {
+      "id": "definition.complex-absolute-value",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Absolute Value of a Complex Number",
+      "title_es": "",
+      "type": "definition"
+    },
+    {
+      "id": "definition.complex-conjugate",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Complex Conjugate",
+      "title_es": "",
+      "type": "definition"
+    },
+    {
+      "id": "definition.complex-number",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Complex Number",
+      "title_es": "",
+      "type": "definition"
+    },
+    {
       "id": "definition.composition-of-functions",
       "kind": "statement",
       "status": "draft",
@@ -1750,6 +2676,22 @@
       "type": "definition"
     },
     {
+      "id": "definition.equivalence-cardinality",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Cardinal Equivalence",
+      "title_es": "",
+      "type": "definition"
+    },
+    {
+      "id": "definition.euclidean-k-space",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Euclidean k-Space",
+      "title_es": "",
+      "type": "definition"
+    },
+    {
       "id": "definition.even-function",
       "kind": "statement",
       "status": "draft",
@@ -1766,6 +2708,30 @@
       "type": "definition"
     },
     {
+      "id": "definition.extended-reals",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Extended Real Number System",
+      "title_es": "",
+      "type": "definition"
+    },
+    {
+      "id": "definition.field",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Field",
+      "title_es": "",
+      "type": "definition"
+    },
+    {
+      "id": "definition.finite-countable-sets",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Finite, Countable, and Uncountable Sets",
+      "title_es": "",
+      "type": "definition"
+    },
+    {
       "id": "definition.first-order-linear-equation",
       "kind": "statement",
       "status": "draft",
@@ -1779,6 +2745,14 @@
       "status": "draft",
       "title_en": "Function",
       "title_es": "Función",
+      "type": "definition"
+    },
+    {
+      "id": "definition.function-mapping",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Function and Mapping",
+      "title_es": "",
       "type": "definition"
     },
     {
@@ -1819,6 +2793,14 @@
       "status": "draft",
       "title_en": "Hyperbola",
       "title_es": "Hipérbola",
+      "type": "definition"
+    },
+    {
+      "id": "definition.imaginary-unit",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Imaginary Unit",
+      "title_es": "",
       "type": "definition"
     },
     {
@@ -1934,6 +2916,14 @@
       "type": "definition"
     },
     {
+      "id": "definition.least-upper-bound-property",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Least-Upper-Bound Property",
+      "title_es": "",
+      "type": "definition"
+    },
+    {
       "id": "definition.left-hand-limit",
       "kind": "statement",
       "status": "draft",
@@ -2014,6 +3004,14 @@
       "type": "definition"
     },
     {
+      "id": "definition.metric-space",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Metric Space",
+      "title_es": "",
+      "type": "definition"
+    },
+    {
       "id": "definition.natural-exponential-function",
       "kind": "statement",
       "status": "draft",
@@ -2027,6 +3025,14 @@
       "status": "draft",
       "title_en": "Natural logarithm",
       "title_es": "Logaritmo natural",
+      "type": "definition"
+    },
+    {
+      "id": "definition.neighborhood-limit-point-open-closed",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Topological Concepts in Metric Spaces",
+      "title_es": "",
       "type": "definition"
     },
     {
@@ -2051,6 +3057,38 @@
       "status": "draft",
       "title_en": "One-to-one function",
       "title_es": "Función inyectiva (uno a uno)",
+      "type": "definition"
+    },
+    {
+      "id": "definition.open-cover",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Open Cover",
+      "title_es": "",
+      "type": "definition"
+    },
+    {
+      "id": "definition.order-relation",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Order Relation",
+      "title_es": "",
+      "type": "definition"
+    },
+    {
+      "id": "definition.ordered-field",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Ordered Field",
+      "title_es": "",
+      "type": "definition"
+    },
+    {
+      "id": "definition.ordered-set",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Ordered Set",
+      "title_es": "",
       "type": "definition"
     },
     {
@@ -2134,6 +3172,14 @@
       "type": "definition"
     },
     {
+      "id": "definition.rational-numbers",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Rational Numbers",
+      "title_es": "",
+      "type": "definition"
+    },
+    {
       "id": "definition.reflection",
       "kind": "statement",
       "status": "draft",
@@ -2174,6 +3220,14 @@
       "type": "definition"
     },
     {
+      "id": "definition.segment-interval-cell-ball",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Segment, Interval, k-Cell, and Ball",
+      "title_es": "",
+      "type": "definition"
+    },
+    {
       "id": "definition.separable-equation",
       "kind": "statement",
       "status": "draft",
@@ -2182,11 +3236,27 @@
       "type": "definition"
     },
     {
+      "id": "definition.separated-connected",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Separated and Connected Sets",
+      "title_es": "",
+      "type": "definition"
+    },
+    {
       "id": "definition.sequence",
       "kind": "statement",
       "status": "draft",
       "title_en": "Sequence",
-      "title_es": "Sucesión",
+      "title_es": "",
+      "type": "definition"
+    },
+    {
+      "id": "definition.set-membership-subset",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Set, Membership, and Subset",
+      "title_es": "",
       "type": "definition"
     },
     {
@@ -2195,6 +3265,22 @@
       "status": "draft",
       "title_en": "Sigma notation",
       "title_es": "Notación sigma",
+      "type": "definition"
+    },
+    {
+      "id": "definition.summation-notation",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Summation Notation",
+      "title_es": "",
+      "type": "definition"
+    },
+    {
+      "id": "definition.supremum",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Supremum (Least Upper Bound)",
+      "title_es": "",
       "type": "definition"
     },
     {
@@ -2246,6 +3332,22 @@
       "type": "definition"
     },
     {
+      "id": "definition.union-intersection",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Union and Intersection of Families of Sets",
+      "title_es": "",
+      "type": "definition"
+    },
+    {
+      "id": "definition.upper-bound",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Upper Bound and Bounded Above",
+      "title_es": "",
+      "type": "definition"
+    },
+    {
       "id": "definition.vertical-asymptote",
       "kind": "statement",
       "status": "draft",
@@ -2294,6 +3396,22 @@
       "type": "definition"
     },
     {
+      "id": "lemma.nested-intervals",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Nested Intervals Theorem",
+      "title_es": "",
+      "type": "lemma"
+    },
+    {
+      "id": "lemma.nested-k-cells",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Nested k-Cells Theorem",
+      "title_es": "",
+      "type": "lemma"
+    },
+    {
       "id": "proof.absolute-convergence-implies-convergence.stewart",
       "kind": "proof",
       "status": "draft",
@@ -2301,7 +3419,42 @@
       "type": "proof"
     },
     {
+      "id": "proof.addition-cancellation.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
       "id": "proof.alternating-series-test.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.archimedean-density.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "contradiction",
+      "type": "proof"
+    },
+    {
+      "id": "proof.at-most-countable-union.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.binary-sequences-uncountable.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "diagonal",
+      "type": "proof"
+    },
+    {
+      "id": "proof.bolzano-weierstrass.rudin",
       "kind": "proof",
       "status": "draft",
       "style": "direct",
@@ -2329,6 +3482,41 @@
       "type": "proof"
     },
     {
+      "id": "proof.closed-intersect-compact.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.closed-subset-compact.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.closure-properties.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.compact-is-closed.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.compactness-relative.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
       "id": "proof.comparison-test-series.stewart",
       "kind": "proof",
       "status": "draft",
@@ -2343,7 +3531,42 @@
       "type": "proof"
     },
     {
+      "id": "proof.complex-absolute-value-properties.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.complex-algebraic-form.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.complex-field.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "verification",
+      "type": "proof"
+    },
+    {
       "id": "proof.concavity-test.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.conjugate-properties.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.connected-subsets-of-r.rudin",
       "kind": "proof",
       "status": "draft",
       "style": "direct",
@@ -2368,6 +3591,20 @@
       "kind": "proof",
       "status": "draft",
       "style": "epsilon-delta",
+      "type": "proof"
+    },
+    {
+      "id": "proof.countable-union-countable.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "construction",
+      "type": "proof"
+    },
+    {
+      "id": "proof.de-morgan.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
       "type": "proof"
     },
     {
@@ -2518,6 +3755,27 @@
       "type": "proof"
     },
     {
+      "id": "proof.euclidean-norm-properties.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.existence-of-nth-roots.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "contradiction",
+      "type": "proof"
+    },
+    {
+      "id": "proof.existence-of-reals.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "construction",
+      "type": "proof"
+    },
+    {
       "id": "proof.extreme-value-theorem.stewart",
       "kind": "proof",
       "status": "draft",
@@ -2526,6 +3784,27 @@
     },
     {
       "id": "proof.fermat-theorem.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.field-zero-product.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.finite-intersection-compact.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "contradiction",
+      "type": "proof"
+    },
+    {
+      "id": "proof.finite-set-no-limit-points.rudin",
       "kind": "proof",
       "status": "draft",
       "style": "direct",
@@ -2567,7 +3846,21 @@
       "type": "proof"
     },
     {
+      "id": "proof.heine-borel.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
       "id": "proof.horizontal-line-test.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.i-squared.rudin",
       "kind": "proof",
       "status": "draft",
       "style": "direct",
@@ -2578,6 +3871,20 @@
       "kind": "proof",
       "status": "draft",
       "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.infinite-subset-compact-limit-point.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "contradiction",
+      "type": "proof"
+    },
+    {
+      "id": "proof.infinite-subset-countable.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "construction",
       "type": "proof"
     },
     {
@@ -2644,10 +3951,31 @@
       "type": "proof"
     },
     {
+      "id": "proof.interval-uncountable.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
       "id": "proof.inverse-graph-reflection.stewart",
       "kind": "proof",
       "status": "draft",
       "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.irrationality-of-sqrt-2.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "contradiction",
+      "type": "proof"
+    },
+    {
+      "id": "proof.k-cell-compact.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "contradiction",
       "type": "proof"
     },
     {
@@ -2707,6 +4035,13 @@
       "type": "proof"
     },
     {
+      "id": "proof.limit-point-infinite-points.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "contradiction",
+      "type": "proof"
+    },
+    {
       "id": "proof.limit-power-law.stewart",
       "kind": "proof",
       "status": "draft",
@@ -2735,6 +4070,13 @@
       "type": "proof"
     },
     {
+      "id": "proof.lub-implies-glb.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
       "id": "proof.mean-value-theorem-integrals.stewart",
       "kind": "proof",
       "status": "draft",
@@ -2756,10 +4098,87 @@
       "type": "proof"
     },
     {
+      "id": "proof.multiplication-cancellation.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.n-tuples-countable.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "induction",
+      "type": "proof"
+    },
+    {
+      "id": "proof.neighborhood-is-open.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.nested-compact-nonempty.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.nested-intervals.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.nested-k-cells.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
       "id": "proof.net-change-theorem.stewart",
       "kind": "proof",
       "status": "draft",
       "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.nth-root-of-product.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.open-iff-complement-closed.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.open-relative.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.ordered-field-properties.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.perfect-set-uncountable.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "contradiction",
       "type": "proof"
     },
     {
@@ -2812,6 +4231,20 @@
       "type": "proof"
     },
     {
+      "id": "proof.rationals-countable.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.real-subfield-of-complex.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
       "id": "proof.rolles-theorem.stewart",
       "kind": "proof",
       "status": "draft",
@@ -2820,6 +4253,13 @@
     },
     {
       "id": "proof.root-test.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.schwarz-inequality.rudin",
       "kind": "proof",
       "status": "draft",
       "style": "direct",
@@ -2861,7 +4301,21 @@
       "type": "proof"
     },
     {
+      "id": "proof.sup-in-closure.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
       "id": "proof.taylor-convergence.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.unions-intersections-open-closed.rudin",
       "kind": "proof",
       "status": "draft",
       "style": "direct",
@@ -2882,6 +4336,14 @@
       "type": "proof"
     },
     {
+      "id": "proposition.addition-cancellation",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Consequences of Addition Axioms",
+      "title_es": "",
+      "type": "proposition"
+    },
+    {
       "id": "proposition.cancellation-equations",
       "kind": "statement",
       "status": "draft",
@@ -2898,6 +4360,30 @@
       "type": "proposition"
     },
     {
+      "id": "proposition.closed-subset-compact",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Closed Subsets of Compact Sets are Compact",
+      "title_es": "",
+      "type": "proposition"
+    },
+    {
+      "id": "proposition.closure-properties",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Properties of the Closure of a Set",
+      "title_es": "",
+      "type": "proposition"
+    },
+    {
+      "id": "proposition.compact-is-closed",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Compact Subsets of Metric Spaces are Closed",
+      "title_es": "",
+      "type": "proposition"
+    },
+    {
       "id": "proposition.concavity-test",
       "kind": "statement",
       "status": "draft",
@@ -2906,11 +4392,27 @@
       "type": "proposition"
     },
     {
+      "id": "proposition.de-morgan",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "De Morgan's Law",
+      "title_es": "",
+      "type": "proposition"
+    },
+    {
       "id": "proposition.direct-substitution-property",
       "kind": "statement",
       "status": "draft",
       "title_en": "Direct substitution property",
       "title_es": "Propiedad de sustitución directa",
+      "type": "proposition"
+    },
+    {
+      "id": "proposition.field-zero-product",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Field Properties of Zero and Negation",
+      "title_es": "",
       "type": "proposition"
     },
     {
@@ -2935,6 +4437,14 @@
       "status": "draft",
       "title_en": "Increasing/Decreasing Test",
       "title_es": "Prueba creciente/decreciente",
+      "type": "proposition"
+    },
+    {
+      "id": "proposition.infinite-subset-countable",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Every Infinite Subset of a Countable Set is Countable",
+      "title_es": "",
       "type": "proposition"
     },
     {
@@ -2978,6 +4488,14 @@
       "type": "proposition"
     },
     {
+      "id": "proposition.irrationality-of-sqrt-2",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Irrationality of √2",
+      "title_es": "",
+      "type": "proposition"
+    },
+    {
       "id": "proposition.laws-of-exponents",
       "kind": "statement",
       "status": "draft",
@@ -3002,6 +4520,14 @@
       "type": "proposition"
     },
     {
+      "id": "proposition.limit-point-infinite-points",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Limit Points Contain Infinitely Many Points",
+      "title_es": "",
+      "type": "proposition"
+    },
+    {
       "id": "proposition.local-extremum-at-critical",
       "kind": "statement",
       "status": "draft",
@@ -3010,11 +4536,59 @@
       "type": "proposition"
     },
     {
+      "id": "proposition.multiplication-cancellation",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Consequences of Multiplication Axioms",
+      "title_es": "",
+      "type": "proposition"
+    },
+    {
+      "id": "proposition.n-tuples-countable",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Set of n-Tuples from a Countable Set is Countable",
+      "title_es": "",
+      "type": "proposition"
+    },
+    {
+      "id": "proposition.neighborhood-is-open",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Every Neighborhood is an Open Set",
+      "title_es": "",
+      "type": "proposition"
+    },
+    {
+      "id": "proposition.open-iff-complement-closed",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "A Set is Open Iff Its Complement is Closed",
+      "title_es": "",
+      "type": "proposition"
+    },
+    {
+      "id": "proposition.ordered-field-properties",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Properties of Ordered Fields",
+      "title_es": "",
+      "type": "proposition"
+    },
+    {
       "id": "proposition.second-derivative-test",
       "kind": "statement",
       "status": "draft",
       "title_en": "The Second Derivative Test",
       "title_es": "Prueba de la segunda derivada",
+      "type": "proposition"
+    },
+    {
+      "id": "proposition.sup-in-closure",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Supremum Belongs to the Closure",
+      "title_es": "",
       "type": "proposition"
     },
     {
@@ -3042,11 +4616,43 @@
       "type": "theorem"
     },
     {
+      "id": "theorem.archimedean-density",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Archimedean Property and Density of Q in R",
+      "title_es": "",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.binary-sequences-uncountable",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "The Set of All Binary Sequences is Uncountable",
+      "title_es": "",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.bolzano-weierstrass",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Bolzano-Weierstrass Theorem",
+      "title_es": "",
+      "type": "theorem"
+    },
+    {
       "id": "theorem.chain-rule",
       "kind": "statement",
       "status": "draft",
       "title_en": "The Chain Rule",
       "title_es": "Regla de la cadena",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.compactness-relative",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Compactness is Independent of the Ambient Space",
+      "title_es": "",
       "type": "theorem"
     },
     {
@@ -3063,6 +4669,46 @@
       "status": "draft",
       "title_en": "Comparison Theorem for Improper Integrals",
       "title_es": "Teorema de comparación para integrales impropias",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.complex-absolute-value-properties",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Properties of Complex Absolute Value",
+      "title_es": "",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.complex-algebraic-form",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Algebraic Form of Complex Numbers",
+      "title_es": "",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.complex-field",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Complex Numbers Form a Field",
+      "title_es": "",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.conjugate-properties",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Properties of Complex Conjugation",
+      "title_es": "",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.connected-subsets-of-r",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Characterization of Connected Subsets of R",
+      "title_es": "",
       "type": "theorem"
     },
     {
@@ -3087,6 +4733,14 @@
       "status": "draft",
       "title_en": "Continuity of composite functions",
       "title_es": "Continuidad de funciones compuestas",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.countable-union-countable",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Countable Union of Countable Sets is Countable",
+      "title_es": "",
       "type": "theorem"
     },
     {
@@ -3234,6 +4888,30 @@
       "type": "theorem"
     },
     {
+      "id": "theorem.euclidean-norm-properties",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Properties of the Euclidean Norm",
+      "title_es": "",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.existence-of-nth-roots",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Existence and Uniqueness of nth Roots",
+      "title_es": "",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.existence-of-reals",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Existence of the Real Field",
+      "title_es": "",
+      "type": "theorem"
+    },
+    {
       "id": "theorem.extreme-value-theorem",
       "kind": "statement",
       "status": "draft",
@@ -3247,6 +4925,14 @@
       "status": "draft",
       "title_en": "Fermat's Theorem",
       "title_es": "Teorema de Fermat",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.finite-intersection-compact",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Finite Intersection Property for Compact Sets",
+      "title_es": "",
       "type": "theorem"
     },
     {
@@ -3279,6 +4965,30 @@
       "status": "draft",
       "title_en": "Geometric series",
       "title_es": "Serie geométrica",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.heine-borel",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Heine-Borel Theorem",
+      "title_es": "",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.i-squared",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Square of the Imaginary Unit",
+      "title_es": "",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.infinite-subset-compact-limit-point",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Infinite Subset of a Compact Set Has a Limit Point",
+      "title_es": "",
       "type": "theorem"
     },
     {
@@ -3319,6 +5029,14 @@
       "status": "draft",
       "title_en": "Intermediate Value Theorem",
       "title_es": "Teorema del valor intermedio",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.k-cell-compact",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Every k-Cell is Compact",
+      "title_es": "",
       "type": "theorem"
     },
     {
@@ -3378,6 +5096,14 @@
       "type": "theorem"
     },
     {
+      "id": "theorem.lub-implies-glb",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "LUB Property Implies GLB Property",
+      "title_es": "",
+      "type": "theorem"
+    },
+    {
       "id": "theorem.mean-value-theorem",
       "kind": "statement",
       "status": "draft",
@@ -3407,6 +5133,22 @@
       "status": "draft",
       "title_en": "The Net Change Theorem",
       "title_es": "Teorema del cambio neto",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.open-relative",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Characterization of Relatively Open Sets",
+      "title_es": "",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.perfect-set-uncountable",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Nonempty Perfect Sets in Rk are Uncountable",
+      "title_es": "",
       "type": "theorem"
     },
     {
@@ -3458,6 +5200,14 @@
       "type": "theorem"
     },
     {
+      "id": "theorem.real-subfield-of-complex",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Real Numbers as Subfield of Complex Numbers",
+      "title_es": "",
+      "type": "theorem"
+    },
+    {
       "id": "theorem.rolles-theorem",
       "kind": "statement",
       "status": "draft",
@@ -3471,6 +5221,14 @@
       "status": "draft",
       "title_en": "The Root Test",
       "title_es": "Prueba de la raíz",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.schwarz-inequality",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Schwarz Inequality",
+      "title_es": "",
       "type": "theorem"
     },
     {
@@ -3511,6 +5269,14 @@
       "status": "draft",
       "title_en": "Taylor's theorem (remainder convergence)",
       "title_es": "Teorema de Taylor (convergencia del residuo)",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.unions-intersections-open-closed",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Unions and Intersections of Open and Closed Sets",
+      "title_es": "",
       "type": "theorem"
     }
   ]

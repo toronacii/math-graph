@@ -1,0 +1,32 @@
+id: theorem.schwarz-inequality
+type: theorem
+status: draft
+
+title:
+  en: Schwarz Inequality
+
+statement:
+  natural:
+    en: >
+      If a_1, ..., a_n and b_1, ..., b_n are complex numbers, then
+      |Σ a_j b̄_j|² ≤ (Σ |a_j|²)(Σ |b_j|²).
+  latex: |
+    \left|\sum_{j=1}^{n} a_j \bar{b}_j\right|^2
+    \leq
+    \left(\sum_{j=1}^{n} |a_j|^2\right)
+    \left(\sum_{j=1}^{n} |b_j|^2\right)
+
+proved_by:
+  - proof.schwarz-inequality.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "1"
+    section: "1.35"
+
+confidence: high
+notes: >
+  Rudin Theorem 1.35. Also known as the Cauchy-Schwarz or
+  Cauchy-Bunyakovsky-Schwarz inequality.

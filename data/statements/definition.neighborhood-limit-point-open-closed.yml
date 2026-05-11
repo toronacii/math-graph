@@ -1,0 +1,22 @@
+id: definition.neighborhood-limit-point-open-closed
+type: definition
+status: draft
+
+title:
+  en: Topological Concepts in Metric Spaces
+
+statement:
+  natural:
+    en: >
+      In a metric space X: (a) A neighborhood of p is Nr(p) = {q : d(p,q) < r}. (b) p is a limit point of E if every neighborhood of p contains q ≠ p with q ∈ E. (c) p ∈ E is isolated if p is not a limit point of E. (d) E is closed if every limit point of E is in E. (e) p is an interior point of E if some neighborhood of p is contained in E. (f) E is open if every point of E is interior. (g) Eᶜ is the complement of E. (h) E is perfect if E is closed and every point is a limit point. (i) E is bounded if it lies in some ball. (j) E is dense in X if every point of X is a limit point of E or a point of E.
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "2"
+    section: "2.18"
+
+confidence: high
+notes: >
+  Definition 2.18 from Rudin. Central topological definitions for metric spaces including neighborhood, limit point, isolated point, closed, open, interior, complement, perfect, bounded, and dense.

@@ -1,0 +1,21 @@
+id: proof.compactness-relative.rudin
+type: proof
+status: draft
+
+proves: theorem.compactness-relative
+
+uses:
+  - definition.compact-set
+  - theorem.open-relative
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "2"
+    section: "2.33"
+
+confidence: high
+notes: >
+  Both directions use Theorem 2.30 to translate between open-in-X and open-relative-to-Y.

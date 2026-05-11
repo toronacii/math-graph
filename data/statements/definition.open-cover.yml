@@ -1,0 +1,22 @@
+id: definition.open-cover
+type: definition
+status: draft
+
+title:
+  en: Open Cover
+
+statement:
+  natural:
+    en: >
+      An open cover of a set E in a metric space X is a collection {Gα} of open subsets of X such that E ⊂ ⋃α Gα.
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "2"
+    section: "2.31"
+
+confidence: high
+notes: >
+  Definition 2.31 from Rudin. Prerequisite for defining compactness.

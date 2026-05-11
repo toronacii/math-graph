@@ -1,0 +1,21 @@
+id: proof.real-subfield-of-complex.rudin
+type: proof
+status: draft
+
+proves: theorem.real-subfield-of-complex
+
+uses:
+  - definition.complex-number
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "1"
+    section: "1.26"
+
+confidence: high
+notes: >
+  Trivial computation: (a,0)+(b,0) = (a+b,0) and
+  (a,0)(b,0) = (ab-0, a·0+0·b) = (ab,0).

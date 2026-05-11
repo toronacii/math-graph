@@ -1,0 +1,25 @@
+id: corollary.closed-intersect-compact
+type: corollary
+status: draft
+
+title:
+  en: Intersection of a Closed Set and a Compact Set is Compact
+
+statement:
+  natural:
+    en: >
+      If F is closed and K is compact, then F ∩ K is compact.
+
+proved_by:
+  - proof.closed-intersect-compact.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "2"
+    section: "2.35"
+
+confidence: high
+notes: >
+  Corollary to Theorem 2.35 in Rudin. Follows from compact-is-closed and closed-subset-compact.

@@ -1,0 +1,21 @@
+id: proof.finite-intersection-compact.rudin
+type: proof
+status: draft
+
+proves: theorem.finite-intersection-compact
+
+uses:
+  - definition.compact-set
+  - proposition.compact-is-closed
+
+style: contradiction
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "2"
+    section: "2.36"
+
+confidence: high
+notes: >
+  Fix K₁, set Gα = Kαᶜ. If no point of K₁ is in every Kα, then {Gα} covers K₁. Finite subcover contradicts hypothesis.

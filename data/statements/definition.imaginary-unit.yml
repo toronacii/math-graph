@@ -1,0 +1,25 @@
+id: definition.imaginary-unit
+type: definition
+status: draft
+
+title:
+  en: Imaginary Unit
+
+statement:
+  natural:
+    en: >
+      The imaginary unit is defined as i = (0, 1).
+  latex: |
+    i = (0, 1)
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "1"
+    section: "1.27"
+
+confidence: high
+notes: >
+  Rudin 1.27. The notation i = (0,1) connects the ordered-pair
+  construction to the classical a + bi form.

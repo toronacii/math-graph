@@ -1,0 +1,25 @@
+id: proof.archimedean-density.rudin
+type: proof
+status: draft
+
+proves: theorem.archimedean-density
+
+uses:
+  - theorem.existence-of-reals
+  - definition.least-upper-bound-property
+  - definition.supremum
+
+style: contradiction
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "1"
+    section: "1.20"
+
+confidence: high
+notes: >
+  (a) If A = {nx} were bounded above, α = sup A would satisfy
+  α - x < mx for some m, giving α < (m+1)x ∈ A — contradiction.
+  (b) Uses (a) twice to find integer m with m-1 ≤ nx < m, then
+  nx < m ≤ 1 + nx < ny, so x < m/n < y.

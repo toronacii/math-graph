@@ -1,0 +1,25 @@
+id: lemma.nested-intervals
+type: lemma
+status: draft
+
+title:
+  en: Nested Intervals Theorem
+
+statement:
+  natural:
+    en: >
+      If {Iₙ} is a sequence of intervals in R¹ with Iₙ ⊃ Iₙ₊₁, then ⋂Iₙ is nonempty.
+
+proved_by:
+  - proof.nested-intervals.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "2"
+    section: "2.38"
+
+confidence: high
+notes: >
+  Theorem 2.38 in Rudin. Uses the least upper bound property of R.
