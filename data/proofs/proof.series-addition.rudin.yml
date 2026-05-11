@@ -1,0 +1,21 @@
+id: proof.series-addition.rudin
+type: proof
+status: draft
+
+proves: proposition.series-addition
+
+uses:
+  - definition.infinite-series
+  - definition.convergent-sequence
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.47"
+
+confidence: high
+notes: >
+  A_n + B_n = Σ(a_k + b_k); limits add.

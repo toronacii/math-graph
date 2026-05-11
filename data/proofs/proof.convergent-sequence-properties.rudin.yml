@@ -1,0 +1,23 @@
+id: proof.convergent-sequence-properties.rudin
+type: proof
+status: draft
+
+proves: proposition.convergent-sequence-properties
+
+uses:
+  - definition.convergent-sequence
+  - definition.neighborhood-limit-point-open-closed
+  - definition.metric-space
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.2"
+
+confidence: high
+notes: >
+  Parts (a)-(d). Uses triangle inequality for uniqueness, picks r=max for
+  boundedness, 1/n neighborhoods for limit point → sequence.

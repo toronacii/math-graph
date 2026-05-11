@@ -1,0 +1,23 @@
+id: proof.characterization-lim-sup.rudin
+type: proof
+status: draft
+
+proves: theorem.characterization-lim-sup
+
+uses:
+  - definition.upper-lower-limits
+  - definition.subsequence
+  - theorem.subsequential-limits-closed
+
+style: cases
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.17"
+
+confidence: high
+notes: >
+  Three cases: s*=+∞ (unbounded subsequence), s* real (closed set +
+  bounded above), s*=-∞ (only -∞ in E). Uniqueness by contradiction.

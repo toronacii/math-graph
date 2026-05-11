@@ -19,6 +19,7 @@ statement:
 
 proved_by:
   - proof.monotonic-sequence-theorem.stewart
+  - proof.monotone-convergence.rudin
 
 sources:
   - work: Cálculo de una variable — Trascendentes tempranas
@@ -26,6 +27,11 @@ sources:
     edition: "7"
     chapter: "11"
     section: "11.1"
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.14"
 
 confidence: high
 notes: >

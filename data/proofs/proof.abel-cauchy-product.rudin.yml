@@ -1,0 +1,23 @@
+id: proof.abel-cauchy-product.rudin
+type: proof
+status: draft
+
+proves: theorem.abel-cauchy-product
+
+uses:
+  - definition.cauchy-product
+  - definition.power-series
+  - definition.convergent-sequence
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "8"
+    section: "8.2"
+
+confidence: high
+notes: >
+  Rudin states the result in Ch3 (Thm 3.51) but defers the proof to after Theorem 8.2,
+  using continuity of power series. No assumption on absolute convergence needed.

@@ -8,10 +8,7 @@ module directly (``python -m scripts.build_graph``) is equivalent to
 
 from __future__ import annotations
 
-import sys
-
 from scripts.build_db import main
-
 
 if __name__ == "__main__":
     raise SystemExit(main())

@@ -1,0 +1,21 @@
+id: proof.comparison-test-series.rudin
+type: proof
+status: draft
+
+proves: theorem.comparison-test-series
+
+uses:
+  - proposition.cauchy-criterion-series
+  - proposition.nonnegative-series-bounded
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.25"
+
+confidence: high
+notes: >
+  |a_k| ≤ c_k gives Cauchy criterion for Σa_n from that of Σc_n. Divergence follows by contraposition.

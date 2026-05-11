@@ -1,0 +1,30 @@
+id: proposition.special-sequence-limits
+type: proposition
+status: draft
+
+title:
+  en: Special Sequence Limits
+
+statement:
+  natural:
+    en: >
+      (a) If p > 0, then lim 1/n^p = 0. (b) If p > 0, then lim p^{1/n} = 1.
+      (c) lim n^{1/n} = 1. (d) If p > 0 and α is real, then
+      lim n^α / (1+p)^n = 0. (e) If |x| < 1, then lim x^n = 0.
+
+  latex: |
+    \lim_{n \to \infty} \frac{1}{n^p} = 0,\quad \lim_{n \to \infty} \sqrt[n]{p} = 1,\quad \lim_{n \to \infty} \sqrt[n]{n} = 1
+
+proved_by:
+  - proof.special-sequence-limits.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.20"
+
+confidence: high
+notes: >
+  Theorem 3.20 from Rudin.

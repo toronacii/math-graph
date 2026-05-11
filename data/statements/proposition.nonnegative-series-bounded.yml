@@ -1,0 +1,28 @@
+id: proposition.nonnegative-series-bounded
+type: proposition
+status: draft
+
+title:
+  en: Nonnegative Series Bounded Partial Sums
+
+statement:
+  natural:
+    en: >
+      A series of nonnegative terms converges if and only if its partial sums form a bounded sequence.
+
+  latex: |
+    a_n \geq 0 \implies \left( \sum a_n \text{ converges} \iff \{s_n\} \text{ bounded} \right)
+
+proved_by:
+  - proof.nonnegative-series-bounded.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.24"
+
+confidence: high
+notes: >
+  Theorem 3.24 from Rudin.

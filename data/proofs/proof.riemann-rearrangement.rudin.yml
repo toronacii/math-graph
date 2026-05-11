@@ -1,0 +1,22 @@
+id: proof.riemann-rearrangement.rudin
+type: proof
+status: draft
+
+proves: theorem.riemann-rearrangement
+
+uses:
+  - definition.rearrangement-of-series
+  - definition.absolute-convergence
+  - definition.convergent-sequence
+
+style: construction
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.54"
+
+confidence: high
+notes: >
+  Both ΣP_n and ΣQ_n diverge. Construct rearrangement by alternately adding positive terms until exceeding β_n, then negative terms until below α_n. Since P_n→0, Q_n→0, the partial sums oscillate to desired limits.

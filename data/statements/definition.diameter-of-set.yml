@@ -1,0 +1,26 @@
+id: definition.diameter-of-set
+type: definition
+status: draft
+
+title:
+  en: Diameter of a Set
+
+statement:
+  natural:
+    en: >
+      Let E be a nonempty subset of a metric space X, and let S be the set of all real
+      numbers d(p, q) with p ∈ E and q ∈ E. The supremum of S is called the diameter of E.
+
+  latex: |
+    \operatorname{diam} E = \sup \{ d(p,q) : p \in E,\; q \in E \}
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.9"
+
+confidence: high
+notes: >
+  Definition 3.9 from Rudin's Principles of Mathematical Analysis.

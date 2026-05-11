@@ -1,0 +1,21 @@
+id: proof.dirichlet-test.rudin
+type: proof
+status: draft
+
+proves: theorem.dirichlet-test
+
+uses:
+  - theorem.summation-by-parts
+  - proposition.cauchy-criterion-series
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.42"
+
+confidence: high
+notes: >
+  Apply summation by parts; |A_n|≤M and b_n↓0 give |Σa_n b_n| ≤ 2Mb_p ≤ 2Mb_N < ε.

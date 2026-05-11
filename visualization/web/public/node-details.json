@@ -650,6 +650,54 @@
     },
     "type": "definition"
   },
+  "definition.cauchy-product": {
+    "confidence": "high",
+    "id": "definition.cauchy-product",
+    "kind": "statement",
+    "latex": "c_n = \\sum_{k=0}^{n} a_k b_{n-k}\n",
+    "natural": {
+      "en": "Given two series Σa_n and Σb_n, we put c_n = Σ_{k=0}^n a_k b_{n-k} and call Σc_n the Cauchy product of the two given series."
+    },
+    "notes": "Definition 3.48 from Rudin's Principles of Mathematical Analysis.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.48",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Cauchy Product"
+    },
+    "type": "definition"
+  },
+  "definition.cauchy-sequence": {
+    "confidence": "high",
+    "id": "definition.cauchy-sequence",
+    "kind": "statement",
+    "latex": "\\forall \\varepsilon > 0,\\; \\exists N \\in \\mathbb{N} : n \\geq N \\text{ and } m \\geq N \\implies d(p_n, p_m) < \\varepsilon\n",
+    "natural": {
+      "en": "A sequence {p_n} in a metric space X is said to be a Cauchy sequence if for every ε > 0 there is an integer N such that d(p_n, p_m) < ε whenever n ≥ N and m ≥ N."
+    },
+    "notes": "Definition 3.8 from Rudin's Principles of Mathematical Analysis.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.8",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Cauchy Sequence"
+    },
+    "type": "definition"
+  },
   "definition.closed-interval-method": {
     "confidence": "high",
     "id": "definition.closed-interval-method",
@@ -719,6 +767,30 @@
     "status": "draft",
     "title": {
       "en": "Compact Set"
+    },
+    "type": "definition"
+  },
+  "definition.complete-metric-space": {
+    "confidence": "high",
+    "id": "definition.complete-metric-space",
+    "kind": "statement",
+    "latex": "\\{p_n\\} \\text{ Cauchy} \\implies \\{p_n\\} \\text{ converges}\n",
+    "natural": {
+      "en": "A metric space in which every Cauchy sequence converges is said to be complete."
+    },
+    "notes": "Definition 3.12 from Rudin's Principles of Mathematical Analysis.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.12",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Complete Metric Space"
     },
     "type": "definition"
   },
@@ -917,6 +989,30 @@
     },
     "type": "definition"
   },
+  "definition.convergent-sequence": {
+    "confidence": "high",
+    "id": "definition.convergent-sequence",
+    "kind": "statement",
+    "latex": "\\forall \\varepsilon > 0,\\; \\exists N \\in \\mathbb{N} : n \\geq N \\implies d(p_n, p) < \\varepsilon\n",
+    "natural": {
+      "en": "A sequence {p_n} in a metric space X is said to converge if there is a point p in X with the following property: for every ε > 0 there is an integer N such that n ≥ N implies d(p_n, p) < ε. In this case we say that {p_n} converges to p, and we write p_n → p or lim p_n = p."
+    },
+    "notes": "Definition 3.1 from Rudin's Principles of Mathematical Analysis.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.1",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Convergent Sequence"
+    },
+    "type": "definition"
+  },
   "definition.critical-number": {
     "confidence": "high",
     "id": "definition.critical-number",
@@ -1070,6 +1166,30 @@
     },
     "type": "definition"
   },
+  "definition.diameter-of-set": {
+    "confidence": "high",
+    "id": "definition.diameter-of-set",
+    "kind": "statement",
+    "latex": "\\operatorname{diam} E = \\sup \\{ d(p,q) : p \\in E,\\; q \\in E \\}\n",
+    "natural": {
+      "en": "Let E be a nonempty subset of a metric space X, and let S be the set of all real numbers d(p, q) with p ∈ E and q ∈ E. The supremum of S is called the diameter of E."
+    },
+    "notes": "Definition 3.9 from Rudin's Principles of Mathematical Analysis.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.9",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Diameter of a Set"
+    },
+    "type": "definition"
+  },
   "definition.differentiable": {
     "confidence": "high",
     "id": "definition.differentiable",
@@ -1091,6 +1211,30 @@
     "title": {
       "en": "Differentiability",
       "es": "Diferenciabilidad"
+    },
+    "type": "definition"
+  },
+  "definition.divergence-to-infinity": {
+    "confidence": "high",
+    "id": "definition.divergence-to-infinity",
+    "kind": "statement",
+    "latex": "s_n \\to +\\infty \\iff \\forall M \\in \\mathbb{R},\\; \\exists N : n \\geq N \\implies s_n \\geq M\n",
+    "natural": {
+      "en": "A sequence {s_n} of real numbers is said to diverge to +∞ if for every real number M there exists an integer N such that n ≥ N implies s_n ≥ M. Similarly, {s_n} diverges to -∞ if for every real M there exists N such that n ≥ N implies s_n ≤ M."
+    },
+    "notes": "Definition 3.15 from Rudin's Principles of Mathematical Analysis.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.15",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Divergence to Infinity"
     },
     "type": "definition"
   },
@@ -2220,6 +2364,30 @@
     },
     "type": "definition"
   },
+  "definition.monotonic-sequence": {
+    "confidence": "high",
+    "id": "definition.monotonic-sequence",
+    "kind": "statement",
+    "latex": "s_n \\leq s_{n+1} \\text{ (increasing)};\\quad s_n \\geq s_{n+1} \\text{ (decreasing)}\n",
+    "natural": {
+      "en": "A sequence {s_n} of real numbers is said to be monotonically increasing if s_n ≤ s_{n+1} for every n, and monotonically decreasing if s_n ≥ s_{n+1} for every n."
+    },
+    "notes": "Definition 3.13 from Rudin's Principles of Mathematical Analysis.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.13",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Monotonic Sequence"
+    },
+    "type": "definition"
+  },
   "definition.natural-exponential-function": {
     "confidence": "medium",
     "id": "definition.natural-exponential-function",
@@ -2740,6 +2908,30 @@
     },
     "type": "definition"
   },
+  "definition.rearrangement-of-series": {
+    "confidence": "high",
+    "id": "definition.rearrangement-of-series",
+    "kind": "statement",
+    "latex": "a'_n = a_{k_n}, \\quad \\{k_n\\} \\text{ bijection } \\mathbb{N} \\to \\mathbb{N}\n",
+    "natural": {
+      "en": "Let {k_n} be a sequence in which every positive integer appears exactly once. Putting a'_n = a_{k_n}, we say that Σa'_n is a rearrangement of Σa_n."
+    },
+    "notes": "Definition 3.52 from Rudin's Principles of Mathematical Analysis.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.52",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Rearrangement of a Series"
+    },
+    "type": "definition"
+  },
   "definition.reflection": {
     "confidence": "medium",
     "id": "definition.reflection",
@@ -3011,6 +3203,30 @@
     },
     "type": "definition"
   },
+  "definition.subsequence": {
+    "confidence": "high",
+    "id": "definition.subsequence",
+    "kind": "statement",
+    "latex": "n_1 < n_2 < n_3 < \\cdots \\implies \\{p_{n_k}\\} \\text{ is a subsequence of } \\{p_n\\}\n",
+    "natural": {
+      "en": "Given a sequence {p_n}, consider a sequence {n_k} of positive integers such that n_1 < n_2 < n_3 < .... Then the sequence {p_{n_k}} is called a subsequence of {p_n}. If {p_{n_k}} converges, its limit is called a subsequential limit of {p_n}."
+    },
+    "notes": "Definition 3.5 from Rudin's Principles of Mathematical Analysis.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.5",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Subsequence"
+    },
+    "type": "definition"
+  },
   "definition.summation-notation": {
     "confidence": "high",
     "id": "definition.summation-notation",
@@ -3258,6 +3474,30 @@
     },
     "type": "definition"
   },
+  "definition.upper-lower-limits": {
+    "confidence": "high",
+    "id": "definition.upper-lower-limits",
+    "kind": "statement",
+    "latex": "\\limsup_{n \\to \\infty} s_n = \\sup E, \\quad \\liminf_{n \\to \\infty} s_n = \\inf E\n",
+    "natural": {
+      "en": "Let {s_n} be a sequence of real numbers. Let E be the set of numbers x (in the extended real number system) such that s_{n_k} → x for some subsequence {s_{n_k}}. Then sup E is called the upper limit (or limit superior) of {s_n}, and inf E is called the lower limit (or limit inferior) of {s_n}."
+    },
+    "notes": "Definition 3.16 from Rudin's Principles of Mathematical Analysis.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.16",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Upper and Lower Limits"
+    },
+    "type": "definition"
+  },
   "definition.vertical-asymptote": {
     "confidence": "medium",
     "id": "definition.vertical-asymptote",
@@ -3458,6 +3698,53 @@
     },
     "type": "lemma"
   },
+  "proof.abel-cauchy-product.rudin": {
+    "confidence": "high",
+    "id": "proof.abel-cauchy-product.rudin",
+    "kind": "proof",
+    "notes": "Rudin states the result in Ch3 (Thm 3.51) but defers the proof to after Theorem 8.2, using continuity of power series. No assumption on absolute convergence needed.\n",
+    "proves": "theorem.abel-cauchy-product",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "8",
+        "edition": "3",
+        "section": "8.2",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "definition.cauchy-product",
+      "definition.convergent-sequence",
+      "definition.power-series"
+    ]
+  },
+  "proof.absolute-convergence-implies-convergence.rudin": {
+    "confidence": "high",
+    "id": "proof.absolute-convergence-implies-convergence.rudin",
+    "kind": "proof",
+    "notes": "|Σa_k| ≤ Σ|a_k| plus Cauchy criterion.\n",
+    "proves": "theorem.absolute-convergence-implies-convergence",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.45",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "definition.absolute-convergence",
+      "proposition.cauchy-criterion-series"
+    ]
+  },
   "proof.absolute-convergence-implies-convergence.stewart": {
     "confidence": "high",
     "id": "proof.absolute-convergence-implies-convergence.stewart",
@@ -3482,6 +3769,30 @@
       "theorem.comparison-test-series"
     ]
   },
+  "proof.absolute-convergence-rearrangement.rudin": {
+    "confidence": "high",
+    "id": "proof.absolute-convergence-rearrangement.rudin",
+    "kind": "proof",
+    "notes": "Choose N with tail < ε. Choose p so that 1,...,N all appear in first p terms of rearrangement. Then |s_n - s'_n| < ε for n>p.\n",
+    "proves": "theorem.absolute-convergence-rearrangement",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.55",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "definition.absolute-convergence",
+      "definition.rearrangement-of-series",
+      "proposition.cauchy-criterion-series"
+    ]
+  },
   "proof.addition-cancellation.rudin": {
     "confidence": "high",
     "id": "proof.addition-cancellation.rudin",
@@ -3502,6 +3813,51 @@
     "type": "proof",
     "uses": [
       "definition.field"
+    ]
+  },
+  "proof.algebraic-limit-theorem.rudin": {
+    "confidence": "high",
+    "id": "proof.algebraic-limit-theorem.rudin",
+    "kind": "proof",
+    "notes": "Standard epsilon/2 arguments for sum; identity s_n t_n - st = (s_n-s)(t_n-t) + s(t_n-t) + t(s_n-s) for products; bound on |s_n| for quotients.\n",
+    "proves": "theorem.algebraic-limit-theorem",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.3",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "definition.convergent-sequence",
+      "proposition.convergent-sequence-properties"
+    ]
+  },
+  "proof.alternating-series-test.rudin": {
+    "confidence": "high",
+    "id": "proof.alternating-series-test.rudin",
+    "kind": "proof",
+    "notes": "Apply Theorem 3.42 with a_n = (-1)^{n+1}, b_n = |c_n|.\n",
+    "proves": "theorem.alternating-series-test",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.43",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "theorem.dirichlet-test"
     ]
   },
   "proof.alternating-series-test.stewart": {
@@ -3547,9 +3903,9 @@
     "style": "contradiction",
     "type": "proof",
     "uses": [
-      "theorem.existence-of-reals",
       "definition.least-upper-bound-property",
-      "definition.supremum"
+      "definition.supremum",
+      "theorem.existence-of-reals"
     ]
   },
   "proof.at-most-countable-union.rudin": {
@@ -3616,8 +3972,8 @@
     "style": "direct",
     "type": "proof",
     "uses": [
-      "theorem.k-cell-compact",
-      "theorem.infinite-subset-compact-limit-point"
+      "theorem.infinite-subset-compact-limit-point",
+      "theorem.k-cell-compact"
     ]
   },
   "proof.cancellation-equations.stewart": {
@@ -3641,6 +3997,79 @@
     "uses": [
       "definition.inverse-function",
       "definition.one-to-one-function"
+    ]
+  },
+  "proof.cauchy-condensation-test.rudin": {
+    "confidence": "high",
+    "id": "proof.cauchy-condensation-test.rudin",
+    "kind": "proof",
+    "notes": "Show s_n ≤ t_k and 2s_n ≥ t_k by grouping terms in powers-of-2 blocks; both bounded or both unbounded.\n",
+    "proves": "theorem.cauchy-condensation-test",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.27",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "definition.monotonic-sequence",
+      "proposition.nonnegative-series-bounded"
+    ]
+  },
+  "proof.cauchy-criterion-series.rudin": {
+    "confidence": "high",
+    "id": "proof.cauchy-criterion-series.rudin",
+    "kind": "proof",
+    "notes": "Restatement of Cauchy criterion for sequences applied to partial sums.\n",
+    "proves": "proposition.cauchy-criterion-series",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.22",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "definition.infinite-series",
+      "theorem.cauchy-criterion"
+    ]
+  },
+  "proof.cauchy-criterion.rudin": {
+    "confidence": "high",
+    "id": "proof.cauchy-criterion.rudin",
+    "kind": "proof",
+    "notes": "(a) Triangle inequality. (b) Tail sets E̅_N are nested compact with diam→0; apply 3.10(b). (c) Cauchy in R^k ⟹ bounded ⟹ compact closure ⟹ apply (b).\n",
+    "proves": "theorem.cauchy-criterion",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.11",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "definition.cauchy-sequence",
+      "definition.compact-set",
+      "definition.complete-metric-space",
+      "definition.convergent-sequence",
+      "proposition.diameter-properties",
+      "theorem.k-cell-compact"
     ]
   },
   "proof.chain-rule.stewart": {
@@ -3691,6 +4120,30 @@
       "proposition.laws-of-logarithms"
     ]
   },
+  "proof.characterization-lim-sup.rudin": {
+    "confidence": "high",
+    "id": "proof.characterization-lim-sup.rudin",
+    "kind": "proof",
+    "notes": "Three cases: s*=+∞ (unbounded subsequence), s* real (closed set + bounded above), s*=-∞ (only -∞ in E). Uniqueness by contradiction.\n",
+    "proves": "theorem.characterization-lim-sup",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.17",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "cases",
+    "type": "proof",
+    "uses": [
+      "definition.subsequence",
+      "definition.upper-lower-limits",
+      "theorem.subsequential-limits-closed"
+    ]
+  },
   "proof.closed-intersect-compact.rudin": {
     "confidence": "high",
     "id": "proof.closed-intersect-compact.rudin",
@@ -3710,8 +4163,8 @@
     "style": "direct",
     "type": "proof",
     "uses": [
-      "proposition.compact-is-closed",
       "proposition.closed-subset-compact",
+      "proposition.compact-is-closed",
       "theorem.unions-intersections-open-closed"
     ]
   },
@@ -3810,6 +4263,51 @@
       "theorem.open-relative"
     ]
   },
+  "proof.comparison-lim-sup-inf.rudin": {
+    "confidence": "high",
+    "id": "proof.comparison-lim-sup-inf.rudin",
+    "kind": "proof",
+    "notes": "Trivial from definitions; subsequential limits of {s_n} cannot exceed those of {t_n} when s_n ≤ t_n eventually.\n",
+    "proves": "proposition.comparison-lim-sup-inf",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.19",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "definition.upper-lower-limits"
+    ]
+  },
+  "proof.comparison-test-series.rudin": {
+    "confidence": "high",
+    "id": "proof.comparison-test-series.rudin",
+    "kind": "proof",
+    "notes": "|a_k| ≤ c_k gives Cauchy criterion for Σa_n from that of Σc_n. Divergence follows by contraposition.\n",
+    "proves": "theorem.comparison-test-series",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.25",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "proposition.cauchy-criterion-series",
+      "proposition.nonnegative-series-bounded"
+    ]
+  },
   "proof.comparison-test-series.stewart": {
     "confidence": "high",
     "id": "proof.comparison-test-series.stewart",
@@ -3900,8 +4398,8 @@
     "style": "direct",
     "type": "proof",
     "uses": [
-      "definition.imaginary-unit",
       "definition.complex-number",
+      "definition.imaginary-unit",
       "theorem.real-subfield-of-complex"
     ]
   },
@@ -3948,10 +4446,10 @@
     "style": "direct",
     "type": "proof",
     "uses": [
-      "proposition.increasing-decreasing-test",
-      "definition.second-derivative",
+      "definition.concave-downward",
       "definition.concave-upward",
-      "definition.concave-downward"
+      "definition.second-derivative",
+      "proposition.increasing-decreasing-test"
     ]
   },
   "proof.conjugate-properties.rudin": {
@@ -4066,9 +4564,57 @@
     "style": "epsilon-delta",
     "type": "proof",
     "uses": [
+      "definition.composition-of-functions",
       "definition.continuity-at-point",
-      "definition.epsilon-delta-limit",
-      "definition.composition-of-functions"
+      "definition.epsilon-delta-limit"
+    ]
+  },
+  "proof.convergence-in-rk.rudin": {
+    "confidence": "high",
+    "id": "proof.convergence-in-rk.rudin",
+    "kind": "proof",
+    "notes": "Component inequality |α_{j,n} - α_j| ≤ |x_n - x| gives forward direction; sum of squares gives reverse.\n",
+    "proves": "proposition.convergence-in-rk",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.4",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "definition.convergent-sequence",
+      "definition.euclidean-k-space",
+      "theorem.algebraic-limit-theorem"
+    ]
+  },
+  "proof.convergent-sequence-properties.rudin": {
+    "confidence": "high",
+    "id": "proof.convergent-sequence-properties.rudin",
+    "kind": "proof",
+    "notes": "Parts (a)-(d). Uses triangle inequality for uniqueness, picks r=max for boundedness, 1/n neighborhoods for limit point → sequence.\n",
+    "proves": "proposition.convergent-sequence-properties",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.2",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "definition.convergent-sequence",
+      "definition.metric-space",
+      "definition.neighborhood-limit-point-open-closed"
     ]
   },
   "proof.countable-union-countable.rudin": {
@@ -4114,8 +4660,8 @@
     "style": "direct",
     "type": "proof",
     "uses": [
-      "definition.union-intersection",
-      "definition.set-membership-subset"
+      "definition.set-membership-subset",
+      "definition.union-intersection"
     ]
   },
   "proof.derivative-arccos.stewart": {
@@ -4138,8 +4684,8 @@
     "type": "proof",
     "uses": [
       "definition.inverse-function",
-      "theorem.derivative-cos",
-      "theorem.chain-rule"
+      "theorem.chain-rule",
+      "theorem.derivative-cos"
     ]
   },
   "proof.derivative-arcsin.stewart": {
@@ -4162,8 +4708,8 @@
     "type": "proof",
     "uses": [
       "definition.inverse-function",
-      "theorem.derivative-sin",
-      "theorem.chain-rule"
+      "theorem.chain-rule",
+      "theorem.derivative-sin"
     ]
   },
   "proof.derivative-arctan.stewart": {
@@ -4186,8 +4732,8 @@
     "type": "proof",
     "uses": [
       "definition.inverse-function",
-      "theorem.derivative-tan",
-      "theorem.chain-rule"
+      "theorem.chain-rule",
+      "theorem.derivative-tan"
     ]
   },
   "proof.derivative-constant.stewart": {
@@ -4231,10 +4777,10 @@
     "style": "direct",
     "type": "proof",
     "uses": [
-      "definition.derivative-function",
-      "theorem.limit-sinx-over-x",
       "corollary.limit-cosx-minus-1-over-x",
-      "theorem.limit-laws"
+      "definition.derivative-function",
+      "theorem.limit-laws",
+      "theorem.limit-sinx-over-x"
     ]
   },
   "proof.derivative-cot.stewart": {
@@ -4256,8 +4802,8 @@
     "style": "direct",
     "type": "proof",
     "uses": [
-      "theorem.derivative-sin",
       "theorem.derivative-cos",
+      "theorem.derivative-sin",
       "theorem.quotient-rule"
     ]
   },
@@ -4303,8 +4849,8 @@
     "style": "direct",
     "type": "proof",
     "uses": [
-      "theorem.derivative-ln",
-      "definition.number-e"
+      "definition.number-e",
+      "theorem.derivative-ln"
     ]
   },
   "proof.derivative-exponential.stewart": {
@@ -4327,8 +4873,8 @@
     "type": "proof",
     "uses": [
       "definition.derivative-function",
-      "definition.number-e",
-      "definition.natural-exponential-function"
+      "definition.natural-exponential-function",
+      "definition.number-e"
     ]
   },
   "proof.derivative-general-exponential.stewart": {
@@ -4350,9 +4896,9 @@
     "style": "direct",
     "type": "proof",
     "uses": [
-      "theorem.derivative-exponential",
+      "definition.natural-logarithm",
       "theorem.chain-rule",
-      "definition.natural-logarithm"
+      "theorem.derivative-exponential"
     ]
   },
   "proof.derivative-ln-abs.stewart": {
@@ -4374,9 +4920,9 @@
     "style": "direct",
     "type": "proof",
     "uses": [
-      "theorem.derivative-ln",
+      "definition.absolute-value",
       "theorem.chain-rule",
-      "definition.absolute-value"
+      "theorem.derivative-ln"
     ]
   },
   "proof.derivative-ln.stewart": {
@@ -4399,8 +4945,8 @@
     "type": "proof",
     "uses": [
       "definition.inverse-function",
-      "theorem.derivative-exponential",
-      "theorem.chain-rule"
+      "theorem.chain-rule",
+      "theorem.derivative-exponential"
     ]
   },
   "proof.derivative-log-base-a.stewart": {
@@ -4423,8 +4969,8 @@
     "type": "proof",
     "uses": [
       "proposition.change-of-base-formula",
-      "theorem.derivative-ln",
-      "theorem.constant-multiple-rule"
+      "theorem.constant-multiple-rule",
+      "theorem.derivative-ln"
     ]
   },
   "proof.derivative-sec.stewart": {
@@ -4469,10 +5015,10 @@
     "style": "direct",
     "type": "proof",
     "uses": [
-      "definition.derivative-function",
-      "theorem.limit-sinx-over-x",
       "corollary.limit-cosx-minus-1-over-x",
-      "theorem.limit-laws"
+      "definition.derivative-function",
+      "theorem.limit-laws",
+      "theorem.limit-sinx-over-x"
     ]
   },
   "proof.derivative-tan.stewart": {
@@ -4494,9 +5040,33 @@
     "style": "direct",
     "type": "proof",
     "uses": [
-      "theorem.derivative-sin",
       "theorem.derivative-cos",
+      "theorem.derivative-sin",
       "theorem.quotient-rule"
+    ]
+  },
+  "proof.diameter-properties.rudin": {
+    "confidence": "high",
+    "id": "proof.diameter-properties.rudin",
+    "kind": "proof",
+    "notes": "(a) diam E̅ = diam E by approximating closure points with E points. (b) Intersection nonempty by Thm 2.36; if more than one point, diam K > 0 contradicts diam K_n → 0.\n",
+    "proves": "proposition.diameter-properties",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.10",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "corollary.nested-compact-nonempty",
+      "definition.compact-set",
+      "definition.diameter-of-set"
     ]
   },
   "proof.difference-rule.stewart": {
@@ -4518,8 +5088,8 @@
     "style": "direct",
     "type": "proof",
     "uses": [
-      "theorem.sum-rule",
-      "theorem.constant-multiple-rule"
+      "theorem.constant-multiple-rule",
+      "theorem.sum-rule"
     ]
   },
   "proof.differentiable-implies-continuous.stewart": {
@@ -4541,8 +5111,8 @@
     "style": "direct",
     "type": "proof",
     "uses": [
-      "definition.derivative-at-point",
       "definition.continuity-at-point",
+      "definition.derivative-at-point",
       "theorem.limit-laws"
     ]
   },
@@ -4565,9 +5135,54 @@
     "style": "direct",
     "type": "proof",
     "uses": [
-      "theorem.limit-laws",
       "definition.polynomial",
-      "definition.rational-function"
+      "definition.rational-function",
+      "theorem.limit-laws"
+    ]
+  },
+  "proof.dirichlet-test.rudin": {
+    "confidence": "high",
+    "id": "proof.dirichlet-test.rudin",
+    "kind": "proof",
+    "notes": "Apply summation by parts; |A_n|≤M and b_n↓0 give |Σa_n b_n| ≤ 2Mb_p ≤ 2Mb_N < ε.\n",
+    "proves": "theorem.dirichlet-test",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.42",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "proposition.cauchy-criterion-series",
+      "theorem.summation-by-parts"
+    ]
+  },
+  "proof.divergence-test.rudin": {
+    "confidence": "high",
+    "id": "proof.divergence-test.rudin",
+    "kind": "proof",
+    "notes": "Take m=n in the Cauchy criterion: |a_n| ≤ ε for n≥N, so a_n → 0.\n",
+    "proves": "theorem.divergence-test",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.23",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "proposition.cauchy-criterion-series"
     ]
   },
   "proof.divergence-test.stewart": {
@@ -4593,6 +5208,54 @@
       "definition.sequence"
     ]
   },
+  "proof.e-as-limit.rudin": {
+    "confidence": "high",
+    "id": "proof.e-as-limit.rudin",
+    "kind": "proof",
+    "notes": "Binomial expansion of (1+1/n)^n shows t_n ≤ s_n, so lim sup t_n ≤ e. Lower bound by fixing m<n then letting n→∞, m→∞ gives lim inf t_n ≥ e.\n",
+    "proves": "theorem.e-as-limit",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.31",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "definition.number-e",
+      "definition.upper-lower-limits",
+      "proposition.comparison-lim-sup-inf",
+      "proposition.special-sequence-limits"
+    ]
+  },
+  "proof.e-is-irrational.rudin": {
+    "confidence": "high",
+    "id": "proof.e-is-irrational.rudin",
+    "kind": "proof",
+    "notes": "If e=p/q, then 0 < q!(e - s_q) < 1/q. But q!·e integer, q!·s_q integer, so q!(e-s_q) is integer between 0 and 1, contradiction.\n",
+    "proves": "theorem.e-is-irrational",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.32",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "contradiction",
+    "type": "proof",
+    "uses": [
+      "definition.number-e",
+      "theorem.e-as-limit"
+    ]
+  },
   "proof.equal-derivatives-differ-by-constant.stewart": {
     "confidence": "high",
     "id": "proof.equal-derivatives-differ-by-constant.stewart",
@@ -4612,8 +5275,8 @@
     "style": "direct",
     "type": "proof",
     "uses": [
-      "corollary.zero-derivative-constant",
-      "corollary.difference-rule"
+      "corollary.difference-rule",
+      "corollary.zero-derivative-constant"
     ]
   },
   "proof.euclidean-norm-properties.rudin": {
@@ -4658,10 +5321,10 @@
     "style": "contradiction",
     "type": "proof",
     "uses": [
-      "theorem.existence-of-reals",
-      "definition.supremum",
       "definition.least-upper-bound-property",
-      "proposition.ordered-field-properties"
+      "definition.supremum",
+      "proposition.ordered-field-properties",
+      "theorem.existence-of-reals"
     ]
   },
   "proof.existence-of-reals.rudin": {
@@ -4684,10 +5347,10 @@
     "type": "proof",
     "uses": [
       "definition.field",
-      "definition.ordered-field",
       "definition.least-upper-bound-property",
-      "definition.rational-numbers",
       "definition.order-relation",
+      "definition.ordered-field",
+      "definition.rational-numbers",
       "proposition.addition-cancellation"
     ]
   },
@@ -4733,8 +5396,8 @@
     "type": "proof",
     "uses": [
       "definition.derivative-at-point",
-      "definition.local-maximum",
       "definition.left-hand-limit",
+      "definition.local-maximum",
       "definition.right-hand-limit"
     ]
   },
@@ -4825,8 +5488,8 @@
     "style": "direct",
     "type": "proof",
     "uses": [
-      "proposition.increasing-decreasing-test",
-      "definition.critical-number"
+      "definition.critical-number",
+      "proposition.increasing-decreasing-test"
     ]
   },
   "proof.ftc-part1.stewart": {
@@ -4848,11 +5511,11 @@
     "style": "direct",
     "type": "proof",
     "uses": [
+      "definition.continuity-at-point",
       "definition.definite-integral",
       "definition.derivative-at-point",
-      "definition.continuity-at-point",
-      "theorem.squeeze-theorem",
-      "proposition.integral-comparison"
+      "proposition.integral-comparison",
+      "theorem.squeeze-theorem"
     ]
   },
   "proof.ftc-part2.stewart": {
@@ -4874,9 +5537,9 @@
     "style": "direct",
     "type": "proof",
     "uses": [
-      "theorem.ftc-part1",
+      "corollary.equal-derivatives-differ-by-constant",
       "definition.antiderivative",
-      "corollary.equal-derivatives-differ-by-constant"
+      "theorem.ftc-part1"
     ]
   },
   "proof.general-antiderivative.stewart": {
@@ -4898,8 +5561,31 @@
     "style": "direct",
     "type": "proof",
     "uses": [
-      "definition.antiderivative",
-      "corollary.equal-derivatives-differ-by-constant"
+      "corollary.equal-derivatives-differ-by-constant",
+      "definition.antiderivative"
+    ]
+  },
+  "proof.geometric-series.rudin": {
+    "confidence": "high",
+    "id": "proof.geometric-series.rudin",
+    "kind": "proof",
+    "notes": "Partial sum s_n = (1-x^{n+1})/(1-x); let n→∞.\n",
+    "proves": "theorem.geometric-series",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.26",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "definition.convergent-sequence",
+      "definition.infinite-series"
     ]
   },
   "proof.geometric-series.stewart": {
@@ -4944,11 +5630,11 @@
     "style": "direct",
     "type": "proof",
     "uses": [
-      "theorem.k-cell-compact",
-      "proposition.closed-subset-compact",
-      "theorem.infinite-subset-compact-limit-point",
       "definition.neighborhood-limit-point-open-closed",
-      "proposition.limit-point-infinite-points"
+      "proposition.closed-subset-compact",
+      "proposition.limit-point-infinite-points",
+      "theorem.infinite-subset-compact-limit-point",
+      "theorem.k-cell-compact"
     ]
   },
   "proof.horizontal-line-test.stewart": {
@@ -4970,8 +5656,8 @@
     "style": "direct",
     "type": "proof",
     "uses": [
-      "definition.one-to-one-function",
-      "definition.graph-of-function"
+      "definition.graph-of-function",
+      "definition.one-to-one-function"
     ]
   },
   "proof.i-squared.rudin": {
@@ -4993,8 +5679,8 @@
     "style": "direct",
     "type": "proof",
     "uses": [
-      "definition.imaginary-unit",
-      "definition.complex-number"
+      "definition.complex-number",
+      "definition.imaginary-unit"
     ]
   },
   "proof.increasing-decreasing-test.stewart": {
@@ -5016,9 +5702,9 @@
     "style": "direct",
     "type": "proof",
     "uses": [
-      "theorem.mean-value-theorem",
+      "definition.decreasing-function",
       "definition.increasing-function",
-      "definition.decreasing-function"
+      "theorem.mean-value-theorem"
     ]
   },
   "proof.infinite-subset-compact-limit-point.rudin": {
@@ -5086,8 +5772,8 @@
     "style": "assumed",
     "type": "proof",
     "uses": [
-      "definition.definite-integral",
-      "definition.continuity-on-interval"
+      "definition.continuity-on-interval",
+      "definition.definite-integral"
     ]
   },
   "proof.integral-comparison.stewart": {
@@ -5155,8 +5841,8 @@
     "style": "direct",
     "type": "proof",
     "uses": [
-      "definition.infinite-series",
       "definition.improper-integral-type1",
+      "definition.infinite-series",
       "proposition.integral-comparison"
     ]
   },
@@ -5179,10 +5865,10 @@
     "style": "direct",
     "type": "proof",
     "uses": [
-      "theorem.substitution-rule-definite",
       "definition.even-function",
       "definition.odd-function",
-      "proposition.integral-properties"
+      "proposition.integral-properties",
+      "theorem.substitution-rule-definite"
     ]
   },
   "proof.integrating-factor-method.stewart": {
@@ -5205,9 +5891,9 @@
     "type": "proof",
     "uses": [
       "definition.first-order-linear-equation",
-      "theorem.product-rule",
+      "theorem.chain-rule",
       "theorem.ftc-part2",
-      "theorem.chain-rule"
+      "theorem.product-rule"
     ]
   },
   "proof.integration-by-parts-definite.stewart": {
@@ -5229,8 +5915,8 @@
     "style": "direct",
     "type": "proof",
     "uses": [
-      "theorem.integration-by-parts",
-      "theorem.ftc-part2"
+      "theorem.ftc-part2",
+      "theorem.integration-by-parts"
     ]
   },
   "proof.integration-by-parts.stewart": {
@@ -5252,9 +5938,9 @@
     "style": "direct",
     "type": "proof",
     "uses": [
-      "theorem.product-rule",
       "definition.antiderivative",
-      "definition.indefinite-integral"
+      "definition.indefinite-integral",
+      "theorem.product-rule"
     ]
   },
   "proof.intermediate-value-theorem.stewart": {
@@ -5320,8 +6006,8 @@
     "style": "direct",
     "type": "proof",
     "uses": [
-      "definition.inverse-function",
-      "definition.graph-of-function"
+      "definition.graph-of-function",
+      "definition.inverse-function"
     ]
   },
   "proof.irrationality-of-sqrt-2.rudin": {
@@ -5435,9 +6121,9 @@
     "style": "direct",
     "type": "proof",
     "uses": [
-      "theorem.mean-value-theorem",
       "definition.indeterminate-form",
-      "theorem.limit-laws"
+      "theorem.limit-laws",
+      "theorem.mean-value-theorem"
     ]
   },
   "proof.limit-comparison-test.stewart": {
@@ -5482,8 +6168,8 @@
     "style": "algebraic",
     "type": "proof",
     "uses": [
-      "theorem.limit-sinx-over-x",
-      "theorem.limit-laws"
+      "theorem.limit-laws",
+      "theorem.limit-sinx-over-x"
     ]
   },
   "proof.limit-exists-iff-one-sided-limits.stewart": {
@@ -5505,8 +6191,8 @@
     "style": "direct",
     "type": "proof",
     "uses": [
-      "definition.limit-of-function",
       "definition.left-hand-limit",
+      "definition.limit-of-function",
       "definition.right-hand-limit"
     ]
   },
@@ -5573,8 +6259,8 @@
     "style": "contradiction",
     "type": "proof",
     "uses": [
-      "definition.neighborhood-limit-point-open-closed",
-      "definition.metric-space"
+      "definition.metric-space",
+      "definition.neighborhood-limit-point-open-closed"
     ]
   },
   "proof.limit-power-law.stewart": {
@@ -5640,8 +6326,8 @@
     "style": "geometric",
     "type": "proof",
     "uses": [
-      "theorem.squeeze-theorem",
-      "definition.trigonometric-function"
+      "definition.trigonometric-function",
+      "theorem.squeeze-theorem"
     ]
   },
   "proof.local-extremum-at-critical.stewart": {
@@ -5663,8 +6349,8 @@
     "style": "direct",
     "type": "proof",
     "uses": [
-      "theorem.fermat-theorem",
-      "definition.critical-number"
+      "definition.critical-number",
+      "theorem.fermat-theorem"
     ]
   },
   "proof.lub-implies-glb.rudin": {
@@ -5687,9 +6373,9 @@
     "type": "proof",
     "uses": [
       "definition.least-upper-bound-property",
+      "definition.ordered-set",
       "definition.supremum",
-      "definition.upper-bound",
-      "definition.ordered-set"
+      "definition.upper-bound"
     ]
   },
   "proof.mean-value-theorem-integrals.stewart": {
@@ -5711,12 +6397,12 @@
     "style": "direct",
     "type": "proof",
     "uses": [
-      "definition.definite-integral",
-      "definition.continuity-on-interval",
       "definition.average-value-of-function",
+      "definition.continuity-on-interval",
+      "definition.definite-integral",
+      "proposition.integral-comparison",
       "theorem.extreme-value-theorem",
-      "theorem.intermediate-value-theorem",
-      "proposition.integral-comparison"
+      "theorem.intermediate-value-theorem"
     ]
   },
   "proof.mean-value-theorem.stewart": {
@@ -5738,11 +6424,60 @@
     "style": "direct",
     "type": "proof",
     "uses": [
-      "theorem.rolles-theorem",
       "definition.continuity-on-interval",
       "definition.differentiable",
-      "theorem.sum-rule",
-      "theorem.constant-multiple-rule"
+      "theorem.constant-multiple-rule",
+      "theorem.rolles-theorem",
+      "theorem.sum-rule"
+    ]
+  },
+  "proof.mertens.rudin": {
+    "confidence": "high",
+    "id": "proof.mertens.rudin",
+    "kind": "proof",
+    "notes": "Write C_n = A_n B + γ_n where γ_n = a_0β_n + a_1β_{n-1} + ... + a_nβ_0. Show γ_n→0 using absolute convergence of Σa_n and β_n→0.\n",
+    "proves": "theorem.mertens",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.50",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "definition.absolute-convergence",
+      "definition.cauchy-product",
+      "theorem.algebraic-limit-theorem"
+    ]
+  },
+  "proof.monotone-convergence.rudin": {
+    "confidence": "high",
+    "id": "proof.monotone-convergence.rudin",
+    "kind": "proof",
+    "notes": "If increasing, let s = sup E (range). For every ε, s-ε < s_N ≤ s for some N; since increasing, s_n ∈ (s-ε, s] for all n>N. Converse from Thm 3.2(c).\n",
+    "proves": "theorem.monotonic-sequence-theorem",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.14",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "definition.convergent-sequence",
+      "definition.monotonic-sequence",
+      "definition.supremum",
+      "proposition.convergent-sequence-properties"
     ]
   },
   "proof.monotonic-sequence-theorem.stewart": {
@@ -5876,9 +6611,9 @@
     "style": "direct",
     "type": "proof",
     "uses": [
-      "definition.supremum",
       "definition.least-upper-bound-property",
-      "definition.segment-interval-cell-ball"
+      "definition.segment-interval-cell-ball",
+      "definition.supremum"
     ]
   },
   "proof.nested-k-cells.rudin": {
@@ -5900,8 +6635,8 @@
     "style": "direct",
     "type": "proof",
     "uses": [
-      "lemma.nested-intervals",
-      "definition.segment-interval-cell-ball"
+      "definition.segment-interval-cell-ball",
+      "lemma.nested-intervals"
     ]
   },
   "proof.net-change-theorem.stewart": {
@@ -5926,6 +6661,30 @@
       "theorem.ftc-part2"
     ]
   },
+  "proof.nonnegative-series-bounded.rudin": {
+    "confidence": "high",
+    "id": "proof.nonnegative-series-bounded.rudin",
+    "kind": "proof",
+    "notes": "Partial sums are monotonically increasing; bounded iff convergent by monotone convergence.\n",
+    "proves": "proposition.nonnegative-series-bounded",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.24",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "definition.infinite-series",
+      "definition.monotonic-sequence",
+      "theorem.monotonic-sequence-theorem"
+    ]
+  },
   "proof.nth-root-of-product.rudin": {
     "confidence": "high",
     "id": "proof.nth-root-of-product.rudin",
@@ -5945,8 +6704,8 @@
     "style": "direct",
     "type": "proof",
     "uses": [
-      "theorem.existence-of-nth-roots",
-      "definition.field"
+      "definition.field",
+      "theorem.existence-of-nth-roots"
     ]
   },
   "proof.open-iff-complement-closed.rudin": {
@@ -5990,8 +6749,8 @@
     "style": "direct",
     "type": "proof",
     "uses": [
-      "definition.neighborhood-limit-point-open-closed",
       "definition.metric-space",
+      "definition.neighborhood-limit-point-open-closed",
       "proposition.neighborhood-is-open",
       "theorem.unions-intersections-open-closed"
     ]
@@ -6015,9 +6774,33 @@
     "style": "direct",
     "type": "proof",
     "uses": [
-      "definition.ordered-field",
       "definition.field",
+      "definition.ordered-field",
       "proposition.field-zero-product"
+    ]
+  },
+  "proof.p-series-test.rudin": {
+    "confidence": "high",
+    "id": "proof.p-series-test.rudin",
+    "kind": "proof",
+    "notes": "If p≤0, terms don't → 0. If p>0, condensation gives Σ2^{(1-p)k} which is geometric with ratio 2^{1-p}.\n",
+    "proves": "theorem.p-series-test",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.28",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "theorem.cauchy-condensation-test",
+      "theorem.divergence-test",
+      "theorem.geometric-series"
     ]
   },
   "proof.perfect-set-uncountable.rudin": {
@@ -6039,8 +6822,8 @@
     "style": "contradiction",
     "type": "proof",
     "uses": [
-      "definition.neighborhood-limit-point-open-closed",
       "corollary.nested-compact-nonempty",
+      "definition.neighborhood-limit-point-open-closed",
       "definition.segment-interval-cell-ball"
     ]
   },
@@ -6063,8 +6846,8 @@
     "style": "direct",
     "type": "proof",
     "uses": [
-      "theorem.power-rule",
-      "theorem.chain-rule"
+      "theorem.chain-rule",
+      "theorem.power-rule"
     ]
   },
   "proof.power-rule.stewart": {
@@ -6088,6 +6871,29 @@
     "uses": [
       "definition.derivative-function",
       "theorem.limit-laws"
+    ]
+  },
+  "proof.power-series-boundary.rudin": {
+    "confidence": "high",
+    "id": "proof.power-series-boundary.rudin",
+    "kind": "proof",
+    "notes": "Put a_n = z^n, b_n = c_n. Partial sums of z^n bounded by 2/|1-z| when |z|=1, z≠1.\n",
+    "proves": "theorem.power-series-boundary",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.44",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "definition.power-series",
+      "theorem.dirichlet-test"
     ]
   },
   "proof.power-series-convergence.stewart": {
@@ -6157,8 +6963,8 @@
     "type": "proof",
     "uses": [
       "definition.derivative-function",
-      "theorem.limit-laws",
-      "theorem.differentiable-implies-continuous"
+      "theorem.differentiable-implies-continuous",
+      "theorem.limit-laws"
     ]
   },
   "proof.quotient-rule.stewart": {
@@ -6181,8 +6987,32 @@
     "type": "proof",
     "uses": [
       "definition.derivative-function",
-      "theorem.limit-laws",
-      "theorem.differentiable-implies-continuous"
+      "theorem.differentiable-implies-continuous",
+      "theorem.limit-laws"
+    ]
+  },
+  "proof.ratio-test.rudin": {
+    "confidence": "high",
+    "id": "proof.ratio-test.rudin",
+    "kind": "proof",
+    "notes": "(a) |a_{n+1}|<β|a_n| gives |a_n| < |a_N|β^{n-N}, compare geometric. (b) |a_n| increasing so a_n ↛ 0.\n",
+    "proves": "theorem.ratio-test",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.34",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "cases",
+    "type": "proof",
+    "uses": [
+      "theorem.comparison-test-series",
+      "theorem.divergence-test",
+      "theorem.geometric-series"
     ]
   },
   "proof.ratio-test.stewart": {
@@ -6205,8 +7035,8 @@
     "type": "proof",
     "uses": [
       "definition.absolute-convergence",
-      "theorem.geometric-series",
-      "theorem.comparison-test-series"
+      "theorem.comparison-test-series",
+      "theorem.geometric-series"
     ]
   },
   "proof.rationals-countable.rudin": {
@@ -6228,8 +7058,8 @@
     "style": "direct",
     "type": "proof",
     "uses": [
-      "proposition.n-tuples-countable",
-      "definition.rational-numbers"
+      "definition.rational-numbers",
+      "proposition.n-tuples-countable"
     ]
   },
   "proof.real-subfield-of-complex.rudin": {
@@ -6254,6 +7084,30 @@
       "definition.complex-number"
     ]
   },
+  "proof.riemann-rearrangement.rudin": {
+    "confidence": "high",
+    "id": "proof.riemann-rearrangement.rudin",
+    "kind": "proof",
+    "notes": "Both ΣP_n and ΣQ_n diverge. Construct rearrangement by alternately adding positive terms until exceeding β_n, then negative terms until below α_n. Since P_n→0, Q_n→0, the partial sums oscillate to desired limits.\n",
+    "proves": "theorem.riemann-rearrangement",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.54",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "construction",
+    "type": "proof",
+    "uses": [
+      "definition.absolute-convergence",
+      "definition.convergent-sequence",
+      "definition.rearrangement-of-series"
+    ]
+  },
   "proof.rolles-theorem.stewart": {
     "confidence": "high",
     "id": "proof.rolles-theorem.stewart",
@@ -6273,10 +7127,59 @@
     "style": "direct",
     "type": "proof",
     "uses": [
-      "theorem.extreme-value-theorem",
-      "theorem.fermat-theorem",
       "definition.continuity-on-interval",
-      "definition.differentiable"
+      "definition.differentiable",
+      "theorem.extreme-value-theorem",
+      "theorem.fermat-theorem"
+    ]
+  },
+  "proof.root-test-stronger-than-ratio.rudin": {
+    "confidence": "high",
+    "id": "proof.root-test-stronger-than-ratio.rudin",
+    "kind": "proof",
+    "notes": "If c_{n+1}/c_n ≤ β for n≥N, then c_n ≤ c_N β^{n-N}, so n-th root ≤ (c_N β^{-N})^{1/n} · β → β.\n",
+    "proves": "proposition.root-test-stronger-than-ratio",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.37",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "definition.convergent-sequence",
+      "proposition.special-sequence-limits"
+    ]
+  },
+  "proof.root-test.rudin": {
+    "confidence": "high",
+    "id": "proof.root-test.rudin",
+    "kind": "proof",
+    "notes": "α<1: choose β with α<β<1, then |a_n|<β^n eventually, compare with geometric. α>1: |a_n|>1 infinitely often, terms don't → 0.\n",
+    "proves": "theorem.root-test",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.33",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "cases",
+    "type": "proof",
+    "uses": [
+      "definition.upper-lower-limits",
+      "theorem.characterization-lim-sup",
+      "theorem.comparison-test-series",
+      "theorem.divergence-test",
+      "theorem.geometric-series"
     ]
   },
   "proof.root-test.stewart": {
@@ -6299,8 +7202,8 @@
     "type": "proof",
     "uses": [
       "definition.absolute-convergence",
-      "theorem.geometric-series",
-      "theorem.comparison-test-series"
+      "theorem.comparison-test-series",
+      "theorem.geometric-series"
     ]
   },
   "proof.schwarz-inequality.rudin": {
@@ -6322,9 +7225,9 @@
     "style": "direct",
     "type": "proof",
     "uses": [
-      "theorem.conjugate-properties",
       "definition.complex-absolute-value",
-      "definition.summation-notation"
+      "definition.summation-notation",
+      "theorem.conjugate-properties"
     ]
   },
   "proof.second-derivative-test.stewart": {
@@ -6350,6 +7253,53 @@
       "proposition.first-derivative-test"
     ]
   },
+  "proof.series-addition.rudin": {
+    "confidence": "high",
+    "id": "proof.series-addition.rudin",
+    "kind": "proof",
+    "notes": "A_n + B_n = Σ(a_k + b_k); limits add.\n",
+    "proves": "proposition.series-addition",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.47",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "definition.convergent-sequence",
+      "definition.infinite-series"
+    ]
+  },
+  "proof.special-sequence-limits.rudin": {
+    "confidence": "high",
+    "id": "proof.special-sequence-limits.rudin",
+    "kind": "proof",
+    "notes": "(a) Archimedean. (b) Binomial theorem gives 0 < x_n ≤ (p-1)/n. (c) Binomial gives 0 ≤ x_n ≤ √(2/(n-1)). (d) Choose k>α, binomial lower bound on (1+p)^n. (e) α=0 in (d).\n",
+    "proves": "proposition.special-sequence-limits",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.20",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "definition.convergent-sequence",
+      "proposition.convergent-sequence-properties",
+      "theorem.archimedean-density"
+    ]
+  },
   "proof.squeeze-theorem.stewart": {
     "confidence": "medium",
     "id": "proof.squeeze-theorem.stewart",
@@ -6372,6 +7322,56 @@
       "definition.epsilon-delta-limit"
     ]
   },
+  "proof.subsequence-compact.rudin": {
+    "confidence": "high",
+    "id": "proof.subsequence-compact.rudin",
+    "kind": "proof",
+    "notes": "(a) If range finite, constant subsequence; if infinite, limit point exists by Thm 2.37, pick n_i with d(p, p_{n_i}) < 1/i. (b) Bounded subset of R^k lies in compact set.\n",
+    "proves": "theorem.subsequence-compact",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.6",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "cases",
+    "type": "proof",
+    "uses": [
+      "definition.compact-set",
+      "definition.neighborhood-limit-point-open-closed",
+      "definition.subsequence",
+      "theorem.bolzano-weierstrass",
+      "theorem.k-cell-compact"
+    ]
+  },
+  "proof.subsequential-limits-closed.rudin": {
+    "confidence": "high",
+    "id": "proof.subsequential-limits-closed.rudin",
+    "kind": "proof",
+    "notes": "Let q be limit point of E*. Construct subsequence converging to q by choosing n_i with d(q, p_{n_i}) ≤ 2^{1-i}δ.\n",
+    "proves": "theorem.subsequential-limits-closed",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.7",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "definition.metric-space",
+      "definition.neighborhood-limit-point-open-closed",
+      "definition.subsequence"
+    ]
+  },
   "proof.substitution-rule-definite.stewart": {
     "confidence": "high",
     "id": "proof.substitution-rule-definite.stewart",
@@ -6391,8 +7391,8 @@
     "style": "direct",
     "type": "proof",
     "uses": [
-      "theorem.substitution-rule",
-      "theorem.ftc-part2"
+      "theorem.ftc-part2",
+      "theorem.substitution-rule"
     ]
   },
   "proof.substitution-rule.stewart": {
@@ -6414,8 +7414,8 @@
     "style": "direct",
     "type": "proof",
     "uses": [
-      "theorem.chain-rule",
-      "definition.antiderivative"
+      "definition.antiderivative",
+      "theorem.chain-rule"
     ]
   },
   "proof.sum-rule.stewart": {
@@ -6439,6 +7439,28 @@
     "uses": [
       "definition.derivative-function",
       "theorem.limit-laws"
+    ]
+  },
+  "proof.summation-by-parts.rudin": {
+    "confidence": "high",
+    "id": "proof.summation-by-parts.rudin",
+    "kind": "proof",
+    "notes": "Abel's summation formula: write a_n = A_n - A_{n-1}, substitute and rearrange.\n",
+    "proves": "theorem.summation-by-parts",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.41",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "definition.infinite-series"
     ]
   },
   "proof.sup-in-closure.rudin": {
@@ -6606,6 +7628,30 @@
     },
     "type": "proposition"
   },
+  "proposition.cauchy-criterion-series": {
+    "confidence": "high",
+    "id": "proposition.cauchy-criterion-series",
+    "kind": "statement",
+    "latex": "\\left| \\sum_{k=n}^{m} a_k \\right| \\leq \\varepsilon \\quad (m \\geq n \\geq N)\n",
+    "natural": {
+      "en": "The series Σa_n converges if and only if for every ε > 0 there exists an integer N such that |Σ_{k=n}^m a_k| ≤ ε whenever m ≥ n ≥ N."
+    },
+    "notes": "Theorem 3.22 from Rudin.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.22",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Cauchy Criterion for Series"
+    },
+    "type": "proposition"
+  },
   "proposition.change-of-base-formula": {
     "confidence": "medium",
     "id": "proposition.change-of-base-formula",
@@ -6701,6 +7747,30 @@
     },
     "type": "proposition"
   },
+  "proposition.comparison-lim-sup-inf": {
+    "confidence": "high",
+    "id": "proposition.comparison-lim-sup-inf",
+    "kind": "statement",
+    "latex": "s_n \\leq t_n \\implies \\liminf s_n \\leq \\liminf t_n,\\; \\limsup s_n \\leq \\limsup t_n\n",
+    "natural": {
+      "en": "If s_n ≤ t_n for all n ≥ N (for some fixed N), then lim inf s_n ≤ lim inf t_n and lim sup s_n ≤ lim sup t_n."
+    },
+    "notes": "Theorem 3.19 from Rudin. Classified as proposition since the result follows directly from the definitions.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.19",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Comparison of lim sup and lim inf"
+    },
+    "type": "proposition"
+  },
   "proposition.concavity-test": {
     "confidence": "high",
     "id": "proposition.concavity-test",
@@ -6727,6 +7797,54 @@
     },
     "type": "proposition"
   },
+  "proposition.convergence-in-rk": {
+    "confidence": "high",
+    "id": "proposition.convergence-in-rk",
+    "kind": "statement",
+    "latex": "\\mathbf{x}_n \\to \\mathbf{x} \\iff \\lim_{n \\to \\infty} \\alpha_{j,n} = \\alpha_j \\quad (1 \\leq j \\leq k)\n",
+    "natural": {
+      "en": "(a) A sequence {x_n} in R^k converges to x if and only if each component sequence converges to the corresponding component of x. (b) The algebraic limit laws extend to R^k: limits of sums, scalar multiples, and inner products behave as expected."
+    },
+    "notes": "Theorem 3.4 from Rudin.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.4",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Convergence in R^k"
+    },
+    "type": "proposition"
+  },
+  "proposition.convergent-sequence-properties": {
+    "confidence": "high",
+    "id": "proposition.convergent-sequence-properties",
+    "kind": "statement",
+    "latex": "p_n \\to p \\iff \\forall \\varepsilon > 0,\\; \\exists N : n \\geq N \\implies d(p_n, p) < \\varepsilon\n",
+    "natural": {
+      "en": "(a) {p_n} converges to p if and only if every neighborhood of p contains all but finitely many terms of {p_n}. (b) If {p_n} converges, its limit is unique. (c) If {p_n} converges, then {p_n} is bounded. (d) If E is a subset of a metric space X and p is a limit point of E, then there is a sequence {p_n} in E such that p_n → p."
+    },
+    "notes": "Theorem 3.2 from Rudin.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.2",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Properties of Convergent Sequences"
+    },
+    "type": "proposition"
+  },
   "proposition.de-morgan": {
     "confidence": "high",
     "id": "proposition.de-morgan",
@@ -6748,6 +7866,30 @@
     "status": "draft",
     "title": {
       "en": "De Morgan's Law"
+    },
+    "type": "proposition"
+  },
+  "proposition.diameter-properties": {
+    "confidence": "high",
+    "id": "proposition.diameter-properties",
+    "kind": "statement",
+    "latex": "\\operatorname{diam} \\overline{E} = \\operatorname{diam} E\n",
+    "natural": {
+      "en": "(a) The diameter of the closure of E equals the diameter of E. (b) If {K_n} is a sequence of compact sets in a metric space X with K_n ⊃ K_{n+1} and diam K_n → 0, then the intersection of all K_n consists of exactly one point."
+    },
+    "notes": "Theorem 3.10 from Rudin.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.10",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Properties of Diameter"
     },
     "type": "proposition"
   },
@@ -7247,6 +8389,30 @@
     },
     "type": "proposition"
   },
+  "proposition.nonnegative-series-bounded": {
+    "confidence": "high",
+    "id": "proposition.nonnegative-series-bounded",
+    "kind": "statement",
+    "latex": "a_n \\geq 0 \\implies \\left( \\sum a_n \\text{ converges} \\iff \\{s_n\\} \\text{ bounded} \\right)\n",
+    "natural": {
+      "en": "A series of nonnegative terms converges if and only if its partial sums form a bounded sequence."
+    },
+    "notes": "Theorem 3.24 from Rudin.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.24",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Nonnegative Series Bounded Partial Sums"
+    },
+    "type": "proposition"
+  },
   "proposition.open-iff-complement-closed": {
     "confidence": "high",
     "id": "proposition.open-iff-complement-closed",
@@ -7293,6 +8459,30 @@
     },
     "type": "proposition"
   },
+  "proposition.root-test-stronger-than-ratio": {
+    "confidence": "high",
+    "id": "proposition.root-test-stronger-than-ratio",
+    "kind": "statement",
+    "latex": "\\liminf \\frac{c_{n+1}}{c_n} \\leq \\liminf \\sqrt[n]{c_n} \\leq \\limsup \\sqrt[n]{c_n} \\leq \\limsup \\frac{c_{n+1}}{c_n}\n",
+    "natural": {
+      "en": "For any sequence {c_n} of positive numbers, lim inf(c_{n+1}/c_n) ≤ lim inf c_n^{1/n} ≤ lim sup c_n^{1/n} ≤ lim sup(c_{n+1}/c_n)."
+    },
+    "notes": "Theorem 3.37 from Rudin.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.37",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Root Test is Stronger than Ratio Test"
+    },
+    "type": "proposition"
+  },
   "proposition.second-derivative-test": {
     "confidence": "high",
     "id": "proposition.second-derivative-test",
@@ -7316,6 +8506,54 @@
     "title": {
       "en": "The Second Derivative Test",
       "es": "Prueba de la segunda derivada"
+    },
+    "type": "proposition"
+  },
+  "proposition.series-addition": {
+    "confidence": "high",
+    "id": "proposition.series-addition",
+    "kind": "statement",
+    "latex": "\\sum(a_n + b_n) = A + B, \\quad \\sum c a_n = cA\n",
+    "natural": {
+      "en": "If Σa_n = A and Σb_n = B, then Σ(a_n + b_n) = A + B, and Σca_n = cA."
+    },
+    "notes": "Theorem 3.47 from Rudin. Classified as proposition per instructions.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.47",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Addition and Scalar Multiplication of Series"
+    },
+    "type": "proposition"
+  },
+  "proposition.special-sequence-limits": {
+    "confidence": "high",
+    "id": "proposition.special-sequence-limits",
+    "kind": "statement",
+    "latex": "\\lim_{n \\to \\infty} \\frac{1}{n^p} = 0,\\quad \\lim_{n \\to \\infty} \\sqrt[n]{p} = 1,\\quad \\lim_{n \\to \\infty} \\sqrt[n]{n} = 1\n",
+    "natural": {
+      "en": "(a) If p > 0, then lim 1/n^p = 0. (b) If p > 0, then lim p^{1/n} = 1. (c) lim n^{1/n} = 1. (d) If p > 0 and α is real, then lim n^α / (1+p)^n = 0. (e) If |x| < 1, then lim x^n = 0."
+    },
+    "notes": "Theorem 3.20 from Rudin.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.20",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Special Sequence Limits"
     },
     "type": "proposition"
   },
@@ -7367,6 +8605,30 @@
     },
     "type": "proposition"
   },
+  "theorem.abel-cauchy-product": {
+    "confidence": "high",
+    "id": "theorem.abel-cauchy-product",
+    "kind": "statement",
+    "latex": "\\sum a_n = A,\\; \\sum b_n = B,\\; \\sum c_n = C,\\; c_n = \\sum_{k=0}^n a_k b_{n-k} \\implies C = AB\n",
+    "natural": {
+      "en": "If Σa_n, Σb_n, Σc_n all converge to A, B, C respectively, and c_n = a_0 b_n + a_1 b_{n-1} + ... + a_n b_0, then C = AB."
+    },
+    "notes": "Theorem 3.51 from Rudin.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.51",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Abel's Theorem on Cauchy Products"
+    },
+    "type": "theorem"
+  },
   "theorem.absolute-convergence-implies-convergence": {
     "confidence": "high",
     "id": "theorem.absolute-convergence-implies-convergence",
@@ -7383,12 +8645,67 @@
         "edition": "7",
         "section": "11.6",
         "work": "Cálculo de una variable — Trascendentes tempranas"
+      },
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.45",
+        "work": "Principles of Mathematical Analysis"
       }
     ],
     "status": "draft",
     "title": {
       "en": "Absolute convergence implies convergence",
       "es": "La convergencia absoluta implica convergencia"
+    },
+    "type": "theorem"
+  },
+  "theorem.absolute-convergence-rearrangement": {
+    "confidence": "high",
+    "id": "theorem.absolute-convergence-rearrangement",
+    "kind": "statement",
+    "latex": "\\sum |a_n| < \\infty \\implies \\text{every rearrangement converges to the same sum}\n",
+    "natural": {
+      "en": "If Σa_n converges absolutely, then every rearrangement of Σa_n converges to the same sum."
+    },
+    "notes": "Theorem 3.55 from Rudin.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.55",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Absolute Convergence and Rearrangement"
+    },
+    "type": "theorem"
+  },
+  "theorem.algebraic-limit-theorem": {
+    "confidence": "high",
+    "id": "theorem.algebraic-limit-theorem",
+    "kind": "statement",
+    "latex": "\\lim(s_n + t_n) = s + t,\\quad \\lim(s_n t_n) = st\n",
+    "natural": {
+      "en": "Suppose {s_n} and {t_n} are complex sequences with s_n → s and t_n → t. Then: (a) lim(s_n + t_n) = s + t; (b) lim(c·s_n) = c·s for any constant c; (c) lim(s_n · t_n) = s·t; (d) lim(1/s_n) = 1/s provided s_n ≠ 0 and s ≠ 0."
+    },
+    "notes": "Theorem 3.3 from Rudin.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.3",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Algebraic Limit Theorem"
     },
     "type": "theorem"
   },
@@ -7408,6 +8725,13 @@
         "edition": "7",
         "section": "11.5",
         "work": "Cálculo de una variable — Trascendentes tempranas"
+      },
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.43",
+        "work": "Principles of Mathematical Analysis"
       }
     ],
     "status": "draft",
@@ -7487,6 +8811,54 @@
     },
     "type": "theorem"
   },
+  "theorem.cauchy-condensation-test": {
+    "confidence": "high",
+    "id": "theorem.cauchy-condensation-test",
+    "kind": "statement",
+    "latex": "a_1 \\geq a_2 \\geq \\cdots \\geq 0 \\implies \\left( \\sum_{n=1}^{\\infty} a_n \\text{ conv.} \\iff \\sum_{k=0}^{\\infty} 2^k a_{2^k} \\text{ conv.} \\right)\n",
+    "natural": {
+      "en": "If a_1 ≥ a_2 ≥ ... ≥ 0, then Σa_n converges if and only if Σ2^k a_{2^k} converges."
+    },
+    "notes": "Theorem 3.27 from Rudin.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.27",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Cauchy Condensation Test"
+    },
+    "type": "theorem"
+  },
+  "theorem.cauchy-criterion": {
+    "confidence": "high",
+    "id": "theorem.cauchy-criterion",
+    "kind": "statement",
+    "latex": "\\{p_n\\} \\text{ converges in } \\mathbb{R}^k \\iff \\{p_n\\} \\text{ is Cauchy}\n",
+    "natural": {
+      "en": "(a) In any metric space, every convergent sequence is a Cauchy sequence. (b) If X is a compact metric space, then every Cauchy sequence in X converges. (c) In R^k, a sequence converges if and only if it is a Cauchy sequence."
+    },
+    "notes": "Theorem 3.11 from Rudin.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.11",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Cauchy Criterion for Convergence"
+    },
+    "type": "theorem"
+  },
   "theorem.chain-rule": {
     "confidence": "high",
     "id": "theorem.chain-rule",
@@ -7510,6 +8882,30 @@
     "title": {
       "en": "The Chain Rule",
       "es": "Regla de la cadena"
+    },
+    "type": "theorem"
+  },
+  "theorem.characterization-lim-sup": {
+    "confidence": "high",
+    "id": "theorem.characterization-lim-sup",
+    "kind": "statement",
+    "latex": "s^* \\in E \\text{ and } x > s^* \\implies \\exists N : n \\geq N \\implies s_n < x\n",
+    "natural": {
+      "en": "Let {s_n} be a real sequence, and let E* be the set of all subsequential limits (including ±∞). Let s* = sup E* = lim sup s_n. Then: (a) s* ∈ E*; (b) if x > s*, there exists N such that n ≥ N implies s_n < x. Moreover, s* is the only number with both properties (a) and (b)."
+    },
+    "notes": "Theorem 3.17 from Rudin.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.17",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Characterization of lim sup"
     },
     "type": "theorem"
   },
@@ -7552,6 +8948,13 @@
         "edition": "7",
         "section": "11.4",
         "work": "Cálculo de una variable — Trascendentes tempranas"
+      },
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.25",
+        "work": "Principles of Mathematical Analysis"
       }
     ],
     "status": "draft",
@@ -8246,6 +9649,30 @@
     },
     "type": "theorem"
   },
+  "theorem.dirichlet-test": {
+    "confidence": "high",
+    "id": "theorem.dirichlet-test",
+    "kind": "statement",
+    "latex": "|A_n| \\leq M,\\; b_n \\downarrow 0 \\implies \\sum a_n b_n \\text{ converges}\n",
+    "natural": {
+      "en": "If the partial sums A_n of Σa_n are bounded, b_0 ≥ b_1 ≥ b_2 ≥ ..., and lim b_n = 0, then Σa_n b_n converges."
+    },
+    "notes": "Theorem 3.42 from Rudin.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.42",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Dirichlet's Test"
+    },
+    "type": "theorem"
+  },
   "theorem.divergence-test": {
     "confidence": "high",
     "id": "theorem.divergence-test",
@@ -8263,12 +9690,67 @@
         "edition": "7",
         "section": "11.2",
         "work": "Cálculo de una variable — Trascendentes tempranas"
+      },
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.23",
+        "work": "Principles of Mathematical Analysis"
       }
     ],
     "status": "draft",
     "title": {
       "en": "Test for Divergence",
       "es": "Prueba de divergencia"
+    },
+    "type": "theorem"
+  },
+  "theorem.e-as-limit": {
+    "confidence": "high",
+    "id": "theorem.e-as-limit",
+    "kind": "statement",
+    "latex": "\\lim_{n \\to \\infty} \\left(1 + \\frac{1}{n}\\right)^n = e\n",
+    "natural": {
+      "en": "The limit of (1 + 1/n)^n as n approaches infinity equals e."
+    },
+    "notes": "Theorem 3.31 from Rudin.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.31",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "e as a Limit"
+    },
+    "type": "theorem"
+  },
+  "theorem.e-is-irrational": {
+    "confidence": "high",
+    "id": "theorem.e-is-irrational",
+    "kind": "statement",
+    "latex": "e \\notin \\mathbb{Q}\n",
+    "natural": {
+      "en": "The number e is irrational."
+    },
+    "notes": "Theorem 3.32 from Rudin.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.32",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "e is Irrational"
     },
     "type": "theorem"
   },
@@ -8513,6 +9995,13 @@
         "edition": "7",
         "section": "11.2",
         "work": "Cálculo de una variable — Trascendentes tempranas"
+      },
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.26",
+        "work": "Principles of Mathematical Analysis"
       }
     ],
     "status": "draft",
@@ -9000,6 +10489,30 @@
     },
     "type": "theorem"
   },
+  "theorem.mertens": {
+    "confidence": "high",
+    "id": "theorem.mertens",
+    "kind": "statement",
+    "latex": "\\sum a_n = A \\text{ (abs.)},\\; \\sum b_n = B \\implies \\sum c_n = AB\n",
+    "natural": {
+      "en": "If Σa_n converges absolutely to A, Σb_n = B, and c_n = Σ_{k=0}^n a_k b_{n-k}, then Σc_n = AB."
+    },
+    "notes": "Theorem 3.50 from Rudin.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.50",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Mertens' Theorem"
+    },
+    "type": "theorem"
+  },
   "theorem.monotonic-sequence-theorem": {
     "confidence": "high",
     "id": "theorem.monotonic-sequence-theorem",
@@ -9017,6 +10530,13 @@
         "edition": "7",
         "section": "11.1",
         "work": "Cálculo de una variable — Trascendentes tempranas"
+      },
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.14",
+        "work": "Principles of Mathematical Analysis"
       }
     ],
     "status": "draft",
@@ -9075,6 +10595,30 @@
     },
     "type": "theorem"
   },
+  "theorem.p-series-test": {
+    "confidence": "high",
+    "id": "theorem.p-series-test",
+    "kind": "statement",
+    "latex": "\\sum \\frac{1}{n^p} \\text{ converges} \\iff p > 1\n",
+    "natural": {
+      "en": "The series Σ1/n^p converges if p > 1 and diverges if p ≤ 1."
+    },
+    "notes": "Theorem 3.28 from Rudin.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.28",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "p-Series Test"
+    },
+    "type": "theorem"
+  },
   "theorem.perfect-set-uncountable": {
     "confidence": "high",
     "id": "theorem.perfect-set-uncountable",
@@ -9124,6 +10668,30 @@
     },
     "type": "theorem"
   },
+  "theorem.power-series-boundary": {
+    "confidence": "high",
+    "id": "theorem.power-series-boundary",
+    "kind": "statement",
+    "latex": "R = 1,\\; c_n \\downarrow 0 \\implies \\sum c_n z^n \\text{ converges for } |z|=1,\\; z \\neq 1\n",
+    "natural": {
+      "en": "If the radius of convergence of Σc_n z^n is 1, and c_0 ≥ c_1 ≥ c_2 ≥ ..., lim c_n = 0, then Σc_n z^n converges at every point on |z| = 1 except possibly z = 1."
+    },
+    "notes": "Theorem 3.44 from Rudin.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.44",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Power Series Convergence on Boundary"
+    },
+    "type": "theorem"
+  },
   "theorem.power-series-convergence": {
     "confidence": "high",
     "id": "theorem.power-series-convergence",
@@ -9140,6 +10708,13 @@
         "edition": "7",
         "section": "11.8",
         "work": "Cálculo de una variable — Trascendentes tempranas"
+      },
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.39",
+        "work": "Principles of Mathematical Analysis"
       }
     ],
     "status": "draft",
@@ -9243,6 +10818,13 @@
         "edition": "7",
         "section": "11.6",
         "work": "Cálculo de una variable — Trascendentes tempranas"
+      },
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.34",
+        "work": "Principles of Mathematical Analysis"
       }
     ],
     "status": "draft",
@@ -9272,6 +10854,30 @@
     "status": "draft",
     "title": {
       "en": "Real Numbers as Subfield of Complex Numbers"
+    },
+    "type": "theorem"
+  },
+  "theorem.riemann-rearrangement": {
+    "confidence": "high",
+    "id": "theorem.riemann-rearrangement",
+    "kind": "statement",
+    "latex": "\\sum a_n \\text{ cond. conv.} \\implies \\exists \\text{ rearrangement with } \\liminf s'_n = \\alpha,\\; \\limsup s'_n = \\beta\n",
+    "natural": {
+      "en": "If Σa_n is a conditionally convergent series and -∞ ≤ α ≤ β ≤ ∞, then there exists a rearrangement Σa'_n with lim inf s'_n = α and lim sup s'_n = β."
+    },
+    "notes": "Theorem 3.54 from Rudin.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.54",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Riemann Rearrangement Theorem"
     },
     "type": "theorem"
   },
@@ -9317,6 +10923,13 @@
         "edition": "7",
         "section": "11.6",
         "work": "Cálculo de una variable — Trascendentes tempranas"
+      },
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.33",
+        "work": "Principles of Mathematical Analysis"
       }
     ],
     "status": "draft",
@@ -9373,6 +10986,54 @@
     "title": {
       "en": "Squeeze theorem",
       "es": "Teorema del encaje (sandwich)"
+    },
+    "type": "theorem"
+  },
+  "theorem.subsequence-compact": {
+    "confidence": "high",
+    "id": "theorem.subsequence-compact",
+    "kind": "statement",
+    "latex": "\\{p_n\\} \\subset X \\text{ compact} \\implies \\exists \\{p_{n_k}\\} \\text{ convergent}\n",
+    "natural": {
+      "en": "(a) If {p_n} is a sequence in a compact metric space X, then some subsequence of {p_n} converges to a point of X. (b) Every bounded sequence in R^k contains a convergent subsequence (Bolzano-Weierstrass)."
+    },
+    "notes": "Theorem 3.6 from Rudin. Part (b) is the Bolzano-Weierstrass theorem, which follows from (a) since closed bounded subsets of R^k are compact by Heine-Borel.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.6",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Convergent Subsequences in Compact Spaces"
+    },
+    "type": "theorem"
+  },
+  "theorem.subsequential-limits-closed": {
+    "confidence": "high",
+    "id": "theorem.subsequential-limits-closed",
+    "kind": "statement",
+    "latex": "E^* = \\{ x : p_{n_k} \\to x \\text{ for some subsequence}\\} \\text{ is closed}\n",
+    "natural": {
+      "en": "Let {p_n} be a sequence in a metric space X. The set E* of all subsequential limits of {p_n} is a closed subset of X."
+    },
+    "notes": "Theorem 3.7 from Rudin.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.7",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Subsequential Limits Form a Closed Set"
     },
     "type": "theorem"
   },
@@ -9451,6 +11112,30 @@
     "title": {
       "en": "The Sum Rule",
       "es": "Regla de la suma"
+    },
+    "type": "theorem"
+  },
+  "theorem.summation-by-parts": {
+    "confidence": "high",
+    "id": "theorem.summation-by-parts",
+    "kind": "statement",
+    "latex": "\\sum_{n=p}^{q} a_n b_n = \\sum_{n=p}^{q-1} A_n(b_n - b_{n+1}) + A_q b_q - A_{p-1} b_p\n",
+    "natural": {
+      "en": "Given sequences {a_n} and {b_n}, put A_n = Σ_{k=0}^n a_k. Then Σ_{n=p}^q a_n b_n = Σ_{n=p}^{q-1} A_n(b_n - b_{n+1}) + A_q b_q - A_{p-1} b_p."
+    },
+    "notes": "Theorem 3.41 from Rudin.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "3",
+        "edition": "3",
+        "section": "3.41",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Summation by Parts"
     },
     "type": "theorem"
   },

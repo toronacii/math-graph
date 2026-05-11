@@ -31,6 +31,7 @@ statement:
 
 proved_by:
   - proof.root-test.stewart
+  - proof.root-test.rudin
 
 sources:
   - work: Cálculo de una variable — Trascendentes tempranas
@@ -38,5 +39,10 @@ sources:
     edition: "7"
     chapter: "11"
     section: "11.6"
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.33"
 
 confidence: high

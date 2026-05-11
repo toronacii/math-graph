@@ -1,0 +1,29 @@
+id: theorem.power-series-boundary
+type: theorem
+status: draft
+
+title:
+  en: Power Series Convergence on Boundary
+
+statement:
+  natural:
+    en: >
+      If the radius of convergence of Σc_n z^n is 1, and c_0 ≥ c_1 ≥ c_2 ≥ ...,
+      lim c_n = 0, then Σc_n z^n converges at every point on |z| = 1 except possibly z = 1.
+
+  latex: |
+    R = 1,\; c_n \downarrow 0 \implies \sum c_n z^n \text{ converges for } |z|=1,\; z \neq 1
+
+proved_by:
+  - proof.power-series-boundary.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.44"
+
+confidence: high
+notes: >
+  Theorem 3.44 from Rudin.

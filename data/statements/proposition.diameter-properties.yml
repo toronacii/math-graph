@@ -1,0 +1,31 @@
+id: proposition.diameter-properties
+type: proposition
+status: draft
+
+title:
+  en: Properties of Diameter
+
+statement:
+  natural:
+    en: >
+      (a) The diameter of the closure of E equals the diameter of E.
+      (b) If {K_n} is a sequence of compact sets in a metric space X with
+      K_n ⊃ K_{n+1} and diam K_n → 0, then the intersection of all K_n
+      consists of exactly one point.
+
+  latex: |
+    \operatorname{diam} \overline{E} = \operatorname{diam} E
+
+proved_by:
+  - proof.diameter-properties.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.10"
+
+confidence: high
+notes: >
+  Theorem 3.10 from Rudin.

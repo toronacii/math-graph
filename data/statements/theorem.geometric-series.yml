@@ -22,6 +22,7 @@ statement:
 
 proved_by:
   - proof.geometric-series.stewart
+  - proof.geometric-series.rudin
 
 sources:
   - work: Cálculo de una variable — Trascendentes tempranas
@@ -29,5 +30,10 @@ sources:
     edition: "7"
     chapter: "11"
     section: "11.2"
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.26"
 
 confidence: high

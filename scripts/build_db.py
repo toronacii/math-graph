@@ -18,7 +18,6 @@ from __future__ import annotations
 import json
 import sqlite3
 import sys
-from pathlib import Path
 from typing import Any
 
 import networkx as nx
@@ -408,7 +407,7 @@ def _get_sources(cur: sqlite3.Cursor, entity_id: str) -> list[dict[str, str]]:
     for row in rows:
         src: dict[str, str] = {}
         keys = ("work", "author", "edition", "chapter", "section", "page", "locator", "url")
-        for key, val in zip(keys, row):
+        for key, val in zip(keys, row, strict=False):
             if val is not None:
                 src[key] = val
         result.append(src)

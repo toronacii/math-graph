@@ -29,6 +29,11 @@
     {
       "relation": "uses",
       "source": "corollary.nested-compact-nonempty",
+      "target": "proof.diameter-properties.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "corollary.nested-compact-nonempty",
       "target": "proof.perfect-set-uncountable.rudin"
     },
     {
@@ -39,12 +44,32 @@
     {
       "relation": "uses",
       "source": "definition.absolute-convergence",
+      "target": "proof.absolute-convergence-implies-convergence.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.absolute-convergence",
       "target": "proof.absolute-convergence-implies-convergence.stewart"
     },
     {
       "relation": "uses",
       "source": "definition.absolute-convergence",
+      "target": "proof.absolute-convergence-rearrangement.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.absolute-convergence",
+      "target": "proof.mertens.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.absolute-convergence",
       "target": "proof.ratio-test.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.absolute-convergence",
+      "target": "proof.riemann-rearrangement.rudin"
     },
     {
       "relation": "uses",
@@ -83,6 +108,21 @@
     },
     {
       "relation": "uses",
+      "source": "definition.cauchy-product",
+      "target": "proof.abel-cauchy-product.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.cauchy-product",
+      "target": "proof.mertens.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.cauchy-sequence",
+      "target": "proof.cauchy-criterion.rudin"
+    },
+    {
+      "relation": "uses",
       "source": "definition.closure",
       "target": "proof.closure-properties.rudin"
     },
@@ -90,6 +130,11 @@
       "relation": "uses",
       "source": "definition.closure",
       "target": "proof.sup-in-closure.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.compact-set",
+      "target": "proof.cauchy-criterion.rudin"
     },
     {
       "relation": "uses",
@@ -109,6 +154,11 @@
     {
       "relation": "uses",
       "source": "definition.compact-set",
+      "target": "proof.diameter-properties.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.compact-set",
       "target": "proof.finite-intersection-compact.rudin"
     },
     {
@@ -120,6 +170,16 @@
       "relation": "uses",
       "source": "definition.compact-set",
       "target": "proof.k-cell-compact.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.compact-set",
+      "target": "proof.subsequence-compact.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.complete-metric-space",
+      "target": "proof.cauchy-criterion.rudin"
     },
     {
       "relation": "uses",
@@ -233,6 +293,61 @@
     },
     {
       "relation": "uses",
+      "source": "definition.convergent-sequence",
+      "target": "proof.abel-cauchy-product.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.convergent-sequence",
+      "target": "proof.algebraic-limit-theorem.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.convergent-sequence",
+      "target": "proof.cauchy-criterion.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.convergent-sequence",
+      "target": "proof.convergence-in-rk.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.convergent-sequence",
+      "target": "proof.convergent-sequence-properties.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.convergent-sequence",
+      "target": "proof.geometric-series.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.convergent-sequence",
+      "target": "proof.monotone-convergence.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.convergent-sequence",
+      "target": "proof.riemann-rearrangement.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.convergent-sequence",
+      "target": "proof.root-test-stronger-than-ratio.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.convergent-sequence",
+      "target": "proof.series-addition.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.convergent-sequence",
+      "target": "proof.special-sequence-limits.rudin"
+    },
+    {
+      "relation": "uses",
       "source": "definition.critical-number",
       "target": "proof.first-derivative-test.stewart"
     },
@@ -338,6 +453,11 @@
     },
     {
       "relation": "uses",
+      "source": "definition.diameter-of-set",
+      "target": "proof.diameter-properties.rudin"
+    },
+    {
+      "relation": "uses",
       "source": "definition.differentiable",
       "target": "proof.mean-value-theorem.stewart"
     },
@@ -365,6 +485,11 @@
       "relation": "uses",
       "source": "definition.epsilon-delta-limit",
       "target": "proof.squeeze-theorem.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.euclidean-k-space",
+      "target": "proof.convergence-in-rk.rudin"
     },
     {
       "relation": "uses",
@@ -509,6 +634,11 @@
     {
       "relation": "uses",
       "source": "definition.infinite-series",
+      "target": "proof.cauchy-criterion-series.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.infinite-series",
       "target": "proof.comparison-test-series.stewart"
     },
     {
@@ -519,12 +649,32 @@
     {
       "relation": "uses",
       "source": "definition.infinite-series",
+      "target": "proof.geometric-series.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.infinite-series",
       "target": "proof.geometric-series.stewart"
     },
     {
       "relation": "uses",
       "source": "definition.infinite-series",
       "target": "proof.integral-test.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.infinite-series",
+      "target": "proof.nonnegative-series-bounded.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.infinite-series",
+      "target": "proof.series-addition.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.infinite-series",
+      "target": "proof.summation-by-parts.rudin"
     },
     {
       "relation": "uses",
@@ -624,6 +774,11 @@
     {
       "relation": "uses",
       "source": "definition.metric-space",
+      "target": "proof.convergent-sequence-properties.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.metric-space",
       "target": "proof.limit-point-infinite-points.rudin"
     },
     {
@@ -635,6 +790,26 @@
       "relation": "uses",
       "source": "definition.metric-space",
       "target": "proof.open-relative.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.metric-space",
+      "target": "proof.subsequential-limits-closed.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.monotonic-sequence",
+      "target": "proof.cauchy-condensation-test.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.monotonic-sequence",
+      "target": "proof.monotone-convergence.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.monotonic-sequence",
+      "target": "proof.nonnegative-series-bounded.rudin"
     },
     {
       "relation": "uses",
@@ -665,6 +840,11 @@
       "relation": "uses",
       "source": "definition.neighborhood-limit-point-open-closed",
       "target": "proof.compact-is-closed.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.neighborhood-limit-point-open-closed",
+      "target": "proof.convergent-sequence-properties.rudin"
     },
     {
       "relation": "uses",
@@ -704,6 +884,16 @@
     {
       "relation": "uses",
       "source": "definition.neighborhood-limit-point-open-closed",
+      "target": "proof.subsequence-compact.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.neighborhood-limit-point-open-closed",
+      "target": "proof.subsequential-limits-closed.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.neighborhood-limit-point-open-closed",
       "target": "proof.unions-intersections-open-closed.rudin"
     },
     {
@@ -715,6 +905,16 @@
       "relation": "uses",
       "source": "definition.number-e",
       "target": "proof.derivative-exponential.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.number-e",
+      "target": "proof.e-as-limit.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.number-e",
+      "target": "proof.e-is-irrational.rudin"
     },
     {
       "relation": "uses",
@@ -759,6 +959,16 @@
     {
       "relation": "uses",
       "source": "definition.power-series",
+      "target": "proof.abel-cauchy-product.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.power-series",
+      "target": "proof.power-series-boundary.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.power-series",
       "target": "proof.power-series-convergence.stewart"
     },
     {
@@ -785,6 +995,16 @@
       "relation": "uses",
       "source": "definition.rational-numbers",
       "target": "proof.rationals-countable.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.rearrangement-of-series",
+      "target": "proof.absolute-convergence-rearrangement.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.rearrangement-of-series",
+      "target": "proof.riemann-rearrangement.rudin"
     },
     {
       "relation": "uses",
@@ -873,6 +1093,21 @@
     },
     {
       "relation": "uses",
+      "source": "definition.subsequence",
+      "target": "proof.characterization-lim-sup.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.subsequence",
+      "target": "proof.subsequence-compact.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.subsequence",
+      "target": "proof.subsequential-limits-closed.rudin"
+    },
+    {
+      "relation": "uses",
       "source": "definition.summation-notation",
       "target": "proof.schwarz-inequality.rudin"
     },
@@ -895,6 +1130,11 @@
       "relation": "uses",
       "source": "definition.supremum",
       "target": "proof.lub-implies-glb.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.supremum",
+      "target": "proof.monotone-convergence.rudin"
     },
     {
       "relation": "uses",
@@ -928,6 +1168,26 @@
     },
     {
       "relation": "uses",
+      "source": "definition.upper-lower-limits",
+      "target": "proof.characterization-lim-sup.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.upper-lower-limits",
+      "target": "proof.comparison-lim-sup-inf.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.upper-lower-limits",
+      "target": "proof.e-as-limit.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.upper-lower-limits",
+      "target": "proof.root-test.rudin"
+    },
+    {
+      "relation": "uses",
       "source": "lemma.nested-intervals",
       "target": "proof.nested-k-cells.rudin"
     },
@@ -938,13 +1198,38 @@
     },
     {
       "relation": "proves",
+      "source": "proof.abel-cauchy-product.rudin",
+      "target": "theorem.abel-cauchy-product"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.absolute-convergence-implies-convergence.rudin",
+      "target": "theorem.absolute-convergence-implies-convergence"
+    },
+    {
+      "relation": "proves",
       "source": "proof.absolute-convergence-implies-convergence.stewart",
       "target": "theorem.absolute-convergence-implies-convergence"
     },
     {
       "relation": "proves",
+      "source": "proof.absolute-convergence-rearrangement.rudin",
+      "target": "theorem.absolute-convergence-rearrangement"
+    },
+    {
+      "relation": "proves",
       "source": "proof.addition-cancellation.rudin",
       "target": "proposition.addition-cancellation"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.algebraic-limit-theorem.rudin",
+      "target": "theorem.algebraic-limit-theorem"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.alternating-series-test.rudin",
+      "target": "theorem.alternating-series-test"
     },
     {
       "relation": "proves",
@@ -978,6 +1263,21 @@
     },
     {
       "relation": "proves",
+      "source": "proof.cauchy-condensation-test.rudin",
+      "target": "theorem.cauchy-condensation-test"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.cauchy-criterion-series.rudin",
+      "target": "proposition.cauchy-criterion-series"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.cauchy-criterion.rudin",
+      "target": "theorem.cauchy-criterion"
+    },
+    {
+      "relation": "proves",
       "source": "proof.chain-rule.stewart",
       "target": "theorem.chain-rule"
     },
@@ -985,6 +1285,11 @@
       "relation": "proves",
       "source": "proof.change-of-base-formula.stewart",
       "target": "proposition.change-of-base-formula"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.characterization-lim-sup.rudin",
+      "target": "theorem.characterization-lim-sup"
     },
     {
       "relation": "proves",
@@ -1010,6 +1315,16 @@
       "relation": "proves",
       "source": "proof.compactness-relative.rudin",
       "target": "theorem.compactness-relative"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.comparison-lim-sup-inf.rudin",
+      "target": "proposition.comparison-lim-sup-inf"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.comparison-test-series.rudin",
+      "target": "theorem.comparison-test-series"
     },
     {
       "relation": "proves",
@@ -1065,6 +1380,16 @@
       "relation": "proves",
       "source": "proof.continuity-of-composition.stewart",
       "target": "theorem.continuity-of-composition"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.convergence-in-rk.rudin",
+      "target": "proposition.convergence-in-rk"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.convergent-sequence-properties.rudin",
+      "target": "proposition.convergent-sequence-properties"
     },
     {
       "relation": "proves",
@@ -1158,6 +1483,11 @@
     },
     {
       "relation": "proves",
+      "source": "proof.diameter-properties.rudin",
+      "target": "proposition.diameter-properties"
+    },
+    {
+      "relation": "proves",
       "source": "proof.difference-rule.stewart",
       "target": "corollary.difference-rule"
     },
@@ -1173,8 +1503,28 @@
     },
     {
       "relation": "proves",
+      "source": "proof.dirichlet-test.rudin",
+      "target": "theorem.dirichlet-test"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.divergence-test.rudin",
+      "target": "theorem.divergence-test"
+    },
+    {
+      "relation": "proves",
       "source": "proof.divergence-test.stewart",
       "target": "theorem.divergence-test"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.e-as-limit.rudin",
+      "target": "theorem.e-as-limit"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.e-is-irrational.rudin",
+      "target": "theorem.e-is-irrational"
     },
     {
       "relation": "proves",
@@ -1240,6 +1590,11 @@
       "relation": "proves",
       "source": "proof.general-antiderivative.stewart",
       "target": "theorem.general-antiderivative"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.geometric-series.rudin",
+      "target": "theorem.geometric-series"
     },
     {
       "relation": "proves",
@@ -1423,6 +1778,16 @@
     },
     {
       "relation": "proves",
+      "source": "proof.mertens.rudin",
+      "target": "theorem.mertens"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.monotone-convergence.rudin",
+      "target": "theorem.monotonic-sequence-theorem"
+    },
+    {
+      "relation": "proves",
       "source": "proof.monotonic-sequence-theorem.stewart",
       "target": "theorem.monotonic-sequence-theorem"
     },
@@ -1463,6 +1828,11 @@
     },
     {
       "relation": "proves",
+      "source": "proof.nonnegative-series-bounded.rudin",
+      "target": "proposition.nonnegative-series-bounded"
+    },
+    {
+      "relation": "proves",
       "source": "proof.nth-root-of-product.rudin",
       "target": "corollary.nth-root-of-product"
     },
@@ -1483,6 +1853,11 @@
     },
     {
       "relation": "proves",
+      "source": "proof.p-series-test.rudin",
+      "target": "theorem.p-series-test"
+    },
+    {
+      "relation": "proves",
       "source": "proof.perfect-set-uncountable.rudin",
       "target": "theorem.perfect-set-uncountable"
     },
@@ -1495,6 +1870,11 @@
       "relation": "proves",
       "source": "proof.power-rule.stewart",
       "target": "theorem.power-rule"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.power-series-boundary.rudin",
+      "target": "theorem.power-series-boundary"
     },
     {
       "relation": "proves",
@@ -1518,6 +1898,11 @@
     },
     {
       "relation": "proves",
+      "source": "proof.ratio-test.rudin",
+      "target": "theorem.ratio-test"
+    },
+    {
+      "relation": "proves",
       "source": "proof.ratio-test.stewart",
       "target": "theorem.ratio-test"
     },
@@ -1533,8 +1918,23 @@
     },
     {
       "relation": "proves",
+      "source": "proof.riemann-rearrangement.rudin",
+      "target": "theorem.riemann-rearrangement"
+    },
+    {
+      "relation": "proves",
       "source": "proof.rolles-theorem.stewart",
       "target": "theorem.rolles-theorem"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.root-test-stronger-than-ratio.rudin",
+      "target": "proposition.root-test-stronger-than-ratio"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.root-test.rudin",
+      "target": "theorem.root-test"
     },
     {
       "relation": "proves",
@@ -1553,8 +1953,28 @@
     },
     {
       "relation": "proves",
+      "source": "proof.series-addition.rudin",
+      "target": "proposition.series-addition"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.special-sequence-limits.rudin",
+      "target": "proposition.special-sequence-limits"
+    },
+    {
+      "relation": "proves",
       "source": "proof.squeeze-theorem.stewart",
       "target": "theorem.squeeze-theorem"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.subsequence-compact.rudin",
+      "target": "theorem.subsequence-compact"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.subsequential-limits-closed.rudin",
+      "target": "theorem.subsequential-limits-closed"
     },
     {
       "relation": "proves",
@@ -1570,6 +1990,11 @@
       "relation": "proves",
       "source": "proof.sum-rule.stewart",
       "target": "theorem.sum-rule"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.summation-by-parts.rudin",
+      "target": "theorem.summation-by-parts"
     },
     {
       "relation": "proves",
@@ -1608,6 +2033,31 @@
     },
     {
       "relation": "uses",
+      "source": "proposition.cauchy-criterion-series",
+      "target": "proof.absolute-convergence-implies-convergence.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "proposition.cauchy-criterion-series",
+      "target": "proof.absolute-convergence-rearrangement.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "proposition.cauchy-criterion-series",
+      "target": "proof.comparison-test-series.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "proposition.cauchy-criterion-series",
+      "target": "proof.dirichlet-test.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "proposition.cauchy-criterion-series",
+      "target": "proof.divergence-test.rudin"
+    },
+    {
+      "relation": "uses",
       "source": "proposition.change-of-base-formula",
       "target": "proof.derivative-log-base-a.stewart"
     },
@@ -1633,13 +2083,38 @@
     },
     {
       "relation": "uses",
+      "source": "proposition.comparison-lim-sup-inf",
+      "target": "proof.e-as-limit.rudin"
+    },
+    {
+      "relation": "uses",
       "source": "proposition.concavity-test",
       "target": "proof.second-derivative-test.stewart"
     },
     {
       "relation": "uses",
+      "source": "proposition.convergent-sequence-properties",
+      "target": "proof.algebraic-limit-theorem.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "proposition.convergent-sequence-properties",
+      "target": "proof.monotone-convergence.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "proposition.convergent-sequence-properties",
+      "target": "proof.special-sequence-limits.rudin"
+    },
+    {
+      "relation": "uses",
       "source": "proposition.de-morgan",
       "target": "proof.unions-intersections-open-closed.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "proposition.diameter-properties",
+      "target": "proof.cauchy-criterion.rudin"
     },
     {
       "relation": "uses",
@@ -1723,6 +2198,16 @@
     },
     {
       "relation": "uses",
+      "source": "proposition.nonnegative-series-bounded",
+      "target": "proof.cauchy-condensation-test.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "proposition.nonnegative-series-bounded",
+      "target": "proof.comparison-test-series.rudin"
+    },
+    {
+      "relation": "uses",
       "source": "proposition.open-iff-complement-closed",
       "target": "proof.closed-subset-compact.rudin"
     },
@@ -1748,13 +2233,53 @@
     },
     {
       "relation": "uses",
+      "source": "proposition.special-sequence-limits",
+      "target": "proof.e-as-limit.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "proposition.special-sequence-limits",
+      "target": "proof.root-test-stronger-than-ratio.rudin"
+    },
+    {
+      "relation": "uses",
       "source": "proposition.sup-in-closure",
       "target": "proof.connected-subsets-of-r.rudin"
     },
     {
       "relation": "uses",
+      "source": "theorem.algebraic-limit-theorem",
+      "target": "proof.convergence-in-rk.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.algebraic-limit-theorem",
+      "target": "proof.mertens.rudin"
+    },
+    {
+      "relation": "uses",
       "source": "theorem.archimedean-density",
       "target": "proof.k-cell-compact.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.archimedean-density",
+      "target": "proof.special-sequence-limits.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.bolzano-weierstrass",
+      "target": "proof.subsequence-compact.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.cauchy-condensation-test",
+      "target": "proof.p-series-test.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.cauchy-criterion",
+      "target": "proof.cauchy-criterion-series.rudin"
     },
     {
       "relation": "uses",
@@ -1803,6 +2328,11 @@
     },
     {
       "relation": "uses",
+      "source": "theorem.characterization-lim-sup",
+      "target": "proof.root-test.rudin"
+    },
+    {
+      "relation": "uses",
       "source": "theorem.comparison-test-series",
       "target": "proof.absolute-convergence-implies-convergence.stewart"
     },
@@ -1819,7 +2349,17 @@
     {
       "relation": "uses",
       "source": "theorem.comparison-test-series",
+      "target": "proof.ratio-test.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.comparison-test-series",
       "target": "proof.ratio-test.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.comparison-test-series",
+      "target": "proof.root-test.rudin"
     },
     {
       "relation": "uses",
@@ -1948,6 +2488,36 @@
     },
     {
       "relation": "uses",
+      "source": "theorem.dirichlet-test",
+      "target": "proof.alternating-series-test.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.dirichlet-test",
+      "target": "proof.power-series-boundary.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.divergence-test",
+      "target": "proof.p-series-test.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.divergence-test",
+      "target": "proof.ratio-test.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.divergence-test",
+      "target": "proof.root-test.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.e-as-limit",
+      "target": "proof.e-is-irrational.rudin"
+    },
+    {
+      "relation": "uses",
       "source": "theorem.existence-of-nth-roots",
       "target": "proof.complex-absolute-value-properties.rudin"
     },
@@ -2019,12 +2589,27 @@
     {
       "relation": "uses",
       "source": "theorem.geometric-series",
+      "target": "proof.p-series-test.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.geometric-series",
       "target": "proof.power-series-convergence.stewart"
     },
     {
       "relation": "uses",
       "source": "theorem.geometric-series",
+      "target": "proof.ratio-test.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.geometric-series",
       "target": "proof.ratio-test.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.geometric-series",
+      "target": "proof.root-test.rudin"
     },
     {
       "relation": "uses",
@@ -2059,7 +2644,17 @@
     {
       "relation": "uses",
       "source": "theorem.k-cell-compact",
+      "target": "proof.cauchy-criterion.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.k-cell-compact",
       "target": "proof.heine-borel.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.k-cell-compact",
+      "target": "proof.subsequence-compact.rudin"
     },
     {
       "relation": "uses",
@@ -2188,6 +2783,11 @@
     },
     {
       "relation": "uses",
+      "source": "theorem.monotonic-sequence-theorem",
+      "target": "proof.nonnegative-series-bounded.rudin"
+    },
+    {
+      "relation": "uses",
       "source": "theorem.open-relative",
       "target": "proof.compactness-relative.rudin"
     },
@@ -2268,6 +2868,11 @@
     },
     {
       "relation": "uses",
+      "source": "theorem.subsequential-limits-closed",
+      "target": "proof.characterization-lim-sup.rudin"
+    },
+    {
+      "relation": "uses",
       "source": "theorem.substitution-rule",
       "target": "proof.substitution-rule-definite.stewart"
     },
@@ -2285,6 +2890,11 @@
       "relation": "uses",
       "source": "theorem.sum-rule",
       "target": "proof.mean-value-theorem.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.summation-by-parts",
+      "target": "proof.dirichlet-test.rudin"
     },
     {
       "relation": "uses",
@@ -2508,6 +3118,22 @@
       "type": "definition"
     },
     {
+      "id": "definition.cauchy-product",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Cauchy Product",
+      "title_es": "",
+      "type": "definition"
+    },
+    {
+      "id": "definition.cauchy-sequence",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Cauchy Sequence",
+      "title_es": "",
+      "type": "definition"
+    },
+    {
       "id": "definition.closed-interval-method",
       "kind": "statement",
       "status": "draft",
@@ -2528,6 +3154,14 @@
       "kind": "statement",
       "status": "draft",
       "title_en": "Compact Set",
+      "title_es": "",
+      "type": "definition"
+    },
+    {
+      "id": "definition.complete-metric-space",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Complete Metric Space",
       "title_es": "",
       "type": "definition"
     },
@@ -2596,6 +3230,14 @@
       "type": "definition"
     },
     {
+      "id": "definition.convergent-sequence",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Convergent Sequence",
+      "title_es": "",
+      "type": "definition"
+    },
+    {
       "id": "definition.critical-number",
       "kind": "statement",
       "status": "draft",
@@ -2644,11 +3286,27 @@
       "type": "definition"
     },
     {
+      "id": "definition.diameter-of-set",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Diameter of a Set",
+      "title_es": "",
+      "type": "definition"
+    },
+    {
       "id": "definition.differentiable",
       "kind": "statement",
       "status": "draft",
       "title_en": "Differentiability",
       "title_es": "Diferenciabilidad",
+      "type": "definition"
+    },
+    {
+      "id": "definition.divergence-to-infinity",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Divergence to Infinity",
+      "title_es": "",
       "type": "definition"
     },
     {
@@ -3012,6 +3670,14 @@
       "type": "definition"
     },
     {
+      "id": "definition.monotonic-sequence",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Monotonic Sequence",
+      "title_es": "",
+      "type": "definition"
+    },
+    {
       "id": "definition.natural-exponential-function",
       "kind": "statement",
       "status": "draft",
@@ -3180,6 +3846,14 @@
       "type": "definition"
     },
     {
+      "id": "definition.rearrangement-of-series",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Rearrangement of a Series",
+      "title_es": "",
+      "type": "definition"
+    },
+    {
       "id": "definition.reflection",
       "kind": "statement",
       "status": "draft",
@@ -3268,6 +3942,14 @@
       "type": "definition"
     },
     {
+      "id": "definition.subsequence",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Subsequence",
+      "title_es": "",
+      "type": "definition"
+    },
+    {
       "id": "definition.summation-notation",
       "kind": "statement",
       "status": "draft",
@@ -3348,6 +4030,14 @@
       "type": "definition"
     },
     {
+      "id": "definition.upper-lower-limits",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Upper and Lower Limits",
+      "title_es": "",
+      "type": "definition"
+    },
+    {
       "id": "definition.vertical-asymptote",
       "kind": "statement",
       "status": "draft",
@@ -3412,6 +4102,20 @@
       "type": "lemma"
     },
     {
+      "id": "proof.abel-cauchy-product.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.absolute-convergence-implies-convergence.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
       "id": "proof.absolute-convergence-implies-convergence.stewart",
       "kind": "proof",
       "status": "draft",
@@ -3419,7 +4123,28 @@
       "type": "proof"
     },
     {
+      "id": "proof.absolute-convergence-rearrangement.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
       "id": "proof.addition-cancellation.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.algebraic-limit-theorem.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.alternating-series-test.rudin",
       "kind": "proof",
       "status": "draft",
       "style": "direct",
@@ -3468,6 +4193,27 @@
       "type": "proof"
     },
     {
+      "id": "proof.cauchy-condensation-test.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.cauchy-criterion-series.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.cauchy-criterion.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
       "id": "proof.chain-rule.stewart",
       "kind": "proof",
       "status": "draft",
@@ -3479,6 +4225,13 @@
       "kind": "proof",
       "status": "draft",
       "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.characterization-lim-sup.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "cases",
       "type": "proof"
     },
     {
@@ -3511,6 +4264,20 @@
     },
     {
       "id": "proof.compactness-relative.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.comparison-lim-sup-inf.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.comparison-test-series.rudin",
       "kind": "proof",
       "status": "draft",
       "style": "direct",
@@ -3591,6 +4358,20 @@
       "kind": "proof",
       "status": "draft",
       "style": "epsilon-delta",
+      "type": "proof"
+    },
+    {
+      "id": "proof.convergence-in-rk.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.convergent-sequence-properties.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
       "type": "proof"
     },
     {
@@ -3720,6 +4501,13 @@
       "type": "proof"
     },
     {
+      "id": "proof.diameter-properties.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
       "id": "proof.difference-rule.stewart",
       "kind": "proof",
       "status": "draft",
@@ -3741,10 +4529,38 @@
       "type": "proof"
     },
     {
+      "id": "proof.dirichlet-test.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.divergence-test.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
       "id": "proof.divergence-test.stewart",
       "kind": "proof",
       "status": "draft",
       "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.e-as-limit.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.e-is-irrational.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "contradiction",
       "type": "proof"
     },
     {
@@ -3833,6 +4649,13 @@
     },
     {
       "id": "proof.general-antiderivative.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.geometric-series.rudin",
       "kind": "proof",
       "status": "draft",
       "style": "direct",
@@ -4091,6 +4914,20 @@
       "type": "proof"
     },
     {
+      "id": "proof.mertens.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.monotone-convergence.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
       "id": "proof.monotonic-sequence-theorem.stewart",
       "kind": "proof",
       "status": "draft",
@@ -4147,6 +4984,13 @@
       "type": "proof"
     },
     {
+      "id": "proof.nonnegative-series-bounded.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
       "id": "proof.nth-root-of-product.rudin",
       "kind": "proof",
       "status": "draft",
@@ -4175,6 +5019,13 @@
       "type": "proof"
     },
     {
+      "id": "proof.p-series-test.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
       "id": "proof.perfect-set-uncountable.rudin",
       "kind": "proof",
       "status": "draft",
@@ -4190,6 +5041,13 @@
     },
     {
       "id": "proof.power-rule.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.power-series-boundary.rudin",
       "kind": "proof",
       "status": "draft",
       "style": "direct",
@@ -4224,6 +5082,13 @@
       "type": "proof"
     },
     {
+      "id": "proof.ratio-test.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "cases",
+      "type": "proof"
+    },
+    {
       "id": "proof.ratio-test.stewart",
       "kind": "proof",
       "status": "draft",
@@ -4245,10 +5110,31 @@
       "type": "proof"
     },
     {
+      "id": "proof.riemann-rearrangement.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "construction",
+      "type": "proof"
+    },
+    {
       "id": "proof.rolles-theorem.stewart",
       "kind": "proof",
       "status": "draft",
       "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.root-test-stronger-than-ratio.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.root-test.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "cases",
       "type": "proof"
     },
     {
@@ -4273,10 +5159,38 @@
       "type": "proof"
     },
     {
+      "id": "proof.series-addition.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.special-sequence-limits.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
       "id": "proof.squeeze-theorem.stewart",
       "kind": "proof",
       "status": "draft",
       "style": "epsilon-delta",
+      "type": "proof"
+    },
+    {
+      "id": "proof.subsequence-compact.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "cases",
+      "type": "proof"
+    },
+    {
+      "id": "proof.subsequential-limits-closed.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
       "type": "proof"
     },
     {
@@ -4295,6 +5209,13 @@
     },
     {
       "id": "proof.sum-rule.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.summation-by-parts.rudin",
       "kind": "proof",
       "status": "draft",
       "style": "direct",
@@ -4352,6 +5273,14 @@
       "type": "proposition"
     },
     {
+      "id": "proposition.cauchy-criterion-series",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Cauchy Criterion for Series",
+      "title_es": "",
+      "type": "proposition"
+    },
+    {
       "id": "proposition.change-of-base-formula",
       "kind": "statement",
       "status": "draft",
@@ -4384,6 +5313,14 @@
       "type": "proposition"
     },
     {
+      "id": "proposition.comparison-lim-sup-inf",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Comparison of lim sup and lim inf",
+      "title_es": "",
+      "type": "proposition"
+    },
+    {
       "id": "proposition.concavity-test",
       "kind": "statement",
       "status": "draft",
@@ -4392,10 +5329,34 @@
       "type": "proposition"
     },
     {
+      "id": "proposition.convergence-in-rk",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Convergence in R^k",
+      "title_es": "",
+      "type": "proposition"
+    },
+    {
+      "id": "proposition.convergent-sequence-properties",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Properties of Convergent Sequences",
+      "title_es": "",
+      "type": "proposition"
+    },
+    {
       "id": "proposition.de-morgan",
       "kind": "statement",
       "status": "draft",
       "title_en": "De Morgan's Law",
+      "title_es": "",
+      "type": "proposition"
+    },
+    {
+      "id": "proposition.diameter-properties",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Properties of Diameter",
       "title_es": "",
       "type": "proposition"
     },
@@ -4560,6 +5521,14 @@
       "type": "proposition"
     },
     {
+      "id": "proposition.nonnegative-series-bounded",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Nonnegative Series Bounded Partial Sums",
+      "title_es": "",
+      "type": "proposition"
+    },
+    {
       "id": "proposition.open-iff-complement-closed",
       "kind": "statement",
       "status": "draft",
@@ -4576,11 +5545,35 @@
       "type": "proposition"
     },
     {
+      "id": "proposition.root-test-stronger-than-ratio",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Root Test is Stronger than Ratio Test",
+      "title_es": "",
+      "type": "proposition"
+    },
+    {
       "id": "proposition.second-derivative-test",
       "kind": "statement",
       "status": "draft",
       "title_en": "The Second Derivative Test",
       "title_es": "Prueba de la segunda derivada",
+      "type": "proposition"
+    },
+    {
+      "id": "proposition.series-addition",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Addition and Scalar Multiplication of Series",
+      "title_es": "",
+      "type": "proposition"
+    },
+    {
+      "id": "proposition.special-sequence-limits",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Special Sequence Limits",
+      "title_es": "",
       "type": "proposition"
     },
     {
@@ -4600,11 +5593,35 @@
       "type": "proposition"
     },
     {
+      "id": "theorem.abel-cauchy-product",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Abel's Theorem on Cauchy Products",
+      "title_es": "",
+      "type": "theorem"
+    },
+    {
       "id": "theorem.absolute-convergence-implies-convergence",
       "kind": "statement",
       "status": "draft",
       "title_en": "Absolute convergence implies convergence",
       "title_es": "La convergencia absoluta implica convergencia",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.absolute-convergence-rearrangement",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Absolute Convergence and Rearrangement",
+      "title_es": "",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.algebraic-limit-theorem",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Algebraic Limit Theorem",
+      "title_es": "",
       "type": "theorem"
     },
     {
@@ -4640,11 +5657,35 @@
       "type": "theorem"
     },
     {
+      "id": "theorem.cauchy-condensation-test",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Cauchy Condensation Test",
+      "title_es": "",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.cauchy-criterion",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Cauchy Criterion for Convergence",
+      "title_es": "",
+      "type": "theorem"
+    },
+    {
       "id": "theorem.chain-rule",
       "kind": "statement",
       "status": "draft",
       "title_en": "The Chain Rule",
       "title_es": "Regla de la cadena",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.characterization-lim-sup",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Characterization of lim sup",
+      "title_es": "",
       "type": "theorem"
     },
     {
@@ -4880,11 +5921,35 @@
       "type": "theorem"
     },
     {
+      "id": "theorem.dirichlet-test",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Dirichlet's Test",
+      "title_es": "",
+      "type": "theorem"
+    },
+    {
       "id": "theorem.divergence-test",
       "kind": "statement",
       "status": "draft",
       "title_en": "Test for Divergence",
       "title_es": "Prueba de divergencia",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.e-as-limit",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "e as a Limit",
+      "title_es": "",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.e-is-irrational",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "e is Irrational",
+      "title_es": "",
       "type": "theorem"
     },
     {
@@ -5120,6 +6185,14 @@
       "type": "theorem"
     },
     {
+      "id": "theorem.mertens",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Mertens' Theorem",
+      "title_es": "",
+      "type": "theorem"
+    },
+    {
       "id": "theorem.monotonic-sequence-theorem",
       "kind": "statement",
       "status": "draft",
@@ -5144,6 +6217,14 @@
       "type": "theorem"
     },
     {
+      "id": "theorem.p-series-test",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "p-Series Test",
+      "title_es": "",
+      "type": "theorem"
+    },
+    {
       "id": "theorem.perfect-set-uncountable",
       "kind": "statement",
       "status": "draft",
@@ -5157,6 +6238,14 @@
       "status": "draft",
       "title_en": "The Power Rule",
       "title_es": "Regla de la potencia",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.power-series-boundary",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Power Series Convergence on Boundary",
+      "title_es": "",
       "type": "theorem"
     },
     {
@@ -5208,6 +6297,14 @@
       "type": "theorem"
     },
     {
+      "id": "theorem.riemann-rearrangement",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Riemann Rearrangement Theorem",
+      "title_es": "",
+      "type": "theorem"
+    },
+    {
       "id": "theorem.rolles-theorem",
       "kind": "statement",
       "status": "draft",
@@ -5240,6 +6337,22 @@
       "type": "theorem"
     },
     {
+      "id": "theorem.subsequence-compact",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Convergent Subsequences in Compact Spaces",
+      "title_es": "",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.subsequential-limits-closed",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Subsequential Limits Form a Closed Set",
+      "title_es": "",
+      "type": "theorem"
+    },
+    {
       "id": "theorem.substitution-rule",
       "kind": "statement",
       "status": "draft",
@@ -5261,6 +6374,14 @@
       "status": "draft",
       "title_en": "The Sum Rule",
       "title_es": "Regla de la suma",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.summation-by-parts",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Summation by Parts",
+      "title_es": "",
       "type": "theorem"
     },
     {

@@ -1,0 +1,28 @@
+id: theorem.absolute-convergence-rearrangement
+type: theorem
+status: draft
+
+title:
+  en: Absolute Convergence and Rearrangement
+
+statement:
+  natural:
+    en: >
+      If Σa_n converges absolutely, then every rearrangement of Σa_n converges to the same sum.
+
+  latex: |
+    \sum |a_n| < \infty \implies \text{every rearrangement converges to the same sum}
+
+proved_by:
+  - proof.absolute-convergence-rearrangement.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.55"
+
+confidence: high
+notes: >
+  Theorem 3.55 from Rudin.

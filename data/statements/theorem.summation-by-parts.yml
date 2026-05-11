@@ -1,0 +1,29 @@
+id: theorem.summation-by-parts
+type: theorem
+status: draft
+
+title:
+  en: Summation by Parts
+
+statement:
+  natural:
+    en: >
+      Given sequences {a_n} and {b_n}, put A_n = Σ_{k=0}^n a_k. Then
+      Σ_{n=p}^q a_n b_n = Σ_{n=p}^{q-1} A_n(b_n - b_{n+1}) + A_q b_q - A_{p-1} b_p.
+
+  latex: |
+    \sum_{n=p}^{q} a_n b_n = \sum_{n=p}^{q-1} A_n(b_n - b_{n+1}) + A_q b_q - A_{p-1} b_p
+
+proved_by:
+  - proof.summation-by-parts.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.41"
+
+confidence: high
+notes: >
+  Theorem 3.41 from Rudin.
