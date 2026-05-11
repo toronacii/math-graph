@@ -115,7 +115,12 @@ CREATE TABLE statements (
     latex_body      TEXT,
     latex_status    TEXT NOT NULL,
     latex_review    TEXT NOT NULL,
-    notes           TEXT
+    notes           TEXT,
+    {_CK_STMT_TYPE},
+    {_CK_STATUS},
+    {_check_in("schema_version", SUPPORTED_SCHEMA_VERSIONS)},
+    {_CK_LATEX_ST},
+    {_CK_LATEX_REV}
 );
 
 CREATE TABLE statement_titles (
@@ -125,7 +130,9 @@ CREATE TABLE statement_titles (
     is_original    INTEGER NOT NULL,
     origin         TEXT NOT NULL,
     review_status  TEXT NOT NULL,
-    PRIMARY KEY (statement_id, lang)
+    PRIMARY KEY (statement_id, lang),
+    {_CK_TITLE_ORG},
+    {_CK_TITLE_REV}
 );
 
 CREATE TABLE statement_natural (
@@ -135,7 +142,9 @@ CREATE TABLE statement_natural (
     is_original    INTEGER NOT NULL,
     origin         TEXT NOT NULL,
     review_status  TEXT NOT NULL,
-    PRIMARY KEY (statement_id, lang)
+    PRIMARY KEY (statement_id, lang),
+    {_CK_TITLE_ORG},
+    {_CK_TITLE_REV}
 );
 
 CREATE TABLE statement_quality (
@@ -145,7 +154,13 @@ CREATE TABLE statement_quality (
     semantic       TEXT,
     translation    TEXT,
     latex_conf     TEXT,
-    source_align   TEXT
+    source_align   TEXT,
+    {_CK_CONF_EXTR},
+    {_CK_CONF_DEP},
+    {_CK_CONF_SEM},
+    {_CK_CONF_TRANS},
+    {_CK_CONF_LATEX},
+    {_CK_CONF_SRC}
 );
 
 CREATE TABLE statement_provenance (
@@ -154,7 +169,8 @@ CREATE TABLE statement_provenance (
     rerun_id       TEXT,
     extracted_by   TEXT,
     extracted_at   TEXT,
-    redirected_to  TEXT
+    redirected_to  TEXT,
+    {_CK_PROV_VER}
 );
 
 CREATE TABLE statement_derived_from (
@@ -167,7 +183,8 @@ CREATE TABLE statement_domains (
     statement_id   TEXT NOT NULL REFERENCES statements(id),
     kind           TEXT NOT NULL,   -- 'primary' | 'secondary'
     name           TEXT NOT NULL,
-    PRIMARY KEY (statement_id, kind, name)
+    PRIMARY KEY (statement_id, kind, name),
+    {_CK_DOMAIN_KIND}
 );
 
 CREATE TABLE statement_ambient (
@@ -180,7 +197,8 @@ CREATE TABLE statement_ontology (
     statement_id   TEXT NOT NULL REFERENCES statements(id),
     semantic_kind  TEXT,
     keyword        TEXT,
-    PRIMARY KEY (statement_id, semantic_kind, keyword)
+    PRIMARY KEY (statement_id, semantic_kind, keyword),
+    {_CK_SEM_KIND}
 );
 
 CREATE TABLE statement_proved_by (
@@ -195,14 +213,17 @@ CREATE TABLE statement_depends_on (
     role           TEXT NOT NULL,
     confidence     TEXT,
     notes          TEXT,
-    PRIMARY KEY (statement_id, target_id, role)
+    PRIMARY KEY (statement_id, target_id, role),
+    {_CK_DEP_ROLE},
+    {_CK_DEP_CONF}
 );
 
 CREATE TABLE statement_generality (
     statement_id   TEXT NOT NULL REFERENCES statements(id),
     target_id      TEXT NOT NULL,
     relation       TEXT NOT NULL,
-    PRIMARY KEY (statement_id, target_id, relation)
+    PRIMARY KEY (statement_id, target_id, relation),
+    {_CK_GEN_REL}
 );
 
 CREATE TABLE proofs (
@@ -211,7 +232,9 @@ CREATE TABLE proofs (
     status          TEXT NOT NULL,
     schema_version  TEXT NOT NULL,
     style           TEXT,
-    notes           TEXT
+    notes           TEXT,
+    {_CK_STATUS},
+    {_check_in("schema_version", SUPPORTED_SCHEMA_VERSIONS)}
 );
 
 CREATE TABLE proof_uses (
@@ -222,7 +245,9 @@ CREATE TABLE proof_uses (
     implicit      INTEGER NOT NULL,
     locality      TEXT NOT NULL DEFAULT '',
     notes         TEXT,
-    PRIMARY KEY (proof_id, statement_id, role, locality)
+    PRIMARY KEY (proof_id, statement_id, role, locality),
+    {_CK_PROOF_USE_ROLE},
+    {_CK_PROOF_USE_CONF}
 );
 
 CREATE TABLE proof_parts (
@@ -230,7 +255,8 @@ CREATE TABLE proof_parts (
     name       TEXT NOT NULL,
     kind       TEXT NOT NULL,
     description TEXT,
-    PRIMARY KEY (proof_id, name)
+    PRIMARY KEY (proof_id, name),
+    {_CK_PART_KIND}
 );
 
 CREATE TABLE proof_quality (
@@ -240,7 +266,13 @@ CREATE TABLE proof_quality (
     semantic       TEXT,
     translation    TEXT,
     latex_conf     TEXT,
-    source_align   TEXT
+    source_align   TEXT,
+    {_CK_CONF_EXTR},
+    {_CK_CONF_DEP},
+    {_CK_CONF_SEM},
+    {_CK_CONF_TRANS},
+    {_CK_CONF_LATEX},
+    {_CK_CONF_SRC}
 );
 
 CREATE TABLE proof_provenance (
@@ -249,7 +281,8 @@ CREATE TABLE proof_provenance (
     rerun_id       TEXT,
     extracted_by   TEXT,
     extracted_at   TEXT,
-    redirected_to  TEXT
+    redirected_to  TEXT,
+    {_CK_PROV_VER}
 );
 
 CREATE TABLE sources (
@@ -265,7 +298,8 @@ CREATE TABLE sources (
     page           TEXT,
     locator        TEXT,
     url            TEXT,
-    source_language TEXT
+    source_language TEXT,
+    {_CK_SRC_KIND}
 );
 
 CREATE INDEX idx_sources_entity   ON sources(entity_id);
@@ -279,6 +313,13 @@ CREATE INDEX idx_stmt_ontology    ON statement_ontology(semantic_kind);
 CREATE INDEX idx_stmt_keyword     ON statement_ontology(keyword);
 CREATE INDEX idx_stmt_type        ON statements(type);
 CREATE INDEX idx_stmt_status      ON statements(status);
+-- v0.3.1 audit-oriented indexes (see reports/audits/v0.3-pilot-stewart-ch1
+-- §1.2 and audit-2026-05-11-rudin §1.2/§4.3): support role-aware queries
+-- on proof_uses (e.g. supremum-as-existence vs supremum-as-notation) and
+-- rerun-scoped joins on provenance.
+CREATE INDEX idx_proof_uses_role  ON proof_uses(statement_id, role);
+CREATE INDEX idx_stmt_rerun       ON statement_provenance(rerun_id);
+CREATE INDEX idx_proof_rerun      ON proof_provenance(rerun_id);
 """
 
 

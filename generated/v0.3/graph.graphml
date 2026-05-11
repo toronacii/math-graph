@@ -1,609 +1,606 @@
 <?xml version='1.0' encoding='utf-8'?>
-<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
-  <key id="d7" for="edge" attr.name="implicit" attr.type="boolean" />
-  <key id="d6" for="edge" attr.name="confidence" attr.type="string" />
-  <key id="d5" for="edge" attr.name="role" attr.type="string" />
-  <key id="d4" for="edge" attr.name="relation" attr.type="string" />
-  <key id="d3" for="node" attr.name="style" attr.type="string" />
-  <key id="d2" for="node" attr.name="status" attr.type="string" />
-  <key id="d1" for="node" attr.name="type" attr.type="string" />
-  <key id="d0" for="node" attr.name="kind" attr.type="string" />
-  <graph edgedefault="directed">
-    <node id="definition.absolute-value">
-      <data key="d0">statement</data>
-      <data key="d1">definition</data>
-      <data key="d2">extracted</data>
-    </node>
-    <node id="definition.algebraic-function">
-      <data key="d0">statement</data>
-      <data key="d1">definition</data>
-      <data key="d2">extracted</data>
-    </node>
-    <node id="definition.arithmetic-of-functions">
-      <data key="d0">statement</data>
-      <data key="d1">definition</data>
-      <data key="d2">extracted</data>
-    </node>
-    <node id="definition.composition-of-functions">
-      <data key="d0">statement</data>
-      <data key="d1">definition</data>
-      <data key="d2">extracted</data>
-    </node>
-    <node id="definition.decreasing-function">
-      <data key="d0">statement</data>
-      <data key="d1">definition</data>
-      <data key="d2">extracted</data>
-    </node>
-    <node id="definition.dependent-variable">
-      <data key="d0">statement</data>
-      <data key="d1">definition</data>
-      <data key="d2">extracted</data>
-    </node>
-    <node id="definition.domain">
-      <data key="d0">statement</data>
-      <data key="d1">definition</data>
-      <data key="d2">extracted</data>
-    </node>
-    <node id="definition.even-function">
-      <data key="d0">statement</data>
-      <data key="d1">definition</data>
-      <data key="d2">extracted</data>
-    </node>
-    <node id="definition.exponential-function">
-      <data key="d0">statement</data>
-      <data key="d1">definition</data>
-      <data key="d2">extracted</data>
-    </node>
-    <node id="definition.function">
-      <data key="d0">statement</data>
-      <data key="d1">definition</data>
-      <data key="d2">extracted</data>
-    </node>
-    <node id="definition.graph-of-function">
-      <data key="d0">statement</data>
-      <data key="d1">definition</data>
-      <data key="d2">extracted</data>
-    </node>
-    <node id="definition.horizontal-stretch">
-      <data key="d0">statement</data>
-      <data key="d1">definition</data>
-      <data key="d2">extracted</data>
-    </node>
-    <node id="definition.horizontal-translation">
-      <data key="d0">statement</data>
-      <data key="d1">definition</data>
-      <data key="d2">extracted</data>
-    </node>
-    <node id="definition.increasing-function">
-      <data key="d0">statement</data>
-      <data key="d1">definition</data>
-      <data key="d2">extracted</data>
-    </node>
-    <node id="definition.independent-variable">
-      <data key="d0">statement</data>
-      <data key="d1">definition</data>
-      <data key="d2">extracted</data>
-    </node>
-    <node id="definition.inverse-function">
-      <data key="d0">statement</data>
-      <data key="d1">definition</data>
-      <data key="d2">extracted</data>
-    </node>
-    <node id="definition.inverse-trigonometric-function">
-      <data key="d0">statement</data>
-      <data key="d1">definition</data>
-      <data key="d2">extracted</data>
-    </node>
-    <node id="definition.linear-function">
-      <data key="d0">statement</data>
-      <data key="d1">definition</data>
-      <data key="d2">extracted</data>
-    </node>
-    <node id="definition.logarithmic-function">
-      <data key="d0">statement</data>
-      <data key="d1">definition</data>
-      <data key="d2">extracted</data>
-    </node>
-    <node id="definition.mathematical-model">
-      <data key="d0">statement</data>
-      <data key="d1">definition</data>
-      <data key="d2">extracted</data>
-    </node>
-    <node id="definition.natural-exponential-function">
-      <data key="d0">statement</data>
-      <data key="d1">definition</data>
-      <data key="d2">extracted</data>
-    </node>
-    <node id="definition.natural-logarithm">
-      <data key="d0">statement</data>
-      <data key="d1">definition</data>
-      <data key="d2">extracted</data>
-    </node>
-    <node id="definition.odd-function">
-      <data key="d0">statement</data>
-      <data key="d1">definition</data>
-      <data key="d2">extracted</data>
-    </node>
-    <node id="definition.one-to-one-function">
-      <data key="d0">statement</data>
-      <data key="d1">definition</data>
-      <data key="d2">extracted</data>
-    </node>
-    <node id="definition.piecewise-function">
-      <data key="d0">statement</data>
-      <data key="d1">definition</data>
-      <data key="d2">extracted</data>
-    </node>
-    <node id="definition.polynomial">
-      <data key="d0">statement</data>
-      <data key="d1">definition</data>
-      <data key="d2">extracted</data>
-    </node>
-    <node id="definition.power-function">
-      <data key="d0">statement</data>
-      <data key="d1">definition</data>
-      <data key="d2">extracted</data>
-    </node>
-    <node id="definition.range">
-      <data key="d0">statement</data>
-      <data key="d1">definition</data>
-      <data key="d2">extracted</data>
-    </node>
-    <node id="definition.rational-function">
-      <data key="d0">statement</data>
-      <data key="d1">definition</data>
-      <data key="d2">extracted</data>
-    </node>
-    <node id="definition.reflection">
-      <data key="d0">statement</data>
-      <data key="d1">definition</data>
-      <data key="d2">extracted</data>
-    </node>
-    <node id="definition.trigonometric-function">
-      <data key="d0">statement</data>
-      <data key="d1">definition</data>
-      <data key="d2">extracted</data>
-    </node>
-    <node id="definition.vertical-stretch">
-      <data key="d0">statement</data>
-      <data key="d1">definition</data>
-      <data key="d2">extracted</data>
-    </node>
-    <node id="definition.vertical-translation">
-      <data key="d0">statement</data>
-      <data key="d1">definition</data>
-      <data key="d2">extracted</data>
-    </node>
-    <node id="proposition.cancellation-equations">
-      <data key="d0">statement</data>
-      <data key="d1">proposition</data>
-      <data key="d2">extracted</data>
-    </node>
-    <node id="proposition.change-of-base-formula">
-      <data key="d0">statement</data>
-      <data key="d1">proposition</data>
-      <data key="d2">extracted</data>
-    </node>
-    <node id="proposition.horizontal-line-test">
-      <data key="d0">statement</data>
-      <data key="d1">proposition</data>
-      <data key="d2">extracted</data>
-    </node>
-    <node id="proposition.laws-of-exponents">
-      <data key="d0">statement</data>
-      <data key="d1">proposition</data>
-      <data key="d2">extracted</data>
-    </node>
-    <node id="proposition.laws-of-logarithms">
-      <data key="d0">statement</data>
-      <data key="d1">proposition</data>
-      <data key="d2">extracted</data>
-    </node>
-    <node id="proposition.vertical-line-test">
-      <data key="d0">statement</data>
-      <data key="d1">proposition</data>
-      <data key="d2">extracted</data>
-    </node>
-    <node id="proof.cancellation-equations.stewart">
-      <data key="d0">proof</data>
-      <data key="d1">proof</data>
-      <data key="d2">extracted</data>
-      <data key="d3">direct</data>
-    </node>
-    <node id="proof.change-of-base-formula.stewart">
-      <data key="d0">proof</data>
-      <data key="d1">proof</data>
-      <data key="d2">extracted</data>
-      <data key="d3">direct</data>
-    </node>
-    <node id="proof.horizontal-line-test.stewart">
-      <data key="d0">proof</data>
-      <data key="d1">proof</data>
-      <data key="d2">extracted</data>
-      <data key="d3">direct</data>
-    </node>
-    <node id="proof.laws-of-logarithms.stewart">
-      <data key="d0">proof</data>
-      <data key="d1">proof</data>
-      <data key="d2">extracted</data>
-      <data key="d3">direct</data>
-    </node>
-    <node id="proof.vertical-line-test.stewart">
-      <data key="d0">proof</data>
-      <data key="d1">proof</data>
-      <data key="d2">extracted</data>
-      <data key="d3">direct</data>
-    </node>
-    <edge source="definition.absolute-value" target="definition.piecewise-function" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">instance_of</data>
-    </edge>
-    <edge source="definition.algebraic-function" target="definition.polynomial" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">uses_concept</data>
-    </edge>
-    <edge source="definition.algebraic-function" target="definition.rational-function" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">uses_concept</data>
-    </edge>
-    <edge source="definition.arithmetic-of-functions" target="definition.domain" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">uses_concept</data>
-    </edge>
-    <edge source="definition.arithmetic-of-functions" target="definition.function" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">uses_concept</data>
-    </edge>
-    <edge source="definition.composition-of-functions" target="proof.cancellation-equations.stewart" id="0">
-      <data key="d4">uses</data>
-      <data key="d5">definition</data>
-      <data key="d6">high</data>
-      <data key="d7">False</data>
-    </edge>
-    <edge source="definition.composition-of-functions" target="definition.domain" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">uses_concept</data>
-    </edge>
-    <edge source="definition.composition-of-functions" target="definition.function" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">uses_concept</data>
-    </edge>
-    <edge source="definition.decreasing-function" target="definition.function" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">uses_concept</data>
-    </edge>
-    <edge source="definition.dependent-variable" target="definition.function" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">uses_concept</data>
-    </edge>
-    <edge source="definition.dependent-variable" target="definition.independent-variable" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">uses_concept</data>
-    </edge>
-    <edge source="definition.dependent-variable" target="definition.range" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">uses_concept</data>
-    </edge>
-    <edge source="definition.domain" target="definition.function" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">uses_concept</data>
-    </edge>
-    <edge source="definition.even-function" target="definition.domain" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">uses_concept</data>
-    </edge>
-    <edge source="definition.even-function" target="definition.function" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">uses_concept</data>
-    </edge>
-    <edge source="definition.exponential-function" target="definition.function" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">uses_concept</data>
-    </edge>
-    <edge source="definition.exponential-function" target="definition.power-function" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">uses_concept</data>
-    </edge>
-    <edge source="definition.function" target="proof.vertical-line-test.stewart" id="0">
-      <data key="d4">uses</data>
-      <data key="d5">definition</data>
-      <data key="d6">high</data>
-      <data key="d7">False</data>
-    </edge>
-    <edge source="definition.graph-of-function" target="proof.horizontal-line-test.stewart" id="0">
-      <data key="d4">uses</data>
-      <data key="d5">definition</data>
-      <data key="d6">high</data>
-      <data key="d7">False</data>
-    </edge>
-    <edge source="definition.graph-of-function" target="proof.vertical-line-test.stewart" id="0">
-      <data key="d4">uses</data>
-      <data key="d5">definition</data>
-      <data key="d6">high</data>
-      <data key="d7">False</data>
-    </edge>
-    <edge source="definition.graph-of-function" target="definition.domain" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">uses_concept</data>
-    </edge>
-    <edge source="definition.graph-of-function" target="definition.function" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">uses_concept</data>
-    </edge>
-    <edge source="definition.horizontal-stretch" target="definition.function" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">uses_concept</data>
-    </edge>
-    <edge source="definition.horizontal-stretch" target="definition.graph-of-function" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">uses_concept</data>
-    </edge>
-    <edge source="definition.horizontal-translation" target="definition.function" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">uses_concept</data>
-    </edge>
-    <edge source="definition.horizontal-translation" target="definition.graph-of-function" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">uses_concept</data>
-    </edge>
-    <edge source="definition.increasing-function" target="definition.function" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">uses_concept</data>
-    </edge>
-    <edge source="definition.independent-variable" target="definition.domain" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">uses_concept</data>
-    </edge>
-    <edge source="definition.independent-variable" target="definition.function" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">uses_concept</data>
-    </edge>
-    <edge source="definition.inverse-function" target="proof.cancellation-equations.stewart" id="0">
-      <data key="d4">uses</data>
-      <data key="d5">definition</data>
-      <data key="d6">high</data>
-      <data key="d7">False</data>
-    </edge>
-    <edge source="definition.inverse-function" target="definition.domain" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">uses_concept</data>
-    </edge>
-    <edge source="definition.inverse-function" target="definition.function" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">uses_concept</data>
-    </edge>
-    <edge source="definition.inverse-function" target="definition.one-to-one-function" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">uses_concept</data>
-    </edge>
-    <edge source="definition.inverse-function" target="definition.range" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">uses_concept</data>
-    </edge>
-    <edge source="definition.inverse-trigonometric-function" target="definition.inverse-function" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">uses_concept</data>
-    </edge>
-    <edge source="definition.inverse-trigonometric-function" target="definition.one-to-one-function" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">uses_concept</data>
-    </edge>
-    <edge source="definition.inverse-trigonometric-function" target="definition.trigonometric-function" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">uses_concept</data>
-    </edge>
-    <edge source="definition.linear-function" target="definition.function" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">uses_concept</data>
-    </edge>
-    <edge source="definition.logarithmic-function" target="proof.change-of-base-formula.stewart" id="0">
-      <data key="d4">uses</data>
-      <data key="d5">definition</data>
-      <data key="d6">high</data>
-      <data key="d7">False</data>
-    </edge>
-    <edge source="definition.logarithmic-function" target="proof.laws-of-logarithms.stewart" id="0">
-      <data key="d4">uses</data>
-      <data key="d5">definition</data>
-      <data key="d6">high</data>
-      <data key="d7">False</data>
-    </edge>
-    <edge source="definition.logarithmic-function" target="definition.exponential-function" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">uses_concept</data>
-    </edge>
-    <edge source="definition.logarithmic-function" target="definition.inverse-function" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">uses_concept</data>
-    </edge>
-    <edge source="definition.mathematical-model" target="definition.function" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">uses_concept</data>
-    </edge>
-    <edge source="definition.natural-exponential-function" target="definition.exponential-function" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">instance_of</data>
-    </edge>
-    <edge source="definition.natural-logarithm" target="definition.logarithmic-function" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">instance_of</data>
-    </edge>
-    <edge source="definition.natural-logarithm" target="definition.natural-exponential-function" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">uses_concept</data>
-    </edge>
-    <edge source="definition.odd-function" target="definition.domain" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">uses_concept</data>
-    </edge>
-    <edge source="definition.odd-function" target="definition.function" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">uses_concept</data>
-    </edge>
-    <edge source="definition.one-to-one-function" target="proof.horizontal-line-test.stewart" id="0">
-      <data key="d4">uses</data>
-      <data key="d5">definition</data>
-      <data key="d6">high</data>
-      <data key="d7">False</data>
-    </edge>
-    <edge source="definition.one-to-one-function" target="definition.domain" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">uses_concept</data>
-    </edge>
-    <edge source="definition.one-to-one-function" target="definition.function" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">uses_concept</data>
-    </edge>
-    <edge source="definition.piecewise-function" target="definition.domain" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">uses_concept</data>
-    </edge>
-    <edge source="definition.piecewise-function" target="definition.function" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">uses_concept</data>
-    </edge>
-    <edge source="definition.polynomial" target="definition.function" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">uses_concept</data>
-    </edge>
-    <edge source="definition.power-function" target="definition.function" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">uses_concept</data>
-    </edge>
-    <edge source="definition.range" target="definition.domain" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">uses_concept</data>
-    </edge>
-    <edge source="definition.range" target="definition.function" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">uses_concept</data>
-    </edge>
-    <edge source="definition.rational-function" target="definition.domain" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">uses_concept</data>
-    </edge>
-    <edge source="definition.rational-function" target="definition.function" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">uses_concept</data>
-    </edge>
-    <edge source="definition.rational-function" target="definition.polynomial" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">uses_concept</data>
-    </edge>
-    <edge source="definition.reflection" target="definition.function" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">uses_concept</data>
-    </edge>
-    <edge source="definition.reflection" target="definition.graph-of-function" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">uses_concept</data>
-    </edge>
-    <edge source="definition.trigonometric-function" target="definition.function" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">uses_concept</data>
-    </edge>
-    <edge source="definition.vertical-stretch" target="definition.function" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">uses_concept</data>
-    </edge>
-    <edge source="definition.vertical-stretch" target="definition.graph-of-function" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">uses_concept</data>
-    </edge>
-    <edge source="definition.vertical-translation" target="definition.function" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">uses_concept</data>
-    </edge>
-    <edge source="definition.vertical-translation" target="definition.graph-of-function" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">uses_concept</data>
-    </edge>
-    <edge source="proposition.cancellation-equations" target="proof.change-of-base-formula.stewart" id="0">
-      <data key="d4">uses</data>
-      <data key="d5">essential</data>
-      <data key="d6">high</data>
-      <data key="d7">False</data>
-    </edge>
-    <edge source="proposition.cancellation-equations" target="proof.laws-of-logarithms.stewart" id="0">
-      <data key="d4">uses</data>
-      <data key="d5">essential</data>
-      <data key="d6">high</data>
-      <data key="d7">False</data>
-    </edge>
-    <edge source="proposition.cancellation-equations" target="definition.composition-of-functions" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">uses_concept</data>
-    </edge>
-    <edge source="proposition.cancellation-equations" target="definition.inverse-function" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">uses_concept</data>
-    </edge>
-    <edge source="proposition.change-of-base-formula" target="definition.logarithmic-function" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">uses_concept</data>
-    </edge>
-    <edge source="proposition.change-of-base-formula" target="definition.natural-logarithm" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">uses_concept</data>
-    </edge>
-    <edge source="proposition.change-of-base-formula" target="proposition.laws-of-logarithms" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">uses_concept</data>
-    </edge>
-    <edge source="proposition.horizontal-line-test" target="definition.graph-of-function" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">uses_concept</data>
-    </edge>
-    <edge source="proposition.horizontal-line-test" target="definition.one-to-one-function" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">uses_concept</data>
-    </edge>
-    <edge source="proposition.laws-of-exponents" target="proof.laws-of-logarithms.stewart" id="0">
-      <data key="d4">uses</data>
-      <data key="d5">essential</data>
-      <data key="d6">high</data>
-      <data key="d7">False</data>
-    </edge>
-    <edge source="proposition.laws-of-exponents" target="definition.exponential-function" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">uses_concept</data>
-    </edge>
-    <edge source="proposition.laws-of-logarithms" target="proof.change-of-base-formula.stewart" id="0">
-      <data key="d4">uses</data>
-      <data key="d5">essential</data>
-      <data key="d6">high</data>
-      <data key="d7">False</data>
-    </edge>
-    <edge source="proposition.laws-of-logarithms" target="definition.logarithmic-function" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">uses_concept</data>
-    </edge>
-    <edge source="proposition.laws-of-logarithms" target="proposition.laws-of-exponents" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">uses_concept</data>
-    </edge>
-    <edge source="proposition.vertical-line-test" target="definition.function" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">uses_concept</data>
-    </edge>
-    <edge source="proposition.vertical-line-test" target="definition.graph-of-function" id="0">
-      <data key="d4">depends_on</data>
-      <data key="d5">uses_concept</data>
-    </edge>
-    <edge source="proof.cancellation-equations.stewart" target="proposition.cancellation-equations" id="0">
-      <data key="d4">proves</data>
-    </edge>
-    <edge source="proof.change-of-base-formula.stewart" target="proposition.change-of-base-formula" id="0">
-      <data key="d4">proves</data>
-    </edge>
-    <edge source="proof.horizontal-line-test.stewart" target="proposition.horizontal-line-test" id="0">
-      <data key="d4">proves</data>
-    </edge>
-    <edge source="proof.laws-of-logarithms.stewart" target="proposition.laws-of-logarithms" id="0">
-      <data key="d4">proves</data>
-    </edge>
-    <edge source="proof.vertical-line-test.stewart" target="proposition.vertical-line-test" id="0">
-      <data key="d4">proves</data>
-    </edge>
-  </graph>
-</graphml>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d7" for="edge" attr.name="implicit" attr.type="boolean"/>
+<key id="d6" for="edge" attr.name="confidence" attr.type="string"/>
+<key id="d5" for="edge" attr.name="role" attr.type="string"/>
+<key id="d4" for="edge" attr.name="relation" attr.type="string"/>
+<key id="d3" for="node" attr.name="style" attr.type="string"/>
+<key id="d2" for="node" attr.name="status" attr.type="string"/>
+<key id="d1" for="node" attr.name="type" attr.type="string"/>
+<key id="d0" for="node" attr.name="kind" attr.type="string"/>
+<graph edgedefault="directed"><node id="definition.absolute-value">
+  <data key="d0">statement</data>
+  <data key="d1">definition</data>
+  <data key="d2">extracted</data>
+</node>
+<node id="definition.algebraic-function">
+  <data key="d0">statement</data>
+  <data key="d1">definition</data>
+  <data key="d2">extracted</data>
+</node>
+<node id="definition.arithmetic-of-functions">
+  <data key="d0">statement</data>
+  <data key="d1">definition</data>
+  <data key="d2">extracted</data>
+</node>
+<node id="definition.composition-of-functions">
+  <data key="d0">statement</data>
+  <data key="d1">definition</data>
+  <data key="d2">extracted</data>
+</node>
+<node id="definition.decreasing-function">
+  <data key="d0">statement</data>
+  <data key="d1">definition</data>
+  <data key="d2">extracted</data>
+</node>
+<node id="definition.dependent-variable">
+  <data key="d0">statement</data>
+  <data key="d1">definition</data>
+  <data key="d2">extracted</data>
+</node>
+<node id="definition.domain">
+  <data key="d0">statement</data>
+  <data key="d1">definition</data>
+  <data key="d2">extracted</data>
+</node>
+<node id="definition.even-function">
+  <data key="d0">statement</data>
+  <data key="d1">definition</data>
+  <data key="d2">extracted</data>
+</node>
+<node id="definition.exponential-function">
+  <data key="d0">statement</data>
+  <data key="d1">definition</data>
+  <data key="d2">extracted</data>
+</node>
+<node id="definition.function">
+  <data key="d0">statement</data>
+  <data key="d1">definition</data>
+  <data key="d2">extracted</data>
+</node>
+<node id="definition.graph-of-function">
+  <data key="d0">statement</data>
+  <data key="d1">definition</data>
+  <data key="d2">extracted</data>
+</node>
+<node id="definition.horizontal-stretch">
+  <data key="d0">statement</data>
+  <data key="d1">definition</data>
+  <data key="d2">extracted</data>
+</node>
+<node id="definition.horizontal-translation">
+  <data key="d0">statement</data>
+  <data key="d1">definition</data>
+  <data key="d2">extracted</data>
+</node>
+<node id="definition.increasing-function">
+  <data key="d0">statement</data>
+  <data key="d1">definition</data>
+  <data key="d2">extracted</data>
+</node>
+<node id="definition.independent-variable">
+  <data key="d0">statement</data>
+  <data key="d1">definition</data>
+  <data key="d2">extracted</data>
+</node>
+<node id="definition.inverse-function">
+  <data key="d0">statement</data>
+  <data key="d1">definition</data>
+  <data key="d2">extracted</data>
+</node>
+<node id="definition.inverse-trigonometric-function">
+  <data key="d0">statement</data>
+  <data key="d1">definition</data>
+  <data key="d2">extracted</data>
+</node>
+<node id="definition.linear-function">
+  <data key="d0">statement</data>
+  <data key="d1">definition</data>
+  <data key="d2">extracted</data>
+</node>
+<node id="definition.logarithmic-function">
+  <data key="d0">statement</data>
+  <data key="d1">definition</data>
+  <data key="d2">extracted</data>
+</node>
+<node id="definition.mathematical-model">
+  <data key="d0">statement</data>
+  <data key="d1">definition</data>
+  <data key="d2">extracted</data>
+</node>
+<node id="definition.natural-exponential-function">
+  <data key="d0">statement</data>
+  <data key="d1">definition</data>
+  <data key="d2">extracted</data>
+</node>
+<node id="definition.natural-logarithm">
+  <data key="d0">statement</data>
+  <data key="d1">definition</data>
+  <data key="d2">extracted</data>
+</node>
+<node id="definition.odd-function">
+  <data key="d0">statement</data>
+  <data key="d1">definition</data>
+  <data key="d2">extracted</data>
+</node>
+<node id="definition.one-to-one-function">
+  <data key="d0">statement</data>
+  <data key="d1">definition</data>
+  <data key="d2">extracted</data>
+</node>
+<node id="definition.piecewise-function">
+  <data key="d0">statement</data>
+  <data key="d1">definition</data>
+  <data key="d2">extracted</data>
+</node>
+<node id="definition.polynomial">
+  <data key="d0">statement</data>
+  <data key="d1">definition</data>
+  <data key="d2">extracted</data>
+</node>
+<node id="definition.power-function">
+  <data key="d0">statement</data>
+  <data key="d1">definition</data>
+  <data key="d2">extracted</data>
+</node>
+<node id="definition.range">
+  <data key="d0">statement</data>
+  <data key="d1">definition</data>
+  <data key="d2">extracted</data>
+</node>
+<node id="definition.rational-function">
+  <data key="d0">statement</data>
+  <data key="d1">definition</data>
+  <data key="d2">extracted</data>
+</node>
+<node id="definition.reflection">
+  <data key="d0">statement</data>
+  <data key="d1">definition</data>
+  <data key="d2">extracted</data>
+</node>
+<node id="definition.trigonometric-function">
+  <data key="d0">statement</data>
+  <data key="d1">definition</data>
+  <data key="d2">extracted</data>
+</node>
+<node id="definition.vertical-stretch">
+  <data key="d0">statement</data>
+  <data key="d1">definition</data>
+  <data key="d2">extracted</data>
+</node>
+<node id="definition.vertical-translation">
+  <data key="d0">statement</data>
+  <data key="d1">definition</data>
+  <data key="d2">extracted</data>
+</node>
+<node id="proposition.cancellation-equations">
+  <data key="d0">statement</data>
+  <data key="d1">proposition</data>
+  <data key="d2">extracted</data>
+</node>
+<node id="proposition.change-of-base-formula">
+  <data key="d0">statement</data>
+  <data key="d1">proposition</data>
+  <data key="d2">extracted</data>
+</node>
+<node id="proposition.horizontal-line-test">
+  <data key="d0">statement</data>
+  <data key="d1">proposition</data>
+  <data key="d2">extracted</data>
+</node>
+<node id="proposition.laws-of-exponents">
+  <data key="d0">statement</data>
+  <data key="d1">proposition</data>
+  <data key="d2">extracted</data>
+</node>
+<node id="proposition.laws-of-logarithms">
+  <data key="d0">statement</data>
+  <data key="d1">proposition</data>
+  <data key="d2">extracted</data>
+</node>
+<node id="proposition.vertical-line-test">
+  <data key="d0">statement</data>
+  <data key="d1">proposition</data>
+  <data key="d2">extracted</data>
+</node>
+<node id="proof.cancellation-equations.stewart">
+  <data key="d0">proof</data>
+  <data key="d1">proof</data>
+  <data key="d2">extracted</data>
+  <data key="d3">direct</data>
+</node>
+<node id="proof.change-of-base-formula.stewart">
+  <data key="d0">proof</data>
+  <data key="d1">proof</data>
+  <data key="d2">extracted</data>
+  <data key="d3">direct</data>
+</node>
+<node id="proof.horizontal-line-test.stewart">
+  <data key="d0">proof</data>
+  <data key="d1">proof</data>
+  <data key="d2">extracted</data>
+  <data key="d3">direct</data>
+</node>
+<node id="proof.laws-of-logarithms.stewart">
+  <data key="d0">proof</data>
+  <data key="d1">proof</data>
+  <data key="d2">extracted</data>
+  <data key="d3">direct</data>
+</node>
+<node id="proof.vertical-line-test.stewart">
+  <data key="d0">proof</data>
+  <data key="d1">proof</data>
+  <data key="d2">extracted</data>
+  <data key="d3">direct</data>
+</node>
+<edge source="definition.absolute-value" target="definition.piecewise-function" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">instance_of</data>
+</edge>
+<edge source="definition.algebraic-function" target="definition.polynomial" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">uses_concept</data>
+</edge>
+<edge source="definition.algebraic-function" target="definition.rational-function" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">uses_concept</data>
+</edge>
+<edge source="definition.arithmetic-of-functions" target="definition.domain" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">uses_concept</data>
+</edge>
+<edge source="definition.arithmetic-of-functions" target="definition.function" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">uses_concept</data>
+</edge>
+<edge source="definition.composition-of-functions" target="proof.cancellation-equations.stewart" id="0">
+  <data key="d4">uses</data>
+  <data key="d5">definition</data>
+  <data key="d6">high</data>
+  <data key="d7">False</data>
+</edge>
+<edge source="definition.composition-of-functions" target="definition.domain" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">uses_concept</data>
+</edge>
+<edge source="definition.composition-of-functions" target="definition.function" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">uses_concept</data>
+</edge>
+<edge source="definition.decreasing-function" target="definition.function" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">uses_concept</data>
+</edge>
+<edge source="definition.dependent-variable" target="definition.function" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">uses_concept</data>
+</edge>
+<edge source="definition.dependent-variable" target="definition.independent-variable" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">uses_concept</data>
+</edge>
+<edge source="definition.dependent-variable" target="definition.range" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">uses_concept</data>
+</edge>
+<edge source="definition.domain" target="definition.function" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">uses_concept</data>
+</edge>
+<edge source="definition.even-function" target="definition.domain" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">uses_concept</data>
+</edge>
+<edge source="definition.even-function" target="definition.function" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">uses_concept</data>
+</edge>
+<edge source="definition.exponential-function" target="definition.function" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">uses_concept</data>
+</edge>
+<edge source="definition.exponential-function" target="definition.power-function" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">uses_concept</data>
+</edge>
+<edge source="definition.function" target="proof.vertical-line-test.stewart" id="0">
+  <data key="d4">uses</data>
+  <data key="d5">definition</data>
+  <data key="d6">high</data>
+  <data key="d7">False</data>
+</edge>
+<edge source="definition.graph-of-function" target="proof.horizontal-line-test.stewart" id="0">
+  <data key="d4">uses</data>
+  <data key="d5">definition</data>
+  <data key="d6">high</data>
+  <data key="d7">False</data>
+</edge>
+<edge source="definition.graph-of-function" target="proof.vertical-line-test.stewart" id="0">
+  <data key="d4">uses</data>
+  <data key="d5">definition</data>
+  <data key="d6">high</data>
+  <data key="d7">False</data>
+</edge>
+<edge source="definition.graph-of-function" target="definition.domain" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">uses_concept</data>
+</edge>
+<edge source="definition.graph-of-function" target="definition.function" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">uses_concept</data>
+</edge>
+<edge source="definition.horizontal-stretch" target="definition.function" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">uses_concept</data>
+</edge>
+<edge source="definition.horizontal-stretch" target="definition.graph-of-function" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">uses_concept</data>
+</edge>
+<edge source="definition.horizontal-translation" target="definition.function" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">uses_concept</data>
+</edge>
+<edge source="definition.horizontal-translation" target="definition.graph-of-function" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">uses_concept</data>
+</edge>
+<edge source="definition.increasing-function" target="definition.function" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">uses_concept</data>
+</edge>
+<edge source="definition.independent-variable" target="definition.domain" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">uses_concept</data>
+</edge>
+<edge source="definition.independent-variable" target="definition.function" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">uses_concept</data>
+</edge>
+<edge source="definition.inverse-function" target="proof.cancellation-equations.stewart" id="0">
+  <data key="d4">uses</data>
+  <data key="d5">definition</data>
+  <data key="d6">high</data>
+  <data key="d7">False</data>
+</edge>
+<edge source="definition.inverse-function" target="definition.domain" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">uses_concept</data>
+</edge>
+<edge source="definition.inverse-function" target="definition.function" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">uses_concept</data>
+</edge>
+<edge source="definition.inverse-function" target="definition.one-to-one-function" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">uses_concept</data>
+</edge>
+<edge source="definition.inverse-function" target="definition.range" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">uses_concept</data>
+</edge>
+<edge source="definition.inverse-trigonometric-function" target="definition.inverse-function" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">uses_concept</data>
+</edge>
+<edge source="definition.inverse-trigonometric-function" target="definition.one-to-one-function" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">uses_concept</data>
+</edge>
+<edge source="definition.inverse-trigonometric-function" target="definition.trigonometric-function" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">uses_concept</data>
+</edge>
+<edge source="definition.linear-function" target="definition.function" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">uses_concept</data>
+</edge>
+<edge source="definition.logarithmic-function" target="proof.change-of-base-formula.stewart" id="0">
+  <data key="d4">uses</data>
+  <data key="d5">definition</data>
+  <data key="d6">high</data>
+  <data key="d7">False</data>
+</edge>
+<edge source="definition.logarithmic-function" target="proof.laws-of-logarithms.stewart" id="0">
+  <data key="d4">uses</data>
+  <data key="d5">definition</data>
+  <data key="d6">high</data>
+  <data key="d7">False</data>
+</edge>
+<edge source="definition.logarithmic-function" target="definition.exponential-function" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">uses_concept</data>
+</edge>
+<edge source="definition.logarithmic-function" target="definition.inverse-function" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">uses_concept</data>
+</edge>
+<edge source="definition.mathematical-model" target="definition.function" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">uses_concept</data>
+</edge>
+<edge source="definition.natural-exponential-function" target="definition.exponential-function" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">instance_of</data>
+</edge>
+<edge source="definition.natural-logarithm" target="definition.logarithmic-function" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">instance_of</data>
+</edge>
+<edge source="definition.natural-logarithm" target="definition.natural-exponential-function" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">uses_concept</data>
+</edge>
+<edge source="definition.odd-function" target="definition.domain" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">uses_concept</data>
+</edge>
+<edge source="definition.odd-function" target="definition.function" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">uses_concept</data>
+</edge>
+<edge source="definition.one-to-one-function" target="proof.horizontal-line-test.stewart" id="0">
+  <data key="d4">uses</data>
+  <data key="d5">definition</data>
+  <data key="d6">high</data>
+  <data key="d7">False</data>
+</edge>
+<edge source="definition.one-to-one-function" target="definition.domain" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">uses_concept</data>
+</edge>
+<edge source="definition.one-to-one-function" target="definition.function" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">uses_concept</data>
+</edge>
+<edge source="definition.piecewise-function" target="definition.domain" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">uses_concept</data>
+</edge>
+<edge source="definition.piecewise-function" target="definition.function" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">uses_concept</data>
+</edge>
+<edge source="definition.polynomial" target="definition.function" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">uses_concept</data>
+</edge>
+<edge source="definition.power-function" target="definition.function" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">uses_concept</data>
+</edge>
+<edge source="definition.range" target="definition.domain" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">uses_concept</data>
+</edge>
+<edge source="definition.range" target="definition.function" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">uses_concept</data>
+</edge>
+<edge source="definition.rational-function" target="definition.domain" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">uses_concept</data>
+</edge>
+<edge source="definition.rational-function" target="definition.function" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">uses_concept</data>
+</edge>
+<edge source="definition.rational-function" target="definition.polynomial" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">uses_concept</data>
+</edge>
+<edge source="definition.reflection" target="definition.function" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">uses_concept</data>
+</edge>
+<edge source="definition.reflection" target="definition.graph-of-function" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">uses_concept</data>
+</edge>
+<edge source="definition.trigonometric-function" target="definition.function" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">uses_concept</data>
+</edge>
+<edge source="definition.vertical-stretch" target="definition.function" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">uses_concept</data>
+</edge>
+<edge source="definition.vertical-stretch" target="definition.graph-of-function" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">uses_concept</data>
+</edge>
+<edge source="definition.vertical-translation" target="definition.function" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">uses_concept</data>
+</edge>
+<edge source="definition.vertical-translation" target="definition.graph-of-function" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">uses_concept</data>
+</edge>
+<edge source="proposition.cancellation-equations" target="proof.change-of-base-formula.stewart" id="0">
+  <data key="d4">uses</data>
+  <data key="d5">essential</data>
+  <data key="d6">high</data>
+  <data key="d7">False</data>
+</edge>
+<edge source="proposition.cancellation-equations" target="proof.laws-of-logarithms.stewart" id="0">
+  <data key="d4">uses</data>
+  <data key="d5">essential</data>
+  <data key="d6">high</data>
+  <data key="d7">False</data>
+</edge>
+<edge source="proposition.cancellation-equations" target="definition.composition-of-functions" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">uses_concept</data>
+</edge>
+<edge source="proposition.cancellation-equations" target="definition.inverse-function" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">uses_concept</data>
+</edge>
+<edge source="proposition.change-of-base-formula" target="definition.logarithmic-function" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">uses_concept</data>
+</edge>
+<edge source="proposition.change-of-base-formula" target="definition.natural-logarithm" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">uses_concept</data>
+</edge>
+<edge source="proposition.change-of-base-formula" target="proposition.laws-of-logarithms" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">uses_concept</data>
+</edge>
+<edge source="proposition.horizontal-line-test" target="definition.graph-of-function" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">uses_concept</data>
+</edge>
+<edge source="proposition.horizontal-line-test" target="definition.one-to-one-function" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">uses_concept</data>
+</edge>
+<edge source="proposition.laws-of-exponents" target="proof.laws-of-logarithms.stewart" id="0">
+  <data key="d4">uses</data>
+  <data key="d5">essential</data>
+  <data key="d6">high</data>
+  <data key="d7">False</data>
+</edge>
+<edge source="proposition.laws-of-exponents" target="definition.exponential-function" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">uses_concept</data>
+</edge>
+<edge source="proposition.laws-of-logarithms" target="proof.change-of-base-formula.stewart" id="0">
+  <data key="d4">uses</data>
+  <data key="d5">essential</data>
+  <data key="d6">high</data>
+  <data key="d7">False</data>
+</edge>
+<edge source="proposition.laws-of-logarithms" target="definition.logarithmic-function" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">uses_concept</data>
+</edge>
+<edge source="proposition.laws-of-logarithms" target="proposition.laws-of-exponents" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">uses_concept</data>
+</edge>
+<edge source="proposition.vertical-line-test" target="definition.function" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">uses_concept</data>
+</edge>
+<edge source="proposition.vertical-line-test" target="definition.graph-of-function" id="0">
+  <data key="d4">depends_on</data>
+  <data key="d5">uses_concept</data>
+</edge>
+<edge source="proof.cancellation-equations.stewart" target="proposition.cancellation-equations" id="0">
+  <data key="d4">proves</data>
+</edge>
+<edge source="proof.change-of-base-formula.stewart" target="proposition.change-of-base-formula" id="0">
+  <data key="d4">proves</data>
+</edge>
+<edge source="proof.horizontal-line-test.stewart" target="proposition.horizontal-line-test" id="0">
+  <data key="d4">proves</data>
+</edge>
+<edge source="proof.laws-of-logarithms.stewart" target="proposition.laws-of-logarithms" id="0">
+  <data key="d4">proves</data>
+</edge>
+<edge source="proof.vertical-line-test.stewart" target="proposition.vertical-line-test" id="0">
+  <data key="d4">proves</data>
+</edge>
+</graph></graphml>
