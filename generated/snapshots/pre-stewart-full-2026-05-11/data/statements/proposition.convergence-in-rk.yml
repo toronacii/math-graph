@@ -1,0 +1,31 @@
+id: proposition.convergence-in-rk
+type: proposition
+status: draft
+
+title:
+  en: Convergence in R^k
+
+statement:
+  natural:
+    en: >
+      (a) A sequence {x_n} in R^k converges to x if and only if each component
+      sequence converges to the corresponding component of x. (b) The algebraic
+      limit laws extend to R^k: limits of sums, scalar multiples, and inner
+      products behave as expected.
+
+  latex: |
+    \mathbf{x}_n \to \mathbf{x} \iff \lim_{n \to \infty} \alpha_{j,n} = \alpha_j \quad (1 \leq j \leq k)
+
+proved_by:
+  - proof.convergence-in-rk.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.4"
+
+confidence: high
+notes: >
+  Theorem 3.4 from Rudin.

@@ -1,0 +1,23 @@
+id: proof.derivative-general-exponential.stewart
+type: proof
+status: draft
+
+proves: theorem.derivative-general-exponential
+
+uses:
+  - theorem.derivative-exponential
+  - theorem.chain-rule
+  - definition.natural-logarithm
+
+style: direct
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.6"
+
+confidence: high
+notes: >
+  Write a^x = e^{x ln a}. By the chain rule:
+  d/dx(e^{x ln a}) = e^{x ln a} · ln a = a^x ln a.

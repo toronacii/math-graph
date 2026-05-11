@@ -1,0 +1,101 @@
+schema_version: "0.3.0"
+id: proposition.horizontal-line-test
+type: proposition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Prueba de la línea horizontal
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Horizontal line test
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Una función es inyectiva si y sólo si ninguna línea horizontal
+        corta su gráfica más de una vez.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        A function is one-to-one if and only if no horizontal line
+        intersects its graph more than once.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: ""
+    status: not_applicable
+    notes: >
+      Geometric criterion stated in prose; no canonical formula.
+    review_status: unreviewed
+
+proved_by:
+  - proof.horizontal-line-test.stewart
+
+depends_on:
+  - id: definition.one-to-one-function
+    role: uses_concept
+    confidence: high
+  - id: definition.graph-of-function
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.5"
+    locator: "Prueba de la línea horizontal (sección 1.5)"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [geometry]
+
+ambient:
+  structures: [cartesian-plane]
+  notes: >
+    Geometric criterion in R² for injectivity of a real-valued
+    function of a real variable.
+
+ontology:
+  semantic_kind: [criterion]
+  keywords: [horizontal-line-test, injectivity-criterion, geometric-test]
+
+generality:
+  - target: definition.one-to-one-function
+    relation: equivalent
+    notes: >
+      Iff statement: the horizontal-line condition is logically
+      equivalent to the algebraic injectivity condition.
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: medium
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.0"
+  rerun_id: v0.3-pilot-stewart-ch1
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []

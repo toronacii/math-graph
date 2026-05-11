@@ -1,0 +1,33 @@
+id: theorem.archimedean-density
+type: theorem
+status: draft
+
+title:
+  en: Archimedean Property and Density of Q in R
+
+statement:
+  natural:
+    en: >
+      (a) If x ∈ R, y ∈ R, and x > 0, then there is a positive integer
+      n such that nx > y (archimedean property). (b) If x ∈ R, y ∈ R,
+      and x < y, then there exists a p ∈ Q such that x < p < y
+      (density of Q in R).
+  latex: |
+    (a)\; \forall x>0,\; \forall y \in \mathbb{R},\; \exists n \in \mathbb{Z}^+:\; nx > y
+    \qquad
+    (b)\; x < y \implies \exists p \in \mathbb{Q}:\; x < p < y
+
+proved_by:
+  - proof.archimedean-density.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "1"
+    section: "1.20"
+
+confidence: high
+notes: >
+  Rudin Theorem 1.20. Both parts are derived from the
+  least-upper-bound property.

@@ -1,0 +1,21 @@
+id: proof.cauchy-condensation-test.rudin
+type: proof
+status: draft
+
+proves: theorem.cauchy-condensation-test
+
+uses:
+  - proposition.nonnegative-series-bounded
+  - definition.monotonic-sequence
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.27"
+
+confidence: high
+notes: >
+  Show s_n ≤ t_k and 2s_n ≥ t_k by grouping terms in powers-of-2 blocks; both bounded or both unbounded.

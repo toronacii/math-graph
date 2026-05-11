@@ -1,0 +1,147 @@
+rerun_id: v0.3.1-stewart-full
+chapter: "1"
+partial: false
+snapshot_label: v0.3.1-stewart-full-ch01
+generated_at: "2026-05-11"
+
+# Per the 2026-05-11 audit, weak_dependencies is reported SEPARATELY
+# from semantic_dependency_audit_status — empty `weak_dependencies`
+# does NOT imply audited.
+
+weak_dependencies: []
+
+semantic_dependency_audit_status: pending
+
+low_confidence_proofs: []
+
+implicit_imports: []
+
+epistemic_debt:
+  - id: definition.trigonometric-function
+    kind: bundled_definition
+    severity: medium
+    description: >
+      Six trig functions (sin, cos, tan, cot, sec, csc) in one
+      paragraph. Carried as explicit debt per user directive
+      2026-05-11. Not split until structurally necessary in later
+      chapters.
+    remediation: defer split; revisit if Ch3 derivatives or Ch11 series force per-function granularity
+    blocks_status_promotion: true
+
+  - id: definition.inverse-trigonometric-function
+    kind: bundled_definition
+    severity: medium
+    description: >
+      Six inverse-trig functions in one paragraph. Same policy as
+      definition.trigonometric-function — carried as explicit debt
+      per user directive.
+    remediation: defer split
+    blocks_status_promotion: true
+
+  - id: definition.exponential-function
+    kind: informal_construction
+    severity: medium
+    description: >
+      Stewart extends a^x to real x informally (rational density +
+      continuity). Rigorous construction (sup of rational
+      exponents, or integral / inverse-of-log) is deferred. Honest
+      semantic_confidence: medium.
+    remediation: add rigorous companion when Ch3+ derivatives provide the apparatus, or when Rudin-side merge forces it
+    blocks_status_promotion: false
+
+  - id: definition.natural-exponential-function
+    kind: forward_reference
+    severity: medium
+    description: >
+      e is defined via a tangent-slope condition that presupposes
+      the derivative concept (Ch3). Forward-reference debt.
+    remediation: add the derivative-based or limit-based equivalent when Ch3 lands; cite both
+    blocks_status_promotion: false
+
+  - id: definition.logarithmic-function
+    kind: inherited_informality
+    severity: medium
+    description: >
+      Defined as inverse of exponential-function and inherits its
+      informal real-exponent semantics. semantic_confidence: medium.
+    remediation: tracked alongside definition.exponential-function
+    blocks_status_promotion: false
+
+  - id: definition.linear-function
+    kind: terminology_collision
+    severity: low
+    description: >
+      Stewart's "linear function" is an affine real function; the
+      linear-algebra notion (additive, no constant term) is a
+      different object. Future definition.linear-map will require a
+      generality edge to disambiguate. Preserved per user directive.
+    remediation: add definition.linear-map node when linear algebra appears; insert generality edge
+    blocks_status_promotion: false
+
+  - id: definition.algebraic-function
+    kind: informal_definition
+    severity: low
+    description: >
+      Closure-style definition; rigorous algebraic-function notion
+      (zeros of polynomial in y over R(x)) is a distinct future
+      node. latex_confidence: low (LaTeX uses \langle ... \rangle
+      for the closure, which is informal).
+    remediation: add rigorous companion node at first use in later chapters
+    blocks_status_promotion: false
+
+  - id: definition.power-function
+    kind: schematic_domain
+    severity: low
+    description: >
+      Domain depends on the exponent (e.g., x^{1/2} requires x ≥ 0).
+      Schematic at calculus pedagogy level.
+    remediation: revisit if later formalization requires the cases
+    blocks_status_promotion: false
+
+  - id: definition.arithmetic-of-functions
+    kind: bundled_construction
+    severity: low
+    description: >
+      Type-A bundle of four pointwise operators (+, −, ×, ÷)
+      sharing the domain-construction pattern. Acceptable bundling
+      per policy 06.
+    remediation: split into definition.{sum,difference,product,quotient}-of-functions if downstream proofs require per-operation granularity
+    blocks_status_promotion: false
+
+  - id: proposition.laws-of-exponents
+    kind: bundled_proposition
+    severity: low
+    description: >
+      Type-A bundle of four exponent identities. Stewart asserts
+      without proof (the rigorous proof requires real-exponent
+      construction). No proof node authored.
+    remediation: split if individual laws are cited separately; add proof when real-exponent construction is in graph
+    blocks_status_promotion: false
+
+  - id: proposition.laws-of-logarithms
+    kind: bundled_proposition
+    severity: low
+    description: >
+      Type-A bundle of three log identities. Has a proof node
+      (proof.laws-of-logarithms.stewart) that derives all three
+      cases from laws-of-exponents + cancellation-equations.
+    remediation: split per-law if downstream cites individually
+    blocks_status_promotion: false
+
+deferred_extraction: []
+
+cross_source_merge_queue:
+  - id: definition.function
+    pending_source: rudin
+    note: Rudin §2.2 defines functions as ordered-pair sets; merge by adding sources[] entry, not split.
+  - id: definition.absolute-value
+    pending_source: rudin
+    note: Rudin's |·| as a metric/norm — add generality edge.
+  - id: definition.composition-of-functions
+    pending_source: rudin
+  - id: definition.one-to-one-function
+    pending_source: rudin
+    note: Rudin's "injective" maps directly here.
+  - id: definition.inverse-function
+    pending_source: rudin
+    note: Rudin treats inverses for bijections; Stewart restricts B = range(f) implicitly.

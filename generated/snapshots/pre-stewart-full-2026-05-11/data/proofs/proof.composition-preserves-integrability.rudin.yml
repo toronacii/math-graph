@@ -1,0 +1,26 @@
+id: proof.composition-preserves-integrability.rudin
+type: proof
+status: draft
+
+proves: theorem.composition-preserves-integrability
+
+uses:
+  - theorem.riemann-stieltjes-integrability-criterion
+  - theorem.compact-uniform-continuity
+  - definition.riemann-stieltjes-integral
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "6"
+    section: "6.11"
+
+confidence: high
+notes: >
+  Choose delta < epsilon with |phi(s) - phi(t)| < epsilon when |s-t| <= delta.
+  Since f in R(alpha), find P with U(P,f,alpha) - L(P,f,alpha) < delta^2.
+  Split indices into A (M_i - m_i < delta) and B (M_i - m_i >= delta).
+  For A: M_i* - m_i* < epsilon. For B: sum Delta alpha_i < delta.
+  Then U(P,h,alpha) - L(P,h,alpha) < epsilon[alpha(b) - alpha(a) + 2K].

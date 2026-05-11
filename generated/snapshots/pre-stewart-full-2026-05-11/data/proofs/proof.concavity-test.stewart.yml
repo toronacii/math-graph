@@ -1,0 +1,25 @@
+id: proof.concavity-test.stewart
+type: proof
+status: draft
+
+proves: proposition.concavity-test
+
+uses:
+  - proposition.increasing-decreasing-test
+  - definition.second-derivative
+  - definition.concave-upward
+  - definition.concave-downward
+
+style: direct
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "4"
+    section: "4.3"
+
+confidence: high
+notes: >
+  f'' > 0 means f' is increasing by the increasing/decreasing test
+  applied to f'. When f' is increasing, the tangent slope grows,
+  so the curve lies above its tangent lines (concave up).

@@ -1,0 +1,28 @@
+id: definition.upper-lower-limits
+type: definition
+status: draft
+
+title:
+  en: Upper and Lower Limits
+
+statement:
+  natural:
+    en: >
+      Let {s_n} be a sequence of real numbers. Let E be the set of numbers x (in the
+      extended real number system) such that s_{n_k} → x for some subsequence {s_{n_k}}.
+      Then sup E is called the upper limit (or limit superior) of {s_n}, and inf E is
+      called the lower limit (or limit inferior) of {s_n}.
+
+  latex: |
+    \limsup_{n \to \infty} s_n = \sup E, \quad \liminf_{n \to \infty} s_n = \inf E
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.16"
+
+confidence: high
+notes: >
+  Definition 3.16 from Rudin's Principles of Mathematical Analysis.

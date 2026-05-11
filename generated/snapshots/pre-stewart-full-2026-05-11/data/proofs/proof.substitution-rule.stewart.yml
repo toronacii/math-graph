@@ -1,0 +1,23 @@
+id: proof.substitution-rule.stewart
+type: proof
+status: draft
+
+proves: theorem.substitution-rule
+
+uses:
+  - theorem.chain-rule
+  - definition.antiderivative
+
+style: direct
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "5"
+    section: "5.5"
+
+confidence: high
+notes: >
+  If F is an antiderivative of f, then by the chain rule
+  d/dx[F(g(x))] = F'(g(x)) g'(x) = f(g(x)) g'(x). Therefore
+  ∫ f(g(x)) g'(x) dx = F(g(x)) + C = F(u) + C = ∫ f(u) du.

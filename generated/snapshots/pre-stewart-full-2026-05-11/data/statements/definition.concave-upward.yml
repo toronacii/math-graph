@@ -1,0 +1,26 @@
+id: definition.concave-upward
+type: definition
+status: draft
+
+title:
+  en: Concave upward
+  es: Cóncava hacia arriba
+
+statement:
+  natural:
+    es: >
+      Si la gráfica de f se encuentra por arriba de todas sus tangentes
+      en un intervalo I, entonces se dice que f es cóncava hacia arriba
+      en I.
+    en: >
+      If the graph of f lies above all of its tangent lines on an
+      interval I, then f is called concave upward on I.
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "4"
+    section: "4.3"
+
+confidence: high

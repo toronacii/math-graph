@@ -1,0 +1,25 @@
+id: proof.monotonic-integrable-stieltjes.rudin
+type: proof
+status: draft
+
+proves: theorem.monotonic-integrable-stieltjes
+
+uses:
+  - theorem.riemann-stieltjes-integrability-criterion
+  - theorem.intermediate-value-theorem
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "6"
+    section: "6.9"
+
+confidence: high
+notes: >
+  Since alpha is continuous, by IVT (Theorem 4.23) we can choose a
+  partition with equal Delta alpha_i = [alpha(b) - alpha(a)]/n.
+  If f is monotonically increasing, M_i = f(x_i), m_i = f(x_{i-1}),
+  so U - L = [alpha(b) - alpha(a)]/n * [f(b) - f(a)] < epsilon for
+  large n.

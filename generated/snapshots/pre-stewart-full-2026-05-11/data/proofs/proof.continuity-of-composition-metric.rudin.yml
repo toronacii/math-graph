@@ -1,0 +1,20 @@
+id: proof.continuity-of-composition-metric.rudin
+type: proof
+
+proves: theorem.continuity-of-composition-metric
+
+uses:
+  - definition.continuity-metric
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "4"
+    section: "4.7"
+
+confidence: high
+notes: >
+  Chain two ε-δ arguments: g continuous at f(p) gives η for ε;
+  f continuous at p gives δ for η. Then d_X(x,p) < δ implies
+  d_Z(h(x), h(p)) < ε.

@@ -1,0 +1,25 @@
+id: proof.riemann-stieltjes-integrability-criterion.rudin
+type: proof
+status: draft
+
+proves: theorem.riemann-stieltjes-integrability-criterion
+
+uses:
+  - definition.riemann-stieltjes-integral
+  - definition.refinement-partition
+  - theorem.refinement-upper-lower-sums
+  - theorem.lower-leq-upper-integral
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "6"
+    section: "6.6"
+
+confidence: high
+notes: >
+  Forward: U-L < epsilon implies upper and lower integrals differ by < epsilon,
+  hence they are equal. Converse: if f in R(alpha), choose P_1, P_2 such that
+  U(P_2) and L(P_1) are close to the integral, then common refinement works.

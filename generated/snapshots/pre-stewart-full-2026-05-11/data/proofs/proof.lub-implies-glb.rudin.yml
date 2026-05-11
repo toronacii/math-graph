@@ -1,0 +1,25 @@
+id: proof.lub-implies-glb.rudin
+type: proof
+status: draft
+
+proves: theorem.lub-implies-glb
+
+uses:
+  - definition.least-upper-bound-property
+  - definition.supremum
+  - definition.upper-bound
+  - definition.ordered-set
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "1"
+    section: "1.11"
+
+confidence: high
+notes: >
+  Let L = set of lower bounds of B. Every x ∈ B is an upper bound
+  of L, so L is bounded above. By LUB property, α = sup L exists.
+  Show α ∈ L (α is a lower bound of B) and no β > α is in L.

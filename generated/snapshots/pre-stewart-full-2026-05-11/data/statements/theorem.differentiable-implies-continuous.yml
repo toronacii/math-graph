@@ -1,0 +1,38 @@
+id: theorem.differentiable-implies-continuous
+type: theorem
+status: draft
+
+title:
+  en: Differentiability implies continuity
+  es: Diferenciabilidad implica continuidad
+
+statement:
+  natural:
+    es: >
+      Si f es diferenciable en a, entonces f es continua en a.
+    en: >
+      If f is differentiable at a, then f is continuous at a.
+  latex: |
+    f \text{ diferenciable en } a \implies f \text{ continua en } a
+
+proved_by:
+  - proof.differentiable-implies-continuous.stewart
+  - proof.differentiable-implies-continuous.rudin
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.8"
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "5"
+    section: "5.2"
+
+confidence: high
+notes: >
+  Stewart proves this theorem in section 2.8. The converse is false:
+  f(x) = |x| is continuous at 0 but not differentiable there.
+  Rudin (5.2) gives the same proof using Theorem 4.4 (limit laws).

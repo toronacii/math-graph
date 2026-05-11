@@ -1,0 +1,20 @@
+id: proof.open-iff-complement-closed.rudin
+type: proof
+status: draft
+
+proves: proposition.open-iff-complement-closed
+
+uses:
+  - definition.neighborhood-limit-point-open-closed
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "2"
+    section: "2.23"
+
+confidence: high
+notes: >
+  If Eᶜ closed: x ∈ E means x not limit point of Eᶜ, so some neighborhood misses Eᶜ, i.e. lies in E. If E open: limit point of Eᶜ cannot be interior to E, so must be in Eᶜ.

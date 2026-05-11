@@ -1,0 +1,24 @@
+id: proof.integration-by-parts.stewart
+type: proof
+status: draft
+
+proves: theorem.integration-by-parts
+
+uses:
+  - theorem.product-rule
+  - definition.antiderivative
+  - definition.indefinite-integral
+
+style: direct
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "7"
+    section: "7.1"
+
+confidence: high
+notes: >
+  By the product rule, d/dx[f(x)g(x)] = f(x)g'(x) + g(x)f'(x).
+  Rearranging: f(x)g'(x) = d/dx[f(x)g(x)] - g(x)f'(x).
+  Integrating both sides gives the integration by parts formula.

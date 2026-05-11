@@ -1,0 +1,25 @@
+id: proposition.limit-point-infinite-points
+type: proposition
+status: draft
+
+title:
+  en: Limit Points Contain Infinitely Many Points
+
+statement:
+  natural:
+    en: >
+      If p is a limit point of a set E, then every neighborhood of p contains infinitely many points of E.
+
+proved_by:
+  - proof.limit-point-infinite-points.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "2"
+    section: "2.20"
+
+confidence: high
+notes: >
+  Theorem 2.20 in Rudin. Proved by contradiction.

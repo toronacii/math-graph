@@ -1,0 +1,23 @@
+id: proof.k-cell-compact.rudin
+type: proof
+status: draft
+
+proves: theorem.k-cell-compact
+
+uses:
+  - definition.compact-set
+  - definition.segment-interval-cell-ball
+  - lemma.nested-k-cells
+  - theorem.archimedean-density
+
+style: contradiction
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "2"
+    section: "2.40"
+
+confidence: high
+notes: >
+  Bisect k-cell repeatedly. Get nested k-cells {Iₙ} with no finite subcover and diameter → 0. Their intersection point x* lies in some Gα, giving Iₙ ⊂ Gα for large n — contradiction.

@@ -1,0 +1,30 @@
+id: theorem.product-absolute-value-integrable
+type: theorem
+status: draft
+
+title:
+  en: Products and Absolute Values of Integrable Functions
+
+statement:
+  natural:
+    en: >
+      If f in R(alpha) and g in R(alpha) on [a, b], then:
+      (a) fg in R(alpha);
+      (b) |f| in R(alpha) and |integral_a^b f d alpha| <= integral_a^b |f| d alpha.
+  latex: |
+    f, g \in \mathscr{R}(\alpha) \implies fg \in \mathscr{R}(\alpha) \\
+    f \in \mathscr{R}(\alpha) \implies |f| \in \mathscr{R}(\alpha)
+    \;\text{and}\;
+    \left|\int_a^b f\,d\alpha\right| \le \int_a^b |f|\,d\alpha
+
+proved_by:
+  - proof.product-absolute-value-integrable.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "6"
+    section: "6.13"
+
+confidence: high

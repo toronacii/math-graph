@@ -1,0 +1,28 @@
+id: definition.limit-extended-real
+type: definition
+status: draft
+
+title:
+  en: Limits in the Extended Real Number System
+
+statement:
+  natural:
+    en: >
+      For any real c, the set (c, +∞) is a neighborhood of +∞ and
+      (−∞, c) is a neighborhood of −∞. Let f be a real function on E.
+      We say f(t) → A as t → x, where A and x are in the extended real
+      number system, if for every neighborhood U of A there is a
+      neighborhood V of x such that V ∩ E is not empty and f(t) ∈ U
+      for all t ∈ V ∩ E, t ≠ x.
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "4"
+    section: "4.32-4.33"
+
+confidence: high
+notes: >
+  Combines Rudin Definitions 4.32 and 4.33. Extends the limit concept
+  to handle ±∞ as both the value of the limit and the point of approach.

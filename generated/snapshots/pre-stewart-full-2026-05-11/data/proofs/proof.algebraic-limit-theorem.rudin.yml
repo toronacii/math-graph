@@ -1,0 +1,23 @@
+id: proof.algebraic-limit-theorem.rudin
+type: proof
+status: draft
+
+proves: theorem.algebraic-limit-theorem
+
+uses:
+  - definition.convergent-sequence
+  - proposition.convergent-sequence-properties
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.3"
+
+confidence: high
+notes: >
+  Standard epsilon/2 arguments for sum; identity s_n t_n - st =
+  (s_n-s)(t_n-t) + s(t_n-t) + t(s_n-s) for products; bound on |s_n|
+  for quotients.

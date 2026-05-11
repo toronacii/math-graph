@@ -1,0 +1,22 @@
+id: proof.compact-is-closed.rudin
+type: proof
+status: draft
+
+proves: proposition.compact-is-closed
+
+uses:
+  - definition.compact-set
+  - definition.metric-space
+  - definition.neighborhood-limit-point-open-closed
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "2"
+    section: "2.34"
+
+confidence: high
+notes: >
+  For p ∉ K, cover K by neighborhoods Wq disjoint from neighborhoods Vq of p. Finite subcover gives V ⊂ Kᶜ.

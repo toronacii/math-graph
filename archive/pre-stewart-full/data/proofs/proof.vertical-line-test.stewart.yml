@@ -1,0 +1,74 @@
+schema_version: "0.3.0"
+id: proof.vertical-line-test.stewart
+type: proof
+status: extracted
+
+proves: proposition.vertical-line-test
+style: direct
+
+uses:
+  - id: definition.function
+    role: definition
+    confidence: high
+    implicit: false
+    notes: >
+      Both directions unfold the definition of function: at most one
+      output per input.
+  - id: definition.graph-of-function
+    role: definition
+    confidence: high
+    implicit: false
+
+parts:
+  - name: forward
+    kind: direction
+    description: >
+      If the curve is the graph of a function, no vertical line meets
+      it twice (else two outputs at one x).
+    uses: []
+  - name: backward
+    kind: direction
+    description: >
+      If no vertical line meets the curve twice, the curve assigns at
+      most one y to each x and so defines a function on its x-projection.
+    uses: []
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.1"
+    locator: "Prueba de la línea vertical (argumento informal en sección 1.1)"
+    source_language: es
+
+sketch:
+  es:
+    text: >
+      Stewart razona directamente desde la definición de función: si
+      una recta vertical x = a corta a la curva en dos puntos
+      (a, y₁) ≠ (a, y₂), entonces la curva asigna dos valores a a, lo
+      que contradice la unicidad exigida por la definición de función.
+    is_original: true
+    origin: human
+    review_status: unreviewed
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  source_alignment_confidence: high
+  translation_confidence: null
+  latex_confidence: null
+
+provenance:
+  schema_version: "0.3.0"
+  rerun_id: v0.3-pilot-stewart-ch1
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Iff proof captured via Proof.parts[] direction-cases per policy 06.
+  Top-level uses lists the (shared) definitional dependencies; per-part
+  uses left empty since both directions cite the same definitions.

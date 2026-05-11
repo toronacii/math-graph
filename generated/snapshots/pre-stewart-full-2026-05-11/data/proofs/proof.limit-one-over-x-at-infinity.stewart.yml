@@ -1,0 +1,21 @@
+id: proof.limit-one-over-x-at-infinity.stewart
+type: proof
+status: draft
+
+proves: theorem.limit-one-over-x-at-infinity
+
+uses:
+  - definition.limit-at-infinity
+
+style: direct
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.6"
+
+confidence: medium
+notes: >
+  For any epsilon > 0, take N = (1/epsilon)^(1/r). Then x > N implies
+  1/x^r < epsilon.

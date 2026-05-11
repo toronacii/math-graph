@@ -1,0 +1,24 @@
+id: proof.compact-uniform-continuity.rudin
+type: proof
+
+proves: theorem.compact-uniform-continuity
+
+uses:
+  - definition.continuity-metric
+  - definition.uniform-continuity
+  - definition.compact-set
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "4"
+    section: "4.19"
+
+confidence: high
+notes: >
+  For each p ∈ X, get φ(p) > 0 with d_Y(f(p),f(q)) < ε/2 when
+  d_X(p,q) < φ(p). Let J(p) = B(p, φ(p)/2). Compactness gives
+  finite subcover J(p₁),...,J(pₙ). Set δ = min{φ(pᵢ)}/2.
+  For d_X(p,q) < δ, find pₘ with p ∈ J(pₘ), then both p and q
+  are within φ(pₘ) of pₘ, so d_Y(f(p),f(q)) < ε by triangle inequality.

@@ -16,10 +16,23 @@ import json
 import sqlite3
 import sys
 from pathlib import Path
-from typing import Any
+from typing import Any, Iterable, get_args
 
 import networkx as nx
 
+from schema.v03 import (
+    SUPPORTED_SCHEMA_VERSIONS,
+    ConceptDependencyRole,
+    Confidence,
+    DependencyRole,
+    GeneralityRelation,
+    LatexStatus,
+    ReviewStatus,
+    SemanticKind,
+    StatementType,
+    Status,
+    TranslationOrigin,
+)
 from scripts.v03.loader import REPO_ROOT, Dataset, load_dataset
 
 OUT_DIR = REPO_ROOT / "generated" / "v0.3"
@@ -27,7 +40,72 @@ DB_PATH = OUT_DIR / "math_graph.db"
 GRAPH_DIR = OUT_DIR
 EXPORT_DIR = OUT_DIR
 
-SCHEMA_SQL = """
+# ---------------------------------------------------------------------------
+# Enum CHECK clause helpers.
+#
+# These derive SQL CHECK clauses from the canonical Pydantic enums in
+# schema/v03.py so the SQLite layer enforces the same value sets as the
+# loader. The DB is rebuilt on every `mkg-build`, so adding/changing enum
+# values in v03.py automatically flows through; no migration needed.
+# ---------------------------------------------------------------------------
+
+
+def _check_in(
+    column: str,
+    values: Iterable[str],
+    *,
+    allow_null: bool = False,
+    extra_allowed: Iterable[str] = (),
+) -> str:
+    """Build a `CHECK (column IN (...))` clause."""
+    members = sorted({*values, *extra_allowed})
+    quoted = ", ".join(f"'{v}'" for v in members)
+    clause = f"{column} IN ({quoted})"
+    if allow_null:
+        clause = f"({column} IS NULL OR {clause})"
+    return f"CHECK ({clause})"
+
+
+# Canonical enum value tuples derived from schema/v03.py.
+_STATEMENT_TYPES = get_args(StatementType)
+_STATUS = get_args(Status)
+_CONFIDENCE = get_args(Confidence)
+_LATEX_STATUS = get_args(LatexStatus)
+_REVIEW_STATUS = get_args(ReviewStatus)
+_TRANSLATION_ORIGIN = get_args(TranslationOrigin)
+_DEP_ROLE = get_args(DependencyRole)
+_CONCEPT_ROLE = get_args(ConceptDependencyRole)
+_GENERALITY = get_args(GeneralityRelation)
+_SEMANTIC_KIND = get_args(SemanticKind)
+_PART_KIND = ("direction", "case", "subclaim", "construction", "reduction")
+
+# Pre-built CHECK clauses (kept as strings so SCHEMA_SQL stays a single literal).
+_CK_STMT_TYPE   = _check_in("type",   _STATEMENT_TYPES)
+_CK_STATUS      = _check_in("status", _STATUS)
+_CK_LATEX_ST    = _check_in("latex_status", _LATEX_STATUS)
+_CK_LATEX_REV   = _check_in("latex_review", _REVIEW_STATUS)
+_CK_TITLE_ORG   = _check_in("origin",        _TRANSLATION_ORIGIN)
+_CK_TITLE_REV   = _check_in("review_status", _REVIEW_STATUS)
+_CK_CONF_EXTR   = _check_in("extraction",   _CONFIDENCE, allow_null=True)
+_CK_CONF_DEP    = _check_in("dependency",   _CONFIDENCE, allow_null=True)
+_CK_CONF_SEM    = _check_in("semantic",     _CONFIDENCE, allow_null=True)
+_CK_CONF_TRANS  = _check_in("translation",  _CONFIDENCE, allow_null=True)
+_CK_CONF_LATEX  = _check_in("latex_conf",   _CONFIDENCE, allow_null=True)
+_CK_CONF_SRC    = _check_in("source_align", _CONFIDENCE, allow_null=True)
+_CK_PROV_VER    = _check_in("schema_version", SUPPORTED_SCHEMA_VERSIONS)
+_CK_DOMAIN_KIND = _check_in("kind", ("primary", "secondary"))
+# semantic_kind row uses '' as a sentinel meaning "this row carries a keyword only"
+_CK_SEM_KIND    = _check_in("semantic_kind", _SEMANTIC_KIND, extra_allowed=("",))
+_CK_DEP_ROLE    = _check_in("role", _CONCEPT_ROLE)
+_CK_DEP_CONF    = _check_in("confidence", _CONFIDENCE, allow_null=True)
+_CK_GEN_REL     = _check_in("relation", _GENERALITY)
+_CK_PROOF_USE_ROLE = _check_in("role",       _DEP_ROLE)
+_CK_PROOF_USE_CONF = _check_in("confidence", _CONFIDENCE)
+_CK_PART_KIND      = _check_in("kind", _PART_KIND)
+_CK_SRC_KIND       = _check_in("entity_kind", ("statement", "proof"))
+
+
+SCHEMA_SQL = f"""
 CREATE TABLE statements (
     id              TEXT PRIMARY KEY,
     type            TEXT NOT NULL,

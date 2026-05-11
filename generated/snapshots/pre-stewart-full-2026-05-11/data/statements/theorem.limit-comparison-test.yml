@@ -1,0 +1,35 @@
+id: theorem.limit-comparison-test
+type: theorem
+status: draft
+
+title:
+  en: The Limit Comparison Test
+  es: Prueba de comparación en el límite
+
+statement:
+  natural:
+    es: >
+      Suponga que ∑ aₙ y ∑ bₙ son series con términos positivos.
+      Si lim(n→∞) aₙ/bₙ = c, donde c es un número finito y c > 0,
+      entonces ambas series convergen o ambas divergen.
+    en: >
+      Suppose ∑ aₙ and ∑ bₙ are series with positive terms.
+      If lim(n→∞) aₙ/bₙ = c, where c is a finite number and c > 0,
+      then either both series converge or both diverge.
+  latex: |
+    \lim_{n \to \infty} \frac{a_n}{b_n} = c > 0
+    \;\Longrightarrow\;
+    \sum a_n \text{ and } \sum b_n
+    \text{ both converge or both diverge}
+
+proved_by:
+  - proof.limit-comparison-test.stewart
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "11"
+    section: "11.4"
+
+confidence: high

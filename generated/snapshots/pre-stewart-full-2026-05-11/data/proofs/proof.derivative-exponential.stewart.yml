@@ -1,0 +1,23 @@
+id: proof.derivative-exponential.stewart
+type: proof
+status: draft
+
+proves: theorem.derivative-exponential
+
+uses:
+  - definition.derivative-function
+  - definition.number-e
+  - definition.natural-exponential-function
+
+style: direct
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.1"
+
+confidence: high
+notes: >
+  d/dx(e^x) = lim(h→0) (e^{x+h} - e^x)/h = e^x · lim(h→0)(e^h - 1)/h
+  = e^x · 1 = e^x, using the defining property of e.

@@ -1,0 +1,25 @@
+id: definition.metric-space
+type: definition
+status: draft
+
+title:
+  en: Metric Space
+
+statement:
+  natural:
+    en: >
+      A set X is a metric space if with any two points p and q of X there is associated a real number d(p,q), called the distance, such that: (a) d(p,q) > 0 if p ≠ q and d(p,p) = 0, (b) d(p,q) = d(q,p), (c) d(p,q) ≤ d(p,r) + d(r,q) for any r ∈ X (triangle inequality).
+
+  latex: |
+    d(p,q) \geq 0,\quad d(p,q) = d(q,p),\quad d(p,q) \leq d(p,r) + d(r,q)
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "2"
+    section: "2.15"
+
+confidence: high
+notes: >
+  Definition 2.15 from Rudin. Introduces metric spaces via distance function axioms.

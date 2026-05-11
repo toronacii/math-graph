@@ -1,0 +1,31 @@
+id: theorem.derivative-csc
+type: theorem
+status: draft
+
+title:
+  en: Derivative of cosecant
+  es: Derivada de la cosecante
+
+statement:
+  natural:
+    es: >
+      d/dx(csc x) = -csc x cot x.
+    en: >
+      d/dx(csc x) = -csc x cot x.
+  latex: |
+    \frac{d}{dx}(\csc x) = -\csc x \cot x
+
+proved_by:
+  - proof.derivative-csc.stewart
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.3"
+
+confidence: high
+notes: >
+  csc x = 1/sin x. Apply the quotient rule (or reciprocal rule)
+  using d/dx(sin x) = cos x.

@@ -1,0 +1,22 @@
+id: proof.connected-subsets-of-r.rudin
+type: proof
+status: draft
+
+proves: theorem.connected-subsets-of-r
+
+uses:
+  - definition.separated-connected
+  - definition.supremum
+  - proposition.sup-in-closure
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "2"
+    section: "2.47"
+
+confidence: high
+notes: >
+  If z ∉ E with x < z < y (x,y ∈ E), split E = (E ∩ (-∞,z)) ∪ (E ∩ (z,∞)) — separated. Converse: if E not connected with A ∪ B = E, take x ∈ A, y ∈ B, z = sup(A ∩ [x,y]). By Theorem 2.28, z ∈ A̅, so z ∉ B, find z₁ ∉ E between z and y.

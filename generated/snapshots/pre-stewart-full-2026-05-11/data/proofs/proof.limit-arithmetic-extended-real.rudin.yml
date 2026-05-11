@@ -1,0 +1,20 @@
+id: proof.limit-arithmetic-extended-real.rudin
+type: proof
+
+proves: theorem.limit-arithmetic-extended-real
+
+uses:
+  - definition.limit-extended-real
+  - theorem.limit-arithmetic-functions-metric
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "4"
+    section: "4.34"
+
+confidence: high
+notes: >
+  Proof analogous to Theorem 4.4, using neighborhoods of ±∞.
+  Rudin states it for completeness without giving a new proof.

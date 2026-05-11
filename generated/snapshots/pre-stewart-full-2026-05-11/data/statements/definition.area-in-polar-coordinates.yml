@@ -1,0 +1,32 @@
+id: definition.area-in-polar-coordinates
+type: definition
+status: draft
+
+title:
+  en: Area in polar coordinates
+  es: Área en coordenadas polares
+
+statement:
+  natural:
+    es: >
+      El área de la región acotada por la curva polar r = f(θ) y las
+      rectas θ = a y θ = b (con 0 < b - a ≤ 2π) es
+      A = ∫_a^b (1/2)[f(θ)]² dθ.
+    en: >
+      The area of the region bounded by the polar curve r = f(θ) and
+      the lines θ = a and θ = b (with 0 < b - a ≤ 2π) is
+      A = ∫_a^b (1/2)[f(θ)]² dθ.
+  latex: |
+    A = \int_a^b \tfrac{1}{2}\bigl[f(\theta)\bigr]^2\,d\theta
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "10"
+    section: "10.4"
+
+confidence: high
+notes: >
+  Derived by approximating the region with circular sectors of
+  area (1/2)r²Δθ and taking the limit.

@@ -1,0 +1,25 @@
+id: proposition.open-iff-complement-closed
+type: proposition
+status: draft
+
+title:
+  en: A Set is Open Iff Its Complement is Closed
+
+statement:
+  natural:
+    en: >
+      A set E is open if and only if its complement is closed.
+
+proved_by:
+  - proof.open-iff-complement-closed.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "2"
+    section: "2.23"
+
+confidence: high
+notes: >
+  Theorem 2.23 in Rudin. Fundamental duality between open and closed sets.

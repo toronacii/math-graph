@@ -1,0 +1,21 @@
+id: proof.comparison-lim-sup-inf.rudin
+type: proof
+status: draft
+
+proves: proposition.comparison-lim-sup-inf
+
+uses:
+  - definition.upper-lower-limits
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.19"
+
+confidence: high
+notes: >
+  Trivial from definitions; subsequential limits of {s_n} cannot exceed
+  those of {t_n} when s_n ≤ t_n eventually.

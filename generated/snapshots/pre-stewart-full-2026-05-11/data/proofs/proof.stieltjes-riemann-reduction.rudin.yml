@@ -1,0 +1,27 @@
+id: proof.stieltjes-riemann-reduction.rudin
+type: proof
+status: draft
+
+proves: theorem.stieltjes-riemann-reduction
+
+uses:
+  - theorem.riemann-stieltjes-integrability-criterion
+  - proposition.integrability-criterion-consequences
+  - theorem.mean-value-theorem
+  - definition.riemann-stieltjes-integral
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "6"
+    section: "6.17"
+
+confidence: high
+notes: >
+  Apply Theorem 6.6 to alpha' to get a partition P with U(P,alpha') - L(P,alpha') < epsilon.
+  MVT gives t_i with Delta alpha_i = alpha'(t_i) Delta x_i. By Theorem 6.7(b),
+  sum |alpha'(s_i) - alpha'(t_i)| Delta x_i < epsilon. Then
+  |U(P,f,alpha) - U(P,f alpha')| <= M epsilon. Since this holds for all
+  refinements, the upper integrals agree, and similarly for lower integrals.

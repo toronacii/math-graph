@@ -1,0 +1,22 @@
+id: definition.function-mapping
+type: definition
+status: draft
+
+title:
+  en: Function and Mapping
+
+statement:
+  natural:
+    en: >
+      Consider two sets A and B. A function f from A to B (a mapping of A into B) assigns to each element x of A exactly one element f(x) of B. A is the domain of f. The set of all values f(x) is the range of f. If f(A) = B, f maps A onto B. If f(x₁) ≠ f(x₂) whenever x₁ ≠ x₂, f is one-to-one. f(E) is the image of E under f; f⁻¹(E) is the inverse image of E under f.
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "2"
+    section: "2.1"
+
+confidence: high
+notes: >
+  Definitions 2.1 and 2.2 from Rudin. Combines function, domain, range, onto, one-to-one, image, and inverse image.

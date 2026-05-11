@@ -1,0 +1,343 @@
+{
+  "directed": true,
+  "links": [
+    {
+      "relation": "depends_on",
+      "role": "instance_of",
+      "source": "definition.absolute-value",
+      "target": "definition.piecewise-function"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.algebraic-function",
+      "target": "definition.polynomial"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.algebraic-function",
+      "target": "definition.rational-function"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.decreasing-function",
+      "target": "definition.function"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.dependent-variable",
+      "target": "definition.function"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.dependent-variable",
+      "target": "definition.independent-variable"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.dependent-variable",
+      "target": "definition.range"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.domain",
+      "target": "definition.function"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.even-function",
+      "target": "definition.domain"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.even-function",
+      "target": "definition.function"
+    },
+    {
+      "confidence": "high",
+      "implicit": false,
+      "relation": "uses",
+      "role": "definition",
+      "source": "definition.function",
+      "target": "proof.vertical-line-test.stewart"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.graph-of-function",
+      "target": "definition.domain"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.graph-of-function",
+      "target": "definition.function"
+    },
+    {
+      "confidence": "high",
+      "implicit": false,
+      "relation": "uses",
+      "role": "definition",
+      "source": "definition.graph-of-function",
+      "target": "proof.vertical-line-test.stewart"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.increasing-function",
+      "target": "definition.function"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.independent-variable",
+      "target": "definition.domain"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.independent-variable",
+      "target": "definition.function"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.linear-function",
+      "target": "definition.function"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.mathematical-model",
+      "target": "definition.function"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.odd-function",
+      "target": "definition.domain"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.odd-function",
+      "target": "definition.function"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.piecewise-function",
+      "target": "definition.domain"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.piecewise-function",
+      "target": "definition.function"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.polynomial",
+      "target": "definition.function"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.power-function",
+      "target": "definition.function"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.range",
+      "target": "definition.domain"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.range",
+      "target": "definition.function"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.rational-function",
+      "target": "definition.domain"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.rational-function",
+      "target": "definition.function"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.rational-function",
+      "target": "definition.polynomial"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.trigonometric-function",
+      "target": "definition.function"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.vertical-line-test.stewart",
+      "target": "proposition.vertical-line-test"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "proposition.vertical-line-test",
+      "target": "definition.function"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "proposition.vertical-line-test",
+      "target": "definition.graph-of-function"
+    }
+  ],
+  "multigraph": true,
+  "nodes": [
+    {
+      "id": "definition.absolute-value",
+      "kind": "statement",
+      "status": "extracted",
+      "type": "definition"
+    },
+    {
+      "id": "definition.algebraic-function",
+      "kind": "statement",
+      "status": "extracted",
+      "type": "definition"
+    },
+    {
+      "id": "definition.decreasing-function",
+      "kind": "statement",
+      "status": "extracted",
+      "type": "definition"
+    },
+    {
+      "id": "definition.dependent-variable",
+      "kind": "statement",
+      "status": "extracted",
+      "type": "definition"
+    },
+    {
+      "id": "definition.domain",
+      "kind": "statement",
+      "status": "extracted",
+      "type": "definition"
+    },
+    {
+      "id": "definition.even-function",
+      "kind": "statement",
+      "status": "extracted",
+      "type": "definition"
+    },
+    {
+      "id": "definition.function",
+      "kind": "statement",
+      "status": "extracted",
+      "type": "definition"
+    },
+    {
+      "id": "definition.graph-of-function",
+      "kind": "statement",
+      "status": "extracted",
+      "type": "definition"
+    },
+    {
+      "id": "definition.increasing-function",
+      "kind": "statement",
+      "status": "extracted",
+      "type": "definition"
+    },
+    {
+      "id": "definition.independent-variable",
+      "kind": "statement",
+      "status": "extracted",
+      "type": "definition"
+    },
+    {
+      "id": "definition.linear-function",
+      "kind": "statement",
+      "status": "extracted",
+      "type": "definition"
+    },
+    {
+      "id": "definition.mathematical-model",
+      "kind": "statement",
+      "status": "extracted",
+      "type": "definition"
+    },
+    {
+      "id": "definition.odd-function",
+      "kind": "statement",
+      "status": "extracted",
+      "type": "definition"
+    },
+    {
+      "id": "definition.piecewise-function",
+      "kind": "statement",
+      "status": "extracted",
+      "type": "definition"
+    },
+    {
+      "id": "definition.polynomial",
+      "kind": "statement",
+      "status": "extracted",
+      "type": "definition"
+    },
+    {
+      "id": "definition.power-function",
+      "kind": "statement",
+      "status": "extracted",
+      "type": "definition"
+    },
+    {
+      "id": "definition.range",
+      "kind": "statement",
+      "status": "extracted",
+      "type": "definition"
+    },
+    {
+      "id": "definition.rational-function",
+      "kind": "statement",
+      "status": "extracted",
+      "type": "definition"
+    },
+    {
+      "id": "definition.trigonometric-function",
+      "kind": "statement",
+      "status": "extracted",
+      "type": "definition"
+    },
+    {
+      "id": "proof.vertical-line-test.stewart",
+      "kind": "proof",
+      "status": "extracted",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proposition.vertical-line-test",
+      "kind": "statement",
+      "status": "extracted",
+      "type": "proposition"
+    }
+  ],
+  "schema_version": "0.3.1"
+}

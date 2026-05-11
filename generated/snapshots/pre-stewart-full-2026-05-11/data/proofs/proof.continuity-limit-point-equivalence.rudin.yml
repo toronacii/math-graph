@@ -1,0 +1,22 @@
+id: proof.continuity-limit-point-equivalence.rudin
+type: proof
+
+proves: proposition.continuity-limit-point-equivalence
+
+uses:
+  - definition.limit-of-function-metric
+  - definition.continuity-metric
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "4"
+    section: "4.6"
+
+confidence: high
+notes: >
+  Immediate from comparing Definitions 4.1 and 4.5. The only
+  difference is that continuity uses d_X(x,p) < δ while the limit
+  uses 0 < d_X(x,p) < δ; at a limit point, p ∈ E makes f(p)
+  the relevant value.

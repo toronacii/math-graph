@@ -1,0 +1,25 @@
+id: definition.unit-step-function
+type: definition
+status: draft
+
+title:
+  en: Unit Step Function
+
+statement:
+  natural:
+    en: >
+      The unit step function I is defined by I(x) = 0 if x <= 0
+      and I(x) = 1 if x > 0.
+  latex: |
+    I(x) = \begin{cases} 0 & x \le 0 \\ 1 & x > 0 \end{cases}
+
+proved_by: []
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "6"
+    section: "6.14"
+
+confidence: high

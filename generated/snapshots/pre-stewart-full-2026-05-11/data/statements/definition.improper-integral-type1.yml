@@ -1,0 +1,41 @@
+id: definition.improper-integral-type1
+type: definition
+status: draft
+
+title:
+  en: Improper integral (Type 1 — infinite interval)
+  es: Integral impropia (Tipo 1 — intervalo infinito)
+
+statement:
+  natural:
+    es: >
+      (a) Si ∫_a^t f(x) dx existe para todo número t ≥ a, entonces
+      ∫_a^∞ f(x) dx = lim_{t→∞} ∫_a^t f(x) dx, siempre que este
+      límite exista (como número finito).
+      (b) Si ∫_t^b f(x) dx existe para todo número t ≤ b, entonces
+      ∫_{-∞}^b f(x) dx = lim_{t→-∞} ∫_t^b f(x) dx.
+      Las integrales impropias se llaman convergentes si el límite
+      existe y divergentes si no existe.
+    en: >
+      (a) If ∫_a^t f(x) dx exists for every number t ≥ a, then
+      ∫_a^∞ f(x) dx = lim_{t→∞} ∫_a^t f(x) dx, provided this limit
+      exists (as a finite number).
+      (b) If ∫_t^b f(x) dx exists for every number t ≤ b, then
+      ∫_{-∞}^b f(x) dx = lim_{t→-∞} ∫_t^b f(x) dx.
+      Improper integrals are called convergent if the limit exists
+      and divergent if it does not.
+  latex: |
+    \int_a^{\infty} f(x)\,dx = \lim_{t \to \infty} \int_a^t f(x)\,dx
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "7"
+    section: "7.8"
+
+confidence: high
+notes: >
+  Type 1 improper integrals extend the definite integral to infinite
+  intervals. The integral from -∞ to ∞ is defined by splitting at
+  any point and requiring both halves to converge.

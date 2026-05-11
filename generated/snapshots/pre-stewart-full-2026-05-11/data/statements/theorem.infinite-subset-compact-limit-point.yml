@@ -1,0 +1,25 @@
+id: theorem.infinite-subset-compact-limit-point
+type: theorem
+status: draft
+
+title:
+  en: Infinite Subset of a Compact Set Has a Limit Point
+
+statement:
+  natural:
+    en: >
+      If E is an infinite subset of a compact set K, then E has a limit point in K.
+
+proved_by:
+  - proof.infinite-subset-compact-limit-point.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "2"
+    section: "2.37"
+
+confidence: high
+notes: >
+  Theorem 2.37 in Rudin. Proved by contradiction using open covers.

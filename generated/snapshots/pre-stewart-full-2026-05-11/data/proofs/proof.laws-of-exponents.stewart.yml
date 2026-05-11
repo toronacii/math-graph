@@ -1,0 +1,62 @@
+schema_version: "0.3.0"
+id: proof.laws-of-exponents.stewart
+type: proof
+status: extracted
+
+proves: proposition.laws-of-exponents
+style: assumed
+
+uses:
+  - id: definition.exponential-function
+    role: definition
+    confidence: high
+    implicit: false
+    notes: >
+      Stewart asserts the laws by appeal to the intuitive
+      (precalculus) construction of a^x for real x.
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.4"
+    locator: "Leyes de los exponentes (sección 1.4) — sin demostración"
+    source_language: es
+
+sketch:
+  es:
+    text: >
+      Stewart no demuestra las leyes en la sección 1.4: las acepta
+      como hechos conocidos del precálculo, extendidos por
+      continuidad de exponentes racionales a exponentes reales. Una
+      demostración rigurosa requiere o bien la construcción del
+      exponencial real vía supremos / continuidad, o bien la
+      identidad a^x = exp(x · ln a) una vez que el logaritmo natural
+      se define analíticamente. Ese desarrollo aparece en capítulos
+      posteriores (y formalmente en Rudin).
+    is_original: true
+    origin: human
+    review_status: unreviewed
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: medium
+  semantic_confidence: high
+  source_alignment_confidence: high
+  translation_confidence: null
+  latex_confidence: null
+
+provenance:
+  schema_version: "0.3.0"
+  rerun_id: v0.3-pilot-stewart-ch1
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Style `assumed` per policy 06: Stewart does not derive the laws
+  in §1.4. This proof node exists to record the EPISTEMIC DEBT —
+  the laws are used downstream (derivative-exponential, etc.) but
+  rest on an unproved foundation in this source. Merge candidate
+  with a Rudin-based analytic proof once added.

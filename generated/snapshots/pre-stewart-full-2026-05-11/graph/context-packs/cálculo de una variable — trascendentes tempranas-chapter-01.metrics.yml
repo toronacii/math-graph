@@ -1,0 +1,7 @@
+schema_version: 0.3.0
+source: "c\xE1lculo de una variable \u2014 trascendentes tempranas"
+chapter: '1'
+mode: extraction
+estimated_chars: 3565
+estimated_tokens: 891
+generator: scripts.v03.make_context_pack

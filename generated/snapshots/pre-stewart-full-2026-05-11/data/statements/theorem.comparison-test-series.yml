@@ -1,0 +1,46 @@
+id: theorem.comparison-test-series
+type: theorem
+status: draft
+
+title:
+  en: The Comparison Test for Series
+  es: Prueba de comparación para series
+
+statement:
+  natural:
+    es: >
+      Suponga que ∑ aₙ y ∑ bₙ son series con términos positivos.
+      (i) Si ∑ bₙ converge y aₙ ≤ bₙ para todo n, entonces ∑ aₙ
+      también converge.
+      (ii) Si ∑ bₙ diverge y aₙ ≥ bₙ para todo n, entonces ∑ aₙ
+      también diverge.
+    en: >
+      Suppose ∑ aₙ and ∑ bₙ are series with positive terms.
+      (i) If ∑ bₙ converges and aₙ ≤ bₙ for all n, then ∑ aₙ
+      also converges.
+      (ii) If ∑ bₙ diverges and aₙ ≥ bₙ for all n, then ∑ aₙ
+      also diverges.
+  latex: |
+    0 \le a_n \le b_n \implies
+    \begin{cases}
+    \sum b_n \text{ conv.} \Rightarrow \sum a_n \text{ conv.}\\
+    \sum a_n \text{ div.} \Rightarrow \sum b_n \text{ div.}
+    \end{cases}
+
+proved_by:
+  - proof.comparison-test-series.stewart
+  - proof.comparison-test-series.rudin
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "11"
+    section: "11.4"
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.25"
+
+confidence: high

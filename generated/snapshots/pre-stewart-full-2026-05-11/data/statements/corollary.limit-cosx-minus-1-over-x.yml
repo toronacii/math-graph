@@ -1,0 +1,32 @@
+id: corollary.limit-cosx-minus-1-over-x
+type: corollary
+status: draft
+
+title:
+  en: Limit of (cos(x) - 1)/x as x approaches 0
+  es: Límite de (cos(x) - 1)/x cuando x tiende a 0
+
+statement:
+  natural:
+    es: >
+      El límite de (cos(x) - 1)/x cuando x tiende a 0 es igual a 0.
+    en: >
+      The limit of (cos(x) - 1)/x as x approaches 0 equals 0.
+  latex: |
+    \lim_{x \to 0} \frac{\cos x - 1}{x} = 0
+
+proved_by:
+  - proof.limit-cosx-minus-1-over-x.stewart
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.3"
+
+confidence: medium
+notes: >
+  Reclassified from theorem to corollary. Follows almost immediately
+  from theorem.limit-sinx-over-x via algebraic manipulation
+  (multiply by (cos x + 1)/(cos x + 1) and apply limit laws).

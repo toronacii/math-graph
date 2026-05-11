@@ -1,0 +1,27 @@
+id: definition.differentiable
+type: definition
+status: draft
+
+title:
+  en: Differentiability
+  es: Diferenciabilidad
+
+statement:
+  natural:
+    es: >
+      Una función f es diferenciable en a si f'(a) existe. Es
+      diferenciable en un intervalo abierto (a, b) si es diferenciable
+      en todo número del intervalo.
+    en: >
+      A function f is differentiable at a if f'(a) exists. It is
+      differentiable on an open interval (a, b) if it is differentiable
+      at every number in the interval.
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.8"
+
+confidence: high

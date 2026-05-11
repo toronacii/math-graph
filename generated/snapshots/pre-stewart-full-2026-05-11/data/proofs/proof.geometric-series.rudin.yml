@@ -1,0 +1,21 @@
+id: proof.geometric-series.rudin
+type: proof
+status: draft
+
+proves: theorem.geometric-series
+
+uses:
+  - definition.infinite-series
+  - definition.convergent-sequence
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.26"
+
+confidence: high
+notes: >
+  Partial sum s_n = (1-x^{n+1})/(1-x); let n→∞.

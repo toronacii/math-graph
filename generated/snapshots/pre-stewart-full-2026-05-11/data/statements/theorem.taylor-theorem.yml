@@ -1,0 +1,38 @@
+id: theorem.taylor-theorem
+type: theorem
+status: draft
+
+title:
+  en: Taylor's Theorem (with Lagrange Remainder)
+
+statement:
+  natural:
+    en: >
+      Suppose f is a real function on [a, b], n is a positive integer,
+      f^(n-1) is continuous on [a, b], f^(n)(t) exists for every
+      t in (a, b). Let alpha, beta be distinct points of [a, b], and
+      define P(t) = sum_{k=0}^{n-1} f^(k)(alpha)/k! * (t - alpha)^k.
+      Then there exists a point x between alpha and beta such that
+      f(beta) = P(beta) + f^(n)(x)/n! * (beta - alpha)^n.
+  latex: |
+    f(\beta) = \sum_{k=0}^{n-1} \frac{f^{(k)}(\alpha)}{k!}(\beta - \alpha)^k
+    + \frac{f^{(n)}(x)}{n!}(\beta - \alpha)^n
+
+proved_by:
+  - proof.taylor-theorem.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "5"
+    section: "5.15"
+
+confidence: high
+notes: >
+  For n = 1 this reduces to the mean value theorem. The theorem
+  shows that f can be approximated by a polynomial of degree n-1,
+  with the Lagrange remainder f^(n)(x)/n! * (beta - alpha)^n
+  providing an error estimate. Different from Taylor series
+  convergence (which concerns infinite series); this is a finite
+  approximation result.

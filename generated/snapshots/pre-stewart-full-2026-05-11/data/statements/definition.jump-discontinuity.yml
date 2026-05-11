@@ -1,0 +1,27 @@
+id: definition.jump-discontinuity
+type: definition
+status: draft
+
+title:
+  en: Jump discontinuity
+  es: Discontinuidad de salto
+
+statement:
+  natural:
+    es: >
+      Una función f tiene una discontinuidad de salto en a si los
+      límites laterales lim(x→a⁻) f(x) y lim(x→a⁺) f(x) existen
+      pero no son iguales.
+    en: >
+      A function f has a jump discontinuity at a if the one-sided
+      limits lim(x→a⁻) f(x) and lim(x→a⁺) f(x) both exist but are
+      not equal.
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.5"
+
+confidence: medium

@@ -1,0 +1,59 @@
+schema_version: "0.3.0"
+id: proof.inverse-graph-reflection.stewart
+type: proof
+status: extracted
+
+proves: proposition.inverse-graph-reflection
+style: direct
+
+uses:
+  - id: definition.inverse-function
+    role: definition
+    confidence: high
+    implicit: false
+  - id: definition.graph-of-function
+    role: definition
+    confidence: high
+    implicit: false
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.5"
+    locator: "Gráfica de la inversa (sección 1.5)"
+    source_language: es
+
+sketch:
+  es:
+    text: >
+      Por definición de gráfica, (a, b) ∈ graph(f) ⇔ f(a) = b. Por
+      definición de inversa, f(a) = b ⇔ f⁻¹(b) = a, es decir,
+      (b, a) ∈ graph(f⁻¹). La transformación (a, b) ↦ (b, a) es
+      exactamente la reflexión respecto a la recta y = x. Por tanto
+      graph(f⁻¹) es la imagen de graph(f) bajo dicha reflexión.
+    is_original: true
+    origin: human
+    review_status: unreviewed
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  source_alignment_confidence: high
+  translation_confidence: null
+  latex_confidence: null
+
+provenance:
+  schema_version: "0.3.0"
+  rerun_id: v0.3-pilot-stewart-ch1
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  The proof relies on the geometric fact that (a, b) ↔ (b, a) IS
+  reflection about y = x. Stewart asserts this as obvious; in a
+  rigorous setting this would itself be a (trivial) lemma about
+  affine isometries of R².

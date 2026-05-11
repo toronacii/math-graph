@@ -1,0 +1,29 @@
+id: theorem.riemann-rearrangement
+type: theorem
+status: draft
+
+title:
+  en: Riemann Rearrangement Theorem
+
+statement:
+  natural:
+    en: >
+      If Σa_n is a conditionally convergent series and -∞ ≤ α ≤ β ≤ ∞, then there
+      exists a rearrangement Σa'_n with lim inf s'_n = α and lim sup s'_n = β.
+
+  latex: |
+    \sum a_n \text{ cond. conv.} \implies \exists \text{ rearrangement with } \liminf s'_n = \alpha,\; \limsup s'_n = \beta
+
+proved_by:
+  - proof.riemann-rearrangement.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.54"
+
+confidence: high
+notes: >
+  Theorem 3.54 from Rudin.

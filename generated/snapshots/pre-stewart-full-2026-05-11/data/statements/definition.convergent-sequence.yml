@@ -1,0 +1,28 @@
+id: definition.convergent-sequence
+type: definition
+status: draft
+
+title:
+  en: Convergent Sequence
+
+statement:
+  natural:
+    en: >
+      A sequence {p_n} in a metric space X is said to converge if there is a point
+      p in X with the following property: for every ε > 0 there is an integer N such
+      that n ≥ N implies d(p_n, p) < ε. In this case we say that {p_n} converges to p,
+      and we write p_n → p or lim p_n = p.
+
+  latex: |
+    \forall \varepsilon > 0,\; \exists N \in \mathbb{N} : n \geq N \implies d(p_n, p) < \varepsilon
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.1"
+
+confidence: high
+notes: >
+  Definition 3.1 from Rudin's Principles of Mathematical Analysis.

@@ -1,0 +1,35 @@
+id: definition.area-between-curves
+type: definition
+status: draft
+
+title:
+  en: Area between curves
+  es: Área entre curvas
+
+statement:
+  natural:
+    es: >
+      El área A de la región acotada por las curvas y = f(x), y = g(x),
+      y las rectas x = a, x = b, donde f y g son continuas y
+      f(x) ≥ g(x) para todo x en [a, b], es
+      A = ∫_a^b [f(x) - g(x)] dx.
+    en: >
+      The area A of the region bounded by the curves y = f(x), y = g(x),
+      and the lines x = a, x = b, where f and g are continuous and
+      f(x) ≥ g(x) for all x in [a, b], is
+      A = ∫_a^b [f(x) - g(x)] dx.
+  latex: |
+    A = \int_a^b \bigl[f(x) - g(x)\bigr]\,dx
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "6"
+    section: "6.1"
+
+confidence: high
+notes: >
+  Follows directly from the definition of the definite integral and
+  the integral properties (linearity). Stewart derives this by
+  partitioning the region into thin vertical strips.

@@ -1,0 +1,37 @@
+id: theorem.integration-by-parts
+type: theorem
+status: draft
+
+title:
+  en: Integration by Parts
+  es: Integración por partes
+
+statement:
+  natural:
+    es: >
+      Si f y g son diferenciables, entonces
+      ∫ f(x)g'(x) dx = f(x)g(x) - ∫ g(x)f'(x) dx.
+      Con la notación u = f(x), v = g(x):
+      ∫ u dv = uv - ∫ v du.
+    en: >
+      If f and g are differentiable, then
+      ∫ f(x)g'(x) dx = f(x)g(x) - ∫ g(x)f'(x) dx.
+      Using the notation u = f(x), v = g(x):
+      ∫ u dv = uv - ∫ v du.
+  latex: |
+    \int u\,dv = uv - \int v\,du
+
+proved_by:
+  - proof.integration-by-parts.stewart
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "7"
+    section: "7.1"
+
+confidence: high
+notes: >
+  The integration counterpart of the product rule. Stewart derives
+  it by integrating both sides of the product rule and rearranging.

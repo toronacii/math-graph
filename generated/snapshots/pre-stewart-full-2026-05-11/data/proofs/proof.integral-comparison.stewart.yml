@@ -1,0 +1,23 @@
+id: proof.integral-comparison.stewart
+type: proof
+status: draft
+
+proves: proposition.integral-comparison
+
+uses:
+  - definition.definite-integral
+  - theorem.limit-laws
+
+style: direct
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "5"
+    section: "5.2"
+
+confidence: high
+notes: >
+  If f(x) ≥ 0 then f(x_i*) ≥ 0 for all sample points, so each
+  term f(x_i*)Δx ≥ 0, and the Riemann sum is ≥ 0. The limit
+  preserves the inequality.

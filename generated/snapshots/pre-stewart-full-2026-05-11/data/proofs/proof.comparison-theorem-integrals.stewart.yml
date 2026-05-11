@@ -1,0 +1,26 @@
+id: proof.comparison-theorem-integrals.stewart
+type: proof
+status: draft
+
+proves: theorem.comparison-theorem-integrals
+
+uses:
+  - definition.improper-integral-type1
+  - proposition.integral-comparison
+
+style: direct
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "7"
+    section: "7.8"
+
+confidence: medium
+notes: >
+  Stewart gives an intuitive argument: since 0 ≤ g(x) ≤ f(x),
+  the integral ∫_a^t g(x) dx ≤ ∫_a^t f(x) dx for all t ≥ a.
+  If the larger integral converges, the smaller is bounded above
+  and increasing, hence converges. The rigorous proof uses the
+  monotone convergence property (completeness of reals), which
+  is not explicitly proved.

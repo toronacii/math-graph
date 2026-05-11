@@ -1,0 +1,36 @@
+id: definition.logarithmic-differentiation
+type: definition
+status: draft
+
+title:
+  en: Logarithmic differentiation
+  es: Derivación logarítmica
+
+statement:
+  natural:
+    es: >
+      La derivación logarítmica consiste en tomar el logaritmo natural
+      de ambos lados de y = f(x), simplificar usando las leyes de los
+      logaritmos, y luego derivar implícitamente para obtener y'/y.
+    en: >
+      Logarithmic differentiation consists of taking the natural
+      logarithm of both sides of y = f(x), simplifying using the
+      laws of logarithms, and then differentiating implicitly to
+      find y'/y.
+  latex: |
+    \ln y = \ln f(x) \;\Rightarrow\;
+    \frac{y'}{y} = \frac{d}{dx}\bigl[\ln f(x)\bigr]
+    \;\Rightarrow\; y' = f(x) \cdot \frac{d}{dx}\bigl[\ln f(x)\bigr]
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.6"
+
+confidence: high
+notes: >
+  Stewart introduces this as a technique for differentiating
+  complicated products/quotients and functions of the form
+  y = [f(x)]^{g(x)}.

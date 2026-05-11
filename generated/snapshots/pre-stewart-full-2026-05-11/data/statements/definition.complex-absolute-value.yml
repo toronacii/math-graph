@@ -1,0 +1,27 @@
+id: definition.complex-absolute-value
+type: definition
+status: draft
+
+title:
+  en: Absolute Value of a Complex Number
+
+statement:
+  natural:
+    en: >
+      If z is a complex number, its absolute value |z| is the
+      nonnegative square root of zz̄; that is, |z| = (zz̄)^(1/2).
+  latex: |
+    |z| = (z\bar{z})^{1/2}
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "1"
+    section: "1.32"
+
+confidence: high
+notes: >
+  Rudin 1.32. Existence and uniqueness of |z| follows from
+  Theorem 1.21 (existence of nth roots) and Theorem 1.31(d)
+  (zz̄ is real and nonnegative).

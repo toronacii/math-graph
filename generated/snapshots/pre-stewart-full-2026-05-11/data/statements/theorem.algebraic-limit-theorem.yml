@@ -1,0 +1,30 @@
+id: theorem.algebraic-limit-theorem
+type: theorem
+status: draft
+
+title:
+  en: Algebraic Limit Theorem
+
+statement:
+  natural:
+    en: >
+      Suppose {s_n} and {t_n} are complex sequences with s_n → s and t_n → t.
+      Then: (a) lim(s_n + t_n) = s + t; (b) lim(c·s_n) = c·s for any constant c;
+      (c) lim(s_n · t_n) = s·t; (d) lim(1/s_n) = 1/s provided s_n ≠ 0 and s ≠ 0.
+
+  latex: |
+    \lim(s_n + t_n) = s + t,\quad \lim(s_n t_n) = st
+
+proved_by:
+  - proof.algebraic-limit-theorem.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.3"
+
+confidence: high
+notes: >
+  Theorem 3.3 from Rudin.

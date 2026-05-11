@@ -1,0 +1,29 @@
+id: definition.indeterminate-form
+type: definition
+status: draft
+
+title:
+  en: Indeterminate form
+  es: Forma indeterminada
+
+statement:
+  natural:
+    es: >
+      Una forma indeterminada es una expresión límite cuyo valor no
+      puede determinarse directamente a partir de los límites de sus
+      partes. Las formas indeterminadas más comunes son 0/0, ∞/∞,
+      0·∞, ∞-∞, 0⁰, ∞⁰ y 1^∞.
+    en: >
+      An indeterminate form is a limit expression whose value cannot
+      be determined directly from the limits of its parts. The most
+      common indeterminate forms are 0/0, ∞/∞, 0·∞, ∞-∞, 0⁰, ∞⁰,
+      and 1^∞.
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "4"
+    section: "4.4"
+
+confidence: high

@@ -1,0 +1,109 @@
+schema_version: "0.3.0"
+id: proposition.inverse-graph-reflection
+type: proposition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Gráfica de la inversa como reflexión
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Graph of inverse as reflection
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Si f es una función inyectiva, entonces la gráfica de f⁻¹ se
+        obtiene reflejando la gráfica de f respecto a la recta y = x.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        If f is a one-to-one function, then the graph of f⁻¹ is
+        obtained by reflecting the graph of f about the line y = x.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: ""
+    status: not_applicable
+    notes: >
+      Geometric statement; expressed in prose rather than via a
+      single defining formula.
+    review_status: unreviewed
+
+proved_by:
+  - proof.inverse-graph-reflection.stewart
+
+depends_on:
+  - id: definition.inverse-function
+    role: uses_concept
+    confidence: high
+  - id: definition.graph-of-function
+    role: uses_concept
+    confidence: high
+  - id: definition.reflection
+    role: uses_concept
+    confidence: medium
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.5"
+    locator: "Gráfica de la inversa (sección 1.5)"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [geometry]
+
+ambient:
+  structures: [cartesian-plane]
+  notes: >
+    Geometric statement in R²; the line y = x is the axis of
+    reflection.
+
+ontology:
+  semantic_kind: [property]
+  keywords: [inverse-graph, reflection, y-equals-x, geometric-duality]
+
+generality: []
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: medium
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.0"
+  rerun_id: v0.3-pilot-stewart-ch1
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Reflection dependency is `medium` confidence: Stewart's
+  definition.reflection covers axis-reflection (about x- and
+  y-axes), whereas this proposition reflects about y = x.
+  Conceptually the same notion of axis-reflection but Stewart's
+  current node does not formally cover the y = x case. Audit
+  finding: definition.reflection may need generalization or
+  splitting into a richer "reflection-about-line" node.

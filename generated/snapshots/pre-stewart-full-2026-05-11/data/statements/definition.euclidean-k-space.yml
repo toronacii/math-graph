@@ -1,0 +1,30 @@
+id: definition.euclidean-k-space
+type: definition
+status: draft
+
+title:
+  en: Euclidean k-Space
+
+statement:
+  natural:
+    en: >
+      For each positive integer k, let R^k be the set of all ordered
+      k-tuples x = (x_1, ..., x_k), where x_1, ..., x_k are real
+      numbers called the coordinates of x. Vector addition and scalar
+      multiplication are defined componentwise. The inner product of
+      x and y is x · y = Σ x_i y_i, and the norm of x is
+      |x| = (x · x)^(1/2). The structure (R^k, ·, |·|) is called
+      euclidean k-space.
+  latex: |
+    \mathbf{x} \cdot \mathbf{y} = \sum_{i=1}^{k} x_i y_i, \quad |\mathbf{x}| = \left(\sum_{i=1}^{k} x_i^2\right)^{1/2}
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "1"
+    section: "1.36"
+
+confidence: high
+notes: >
+  Rudin 1.36. R^1 is the real line, R^2 is the plane (complex plane).

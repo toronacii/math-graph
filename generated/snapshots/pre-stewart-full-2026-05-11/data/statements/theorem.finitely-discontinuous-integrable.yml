@@ -1,0 +1,33 @@
+id: theorem.finitely-discontinuous-integrable
+type: theorem
+status: draft
+
+title:
+  en: Bounded Functions with Finitely Many Discontinuities are Integrable
+
+statement:
+  natural:
+    en: >
+      Suppose f is bounded on [a, b], f has only finitely many points of
+      discontinuity on [a, b], and alpha is continuous at every point at
+      which f is discontinuous. Then f is in R(alpha).
+  latex: |
+    f \text{ bounded},\;
+    \#\{x : f \text{ discontinuous at } x\} < \infty,\;
+    \alpha \text{ continuous at each such } x
+    \implies f \in \mathscr{R}(\alpha)
+
+proved_by:
+  - proof.finitely-discontinuous-integrable.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "6"
+    section: "6.10"
+
+confidence: high
+notes: >
+  If f and alpha share a common point of discontinuity, f need not
+  be in R(alpha). See Rudin Exercise 3.

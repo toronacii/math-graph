@@ -1,0 +1,73 @@
+schema_version: "0.3.0"
+id: proof.horizontal-line-test.stewart
+type: proof
+status: extracted
+
+proves: proposition.horizontal-line-test
+style: direct
+
+uses:
+  - id: definition.one-to-one-function
+    role: definition
+    confidence: high
+    implicit: false
+  - id: definition.graph-of-function
+    role: definition
+    confidence: high
+    implicit: false
+
+parts:
+  - name: forward
+    kind: direction
+    description: >
+      If f is one-to-one and a horizontal line y = b met the graph at
+      two points (x₁, b) ≠ (x₂, b), then f(x₁) = f(x₂) = b with
+      x₁ ≠ x₂, contradicting injectivity.
+    uses: []
+  - name: backward
+    kind: direction
+    description: >
+      If no horizontal line cuts the graph twice, then f(x₁) = f(x₂)
+      forces (x₁, f(x₁)) and (x₂, f(x₂)) to lie on the same horizontal
+      line, hence x₁ = x₂; so f is one-to-one.
+    uses: []
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.5"
+    locator: "Prueba de la línea horizontal (sección 1.5)"
+    source_language: es
+
+sketch:
+  es:
+    text: >
+      Argumento análogo al de la prueba de la línea vertical: una
+      línea horizontal y = b corta a la gráfica en (x, b) precisamente
+      cuando f(x) = b. Que esta línea corte a la gráfica en a lo más
+      un punto significa que la ecuación f(x) = b tiene a lo más una
+      solución, lo que es exactamente la condición de inyectividad.
+    is_original: true
+    origin: human
+    review_status: unreviewed
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  source_alignment_confidence: high
+  translation_confidence: null
+  latex_confidence: null
+
+provenance:
+  schema_version: "0.3.0"
+  rerun_id: v0.3-pilot-stewart-ch1
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Iff proof captured via Proof.parts[] direction-cases per policy 06,
+  parallel structure to proof.vertical-line-test.stewart.

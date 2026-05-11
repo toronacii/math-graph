@@ -1,0 +1,24 @@
+id: proof.diameter-properties.rudin
+type: proof
+status: draft
+
+proves: proposition.diameter-properties
+
+uses:
+  - definition.diameter-of-set
+  - definition.compact-set
+  - corollary.nested-compact-nonempty
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.10"
+
+confidence: high
+notes: >
+  (a) diam E̅ = diam E by approximating closure points with E points.
+  (b) Intersection nonempty by Thm 2.36; if more than one point,
+  diam K > 0 contradicts diam K_n → 0.

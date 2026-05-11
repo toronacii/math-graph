@@ -1,0 +1,30 @@
+id: definition.arc-length-polar
+type: definition
+status: draft
+
+title:
+  en: Arc length in polar coordinates
+  es: Longitud de arco en coordenadas polares
+
+statement:
+  natural:
+    es: >
+      La longitud de la curva polar r = f(θ), a ≤ θ ≤ b, es
+      L = ∫_a^b √(r² + [dr/dθ]²) dθ.
+    en: >
+      The length of the polar curve r = f(θ), a ≤ θ ≤ b, is
+      L = ∫_a^b √(r² + [dr/dθ]²) dθ.
+  latex: |
+    L = \int_a^b \sqrt{r^2 + \left(\frac{dr}{d\theta}\right)^2}\,d\theta
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "10"
+    section: "10.4"
+
+confidence: high
+notes: >
+  Derived from the parametric arc length formula by substituting
+  x = r cos θ, y = r sin θ.

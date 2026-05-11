@@ -1,0 +1,37 @@
+id: theorem.ftc-part2
+type: theorem
+status: draft
+
+title:
+  en: The Fundamental Theorem of Calculus, Part 2
+  es: Teorema fundamental del cálculo, parte 2
+
+statement:
+  natural:
+    es: >
+      Si f es continua en [a, b], entonces ∫_a^b f(x) dx = F(b) - F(a),
+      donde F es cualquier antiderivada de f, es decir, una función
+      tal que F' = f.
+    en: >
+      If f is continuous on [a, b], then ∫_a^b f(x) dx = F(b) - F(a),
+      where F is any antiderivative of f, that is, a function such
+      that F' = f.
+  latex: |
+    \int_a^b f(x)\,dx = F(b) - F(a)
+    \quad\text{where}\quad F' = f
+
+proved_by:
+  - proof.ftc-part2.stewart
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "5"
+    section: "5.3"
+
+confidence: high
+notes: >
+  FTC Part 2 (the Evaluation Theorem) provides the practical
+  method for computing definite integrals. Stewart often writes
+  F(b) - F(a) = F(x)|_a^b = [F(x)]_a^b.

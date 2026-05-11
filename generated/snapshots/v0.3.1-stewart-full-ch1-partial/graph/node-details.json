@@ -1,0 +1,542 @@
+{
+  "definition.absolute-value": {
+    "id": "definition.absolute-value",
+    "kind": "statement",
+    "natural": {
+      "en": {
+        "is_original": false,
+        "text": "The absolute value of a number a, denoted |a|, is defined as a if a ≥ 0 and as -a if a < 0. Geometrically, |a| represents the distance from a to the origin on the number line."
+      },
+      "es": {
+        "is_original": true,
+        "text": "El valor absoluto de un número a, denotado |a|, se define como a si a ≥ 0 y como -a si a < 0. Geométricamente, |a| representa la distancia de a al origen en la recta numérica."
+      }
+    },
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "text": "Absolute value"
+      },
+      "es": {
+        "is_original": true,
+        "text": "Valor absoluto"
+      }
+    },
+    "type": "definition"
+  },
+  "definition.algebraic-function": {
+    "id": "definition.algebraic-function",
+    "kind": "statement",
+    "natural": {
+      "en": {
+        "is_original": false,
+        "text": "A function f is called algebraic if it can be built from polynomials by algebraic operations (addition, subtraction, multiplication, division, and taking roots). Every rational function is automatically algebraic."
+      },
+      "es": {
+        "is_original": true,
+        "text": "Una función f se llama algebraica si puede construirse a partir de polinomios mediante operaciones algebraicas (suma, resta, multiplicación, división y extracción de raíces). Toda función racional es automáticamente algebraica."
+      }
+    },
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "text": "Algebraic function"
+      },
+      "es": {
+        "is_original": true,
+        "text": "Función algebraica"
+      }
+    },
+    "type": "definition"
+  },
+  "definition.decreasing-function": {
+    "id": "definition.decreasing-function",
+    "kind": "statement",
+    "natural": {
+      "en": {
+        "is_original": false,
+        "text": "A function f is called decreasing on an interval I if f(x₁) > f(x₂) whenever x₁ < x₂ in I."
+      },
+      "es": {
+        "is_original": true,
+        "text": "Una función f se llama decreciente sobre un intervalo I si f(x₁) > f(x₂) siempre que x₁ < x₂ en I."
+      }
+    },
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "text": "Decreasing function"
+      },
+      "es": {
+        "is_original": true,
+        "text": "Función decreciente"
+      }
+    },
+    "type": "definition"
+  },
+  "definition.dependent-variable": {
+    "id": "definition.dependent-variable",
+    "kind": "statement",
+    "natural": {
+      "en": {
+        "is_original": false,
+        "text": "The symbol that represents a number in the range of a function f, depending on the choice of independent variable, is called the dependent variable."
+      },
+      "es": {
+        "is_original": true,
+        "text": "El símbolo que representa un número en el rango de una función f, dependiente de la elección de la variable independiente, se llama variable dependiente."
+      }
+    },
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "text": "Dependent variable"
+      },
+      "es": {
+        "is_original": true,
+        "text": "Variable dependiente"
+      }
+    },
+    "type": "definition"
+  },
+  "definition.domain": {
+    "id": "definition.domain",
+    "kind": "statement",
+    "natural": {
+      "en": {
+        "is_original": false,
+        "text": "The domain of a function f is the set D of all elements to which f assigns a value; equivalently, the set of admissible inputs of f."
+      },
+      "es": {
+        "is_original": true,
+        "text": "El dominio de una función f es el conjunto D de todos los elementos a los que f asigna un valor; equivalentemente, es el conjunto de entradas admisibles de f."
+      }
+    },
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "text": "Domain"
+      },
+      "es": {
+        "is_original": true,
+        "text": "Dominio"
+      }
+    },
+    "type": "definition"
+  },
+  "definition.even-function": {
+    "id": "definition.even-function",
+    "kind": "statement",
+    "natural": {
+      "en": {
+        "is_original": false,
+        "text": "A function f is even if f(-x) = f(x) for every x in its domain. Geometrically, the graph of an even function is symmetric about the y-axis."
+      },
+      "es": {
+        "is_original": true,
+        "text": "Una función f es par si para todo x en su dominio se cumple f(-x) = f(x). Geométricamente, la gráfica de una función par es simétrica respecto al eje y."
+      }
+    },
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "text": "Even function"
+      },
+      "es": {
+        "is_original": true,
+        "text": "Función par"
+      }
+    },
+    "type": "definition"
+  },
+  "definition.function": {
+    "id": "definition.function",
+    "kind": "statement",
+    "natural": {
+      "en": {
+        "is_original": false,
+        "text": "A function f is a rule that assigns to each element x in a set D exactly one element, called f(x), in a set E."
+      },
+      "es": {
+        "is_original": true,
+        "text": "Una función f es una regla que asigna a cada elemento x de un conjunto D exactamente un elemento, llamado f(x), de un conjunto E."
+      }
+    },
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "text": "Function"
+      },
+      "es": {
+        "is_original": true,
+        "text": "Función"
+      }
+    },
+    "type": "definition"
+  },
+  "definition.graph-of-function": {
+    "id": "definition.graph-of-function",
+    "kind": "statement",
+    "natural": {
+      "en": {
+        "is_original": false,
+        "text": "If f is a function with domain D, its graph is the set of ordered pairs {(x, f(x)) : x ∈ D}, viewed as a subset of the coordinate plane."
+      },
+      "es": {
+        "is_original": true,
+        "text": "Si f es una función con dominio D, entonces su gráfica es el conjunto de pares ordenados {(x, f(x)) : x ∈ D}, considerado como subconjunto del plano coordenado."
+      }
+    },
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "text": "Graph of a function"
+      },
+      "es": {
+        "is_original": true,
+        "text": "Gráfica de una función"
+      }
+    },
+    "type": "definition"
+  },
+  "definition.increasing-function": {
+    "id": "definition.increasing-function",
+    "kind": "statement",
+    "natural": {
+      "en": {
+        "is_original": false,
+        "text": "A function f is called increasing on an interval I if f(x₁) < f(x₂) whenever x₁ < x₂ in I."
+      },
+      "es": {
+        "is_original": true,
+        "text": "Una función f se llama creciente sobre un intervalo I si f(x₁) < f(x₂) siempre que x₁ < x₂ en I."
+      }
+    },
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "text": "Increasing function"
+      },
+      "es": {
+        "is_original": true,
+        "text": "Función creciente"
+      }
+    },
+    "type": "definition"
+  },
+  "definition.independent-variable": {
+    "id": "definition.independent-variable",
+    "kind": "statement",
+    "natural": {
+      "en": {
+        "is_original": false,
+        "text": "The symbol that represents an arbitrary number in the domain of a function f is called the independent variable."
+      },
+      "es": {
+        "is_original": true,
+        "text": "El símbolo que representa un número arbitrario en el dominio de una función f se llama variable independiente."
+      }
+    },
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "text": "Independent variable"
+      },
+      "es": {
+        "is_original": true,
+        "text": "Variable independiente"
+      }
+    },
+    "type": "definition"
+  },
+  "definition.linear-function": {
+    "id": "definition.linear-function",
+    "kind": "statement",
+    "natural": {
+      "en": {
+        "is_original": false,
+        "text": "A linear function is a function whose graph is a straight line; equivalently, it can be written as f(x) = m x + b, where m is the slope and b is the y-intercept."
+      },
+      "es": {
+        "is_original": true,
+        "text": "Una función lineal es una función cuya gráfica es una recta; equivalentemente, puede escribirse en la forma f(x) = m x + b, donde m es la pendiente y b es la ordenada al origen."
+      }
+    },
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "text": "Linear function"
+      },
+      "es": {
+        "is_original": true,
+        "text": "Función lineal"
+      }
+    },
+    "type": "definition"
+  },
+  "definition.mathematical-model": {
+    "id": "definition.mathematical-model",
+    "kind": "statement",
+    "natural": {
+      "en": {
+        "is_original": false,
+        "text": "A mathematical model is a mathematical description (often via a function or equation) of a real-world phenomenon — such as a population size, product demand, or pollutant concentration — whose purpose is to understand the phenomenon and predict its future behavior."
+      },
+      "es": {
+        "is_original": true,
+        "text": "Un modelo matemático es una descripción matemática (a menudo mediante una función o ecuación) de un fenómeno del mundo real, como el tamaño de una población, la demanda de un producto o la concentración de un contaminante en el aire, cuyo propósito es entender el fenómeno y hacer predicciones acerca de su comportamiento futuro."
+      }
+    },
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "text": "Mathematical model"
+      },
+      "es": {
+        "is_original": true,
+        "text": "Modelo matemático"
+      }
+    },
+    "type": "definition"
+  },
+  "definition.odd-function": {
+    "id": "definition.odd-function",
+    "kind": "statement",
+    "natural": {
+      "en": {
+        "is_original": false,
+        "text": "A function f is odd if f(-x) = -f(x) for every x in its domain. Geometrically, the graph of an odd function is symmetric about the origin."
+      },
+      "es": {
+        "is_original": true,
+        "text": "Una función f es impar si para todo x en su dominio se cumple f(-x) = -f(x). Geométricamente, la gráfica de una función impar es simétrica respecto al origen."
+      }
+    },
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "text": "Odd function"
+      },
+      "es": {
+        "is_original": true,
+        "text": "Función impar"
+      }
+    },
+    "type": "definition"
+  },
+  "definition.piecewise-function": {
+    "id": "definition.piecewise-function",
+    "kind": "statement",
+    "natural": {
+      "en": {
+        "is_original": false,
+        "text": "A piecewise-defined function is one whose domain is split into disjoint subsets, with a distinct formula for f(x) assigned to each subset."
+      },
+      "es": {
+        "is_original": true,
+        "text": "Una función definida por partes (por trozos) es aquella cuyo dominio se divide en subconjuntos disjuntos, asignando a cada subconjunto una fórmula distinta para calcular f(x)."
+      }
+    },
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "text": "Piecewise-defined function"
+      },
+      "es": {
+        "is_original": true,
+        "text": "Función definida por partes"
+      }
+    },
+    "type": "definition"
+  },
+  "definition.polynomial": {
+    "id": "definition.polynomial",
+    "kind": "statement",
+    "natural": {
+      "en": {
+        "is_original": false,
+        "text": "A function P is called a polynomial if it can be written P(x) = aₙ xⁿ + aₙ₋₁ xⁿ⁻¹ + ⋯ + a₁ x + a₀, where n is a non-negative integer and the coefficients a₀, a₁, …, aₙ are real constants. If aₙ ≠ 0, n is the degree of the polynomial. The domain of a polynomial is R."
+      },
+      "es": {
+        "is_original": true,
+        "text": "Una función P se llama polinomio si se puede expresar en la forma P(x) = aₙ xⁿ + aₙ₋₁ xⁿ⁻¹ + ⋯ + a₁ x + a₀, donde n es un entero no negativo y los coeficientes a₀, a₁, …, aₙ son constantes (números reales). Si aₙ ≠ 0, n es el grado del polinomio. El dominio de un polinomio es R."
+      }
+    },
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "text": "Polynomial"
+      },
+      "es": {
+        "is_original": true,
+        "text": "Polinomio"
+      }
+    },
+    "type": "definition"
+  },
+  "definition.power-function": {
+    "id": "definition.power-function",
+    "kind": "statement",
+    "natural": {
+      "en": {
+        "is_original": false,
+        "text": "A function of the form f(x) = xᵃ, where a is a constant, is called a power function."
+      },
+      "es": {
+        "is_original": true,
+        "text": "Una función de la forma f(x) = xᵃ, donde a es una constante, se llama función potencia."
+      }
+    },
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "text": "Power function"
+      },
+      "es": {
+        "is_original": true,
+        "text": "Función potencia"
+      }
+    },
+    "type": "definition"
+  },
+  "definition.range": {
+    "id": "definition.range",
+    "kind": "statement",
+    "natural": {
+      "en": {
+        "is_original": false,
+        "text": "The range of a function f with domain D is the set of values f(x) for x in D, that is, {f(x) : x ∈ D}."
+      },
+      "es": {
+        "is_original": true,
+        "text": "El rango de una función f con dominio D es el conjunto de valores f(x) para x en D, esto es, {f(x) : x ∈ D}."
+      }
+    },
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "text": "Range"
+      },
+      "es": {
+        "is_original": true,
+        "text": "Rango"
+      }
+    },
+    "type": "definition"
+  },
+  "definition.rational-function": {
+    "id": "definition.rational-function",
+    "kind": "statement",
+    "natural": {
+      "en": {
+        "is_original": false,
+        "text": "A rational function f is a ratio of two polynomials, f(x) = P(x)/Q(x), where P and Q are polynomials. Its domain consists of all x such that Q(x) ≠ 0."
+      },
+      "es": {
+        "is_original": true,
+        "text": "Una función racional f es una razón de dos polinomios, es decir, f(x) = P(x)/Q(x), donde P y Q son polinomios. El dominio consta de todos los valores de x tales que Q(x) ≠ 0."
+      }
+    },
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "text": "Rational function"
+      },
+      "es": {
+        "is_original": true,
+        "text": "Función racional"
+      }
+    },
+    "type": "definition"
+  },
+  "definition.trigonometric-function": {
+    "id": "definition.trigonometric-function",
+    "kind": "statement",
+    "natural": {
+      "en": {
+        "is_original": false,
+        "text": "The trigonometric functions are the real-valued functions sine (sin), cosine (cos), tangent (tan), cotangent (cot), secant (sec), and cosecant (csc), defined via angular relations. In calculus, radian measure is used; sin and cos have domain R and range [-1, 1]."
+      },
+      "es": {
+        "is_original": true,
+        "text": "Las funciones trigonométricas son las funciones reales seno (sin), coseno (cos), tangente (tan), cotangente (cot), secante (sec) y cosecante (csc), definidas a partir de relaciones angulares. En cálculo se utiliza la medida en radianes; sin y cos tienen dominio R y rango [-1, 1]."
+      }
+    },
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "text": "Trigonometric function"
+      },
+      "es": {
+        "is_original": true,
+        "text": "Función trigonométrica"
+      }
+    },
+    "type": "definition"
+  },
+  "proof.vertical-line-test.stewart": {
+    "id": "proof.vertical-line-test.stewart",
+    "kind": "proof",
+    "proves": "proposition.vertical-line-test",
+    "status": "extracted",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      {
+        "confidence": "high",
+        "id": "definition.function",
+        "role": "definition"
+      },
+      {
+        "confidence": "high",
+        "id": "definition.graph-of-function",
+        "role": "definition"
+      }
+    ]
+  },
+  "proposition.vertical-line-test": {
+    "id": "proposition.vertical-line-test",
+    "kind": "statement",
+    "natural": {
+      "en": {
+        "is_original": false,
+        "text": "A curve in the xy-plane is the graph of a function of x if and only if no vertical line intersects the curve more than once."
+      },
+      "es": {
+        "is_original": true,
+        "text": "Una curva en el plano xy es la gráfica de una función de x si y sólo si ninguna línea vertical corta a la curva en más de un punto."
+      }
+    },
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "text": "Vertical line test"
+      },
+      "es": {
+        "is_original": true,
+        "text": "Prueba de la línea vertical"
+      }
+    },
+    "type": "proposition"
+  }
+}

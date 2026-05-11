@@ -1,0 +1,28 @@
+id: theorem.monotone-one-sided-limits
+type: theorem
+status: draft
+
+title:
+  en: One-Sided Limits of Monotone Functions
+
+statement:
+  natural:
+    en: >
+      Let f be monotonically increasing on (a, b). Then f(x+) and
+      f(x−) exist at every point x of (a, b). More precisely,
+      sup_{a<t<x} f(t) = f(x−) ≤ f(x) ≤ f(x+) = inf_{x<t<b} f(t).
+      Furthermore, if a < x < y < b, then f(x+) ≤ f(y−).
+  latex: |
+    \sup_{a < t < x} f(t) = f(x-) \leq f(x) \leq f(x+) = \inf_{x < t < b} f(t)
+
+proved_by:
+  - proof.monotone-one-sided-limits.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "4"
+    section: "4.29"
+
+confidence: high

@@ -1,0 +1,89 @@
+schema_version: "0.3.0"
+id: definition.mathematical-model
+type: definition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Modelo matemático
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Mathematical model
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Un modelo matemático es una descripción matemática (a menudo
+        por medio de una función o una ecuación) de un fenómeno del
+        mundo real.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        A mathematical model is a mathematical description (often by
+        means of a function or an equation) of a real-world phenomenon.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    status: not_applicable
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on: []
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.2"
+    locator: "Sección 1.2 — Modelos matemáticos: un catálogo de funciones esenciales"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: []
+
+ambient:
+  structures: []
+
+ontology:
+  semantic_kind: [pedagogical]
+  keywords: [model, modeling, application]
+
+generality: []
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: medium
+  semantic_confidence: high
+  translation_confidence: medium
+  latex_confidence: null
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.0"
+  rerun_id: v0.3-pilot-stewart-ch1
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Pedagogical / meta-mathematical concept. Classified under
+  `semantic_kind: pedagogical` (added in v0.3.1 schema patch in
+  response to pilot audit finding F1).

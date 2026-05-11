@@ -1,0 +1,23 @@
+id: corollary.uniqueness-of-function-limit
+type: corollary
+status: draft
+
+title:
+  en: Uniqueness of Function Limits
+
+statement:
+  natural:
+    en: >
+      If f has a limit at p, this limit is unique.
+
+proved_by:
+  - proof.uniqueness-of-function-limit.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "4"
+    section: "4.2"
+
+confidence: high

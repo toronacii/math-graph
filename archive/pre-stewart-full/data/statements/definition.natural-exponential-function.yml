@@ -1,0 +1,112 @@
+schema_version: "0.3.0"
+id: definition.natural-exponential-function
+type: definition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Función exponencial natural
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Natural exponential function
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        La función exponencial natural es la función exponencial
+        f(x) = eˣ, donde e es el número de Euler, definido como el
+        número tal que la recta tangente a y = eˣ en el punto (0, 1)
+        tiene pendiente exactamente 1. El valor de e es
+        aproximadamente 2.71828.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        The natural exponential function is the exponential function
+        f(x) = eˣ, where e is Euler's number, defined as the number
+        such that the tangent line to y = eˣ at the point (0, 1) has
+        slope exactly 1. The value of e is approximately 2.71828.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      f(x) = e^x, \qquad e \approx 2.71828
+    status: present
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: definition.exponential-function
+    role: specializes
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.4"
+    locator: "La función exponencial natural (sección 1.4)"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [algebra]
+
+ambient:
+  structures: [real-line]
+  notes: >
+    Stewart introduces e via a tangent-slope characterization, which
+    presupposes the (intuitive) notion of derivative. Rigorous
+    constructions of e (limit, series, integral) appear in later
+    chapters / Rudin.
+
+ontology:
+  semantic_kind: [object]
+  keywords: [natural-exponential, euler-number, e, base-e]
+
+generality:
+  - target: definition.exponential-function
+    relation: special_case_of
+    notes: >
+      The natural exponential is the exponential with base a = e.
+      Recorded on the special node per policy 04.
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: medium
+  translation_confidence: medium
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.0"
+  rerun_id: v0.3-pilot-stewart-ch1
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Audit finding: Stewart's tangent-slope definition of e is
+  pedagogically circular for v0.3 dependency tracking — it
+  references differentiation before differentiation has been
+  defined. Logged as `semantic_confidence: medium`. Merge
+  candidate with Rudin's analytic definitions of e (limit
+  (1+1/n)^n, series Σ 1/n!) once Rudin Ch3/Ch8 reprocess
+  under v0.3.

@@ -1,0 +1,7 @@
+snapshot:
+  label: pre-stewart-full-2026-05-11
+  created: '2026-05-11T22:16:17.029486+00:00'
+  status: frozen
+  policy: read-only-historical-archive
+file_count: 666
+hash_index: hashes.txt

@@ -1,0 +1,23 @@
+id: proof.differentiable-implies-continuous.rudin
+type: proof
+status: draft
+
+proves: theorem.differentiable-implies-continuous
+
+uses:
+  - definition.derivative-at-point
+  - theorem.limit-laws
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "5"
+    section: "5.2"
+
+confidence: high
+notes: >
+  As t → x: f(t) - f(x) = [(f(t) - f(x))/(t - x)] · (t - x) →
+  f'(x) · 0 = 0, by Theorem 4.4 (limit laws). Hence f is continuous
+  at x.

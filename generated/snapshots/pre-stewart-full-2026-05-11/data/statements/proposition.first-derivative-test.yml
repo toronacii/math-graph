@@ -1,0 +1,37 @@
+id: proposition.first-derivative-test
+type: proposition
+status: draft
+
+title:
+  en: The First Derivative Test
+  es: Prueba de la primera derivada
+
+statement:
+  natural:
+    es: >
+      Suponga que c es un número crítico de una función continua f.
+      (a) Si f' cambia de positiva a negativa en c, entonces f tiene
+      un máximo local en c. (b) Si f' cambia de negativa a positiva
+      en c, entonces f tiene un mínimo local en c. (c) Si f' no
+      cambia de signo en c, entonces f no tiene extremo local en c.
+    en: >
+      Suppose that c is a critical number of a continuous function f.
+      (a) If f' changes from positive to negative at c, then f has
+      a local maximum at c. (b) If f' changes from negative to
+      positive at c, then f has a local minimum at c. (c) If f' does
+      not change sign at c, then f has no local extremum at c.
+
+proved_by:
+  - proof.first-derivative-test.stewart
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "4"
+    section: "4.3"
+
+confidence: high
+notes: >
+  Follows from the increasing/decreasing test applied to intervals
+  on either side of the critical number.

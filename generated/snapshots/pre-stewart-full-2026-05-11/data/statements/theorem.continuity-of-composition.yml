@@ -1,0 +1,36 @@
+id: theorem.continuity-of-composition
+type: theorem
+status: draft
+
+title:
+  en: Continuity of composite functions
+  es: Continuidad de funciones compuestas
+
+statement:
+  natural:
+    es: >
+      Si f es continua en b y lim(x→a) g(x) = b, entonces
+      lim(x→a) f(g(x)) = f(b). En otras palabras,
+      lim(x→a) f(g(x)) = f(lim(x→a) g(x)). En particular, si g es
+      continua en a y f es continua en g(a), entonces la función
+      compuesta f ∘ g es continua en a.
+    en: >
+      If f is continuous at b and lim(x→a) g(x) = b, then
+      lim(x→a) f(g(x)) = f(b). In other words,
+      lim(x→a) f(g(x)) = f(lim(x→a) g(x)). In particular, if g is
+      continuous at a and f is continuous at g(a), then the composite
+      function f ∘ g is continuous at a.
+  latex: |
+    \lim_{x \to a} f(g(x)) = f\!\left(\lim_{x \to a} g(x)\right)
+
+proved_by:
+  - proof.continuity-of-composition.stewart
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.5"
+
+confidence: medium

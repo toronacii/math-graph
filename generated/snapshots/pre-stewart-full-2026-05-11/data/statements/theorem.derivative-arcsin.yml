@@ -1,0 +1,32 @@
+id: theorem.derivative-arcsin
+type: theorem
+status: draft
+
+title:
+  en: Derivative of arcsine
+  es: Derivada del arcoseno
+
+statement:
+  natural:
+    es: >
+      d/dx(sin⁻¹ x) = 1/√(1 - x²), para -1 < x < 1.
+    en: >
+      d/dx(sin⁻¹ x) = 1/√(1 - x²), for -1 < x < 1.
+  latex: |
+    \frac{d}{dx}\left(\sin^{-1} x\right) = \frac{1}{\sqrt{1 - x^2}}
+
+proved_by:
+  - proof.derivative-arcsin.stewart
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.5"
+
+confidence: high
+notes: >
+  Derived via implicit differentiation: if y = sin⁻¹ x then
+  sin y = x, so cos y · dy/dx = 1, giving dy/dx = 1/cos y
+  = 1/√(1 - sin²y) = 1/√(1 - x²).

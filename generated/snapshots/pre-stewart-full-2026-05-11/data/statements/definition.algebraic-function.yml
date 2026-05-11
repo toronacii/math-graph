@@ -1,0 +1,105 @@
+schema_version: "0.3.0"
+id: definition.algebraic-function
+type: definition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Función algebraica
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Algebraic function
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Una función es algebraica si puede construirse a partir de
+        polinomios mediante operaciones algebraicas (suma, resta,
+        multiplicación, división y extracción de raíces). Toda función
+        racional es automáticamente algebraica.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        A function is algebraic if it can be constructed from polynomials
+        using algebraic operations (addition, subtraction, multiplication,
+        division, and root extraction). Every rational function is
+        automatically algebraic.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: ""
+    status: not_applicable
+    notes: >
+      Stewart describes the class of algebraic functions in prose,
+      without giving a single defining formula.
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: definition.polynomial
+    role: uses_concept
+    confidence: high
+  - id: definition.rational-function
+    role: uses_concept
+    confidence: high
+  - id: definition.function
+    role: specializes
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.2"
+    locator: "Funciones algebraicas (sección 1.2)"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [algebra]
+
+ambient:
+  structures: [real-line]
+  notes: >
+    Stewart introduces algebraic functions as real-valued functions
+    obtainable from polynomials via finitely many algebraic operations.
+    The formal field-theoretic definition (roots of polynomials with
+    polynomial coefficients) is out of scope at this level.
+
+ontology:
+  semantic_kind: [object]
+  keywords: [algebraic-function, polynomial, root, algebraic-operations]
+
+generality: []
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: medium
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.0"
+  rerun_id: v0.3-pilot-stewart-ch1
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []

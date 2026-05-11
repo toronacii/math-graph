@@ -1,0 +1,33 @@
+id: theorem.constant-multiple-rule
+type: theorem
+status: draft
+
+title:
+  en: The Constant Multiple Rule
+  es: Regla del múltiplo constante
+
+statement:
+  natural:
+    es: >
+      Si c es una constante y f es una función diferenciable, entonces
+      d/dx[cf(x)] = c d/dx f(x).
+    en: >
+      If c is a constant and f is a differentiable function, then
+      d/dx[cf(x)] = c d/dx f(x).
+  latex: |
+    \frac{d}{dx}\bigl[c\,f(x)\bigr] = c\,\frac{d}{dx}f(x)
+
+proved_by:
+  - proof.constant-multiple-rule.stewart
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.1"
+
+confidence: high
+notes: >
+  Proved using the definition of the derivative and the constant
+  multiple law for limits.

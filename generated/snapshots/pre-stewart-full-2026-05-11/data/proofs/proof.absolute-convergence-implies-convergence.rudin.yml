@@ -1,0 +1,21 @@
+id: proof.absolute-convergence-implies-convergence.rudin
+type: proof
+status: draft
+
+proves: theorem.absolute-convergence-implies-convergence
+
+uses:
+  - definition.absolute-convergence
+  - proposition.cauchy-criterion-series
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.45"
+
+confidence: high
+notes: >
+  |Σa_k| ≤ Σ|a_k| plus Cauchy criterion.

@@ -1,0 +1,29 @@
+id: definition.set-membership-subset
+type: definition
+status: draft
+
+title:
+  en: Set, Membership, and Subset
+
+statement:
+  natural:
+    en: >
+      If A is any set, we write x in A to indicate that x is a member of A.
+      If x is not a member of A, we write x not in A. The set which contains
+      no element is called the empty set. If A and B are sets, and if every
+      element of A is an element of B, we say that A is a subset of B, and
+      write A ⊂ B. If in addition there is an element of B not in A, then A
+      is a proper subset of B. If A ⊂ B and B ⊂ A, we write A = B.
+  latex: |
+    x \in A, \quad x \notin A, \quad A \subset B, \quad A = B
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "1"
+    section: "1.3"
+
+confidence: high
+notes: >
+  Rudin 1.3. Standard set-theoretic notation used throughout the book.

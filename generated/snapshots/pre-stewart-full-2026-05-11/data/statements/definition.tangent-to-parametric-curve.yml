@@ -1,0 +1,31 @@
+id: definition.tangent-to-parametric-curve
+type: definition
+status: draft
+
+title:
+  en: Tangent to a parametric curve
+  es: Tangente a una curva paramétrica
+
+statement:
+  natural:
+    es: >
+      Si x = f(t) y y = g(t) son ecuaciones paramétricas donde f y g
+      son diferenciables y dx/dt ≠ 0, entonces la pendiente de la
+      recta tangente a la curva paramétrica es dy/dx = (dy/dt)/(dx/dt).
+    en: >
+      If x = f(t) and y = g(t) are parametric equations where f and g
+      are differentiable and dx/dt ≠ 0, then the slope of the tangent
+      line to the parametric curve is dy/dx = (dy/dt)/(dx/dt).
+  latex: |
+    \frac{dy}{dx} = \frac{dy/dt}{dx/dt}
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "10"
+    section: "10.2"
+
+confidence: high
+notes: >
+  Follows from the chain rule: dy/dt = (dy/dx)(dx/dt).

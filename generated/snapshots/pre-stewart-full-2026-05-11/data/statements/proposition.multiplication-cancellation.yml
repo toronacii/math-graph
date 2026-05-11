@@ -1,0 +1,27 @@
+id: proposition.multiplication-cancellation
+type: proposition
+status: draft
+
+title:
+  en: Consequences of Multiplication Axioms
+
+statement:
+  natural:
+    en: >
+      The axioms for multiplication imply: (a) If x ≠ 0 and xy = xz
+      then y = z. (b) If x ≠ 0 and xy = x then y = 1. (c) If x ≠ 0
+      and xy = 1 then y = 1/x. (d) If x ≠ 0 then 1/(1/x) = x.
+
+proved_by:
+  - proof.multiplication-cancellation.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "1"
+    section: "1.15"
+
+confidence: high
+notes: >
+  Rudin Proposition 1.15. Proof is analogous to Proposition 1.14.

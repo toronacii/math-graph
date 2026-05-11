@@ -1,0 +1,31 @@
+id: theorem.derivative-tan
+type: theorem
+status: draft
+
+title:
+  en: Derivative of tangent
+  es: Derivada de la tangente
+
+statement:
+  natural:
+    es: >
+      d/dx(tan x) = sec²x.
+    en: >
+      d/dx(tan x) = sec²x.
+  latex: |
+    \frac{d}{dx}(\tan x) = \sec^2 x
+
+proved_by:
+  - proof.derivative-tan.stewart
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.3"
+
+confidence: high
+notes: >
+  tan x = sin x / cos x. Apply the quotient rule using
+  d/dx(sin x) = cos x and d/dx(cos x) = -sin x.

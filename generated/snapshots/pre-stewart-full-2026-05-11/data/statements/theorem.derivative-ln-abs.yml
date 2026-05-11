@@ -1,0 +1,31 @@
+id: theorem.derivative-ln-abs
+type: theorem
+status: draft
+
+title:
+  en: Derivative of ln|x|
+  es: Derivada de ln|x|
+
+statement:
+  natural:
+    es: >
+      d/dx(ln|x|) = 1/x, para x ≠ 0.
+    en: >
+      d/dx(ln|x|) = 1/x, for x ≠ 0.
+  latex: |
+    \frac{d}{dx}(\ln|x|) = \frac{1}{x}
+
+proved_by:
+  - proof.derivative-ln-abs.stewart
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.6"
+
+confidence: high
+notes: >
+  For x > 0, ln|x| = ln x so d/dx = 1/x. For x < 0,
+  ln|x| = ln(-x) so d/dx = (1/(-x))·(-1) = 1/x by the chain rule.

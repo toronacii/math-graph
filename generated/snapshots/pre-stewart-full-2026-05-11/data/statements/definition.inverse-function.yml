@@ -1,0 +1,105 @@
+schema_version: "0.3.0"
+id: definition.inverse-function
+type: definition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Función inversa
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Inverse function
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Sea f una función inyectiva con dominio A y rango B. Entonces
+        su función inversa f⁻¹ tiene dominio B y rango A y se define
+        por f⁻¹(y) = x si y sólo si f(x) = y, para toda y en B.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        Let f be a one-to-one function with domain A and range B. Then
+        its inverse function f⁻¹ has domain B and range A and is
+        defined by f⁻¹(y) = x if and only if f(x) = y, for every y
+        in B.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      f^{-1}(y) = x \iff f(x) = y, \qquad y \in B
+    status: present
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: definition.function
+    role: uses_concept
+    confidence: high
+  - id: definition.one-to-one-function
+    role: uses_concept
+    confidence: high
+  - id: definition.domain
+    role: uses_concept
+    confidence: high
+  - id: definition.range
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.5"
+    locator: "Funciones inversas (sección 1.5)"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [set-theory]
+
+ambient:
+  structures: [real-line]
+  notes: >
+    Stewart treats inverses for real-valued functions of a real
+    variable. Injectivity is required (no full inverse for general
+    functions); the surjective-onto-range adjustment is implicit
+    in defining f⁻¹ on B = range(f).
+
+ontology:
+  semantic_kind: [operator]
+  keywords: [inverse-function, injective, two-sided-inverse]
+
+generality: []
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: medium
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.0"
+  rerun_id: v0.3-pilot-stewart-ch1
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []

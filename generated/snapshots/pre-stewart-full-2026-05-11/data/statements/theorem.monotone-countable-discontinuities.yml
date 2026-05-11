@@ -1,0 +1,27 @@
+id: theorem.monotone-countable-discontinuities
+type: theorem
+status: draft
+
+title:
+  en: Monotone Functions Have at Most Countably Many Discontinuities
+
+statement:
+  natural:
+    en: >
+      Let f be monotonic on (a, b). Then the set of points of (a, b)
+      at which f is discontinuous is at most countable.
+  latex: |
+    f \text{ monotonic on } (a,b) \;\Rightarrow\;
+    \{x \in (a,b) : f \text{ discontinuous at } x\} \text{ is at most countable}
+
+proved_by:
+  - proof.monotone-countable-discontinuities.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "4"
+    section: "4.30"
+
+confidence: high

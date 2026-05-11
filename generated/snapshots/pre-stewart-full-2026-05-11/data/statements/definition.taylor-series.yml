@@ -1,0 +1,33 @@
+id: definition.taylor-series
+type: definition
+status: draft
+
+title:
+  en: Taylor series
+  es: Serie de Taylor
+
+statement:
+  natural:
+    es: >
+      Si f tiene una representación como serie de potencias en a,
+      es decir, f(x) = ∑_{n=0}^∞ cₙ(x-a)ⁿ con |x-a| < R, entonces
+      los coeficientes son cₙ = f⁽ⁿ⁾(a)/n!. La serie de Taylor de
+      f centrada en a es ∑_{n=0}^∞ f⁽ⁿ⁾(a)/n! · (x-a)ⁿ.
+      La serie de Maclaurin es el caso a = 0.
+    en: >
+      If f has a power series representation at a, that is,
+      f(x) = ∑_{n=0}^∞ cₙ(x-a)ⁿ with |x-a| < R, then the
+      coefficients are cₙ = f⁽ⁿ⁾(a)/n!. The Taylor series of f
+      centered at a is ∑_{n=0}^∞ f⁽ⁿ⁾(a)/n! · (x-a)ⁿ.
+      The Maclaurin series is the special case a = 0.
+  latex: |
+    f(x) = \sum_{n=0}^{\infty} \frac{f^{(n)}(a)}{n!}(x - a)^n
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "11"
+    section: "11.10"
+
+confidence: high

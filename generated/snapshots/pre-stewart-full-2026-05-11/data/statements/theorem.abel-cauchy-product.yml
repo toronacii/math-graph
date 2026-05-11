@@ -1,0 +1,29 @@
+id: theorem.abel-cauchy-product
+type: theorem
+status: draft
+
+title:
+  en: Abel's Theorem on Cauchy Products
+
+statement:
+  natural:
+    en: >
+      If Σa_n, Σb_n, Σc_n all converge to A, B, C respectively, and
+      c_n = a_0 b_n + a_1 b_{n-1} + ... + a_n b_0, then C = AB.
+
+  latex: |
+    \sum a_n = A,\; \sum b_n = B,\; \sum c_n = C,\; c_n = \sum_{k=0}^n a_k b_{n-k} \implies C = AB
+
+proved_by:
+  - proof.abel-cauchy-product.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.51"
+
+confidence: high
+notes: >
+  Theorem 3.51 from Rudin.

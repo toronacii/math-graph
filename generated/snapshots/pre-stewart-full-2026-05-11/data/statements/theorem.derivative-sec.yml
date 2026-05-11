@@ -1,0 +1,31 @@
+id: theorem.derivative-sec
+type: theorem
+status: draft
+
+title:
+  en: Derivative of secant
+  es: Derivada de la secante
+
+statement:
+  natural:
+    es: >
+      d/dx(sec x) = sec x tan x.
+    en: >
+      d/dx(sec x) = sec x tan x.
+  latex: |
+    \frac{d}{dx}(\sec x) = \sec x \tan x
+
+proved_by:
+  - proof.derivative-sec.stewart
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.3"
+
+confidence: high
+notes: >
+  sec x = 1/cos x. Apply the quotient rule using
+  d/dx(cos x) = -sin x.

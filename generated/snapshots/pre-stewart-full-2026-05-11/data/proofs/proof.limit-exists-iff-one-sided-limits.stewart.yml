@@ -1,0 +1,24 @@
+id: proof.limit-exists-iff-one-sided-limits.stewart
+type: proof
+status: draft
+
+proves: proposition.limit-exists-iff-one-sided-limits
+
+uses:
+  - definition.limit-of-function
+  - definition.left-hand-limit
+  - definition.right-hand-limit
+
+style: direct
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.2"
+
+confidence: medium
+notes: >
+  Follows from the epsilon-delta definitions: if both one-sided limits
+  equal L, then for any epsilon the appropriate delta works for x on
+  either side of a.

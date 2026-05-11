@@ -1,0 +1,28 @@
+id: proposition.series-addition
+type: proposition
+status: draft
+
+title:
+  en: Addition and Scalar Multiplication of Series
+
+statement:
+  natural:
+    en: >
+      If Σa_n = A and Σb_n = B, then Σ(a_n + b_n) = A + B, and Σca_n = cA.
+
+  latex: |
+    \sum(a_n + b_n) = A + B, \quad \sum c a_n = cA
+
+proved_by:
+  - proof.series-addition.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.47"
+
+confidence: high
+notes: >
+  Theorem 3.47 from Rudin. Classified as proposition per instructions.

@@ -1,0 +1,102 @@
+schema_version: "0.3.0"
+id: definition.reflection
+type: definition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Reflexiones de gráficas
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Reflections of graphs
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        La gráfica de y = -f(x) es la reflexión de la gráfica de
+        y = f(x) respecto al eje x. La gráfica de y = f(-x) es la
+        reflexión de la gráfica de y = f(x) respecto al eje y.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        The graph of y = -f(x) is the reflection of the graph of
+        y = f(x) about the x-axis. The graph of y = f(-x) is the
+        reflection of the graph of y = f(x) about the y-axis.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      y = -f(x) \quad \text{(eje } x\text{)}, \qquad y = f(-x) \quad \text{(eje } y\text{)}
+    status: present
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: definition.function
+    role: uses_concept
+    confidence: high
+  - id: definition.graph-of-function
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.3"
+    locator: "Transformaciones de funciones (sección 1.3)"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [geometry]
+
+ambient:
+  structures: [cartesian-plane]
+  notes: >
+    Reflections act on the graph as a subset of R²; treated
+    geometrically as an involution.
+
+ontology:
+  semantic_kind: [operator]
+  keywords: [reflection, axis-symmetry, transformation]
+
+generality: []
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: medium
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.0"
+  rerun_id: v0.3-pilot-stewart-ch1
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Reflection y = f(-x) about the y-axis coincides with the
+  defining identity for an even function (when f equals f(-x)).
+  Cross-reference candidate to definition.even-function and
+  definition.odd-function — flagged for graph-level review.

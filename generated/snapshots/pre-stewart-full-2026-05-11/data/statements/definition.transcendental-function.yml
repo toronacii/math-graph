@@ -1,0 +1,108 @@
+schema_version: "0.3.0"
+id: definition.transcendental-function
+type: definition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Función trascendente
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Transcendental function
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Una función trascendente es una función que no es algebraica.
+        Entre las funciones trascendentes se incluyen las funciones
+        trigonométricas, exponenciales y logarítmicas.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        A transcendental function is a function that is not algebraic.
+        Transcendental functions include the trigonometric, exponential,
+        and logarithmic functions.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: ""
+    status: not_applicable
+    notes: >
+      Defined negatively (complement of algebraic), so no canonical
+      single formula applies.
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: definition.algebraic-function
+    role: uses_concept
+    confidence: high
+  - id: definition.function
+    role: specializes
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.2"
+    locator: "Funciones trascendentes (sección 1.2)"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [algebra]
+
+ambient:
+  structures: [real-line]
+  notes: >
+    Stewart treats transcendental functions as real-valued functions on
+    R (or appropriate subsets), defined as the complement of the
+    algebraic class.
+
+ontology:
+  semantic_kind: [object]
+  keywords: [transcendental-function, non-algebraic, exponential, logarithmic, trigonometric]
+
+generality:
+  - target: definition.algebraic-function
+    relation: disjoint
+    notes: >
+      Transcendental and algebraic functions partition the class of
+      elementary functions: by definition no function is both. They
+      are disjoint, hence incomparable under generalization.
+      Overloaded use of `incomparable` for disjoint/complementary
+      classes — see audit finding (frozen vocab lacks `disjoint`).
+      Edge recorded on the alphabetically-earlier id per policy 04.
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: medium
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.0"
+  rerun_id: v0.3-pilot-stewart-ch1
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []

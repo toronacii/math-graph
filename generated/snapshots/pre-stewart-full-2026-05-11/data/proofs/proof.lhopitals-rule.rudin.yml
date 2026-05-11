@@ -1,0 +1,27 @@
+id: proof.lhopitals-rule.rudin
+type: proof
+status: draft
+
+proves: theorem.lhopitals-rule
+
+uses:
+  - theorem.generalized-mean-value-theorem
+  - definition.limit-extended-real
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "5"
+    section: "5.13"
+
+confidence: high
+notes: >
+  Case -∞ < A < +∞: Choose r with A < r < q. By hypothesis (13),
+  f'(x)/g'(x) < r near a. By the generalized MVT (5.9),
+  (f(x)-f(y))/(g(x)-g(y)) = f'(t)/g'(t) < r for some t between x and y.
+  For the 0/0 case: let x → a to get f(y)/g(y) <= r < q.
+  For the ∞/∞ case: multiply by (g(x)-g(y))/g(x) and let x → a
+  to get f(x)/g(x) < q. A symmetric argument with p < A gives
+  the lower bound. Cases A = +∞ and A = -∞ are handled similarly.

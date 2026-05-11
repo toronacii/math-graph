@@ -1,0 +1,168 @@
+weak_dependencies:
+
+  # Inherited from Chapter 1
+  - proof: proof.laws-of-exponents.stewart
+    proves: proposition.laws-of-exponents
+    issue: assumed-foundational-algebra
+    confidence: low
+    style: assumed
+    chapter: "1"
+    propagates_to:
+      - proof.laws-of-logarithms.stewart
+      - proof.change-of-base-formula.stewart
+      - proof.derivative-log-base-a.stewart
+    notes: Unchanged from Chapter 5.
+
+  # Inherited from Chapter 2
+  - proof: proof.intermediate-value-theorem.stewart
+    proves: theorem.intermediate-value-theorem
+    issue: assumed-completeness-axiom
+    confidence: low
+    style: assumed
+    chapter: "2"
+    propagates_to:
+      - proof.mean-value-theorem-integrals.stewart
+    notes: >
+      The IVT now has its first downstream consumer: the Mean Value
+      Theorem for Integrals proof uses IVT to guarantee the existence
+      of a point where f attains its average value. Previously the
+      IVT had no downstream propagation.
+
+  - proof: proof.limit-root-law.stewart
+    proves: theorem.limit-root-law
+    issue: incomplete-proof
+    confidence: low
+    style: epsilon-delta
+    chapter: "2"
+    propagates_to: []
+    notes: Unchanged from Chapter 5.
+
+  # Inherited from Chapter 4
+  - proof: proof.extreme-value-theorem.stewart
+    proves: theorem.extreme-value-theorem
+    issue: assumed-completeness-axiom
+    confidence: low
+    style: assumed
+    chapter: "4"
+    propagates_to:
+      - proof.rolles-theorem.stewart
+      - proof.mean-value-theorem.stewart
+      - proof.zero-derivative-constant.stewart
+      - proof.equal-derivatives-differ-by-constant.stewart
+      - proof.increasing-decreasing-test.stewart
+      - proof.first-derivative-test.stewart
+      - proof.concavity-test.stewart
+      - proof.second-derivative-test.stewart
+      - proof.lhopitals-rule.stewart
+      - proof.general-antiderivative.stewart
+      - proof.ftc-part2.stewart
+      - proof.net-change-theorem.stewart
+      - proof.substitution-rule-definite.stewart
+      - proof.integrals-symmetric-functions.stewart
+      - proof.mean-value-theorem-integrals.stewart
+    notes: >
+      EVT propagation extended to 15 downstream proofs (up from 14).
+      The MVT for Integrals now uses EVT directly in its proof.
+    resolution_path: >
+      Add the Completeness Axiom (or Bolzano-Weierstrass theorem) as
+      an axiom node, then provide a rigorous proof of EVT.
+
+  - proof: proof.lhopitals-rule.stewart
+    proves: theorem.lhopitals-rule
+    issue: partial-proof
+    confidence: medium
+    style: direct
+    chapter: "4"
+    propagates_to: []
+    notes: Unchanged from Chapter 5.
+
+  # Inherited from Chapter 5
+  - proof: proof.integrability-of-continuous-functions.stewart
+    proves: theorem.integrability-of-continuous-functions
+    issue: assumed-uniform-continuity
+    confidence: low
+    style: assumed
+    chapter: "5"
+    propagates_to:
+      - proof.integral-properties.stewart
+      - proof.integral-comparison.stewart
+      - proof.ftc-part1.stewart
+    notes: Unchanged from Chapter 5.
+
+implicit_algebraic_imports:
+
+  # All inherited, unchanged
+  - concept: Real number field axioms
+    used_by:
+      - definition.function
+      - definition.domain
+      - definition.range
+      - definition.epsilon-delta-limit
+      - definition.continuity-at-point
+    chapter: "1-2"
+    notes: Unchanged.
+
+  - concept: Precalculus trigonometry
+    used_by:
+      - definition.trigonometric-function
+      - theorem.limit-sinx-over-x
+      - proof.derivative-sin.stewart
+      - proof.derivative-cos.stewart
+    chapter: "1-3"
+    notes: Unchanged.
+
+  - concept: Triangle inequality
+    used_by:
+      - proof.limit-laws.stewart
+    chapter: "2"
+    notes: Unchanged.
+
+  - concept: Archimedean property
+    used_by:
+      - proof.limit-one-over-x-at-infinity.stewart
+    chapter: "2"
+    notes: Unchanged.
+
+  - concept: Binomial theorem
+    used_by:
+      - proof.power-rule.stewart
+    chapter: "3"
+    notes: Unchanged.
+
+  - concept: Pythagorean identity
+    used_by:
+      - proof.derivative-tan.stewart
+      - proof.derivative-cot.stewart
+      - proof.derivative-arcsin.stewart
+      - proof.derivative-arccos.stewart
+    chapter: "3"
+    notes: Unchanged.
+
+  - concept: Cauchy Mean Value Theorem
+    used_by:
+      - proof.lhopitals-rule.stewart
+    chapter: "4"
+    notes: Unchanged.
+
+  - concept: Summation identities and properties
+    used_by:
+      - definition.area-under-curve
+      - definition.definite-integral
+    chapter: "5"
+    notes: Unchanged.
+
+epistemic_debt_summary:
+  total_weak_proofs: 5
+  total_partial_proofs: 2
+  total_inherited_weak: 5
+  total_implicit_imports: 8
+  affected_chain_depth: 10
+  new_weak_since_chapter_5: 0
+  new_partial_since_chapter_5: 0
+  new_implicit_since_chapter_5: 0
+  critical_debt: >
+    No new epistemic debt introduced in Chapter 6. The EVT remains
+    the highest-impact weak dependency, now propagating to 15
+    downstream proofs. The IVT (also assumed) now has its first
+    consumer via the MVT for Integrals. Resolving the completeness
+    axiom would resolve both EVT and IVT simultaneously.

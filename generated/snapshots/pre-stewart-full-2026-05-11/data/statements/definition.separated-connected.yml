@@ -1,0 +1,22 @@
+id: definition.separated-connected
+type: definition
+status: draft
+
+title:
+  en: Separated and Connected Sets
+
+statement:
+  natural:
+    en: >
+      Two subsets A and B of a metric space X are separated if both A ∩ B̅ and A̅ ∩ B are empty. A set E ⊂ X is connected if E is not a union of two nonempty separated sets.
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "2"
+    section: "2.45"
+
+confidence: high
+notes: >
+  Definition 2.45 from Rudin. Connectedness defined via separation.

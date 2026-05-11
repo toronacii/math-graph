@@ -1,0 +1,23 @@
+id: proof.increasing-decreasing-test.rudin
+type: proof
+status: draft
+
+proves: proposition.increasing-decreasing-test
+
+uses:
+  - theorem.mean-value-theorem
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "5"
+    section: "5.11"
+
+confidence: high
+notes: >
+  For any x1, x2 in (a,b) with x1 < x2, MVT gives
+  f(x2) - f(x1) = (x2 - x1)f'(x) for some x between x1 and x2.
+  If f'(x) >= 0, then f(x2) >= f(x1) (monotonically increasing).
+  If f'(x) <= 0, then f(x2) <= f(x1) (monotonically decreasing).

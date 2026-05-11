@@ -1,0 +1,96 @@
+schema_version: "0.3.0"
+id: proposition.vertical-line-test
+type: proposition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Prueba de la línea vertical
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Vertical line test
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Una curva en el plano xy es la gráfica de una función de x si y
+        sólo si ninguna línea vertical corta a la curva en más de un punto.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        A curve in the xy-plane is the graph of a function of x if and
+        only if no vertical line intersects the curve more than once.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    status: not_applicable
+    review_status: unreviewed
+
+proved_by:
+  - proof.vertical-line-test.stewart
+
+depends_on:
+  - id: definition.function
+    role: uses_concept
+    confidence: high
+  - id: definition.graph-of-function
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.1"
+    locator: "Prueba de la línea vertical (sección 1.1)"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [geometry]
+
+ambient:
+  structures: [cartesian-plane]
+
+ontology:
+  semantic_kind: [criterion]
+  keywords: [vertical-line, function, graph, test, criterion]
+
+generality: []
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: medium
+  latex_confidence: null
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.0"
+  rerun_id: v0.3-pilot-stewart-ch1
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Reclassified from definition to proposition in the v0.2 reclassify
+  pass; v0.3 preserves the proposition classification. This is a
+  geometric criterion for the function property, not the introduction
+  of a new object.

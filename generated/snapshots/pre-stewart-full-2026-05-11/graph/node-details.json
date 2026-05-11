@@ -1,0 +1,1161 @@
+{
+  "definition.absolute-value": {
+    "id": "definition.absolute-value",
+    "kind": "statement",
+    "natural": {
+      "en": {
+        "is_original": false,
+        "text": "The absolute value of a number a, denoted |a|, is defined as a if a ≥ 0 and as -a if a < 0. Geometrically, |a| represents the distance from a to the origin on the number line."
+      },
+      "es": {
+        "is_original": true,
+        "text": "El valor absoluto de un número a, denotado |a|, se define como a si a ≥ 0 y como -a si a < 0. Geométricamente, |a| representa la distancia de a al origen en la recta numérica."
+      }
+    },
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "text": "Absolute value"
+      },
+      "es": {
+        "is_original": true,
+        "text": "Valor absoluto"
+      }
+    },
+    "type": "definition"
+  },
+  "definition.algebraic-function": {
+    "id": "definition.algebraic-function",
+    "kind": "statement",
+    "natural": {
+      "en": {
+        "is_original": false,
+        "text": "A function is algebraic if it can be constructed from polynomials using algebraic operations (addition, subtraction, multiplication, division, and root extraction). Every rational function is automatically algebraic."
+      },
+      "es": {
+        "is_original": true,
+        "text": "Una función es algebraica si puede construirse a partir de polinomios mediante operaciones algebraicas (suma, resta, multiplicación, división y extracción de raíces). Toda función racional es automáticamente algebraica."
+      }
+    },
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "text": "Algebraic function"
+      },
+      "es": {
+        "is_original": true,
+        "text": "Función algebraica"
+      }
+    },
+    "type": "definition"
+  },
+  "definition.composition-of-functions": {
+    "id": "definition.composition-of-functions",
+    "kind": "statement",
+    "natural": {
+      "en": {
+        "is_original": false,
+        "text": "Given two functions f and g, the composite function f ∘ g (also called the composition of f and g) is defined by (f ∘ g)(x) = f(g(x)). The domain of f ∘ g is the set of all x in the domain of g such that g(x) is in the domain of f."
+      },
+      "es": {
+        "is_original": true,
+        "text": "Dadas dos funciones f y g, la función compuesta f ∘ g (también llamada composición de f y g) se define por (f ∘ g)(x) = f(g(x)). El dominio de f ∘ g es el conjunto de todos los x en el dominio de g tales que g(x) está en el dominio de f."
+      }
+    },
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "text": "Composition of functions"
+      },
+      "es": {
+        "is_original": true,
+        "text": "Composición de funciones"
+      }
+    },
+    "type": "definition"
+  },
+  "definition.decreasing-function": {
+    "id": "definition.decreasing-function",
+    "kind": "statement",
+    "natural": {
+      "en": {
+        "is_original": false,
+        "text": "A function f is decreasing on an interval I if for any two numbers x₁ and x₂ in I such that x₁ < x₂, we have f(x₁) > f(x₂)."
+      },
+      "es": {
+        "is_original": true,
+        "text": "Una función f es decreciente en un intervalo I si para cualesquiera dos números x₁ y x₂ en I tales que x₁ < x₂ se cumple que f(x₁) > f(x₂)."
+      }
+    },
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "text": "Decreasing function"
+      },
+      "es": {
+        "is_original": true,
+        "text": "Función decreciente"
+      }
+    },
+    "type": "definition"
+  },
+  "definition.dependent-variable": {
+    "id": "definition.dependent-variable",
+    "kind": "statement",
+    "natural": {
+      "en": {
+        "is_original": false,
+        "text": "The dependent variable of a function f is the symbol y representing the value f(x). It is called dependent because its value is determined by the choice of x."
+      },
+      "es": {
+        "is_original": true,
+        "text": "La variable dependiente de una función f es el símbolo y que representa el valor f(x). Se dice dependiente porque su valor queda determinado por la elección de x."
+      }
+    },
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "text": "Dependent variable"
+      },
+      "es": {
+        "is_original": true,
+        "text": "Variable dependiente"
+      }
+    },
+    "type": "definition"
+  },
+  "definition.domain": {
+    "id": "definition.domain",
+    "kind": "statement",
+    "natural": {
+      "en": {
+        "is_original": false,
+        "text": "The domain of a function f is the set D of all admissible values of the independent variable x for which f(x) is defined."
+      },
+      "es": {
+        "is_original": true,
+        "text": "El dominio de una función f es el conjunto D de todos los valores admisibles de la variable independiente x para los que f(x) está definido."
+      }
+    },
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "text": "Domain of a function"
+      },
+      "es": {
+        "is_original": true,
+        "text": "Dominio de una función"
+      }
+    },
+    "type": "definition"
+  },
+  "definition.even-function": {
+    "id": "definition.even-function",
+    "kind": "statement",
+    "natural": {
+      "en": {
+        "is_original": false,
+        "text": "A function f is even if f(-x) = f(x) for every x in its domain. Geometrically, the graph of an even function is symmetric about the y-axis."
+      },
+      "es": {
+        "is_original": true,
+        "text": "Una función f es par si para todo x en su dominio se cumple f(-x) = f(x). Geométricamente, la gráfica de una función par es simétrica respecto al eje y."
+      }
+    },
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "text": "Even function"
+      },
+      "es": {
+        "is_original": true,
+        "text": "Función par"
+      }
+    },
+    "type": "definition"
+  },
+  "definition.exponential-function": {
+    "id": "definition.exponential-function",
+    "kind": "statement",
+    "natural": {
+      "en": {
+        "is_original": false,
+        "text": "The exponential function with base a is the function f(x) = aˣ, where a is a positive constant different from 1 and x is any real number. The domain is all real numbers and the range is (0, ∞)."
+      },
+      "es": {
+        "is_original": true,
+        "text": "La función exponencial con base a es la función f(x) = aˣ, donde a es una constante positiva distinta de 1 y x es cualquier número real. El dominio es todos los reales y el rango es (0, ∞)."
+      }
+    },
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "text": "Exponential function"
+      },
+      "es": {
+        "is_original": true,
+        "text": "Función exponencial"
+      }
+    },
+    "type": "definition"
+  },
+  "definition.function": {
+    "id": "definition.function",
+    "kind": "statement",
+    "natural": {
+      "en": {
+        "is_original": false,
+        "text": "A function f is a rule that assigns to each element x in a set D exactly one element, called f(x), in a set E."
+      },
+      "es": {
+        "is_original": true,
+        "text": "Una función f es una regla que asigna a cada elemento x de un conjunto D exactamente un elemento, denotado f(x), de un conjunto E."
+      }
+    },
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "text": "Function"
+      },
+      "es": {
+        "is_original": true,
+        "text": "Función"
+      }
+    },
+    "type": "definition"
+  },
+  "definition.graph-of-function": {
+    "id": "definition.graph-of-function",
+    "kind": "statement",
+    "natural": {
+      "en": {
+        "is_original": false,
+        "text": "If f is a function with domain D, its graph is the set of ordered pairs {(x, f(x)) : x ∈ D}, regarded as a subset of the Cartesian plane."
+      },
+      "es": {
+        "is_original": true,
+        "text": "Si f es una función con dominio D, entonces su gráfica es el conjunto de pares ordenados {(x, f(x)) : x ∈ D}, considerado como subconjunto del plano cartesiano."
+      }
+    },
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "text": "Graph of a function"
+      },
+      "es": {
+        "is_original": true,
+        "text": "Gráfica de una función"
+      }
+    },
+    "type": "definition"
+  },
+  "definition.horizontal-shift": {
+    "id": "definition.horizontal-shift",
+    "kind": "statement",
+    "natural": {
+      "en": {
+        "is_original": false,
+        "text": "If c > 0, the graph of y = f(x - c) is obtained by shifting the graph of y = f(x) to the right c units. The graph of y = f(x + c) is obtained by shifting the graph to the left c units."
+      },
+      "es": {
+        "is_original": true,
+        "text": "Si c > 0, la gráfica de y = f(x - c) se obtiene desplazando la gráfica de y = f(x) hacia la derecha c unidades. La gráfica de y = f(x + c) se obtiene desplazando la gráfica hacia la izquierda c unidades."
+      }
+    },
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "text": "Horizontal shift"
+      },
+      "es": {
+        "is_original": true,
+        "text": "Traslación horizontal"
+      }
+    },
+    "type": "definition"
+  },
+  "definition.horizontal-stretch-compression": {
+    "id": "definition.horizontal-stretch-compression",
+    "kind": "statement",
+    "natural": {
+      "en": {
+        "is_original": false,
+        "text": "If c > 1, the graph of y = f(cx) is obtained by compressing the graph of y = f(x) horizontally by a factor of c. If 0 < c < 1, the graph is stretched horizontally by a factor of 1/c."
+      },
+      "es": {
+        "is_original": true,
+        "text": "Si c > 1, la gráfica de y = f(cx) se obtiene comprimiendo la gráfica de y = f(x) horizontalmente por un factor de c. Si 0 < c < 1, la gráfica se estira horizontalmente por un factor de 1/c."
+      }
+    },
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "text": "Horizontal stretching and compression"
+      },
+      "es": {
+        "is_original": true,
+        "text": "Estiramiento y compresión horizontal"
+      }
+    },
+    "type": "definition"
+  },
+  "definition.increasing-function": {
+    "id": "definition.increasing-function",
+    "kind": "statement",
+    "natural": {
+      "en": {
+        "is_original": false,
+        "text": "A function f is increasing on an interval I if for any two numbers x₁ and x₂ in I such that x₁ < x₂, we have f(x₁) < f(x₂)."
+      },
+      "es": {
+        "is_original": true,
+        "text": "Una función f es creciente en un intervalo I si para cualesquiera dos números x₁ y x₂ en I tales que x₁ < x₂ se cumple que f(x₁) < f(x₂)."
+      }
+    },
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "text": "Increasing function"
+      },
+      "es": {
+        "is_original": true,
+        "text": "Función creciente"
+      }
+    },
+    "type": "definition"
+  },
+  "definition.independent-variable": {
+    "id": "definition.independent-variable",
+    "kind": "statement",
+    "natural": {
+      "en": {
+        "is_original": false,
+        "text": "The independent variable of a function f is the symbol x representing an arbitrary element of the domain. It is called independent because it can freely take any value in the domain."
+      },
+      "es": {
+        "is_original": true,
+        "text": "La variable independiente de una función f es el símbolo x que representa un elemento arbitrario del dominio. Se dice independiente porque puede tomar libremente cualquier valor del dominio."
+      }
+    },
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "text": "Independent variable"
+      },
+      "es": {
+        "is_original": true,
+        "text": "Variable independiente"
+      }
+    },
+    "type": "definition"
+  },
+  "definition.inverse-function": {
+    "id": "definition.inverse-function",
+    "kind": "statement",
+    "natural": {
+      "en": {
+        "is_original": false,
+        "text": "Let f be a one-to-one function with domain A and range B. Then its inverse function f⁻¹ has domain B and range A and is defined by f⁻¹(y) = x if and only if f(x) = y, for every y in B."
+      },
+      "es": {
+        "is_original": true,
+        "text": "Sea f una función inyectiva con dominio A y rango B. Entonces su función inversa f⁻¹ tiene dominio B y rango A y se define por f⁻¹(y) = x si y sólo si f(x) = y, para toda y en B."
+      }
+    },
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "text": "Inverse function"
+      },
+      "es": {
+        "is_original": true,
+        "text": "Función inversa"
+      }
+    },
+    "type": "definition"
+  },
+  "definition.linear-function": {
+    "id": "definition.linear-function",
+    "kind": "statement",
+    "natural": {
+      "en": {
+        "is_original": false,
+        "text": "A linear function is a function of the form f(x) = mx + b, where m is the slope and b is the y-intercept. Its graph is a straight line."
+      },
+      "es": {
+        "is_original": true,
+        "text": "Una función lineal es una función de la forma f(x) = mx + b, donde m es la pendiente y b es la ordenada al origen. Su gráfica es una línea recta."
+      }
+    },
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "text": "Linear function"
+      },
+      "es": {
+        "is_original": true,
+        "text": "Función lineal"
+      }
+    },
+    "type": "definition"
+  },
+  "definition.logarithmic-function": {
+    "id": "definition.logarithmic-function",
+    "kind": "statement",
+    "natural": {
+      "en": {
+        "is_original": false,
+        "text": "The logarithmic function with base a, denoted logₐ, is the inverse of the exponential function with base a. That is, logₐ(x) = y if and only if aʸ = x, where a > 0 and a ≠ 1."
+      },
+      "es": {
+        "is_original": true,
+        "text": "La función logarítmica con base a, denotada logₐ, es la función inversa de la función exponencial con base a. Es decir, logₐ(x) = y si y sólo si aʸ = x, donde a > 0 y a ≠ 1."
+      }
+    },
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "text": "Logarithmic function"
+      },
+      "es": {
+        "is_original": true,
+        "text": "Función logarítmica"
+      }
+    },
+    "type": "definition"
+  },
+  "definition.mathematical-model": {
+    "id": "definition.mathematical-model",
+    "kind": "statement",
+    "natural": {
+      "en": {
+        "is_original": false,
+        "text": "A mathematical model is a mathematical description (often by means of a function or an equation) of a real-world phenomenon."
+      },
+      "es": {
+        "is_original": true,
+        "text": "Un modelo matemático es una descripción matemática (a menudo por medio de una función o una ecuación) de un fenómeno del mundo real."
+      }
+    },
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "text": "Mathematical model"
+      },
+      "es": {
+        "is_original": true,
+        "text": "Modelo matemático"
+      }
+    },
+    "type": "definition"
+  },
+  "definition.natural-exponential-function": {
+    "id": "definition.natural-exponential-function",
+    "kind": "statement",
+    "natural": {
+      "en": {
+        "is_original": false,
+        "text": "The natural exponential function is the exponential function f(x) = eˣ, where e is Euler's number, defined as the number such that the tangent line to y = eˣ at the point (0, 1) has slope exactly 1. The value of e is approximately 2.71828."
+      },
+      "es": {
+        "is_original": true,
+        "text": "La función exponencial natural es la función exponencial f(x) = eˣ, donde e es el número de Euler, definido como el número tal que la recta tangente a y = eˣ en el punto (0, 1) tiene pendiente exactamente 1. El valor de e es aproximadamente 2.71828."
+      }
+    },
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "text": "Natural exponential function"
+      },
+      "es": {
+        "is_original": true,
+        "text": "Función exponencial natural"
+      }
+    },
+    "type": "definition"
+  },
+  "definition.natural-logarithm": {
+    "id": "definition.natural-logarithm",
+    "kind": "statement",
+    "natural": {
+      "en": {
+        "is_original": false,
+        "text": "The natural logarithm is the logarithm with base e, denoted ln. That is, ln(x) = logₑ(x). Equivalently, ln(x) = y if and only if eʸ = x."
+      },
+      "es": {
+        "is_original": true,
+        "text": "El logaritmo natural es el logaritmo con base e, denotado ln. Es decir, ln(x) = logₑ(x). Equivalentemente, ln(x) = y si y sólo si eʸ = x."
+      }
+    },
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "text": "Natural logarithm"
+      },
+      "es": {
+        "is_original": true,
+        "text": "Logaritmo natural"
+      }
+    },
+    "type": "definition"
+  },
+  "definition.odd-function": {
+    "id": "definition.odd-function",
+    "kind": "statement",
+    "natural": {
+      "en": {
+        "is_original": false,
+        "text": "A function f is odd if f(-x) = -f(x) for every x in its domain. Geometrically, the graph of an odd function is symmetric about the origin."
+      },
+      "es": {
+        "is_original": true,
+        "text": "Una función f es impar si para todo x en su dominio se cumple f(-x) = -f(x). Geométricamente, la gráfica de una función impar es simétrica respecto al origen."
+      }
+    },
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "text": "Odd function"
+      },
+      "es": {
+        "is_original": true,
+        "text": "Función impar"
+      }
+    },
+    "type": "definition"
+  },
+  "definition.one-to-one-function": {
+    "id": "definition.one-to-one-function",
+    "kind": "statement",
+    "natural": {
+      "en": {
+        "is_original": false,
+        "text": "A function f is one-to-one if it never takes the same value twice; that is, if x₁ ≠ x₂ then f(x₁) ≠ f(x₂)."
+      },
+      "es": {
+        "is_original": true,
+        "text": "Una función f es inyectiva (uno a uno) si nunca toma el mismo valor dos veces; es decir, si x₁ ≠ x₂ entonces f(x₁) ≠ f(x₂)."
+      }
+    },
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "text": "One-to-one function"
+      },
+      "es": {
+        "is_original": true,
+        "text": "Función inyectiva (uno a uno)"
+      }
+    },
+    "type": "definition"
+  },
+  "definition.piecewise-function": {
+    "id": "definition.piecewise-function",
+    "kind": "statement",
+    "natural": {
+      "en": {
+        "is_original": false,
+        "text": "A piecewise-defined function is a function that is defined by different formulas in different parts of its domain."
+      },
+      "es": {
+        "is_original": true,
+        "text": "Una función definida por partes es una función que se define mediante distintas fórmulas en diferentes partes de su dominio."
+      }
+    },
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "text": "Piecewise-defined function"
+      },
+      "es": {
+        "is_original": true,
+        "text": "Función definida por partes"
+      }
+    },
+    "type": "definition"
+  },
+  "definition.polynomial": {
+    "id": "definition.polynomial",
+    "kind": "statement",
+    "natural": {
+      "en": {
+        "is_original": false,
+        "text": "A function P is a polynomial if it has the form P(x) = aₙxⁿ + aₙ₋₁xⁿ⁻¹ + ... + a₂x² + a₁x + a₀, where n is a nonnegative integer and the numbers a₀, a₁, ..., aₙ are constants called the coefficients of the polynomial. The degree of the polynomial is n when aₙ ≠ 0."
+      },
+      "es": {
+        "is_original": true,
+        "text": "Una función P es un polinomio si tiene la forma P(x) = aₙxⁿ + aₙ₋₁xⁿ⁻¹ + ... + a₂x² + a₁x + a₀, donde n es un entero no negativo y los números a₀, a₁, ..., aₙ son constantes llamadas coeficientes del polinomio. El grado del polinomio es n si aₙ ≠ 0."
+      }
+    },
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "text": "Polynomial"
+      },
+      "es": {
+        "is_original": true,
+        "text": "Polinomio"
+      }
+    },
+    "type": "definition"
+  },
+  "definition.power-function": {
+    "id": "definition.power-function",
+    "kind": "statement",
+    "natural": {
+      "en": {
+        "is_original": false,
+        "text": "A power function is a function of the form f(x) = xᵃ, where a is a constant. Important special cases include a = n (positive integer), a = 1/n (n-th roots), and a = -1 (the reciprocal function)."
+      },
+      "es": {
+        "is_original": true,
+        "text": "Una función potencia es una función de la forma f(x) = xᵃ, donde a es una constante. Los casos particulares importantes incluyen a = n (entero positivo), a = 1/n (raíces n-ésimas) y a = -1 (función recíproca)."
+      }
+    },
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "text": "Power function"
+      },
+      "es": {
+        "is_original": true,
+        "text": "Función potencia"
+      }
+    },
+    "type": "definition"
+  },
+  "definition.range": {
+    "id": "definition.range",
+    "kind": "statement",
+    "natural": {
+      "en": {
+        "is_original": false,
+        "text": "The range of a function f is the set of all possible values f(x) as x varies throughout the domain."
+      },
+      "es": {
+        "is_original": true,
+        "text": "El rango de una función f es el conjunto de todos los valores posibles f(x) cuando x recorre todo el dominio."
+      }
+    },
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "text": "Range of a function"
+      },
+      "es": {
+        "is_original": true,
+        "text": "Rango de una función"
+      }
+    },
+    "type": "definition"
+  },
+  "definition.rational-function": {
+    "id": "definition.rational-function",
+    "kind": "statement",
+    "natural": {
+      "en": {
+        "is_original": false,
+        "text": "A rational function f is a ratio of two polynomials, that is, f(x) = P(x)/Q(x), where P and Q are polynomials. The domain consists of all values of x such that Q(x) ≠ 0."
+      },
+      "es": {
+        "is_original": true,
+        "text": "Una función racional f es un cociente de dos polinomios, es decir, f(x) = P(x)/Q(x), donde P y Q son polinomios. El dominio consiste en todos los valores de x tales que Q(x) ≠ 0."
+      }
+    },
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "text": "Rational function"
+      },
+      "es": {
+        "is_original": true,
+        "text": "Función racional"
+      }
+    },
+    "type": "definition"
+  },
+  "definition.reflection": {
+    "id": "definition.reflection",
+    "kind": "statement",
+    "natural": {
+      "en": {
+        "is_original": false,
+        "text": "The graph of y = -f(x) is the reflection of the graph of y = f(x) about the x-axis. The graph of y = f(-x) is the reflection of the graph of y = f(x) about the y-axis."
+      },
+      "es": {
+        "is_original": true,
+        "text": "La gráfica de y = -f(x) es la reflexión de la gráfica de y = f(x) respecto al eje x. La gráfica de y = f(-x) es la reflexión de la gráfica de y = f(x) respecto al eje y."
+      }
+    },
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "text": "Reflections of graphs"
+      },
+      "es": {
+        "is_original": true,
+        "text": "Reflexiones de gráficas"
+      }
+    },
+    "type": "definition"
+  },
+  "definition.transcendental-function": {
+    "id": "definition.transcendental-function",
+    "kind": "statement",
+    "natural": {
+      "en": {
+        "is_original": false,
+        "text": "A transcendental function is a function that is not algebraic. Transcendental functions include the trigonometric, exponential, and logarithmic functions."
+      },
+      "es": {
+        "is_original": true,
+        "text": "Una función trascendente es una función que no es algebraica. Entre las funciones trascendentes se incluyen las funciones trigonométricas, exponenciales y logarítmicas."
+      }
+    },
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "text": "Transcendental function"
+      },
+      "es": {
+        "is_original": true,
+        "text": "Función trascendente"
+      }
+    },
+    "type": "definition"
+  },
+  "definition.trigonometric-function": {
+    "id": "definition.trigonometric-function",
+    "kind": "statement",
+    "natural": {
+      "en": {
+        "is_original": false,
+        "text": "The trigonometric functions are the sine, cosine, tangent, cotangent, secant, and cosecant functions. They are defined in terms of the ratios of the sides of a right triangle or, more generally, using the unit circle."
+      },
+      "es": {
+        "is_original": true,
+        "text": "Las funciones trigonométricas son las funciones seno, coseno, tangente, cotangente, secante y cosecante. Se definen en términos de las razones de los lados de un triángulo rectángulo o, de manera más general, usando el círculo unitario."
+      }
+    },
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "text": "Trigonometric functions"
+      },
+      "es": {
+        "is_original": true,
+        "text": "Funciones trigonométricas"
+      }
+    },
+    "type": "definition"
+  },
+  "definition.vertical-shift": {
+    "id": "definition.vertical-shift",
+    "kind": "statement",
+    "natural": {
+      "en": {
+        "is_original": false,
+        "text": "If c > 0, the graph of y = f(x) + c is obtained by shifting the graph of y = f(x) upward c units. The graph of y = f(x) - c is obtained by shifting the graph downward c units."
+      },
+      "es": {
+        "is_original": true,
+        "text": "Si c > 0, la gráfica de y = f(x) + c se obtiene desplazando la gráfica de y = f(x) hacia arriba c unidades. La gráfica de y = f(x) - c se obtiene desplazando la gráfica hacia abajo c unidades."
+      }
+    },
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "text": "Vertical shift"
+      },
+      "es": {
+        "is_original": true,
+        "text": "Traslación vertical"
+      }
+    },
+    "type": "definition"
+  },
+  "definition.vertical-stretch-compression": {
+    "id": "definition.vertical-stretch-compression",
+    "kind": "statement",
+    "natural": {
+      "en": {
+        "is_original": false,
+        "text": "If c > 1, the graph of y = c·f(x) is obtained by stretching the graph of y = f(x) vertically by a factor of c. If 0 < c < 1, the graph is compressed vertically by a factor of c."
+      },
+      "es": {
+        "is_original": true,
+        "text": "Si c > 1, la gráfica de y = c·f(x) se obtiene estirando la gráfica de y = f(x) verticalmente por un factor de c. Si 0 < c < 1, la gráfica se comprime verticalmente por un factor de c."
+      }
+    },
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "text": "Vertical stretching and compression"
+      },
+      "es": {
+        "is_original": true,
+        "text": "Estiramiento y compresión vertical"
+      }
+    },
+    "type": "definition"
+  },
+  "proof.cancellation-equations.stewart": {
+    "id": "proof.cancellation-equations.stewart",
+    "kind": "proof",
+    "proves": "proposition.cancellation-equations",
+    "status": "extracted",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      {
+        "confidence": "high",
+        "id": "definition.inverse-function",
+        "role": "definition"
+      },
+      {
+        "confidence": "high",
+        "id": "definition.one-to-one-function",
+        "role": "definition"
+      }
+    ]
+  },
+  "proof.change-of-base-formula.stewart": {
+    "id": "proof.change-of-base-formula.stewart",
+    "kind": "proof",
+    "proves": "proposition.change-of-base-formula",
+    "status": "extracted",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      {
+        "confidence": "high",
+        "id": "definition.logarithmic-function",
+        "role": "definition"
+      },
+      {
+        "confidence": "high",
+        "id": "definition.natural-logarithm",
+        "role": "definition"
+      },
+      {
+        "confidence": "high",
+        "id": "proposition.laws-of-logarithms",
+        "role": "essential"
+      }
+    ]
+  },
+  "proof.horizontal-line-test.stewart": {
+    "id": "proof.horizontal-line-test.stewart",
+    "kind": "proof",
+    "proves": "proposition.horizontal-line-test",
+    "status": "extracted",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      {
+        "confidence": "high",
+        "id": "definition.graph-of-function",
+        "role": "definition"
+      },
+      {
+        "confidence": "high",
+        "id": "definition.one-to-one-function",
+        "role": "definition"
+      }
+    ]
+  },
+  "proof.inverse-graph-reflection.stewart": {
+    "id": "proof.inverse-graph-reflection.stewart",
+    "kind": "proof",
+    "proves": "proposition.inverse-graph-reflection",
+    "status": "extracted",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      {
+        "confidence": "high",
+        "id": "definition.graph-of-function",
+        "role": "definition"
+      },
+      {
+        "confidence": "high",
+        "id": "definition.inverse-function",
+        "role": "definition"
+      }
+    ]
+  },
+  "proof.laws-of-exponents.stewart": {
+    "id": "proof.laws-of-exponents.stewart",
+    "kind": "proof",
+    "proves": "proposition.laws-of-exponents",
+    "status": "extracted",
+    "style": "assumed",
+    "type": "proof",
+    "uses": [
+      {
+        "confidence": "high",
+        "id": "definition.exponential-function",
+        "role": "definition"
+      }
+    ]
+  },
+  "proof.laws-of-logarithms.stewart": {
+    "id": "proof.laws-of-logarithms.stewart",
+    "kind": "proof",
+    "proves": "proposition.laws-of-logarithms",
+    "status": "extracted",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      {
+        "confidence": "high",
+        "id": "definition.exponential-function",
+        "role": "definition"
+      },
+      {
+        "confidence": "high",
+        "id": "definition.logarithmic-function",
+        "role": "definition"
+      },
+      {
+        "confidence": "high",
+        "id": "proposition.laws-of-exponents",
+        "role": "essential"
+      }
+    ]
+  },
+  "proof.vertical-line-test.stewart": {
+    "id": "proof.vertical-line-test.stewart",
+    "kind": "proof",
+    "proves": "proposition.vertical-line-test",
+    "status": "extracted",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      {
+        "confidence": "high",
+        "id": "definition.function",
+        "role": "definition"
+      },
+      {
+        "confidence": "high",
+        "id": "definition.graph-of-function",
+        "role": "definition"
+      }
+    ]
+  },
+  "proposition.cancellation-equations": {
+    "id": "proposition.cancellation-equations",
+    "kind": "statement",
+    "natural": {
+      "en": {
+        "is_original": false,
+        "text": "If f is a one-to-one function with inverse f⁻¹, then f⁻¹(f(x)) = x for every x in the domain of f, and f(f⁻¹(x)) = x for every x in the domain of f⁻¹."
+      },
+      "es": {
+        "is_original": true,
+        "text": "Si f es una función inyectiva con inversa f⁻¹, entonces f⁻¹(f(x)) = x para todo x en el dominio de f, y f(f⁻¹(x)) = x para todo x en el dominio de f⁻¹."
+      }
+    },
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "text": "Cancellation equations"
+      },
+      "es": {
+        "is_original": true,
+        "text": "Ecuaciones de cancelación"
+      }
+    },
+    "type": "proposition"
+  },
+  "proposition.change-of-base-formula": {
+    "id": "proposition.change-of-base-formula",
+    "kind": "statement",
+    "natural": {
+      "en": {
+        "is_original": false,
+        "text": "For any positive number a ≠ 1, we have logₐ(x) = ln(x) / ln(a) for all x > 0."
+      },
+      "es": {
+        "is_original": true,
+        "text": "Para cualquier número positivo a ≠ 1, se tiene logₐ(x) = ln(x) / ln(a) para todo x > 0."
+      }
+    },
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "text": "Change of base formula"
+      },
+      "es": {
+        "is_original": true,
+        "text": "Fórmula de cambio de base"
+      }
+    },
+    "type": "proposition"
+  },
+  "proposition.horizontal-line-test": {
+    "id": "proposition.horizontal-line-test",
+    "kind": "statement",
+    "natural": {
+      "en": {
+        "is_original": false,
+        "text": "A function is one-to-one if and only if no horizontal line intersects its graph more than once."
+      },
+      "es": {
+        "is_original": true,
+        "text": "Una función es inyectiva si y sólo si ninguna línea horizontal corta su gráfica más de una vez."
+      }
+    },
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "text": "Horizontal line test"
+      },
+      "es": {
+        "is_original": true,
+        "text": "Prueba de la línea horizontal"
+      }
+    },
+    "type": "proposition"
+  },
+  "proposition.inverse-graph-reflection": {
+    "id": "proposition.inverse-graph-reflection",
+    "kind": "statement",
+    "natural": {
+      "en": {
+        "is_original": false,
+        "text": "If f is a one-to-one function, then the graph of f⁻¹ is obtained by reflecting the graph of f about the line y = x."
+      },
+      "es": {
+        "is_original": true,
+        "text": "Si f es una función inyectiva, entonces la gráfica de f⁻¹ se obtiene reflejando la gráfica de f respecto a la recta y = x."
+      }
+    },
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "text": "Graph of inverse as reflection"
+      },
+      "es": {
+        "is_original": true,
+        "text": "Gráfica de la inversa como reflexión"
+      }
+    },
+    "type": "proposition"
+  },
+  "proposition.laws-of-exponents": {
+    "id": "proposition.laws-of-exponents",
+    "kind": "statement",
+    "natural": {
+      "en": {
+        "is_original": false,
+        "text": "If a and b are positive numbers and x, y are any real numbers, then the following laws hold: (1) aˣ⁺ʸ = aˣ·aʸ, (2) aˣ⁻ʸ = aˣ/aʸ, (3) (aˣ)ʸ = aˣʸ, (4) (a·b)ˣ = aˣ·bˣ."
+      },
+      "es": {
+        "is_original": true,
+        "text": "Si a y b son números positivos y x, y son números reales cualesquiera, entonces se cumplen las siguientes leyes: (1) aˣ⁺ʸ = aˣ·aʸ, (2) aˣ⁻ʸ = aˣ/aʸ, (3) (aˣ)ʸ = aˣʸ, (4) (a·b)ˣ = aˣ·bˣ."
+      }
+    },
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "text": "Laws of exponents"
+      },
+      "es": {
+        "is_original": true,
+        "text": "Leyes de los exponentes"
+      }
+    },
+    "type": "proposition"
+  },
+  "proposition.laws-of-logarithms": {
+    "id": "proposition.laws-of-logarithms",
+    "kind": "statement",
+    "natural": {
+      "en": {
+        "is_original": false,
+        "text": "If x > 0 and y > 0, then: (1) logₐ(xy) = logₐx + logₐy, (2) logₐ(x/y) = logₐx − logₐy, (3) logₐ(xʳ) = r·logₐx for any real number r."
+      },
+      "es": {
+        "is_original": true,
+        "text": "Si x > 0 e y > 0, entonces: (1) logₐ(xy) = logₐx + logₐy, (2) logₐ(x/y) = logₐx − logₐy, (3) logₐ(xʳ) = r·logₐx para todo número real r."
+      }
+    },
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "text": "Laws of logarithms"
+      },
+      "es": {
+        "is_original": true,
+        "text": "Leyes de los logaritmos"
+      }
+    },
+    "type": "proposition"
+  },
+  "proposition.vertical-line-test": {
+    "id": "proposition.vertical-line-test",
+    "kind": "statement",
+    "natural": {
+      "en": {
+        "is_original": false,
+        "text": "A curve in the xy-plane is the graph of a function of x if and only if no vertical line intersects the curve more than once."
+      },
+      "es": {
+        "is_original": true,
+        "text": "Una curva en el plano xy es la gráfica de una función de x si y sólo si ninguna línea vertical corta a la curva en más de un punto."
+      }
+    },
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "text": "Vertical line test"
+      },
+      "es": {
+        "is_original": true,
+        "text": "Prueba de la línea vertical"
+      }
+    },
+    "type": "proposition"
+  }
+}

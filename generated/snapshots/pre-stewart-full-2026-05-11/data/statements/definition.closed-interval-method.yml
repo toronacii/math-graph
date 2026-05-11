@@ -1,0 +1,37 @@
+id: definition.closed-interval-method
+type: definition
+status: draft
+
+title:
+  en: The Closed Interval Method
+  es: Método del intervalo cerrado
+
+statement:
+  natural:
+    es: >
+      Para encontrar los valores máximo y mínimo absolutos de una
+      función continua f en un intervalo cerrado [a, b]:
+      1. Encuentre los valores de f en los números críticos de f en (a, b).
+      2. Encuentre los valores de f en los extremos del intervalo.
+      3. El mayor de los valores del paso 1 y 2 es el máximo absoluto;
+      el menor es el mínimo absoluto.
+    en: >
+      To find the absolute maximum and minimum values of a continuous
+      function f on a closed interval [a, b]:
+      1. Find the values of f at the critical numbers of f in (a, b).
+      2. Find the values of f at the endpoints of the interval.
+      3. The largest of the values from steps 1 and 2 is the absolute
+      maximum; the smallest is the absolute minimum.
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "4"
+    section: "4.1"
+
+confidence: high
+notes: >
+  This method is justified by the Extreme Value Theorem (existence
+  of extrema on closed intervals) and Fermat's theorem (extrema
+  occur at critical numbers or endpoints).

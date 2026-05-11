@@ -1,0 +1,41 @@
+id: proposition.integral-properties
+type: proposition
+status: draft
+
+title:
+  en: Properties of the definite integral
+  es: Propiedades de la integral definida
+
+statement:
+  natural:
+    es: >
+      Sean f y g funciones integrables y c una constante. Entonces:
+      1. ∫_a^b c dx = c(b - a).
+      2. ∫_a^b [f(x) + g(x)] dx = ∫_a^b f(x) dx + ∫_a^b g(x) dx.
+      3. ∫_a^b cf(x) dx = c ∫_a^b f(x) dx.
+      4. ∫_a^b [f(x) - g(x)] dx = ∫_a^b f(x) dx - ∫_a^b g(x) dx.
+      5. ∫_a^c f(x) dx + ∫_c^b f(x) dx = ∫_a^b f(x) dx.
+    en: >
+      Let f and g be integrable functions and c a constant. Then:
+      1. ∫_a^b c dx = c(b - a).
+      2. ∫_a^b [f(x) + g(x)] dx = ∫_a^b f(x) dx + ∫_a^b g(x) dx.
+      3. ∫_a^b cf(x) dx = c ∫_a^b f(x) dx.
+      4. ∫_a^b [f(x) - g(x)] dx = ∫_a^b f(x) dx - ∫_a^b g(x) dx.
+      5. ∫_a^c f(x) dx + ∫_c^b f(x) dx = ∫_a^b f(x) dx.
+  latex: |
+    \int_a^b [f(x) + g(x)]\,dx = \int_a^b f(x)\,dx + \int_a^b g(x)\,dx
+
+proved_by:
+  - proof.integral-properties.stewart
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "5"
+    section: "5.2"
+
+confidence: high
+notes: >
+  These properties follow from the linearity of limits and the
+  definition of the definite integral as a limit of Riemann sums.

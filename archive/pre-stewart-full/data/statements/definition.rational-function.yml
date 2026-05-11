@@ -1,0 +1,106 @@
+schema_version: "0.3.0"
+id: definition.rational-function
+type: definition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Función racional
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Rational function
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Una función racional f es un cociente de dos polinomios, es decir,
+        f(x) = P(x)/Q(x), donde P y Q son polinomios. El dominio consiste
+        en todos los valores de x tales que Q(x) ≠ 0.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        A rational function f is a ratio of two polynomials, that is,
+        f(x) = P(x)/Q(x), where P and Q are polynomials. The domain
+        consists of all values of x such that Q(x) ≠ 0.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      f(x) = \frac{P(x)}{Q(x)}, \qquad Q(x) \neq 0
+    status: present
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: definition.polynomial
+    role: uses_concept
+    confidence: high
+  - id: definition.domain
+    role: uses_concept
+    confidence: high
+  - id: definition.function
+    role: specializes
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.2"
+    locator: "Funciones racionales (sección 1.2)"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [algebra]
+
+ambient:
+  structures: [real-line]
+  notes: >
+    Stewart treats rational functions as real-valued functions on the
+    set { x : Q(x) ≠ 0 } ⊆ R.
+
+ontology:
+  semantic_kind: [object]
+  keywords: [rational-function, polynomial, quotient, ratio]
+
+generality:
+  - target: definition.algebraic-function
+    relation: special_case_of
+    notes: >
+      Every rational function is algebraic (closure of polynomial
+      operations under +, -, ×, ÷). Recorded on the rational
+      (special) side per policy 04. The polynomial → rational
+      special-case edge is recorded on `definition.polynomial`.
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: medium
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.0"
+  rerun_id: v0.3-pilot-stewart-ch1
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []

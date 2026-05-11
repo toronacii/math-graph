@@ -1,0 +1,23 @@
+id: proof.derivative-no-simple-discontinuities.rudin
+type: proof
+status: draft
+
+proves: corollary.derivative-no-simple-discontinuities
+
+uses:
+  - theorem.darboux-theorem
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "5"
+    section: "5.12"
+
+confidence: high
+notes: >
+  Immediate from Darboux's theorem (5.12). A simple (jump)
+  discontinuity at c would mean the left and right limits of f'
+  exist but differ, violating the intermediate value property
+  established by 5.12.

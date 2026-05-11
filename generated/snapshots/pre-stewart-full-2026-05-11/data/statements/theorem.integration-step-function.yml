@@ -1,0 +1,28 @@
+id: theorem.integration-step-function
+type: theorem
+status: draft
+
+title:
+  en: Integration with Respect to a Step Function
+
+statement:
+  natural:
+    en: >
+      If a < s < b, f is bounded on [a, b], f is continuous at s, and
+      alpha(x) = I(x - s) (the unit step at s), then
+      integral_a^b f d alpha = f(s).
+  latex: |
+    \alpha(x) = I(x - s),\; f \text{ continuous at } s
+    \implies \int_a^b f\,d\alpha = f(s)
+
+proved_by:
+  - proof.integration-step-function.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "6"
+    section: "6.15"
+
+confidence: high

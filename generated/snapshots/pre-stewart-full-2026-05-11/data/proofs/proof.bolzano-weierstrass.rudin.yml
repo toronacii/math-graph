@@ -1,0 +1,21 @@
+id: proof.bolzano-weierstrass.rudin
+type: proof
+status: draft
+
+proves: theorem.bolzano-weierstrass
+
+uses:
+  - theorem.k-cell-compact
+  - theorem.infinite-subset-compact-limit-point
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "2"
+    section: "2.42"
+
+confidence: high
+notes: >
+  Bounded E ⊂ k-cell I. I is compact. Apply Theorem 2.37.

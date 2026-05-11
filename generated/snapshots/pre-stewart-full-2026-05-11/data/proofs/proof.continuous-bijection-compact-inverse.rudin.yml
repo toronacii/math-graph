@@ -1,0 +1,23 @@
+id: proof.continuous-bijection-compact-inverse.rudin
+type: proof
+
+proves: theorem.continuous-bijection-compact-inverse
+
+uses:
+  - theorem.continuity-open-preimage
+  - theorem.continuous-image-compact
+  - proposition.compact-is-closed
+  - definition.compact-set
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "4"
+    section: "4.17"
+
+confidence: high
+notes: >
+  Apply Thm 4.8 to f⁻¹: need f(V) open in Y for V open in X.
+  Vᶜ closed in X, hence compact (Thm 2.35); f(Vᶜ) compact (Thm 4.14),
+  hence closed (Thm 2.34). Since f is bijective, f(V) = [f(Vᶜ)]ᶜ, open.

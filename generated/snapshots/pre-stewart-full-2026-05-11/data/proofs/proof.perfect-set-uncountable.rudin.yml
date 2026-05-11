@@ -1,0 +1,22 @@
+id: proof.perfect-set-uncountable.rudin
+type: proof
+status: draft
+
+proves: theorem.perfect-set-uncountable
+
+uses:
+  - definition.neighborhood-limit-point-open-closed
+  - corollary.nested-compact-nonempty
+  - definition.segment-interval-cell-ball
+
+style: contradiction
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "2"
+    section: "2.43"
+
+confidence: high
+notes: >
+  Assume P = {x₁,x₂,...}. Build nested closed balls Vₙ with Vₙ₊₁ ⊂ Vₙ, xₙ ∉ Vₙ₊₁, Vₙ ∩ P ≠ ∅. Then ⋂(Vₙ ∩ P) is nonempty but contains no xₙ — contradiction.

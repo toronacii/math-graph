@@ -1,0 +1,94 @@
+weak_dependencies:
+
+  - proof: proof.laws-of-exponents.stewart
+    proves: proposition.laws-of-exponents
+    issue: assumed-foundational-algebra
+    confidence: low
+    style: assumed
+    propagates_to:
+      - proof.laws-of-logarithms.stewart
+      - proof.change-of-base-formula.stewart
+    notes: >
+      Stewart states the laws of exponents in section 1.4 without proof,
+      treating them as known results from precalculus extended to real
+      exponents. A rigorous derivation requires the construction of the
+      real exponential function via limits (typically in Chapter 7 or
+      via the natural logarithm integral definition). This creates an
+      epistemic debt that propagates through the
+      exponential-logarithmic dependency chain: laws-of-exponents ->
+      laws-of-logarithms -> change-of-base-formula.
+    resolution_path: >
+      The dependency can be resolved when the graph reaches the formal
+      definition of the exponential function via limits or the integral
+      definition of ln(x). At that point, a second proof node with
+      style: rigorous can be added alongside the current assumed proof.
+
+  - proof: proof.laws-of-logarithms.stewart
+    proves: proposition.laws-of-logarithms
+    issue: inherited-weak-dependency
+    confidence: medium
+    style: direct
+    inherits_from: proof.laws-of-exponents.stewart
+    notes: >
+      The proof of laws-of-logarithms is itself direct and sound, but
+      it depends on proposition.laws-of-exponents, which is assumed
+      without formal derivation. The effective confidence of this proof
+      is therefore bounded by the weakest link in its dependency chain.
+      The proof logic is correct; only the foundation is provisional.
+
+  - proof: proof.change-of-base-formula.stewart
+    proves: proposition.change-of-base-formula
+    issue: inherited-weak-dependency
+    confidence: medium
+    style: direct
+    inherits_from: proof.laws-of-logarithms.stewart
+    notes: >
+      Same inherited weakness as laws-of-logarithms. The change of base
+      proof uses the power rule for logarithms (law 3 of
+      laws-of-logarithms), which ultimately traces back to the assumed
+      laws of exponents. The proof structure is sound; the epistemic
+      debt is in the foundation.
+
+implicit_algebraic_imports:
+  - concept: Real number field axioms
+    used_by:
+      - definition.function
+      - definition.domain
+      - definition.range
+    notes: >
+      Stewart assumes familiarity with the real number system without
+      formally axiomatizing it. Functions are defined over sets of real
+      numbers, but the completeness axiom, order axioms, and field
+      axioms are never stated. This is standard for a calculus textbook
+      but represents an implicit import in the dependency graph. Future
+      phases may add foundational axioms as explicit nodes.
+
+  - concept: Precalculus trigonometry
+    used_by:
+      - definition.trigonometric-function
+    notes: >
+      Stewart assumes knowledge of trigonometric functions from
+      precalculus without re-deriving their properties. The unit circle
+      definition, periodicity, and fundamental identities are imported
+      implicitly. This is not flagged as a weak dependency because the
+      current graph scope begins at calculus level, but it represents
+      an external dependency boundary.
+
+  - concept: Set theory fundamentals
+    used_by:
+      - definition.function
+      - definition.domain
+      - definition.range
+      - definition.graph-of-function
+    notes: >
+      Concepts like "set", "element of", "ordered pair", and "subset"
+      are used without definition. These are foundational and typically
+      not axiomatized in a calculus textbook. They represent the lowest
+      layer of implicit imports.
+
+epistemic_debt_summary:
+  total_weak_proofs: 1
+  total_inherited_weak: 2
+  total_implicit_imports: 3
+  affected_chain_depth: 3
+  resolution_chapter_estimate: "7 (Techniques of Integration / formal exp definition)"

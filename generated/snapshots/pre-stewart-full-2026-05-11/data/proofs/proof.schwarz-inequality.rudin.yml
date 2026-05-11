@@ -1,0 +1,24 @@
+id: proof.schwarz-inequality.rudin
+type: proof
+status: draft
+
+proves: theorem.schwarz-inequality
+
+uses:
+  - theorem.conjugate-properties
+  - definition.complex-absolute-value
+  - definition.summation-notation
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "1"
+    section: "1.35"
+
+confidence: high
+notes: >
+  Put A = Σ|a_j|², B = Σ|b_j|², C = Σa_j b̄_j. If B = 0, trivial.
+  Otherwise expand Σ|Ba_j - Cb_j|² = B²A - B|C|² = B(AB-|C|²) ≥ 0.
+  Since B > 0, AB - |C|² ≥ 0.

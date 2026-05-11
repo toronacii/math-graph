@@ -1,0 +1,258 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d7" for="edge" attr.name="implicit" attr.type="boolean" />
+  <key id="d6" for="edge" attr.name="confidence" attr.type="string" />
+  <key id="d5" for="edge" attr.name="role" attr.type="string" />
+  <key id="d4" for="edge" attr.name="relation" attr.type="string" />
+  <key id="d3" for="node" attr.name="style" attr.type="string" />
+  <key id="d2" for="node" attr.name="status" attr.type="string" />
+  <key id="d1" for="node" attr.name="type" attr.type="string" />
+  <key id="d0" for="node" attr.name="kind" attr.type="string" />
+  <graph edgedefault="directed">
+    <node id="definition.absolute-value">
+      <data key="d0">statement</data>
+      <data key="d1">definition</data>
+      <data key="d2">extracted</data>
+    </node>
+    <node id="definition.algebraic-function">
+      <data key="d0">statement</data>
+      <data key="d1">definition</data>
+      <data key="d2">extracted</data>
+    </node>
+    <node id="definition.decreasing-function">
+      <data key="d0">statement</data>
+      <data key="d1">definition</data>
+      <data key="d2">extracted</data>
+    </node>
+    <node id="definition.dependent-variable">
+      <data key="d0">statement</data>
+      <data key="d1">definition</data>
+      <data key="d2">extracted</data>
+    </node>
+    <node id="definition.domain">
+      <data key="d0">statement</data>
+      <data key="d1">definition</data>
+      <data key="d2">extracted</data>
+    </node>
+    <node id="definition.even-function">
+      <data key="d0">statement</data>
+      <data key="d1">definition</data>
+      <data key="d2">extracted</data>
+    </node>
+    <node id="definition.function">
+      <data key="d0">statement</data>
+      <data key="d1">definition</data>
+      <data key="d2">extracted</data>
+    </node>
+    <node id="definition.graph-of-function">
+      <data key="d0">statement</data>
+      <data key="d1">definition</data>
+      <data key="d2">extracted</data>
+    </node>
+    <node id="definition.increasing-function">
+      <data key="d0">statement</data>
+      <data key="d1">definition</data>
+      <data key="d2">extracted</data>
+    </node>
+    <node id="definition.independent-variable">
+      <data key="d0">statement</data>
+      <data key="d1">definition</data>
+      <data key="d2">extracted</data>
+    </node>
+    <node id="definition.linear-function">
+      <data key="d0">statement</data>
+      <data key="d1">definition</data>
+      <data key="d2">extracted</data>
+    </node>
+    <node id="definition.mathematical-model">
+      <data key="d0">statement</data>
+      <data key="d1">definition</data>
+      <data key="d2">extracted</data>
+    </node>
+    <node id="definition.odd-function">
+      <data key="d0">statement</data>
+      <data key="d1">definition</data>
+      <data key="d2">extracted</data>
+    </node>
+    <node id="definition.piecewise-function">
+      <data key="d0">statement</data>
+      <data key="d1">definition</data>
+      <data key="d2">extracted</data>
+    </node>
+    <node id="definition.polynomial">
+      <data key="d0">statement</data>
+      <data key="d1">definition</data>
+      <data key="d2">extracted</data>
+    </node>
+    <node id="definition.power-function">
+      <data key="d0">statement</data>
+      <data key="d1">definition</data>
+      <data key="d2">extracted</data>
+    </node>
+    <node id="definition.range">
+      <data key="d0">statement</data>
+      <data key="d1">definition</data>
+      <data key="d2">extracted</data>
+    </node>
+    <node id="definition.rational-function">
+      <data key="d0">statement</data>
+      <data key="d1">definition</data>
+      <data key="d2">extracted</data>
+    </node>
+    <node id="definition.trigonometric-function">
+      <data key="d0">statement</data>
+      <data key="d1">definition</data>
+      <data key="d2">extracted</data>
+    </node>
+    <node id="proposition.vertical-line-test">
+      <data key="d0">statement</data>
+      <data key="d1">proposition</data>
+      <data key="d2">extracted</data>
+    </node>
+    <node id="proof.vertical-line-test.stewart">
+      <data key="d0">proof</data>
+      <data key="d1">proof</data>
+      <data key="d2">extracted</data>
+      <data key="d3">direct</data>
+    </node>
+    <edge source="definition.absolute-value" target="definition.piecewise-function" id="0">
+      <data key="d4">depends_on</data>
+      <data key="d5">instance_of</data>
+    </edge>
+    <edge source="definition.algebraic-function" target="definition.polynomial" id="0">
+      <data key="d4">depends_on</data>
+      <data key="d5">uses_concept</data>
+    </edge>
+    <edge source="definition.algebraic-function" target="definition.rational-function" id="0">
+      <data key="d4">depends_on</data>
+      <data key="d5">uses_concept</data>
+    </edge>
+    <edge source="definition.decreasing-function" target="definition.function" id="0">
+      <data key="d4">depends_on</data>
+      <data key="d5">uses_concept</data>
+    </edge>
+    <edge source="definition.dependent-variable" target="definition.function" id="0">
+      <data key="d4">depends_on</data>
+      <data key="d5">uses_concept</data>
+    </edge>
+    <edge source="definition.dependent-variable" target="definition.independent-variable" id="0">
+      <data key="d4">depends_on</data>
+      <data key="d5">uses_concept</data>
+    </edge>
+    <edge source="definition.dependent-variable" target="definition.range" id="0">
+      <data key="d4">depends_on</data>
+      <data key="d5">uses_concept</data>
+    </edge>
+    <edge source="definition.domain" target="definition.function" id="0">
+      <data key="d4">depends_on</data>
+      <data key="d5">uses_concept</data>
+    </edge>
+    <edge source="definition.even-function" target="definition.domain" id="0">
+      <data key="d4">depends_on</data>
+      <data key="d5">uses_concept</data>
+    </edge>
+    <edge source="definition.even-function" target="definition.function" id="0">
+      <data key="d4">depends_on</data>
+      <data key="d5">uses_concept</data>
+    </edge>
+    <edge source="definition.function" target="proof.vertical-line-test.stewart" id="0">
+      <data key="d4">uses</data>
+      <data key="d5">definition</data>
+      <data key="d6">high</data>
+      <data key="d7">False</data>
+    </edge>
+    <edge source="definition.graph-of-function" target="proof.vertical-line-test.stewart" id="0">
+      <data key="d4">uses</data>
+      <data key="d5">definition</data>
+      <data key="d6">high</data>
+      <data key="d7">False</data>
+    </edge>
+    <edge source="definition.graph-of-function" target="definition.domain" id="0">
+      <data key="d4">depends_on</data>
+      <data key="d5">uses_concept</data>
+    </edge>
+    <edge source="definition.graph-of-function" target="definition.function" id="0">
+      <data key="d4">depends_on</data>
+      <data key="d5">uses_concept</data>
+    </edge>
+    <edge source="definition.increasing-function" target="definition.function" id="0">
+      <data key="d4">depends_on</data>
+      <data key="d5">uses_concept</data>
+    </edge>
+    <edge source="definition.independent-variable" target="definition.domain" id="0">
+      <data key="d4">depends_on</data>
+      <data key="d5">uses_concept</data>
+    </edge>
+    <edge source="definition.independent-variable" target="definition.function" id="0">
+      <data key="d4">depends_on</data>
+      <data key="d5">uses_concept</data>
+    </edge>
+    <edge source="definition.linear-function" target="definition.function" id="0">
+      <data key="d4">depends_on</data>
+      <data key="d5">uses_concept</data>
+    </edge>
+    <edge source="definition.mathematical-model" target="definition.function" id="0">
+      <data key="d4">depends_on</data>
+      <data key="d5">uses_concept</data>
+    </edge>
+    <edge source="definition.odd-function" target="definition.domain" id="0">
+      <data key="d4">depends_on</data>
+      <data key="d5">uses_concept</data>
+    </edge>
+    <edge source="definition.odd-function" target="definition.function" id="0">
+      <data key="d4">depends_on</data>
+      <data key="d5">uses_concept</data>
+    </edge>
+    <edge source="definition.piecewise-function" target="definition.domain" id="0">
+      <data key="d4">depends_on</data>
+      <data key="d5">uses_concept</data>
+    </edge>
+    <edge source="definition.piecewise-function" target="definition.function" id="0">
+      <data key="d4">depends_on</data>
+      <data key="d5">uses_concept</data>
+    </edge>
+    <edge source="definition.polynomial" target="definition.function" id="0">
+      <data key="d4">depends_on</data>
+      <data key="d5">uses_concept</data>
+    </edge>
+    <edge source="definition.power-function" target="definition.function" id="0">
+      <data key="d4">depends_on</data>
+      <data key="d5">uses_concept</data>
+    </edge>
+    <edge source="definition.range" target="definition.domain" id="0">
+      <data key="d4">depends_on</data>
+      <data key="d5">uses_concept</data>
+    </edge>
+    <edge source="definition.range" target="definition.function" id="0">
+      <data key="d4">depends_on</data>
+      <data key="d5">uses_concept</data>
+    </edge>
+    <edge source="definition.rational-function" target="definition.domain" id="0">
+      <data key="d4">depends_on</data>
+      <data key="d5">uses_concept</data>
+    </edge>
+    <edge source="definition.rational-function" target="definition.function" id="0">
+      <data key="d4">depends_on</data>
+      <data key="d5">uses_concept</data>
+    </edge>
+    <edge source="definition.rational-function" target="definition.polynomial" id="0">
+      <data key="d4">depends_on</data>
+      <data key="d5">uses_concept</data>
+    </edge>
+    <edge source="definition.trigonometric-function" target="definition.function" id="0">
+      <data key="d4">depends_on</data>
+      <data key="d5">uses_concept</data>
+    </edge>
+    <edge source="proposition.vertical-line-test" target="definition.function" id="0">
+      <data key="d4">depends_on</data>
+      <data key="d5">uses_concept</data>
+    </edge>
+    <edge source="proposition.vertical-line-test" target="definition.graph-of-function" id="0">
+      <data key="d4">depends_on</data>
+      <data key="d5">uses_concept</data>
+    </edge>
+    <edge source="proof.vertical-line-test.stewart" target="proposition.vertical-line-test" id="0">
+      <data key="d4">proves</data>
+    </edge>
+  </graph>
+</graphml>

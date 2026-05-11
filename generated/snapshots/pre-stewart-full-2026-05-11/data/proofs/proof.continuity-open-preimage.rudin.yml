@@ -1,0 +1,22 @@
+id: proof.continuity-open-preimage.rudin
+type: proof
+
+proves: theorem.continuity-open-preimage
+
+uses:
+  - definition.continuity-metric
+  - definition.neighborhood-limit-point-open-closed
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "4"
+    section: "4.8"
+
+confidence: high
+notes: >
+  Forward: f continuous, V open in Y. For p ∈ f⁻¹(V), f(p) ∈ V,
+  so ∃ε with B(f(p),ε) ⊂ V. By continuity, ∃δ: d(x,p)<δ ⟹ f(x)∈V,
+  so B(p,δ) ⊂ f⁻¹(V). Converse: given p, ε>0, let V = B(f(p),ε);
+  V open, so f⁻¹(V) open, contains p, so ∃δ: B(p,δ) ⊂ f⁻¹(V).

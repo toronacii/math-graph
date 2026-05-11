@@ -1,0 +1,22 @@
+id: proof.countable-union-countable.rudin
+type: proof
+status: draft
+
+proves: theorem.countable-union-countable
+
+uses:
+  - definition.finite-countable-sets
+  - definition.sequence
+  - proposition.infinite-subset-countable
+
+style: construction
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "2"
+    section: "2.12"
+
+confidence: high
+notes: >
+  Diagonal arrangement of the double array. S is equivalent to a subset of J via Theorem 2.8.

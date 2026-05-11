@@ -1,0 +1,26 @@
+id: proof.product-rule.stewart
+type: proof
+status: draft
+
+proves: theorem.product-rule
+
+uses:
+  - definition.derivative-function
+  - theorem.limit-laws
+  - theorem.differentiable-implies-continuous
+
+style: direct
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.2"
+
+confidence: high
+notes: >
+  Add and subtract f(x+h)g(x):
+  [f(x+h)g(x+h) - f(x)g(x)]/h
+  = f(x+h)[g(x+h)-g(x)]/h + g(x)[f(x+h)-f(x)]/h.
+  As h→0, f(x+h)→f(x) (by continuity, since f is differentiable),
+  yielding f(x)g'(x) + g(x)f'(x).

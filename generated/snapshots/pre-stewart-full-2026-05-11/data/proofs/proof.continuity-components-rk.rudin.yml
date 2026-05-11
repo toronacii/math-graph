@@ -1,0 +1,19 @@
+id: proof.continuity-components-rk.rudin
+type: proof
+
+proves: theorem.continuity-components-rk
+
+uses:
+  - theorem.continuity-arithmetic-operations
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "4"
+    section: "4.10"
+
+confidence: high
+notes: >
+  Part (a): |f_j(x) - f_j(y)| ≤ |f(x) - f(y)| = (Σ|f_i(x)-f_i(y)|²)^{1/2}.
+  Part (b): follows from (a) and Theorem 4.9.

@@ -1,0 +1,29 @@
+id: corollary.nth-root-of-product
+type: corollary
+status: draft
+
+title:
+  en: nth Root of a Product
+
+statement:
+  natural:
+    en: >
+      If a and b are positive real numbers and n is a positive integer,
+      then (ab)^(1/n) = a^(1/n) · b^(1/n).
+  latex: |
+    (ab)^{1/n} = a^{1/n} \cdot b^{1/n}
+
+proved_by:
+  - proof.nth-root-of-product.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "1"
+    section: "1.21"
+
+confidence: high
+notes: >
+  Corollary to Theorem 1.21. Follows from the uniqueness assertion
+  and commutativity of multiplication.

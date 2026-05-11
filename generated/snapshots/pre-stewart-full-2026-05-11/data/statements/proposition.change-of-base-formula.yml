@@ -1,0 +1,94 @@
+schema_version: "0.3.0"
+id: proposition.change-of-base-formula
+type: proposition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Fórmula de cambio de base
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Change of base formula
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Para cualquier número positivo a ≠ 1, se tiene
+        logₐ(x) = ln(x) / ln(a) para todo x > 0.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        For any positive number a ≠ 1, we have
+        logₐ(x) = ln(x) / ln(a) for all x > 0.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      \log_a x = \frac{\ln x}{\ln a}
+    status: present
+    review_status: unreviewed
+
+proved_by:
+  - proof.change-of-base-formula.stewart
+
+depends_on:
+  - id: definition.logarithmic-function
+    role: uses_concept
+    confidence: high
+  - id: definition.natural-logarithm
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.5"
+    locator: "Fórmula de cambio de base (sección 1.5)"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [algebra]
+
+ambient:
+  structures: [real-line]
+  notes: >
+    Stated for positive real bases and positive real arguments.
+
+ontology:
+  semantic_kind: [schema]
+  keywords: [change-of-base, logarithm-conversion, natural-log]
+
+generality: []
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: medium
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.0"
+  rerun_id: v0.3-pilot-stewart-ch1
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []

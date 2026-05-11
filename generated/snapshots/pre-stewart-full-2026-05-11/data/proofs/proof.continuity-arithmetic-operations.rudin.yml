@@ -1,0 +1,20 @@
+id: proof.continuity-arithmetic-operations.rudin
+type: proof
+
+proves: theorem.continuity-arithmetic-operations
+
+uses:
+  - theorem.limit-arithmetic-functions-metric
+  - proposition.continuity-limit-point-equivalence
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "4"
+    section: "4.9"
+
+confidence: high
+notes: >
+  At isolated points, trivial. At limit points, follows from
+  Theorems 4.4 and 4.6.

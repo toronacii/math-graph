@@ -1,0 +1,22 @@
+id: definition.equivalence-cardinality
+type: definition
+status: draft
+
+title:
+  en: Cardinal Equivalence
+
+statement:
+  natural:
+    en: >
+      If there exists a 1-1 mapping of A onto B, we say A and B can be put in 1-1 correspondence, or that A and B have the same cardinal number, or that A and B are equivalent, and write A ~ B. This relation is reflexive, symmetric, and transitive (an equivalence relation).
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "2"
+    section: "2.3"
+
+confidence: high
+notes: >
+  Definition 2.3 from Rudin. Establishes cardinal equivalence as an equivalence relation.

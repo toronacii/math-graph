@@ -1,0 +1,7 @@
+schema_version: 0.3.0
+source: stewart
+chapter: '1'
+mode: extraction
+estimated_chars: 1598
+estimated_tokens: 399
+generator: scripts.v03.make_context_pack

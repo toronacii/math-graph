@@ -1,0 +1,52 @@
+cumulative:
+  nodes: 457
+  edges: 581
+  statements: 292
+  proofs: 165
+  definitions: 135
+  propositions: 42
+  theorems: 101
+  lemmas: 2
+  corollaries: 12
+
+chapter_3:
+  new_statements: 44
+  new_proofs: 33
+  total_entities: 77
+  breakdown:
+    definitions: 10
+    propositions: 9
+    theorems: 25
+    proofs: 33
+
+  reclassifications:
+    theorem_to_proposition: 7
+    details:
+      - convergent-sequence-properties
+      - nonnegative-series-bounded
+      - cauchy-criterion-series
+      - special-sequence-limits
+      - convergence-in-rk
+      - diameter-properties
+      - root-test-stronger-than-ratio
+
+  cross_chapter_dependencies: 13
+  top_dependencies:
+    - definition.infinite-series (x5)
+    - definition.absolute-convergence (x4)
+    - definition.neighborhood-limit-point-open-closed (x3)
+    - definition.compact-set (x3)
+    - theorem.k-cell-compact (x2)
+    - definition.number-e (x2)
+    - definition.metric-space (x2)
+
+  shared_with_stewart: 8
+  shared_theorems:
+    - theorem.comparison-test-series
+    - theorem.geometric-series
+    - theorem.divergence-test
+    - theorem.root-test
+    - theorem.ratio-test
+    - theorem.absolute-convergence-implies-convergence
+    - theorem.alternating-series-test
+    - theorem.power-series-convergence

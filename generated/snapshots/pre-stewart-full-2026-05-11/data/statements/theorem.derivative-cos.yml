@@ -1,0 +1,31 @@
+id: theorem.derivative-cos
+type: theorem
+status: draft
+
+title:
+  en: Derivative of cosine
+  es: Derivada del coseno
+
+statement:
+  natural:
+    es: >
+      d/dx(cos x) = -sin x.
+    en: >
+      d/dx(cos x) = -sin x.
+  latex: |
+    \frac{d}{dx}(\cos x) = -\sin x
+
+proved_by:
+  - proof.derivative-cos.stewart
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.3"
+
+confidence: high
+notes: >
+  Proved similarly to sin, using the addition formula for cosine
+  and the same two special limits.

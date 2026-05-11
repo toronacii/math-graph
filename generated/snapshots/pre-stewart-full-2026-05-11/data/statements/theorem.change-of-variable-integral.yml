@@ -1,0 +1,37 @@
+id: theorem.change-of-variable-integral
+type: theorem
+status: draft
+
+title:
+  en: Change of Variable for Riemann-Stieltjes Integrals
+
+statement:
+  natural:
+    en: >
+      Suppose phi is a strictly increasing continuous function that maps
+      [A, B] onto [a, b]. Suppose alpha is monotonically increasing on
+      [a, b] and f in R(alpha) on [a, b]. Define beta(y) = alpha(phi(y))
+      and g(y) = f(phi(y)). Then g in R(beta) and
+      integral_A^B g d beta = integral_a^b f d alpha.
+  latex: |
+    \varphi: [A,B] \xrightarrow{\sim} [a,b],\;
+    \beta = \alpha \circ \varphi,\;
+    g = f \circ \varphi
+    \implies
+    \int_A^B g\,d\beta = \int_a^b f\,d\alpha
+
+proved_by:
+  - proof.change-of-variable-integral.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "6"
+    section: "6.19"
+
+confidence: high
+notes: >
+  Special case: taking alpha(x) = x gives beta = phi, and if phi' in R
+  on [A,B], Theorem 6.17 yields the classical substitution formula
+  integral_a^b f(x) dx = integral_A^B f(phi(y)) phi'(y) dy.
