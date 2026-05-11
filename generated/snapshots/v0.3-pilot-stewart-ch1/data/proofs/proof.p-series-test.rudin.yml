@@ -1,0 +1,22 @@
+id: proof.p-series-test.rudin
+type: proof
+status: draft
+
+proves: theorem.p-series-test
+
+uses:
+  - theorem.cauchy-condensation-test
+  - theorem.geometric-series
+  - theorem.divergence-test
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.28"
+
+confidence: high
+notes: >
+  If p≤0, terms don't → 0. If p>0, condensation gives Σ2^{(1-p)k} which is geometric with ratio 2^{1-p}.

@@ -1,0 +1,656 @@
+{
+  "$defs": {
+    "ProofDependency": {
+      "additionalProperties": false,
+      "description": "A dependency edge from a proof to a statement it relies on.\n\nReplaces the v0.2 flat string list. Each edge carries:\n  - id:           the statement this proof uses\n  - role:         what kind of usage (essential, notation, existence, ...)\n  - confidence:   how confident we are this edge belongs here\n  - implicit:     true if this edge was inferred / convention (not stated by author)\n  - locality:     optional name of the proof part/case where this is used\n  - notes:        free-form",
+      "properties": {
+        "id": {
+          "minLength": 1,
+          "title": "Id",
+          "type": "string"
+        },
+        "role": {
+          "default": "essential",
+          "enum": [
+            "essential",
+            "background",
+            "notation",
+            "existence",
+            "definition",
+            "lemma_local",
+            "implicit"
+          ],
+          "title": "Role",
+          "type": "string"
+        },
+        "confidence": {
+          "default": "high",
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ],
+          "title": "Confidence",
+          "type": "string"
+        },
+        "implicit": {
+          "default": false,
+          "title": "Implicit",
+          "type": "boolean"
+        },
+        "locality": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Locality"
+        },
+        "notes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Notes"
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "title": "ProofDependency",
+      "type": "object"
+    },
+    "ProofPart": {
+      "additionalProperties": false,
+      "description": "An optional sub-section of a proof (a direction, a case, a sub-claim).\n\nAllows localizing dependencies. v0.3 does NOT introduce a formal proof\nAST; this is purely an annotation layer.",
+      "properties": {
+        "name": {
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
+        },
+        "kind": {
+          "default": "subclaim",
+          "enum": [
+            "direction",
+            "case",
+            "subclaim",
+            "construction",
+            "reduction"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "description": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Description"
+        },
+        "uses": {
+          "items": {
+            "$ref": "#/$defs/ProofDependency"
+          },
+          "title": "Uses",
+          "type": "array"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "title": "ProofPart",
+      "type": "object"
+    },
+    "ProvenanceBlock": {
+      "additionalProperties": false,
+      "description": "Records which extraction pass produced or last touched this entity.",
+      "properties": {
+        "schema_version": {
+          "default": "0.3.1",
+          "minLength": 1,
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "rerun_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Rerun Id"
+        },
+        "extracted_by": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Extracted By"
+        },
+        "extracted_at": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Extracted At"
+        },
+        "derived_from": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "title": "Derived From",
+          "type": "array"
+        },
+        "redirected_to": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Redirected To"
+        },
+        "rerun_notes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Rerun Notes"
+        }
+      },
+      "title": "ProvenanceBlock",
+      "type": "object"
+    },
+    "QualityBlock": {
+      "additionalProperties": false,
+      "description": "Decomposed quality metadata. Each axis is independently meaningful.\n\n- extraction_confidence: the LLM/human extractor's confidence in the parse.\n- dependency_confidence: confidence that `uses` / `depends_on` is COMPLETE.\n- semantic_confidence:   confidence that the formulation is mathematically faithful.\n- translation_confidence: confidence in non-original-language translations.\n- latex_confidence:      confidence in the formal LaTeX representation.\n- source_alignment_confidence: confidence the entity matches the cited source.",
+      "properties": {
+        "extraction_confidence": {
+          "anyOf": [
+            {
+              "enum": [
+                "low",
+                "medium",
+                "high"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Extraction Confidence"
+        },
+        "dependency_confidence": {
+          "anyOf": [
+            {
+              "enum": [
+                "low",
+                "medium",
+                "high"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Dependency Confidence"
+        },
+        "semantic_confidence": {
+          "anyOf": [
+            {
+              "enum": [
+                "low",
+                "medium",
+                "high"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Semantic Confidence"
+        },
+        "translation_confidence": {
+          "anyOf": [
+            {
+              "enum": [
+                "low",
+                "medium",
+                "high"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Translation Confidence"
+        },
+        "latex_confidence": {
+          "anyOf": [
+            {
+              "enum": [
+                "low",
+                "medium",
+                "high"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Latex Confidence"
+        },
+        "source_alignment_confidence": {
+          "anyOf": [
+            {
+              "enum": [
+                "low",
+                "medium",
+                "high"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Alignment Confidence"
+        },
+        "notes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Notes"
+        }
+      },
+      "title": "QualityBlock",
+      "type": "object"
+    },
+    "Source": {
+      "additionalProperties": false,
+      "description": "Bibliographic locator. v0.3 splits section-level from theorem-level locators.",
+      "properties": {
+        "work": {
+          "minLength": 1,
+          "title": "Work",
+          "type": "string"
+        },
+        "author": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Author"
+        },
+        "edition": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Edition"
+        },
+        "year": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Year"
+        },
+        "chapter": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Chapter"
+        },
+        "section": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Section"
+        },
+        "theorem_label": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Theorem Label"
+        },
+        "page": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Page"
+        },
+        "locator": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Locator"
+        },
+        "url": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Url"
+        },
+        "source_language": {
+          "anyOf": [
+            {
+              "pattern": "^[a-z]{2}(-[A-Z]{2})?$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Language"
+        },
+        "notes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Notes"
+        }
+      },
+      "required": [
+        "work"
+      ],
+      "title": "Source",
+      "type": "object"
+    },
+    "TranslatedText": {
+      "additionalProperties": false,
+      "description": "A single piece of human-readable text in one language with provenance.",
+      "properties": {
+        "text": {
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        },
+        "is_original": {
+          "default": false,
+          "title": "Is Original",
+          "type": "boolean"
+        },
+        "origin": {
+          "default": "human",
+          "enum": [
+            "original",
+            "human",
+            "llm",
+            "imported"
+          ],
+          "title": "Origin",
+          "type": "string"
+        },
+        "generated_by": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Generated By"
+        },
+        "review_status": {
+          "default": "unreviewed",
+          "enum": [
+            "unreviewed",
+            "reviewed",
+            "approved",
+            "rejected"
+          ],
+          "title": "Review Status",
+          "type": "string"
+        },
+        "notes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Notes"
+        }
+      },
+      "required": [
+        "text"
+      ],
+      "title": "TranslatedText",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "default": "0.3.1",
+      "enum": [
+        "0.3.0",
+        "0.3.1"
+      ],
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "id": {
+      "minLength": 1,
+      "title": "Id",
+      "type": "string"
+    },
+    "type": {
+      "const": "proof",
+      "default": "proof",
+      "title": "Type",
+      "type": "string"
+    },
+    "status": {
+      "default": "extracted",
+      "enum": [
+        "extracted",
+        "reviewed",
+        "validated",
+        "audited",
+        "stable",
+        "canonical"
+      ],
+      "title": "Status",
+      "type": "string"
+    },
+    "proves": {
+      "minLength": 1,
+      "title": "Proves",
+      "type": "string"
+    },
+    "style": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Style"
+    },
+    "uses": {
+      "items": {
+        "$ref": "#/$defs/ProofDependency"
+      },
+      "title": "Uses",
+      "type": "array"
+    },
+    "parts": {
+      "items": {
+        "$ref": "#/$defs/ProofPart"
+      },
+      "title": "Parts",
+      "type": "array"
+    },
+    "sources": {
+      "items": {
+        "$ref": "#/$defs/Source"
+      },
+      "title": "Sources",
+      "type": "array"
+    },
+    "sketch": {
+      "anyOf": [
+        {
+          "patternProperties": {
+            "^[a-z]{2}(-[A-Z]{2})?$": {
+              "$ref": "#/$defs/TranslatedText"
+            }
+          },
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Sketch"
+    },
+    "quality": {
+      "$ref": "#/$defs/QualityBlock"
+    },
+    "provenance": {
+      "$ref": "#/$defs/ProvenanceBlock"
+    },
+    "notes": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Notes"
+    }
+  },
+  "required": [
+    "id",
+    "proves"
+  ],
+  "title": "Proof",
+  "type": "object"
+}

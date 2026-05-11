@@ -1,0 +1,36 @@
+id: theorem.stieltjes-riemann-reduction
+type: theorem
+status: draft
+
+title:
+  en: Reduction of Stieltjes Integral to Riemann Integral
+
+statement:
+  natural:
+    en: >
+      Assume alpha increases monotonically and alpha' is in R on [a, b].
+      Let f be a bounded real function on [a, b]. Then f in R(alpha) if
+      and only if f alpha' in R. In that case,
+      integral_a^b f d alpha = integral_a^b f(x) alpha'(x) dx.
+  latex: |
+    \alpha' \in \mathscr{R} \implies
+    \left[f \in \mathscr{R}(\alpha) \iff f\alpha' \in \mathscr{R}\right]
+    \;\text{and}\;
+    \int_a^b f\,d\alpha = \int_a^b f(x)\,\alpha'(x)\,dx
+
+proved_by:
+  - proof.stieltjes-riemann-reduction.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "6"
+    section: "6.17"
+
+confidence: high
+notes: >
+  This theorem shows how the Stieltjes integral reduces to a
+  Riemann integral when the integrator has an integrable derivative.
+  Combined with Theorem 6.16, it demonstrates the unifying power
+  of the Stieltjes formulation.

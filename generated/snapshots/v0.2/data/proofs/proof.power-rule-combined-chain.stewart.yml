@@ -1,0 +1,22 @@
+id: proof.power-rule-combined-chain.stewart
+type: proof
+status: draft
+
+proves: corollary.power-rule-combined-chain
+
+uses:
+  - theorem.power-rule
+  - theorem.chain-rule
+
+style: direct
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.4"
+
+confidence: high
+notes: >
+  Let y = u^n where u = g(x). By the chain rule,
+  dy/dx = (dy/du)(du/dx) = nu^{n-1} · g'(x).

@@ -1,0 +1,32 @@
+id: definition.absolute-value
+type: definition
+status: draft
+
+title:
+  en: Absolute value
+  es: Valor absoluto
+
+statement:
+  natural:
+    es: >
+      El valor absoluto de un número a, denotado |a|, se define como
+      a si a ≥ 0 y como -a si a < 0. Geométricamente, |a| representa
+      la distancia de a al origen en la recta numérica.
+    en: >
+      The absolute value of a number a, denoted |a|, is defined as
+      a if a ≥ 0 and as -a if a < 0. Geometrically, |a| represents
+      the distance from a to the origin on the number line.
+  latex: |
+    |a| = \begin{cases} a & \text{si } a \geq 0 \\ -a & \text{si } a < 0 \end{cases}
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.1"
+
+confidence: medium
+notes: >
+  Stewart presents the absolute value as a key example of a
+  piecewise-defined function in section 1.1.

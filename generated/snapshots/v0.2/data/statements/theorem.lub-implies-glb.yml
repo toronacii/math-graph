@@ -1,0 +1,31 @@
+id: theorem.lub-implies-glb
+type: theorem
+status: draft
+
+title:
+  en: LUB Property Implies GLB Property
+
+statement:
+  natural:
+    en: >
+      Suppose S is an ordered set with the least-upper-bound property,
+      B ⊂ S, B is not empty, and B is bounded below. Let L be the set
+      of all lower bounds of B. Then α = sup L exists in S, and α = inf B.
+      In particular, inf B exists in S.
+  latex: |
+    \alpha = \sup L = \inf B
+
+proved_by:
+  - proof.lub-implies-glb.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "1"
+    section: "1.11"
+
+confidence: high
+notes: >
+  Rudin Theorem 1.11. Shows that the LUB property automatically
+  gives the GLB property. A fundamental duality result.

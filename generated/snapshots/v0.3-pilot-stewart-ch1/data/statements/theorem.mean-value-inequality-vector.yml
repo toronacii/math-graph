@@ -1,0 +1,34 @@
+id: theorem.mean-value-inequality-vector
+type: theorem
+status: draft
+
+title:
+  en: Mean Value Inequality for Vector-Valued Functions
+
+statement:
+  natural:
+    en: >
+      Suppose f is a continuous mapping of [a, b] into R^k and f is
+      differentiable in (a, b). Then there exists x in (a, b) such
+      that |f(b) - f(a)| <= (b - a)|f'(x)|.
+  latex: |
+    |\mathbf{f}(b) - \mathbf{f}(a)| \leq (b - a)\,|\mathbf{f}'(x)|
+
+proved_by:
+  - proof.mean-value-inequality-vector.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "5"
+    section: "5.19"
+
+confidence: high
+notes: >
+  The mean value theorem fails for vector-valued functions (Example
+  5.17 shows f(x) = e^{ix} has f(2pi)-f(0) = 0 but |f'(x)| = 1).
+  This inequality is the best substitute. The proof uses the inner
+  product z = f(b) - f(a), reduces to a real-valued function
+  phi(t) = z . f(t), applies the real MVT, and finishes with the
+  Schwarz inequality. Proof due to V. P. Havin.

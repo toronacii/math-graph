@@ -1,0 +1,29 @@
+id: theorem.subsequential-limits-closed
+type: theorem
+status: draft
+
+title:
+  en: Subsequential Limits Form a Closed Set
+
+statement:
+  natural:
+    en: >
+      Let {p_n} be a sequence in a metric space X. The set E* of all
+      subsequential limits of {p_n} is a closed subset of X.
+
+  latex: |
+    E^* = \{ x : p_{n_k} \to x \text{ for some subsequence}\} \text{ is closed}
+
+proved_by:
+  - proof.subsequential-limits-closed.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.7"
+
+confidence: high
+notes: >
+  Theorem 3.7 from Rudin.

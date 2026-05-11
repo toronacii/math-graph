@@ -1,0 +1,31 @@
+id: definition.average-value-of-function
+type: definition
+status: draft
+
+title:
+  en: Average value of a function
+  es: Valor promedio de una función
+
+statement:
+  natural:
+    es: >
+      El valor promedio de f en el intervalo [a, b] es
+      f_prom = (1/(b-a)) ∫_a^b f(x) dx.
+    en: >
+      The average value of f on the interval [a, b] is
+      f_avg = (1/(b-a)) ∫_a^b f(x) dx.
+  latex: |
+    f_{\text{avg}} = \frac{1}{b - a}\int_a^b f(x)\,dx
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "6"
+    section: "6.5"
+
+confidence: high
+notes: >
+  Generalizes the discrete average to continuous functions. The
+  definition is motivated by interpreting the integral as a sum and
+  dividing by the length of the interval.

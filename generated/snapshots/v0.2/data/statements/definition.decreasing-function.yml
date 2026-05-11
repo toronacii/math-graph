@@ -1,0 +1,31 @@
+id: definition.decreasing-function
+type: definition
+status: draft
+
+title:
+  en: Decreasing function
+  es: Función decreciente
+
+statement:
+  natural:
+    es: >
+      Una función f es decreciente en un intervalo I si para cualesquiera
+      dos números x₁ y x₂ en I tales que x₁ < x₂ se cumple que
+      f(x₁) > f(x₂).
+    en: >
+      A function f is decreasing on an interval I if for any two numbers
+      x₁ and x₂ in I such that x₁ < x₂, we have f(x₁) > f(x₂).
+  latex: |
+    x_1 < x_2 \implies f(x_1) > f(x_2) \quad \forall x_1, x_2 \in I
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.1"
+
+confidence: medium
+notes: >
+  Stewart defines increasing and decreasing functions together in
+  section 1.1.

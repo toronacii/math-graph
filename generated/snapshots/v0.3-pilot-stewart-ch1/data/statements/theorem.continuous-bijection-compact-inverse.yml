@@ -1,0 +1,28 @@
+id: theorem.continuous-bijection-compact-inverse
+type: theorem
+status: draft
+
+title:
+  en: Continuous Bijection from Compact Space has Continuous Inverse
+
+statement:
+  natural:
+    en: >
+      Suppose f is a continuous 1-1 mapping of a compact metric space
+      X onto a metric space Y. Then the inverse mapping f⁻¹ (defined
+      by f⁻¹(f(x)) = x for x ∈ X) is a continuous mapping of Y onto X.
+  latex: |
+    f : X \xrightarrow{\text{cont., 1-1, onto}} Y,\; X \text{ compact}
+    \;\Rightarrow\; f^{-1} : Y \to X \text{ continuous}
+
+proved_by:
+  - proof.continuous-bijection-compact-inverse.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "4"
+    section: "4.17"
+
+confidence: high

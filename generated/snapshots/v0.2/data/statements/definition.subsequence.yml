@@ -1,0 +1,27 @@
+id: definition.subsequence
+type: definition
+status: draft
+
+title:
+  en: Subsequence
+
+statement:
+  natural:
+    en: >
+      Given a sequence {p_n}, consider a sequence {n_k} of positive integers such that
+      n_1 < n_2 < n_3 < .... Then the sequence {p_{n_k}} is called a subsequence of {p_n}.
+      If {p_{n_k}} converges, its limit is called a subsequential limit of {p_n}.
+
+  latex: |
+    n_1 < n_2 < n_3 < \cdots \implies \{p_{n_k}\} \text{ is a subsequence of } \{p_n\}
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.5"
+
+confidence: high
+notes: >
+  Definition 3.5 from Rudin's Principles of Mathematical Analysis.

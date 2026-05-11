@@ -1,0 +1,28 @@
+id: definition.monotonically-increasing-function
+type: definition
+status: draft
+
+title:
+  en: Monotonically Increasing and Decreasing Functions
+
+statement:
+  natural:
+    en: >
+      Let f be real on (a, b). Then f is monotonically increasing on
+      (a, b) if a < x < y < b implies f(x) ≤ f(y). If the inequality
+      is reversed, f is monotonically decreasing. The class of monotonic
+      functions consists of both increasing and decreasing functions.
+  latex: |
+    x < y \;\Rightarrow\; f(x) \leq f(y) \quad \text{(monotonically increasing)}
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "4"
+    section: "4.28"
+
+confidence: high
+notes: >
+  Rudin uses non-strict inequality (≤) for monotonically increasing.
+  Compare with definition.monotonic-sequence which covers sequences.

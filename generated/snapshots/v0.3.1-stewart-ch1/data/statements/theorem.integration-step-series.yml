@@ -1,0 +1,30 @@
+id: theorem.integration-step-series
+type: theorem
+status: draft
+
+title:
+  en: Integration with Respect to a Series of Step Functions
+
+statement:
+  natural:
+    en: >
+      Suppose c_n >= 0 for n = 1, 2, 3, ..., sum c_n converges, {s_n}
+      is a sequence of distinct points in (a, b), and
+      alpha(x) = sum c_n I(x - s_n). Let f be continuous on [a, b]. Then
+      integral_a^b f d alpha = sum c_n f(s_n).
+  latex: |
+    \alpha(x) = \sum_{n=1}^{\infty} c_n I(x - s_n)
+    \implies
+    \int_a^b f\,d\alpha = \sum_{n=1}^{\infty} c_n f(s_n)
+
+proved_by:
+  - proof.integration-step-series.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "6"
+    section: "6.16"
+
+confidence: high

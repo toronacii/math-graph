@@ -1,0 +1,29 @@
+id: proposition.cauchy-criterion-series
+type: proposition
+status: draft
+
+title:
+  en: Cauchy Criterion for Series
+
+statement:
+  natural:
+    en: >
+      The series Σa_n converges if and only if for every ε > 0 there exists an integer N
+      such that |Σ_{k=n}^m a_k| ≤ ε whenever m ≥ n ≥ N.
+
+  latex: |
+    \left| \sum_{k=n}^{m} a_k \right| \leq \varepsilon \quad (m \geq n \geq N)
+
+proved_by:
+  - proof.cauchy-criterion-series.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.22"
+
+confidence: high
+notes: >
+  Theorem 3.22 from Rudin.

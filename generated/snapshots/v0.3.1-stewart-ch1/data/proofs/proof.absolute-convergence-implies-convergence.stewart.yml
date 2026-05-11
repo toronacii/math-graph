@@ -1,0 +1,25 @@
+id: proof.absolute-convergence-implies-convergence.stewart
+type: proof
+status: draft
+
+proves: theorem.absolute-convergence-implies-convergence
+
+uses:
+  - definition.absolute-convergence
+  - definition.infinite-series
+  - theorem.comparison-test-series
+
+style: direct
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "11"
+    section: "11.6"
+
+confidence: high
+notes: >
+  Since 0 ≤ aₙ + |aₙ| ≤ 2|aₙ| and ∑ 2|aₙ| converges, the
+  Comparison Test gives that ∑ (aₙ + |aₙ|) converges. Then
+  ∑ aₙ = ∑ (aₙ + |aₙ|) - ∑ |aₙ| converges as the difference
+  of two convergent series.

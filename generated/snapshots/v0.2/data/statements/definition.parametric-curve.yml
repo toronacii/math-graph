@@ -1,0 +1,33 @@
+id: definition.parametric-curve
+type: definition
+status: draft
+
+title:
+  en: Parametric curve
+  es: Curva paramétrica
+
+statement:
+  natural:
+    es: >
+      Suponga que x y y están dadas como funciones de una tercera
+      variable t (llamada parámetro) mediante las ecuaciones
+      x = f(t), y = g(t) (llamadas ecuaciones paramétricas).
+      Cada valor de t determina un punto (x, y) y el conjunto de
+      estos puntos es la curva paramétrica C.
+    en: >
+      Suppose x and y are given as functions of a third variable t
+      (called a parameter) by the equations x = f(t), y = g(t)
+      (called parametric equations). Each value of t determines a
+      point (x, y) and the set of these points is the parametric
+      curve C.
+  latex: |
+    C:\quad x = f(t),\quad y = g(t)
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "10"
+    section: "10.1"
+
+confidence: high

@@ -1,0 +1,27 @@
+id: proof.cauchy-criterion.rudin
+type: proof
+status: draft
+
+proves: theorem.cauchy-criterion
+
+uses:
+  - definition.cauchy-sequence
+  - definition.convergent-sequence
+  - definition.compact-set
+  - definition.complete-metric-space
+  - proposition.diameter-properties
+  - theorem.k-cell-compact
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.11"
+
+confidence: high
+notes: >
+  (a) Triangle inequality. (b) Tail sets E̅_N are nested compact with
+  diam→0; apply 3.10(b). (c) Cauchy in R^k ⟹ bounded ⟹ compact
+  closure ⟹ apply (b).

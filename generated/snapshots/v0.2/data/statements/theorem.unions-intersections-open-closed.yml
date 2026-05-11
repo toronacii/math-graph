@@ -1,0 +1,25 @@
+id: theorem.unions-intersections-open-closed
+type: theorem
+status: draft
+
+title:
+  en: Unions and Intersections of Open and Closed Sets
+
+statement:
+  natural:
+    en: >
+      (a) Arbitrary unions of open sets are open. (b) Arbitrary intersections of closed sets are closed. (c) Finite intersections of open sets are open. (d) Finite unions of closed sets are closed.
+
+proved_by:
+  - proof.unions-intersections-open-closed.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "2"
+    section: "2.24"
+
+confidence: high
+notes: >
+  Theorem 2.24 in Rudin. Four-part result on stability of open and closed sets under set operations.

@@ -1,0 +1,21 @@
+id: proof.multiplication-cancellation.rudin
+type: proof
+status: draft
+
+proves: proposition.multiplication-cancellation
+
+uses:
+  - definition.field
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "1"
+    section: "1.15"
+
+confidence: high
+notes: >
+  Analogous to the proof of Proposition 1.14 but using
+  multiplicative axioms (M1)-(M5).

@@ -1,0 +1,20 @@
+id: proof.at-most-countable-union.rudin
+type: proof
+status: draft
+
+proves: corollary.at-most-countable-union
+
+uses:
+  - theorem.countable-union-countable
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "2"
+    section: "2.12"
+
+confidence: high
+notes: >
+  T is equivalent to a subset of the countable union.

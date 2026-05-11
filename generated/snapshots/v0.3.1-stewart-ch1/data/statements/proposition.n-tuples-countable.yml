@@ -1,0 +1,25 @@
+id: proposition.n-tuples-countable
+type: proposition
+status: draft
+
+title:
+  en: Set of n-Tuples from a Countable Set is Countable
+
+statement:
+  natural:
+    en: >
+      Let A be a countable set, and let Bₙ be the set of all n-tuples (a₁,...,aₙ) where aₖ ∈ A. Then Bₙ is countable.
+
+proved_by:
+  - proof.n-tuples-countable.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "2"
+    section: "2.13"
+
+confidence: high
+notes: >
+  Theorem 2.13 in Rudin. Proved by induction on n using Theorem 2.12.

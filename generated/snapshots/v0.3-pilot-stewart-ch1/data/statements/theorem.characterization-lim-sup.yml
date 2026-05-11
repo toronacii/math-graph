@@ -1,0 +1,31 @@
+id: theorem.characterization-lim-sup
+type: theorem
+status: draft
+
+title:
+  en: Characterization of lim sup
+
+statement:
+  natural:
+    en: >
+      Let {s_n} be a real sequence, and let E* be the set of all subsequential
+      limits (including ±∞). Let s* = sup E* = lim sup s_n. Then: (a) s* ∈ E*;
+      (b) if x > s*, there exists N such that n ≥ N implies s_n < x. Moreover,
+      s* is the only number with both properties (a) and (b).
+
+  latex: |
+    s^* \in E \text{ and } x > s^* \implies \exists N : n \geq N \implies s_n < x
+
+proved_by:
+  - proof.characterization-lim-sup.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.17"
+
+confidence: high
+notes: >
+  Theorem 3.17 from Rudin.

@@ -1,0 +1,32 @@
+id: definition.first-order-linear-equation
+type: definition
+status: draft
+
+title:
+  en: First-order linear differential equation
+  es: Ecuación diferencial lineal de primer orden
+
+statement:
+  natural:
+    es: >
+      Una ecuación diferencial lineal de primer orden es una ecuación
+      que se puede escribir en la forma dy/dx + P(x)y = Q(x), donde
+      P y Q son funciones continuas de x.
+    en: >
+      A first-order linear differential equation is an equation that
+      can be written in the form dy/dx + P(x)y = Q(x), where P and
+      Q are continuous functions of x.
+  latex: |
+    \frac{dy}{dx} + P(x)\,y = Q(x)
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "9"
+    section: "9.5"
+
+confidence: high
+notes: >
+  The standard form for first-order linear ODEs. The solution method
+  uses an integrating factor.

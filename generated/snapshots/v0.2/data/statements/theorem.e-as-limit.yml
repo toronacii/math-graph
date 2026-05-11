@@ -1,0 +1,28 @@
+id: theorem.e-as-limit
+type: theorem
+status: draft
+
+title:
+  en: e as a Limit
+
+statement:
+  natural:
+    en: >
+      The limit of (1 + 1/n)^n as n approaches infinity equals e.
+
+  latex: |
+    \lim_{n \to \infty} \left(1 + \frac{1}{n}\right)^n = e
+
+proved_by:
+  - proof.e-as-limit.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.31"
+
+confidence: high
+notes: >
+  Theorem 3.31 from Rudin.

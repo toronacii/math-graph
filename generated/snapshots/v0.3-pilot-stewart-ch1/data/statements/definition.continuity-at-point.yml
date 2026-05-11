@@ -1,0 +1,29 @@
+id: definition.continuity-at-point
+type: definition
+status: draft
+
+title:
+  en: Continuity at a point
+  es: Continuidad en un punto
+
+statement:
+  natural:
+    es: >
+      Una función f es continua en un número a si
+      lim(x→a) f(x) = f(a). Esto requiere que: 1) f(a) esté definida,
+      2) lim(x→a) f(x) exista, y 3) lim(x→a) f(x) = f(a).
+    en: >
+      A function f is continuous at a number a if
+      lim(x→a) f(x) = f(a). This requires: 1) f(a) is defined,
+      2) lim(x→a) f(x) exists, and 3) lim(x→a) f(x) = f(a).
+  latex: |
+    \lim_{x \to a} f(x) = f(a)
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.5"
+
+confidence: high

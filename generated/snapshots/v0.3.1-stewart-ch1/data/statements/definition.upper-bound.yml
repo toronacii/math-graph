@@ -1,0 +1,25 @@
+id: definition.upper-bound
+type: definition
+status: draft
+
+title:
+  en: Upper Bound and Bounded Above
+
+statement:
+  natural:
+    en: >
+      Suppose S is an ordered set, and E ⊂ S. If there exists a β ∈ S
+      such that x ≤ β for every x ∈ E, we say that E is bounded above,
+      and call β an upper bound of E. Lower bounds are defined in the
+      same way (with ≥ in place of ≤).
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "1"
+    section: "1.7"
+
+confidence: high
+notes: >
+  Rudin 1.7. Dual notion of lower bound is implicit.

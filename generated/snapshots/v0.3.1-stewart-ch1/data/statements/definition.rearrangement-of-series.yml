@@ -1,0 +1,26 @@
+id: definition.rearrangement-of-series
+type: definition
+status: draft
+
+title:
+  en: Rearrangement of a Series
+
+statement:
+  natural:
+    en: >
+      Let {k_n} be a sequence in which every positive integer appears exactly once.
+      Putting a'_n = a_{k_n}, we say that Σa'_n is a rearrangement of Σa_n.
+
+  latex: |
+    a'_n = a_{k_n}, \quad \{k_n\} \text{ bijection } \mathbb{N} \to \mathbb{N}
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.52"
+
+confidence: high
+notes: >
+  Definition 3.52 from Rudin's Principles of Mathematical Analysis.

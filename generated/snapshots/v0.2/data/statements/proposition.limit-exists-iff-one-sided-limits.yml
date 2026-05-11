@@ -1,0 +1,33 @@
+id: proposition.limit-exists-iff-one-sided-limits
+type: proposition
+status: draft
+
+title:
+  en: Limit exists if and only if one-sided limits agree
+  es: El límite existe si y sólo si los límites laterales coinciden
+
+statement:
+  natural:
+    es: >
+      lim(x→a) f(x) = L si y sólo si lim(x→a⁻) f(x) = L y
+      lim(x→a⁺) f(x) = L.
+    en: >
+      lim(x→a) f(x) = L if and only if lim(x→a⁻) f(x) = L and
+      lim(x→a⁺) f(x) = L.
+  latex: |
+    \lim_{x \to a} f(x) = L \iff \lim_{x \to a^-} f(x) = L \;\text{ and }\; \lim_{x \to a^+} f(x) = L
+
+proved_by:
+  - proof.limit-exists-iff-one-sided-limits.stewart
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.2"
+
+confidence: medium
+notes: >
+  Stewart states this as a fundamental criterion in section 2.2.
+  The proof follows from the epsilon-delta definition in 2.4.

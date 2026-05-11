@@ -1,0 +1,31 @@
+id: definition.vector-valued-integral
+type: definition
+status: draft
+
+title:
+  en: Integration of Vector-Valued Functions
+
+statement:
+  natural:
+    en: >
+      Let f_1, ..., f_k be real functions on [a, b], and let
+      f = (f_1, ..., f_k) be the corresponding mapping into R^k. If alpha
+      increases monotonically on [a, b], we say f in R(alpha) means
+      f_j in R(alpha) for j = 1, ..., k. In that case,
+      integral f d alpha = (integral f_1 d alpha, ..., integral f_k d alpha).
+  latex: |
+    \mathbf{f} \in \mathscr{R}(\alpha) \iff f_j \in \mathscr{R}(\alpha)
+    \;\forall j, \quad
+    \int_a^b \mathbf{f}\,d\alpha =
+    \left(\int_a^b f_1\,d\alpha,\;\ldots,\;\int_a^b f_k\,d\alpha\right)
+
+proved_by: []
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "6"
+    section: "6.23"
+
+confidence: high

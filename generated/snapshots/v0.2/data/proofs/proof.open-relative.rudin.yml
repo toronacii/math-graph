@@ -1,0 +1,23 @@
+id: proof.open-relative.rudin
+type: proof
+status: draft
+
+proves: theorem.open-relative
+
+uses:
+  - definition.neighborhood-limit-point-open-closed
+  - definition.metric-space
+  - proposition.neighborhood-is-open
+  - theorem.unions-intersections-open-closed
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "2"
+    section: "2.30"
+
+confidence: high
+notes: >
+  If E open relative to Y: for each p ∈ E take Vp = ball in X with d(p,q) < rp, set G = ⋃Vp. Then G open in X and E = G ∩ Y. Converse: if E = G ∩ Y with G open, each p ∈ E has neighborhood in G, intersect with Y gives E.

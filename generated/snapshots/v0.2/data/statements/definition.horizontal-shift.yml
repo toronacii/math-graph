@@ -1,0 +1,32 @@
+id: definition.horizontal-shift
+type: definition
+status: draft
+
+title:
+  en: Horizontal shift
+  es: Traslación horizontal
+
+statement:
+  natural:
+    es: >
+      Si c > 0, la gráfica de y = f(x - c) se obtiene desplazando la
+      gráfica de y = f(x) hacia la derecha c unidades. La gráfica de
+      y = f(x + c) se obtiene desplazando la gráfica hacia la izquierda
+      c unidades.
+    en: >
+      If c > 0, the graph of y = f(x - c) is obtained by shifting the
+      graph of y = f(x) to the right c units. The graph of y = f(x + c)
+      is obtained by shifting the graph to the left c units.
+  latex: |
+    y = f(x - c) \quad (c > 0 \text{: derecha}), \quad y = f(x + c) \quad (c > 0 \text{: izquierda})
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.3"
+
+confidence: medium
+notes: >
+  Part of the catalog of transformations in section 1.3.

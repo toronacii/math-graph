@@ -1,0 +1,28 @@
+id: proposition.field-zero-product
+type: proposition
+status: draft
+
+title:
+  en: Field Properties of Zero and Negation
+
+statement:
+  natural:
+    en: >
+      The field axioms imply, for any x, y, z ∈ F: (a) 0x = 0.
+      (b) If x ≠ 0 and y ≠ 0 then xy ≠ 0. (c) (-x)y = -(xy) = x(-y).
+      (d) (-x)(-y) = xy.
+
+proved_by:
+  - proof.field-zero-product.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "1"
+    section: "1.16"
+
+confidence: high
+notes: >
+  Rudin Proposition 1.16. These are basic consequences of the
+  field axioms that hold in any field.

@@ -1,0 +1,31 @@
+id: theorem.cauchy-criterion
+type: theorem
+status: draft
+
+title:
+  en: Cauchy Criterion for Convergence
+
+statement:
+  natural:
+    en: >
+      (a) In any metric space, every convergent sequence is a Cauchy sequence.
+      (b) If X is a compact metric space, then every Cauchy sequence in X
+      converges. (c) In R^k, a sequence converges if and only if it is a
+      Cauchy sequence.
+
+  latex: |
+    \{p_n\} \text{ converges in } \mathbb{R}^k \iff \{p_n\} \text{ is Cauchy}
+
+proved_by:
+  - proof.cauchy-criterion.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.11"
+
+confidence: high
+notes: >
+  Theorem 3.11 from Rudin.

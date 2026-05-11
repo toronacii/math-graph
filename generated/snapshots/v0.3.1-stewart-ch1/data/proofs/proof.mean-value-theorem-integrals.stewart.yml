@@ -1,0 +1,30 @@
+id: proof.mean-value-theorem-integrals.stewart
+type: proof
+status: draft
+
+proves: theorem.mean-value-theorem-integrals
+
+uses:
+  - definition.definite-integral
+  - definition.continuity-on-interval
+  - definition.average-value-of-function
+  - theorem.extreme-value-theorem
+  - theorem.intermediate-value-theorem
+  - proposition.integral-comparison
+
+style: direct
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "6"
+    section: "6.5"
+
+confidence: high
+notes: >
+  Since f is continuous on [a, b], by the Extreme Value Theorem it
+  attains its absolute minimum m and maximum M. By the integral
+  comparison property, m(b-a) ≤ ∫_a^b f(x) dx ≤ M(b-a), so
+  m ≤ (1/(b-a))∫_a^b f(x) dx ≤ M. Since f is continuous and
+  f_avg lies between m and M, the Intermediate Value Theorem
+  guarantees a number c in [a, b] with f(c) = f_avg.

@@ -1,0 +1,30 @@
+id: definition.supremum
+type: definition
+status: draft
+
+title:
+  en: Supremum (Least Upper Bound)
+
+statement:
+  natural:
+    en: >
+      Suppose S is an ordered set, E ⊂ S, and E is bounded above.
+      Suppose there exists an α ∈ S such that (i) α is an upper bound
+      of E, and (ii) if γ < α then γ is not an upper bound of E. Then α
+      is called the least upper bound or supremum of E, and we write
+      α = sup E. The greatest lower bound or infimum is defined
+      analogously: α = inf E means α is a lower bound of E and no
+      β > α is a lower bound of E.
+  latex: |
+    \alpha = \sup E, \quad \alpha = \inf E
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "1"
+    section: "1.8"
+
+confidence: high
+notes: >
+  Rudin 1.8. Uniqueness of sup follows immediately from property (ii).

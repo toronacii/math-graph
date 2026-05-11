@@ -1,0 +1,42 @@
+id: definition.volume-of-revolution
+type: definition
+status: draft
+
+title:
+  en: Volume of revolution (disk/washer method)
+  es: Volumen de revolución (método de discos/arandelas)
+
+statement:
+  natural:
+    es: >
+      Si la región bajo la curva y = f(x) desde a hasta b se hace
+      girar alrededor del eje x, el volumen del sólido de revolución
+      resultante es V = ∫_a^b π[f(x)]² dx. Si la región está entre
+      y = f(x) y y = g(x) con f(x) ≥ g(x) ≥ 0, se usa el método
+      de arandelas: V = ∫_a^b π([f(x)]² - [g(x)]²) dx.
+    en: >
+      If the region under the curve y = f(x) from a to b is rotated
+      about the x-axis, the volume of the resulting solid of revolution
+      is V = ∫_a^b π[f(x)]² dx. If the region is between y = f(x) and
+      y = g(x) with f(x) ≥ g(x) ≥ 0, the washer method gives
+      V = ∫_a^b π([f(x)]² - [g(x)]²) dx.
+  latex: |
+    V = \int_a^b \pi\bigl[f(x)\bigr]^2\,dx
+    \qquad\text{(disk)}
+
+    V = \int_a^b \pi\Bigl(\bigl[f(x)\bigr]^2 - \bigl[g(x)\bigr]^2\Bigr)\,dx
+    \qquad\text{(washer)}
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "6"
+    section: "6.2"
+
+confidence: high
+notes: >
+  Special case of definition.volume-by-cross-sections where the
+  cross-sections are circles (disks) or annuli (washers). The
+  cross-sectional area is A(x) = π[f(x)]² for disks and
+  A(x) = π([f(x)]² - [g(x)]²) for washers.

@@ -1,0 +1,32 @@
+id: theorem.derivative-sum-rule
+type: theorem
+status: draft
+
+title:
+  en: Sum Rule for Derivatives
+
+statement:
+  natural:
+    en: >
+      If f and g are defined on [a, b] and are differentiable at a
+      point x in [a, b], then f + g is differentiable at x and
+      (f + g)'(x) = f'(x) + g'(x).
+  latex: |
+    (f + g)'(x) = f'(x) + g'(x)
+
+proved_by:
+  - proof.derivative-sum-rule.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "5"
+    section: "5.3"
+
+confidence: high
+notes: >
+  Rudin (5.3a) states this as part of a combined theorem with the
+  product and quotient rules. Stewart treats the sum rule as
+  immediate from limit laws and does not give it a separate theorem
+  number.

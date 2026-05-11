@@ -1,0 +1,22 @@
+id: proof.integration-by-parts-definite.stewart
+type: proof
+status: draft
+
+proves: theorem.integration-by-parts-definite
+
+uses:
+  - theorem.integration-by-parts
+  - theorem.ftc-part2
+
+style: direct
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "7"
+    section: "7.1"
+
+confidence: high
+notes: >
+  Apply the indefinite integration by parts formula and evaluate
+  using FTC Part 2.

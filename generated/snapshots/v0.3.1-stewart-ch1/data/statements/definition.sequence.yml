@@ -1,0 +1,22 @@
+id: definition.sequence
+type: definition
+status: draft
+
+title:
+  en: Sequence
+
+statement:
+  natural:
+    en: >
+      A sequence is a function f defined on the set J of all positive integers. If f(n) = xₙ, the sequence is denoted {xₙ}. The values xₙ are called the terms of the sequence. If xₙ ∈ A for all n, then {xₙ} is a sequence in A.
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "2"
+    section: "2.7"
+
+confidence: high
+notes: >
+  Definition 2.7 from Rudin. A sequence is formally a function from positive integers.

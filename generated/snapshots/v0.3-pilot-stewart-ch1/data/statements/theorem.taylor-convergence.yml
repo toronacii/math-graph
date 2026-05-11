@@ -1,0 +1,41 @@
+id: theorem.taylor-convergence
+type: theorem
+status: draft
+
+title:
+  en: Taylor's theorem (remainder convergence)
+  es: Teorema de Taylor (convergencia del residuo)
+
+statement:
+  natural:
+    es: >
+      Si f(x) = Tₙ(x) + Rₙ(x), donde Tₙ es el polinomio de Taylor
+      de grado n y Rₙ es el residuo, entonces si lim(n→∞) Rₙ(x) = 0
+      para |x-a| < R, se tiene f(x) = ∑_{n=0}^∞ f⁽ⁿ⁾(a)/n! · (x-a)ⁿ.
+      Por la desigualdad de Taylor, si |f⁽ⁿ⁺¹⁾(x)| ≤ M para
+      |x-a| ≤ d, entonces |Rₙ(x)| ≤ M·dⁿ⁺¹/(n+1)!.
+    en: >
+      If f(x) = Tₙ(x) + Rₙ(x), where Tₙ is the nth-degree Taylor
+      polynomial and Rₙ is the remainder, then if lim(n→∞) Rₙ(x) = 0
+      for |x-a| < R, we have f(x) = ∑_{n=0}^∞ f⁽ⁿ⁾(a)/n! · (x-a)ⁿ.
+      By Taylor's inequality, if |f⁽ⁿ⁺¹⁾(x)| ≤ M for |x-a| ≤ d,
+      then |Rₙ(x)| ≤ M·dⁿ⁺¹/(n+1)!.
+  latex: |
+    |R_n(x)| \le \frac{M\,|x-a|^{n+1}}{(n+1)!}
+    \;\Longrightarrow\;
+    \lim_{n\to\infty} R_n(x) = 0
+
+proved_by:
+  - proof.taylor-convergence.stewart
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "11"
+    section: "11.10"
+
+confidence: high
+notes: >
+  Taylor's inequality follows from the Lagrange form of the
+  remainder in Taylor's theorem, which itself uses the MVT.

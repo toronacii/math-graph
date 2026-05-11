@@ -1,0 +1,33 @@
+id: definition.implicit-differentiation
+type: definition
+status: draft
+
+title:
+  en: Implicit differentiation
+  es: Derivación implícita
+
+statement:
+  natural:
+    es: >
+      La derivación implícita consiste en derivar ambos lados de una
+      ecuación que define implícitamente a y como función de x, tratando
+      a y como función de x y aplicando la regla de la cadena.
+    en: >
+      Implicit differentiation consists of differentiating both sides
+      of an equation that implicitly defines y as a function of x,
+      treating y as a function of x and applying the chain rule.
+  latex: |
+    \text{Given } F(x, y) = 0,\quad
+    \frac{d}{dx}F(x, y) = 0 \;\Rightarrow\; \frac{dy}{dx}
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.5"
+
+confidence: high
+notes: >
+  Stewart introduces implicit differentiation as a method, not a
+  theorem. It relies on the chain rule applied to y(x).

@@ -1,0 +1,885 @@
+{
+  "directed": true,
+  "links": [
+    {
+      "relation": "depends_on",
+      "role": "instance_of",
+      "source": "definition.absolute-value",
+      "target": "definition.piecewise-function"
+    },
+    {
+      "relation": "depends_on",
+      "role": "specializes",
+      "source": "definition.algebraic-function",
+      "target": "definition.function"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.algebraic-function",
+      "target": "definition.polynomial"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.algebraic-function",
+      "target": "definition.rational-function"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.composition-of-functions",
+      "target": "definition.domain"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.composition-of-functions",
+      "target": "definition.function"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.decreasing-function",
+      "target": "definition.function"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.dependent-variable",
+      "target": "definition.function"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.dependent-variable",
+      "target": "definition.independent-variable"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.domain",
+      "target": "definition.function"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.even-function",
+      "target": "definition.domain"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.even-function",
+      "target": "definition.function"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.exponential-function",
+      "target": "definition.domain"
+    },
+    {
+      "relation": "depends_on",
+      "role": "specializes",
+      "source": "definition.exponential-function",
+      "target": "definition.function"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.exponential-function",
+      "target": "definition.range"
+    },
+    {
+      "relation": "depends_on",
+      "role": "specializes",
+      "source": "definition.exponential-function",
+      "target": "definition.transcendental-function"
+    },
+    {
+      "confidence": "high",
+      "implicit": false,
+      "relation": "uses",
+      "role": "definition",
+      "source": "definition.exponential-function",
+      "target": "proof.laws-of-exponents.stewart"
+    },
+    {
+      "confidence": "high",
+      "implicit": false,
+      "relation": "uses",
+      "role": "definition",
+      "source": "definition.exponential-function",
+      "target": "proof.laws-of-logarithms.stewart"
+    },
+    {
+      "confidence": "high",
+      "implicit": false,
+      "relation": "uses",
+      "role": "definition",
+      "source": "definition.function",
+      "target": "proof.vertical-line-test.stewart"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.graph-of-function",
+      "target": "definition.domain"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.graph-of-function",
+      "target": "definition.function"
+    },
+    {
+      "confidence": "high",
+      "implicit": false,
+      "relation": "uses",
+      "role": "definition",
+      "source": "definition.graph-of-function",
+      "target": "proof.horizontal-line-test.stewart"
+    },
+    {
+      "confidence": "high",
+      "implicit": false,
+      "relation": "uses",
+      "role": "definition",
+      "source": "definition.graph-of-function",
+      "target": "proof.inverse-graph-reflection.stewart"
+    },
+    {
+      "confidence": "high",
+      "implicit": false,
+      "relation": "uses",
+      "role": "definition",
+      "source": "definition.graph-of-function",
+      "target": "proof.vertical-line-test.stewart"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.horizontal-shift",
+      "target": "definition.function"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.horizontal-shift",
+      "target": "definition.graph-of-function"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.horizontal-stretch-compression",
+      "target": "definition.function"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.horizontal-stretch-compression",
+      "target": "definition.graph-of-function"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.increasing-function",
+      "target": "definition.function"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.independent-variable",
+      "target": "definition.domain"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.independent-variable",
+      "target": "definition.function"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.inverse-function",
+      "target": "definition.domain"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.inverse-function",
+      "target": "definition.function"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.inverse-function",
+      "target": "definition.one-to-one-function"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.inverse-function",
+      "target": "definition.range"
+    },
+    {
+      "confidence": "high",
+      "implicit": false,
+      "relation": "uses",
+      "role": "definition",
+      "source": "definition.inverse-function",
+      "target": "proof.cancellation-equations.stewart"
+    },
+    {
+      "confidence": "high",
+      "implicit": false,
+      "relation": "uses",
+      "role": "definition",
+      "source": "definition.inverse-function",
+      "target": "proof.inverse-graph-reflection.stewart"
+    },
+    {
+      "relation": "depends_on",
+      "role": "specializes",
+      "source": "definition.linear-function",
+      "target": "definition.function"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.logarithmic-function",
+      "target": "definition.exponential-function"
+    },
+    {
+      "relation": "depends_on",
+      "role": "specializes",
+      "source": "definition.logarithmic-function",
+      "target": "definition.function"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.logarithmic-function",
+      "target": "definition.inverse-function"
+    },
+    {
+      "relation": "depends_on",
+      "role": "specializes",
+      "source": "definition.logarithmic-function",
+      "target": "definition.transcendental-function"
+    },
+    {
+      "confidence": "high",
+      "implicit": false,
+      "relation": "uses",
+      "role": "definition",
+      "source": "definition.logarithmic-function",
+      "target": "proof.change-of-base-formula.stewart"
+    },
+    {
+      "confidence": "high",
+      "implicit": false,
+      "relation": "uses",
+      "role": "definition",
+      "source": "definition.logarithmic-function",
+      "target": "proof.laws-of-logarithms.stewart"
+    },
+    {
+      "relation": "depends_on",
+      "role": "specializes",
+      "source": "definition.natural-exponential-function",
+      "target": "definition.exponential-function"
+    },
+    {
+      "relation": "depends_on",
+      "role": "specializes",
+      "source": "definition.natural-logarithm",
+      "target": "definition.logarithmic-function"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.natural-logarithm",
+      "target": "definition.natural-exponential-function"
+    },
+    {
+      "confidence": "high",
+      "implicit": false,
+      "relation": "uses",
+      "role": "definition",
+      "source": "definition.natural-logarithm",
+      "target": "proof.change-of-base-formula.stewart"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.odd-function",
+      "target": "definition.domain"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.odd-function",
+      "target": "definition.function"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.one-to-one-function",
+      "target": "definition.function"
+    },
+    {
+      "confidence": "high",
+      "implicit": false,
+      "relation": "uses",
+      "role": "definition",
+      "source": "definition.one-to-one-function",
+      "target": "proof.cancellation-equations.stewart"
+    },
+    {
+      "confidence": "high",
+      "implicit": false,
+      "relation": "uses",
+      "role": "definition",
+      "source": "definition.one-to-one-function",
+      "target": "proof.horizontal-line-test.stewart"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.piecewise-function",
+      "target": "definition.domain"
+    },
+    {
+      "relation": "depends_on",
+      "role": "specializes",
+      "source": "definition.piecewise-function",
+      "target": "definition.function"
+    },
+    {
+      "relation": "depends_on",
+      "role": "specializes",
+      "source": "definition.polynomial",
+      "target": "definition.function"
+    },
+    {
+      "relation": "depends_on",
+      "role": "specializes",
+      "source": "definition.power-function",
+      "target": "definition.function"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.range",
+      "target": "definition.domain"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.range",
+      "target": "definition.function"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.rational-function",
+      "target": "definition.domain"
+    },
+    {
+      "relation": "depends_on",
+      "role": "specializes",
+      "source": "definition.rational-function",
+      "target": "definition.function"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.rational-function",
+      "target": "definition.polynomial"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.reflection",
+      "target": "definition.function"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.reflection",
+      "target": "definition.graph-of-function"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.transcendental-function",
+      "target": "definition.algebraic-function"
+    },
+    {
+      "relation": "depends_on",
+      "role": "specializes",
+      "source": "definition.transcendental-function",
+      "target": "definition.function"
+    },
+    {
+      "relation": "depends_on",
+      "role": "specializes",
+      "source": "definition.trigonometric-function",
+      "target": "definition.function"
+    },
+    {
+      "relation": "depends_on",
+      "role": "specializes",
+      "source": "definition.trigonometric-function",
+      "target": "definition.transcendental-function"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.vertical-shift",
+      "target": "definition.function"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.vertical-shift",
+      "target": "definition.graph-of-function"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.vertical-stretch-compression",
+      "target": "definition.function"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.vertical-stretch-compression",
+      "target": "definition.graph-of-function"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.cancellation-equations.stewart",
+      "target": "proposition.cancellation-equations"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.change-of-base-formula.stewart",
+      "target": "proposition.change-of-base-formula"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.horizontal-line-test.stewart",
+      "target": "proposition.horizontal-line-test"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.inverse-graph-reflection.stewart",
+      "target": "proposition.inverse-graph-reflection"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.laws-of-exponents.stewart",
+      "target": "proposition.laws-of-exponents"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.laws-of-logarithms.stewart",
+      "target": "proposition.laws-of-logarithms"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.vertical-line-test.stewart",
+      "target": "proposition.vertical-line-test"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "proposition.cancellation-equations",
+      "target": "definition.inverse-function"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "proposition.cancellation-equations",
+      "target": "definition.one-to-one-function"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "proposition.change-of-base-formula",
+      "target": "definition.logarithmic-function"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "proposition.change-of-base-formula",
+      "target": "definition.natural-logarithm"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "proposition.horizontal-line-test",
+      "target": "definition.graph-of-function"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "proposition.horizontal-line-test",
+      "target": "definition.one-to-one-function"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "proposition.inverse-graph-reflection",
+      "target": "definition.graph-of-function"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "proposition.inverse-graph-reflection",
+      "target": "definition.inverse-function"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "proposition.inverse-graph-reflection",
+      "target": "definition.reflection"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "proposition.laws-of-exponents",
+      "target": "definition.exponential-function"
+    },
+    {
+      "confidence": "high",
+      "implicit": false,
+      "relation": "uses",
+      "role": "essential",
+      "source": "proposition.laws-of-exponents",
+      "target": "proof.laws-of-logarithms.stewart"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "proposition.laws-of-logarithms",
+      "target": "definition.logarithmic-function"
+    },
+    {
+      "confidence": "high",
+      "implicit": false,
+      "relation": "uses",
+      "role": "essential",
+      "source": "proposition.laws-of-logarithms",
+      "target": "proof.change-of-base-formula.stewart"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "proposition.laws-of-logarithms",
+      "target": "proposition.laws-of-exponents"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "proposition.vertical-line-test",
+      "target": "definition.function"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "proposition.vertical-line-test",
+      "target": "definition.graph-of-function"
+    }
+  ],
+  "multigraph": true,
+  "nodes": [
+    {
+      "id": "definition.absolute-value",
+      "kind": "statement",
+      "status": "extracted",
+      "type": "definition"
+    },
+    {
+      "id": "definition.algebraic-function",
+      "kind": "statement",
+      "status": "extracted",
+      "type": "definition"
+    },
+    {
+      "id": "definition.composition-of-functions",
+      "kind": "statement",
+      "status": "extracted",
+      "type": "definition"
+    },
+    {
+      "id": "definition.decreasing-function",
+      "kind": "statement",
+      "status": "extracted",
+      "type": "definition"
+    },
+    {
+      "id": "definition.dependent-variable",
+      "kind": "statement",
+      "status": "extracted",
+      "type": "definition"
+    },
+    {
+      "id": "definition.domain",
+      "kind": "statement",
+      "status": "extracted",
+      "type": "definition"
+    },
+    {
+      "id": "definition.even-function",
+      "kind": "statement",
+      "status": "extracted",
+      "type": "definition"
+    },
+    {
+      "id": "definition.exponential-function",
+      "kind": "statement",
+      "status": "extracted",
+      "type": "definition"
+    },
+    {
+      "id": "definition.function",
+      "kind": "statement",
+      "status": "extracted",
+      "type": "definition"
+    },
+    {
+      "id": "definition.graph-of-function",
+      "kind": "statement",
+      "status": "extracted",
+      "type": "definition"
+    },
+    {
+      "id": "definition.horizontal-shift",
+      "kind": "statement",
+      "status": "extracted",
+      "type": "definition"
+    },
+    {
+      "id": "definition.horizontal-stretch-compression",
+      "kind": "statement",
+      "status": "extracted",
+      "type": "definition"
+    },
+    {
+      "id": "definition.increasing-function",
+      "kind": "statement",
+      "status": "extracted",
+      "type": "definition"
+    },
+    {
+      "id": "definition.independent-variable",
+      "kind": "statement",
+      "status": "extracted",
+      "type": "definition"
+    },
+    {
+      "id": "definition.inverse-function",
+      "kind": "statement",
+      "status": "extracted",
+      "type": "definition"
+    },
+    {
+      "id": "definition.linear-function",
+      "kind": "statement",
+      "status": "extracted",
+      "type": "definition"
+    },
+    {
+      "id": "definition.logarithmic-function",
+      "kind": "statement",
+      "status": "extracted",
+      "type": "definition"
+    },
+    {
+      "id": "definition.mathematical-model",
+      "kind": "statement",
+      "status": "extracted",
+      "type": "definition"
+    },
+    {
+      "id": "definition.natural-exponential-function",
+      "kind": "statement",
+      "status": "extracted",
+      "type": "definition"
+    },
+    {
+      "id": "definition.natural-logarithm",
+      "kind": "statement",
+      "status": "extracted",
+      "type": "definition"
+    },
+    {
+      "id": "definition.odd-function",
+      "kind": "statement",
+      "status": "extracted",
+      "type": "definition"
+    },
+    {
+      "id": "definition.one-to-one-function",
+      "kind": "statement",
+      "status": "extracted",
+      "type": "definition"
+    },
+    {
+      "id": "definition.piecewise-function",
+      "kind": "statement",
+      "status": "extracted",
+      "type": "definition"
+    },
+    {
+      "id": "definition.polynomial",
+      "kind": "statement",
+      "status": "extracted",
+      "type": "definition"
+    },
+    {
+      "id": "definition.power-function",
+      "kind": "statement",
+      "status": "extracted",
+      "type": "definition"
+    },
+    {
+      "id": "definition.range",
+      "kind": "statement",
+      "status": "extracted",
+      "type": "definition"
+    },
+    {
+      "id": "definition.rational-function",
+      "kind": "statement",
+      "status": "extracted",
+      "type": "definition"
+    },
+    {
+      "id": "definition.reflection",
+      "kind": "statement",
+      "status": "extracted",
+      "type": "definition"
+    },
+    {
+      "id": "definition.transcendental-function",
+      "kind": "statement",
+      "status": "extracted",
+      "type": "definition"
+    },
+    {
+      "id": "definition.trigonometric-function",
+      "kind": "statement",
+      "status": "extracted",
+      "type": "definition"
+    },
+    {
+      "id": "definition.vertical-shift",
+      "kind": "statement",
+      "status": "extracted",
+      "type": "definition"
+    },
+    {
+      "id": "definition.vertical-stretch-compression",
+      "kind": "statement",
+      "status": "extracted",
+      "type": "definition"
+    },
+    {
+      "id": "proof.cancellation-equations.stewart",
+      "kind": "proof",
+      "status": "extracted",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.change-of-base-formula.stewart",
+      "kind": "proof",
+      "status": "extracted",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.horizontal-line-test.stewart",
+      "kind": "proof",
+      "status": "extracted",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.inverse-graph-reflection.stewart",
+      "kind": "proof",
+      "status": "extracted",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.laws-of-exponents.stewart",
+      "kind": "proof",
+      "status": "extracted",
+      "style": "assumed",
+      "type": "proof"
+    },
+    {
+      "id": "proof.laws-of-logarithms.stewart",
+      "kind": "proof",
+      "status": "extracted",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.vertical-line-test.stewart",
+      "kind": "proof",
+      "status": "extracted",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proposition.cancellation-equations",
+      "kind": "statement",
+      "status": "extracted",
+      "type": "proposition"
+    },
+    {
+      "id": "proposition.change-of-base-formula",
+      "kind": "statement",
+      "status": "extracted",
+      "type": "proposition"
+    },
+    {
+      "id": "proposition.horizontal-line-test",
+      "kind": "statement",
+      "status": "extracted",
+      "type": "proposition"
+    },
+    {
+      "id": "proposition.inverse-graph-reflection",
+      "kind": "statement",
+      "status": "extracted",
+      "type": "proposition"
+    },
+    {
+      "id": "proposition.laws-of-exponents",
+      "kind": "statement",
+      "status": "extracted",
+      "type": "proposition"
+    },
+    {
+      "id": "proposition.laws-of-logarithms",
+      "kind": "statement",
+      "status": "extracted",
+      "type": "proposition"
+    },
+    {
+      "id": "proposition.vertical-line-test",
+      "kind": "statement",
+      "status": "extracted",
+      "type": "proposition"
+    }
+  ],
+  "schema_version": "0.3.1"
+}

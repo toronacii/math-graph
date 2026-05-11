@@ -1,0 +1,32 @@
+id: theorem.limit-root-law
+type: theorem
+status: draft
+
+title:
+  en: Root law for limits
+  es: Ley de la raíz para límites
+
+statement:
+  natural:
+    es: >
+      Si lim(x→a) f(x) existe y n es un entero positivo, entonces
+      lim(x→a) ⁿ√f(x) = ⁿ√(lim(x→a) f(x)).
+      Si n es par, se requiere que lim(x→a) f(x) > 0.
+    en: >
+      If lim(x→a) f(x) exists and n is a positive integer, then
+      lim(x→a) ⁿ√f(x) = ⁿ√(lim(x→a) f(x)).
+      If n is even, we require that lim(x→a) f(x) > 0.
+  latex: |
+    \lim_{x \to a} \sqrt[n]{f(x)} = \sqrt[n]{\lim_{x \to a} f(x)}
+
+proved_by:
+  - proof.limit-root-law.stewart
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.3"
+
+confidence: medium

@@ -1,0 +1,29 @@
+id: theorem.mertens
+type: theorem
+status: draft
+
+title:
+  en: Mertens' Theorem
+
+statement:
+  natural:
+    en: >
+      If Σa_n converges absolutely to A, Σb_n = B, and c_n = Σ_{k=0}^n a_k b_{n-k},
+      then Σc_n = AB.
+
+  latex: |
+    \sum a_n = A \text{ (abs.)},\; \sum b_n = B \implies \sum c_n = AB
+
+proved_by:
+  - proof.mertens.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.50"
+
+confidence: high
+notes: >
+  Theorem 3.50 from Rudin.

@@ -1,0 +1,24 @@
+id: proof.change-of-base-formula.stewart
+type: proof
+status: draft
+
+proves: proposition.change-of-base-formula
+
+uses:
+  - definition.logarithmic-function
+  - definition.natural-logarithm
+  - proposition.laws-of-logarithms
+
+style: direct
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.5"
+
+confidence: medium
+notes: >
+  Let y = logₐx. Then aʸ = x. Taking natural logarithm on both sides:
+  y ln(a) = ln(x), so y = ln(x)/ln(a). This uses the power rule from
+  the laws of logarithms applied to the natural logarithm.

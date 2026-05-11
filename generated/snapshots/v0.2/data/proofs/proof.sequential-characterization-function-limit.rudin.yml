@@ -1,0 +1,22 @@
+id: proof.sequential-characterization-function-limit.rudin
+type: proof
+
+proves: theorem.sequential-characterization-function-limit
+
+uses:
+  - definition.limit-of-function-metric
+  - definition.convergent-sequence
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "4"
+    section: "4.2"
+
+confidence: high
+notes: >
+  Forward: given ε-δ limit, any sequence p_n → p with p_n ≠ p
+  eventually enters the δ-ball, so f(p_n) enters the ε-ball.
+  Converse: contrapositive — if ε-δ fails, construct a sequence
+  with δ_n = 1/n witnessing failure.

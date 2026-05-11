@@ -1,0 +1,40 @@
+# MKG v0.3.1 — Canonical Source Registry
+#
+# Each entry registers a source-of-record used by the graph. The `key` is the
+# stable short identifier used by tooling (context-pack `--source` flag,
+# pipeline filters, dashboards). The `work` field is the canonical title that
+# MUST appear verbatim as `sources[].work` in v0.3 YAML entities; the
+# validator warns when a `Source.work` does not match any registered title.
+#
+# Adding a new source: append an entry below, then run
+# `uv run mkg-validate` to confirm no existing nodes break.
+#
+# Schema:
+#   key:           short identifier (lowercase, hyphenated)
+#   work:          canonical title (matches Source.work in YAML)
+#   author:        primary author (matches Source.author when present)
+#   edition:       edition tag, optional
+#   language:      original publication language (ISO 639-1)
+#   isbn:          ISBN-13 if known, optional
+#   notes:         free-form annotations
+
+schema_version: "0.3.1"
+
+sources:
+  - key: stewart
+    work: "Cálculo de una variable — Trascendentes tempranas"
+    author: "James Stewart"
+    edition: "7"
+    language: es
+    notes: >
+      Spanish translation of *Single Variable Calculus: Early Transcendentals*
+      (Cengage). Used as the v0.3 pilot source for Stewart Ch1.
+
+  - key: rudin
+    work: "Principles of Mathematical Analysis"
+    author: "Walter Rudin"
+    edition: "3"
+    language: en
+    notes: >
+      The "Baby Rudin." Frozen v0.2 prototype covered Ch1–6; v0.3 re-extraction
+      pending.

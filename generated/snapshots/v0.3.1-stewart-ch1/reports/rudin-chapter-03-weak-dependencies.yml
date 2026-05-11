@@ -1,0 +1,14 @@
+weak_dependencies: []
+
+notes: >
+  All Rudin Ch3 proofs have high confidence. No implicit or uncertain
+  dependencies identified. Rudin's proofs are explicit about their
+  dependencies and follow rigorous logical chains.
+
+deferred_proofs:
+  - id: proof.abel-cauchy-product.rudin
+    reason: >
+      Rudin states Theorem 3.51 in Chapter 3 but defers the proof to
+      Chapter 8 (after Theorem 8.2), using continuity of power series.
+    confidence: high
+    notes: Proof is complete but located in a later chapter.

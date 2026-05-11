@@ -1,0 +1,39 @@
+id: proposition.integrals-symmetric-functions
+type: proposition
+status: draft
+
+title:
+  en: Integrals of symmetric functions
+  es: Integrales de funciones simétricas
+
+statement:
+  natural:
+    es: >
+      Suponga que f es continua en [-a, a].
+      (a) Si f es par [f(-x) = f(x)], entonces
+      ∫_{-a}^{a} f(x) dx = 2 ∫_0^a f(x) dx.
+      (b) Si f es impar [f(-x) = -f(x)], entonces
+      ∫_{-a}^{a} f(x) dx = 0.
+    en: >
+      Suppose f is continuous on [-a, a].
+      (a) If f is even [f(-x) = f(x)], then
+      ∫_{-a}^{a} f(x) dx = 2 ∫_0^a f(x) dx.
+      (b) If f is odd [f(-x) = -f(x)], then
+      ∫_{-a}^{a} f(x) dx = 0.
+  latex: |
+    f \text{ even} \;\Rightarrow\; \int_{-a}^{a} f(x)\,dx = 2\int_0^a f(x)\,dx \\
+    f \text{ odd} \;\Rightarrow\; \int_{-a}^{a} f(x)\,dx = 0
+
+proved_by:
+  - proof.integrals-symmetric-functions.stewart
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "5"
+    section: "5.5"
+
+confidence: high
+notes: >
+  Proved using the substitution u = -x on the integral from -a to 0.

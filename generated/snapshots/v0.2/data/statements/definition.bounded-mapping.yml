@@ -1,0 +1,23 @@
+id: definition.bounded-mapping
+type: definition
+status: draft
+
+title:
+  en: Bounded Mapping
+
+statement:
+  natural:
+    en: >
+      A mapping f of a set E into R^k is said to be bounded if there is
+      a real number M such that |f(x)| ≤ M for all x ∈ E.
+  latex: |
+    \exists\, M \in \mathbb{R} : |\mathbf{f}(x)| \leq M \;\;\forall\, x \in E
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "4"
+    section: "4.13"
+
+confidence: high

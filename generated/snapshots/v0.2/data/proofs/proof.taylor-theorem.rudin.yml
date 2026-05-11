@@ -1,0 +1,26 @@
+id: proof.taylor-theorem.rudin
+type: proof
+status: draft
+
+proves: theorem.taylor-theorem
+
+uses:
+  - theorem.mean-value-theorem
+  - definition.second-derivative
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "5"
+    section: "5.15"
+
+confidence: high
+notes: >
+  Let M be defined by f(beta) = P(beta) + M(beta - alpha)^n, and put
+  g(t) = f(t) - P(t) - M(t - alpha)^n. Then g^(n)(t) = f^(n)(t) - n!M
+  and g(alpha) = g'(alpha) = ... = g^(n-1)(alpha) = 0. Since g(beta) = 0,
+  MVT gives g'(x1) = 0 for some x1 between alpha and beta. Since
+  g'(alpha) = 0, MVT gives g''(x2) = 0 for some x2 between alpha and x1.
+  After n steps: g^(n)(xn) = 0, so f^(n)(xn) = n!M.

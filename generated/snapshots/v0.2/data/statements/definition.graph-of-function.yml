@@ -1,0 +1,28 @@
+id: definition.graph-of-function
+type: definition
+status: draft
+
+title:
+  en: Graph of a function
+  es: Gráfica de una función
+
+statement:
+  natural:
+    es: >
+      Si f es una función con dominio D, entonces su gráfica es el conjunto
+      de pares ordenados {(x, f(x)) : x ∈ D}, considerado como subconjunto
+      del plano cartesiano.
+    en: >
+      If f is a function with domain D, its graph is the set of ordered
+      pairs {(x, f(x)) : x ∈ D}, regarded as a subset of the Cartesian plane.
+  latex: |
+    \{(x, f(x)) \mid x \in D\}
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.1"
+
+confidence: medium

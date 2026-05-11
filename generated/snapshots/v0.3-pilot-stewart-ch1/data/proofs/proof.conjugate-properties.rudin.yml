@@ -1,0 +1,23 @@
+id: proof.conjugate-properties.rudin
+type: proof
+status: draft
+
+proves: theorem.conjugate-properties
+
+uses:
+  - definition.complex-conjugate
+  - definition.complex-number
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "1"
+    section: "1.31"
+
+confidence: high
+notes: >
+  Parts (a), (b), (c) are direct computation. Part (d): if z = a+bi
+  then zz̄ = a² + b², which is real and nonnegative, and zero only
+  when a = b = 0.

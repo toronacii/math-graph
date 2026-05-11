@@ -1,0 +1,32 @@
+id: proposition.horizontal-line-test
+type: proposition
+status: draft
+
+title:
+  en: Horizontal line test
+  es: Prueba de la línea horizontal
+
+statement:
+  natural:
+    es: >
+      Una función es inyectiva si y sólo si ninguna línea horizontal
+      corta su gráfica más de una vez.
+    en: >
+      A function is one-to-one if and only if no horizontal line
+      intersects its graph more than once.
+
+proved_by:
+  - proof.horizontal-line-test.stewart
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.5"
+
+confidence: medium
+notes: >
+  Reclassified from definition to proposition. The horizontal line test
+  is a criterion for injectivity, not the introduction of a new
+  mathematical object.

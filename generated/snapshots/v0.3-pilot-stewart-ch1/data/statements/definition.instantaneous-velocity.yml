@@ -1,0 +1,35 @@
+id: definition.instantaneous-velocity
+type: definition
+status: draft
+
+title:
+  en: Instantaneous velocity
+  es: Velocidad instantánea
+
+statement:
+  natural:
+    es: >
+      La velocidad instantánea de un objeto con función de posición
+      s = f(t) en el instante t = a se define como
+      v(a) = lim(t→a) (f(t) - f(a)) / (t - a), siempre que este límite
+      exista.
+    en: >
+      The instantaneous velocity of an object with position function
+      s = f(t) at time t = a is defined as
+      v(a) = lim(t→a) (f(t) - f(a)) / (t - a), provided this limit
+      exists.
+  latex: |
+    v(a) = \lim_{t \to a} \frac{f(t) - f(a)}{t - a}
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.1"
+
+confidence: medium
+notes: >
+  Stewart introduces instantaneous velocity in section 2.1 as the
+  physical motivation for derivatives, parallel to the geometric
+  motivation via tangent lines.

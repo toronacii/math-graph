@@ -1,0 +1,29 @@
+id: definition.parabola
+type: definition
+status: draft
+
+title:
+  en: Parabola
+  es: Parábola
+
+statement:
+  natural:
+    es: >
+      Una parábola es el conjunto de puntos en un plano equidistantes
+      de un punto fijo F (el foco) y una recta fija l (la directriz).
+      Si el foco está en (0, p), la ecuación es x² = 4py.
+    en: >
+      A parabola is the set of points in a plane equidistant from a
+      fixed point F (the focus) and a fixed line l (the directrix).
+      If the focus is at (0, p), the equation is x² = 4py.
+  latex: |
+    x^2 = 4py
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "10"
+    section: "10.5"
+
+confidence: high

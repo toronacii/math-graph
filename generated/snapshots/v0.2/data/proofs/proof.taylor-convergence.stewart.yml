@@ -1,0 +1,26 @@
+id: proof.taylor-convergence.stewart
+type: proof
+status: draft
+
+proves: theorem.taylor-convergence
+
+uses:
+  - definition.taylor-series
+  - theorem.mean-value-theorem
+  - theorem.squeeze-theorem
+
+style: direct
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "11"
+    section: "11.10"
+
+confidence: medium
+notes: >
+  Taylor's inequality |Rₙ(x)| ≤ M|x-a|ⁿ⁺¹/(n+1)! is derived
+  from the Lagrange form of the remainder (which uses the MVT
+  applied to the remainder function). Since |x-a|ⁿ⁺¹/(n+1)! → 0
+  for any fixed x (by the Squeeze Theorem, comparing with
+  the convergent series for eˣ), we get Rₙ(x) → 0.

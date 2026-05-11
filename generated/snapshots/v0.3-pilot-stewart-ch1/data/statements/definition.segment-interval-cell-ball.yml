@@ -1,0 +1,22 @@
+id: definition.segment-interval-cell-ball
+type: definition
+status: draft
+
+title:
+  en: Segment, Interval, k-Cell, and Ball
+
+statement:
+  natural:
+    en: >
+      The segment (a,b) is the set of all real x with a < x < b. The interval [a,b] is the set with a ≤ x ≤ b. A k-cell is the set of points in Rk whose coordinates satisfy aᵢ ≤ xᵢ ≤ bᵢ. The open ball B(x,r) is {y ∈ Rk : |y-x| < r}; the closed ball uses ≤. A set E ⊂ Rk is convex if λx + (1-λ)y ∈ E whenever x,y ∈ E and 0 < λ < 1.
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "2"
+    section: "2.17"
+
+confidence: high
+notes: >
+  Definition 2.17 from Rudin. Introduces segments, intervals, k-cells, open and closed balls, and convexity in Euclidean space.

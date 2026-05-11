@@ -1,0 +1,33 @@
+id: theorem.substitution-rule-definite
+type: theorem
+status: draft
+
+title:
+  en: The Substitution Rule for Definite Integrals
+  es: Regla de sustitución para integrales definidas
+
+statement:
+  natural:
+    es: >
+      Si g' es continua en [a, b] y f es continua en el rango de
+      u = g(x), entonces ∫_a^b f(g(x)) g'(x) dx = ∫_{g(a)}^{g(b)} f(u) du.
+    en: >
+      If g' is continuous on [a, b] and f is continuous on the range
+      of u = g(x), then ∫_a^b f(g(x)) g'(x) dx = ∫_{g(a)}^{g(b)} f(u) du.
+  latex: |
+    \int_a^b f(g(x))\,g'(x)\,dx = \int_{g(a)}^{g(b)} f(u)\,du
+
+proved_by:
+  - proof.substitution-rule-definite.stewart
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "5"
+    section: "5.5"
+
+confidence: high
+notes: >
+  When using substitution in definite integrals, the limits of
+  integration change from x-values to u-values.

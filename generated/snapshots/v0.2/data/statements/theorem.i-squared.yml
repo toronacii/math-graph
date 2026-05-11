@@ -1,0 +1,27 @@
+id: theorem.i-squared
+type: theorem
+status: draft
+
+title:
+  en: Square of the Imaginary Unit
+
+statement:
+  natural:
+    en: >
+      i² = -1.
+  latex: |
+    i^2 = -1
+
+proved_by:
+  - proof.i-squared.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "1"
+    section: "1.28"
+
+confidence: high
+notes: >
+  Rudin Theorem 1.28. Direct computation: (0,1)(0,1) = (-1,0) = -1.

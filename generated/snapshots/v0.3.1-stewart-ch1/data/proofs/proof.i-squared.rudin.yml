@@ -1,0 +1,21 @@
+id: proof.i-squared.rudin
+type: proof
+status: draft
+
+proves: theorem.i-squared
+
+uses:
+  - definition.imaginary-unit
+  - definition.complex-number
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "1"
+    section: "1.28"
+
+confidence: high
+notes: >
+  i² = (0,1)(0,1) = (0·0-1·1, 0·1+1·0) = (-1,0) = -1.

@@ -1,0 +1,31 @@
+id: definition.limit-of-function-metric
+type: definition
+status: draft
+
+title:
+  en: Limit of a Function (Metric Spaces)
+
+statement:
+  natural:
+    en: >
+      Let X and Y be metric spaces, E ⊂ X, f maps E into Y, and p is
+      a limit point of E. We write lim_{x→p} f(x) = q if for every ε > 0
+      there exists δ > 0 such that d_Y(f(x), q) < ε for all x ∈ E with
+      0 < d_X(x, p) < δ.
+  latex: |
+    \forall \varepsilon > 0,\; \exists\, \delta > 0 : 0 < d_X(x,p) < \delta,\; x \in E
+    \;\Rightarrow\; d_Y(f(x), q) < \varepsilon
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "4"
+    section: "4.1"
+
+confidence: high
+notes: >
+  Rudin Definition 4.1. Generalizes the limit concept to arbitrary metric
+  spaces. The point p must be a limit point of E but need not belong to E.
+  Strictly more general than Stewart's definition.limit-of-function which
+  is restricted to real functions on R.

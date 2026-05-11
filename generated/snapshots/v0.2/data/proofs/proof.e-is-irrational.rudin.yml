@@ -1,0 +1,21 @@
+id: proof.e-is-irrational.rudin
+type: proof
+status: draft
+
+proves: theorem.e-is-irrational
+
+uses:
+  - definition.number-e
+  - theorem.e-as-limit
+
+style: contradiction
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.32"
+
+confidence: high
+notes: >
+  If e=p/q, then 0 < q!(e - s_q) < 1/q. But q!·e integer, q!·s_q integer, so q!(e-s_q) is integer between 0 and 1, contradiction.

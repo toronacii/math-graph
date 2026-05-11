@@ -1,0 +1,22 @@
+id: proof.closed-subset-compact.rudin
+type: proof
+status: draft
+
+proves: proposition.closed-subset-compact
+
+uses:
+  - definition.compact-set
+  - definition.neighborhood-limit-point-open-closed
+  - proposition.open-iff-complement-closed
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "2"
+    section: "2.35"
+
+confidence: high
+notes: >
+  Adjoin Fᶜ (open) to any cover of F to get a cover of K. Extract finite subcover of K, remove Fᶜ.

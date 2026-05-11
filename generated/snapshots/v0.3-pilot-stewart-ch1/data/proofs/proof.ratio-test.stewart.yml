@@ -1,0 +1,26 @@
+id: proof.ratio-test.stewart
+type: proof
+status: draft
+
+proves: theorem.ratio-test
+
+uses:
+  - definition.absolute-convergence
+  - theorem.geometric-series
+  - theorem.comparison-test-series
+
+style: direct
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "11"
+    section: "11.6"
+
+confidence: high
+notes: >
+  Part (i): If L < 1, pick r with L < r < 1. For large n,
+  |aₙ₊₁/aₙ| < r, so |aₙ| < |aₙ|rⁿ⁻ᴺ for n ≥ N. By comparison
+  with a convergent geometric series, ∑ |aₙ| converges.
+  Part (ii): For large n, |aₙ₊₁| > |aₙ|, so aₙ does not approach 0;
+  the series diverges by the Divergence Test.

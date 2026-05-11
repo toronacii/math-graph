@@ -1,0 +1,20 @@
+id: proof.nested-compact-nonempty.rudin
+type: proof
+status: draft
+
+proves: corollary.nested-compact-nonempty
+
+uses:
+  - theorem.finite-intersection-compact
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "2"
+    section: "2.36"
+
+confidence: high
+notes: >
+  Nested sequence satisfies finite intersection property trivially.

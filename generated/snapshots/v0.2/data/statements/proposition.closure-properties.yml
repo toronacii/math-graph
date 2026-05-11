@@ -1,0 +1,25 @@
+id: proposition.closure-properties
+type: proposition
+status: draft
+
+title:
+  en: Properties of the Closure of a Set
+
+statement:
+  natural:
+    en: >
+      If X is a metric space and E ⊂ X, then (a) E̅ is closed, (b) E̅ = E iff E is closed, (c) E̅ ⊂ F for every closed set F ⊃ E. Thus E̅ is the smallest closed set containing E.
+
+proved_by:
+  - proof.closure-properties.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "2"
+    section: "2.27"
+
+confidence: high
+notes: >
+  Theorem 2.27 in Rudin. Characterizes the closure as the smallest closed superset.

@@ -1,0 +1,110 @@
+weak_dependencies:
+
+  # Inherited from Chapter 1
+  - proof: proof.laws-of-exponents.stewart
+    proves: proposition.laws-of-exponents
+    issue: assumed-foundational-algebra
+    confidence: low
+    style: assumed
+    chapter: "1"
+    propagates_to:
+      - proof.laws-of-logarithms.stewart
+      - proof.change-of-base-formula.stewart
+    notes: >
+      Unchanged from Chapter 1. Stewart assumes exponent laws without
+      formal derivation. Epistemic debt propagates through the
+      logarithmic chain.
+
+  # New in Chapter 2
+  - proof: proof.intermediate-value-theorem.stewart
+    proves: theorem.intermediate-value-theorem
+    issue: assumed-completeness-axiom
+    confidence: low
+    style: assumed
+    chapter: "2"
+    propagates_to: []
+    notes: >
+      Stewart states the IVT without proof in section 2.5, deferring
+      to Appendix F. The proof requires the Completeness Axiom (least
+      upper bound property) of the real numbers, which is not
+      developed in the main text. The IVT is used for existence
+      arguments (e.g., showing roots exist in intervals) but does not
+      currently feed into other proofs in the graph. Future chapters
+      may create downstream dependencies.
+    resolution_path: >
+      Can be resolved by adding the Completeness Axiom as an explicit
+      axiom node and providing the Appendix F proof as a second proof
+      node with style: rigorous.
+
+  - proof: proof.limit-root-law.stewart
+    proves: theorem.limit-root-law
+    issue: incomplete-proof
+    confidence: low
+    style: epsilon-delta
+    chapter: "2"
+    propagates_to: []
+    notes: >
+      Stewart states the root law without a full proof in section 2.3.
+      A rigorous proof requires continuity of the nth root function,
+      which in turn depends on the Intermediate Value Theorem (to
+      show nth roots exist) and monotonicity arguments. The effective
+      confidence is bounded by the IVT's assumed status.
+    resolution_path: >
+      Requires proving continuity of x^(1/n), which itself depends on
+      IVT + completeness. Resolving the IVT would resolve this
+      transitively.
+
+implicit_algebraic_imports:
+
+  # Inherited from Chapter 1
+  - concept: Real number field axioms
+    used_by:
+      - definition.function
+      - definition.domain
+      - definition.range
+      - definition.epsilon-delta-limit
+      - definition.continuity-at-point
+    chapter: "1-2"
+    notes: >
+      The epsilon-delta definition and continuity both assume the
+      completeness and order properties of the real numbers without
+      axiomatizing them.
+
+  - concept: Precalculus trigonometry
+    used_by:
+      - definition.trigonometric-function
+      - theorem.limit-sinx-over-x
+    chapter: "1-2"
+    notes: >
+      The proof of lim sin(x)/x = 1 uses geometric properties of the
+      unit circle (sector area, inscribed triangle) that are imported
+      from precalculus without formal justification.
+
+  # New in Chapter 2
+  - concept: Triangle inequality
+    used_by:
+      - proof.limit-laws.stewart
+    chapter: "2"
+    notes: >
+      The proof of the sum law for limits uses |a + b| <= |a| + |b|
+      without proving it. This is a standard real analysis fact that
+      Stewart assumes.
+
+  - concept: Archimedean property
+    used_by:
+      - proof.limit-one-over-x-at-infinity.stewart
+    chapter: "2"
+    notes: >
+      The proof that lim 1/x^r = 0 implicitly uses the Archimedean
+      property of the real numbers to find N large enough.
+
+epistemic_debt_summary:
+  total_weak_proofs: 3
+  total_inherited_weak: 2
+  total_implicit_imports: 4
+  affected_chain_depth: 3
+  new_weak_since_chapter_1: 2
+  resolution_chapter_estimate:
+    laws_of_exponents: "7"
+    ivt: "Appendix F (completeness axiom)"
+    root_law: "depends on IVT resolution"

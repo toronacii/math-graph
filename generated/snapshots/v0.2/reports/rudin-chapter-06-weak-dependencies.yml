@@ -1,0 +1,30 @@
+title: Rudin Chapter 6 — Weak Dependencies
+generated: 2026-05-11
+
+weak_proofs: []
+# All Ch6 proofs have confidence: high
+
+implicit_dependencies:
+  - proof: proof.continuous-integrable-stieltjes.rudin
+    implicit: >
+      Uses "f is uniformly continuous on [a, b]" which depends on [a, b]
+      being compact. The dependency on theorem.compact-uniform-continuity
+      captures this, but the compactness of [a, b] (Heine-Borel) is implicit.
+
+  - proof: proof.monotonic-integrable-stieltjes.rudin
+    implicit: >
+      Uses Theorem 4.23 (continuous function on [a, b] achieves all
+      intermediate values of alpha) via IVT. The precise dependency
+      is on intermediate value theorem applied to alpha.
+
+  - proof: proof.finitely-discontinuous-integrable.rudin
+    implicit: >
+      Uses "the remaining set K is compact" which relies on K being
+      closed and bounded in R (Heine-Borel). Not explicitly captured.
+
+notes: >
+  All Chapter 6 proofs have confidence: high because Rudin's proofs are
+  fully explicit. The implicit dependencies above are standard topological
+  facts about R that are used without citation in the text. They represent
+  epistemic debt from earlier chapters (compactness of closed bounded
+  intervals, Heine-Borel), not extraction uncertainty.

@@ -1,0 +1,7 @@
+schema_version: 0.3.0
+source: rudin
+chapter: '1'
+mode: extraction
+estimated_chars: 1577
+estimated_tokens: 394
+generator: scripts.v03.make_context_pack

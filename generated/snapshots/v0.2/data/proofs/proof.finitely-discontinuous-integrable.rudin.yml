@@ -1,0 +1,27 @@
+id: proof.finitely-discontinuous-integrable.rudin
+type: proof
+status: draft
+
+proves: theorem.finitely-discontinuous-integrable
+
+uses:
+  - theorem.riemann-stieltjes-integrability-criterion
+  - theorem.compact-uniform-continuity
+  - definition.compact-set
+  - definition.continuity-metric
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "6"
+    section: "6.10"
+
+confidence: high
+notes: >
+  Cover the finite discontinuity set E by disjoint intervals [u_j, v_j]
+  with sum alpha(v_j) - alpha(u_j) < epsilon. The remaining set K is
+  compact, so f is uniformly continuous on K. Build a partition that
+  separates the discontinuity intervals, giving
+  U - L <= [alpha(b) - alpha(a)] epsilon + 2M epsilon.

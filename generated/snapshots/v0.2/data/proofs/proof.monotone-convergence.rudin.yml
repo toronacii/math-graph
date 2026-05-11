@@ -1,0 +1,23 @@
+id: proof.monotone-convergence.rudin
+type: proof
+status: draft
+
+proves: theorem.monotonic-sequence-theorem
+
+uses:
+  - definition.monotonic-sequence
+  - definition.supremum
+  - definition.convergent-sequence
+  - proposition.convergent-sequence-properties
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.14"
+
+confidence: high
+notes: >
+  If increasing, let s = sup E (range). For every ε, s-ε < s_N ≤ s for some N; since increasing, s_n ∈ (s-ε, s] for all n>N. Converse from Thm 3.2(c).

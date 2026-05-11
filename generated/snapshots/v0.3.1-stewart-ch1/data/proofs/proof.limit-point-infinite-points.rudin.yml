@@ -1,0 +1,21 @@
+id: proof.limit-point-infinite-points.rudin
+type: proof
+status: draft
+
+proves: proposition.limit-point-infinite-points
+
+uses:
+  - definition.neighborhood-limit-point-open-closed
+  - definition.metric-space
+
+style: contradiction
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "2"
+    section: "2.20"
+
+confidence: high
+notes: >
+  If N contains only finitely many points q₁,...,qₙ of E distinct from p, take r = min d(p,qₘ) > 0. Then Nr(p) contains no point of E except possibly p.

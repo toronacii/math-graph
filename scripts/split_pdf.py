@@ -186,6 +186,52 @@ def detect_chapters(doc: fitz.Document) -> list[dict]:
     return unique
 
 
+def detect_chapters_from_toc(doc: fitz.Document) -> list[dict]:
+    """Detect chapters using the PDF's embedded outline (table of contents).
+
+    Returns level-1 entries whose title starts with a digit followed by a
+    space and a non-empty title (e.g. "1 Funciones y modelos").
+    """
+    toc = doc.get_toc()
+    chapters: list[dict] = []
+    for level, title, page in toc:
+        if level != 1:
+            continue
+        m = re.match(r"^\s*(\d+)\s+(.+?)\s*$", title)
+        if not m:
+            continue
+        chapters.append(
+            {
+                "number": int(m.group(1)),
+                "title": m.group(2).strip(),
+                "start_page": page - 1,  # TOC pages are 1-indexed
+            }
+        )
+
+    # Deduplicate by chapter number, keep first
+    seen: set[int] = set()
+    unique: list[dict] = []
+    for ch in chapters:
+        if ch["number"] not in seen:
+            seen.add(ch["number"])
+            unique.append(ch)
+    unique.sort(key=lambda c: c["number"])
+    return unique
+
+
+def detect_content_end_from_toc(doc: fitz.Document, last_chapter_start: int) -> int:
+    """Find content end via TOC: the page before the first level-1 entry
+    after *last_chapter_start* that is not itself a numeric chapter."""
+    for level, title, page in doc.get_toc():
+        if level != 1:
+            continue
+        if page - 1 <= last_chapter_start:
+            continue
+        if not re.match(r"^\s*\d+\s+", title):
+            return page - 2  # 0-indexed page just before back-matter entry
+    return doc.page_count - 1
+
+
 def detect_content_end(doc: fitz.Document, last_chapter_start: int) -> int:
     """Return the 0-indexed page number of the last content page (before back-matter)."""
     for page_idx in range(last_chapter_start + 1, doc.page_count):
@@ -260,6 +306,12 @@ def main(argv: list[str] | None = None) -> None:
         default=default_output,
         help="Directory for chapter PDFs (default: sources/rudin/chapters/).",
     )
+    parser.add_argument(
+        "--use-toc",
+        action="store_true",
+        help="Detect chapters from the PDF's embedded outline instead of "
+        "scanning page text (recommended when the PDF has a clean TOC).",
+    )
     args = parser.parse_args(argv)
 
     if not args.pdf.exists():
@@ -271,12 +323,18 @@ def main(argv: list[str] | None = None) -> None:
     print(f"  Total pages: {doc.page_count}")
 
     print("\nDetecting chapters ...")
-    chapters = detect_chapters(doc)
+    if args.use_toc:
+        chapters = detect_chapters_from_toc(doc)
+    else:
+        chapters = detect_chapters(doc)
     if not chapters:
         print("Error: no chapters detected.", file=sys.stderr)
         sys.exit(1)
 
-    content_end = detect_content_end(doc, chapters[-1]["start_page"])
+    if args.use_toc:
+        content_end = detect_content_end_from_toc(doc, chapters[-1]["start_page"])
+    else:
+        content_end = detect_content_end(doc, chapters[-1]["start_page"])
     print(f"  Found {len(chapters)} chapters (content ends at page {content_end + 1})\n")
 
     print("Splitting:")

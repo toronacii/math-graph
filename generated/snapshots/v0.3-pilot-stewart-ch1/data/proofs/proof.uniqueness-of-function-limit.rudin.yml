@@ -1,0 +1,20 @@
+id: proof.uniqueness-of-function-limit.rudin
+type: proof
+
+proves: corollary.uniqueness-of-function-limit
+
+uses:
+  - theorem.sequential-characterization-function-limit
+  - proposition.convergent-sequence-properties
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "4"
+    section: "4.2"
+
+confidence: high
+notes: >
+  Follows from Theorem 3.2(b) (uniqueness of sequence limits) and
+  the sequential characterization (Theorem 4.2).

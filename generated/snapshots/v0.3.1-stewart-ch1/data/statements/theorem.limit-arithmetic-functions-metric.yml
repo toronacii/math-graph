@@ -1,0 +1,30 @@
+id: theorem.limit-arithmetic-functions-metric
+type: theorem
+status: draft
+
+title:
+  en: Arithmetic of Function Limits (Metric Spaces)
+
+statement:
+  natural:
+    en: >
+      Suppose E ⊂ X (a metric space), p is a limit point of E, f and g
+      are complex functions on E, and lim_{x→p} f(x) = A,
+      lim_{x→p} g(x) = B. Then (a) lim_{x→p}(f+g)(x) = A + B;
+      (b) lim_{x→p}(fg)(x) = AB; (c) lim_{x→p}(f/g)(x) = A/B if B ≠ 0.
+  latex: |
+    \lim_{x \to p}(f+g)(x) = A+B, \quad
+    \lim_{x \to p}(fg)(x) = AB, \quad
+    \lim_{x \to p}\frac{f}{g}(x) = \frac{A}{B} \;(B \neq 0)
+
+proved_by:
+  - proof.limit-arithmetic-functions-metric.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "4"
+    section: "4.4"
+
+confidence: high

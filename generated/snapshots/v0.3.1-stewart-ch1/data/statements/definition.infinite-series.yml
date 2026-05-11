@@ -1,0 +1,35 @@
+id: definition.infinite-series
+type: definition
+status: draft
+
+title:
+  en: Infinite series
+  es: Serie infinita
+
+statement:
+  natural:
+    es: >
+      Una serie infinita (o simplemente una serie) es una expresión
+      de la forma ∑_{n=1}^∞ aₙ = a₁ + a₂ + a₃ + ... . La n-ésima
+      suma parcial es sₙ = ∑_{i=1}^n aᵢ. Si la sucesión {sₙ} de
+      sumas parciales converge a s, la serie converge y su suma es s.
+      Si {sₙ} diverge, la serie diverge.
+    en: >
+      An infinite series (or simply a series) is an expression of
+      the form ∑_{n=1}^∞ aₙ = a₁ + a₂ + a₃ + ... . The nth partial
+      sum is sₙ = ∑_{i=1}^n aᵢ. If the sequence {sₙ} of partial
+      sums converges to s, the series converges and its sum is s.
+      If {sₙ} diverges, the series diverges.
+  latex: |
+    \sum_{n=1}^{\infty} a_n = \lim_{n \to \infty} s_n
+    \quad\text{where}\quad
+    s_n = \sum_{i=1}^n a_i
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "11"
+    section: "11.2"
+
+confidence: high

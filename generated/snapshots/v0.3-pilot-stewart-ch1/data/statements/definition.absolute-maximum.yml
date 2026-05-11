@@ -1,0 +1,27 @@
+id: definition.absolute-maximum
+type: definition
+status: draft
+
+title:
+  en: Absolute maximum
+  es: Máximo absoluto
+
+statement:
+  natural:
+    es: >
+      Un número f(c) es un valor máximo absoluto de f en un conjunto D
+      si f(c) ≥ f(x) para toda x en D.
+    en: >
+      A number f(c) is an absolute maximum value of f on a set D
+      if f(c) ≥ f(x) for all x in D.
+  latex: |
+    f(c) \geq f(x) \quad \forall\, x \in D
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "4"
+    section: "4.1"
+
+confidence: high

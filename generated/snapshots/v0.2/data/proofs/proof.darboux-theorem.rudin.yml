@@ -1,0 +1,25 @@
+id: proof.darboux-theorem.rudin
+type: proof
+status: draft
+
+proves: theorem.darboux-theorem
+
+uses:
+  - theorem.fermat-theorem
+  - theorem.extreme-value-theorem-compact-metric
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "5"
+    section: "5.12"
+
+confidence: high
+notes: >
+  Put g(t) = f(t) - lambda*t. Then g'(a) < 0, so g(t1) < g(a) for
+  some t1 in (a,b), and g'(b) > 0, so g(t2) < g(b) for some t2 in
+  (a,b). Hence g attains its minimum on [a,b] (Theorem 4.16, EVT)
+  at some interior point x with a < x < b. By Theorem 5.8 (Fermat),
+  g'(x) = 0, so f'(x) = lambda.

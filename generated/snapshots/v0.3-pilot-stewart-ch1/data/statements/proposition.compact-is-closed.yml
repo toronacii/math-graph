@@ -1,0 +1,25 @@
+id: proposition.compact-is-closed
+type: proposition
+status: draft
+
+title:
+  en: Compact Subsets of Metric Spaces are Closed
+
+statement:
+  natural:
+    en: >
+      Compact subsets of metric spaces are closed.
+
+proved_by:
+  - proof.compact-is-closed.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "2"
+    section: "2.34"
+
+confidence: high
+notes: >
+  Theorem 2.34 in Rudin.

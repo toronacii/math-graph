@@ -1,0 +1,25 @@
+id: theorem.perfect-set-uncountable
+type: theorem
+status: draft
+
+title:
+  en: Nonempty Perfect Sets in Rk are Uncountable
+
+statement:
+  natural:
+    en: >
+      Let P be a nonempty perfect set in Rk. Then P is uncountable.
+
+proved_by:
+  - proof.perfect-set-uncountable.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "2"
+    section: "2.43"
+
+confidence: high
+notes: >
+  Theorem 2.43 in Rudin. Uses nested compact sets and the Baire category-style argument.

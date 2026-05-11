@@ -1,0 +1,30 @@
+id: theorem.sequential-characterization-function-limit
+type: theorem
+status: draft
+
+title:
+  en: Sequential Characterization of Function Limits
+
+statement:
+  natural:
+    en: >
+      Let X, Y be metric spaces, E ⊂ X, f: E → Y, and p a limit
+      point of E. Then lim_{x→p} f(x) = q if and only if
+      lim_{n→∞} f(p_n) = q for every sequence {p_n} in E such that
+      p_n ≠ p and lim_{n→∞} p_n = p.
+  latex: |
+    \lim_{x \to p} f(x) = q \;\iff\;
+    \lim_{n \to \infty} f(p_n) = q \text{ for every } \{p_n\} \subset E
+    \text{ with } p_n \neq p,\; p_n \to p
+
+proved_by:
+  - proof.sequential-characterization-function-limit.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "4"
+    section: "4.2"
+
+confidence: high

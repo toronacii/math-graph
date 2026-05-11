@@ -1,0 +1,22 @@
+id: proof.absolute-convergence-rearrangement.rudin
+type: proof
+status: draft
+
+proves: theorem.absolute-convergence-rearrangement
+
+uses:
+  - definition.rearrangement-of-series
+  - definition.absolute-convergence
+  - proposition.cauchy-criterion-series
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.55"
+
+confidence: high
+notes: >
+  Choose N with tail < ε. Choose p so that 1,...,N all appear in first p terms of rearrangement. Then |s_n - s'_n| < ε for n>p.

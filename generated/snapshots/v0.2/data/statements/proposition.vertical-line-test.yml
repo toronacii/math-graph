@@ -1,0 +1,32 @@
+id: proposition.vertical-line-test
+type: proposition
+status: draft
+
+title:
+  en: Vertical line test
+  es: Prueba de la línea vertical
+
+statement:
+  natural:
+    es: >
+      Una curva en el plano xy es la gráfica de una función de x si y
+      sólo si ninguna línea vertical corta a la curva en más de un punto.
+    en: >
+      A curve in the xy-plane is the graph of a function of x if and
+      only if no vertical line intersects the curve more than once.
+
+proved_by:
+  - proof.vertical-line-test.stewart
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.1"
+
+confidence: medium
+notes: >
+  Reclassified from definition to proposition. The vertical line test
+  is a criterion for determining whether a curve represents a function,
+  not the introduction of a new mathematical object.

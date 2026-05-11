@@ -1,0 +1,22 @@
+id: definition.finite-countable-sets
+type: definition
+status: draft
+
+title:
+  en: Finite, Countable, and Uncountable Sets
+
+statement:
+  natural:
+    en: >
+      For any positive integer n, let Jₙ = {1, 2, ..., n} and let J be the set of all positive integers. A set A is: (a) finite if A ~ Jₙ for some n (the empty set is also finite), (b) infinite if A is not finite, (c) countable if A ~ J, (d) uncountable if neither finite nor countable, (e) at most countable if finite or countable.
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "2"
+    section: "2.4"
+
+confidence: high
+notes: >
+  Definition 2.4 from Rudin. Classifies sets by cardinality relative to initial segments of positive integers.

@@ -1,0 +1,33 @@
+id: definition.trigonometric-function
+type: definition
+status: draft
+
+title:
+  en: Trigonometric functions
+  es: Funciones trigonométricas
+
+statement:
+  natural:
+    es: >
+      Las funciones trigonométricas son las funciones seno, coseno, tangente,
+      cotangente, secante y cosecante. Se definen en términos de las razones
+      de los lados de un triángulo rectángulo o, de manera más general,
+      usando el círculo unitario.
+    en: >
+      The trigonometric functions are the sine, cosine, tangent, cotangent,
+      secant, and cosecant functions. They are defined in terms of the ratios
+      of the sides of a right triangle or, more generally, using the unit
+      circle.
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.2"
+
+confidence: medium
+notes: >
+  Stewart reviews trigonometric functions in section 1.2 as part of the
+  catalog of essential functions, assuming prior knowledge from
+  precalculus.

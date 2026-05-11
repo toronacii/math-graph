@@ -1,0 +1,32 @@
+id: definition.limit-at-infinity
+type: definition
+status: draft
+
+title:
+  en: Limit at infinity
+  es: Límite en el infinito
+
+statement:
+  natural:
+    es: >
+      Sea f una función definida en algún intervalo (a, ∞). Se dice que
+      lim(x→∞) f(x) = L si los valores de f(x) pueden hacerse
+      arbitrariamente cercanos a L tomando x suficientemente grande.
+    en: >
+      Let f be a function defined on some interval (a, ∞). We say
+      lim(x→∞) f(x) = L if the values of f(x) can be made arbitrarily
+      close to L by taking x sufficiently large.
+  latex: |
+    \lim_{x \to \infty} f(x) = L
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.6"
+
+confidence: medium
+notes: >
+  Stewart also defines lim(x→-∞) f(x) = L analogously. The precise
+  epsilon-N definition is given alongside the intuitive one.

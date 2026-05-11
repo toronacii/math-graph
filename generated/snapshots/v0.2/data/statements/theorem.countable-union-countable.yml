@@ -1,0 +1,25 @@
+id: theorem.countable-union-countable
+type: theorem
+status: draft
+
+title:
+  en: Countable Union of Countable Sets is Countable
+
+statement:
+  natural:
+    en: >
+      Let {Eₙ} be a sequence of countable sets and S = ⋃Eₙ. Then S is countable.
+
+proved_by:
+  - proof.countable-union-countable.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "2"
+    section: "2.12"
+
+confidence: high
+notes: >
+  Theorem 2.12 in Rudin. A fundamental result on the closure of countable sets under countable unions.

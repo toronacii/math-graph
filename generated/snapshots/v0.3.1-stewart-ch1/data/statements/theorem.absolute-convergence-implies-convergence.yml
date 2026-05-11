@@ -1,0 +1,38 @@
+id: theorem.absolute-convergence-implies-convergence
+type: theorem
+status: draft
+
+title:
+  en: Absolute convergence implies convergence
+  es: La convergencia absoluta implica convergencia
+
+statement:
+  natural:
+    es: >
+      Si una serie ∑ aₙ es absolutamente convergente, entonces
+      es convergente.
+    en: >
+      If a series ∑ aₙ is absolutely convergent, then it is
+      convergent.
+  latex: |
+    \sum |a_n| \text{ converges}
+    \;\Longrightarrow\;
+    \sum a_n \text{ converges}
+
+proved_by:
+  - proof.absolute-convergence-implies-convergence.stewart
+  - proof.absolute-convergence-implies-convergence.rudin
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "11"
+    section: "11.6"
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.45"
+
+confidence: high

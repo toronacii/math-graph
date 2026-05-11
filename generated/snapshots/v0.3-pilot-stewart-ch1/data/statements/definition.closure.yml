@@ -1,0 +1,25 @@
+id: definition.closure
+type: definition
+status: draft
+
+title:
+  en: Closure of a Set
+
+statement:
+  natural:
+    en: >
+      If X is a metric space, E ⊂ X, and E' denotes the set of all limit points of E in X, then the closure of E is the set E̅ = E ∪ E'.
+
+  latex: |
+    \bar{E} = E \cup E'
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "2"
+    section: "2.26"
+
+confidence: high
+notes: >
+  Definition 2.26 from Rudin. The closure is the union of a set with its derived set (set of limit points).

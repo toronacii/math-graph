@@ -1,0 +1,32 @@
+id: theorem.riemann-stieltjes-integrability-criterion
+type: theorem
+status: draft
+
+title:
+  en: Integrability Criterion for the Riemann-Stieltjes Integral
+
+statement:
+  natural:
+    en: >
+      f is in R(alpha) on [a, b] if and only if for every epsilon > 0
+      there exists a partition P such that
+      U(P, f, alpha) - L(P, f, alpha) < epsilon.
+  latex: |
+    f \in \mathscr{R}(\alpha) \iff
+    \forall\,\varepsilon > 0,\;\exists P:\;
+    U(P,f,\alpha) - L(P,f,\alpha) < \varepsilon
+
+proved_by:
+  - proof.riemann-stieltjes-integrability-criterion.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "6"
+    section: "6.6"
+
+confidence: high
+notes: >
+  This is the fundamental criterion used to prove integrability
+  in all subsequent theorems of the chapter.

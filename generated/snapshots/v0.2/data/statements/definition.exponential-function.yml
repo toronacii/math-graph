@@ -1,0 +1,32 @@
+id: definition.exponential-function
+type: definition
+status: draft
+
+title:
+  en: Exponential function
+  es: Función exponencial
+
+statement:
+  natural:
+    es: >
+      La función exponencial con base a es la función f(x) = aˣ, donde
+      a es una constante positiva distinta de 1 y x es cualquier número
+      real. El dominio es todos los reales y el rango es (0, ∞).
+    en: >
+      The exponential function with base a is the function f(x) = aˣ,
+      where a is a positive constant different from 1 and x is any real
+      number. The domain is all real numbers and the range is (0, ∞).
+  latex: |
+    f(x) = a^x, \quad a > 0, \; a \neq 1
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.4"
+
+confidence: medium
+notes: >
+  Stewart introduces exponential functions in section 1.4, discussing
+  the behavior for a > 1 and 0 < a < 1.

@@ -1,0 +1,25 @@
+id: corollary.at-most-countable-union
+type: corollary
+status: draft
+
+title:
+  en: At Most Countable Union of At Most Countable Sets
+
+statement:
+  natural:
+    en: >
+      If A is at most countable, and for every α ∈ A, Bα is at most countable, then T = ⋃α Bα is at most countable.
+
+proved_by:
+  - proof.at-most-countable-union.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "2"
+    section: "2.12"
+
+confidence: high
+notes: >
+  Corollary to Theorem 2.12 in Rudin. Extends the countable union result to at most countable index sets and sets.

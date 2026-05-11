@@ -1,0 +1,21 @@
+id: proof.cauchy-criterion-series.rudin
+type: proof
+status: draft
+
+proves: proposition.cauchy-criterion-series
+
+uses:
+  - definition.infinite-series
+  - theorem.cauchy-criterion
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.22"
+
+confidence: high
+notes: >
+  Restatement of Cauchy criterion for sequences applied to partial sums.

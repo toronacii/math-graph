@@ -1,0 +1,23 @@
+id: proof.derivative-log-base-a.stewart
+type: proof
+status: draft
+
+proves: theorem.derivative-log-base-a
+
+uses:
+  - proposition.change-of-base-formula
+  - theorem.derivative-ln
+  - theorem.constant-multiple-rule
+
+style: direct
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.6"
+
+confidence: high
+notes: >
+  log_a x = ln x / ln a by the change of base formula. Then
+  d/dx(log_a x) = (1/ln a) · d/dx(ln x) = (1/ln a)(1/x) = 1/(x ln a).

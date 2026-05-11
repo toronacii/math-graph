@@ -1,0 +1,22 @@
+id: proof.nested-intervals.rudin
+type: proof
+status: draft
+
+proves: lemma.nested-intervals
+
+uses:
+  - definition.supremum
+  - definition.least-upper-bound-property
+  - definition.segment-interval-cell-ball
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "2"
+    section: "2.38"
+
+confidence: high
+notes: >
+  Let E = {aₙ}, x = sup E. Then aₘ ≤ x ≤ bₘ for all m, so x ∈ every Iₘ.

@@ -1,0 +1,21 @@
+id: proof.infinite-subset-countable.rudin
+type: proof
+status: draft
+
+proves: proposition.infinite-subset-countable
+
+uses:
+  - definition.finite-countable-sets
+  - definition.sequence
+
+style: construction
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "2"
+    section: "2.8"
+
+confidence: high
+notes: >
+  Arrange A in sequence {xₙ}. Pick elements of E in order of their indices.

@@ -1,0 +1,24 @@
+id: proof.limit-sinx-over-x.stewart
+type: proof
+status: draft
+
+proves: theorem.limit-sinx-over-x
+
+uses:
+  - theorem.squeeze-theorem
+  - definition.trigonometric-function
+
+style: geometric
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.3"
+
+confidence: medium
+notes: >
+  Stewart uses a geometric argument comparing areas in the unit
+  circle: area of triangle <= area of sector <= area of outer triangle,
+  yielding cos(x) <= sin(x)/x <= 1 for 0 < x < pi/2. The squeeze
+  theorem then gives the result.

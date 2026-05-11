@@ -1,0 +1,21 @@
+id: proof.n-tuples-countable.rudin
+type: proof
+status: draft
+
+proves: proposition.n-tuples-countable
+
+uses:
+  - definition.finite-countable-sets
+  - theorem.countable-union-countable
+
+style: induction
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "2"
+    section: "2.13"
+
+confidence: high
+notes: >
+  Induction on n. Bₙ is union of countable sets of pairs (b,a) for b ∈ Bₙ₋₁.

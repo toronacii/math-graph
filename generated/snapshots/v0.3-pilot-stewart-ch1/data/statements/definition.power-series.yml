@@ -1,0 +1,32 @@
+id: definition.power-series
+type: definition
+status: draft
+
+title:
+  en: Power series
+  es: Serie de potencias
+
+statement:
+  natural:
+    es: >
+      Una serie de potencias es una serie de la forma
+      ∑_{n=0}^∞ cₙxⁿ = c₀ + c₁x + c₂x² + ..., donde x es una
+      variable y los cₙ son constantes (coeficientes). Más
+      generalmente, una serie de potencias centrada en a es
+      ∑_{n=0}^∞ cₙ(x-a)ⁿ.
+    en: >
+      A power series is a series of the form
+      ∑_{n=0}^∞ cₙxⁿ = c₀ + c₁x + c₂x² + ..., where x is a
+      variable and the cₙ are constants (coefficients). More
+      generally, a power series centered at a is ∑_{n=0}^∞ cₙ(x-a)ⁿ.
+  latex: |
+    \sum_{n=0}^{\infty} c_n(x - a)^n
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "11"
+    section: "11.8"
+
+confidence: high

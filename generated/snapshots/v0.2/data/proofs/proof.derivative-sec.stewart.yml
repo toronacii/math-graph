@@ -1,0 +1,23 @@
+id: proof.derivative-sec.stewart
+type: proof
+status: draft
+
+proves: theorem.derivative-sec
+
+uses:
+  - theorem.derivative-cos
+  - theorem.quotient-rule
+
+style: direct
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.3"
+
+confidence: high
+notes: >
+  sec x = 1/cos x. By the quotient rule:
+  d/dx(sec x) = [0 · cos x - 1 · (-sin x)] / cos²x
+  = sin x / cos²x = (1/cos x)(sin x/cos x) = sec x tan x.

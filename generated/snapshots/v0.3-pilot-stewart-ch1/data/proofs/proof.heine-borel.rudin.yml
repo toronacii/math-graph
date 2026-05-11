@@ -1,0 +1,24 @@
+id: proof.heine-borel.rudin
+type: proof
+status: draft
+
+proves: theorem.heine-borel
+
+uses:
+  - theorem.k-cell-compact
+  - proposition.closed-subset-compact
+  - theorem.infinite-subset-compact-limit-point
+  - definition.neighborhood-limit-point-open-closed
+  - proposition.limit-point-infinite-points
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "2"
+    section: "2.41"
+
+confidence: high
+notes: >
+  (a)→(b): E ⊂ k-cell I (bounded), I compact (2.40), E closed ⊂ I compact (2.35). (b)→(c): Theorem 2.37. (c)→(a): unbounded or not closed contradicts (c).

@@ -1,0 +1,31 @@
+id: theorem.noncompact-counterexamples
+type: theorem
+status: draft
+
+title:
+  en: Necessity of Compactness for Continuity Theorems
+
+statement:
+  natural:
+    en: >
+      Let E be a noncompact set in R¹. Then (a) there exists a
+      continuous function on E which is not bounded; (b) there exists a
+      continuous and bounded function on E which has no maximum. If in
+      addition E is bounded, then (c) there exists a continuous function
+      on E which is not uniformly continuous.
+
+proved_by:
+  - proof.noncompact-counterexamples.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "4"
+    section: "4.20"
+
+confidence: high
+notes: >
+  Shows that compactness is essential in Theorems 4.14, 4.15, 4.16,
+  and 4.19. Part (c) would be false if boundedness were omitted
+  (e.g., every function on the integers is uniformly continuous).

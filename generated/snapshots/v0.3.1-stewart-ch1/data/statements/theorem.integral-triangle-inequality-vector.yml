@@ -1,0 +1,32 @@
+id: theorem.integral-triangle-inequality-vector
+type: theorem
+status: draft
+
+title:
+  en: Triangle Inequality for Vector-Valued Integrals
+
+statement:
+  natural:
+    en: >
+      If f maps [a, b] into R^k and f in R(alpha) for some monotonically
+      increasing alpha on [a, b], then |f| in R(alpha) and
+      |integral_a^b f d alpha| <= integral_a^b |f| d alpha.
+  latex: |
+    \mathbf{f} \in \mathscr{R}(\alpha)
+    \implies
+    |\mathbf{f}| \in \mathscr{R}(\alpha)
+    \;\text{and}\;
+    \left|\int_a^b \mathbf{f}\,d\alpha\right|
+    \le \int_a^b |\mathbf{f}|\,d\alpha
+
+proved_by:
+  - proof.integral-triangle-inequality-vector.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "6"
+    section: "6.25"
+
+confidence: high

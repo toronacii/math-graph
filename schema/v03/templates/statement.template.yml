@@ -1,0 +1,224 @@
+# ============================================================================
+# v0.3 STATEMENT TEMPLATE
+# ----------------------------------------------------------------------------
+# Schema:   schema/v03.py  (SCHEMA_VERSION = "0.3.1")
+# JSON:     schema/v03.statement.schema.json
+# Docs:     docs/v0.3/01-schema.md and 02-i18n.md, 03-latex-lifecycle.md,
+#           04-dependency-edges.md, 05-quality-metadata.md, 06-domains-ambient.md,
+#           07-ontology-tags.md, 08-status-lifecycle.md
+# Prompt:   schema/v03/templates/EXTRACTION_PROMPT.md
+#
+# RULES OF THUMB (see EXTRACTION_PROMPT.md for full guidance):
+#   * Required keys are uncommented; optional keys are marked "# optional".
+#   * Delete keys you do not use rather than leaving placeholder values.
+#   * `extra="forbid"` is set on every model: unknown keys FAIL validation.
+#   * `schema_version` MUST be one of "0.3.0" or "0.3.1" (new files SHOULD use "0.3.1").
+#   * `id` MUST match the file name and obey:  <type>.<normalized-name>
+#     where <type> equals the `type` field; segments are lowercase ASCII,
+#     digits and hyphens only.
+# ============================================================================
+
+schema_version: "0.3.1"
+id: theorem.example                  # MUST match prefix of `type` and the file name
+type: theorem                        # axiom | definition | lemma | proposition | theorem | corollary | conjecture
+
+# ----- STATUS LIFECYCLE (see docs/v0.3/08-status-lifecycle.md) --------------
+# Linear and monotonic. Validators ENFORCE promotion gates:
+#   extracted -> reviewed:  a human has eyeballed it
+#   reviewed  -> validated: schema valid AND has source AND has latex (or not_applicable)
+#                           AND `dependency_confidence` is set
+#   validated -> audited:   `semantic_confidence` set; mathematical correctness checked
+#   audited   -> stable:    integrated into a release snapshot
+#   stable    -> canonical: project's blessed formulation (rare; do not set during extraction)
+# Fresh extraction MUST start at `extracted`.
+status: extracted
+
+# ----- LANGUAGE (see docs/v0.3/02-i18n.md) ---------------------------------
+# `original` is the language of the SOURCE MATERIAL (not of the extractor).
+# `available` lists every language present below; codes are BCP-47 short form
+# (e.g., "en", "es", "fr", "de", "en-US"). Two-letter lowercase is preferred.
+language:
+  original: en
+  available: [en, es]
+
+# ----- TITLE (multilingual, see docs/v0.3/02-i18n.md) ----------------------
+# Exactly ONE entry across all keys MUST have `is_original: true`. That entry
+# MUST be in the language declared in `language.original`.
+# `origin` values:
+#   original  -> verbatim from source (only valid on the original-language entry)
+#   human     -> produced by a human
+#   llm       -> produced by an LLM (set `generated_by`)
+#   imported  -> imported from another graph / dataset
+title:
+  en:
+    text: Example Theorem
+    is_original: true
+    origin: original
+    review_status: unreviewed         # unreviewed | reviewed | approved | rejected
+  es:                                 # optional translation
+    text: Teorema de ejemplo
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+# ----- STATEMENT BODY ------------------------------------------------------
+statement:
+  # Natural-language formulation, one entry per language. Same originality
+  # rules as `title`. KEEP THE ORIGINAL VERBATIM (after light cleanup).
+  natural:
+    en:
+      text: >
+        If X then Y.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    es:                               # optional
+      text: >
+        Si X entonces Y.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+
+  # ----- LATEX LIFECYCLE (see docs/v0.3/03-latex-lifecycle.md) -------------
+  # status:
+  #   present         -> `body` IS the canonical LaTeX. REQUIRES non-empty body.
+  #   informal        -> body is a partial / placeholder formula.
+  #   needs_review    -> body present but math review pending.
+  #   missing         -> a formula ought to exist but hasn't been authored.
+  #   not_applicable  -> the statement is purely conceptual; NO body allowed.
+  # Definitions of named objects often use `not_applicable`; theorems should
+  # aim for `present`.
+  latex:
+    body: |
+      X \implies Y
+    status: present
+    review_status: unreviewed
+
+# ----- PROOF LINKAGE -------------------------------------------------------
+# The ONLY direct statement<->proof edges in the graph. Each ref must be an
+# id starting with `proof.`. Empty list is fine for definitions/axioms.
+proved_by:
+  - proof.example.rudin
+
+# ----- CONCEPTUAL DEPENDENCIES (see docs/v0.3/04-dependency-edges.md) ------
+# `depends_on` is the CONCEPT-LAYER edge set, distinct from proof edges. It
+# captures "this statement uses / extends / specializes another statement"
+# WITHOUT claiming a derivation step. Use this to break the "definitions as
+# roots" pathology of v0.2.
+#
+# Each entry:
+#   id          -> a STATEMENT id (proof ids are rejected)
+#   role        -> specializes | uses_concept | extends | instance_of | ambient
+#   confidence  -> low | medium | high  (optional)
+#   notes       -> free-form (optional)
+depends_on:                            # optional; omit if none
+  - id: definition.relevant-concept
+    role: uses_concept
+    confidence: high
+  - id: definition.metric-space
+    role: ambient
+
+# ----- SOURCES (see docs/v0.3/01-schema.md §Source) ------------------------
+# At least ONE source is strongly recommended; required to reach
+# status: validated. Provide the most precise locator available:
+#   chapter         -> "4"
+#   section         -> "4.23"            (the textbook's section number)
+#   theorem_label   -> "Theorem 4.23"    (the textbook's bold label, REQUIRED
+#                                        when present in the source — this is
+#                                        the locator pinned by the context pack)
+#   page            -> "93"              (page number string, as printed)
+#   locator         -> free-form fallback ("Exercise 7", "Remark after 3.21")
+#   source_language -> language of THIS source; differs from extractor language
+# Multi-source nodes list ALL sources here (see EXTRACTION_PROMPT.md
+# §Multi-source reconciliation).
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    year: 1976
+    chapter: "4"
+    section: "4.23"
+    theorem_label: "Theorem 4.23"
+    page: "93"
+    source_language: en
+
+# ----- DOMAINS (see docs/v0.3/06-domains-ambient.md) -----------------------
+# Free-form mathematical area tags. NOT enforced, but consistency matters.
+# Suggested vocabulary: real-analysis, complex-analysis, topology,
+# metric-spaces, set-theory, linear-algebra, abstract-algebra, number-theory,
+# category-theory, mathematical-logic, geometry, differential-geometry.
+domains:
+  primary: [real-analysis]
+  secondary: [topology]
+
+# ----- AMBIENT CONTEXT (see docs/v0.3/06-domains-ambient.md) ---------------
+# Where does the statement live mathematically? `structures` disambiguates
+# "the same theorem in different ambient settings". Suggested vocabulary:
+# metric-space, topological-space, complete-ordered-field, ordered-field,
+# normed-vector-space, smooth-manifold, abelian-category.
+ambient:
+  structures: [metric-space]
+  logic: classical-first-order-logic    # optional
+  foundations: ZFC                       # optional
+
+# ----- ONTOLOGY (see docs/v0.3/07-ontology-tags.md) ------------------------
+# Lightweight semantic tags for retrieval.
+# semantic_kind: object | property | relation | operator | construction |
+#                criterion | schema | principle
+# Keywords are free-form, lowercase, hyphenated.
+ontology:
+  semantic_kind: [criterion]
+  keywords: [continuity, intermediate-value]
+
+# ----- GENERALITY (see docs/v0.3/04-dependency-edges.md §Generality) -------
+# Explicit cross-statement generality relations. Use SPARINGLY — only when
+# the relation is clear from the math (NOT inferred from author phrasing).
+# relation: equivalent | stronger_than | weaker_than | special_case_of |
+#           incomparable | overlapping
+generality:                              # optional
+  - target: theorem.continuous-image-connected
+    relation: special_case_of
+    notes: This IVT is a corollary of the more general connectedness theorem.
+
+# ----- QUALITY (see docs/v0.3/05-quality-metadata.md) ----------------------
+# SIX INDEPENDENT axes. Each is `low | medium | high | null`. `null` means
+# UNASSESSED; do NOT default to "high". The validator uses these to gate
+# status promotions:
+#   - validated requires `dependency_confidence` set (not null)
+#   - audited   requires `semantic_confidence`  set (not null)
+#
+#   extraction_confidence       -> confidence in the parse / wording capture
+#   dependency_confidence       -> is `depends_on` (here) COMPLETE?
+#   semantic_confidence         -> is the math faithful to the source?
+#   translation_confidence      -> quality of NON-original-language renderings
+#   latex_confidence            -> quality of the formal `latex` block
+#   source_alignment_confidence -> does this entity match the cited source?
+#
+# DO NOT collapse to a single "confidence" field — that pathology is what
+# v0.3 fixes.
+quality:
+  extraction_confidence: high
+  dependency_confidence: medium
+  semantic_confidence: high
+  translation_confidence: medium
+  latex_confidence: high
+  source_alignment_confidence: high
+
+# ----- PROVENANCE (see docs/v0.3/09-rerun-architecture.md) -----------------
+# Records WHICH extraction pass produced this entity. `rerun_id` matches the
+# snapshot label, e.g., "v0.3-2026-06-01" or "v0.3-pilot-stewart-ch1".
+# `derived_from` lists prior ids this entity REPLACES (split/merge tracking).
+# `redirected_to` is set when retiring this id in favor of another.
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3-2026-06-01
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-06-01"
+  derived_from: []
+  # redirected_to: theorem.new-id        # optional
+
+# Free-form. Use for human reviewer hints, audit notes, open questions.
+notes: >
+  Free-form notes for human reviewers.

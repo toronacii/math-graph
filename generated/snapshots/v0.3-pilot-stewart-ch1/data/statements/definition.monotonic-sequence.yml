@@ -1,0 +1,26 @@
+id: definition.monotonic-sequence
+type: definition
+status: draft
+
+title:
+  en: Monotonic Sequence
+
+statement:
+  natural:
+    en: >
+      A sequence {s_n} of real numbers is said to be monotonically increasing if
+      s_n ≤ s_{n+1} for every n, and monotonically decreasing if s_n ≥ s_{n+1} for every n.
+
+  latex: |
+    s_n \leq s_{n+1} \text{ (increasing)};\quad s_n \geq s_{n+1} \text{ (decreasing)}
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.13"
+
+confidence: high
+notes: >
+  Definition 3.13 from Rudin's Principles of Mathematical Analysis.

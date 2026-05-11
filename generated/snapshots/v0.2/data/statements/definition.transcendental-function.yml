@@ -1,0 +1,31 @@
+id: definition.transcendental-function
+type: definition
+status: draft
+
+title:
+  en: Transcendental function
+  es: Función trascendente
+
+statement:
+  natural:
+    es: >
+      Una función trascendente es una función que no es algebraica. Entre
+      las funciones trascendentes se incluyen las funciones trigonométricas,
+      exponenciales y logarítmicas.
+    en: >
+      A transcendental function is a function that is not algebraic.
+      Transcendental functions include trigonometric, exponential, and
+      logarithmic functions.
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.2"
+
+confidence: medium
+notes: >
+  Stewart mentions transcendental functions in section 1.2 as the
+  complement of algebraic functions, noting that exponential and
+  logarithmic functions will be studied in later sections.

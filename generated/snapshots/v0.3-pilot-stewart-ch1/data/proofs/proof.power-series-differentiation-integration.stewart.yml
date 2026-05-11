@@ -1,0 +1,25 @@
+id: proof.power-series-differentiation-integration.stewart
+type: proof
+status: draft
+
+proves: theorem.power-series-differentiation-integration
+
+uses:
+  - definition.power-series
+  - theorem.power-series-convergence
+
+style: assumed
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "11"
+    section: "11.9"
+
+confidence: low
+notes: >
+  Stewart states this theorem without proof, noting it requires
+  uniform convergence concepts from advanced analysis. The proof
+  that term-by-term differentiation preserves convergence and
+  yields the correct derivative requires the Weierstrass M-test
+  and uniform convergence of the differentiated series.

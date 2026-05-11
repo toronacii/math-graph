@@ -1,0 +1,25 @@
+id: corollary.continuity-closed-preimage
+type: corollary
+status: draft
+
+title:
+  en: Continuity via Closed Preimages
+
+statement:
+  natural:
+    en: >
+      A mapping f of a metric space X into a metric space Y is
+      continuous if and only if f⁻¹(C) is closed in X for every closed
+      set C in Y.
+
+proved_by:
+  - proof.continuity-closed-preimage.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "4"
+    section: "4.8"
+
+confidence: high

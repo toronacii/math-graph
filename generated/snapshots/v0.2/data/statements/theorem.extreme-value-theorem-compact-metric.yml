@@ -1,0 +1,33 @@
+id: theorem.extreme-value-theorem-compact-metric
+type: theorem
+status: draft
+
+title:
+  en: Extreme Value Theorem (Compact Metric Spaces)
+
+statement:
+  natural:
+    en: >
+      Suppose f is a continuous real function on a compact metric space
+      X, and M = sup_{p∈X} f(p), m = inf_{p∈X} f(p). Then there exist
+      points p, q ∈ X such that f(p) = M and f(q) = m.
+  latex: |
+    f : X \to \mathbb{R} \text{ continuous},\; X \text{ compact}
+    \;\Rightarrow\; \exists\, p,q \in X : f(p) = \sup f,\; f(q) = \inf f
+
+proved_by:
+  - proof.extreme-value-theorem-compact-metric.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "4"
+    section: "4.16"
+
+confidence: high
+notes: >
+  Strictly more general than Stewart's theorem.extreme-value-theorem
+  which is restricted to continuous functions on [a,b] ⊂ R. In R with
+  the standard topology, [a,b] is compact (Heine-Borel), so Stewart's
+  version is a special case.

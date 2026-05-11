@@ -1,0 +1,22 @@
+id: proof.extreme-value-theorem.stewart
+type: proof
+status: draft
+
+proves: theorem.extreme-value-theorem
+
+uses:
+  - definition.continuity-on-interval
+
+style: assumed
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "4"
+    section: "4.1"
+
+confidence: low
+notes: >
+  Stewart states the EVT without proof. A rigorous proof requires
+  the completeness of the real numbers (the Bolzano-Weierstrass
+  theorem or the least upper bound property).

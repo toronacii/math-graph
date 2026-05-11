@@ -1,0 +1,23 @@
+id: proof.limit-comparison-test.stewart
+type: proof
+status: draft
+
+proves: theorem.limit-comparison-test
+
+uses:
+  - definition.sequence
+  - theorem.comparison-test-series
+
+style: direct
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "11"
+    section: "11.4"
+
+confidence: high
+notes: >
+  Since aₙ/bₙ → c > 0, for large n we have (c/2)bₙ ≤ aₙ ≤ 2c·bₙ.
+  The result follows from the Comparison Test applied in both
+  directions.

@@ -1,0 +1,31 @@
+id: definition.absolute-convergence
+type: definition
+status: draft
+
+title:
+  en: Absolute convergence
+  es: Convergencia absoluta
+
+statement:
+  natural:
+    es: >
+      Una serie ∑ aₙ es absolutamente convergente si la serie de
+      valores absolutos ∑ |aₙ| converge. Si ∑ aₙ converge pero
+      ∑ |aₙ| diverge, la serie es condicionalmente convergente.
+    en: >
+      A series ∑ aₙ is absolutely convergent if the series of
+      absolute values ∑ |aₙ| converges. If ∑ aₙ converges but
+      ∑ |aₙ| diverges, the series is conditionally convergent.
+  latex: |
+    \sum |a_n| \text{ converges}
+    \;\Longrightarrow\;
+    \sum a_n \text{ is absolutely convergent}
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "11"
+    section: "11.6"
+
+confidence: high

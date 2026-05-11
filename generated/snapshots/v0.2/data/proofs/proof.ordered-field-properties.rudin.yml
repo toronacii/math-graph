@@ -1,0 +1,23 @@
+id: proof.ordered-field-properties.rudin
+type: proof
+status: draft
+
+proves: proposition.ordered-field-properties
+
+uses:
+  - definition.ordered-field
+  - definition.field
+  - proposition.field-zero-product
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "1"
+    section: "1.18"
+
+confidence: high
+notes: >
+  Uses order-field compatibility axioms from Definition 1.17 and
+  algebraic properties from Proposition 1.16.

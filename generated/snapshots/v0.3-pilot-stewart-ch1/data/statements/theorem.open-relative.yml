@@ -1,0 +1,25 @@
+id: theorem.open-relative
+type: theorem
+status: draft
+
+title:
+  en: Characterization of Relatively Open Sets
+
+statement:
+  natural:
+    en: >
+      Suppose Y ⊂ X. A subset E of Y is open relative to Y if and only if E = Y ∩ G for some open subset G of X.
+
+proved_by:
+  - proof.open-relative.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "2"
+    section: "2.30"
+
+confidence: high
+notes: >
+  Theorem 2.30 in Rudin. Characterizes the subspace topology via intersections.

@@ -1,0 +1,44 @@
+id: definition.riemann-stieltjes-integral
+type: definition
+status: draft
+
+title:
+  en: Riemann-Stieltjes Integral
+
+statement:
+  natural:
+    en: >
+      Let alpha be a monotonically increasing function on [a, b]. For any
+      bounded real function f on [a, b] and partition P, define
+      M_i = sup f(x) and m_i = inf f(x) on [x_{i-1}, x_i], and set
+      U(P, f, alpha) = sum M_i Delta alpha_i,
+      L(P, f, alpha) = sum m_i Delta alpha_i,
+      where Delta alpha_i = alpha(x_i) - alpha(x_{i-1}).
+      The upper and lower Riemann-Stieltjes integrals are
+      overline{integral} f d alpha = inf U(P, f, alpha) and
+      underline{integral} f d alpha = sup L(P, f, alpha).
+      If these are equal, f is Riemann-Stieltjes integrable with respect
+      to alpha (f in R(alpha)), and their common value is integral_a^b f d alpha.
+      The Riemann integral is the special case alpha(x) = x.
+  latex: |
+    U(P, f, \alpha) = \sum_{i=1}^{n} M_i \,\Delta\alpha_i, \quad
+    L(P, f, \alpha) = \sum_{i=1}^{n} m_i \,\Delta\alpha_i \\
+    \overline{\int_a^b} f\,d\alpha = \inf_P U(P,f,\alpha), \quad
+    \underline{\int_a^b} f\,d\alpha = \sup_P L(P,f,\alpha) \\
+    f \in \mathscr{R}(\alpha) \iff
+    \overline{\int_a^b} f\,d\alpha = \underline{\int_a^b} f\,d\alpha
+
+proved_by: []
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "6"
+    section: "6.1–6.2"
+
+confidence: high
+notes: >
+  Rudin defines the Riemann integral (6.1) via Darboux upper/lower sums,
+  then immediately generalizes to the Riemann-Stieltjes integral (6.2).
+  The Riemann integral is the special case alpha(x) = x.

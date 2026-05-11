@@ -1,0 +1,26 @@
+id: definition.cauchy-sequence
+type: definition
+status: draft
+
+title:
+  en: Cauchy Sequence
+
+statement:
+  natural:
+    en: >
+      A sequence {p_n} in a metric space X is said to be a Cauchy sequence if for every
+      ε > 0 there is an integer N such that d(p_n, p_m) < ε whenever n ≥ N and m ≥ N.
+
+  latex: |
+    \forall \varepsilon > 0,\; \exists N \in \mathbb{N} : n \geq N \text{ and } m \geq N \implies d(p_n, p_m) < \varepsilon
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.8"
+
+confidence: high
+notes: >
+  Definition 3.8 from Rudin's Principles of Mathematical Analysis.

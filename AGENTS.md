@@ -1,5 +1,22 @@
 # Mathematical Knowledge Graph (MKG)
 
+> **Status (2026-05-11): transitioning from v0.2 → v0.3.**
+>
+> The full v0.2 prototype graph (Stewart Ch1–11 + Rudin Ch1–6, 527 nodes /
+> 687 edges) is **frozen** at `generated/snapshots/v0.2/` as a historical
+> baseline. v0.3 is a clean redesign — semantically hardened schema, two-layer
+> dependency graph (proof-uses + statement-depends_on), six-axis quality
+> assessment, and a snapshot-based rerun architecture.
+>
+> **Authoritative reference for v0.3:** see `docs/v0.3/` (schema, pipeline,
+> migration, archival, rerun checklist).
+>
+> The schema, classification, multi-source disambiguation and per-chapter
+> pipeline sections in this file describe the **v0.2 pipeline only** and are
+> retained for historical context. They will be retired once the v0.3 rerun
+> completes. New extraction work targets v0.3 — do not author files against
+> the v0.2 schema.
+
 ## Overview
 
 This repository contains a structured graph representation of mathematical knowledge.
@@ -388,7 +405,15 @@ Prioritize: semantic correctness > graph consistency > reusable structure.
 
 ---
 
-# Per-Chapter Extraction Pipeline
+# Per-Chapter Extraction Pipeline (v0.2 — historical)
+
+> **v0.2 only.** This four-phase pipeline ran the original prototype build
+> (Stewart Ch1–11 + Rudin Ch1–6, frozen at `generated/snapshots/v0.2/`).
+> v0.3 replaces it with a snapshot-based rerun workflow — see
+> `docs/v0.3/04-pipeline.md` and `docs/v0.3/13-rerun-checklist.md`.
+> The v0.2 commands below (`scripts.validate`, `scripts.build_graph`,
+> `generated/graph/`) target the legacy schema in `schema/models.py` and
+> must NOT be used for new v0.3 extraction.
 
 Each chapter follows a fixed four-phase pipeline:
 

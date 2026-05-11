@@ -1,0 +1,21 @@
+id: proof.addition-cancellation.rudin
+type: proof
+status: draft
+
+proves: proposition.addition-cancellation
+
+uses:
+  - definition.field
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "1"
+    section: "1.14"
+
+confidence: high
+notes: >
+  (a) y = 0+y = (-x+x)+y = -x+(x+y) = -x+(x+z) = (-x+x)+z = 0+z = z.
+  (b)-(d) follow from (a) by specialization.

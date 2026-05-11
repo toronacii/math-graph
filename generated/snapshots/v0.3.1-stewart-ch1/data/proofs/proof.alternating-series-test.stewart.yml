@@ -1,0 +1,26 @@
+id: proof.alternating-series-test.stewart
+type: proof
+status: draft
+
+proves: theorem.alternating-series-test
+
+uses:
+  - definition.infinite-series
+  - definition.sequence
+  - theorem.monotonic-sequence-theorem
+
+style: direct
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "11"
+    section: "11.5"
+
+confidence: high
+notes: >
+  The even partial sums s₂ₙ form an increasing bounded sequence
+  (since s₂ₙ₊₂ = s₂ₙ + (b₂ₙ₊₁ - b₂ₙ₊₂) ≥ s₂ₙ and s₂ₙ ≤ b₁).
+  By the Monotonic Sequence Theorem, s₂ₙ → s. Since
+  s₂ₙ₊₁ = s₂ₙ + b₂ₙ₊₁ → s + 0 = s, both subsequences converge
+  to s, so sₙ → s.

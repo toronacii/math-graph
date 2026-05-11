@@ -1,0 +1,22 @@
+id: proof.continuous-image-compact.rudin
+type: proof
+
+proves: theorem.continuous-image-compact
+
+uses:
+  - theorem.continuity-open-preimage
+  - definition.compact-set
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "4"
+    section: "4.14"
+
+confidence: high
+notes: >
+  Let {V_α} be an open cover of f(X). By Thm 4.8, each f⁻¹(V_α) is
+  open. Since X is compact, finitely many cover X:
+  X ⊂ f⁻¹(V_{α₁}) ∪ ... ∪ f⁻¹(V_{αₙ}).
+  Then f(X) ⊂ V_{α₁} ∪ ... ∪ V_{αₙ}.

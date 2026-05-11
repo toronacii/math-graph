@@ -1,0 +1,32 @@
+id: theorem.fundamental-theorem-of-calculus
+type: theorem
+status: draft
+
+title:
+  en: The Fundamental Theorem of Calculus
+
+statement:
+  natural:
+    en: >
+      If f is in R on [a, b] and if there is a differentiable function F
+      on [a, b] such that F' = f, then integral_a^b f(x) dx = F(b) - F(a).
+  latex: |
+    f \in \mathscr{R},\; F' = f \text{ on } [a,b]
+    \implies \int_a^b f(x)\,dx = F(b) - F(a)
+
+proved_by:
+  - proof.fundamental-theorem-of-calculus.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "6"
+    section: "6.21"
+
+confidence: high
+notes: >
+  Strictly more general than Stewart's FTC Part 2 (theorem.ftc-part2):
+  Rudin requires only f in R and existence of F with F' = f, without
+  requiring f to be continuous. Stewart's version assumes continuity
+  of f (which guarantees both integrability and existence of antiderivative).

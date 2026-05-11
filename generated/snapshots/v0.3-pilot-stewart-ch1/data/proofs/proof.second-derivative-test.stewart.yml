@@ -1,0 +1,23 @@
+id: proof.second-derivative-test.stewart
+type: proof
+status: draft
+
+proves: proposition.second-derivative-test
+
+uses:
+  - proposition.concavity-test
+  - proposition.first-derivative-test
+
+style: direct
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "4"
+    section: "4.3"
+
+confidence: high
+notes: >
+  If f'(c) = 0 and f''(c) > 0, then f is concave up near c. Since
+  the tangent line at c is horizontal (slope 0) and the curve is
+  above the tangent, c is a local minimum. Analogous for max.

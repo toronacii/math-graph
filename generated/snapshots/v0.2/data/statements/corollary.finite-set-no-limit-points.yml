@@ -1,0 +1,25 @@
+id: corollary.finite-set-no-limit-points
+type: corollary
+status: draft
+
+title:
+  en: A Finite Point Set Has No Limit Points
+
+statement:
+  natural:
+    en: >
+      A finite point set has no limit points.
+
+proved_by:
+  - proof.finite-set-no-limit-points.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "2"
+    section: "2.20"
+
+confidence: high
+notes: >
+  Corollary to Theorem 2.20 in Rudin.

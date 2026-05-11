@@ -1,0 +1,27 @@
+id: theorem.continuity-components-rk
+type: theorem
+status: draft
+
+title:
+  en: Continuity of Vector-Valued Functions via Components
+
+statement:
+  natural:
+    en: >
+      (a) Let f₁, ..., f_k be real functions on a metric space X, and
+      let f be the mapping into R^k defined by f(x) = (f₁(x), ..., f_k(x)).
+      Then f is continuous if and only if each f_j is continuous.
+      (b) If f and g are continuous mappings of X into R^k, then f + g
+      and f · g are continuous on X.
+
+proved_by:
+  - proof.continuity-components-rk.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "4"
+    section: "4.10"
+
+confidence: high

@@ -1,0 +1,47 @@
+weak_dependencies: []
+
+implicit_algebraic_imports:
+  - concept: Integer arithmetic and divisibility
+    used_by:
+      - proposition.irrationality-of-sqrt-2
+    notes: >
+      The proof of irrationality of √2 uses properties of even/odd
+      integers and divisibility by 4. Rudin explicitly assumes
+      familiarity with integer arithmetic (stated in the Introduction).
+
+  - concept: Set theory (ZFC or naive)
+    used_by:
+      - definition.set-membership-subset
+      - definition.supremum
+      - definition.least-upper-bound-property
+      - theorem.existence-of-reals
+    notes: >
+      Rudin uses set-theoretic language throughout (membership, subset,
+      union, empty set) without axiomatizing it. The Dedekind cut
+      construction in the Appendix relies heavily on set operations.
+      This is standard for an analysis textbook and represents the
+      lowest layer of implicit imports.
+
+  - concept: Natural number induction
+    used_by:
+      - theorem.existence-of-nth-roots
+      - theorem.schwarz-inequality
+    notes: >
+      The identity b^n - a^n = (b-a)(b^{n-1} + ... + a^{n-1}) and
+      summation properties implicitly use induction on natural numbers.
+      Rudin does not axiomatize the naturals (Peano axioms are outside
+      his stated scope).
+
+epistemic_debt_summary:
+  total_weak_proofs: 0
+  total_inherited_weak: 0
+  total_implicit_imports: 3
+  affected_chain_depth: 0
+  resolution_chapter_estimate: "N/A — no weak proofs in Rudin Ch1"
+  notes: >
+    Rudin Chapter 1 has no weak dependencies. All 18 proofs are
+    rigorous with confidence: high. The only implicit imports are
+    standard foundational assumptions (integers, sets, induction)
+    that are conventional for a real analysis textbook. This contrasts
+    with Stewart Ch1, which has an epistemic debt chain through the
+    assumed laws of exponents.

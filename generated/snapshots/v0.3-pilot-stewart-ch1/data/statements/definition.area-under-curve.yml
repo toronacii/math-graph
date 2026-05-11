@@ -1,0 +1,37 @@
+id: definition.area-under-curve
+type: definition
+status: draft
+
+title:
+  en: Area under a curve
+  es: Área bajo una curva
+
+statement:
+  natural:
+    es: >
+      El área A de la región S que se encuentra bajo la gráfica de la
+      función continua f es el límite de la suma de las áreas de los
+      rectángulos que la aproximan:
+      A = lim(n→∞) ∑_{i=1}^{n} f(x_i*) Δx, donde Δx = (b-a)/n y
+      x_i* es un punto muestral en el i-ésimo subintervalo [x_{i-1}, x_i].
+    en: >
+      The area A of the region S that lies under the graph of the
+      continuous function f is the limit of the sum of the areas of
+      approximating rectangles:
+      A = lim(n→∞) ∑_{i=1}^{n} f(x_i*) Δx, where Δx = (b-a)/n and
+      x_i* is a sample point in the ith subinterval [x_{i-1}, x_i].
+  latex: |
+    A = \lim_{n \to \infty} \sum_{i=1}^{n} f(x_i^*)\,\Delta x
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "5"
+    section: "5.1"
+
+confidence: high
+notes: >
+  Stewart introduces the area concept informally, then makes it
+  precise via limits of Riemann sums. The existence of this limit
+  for continuous functions is stated as a theorem in section 5.2.

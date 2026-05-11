@@ -1,0 +1,33 @@
+id: proposition.direct-substitution-property
+type: proposition
+status: draft
+
+title:
+  en: Direct substitution property
+  es: Propiedad de sustitución directa
+
+statement:
+  natural:
+    es: >
+      Si f es una función polinomial o racional y a está en el dominio
+      de f, entonces lim(x→a) f(x) = f(a).
+    en: >
+      If f is a polynomial or rational function and a is in the domain
+      of f, then lim(x→a) f(x) = f(a).
+  latex: |
+    \lim_{x \to a} f(x) = f(a)
+
+proved_by:
+  - proof.direct-substitution-property.stewart
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.3"
+
+confidence: medium
+notes: >
+  Stewart derives this from the limit laws. It is the basis for
+  direct evaluation of limits for polynomial and rational functions.

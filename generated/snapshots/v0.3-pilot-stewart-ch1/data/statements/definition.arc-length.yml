@@ -1,0 +1,31 @@
+id: definition.arc-length
+type: definition
+status: draft
+
+title:
+  en: Arc length
+  es: Longitud de arco
+
+statement:
+  natural:
+    es: >
+      Si f' es continua en [a, b], entonces la longitud de la curva
+      y = f(x), a ≤ x ≤ b, es L = ∫_a^b √(1 + [f'(x)]²) dx.
+    en: >
+      If f' is continuous on [a, b], then the length of the curve
+      y = f(x), a ≤ x ≤ b, is L = ∫_a^b √(1 + [f'(x)]²) dx.
+  latex: |
+    L = \int_a^b \sqrt{1 + \bigl[f'(x)\bigr]^2}\,dx
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "8"
+    section: "8.1"
+
+confidence: high
+notes: >
+  Derived by approximating the curve with line segments and taking
+  the limit. Each segment has length √(Δx² + Δy²), which leads
+  to the integrand √(1 + [f'(x)]²) after factoring out Δx.

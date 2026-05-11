@@ -1,0 +1,31 @@
+id: definition.vertical-stretch-compression
+type: definition
+status: draft
+
+title:
+  en: Vertical stretching and compression
+  es: Estiramiento y compresión vertical
+
+statement:
+  natural:
+    es: >
+      Si c > 1, la gráfica de y = cf(x) se obtiene estirando la gráfica
+      de y = f(x) verticalmente por un factor de c. Si 0 < c < 1, la
+      gráfica se comprime verticalmente por un factor de c.
+    en: >
+      If c > 1, the graph of y = cf(x) is obtained by stretching the
+      graph of y = f(x) vertically by a factor of c. If 0 < c < 1, the
+      graph is compressed vertically by a factor of c.
+  latex: |
+    y = c \, f(x)
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.3"
+
+confidence: medium
+notes: >
+  Part of the catalog of transformations in section 1.3.

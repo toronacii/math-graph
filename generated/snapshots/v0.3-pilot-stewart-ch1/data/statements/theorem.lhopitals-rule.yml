@@ -1,0 +1,54 @@
+id: theorem.lhopitals-rule
+type: theorem
+status: draft
+
+title:
+  en: L'Hopital's Rule
+  es: Regla de L'Hopital
+
+statement:
+  natural:
+    es: >
+      Suponga que f y g son derivables y que g'(x) ≠ 0 cerca de a
+      (excepto posiblemente en a). Suponga que lim(x→a) f(x) = 0 y
+      lim(x→a) g(x) = 0, o que lim(x→a) f(x) = ±∞ y
+      lim(x→a) g(x) = ±∞ (es decir, que se tiene una forma
+      indeterminada 0/0 o ∞/∞). Entonces
+      lim(x→a) f(x)/g(x) = lim(x→a) f'(x)/g'(x),
+      si el límite del lado derecho existe (o es ±∞).
+    en: >
+      Suppose that f and g are differentiable and g'(x) ≠ 0 near a
+      (except possibly at a). Suppose that lim(x→a) f(x) = 0 and
+      lim(x→a) g(x) = 0, or that lim(x→a) f(x) = ±∞ and
+      lim(x→a) g(x) = ±∞ (i.e., we have an indeterminate form of
+      type 0/0 or ∞/∞). Then
+      lim(x→a) f(x)/g(x) = lim(x→a) f'(x)/g'(x),
+      if the limit on the right side exists (or is ±∞).
+  latex: |
+    \lim_{x \to a}\frac{f(x)}{g(x)}
+    = \lim_{x \to a}\frac{f'(x)}{g'(x)}
+
+proved_by:
+  - proof.lhopitals-rule.stewart
+  - proof.lhopitals-rule.rudin
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "4"
+    section: "4.4"
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "5"
+    section: "5.13"
+
+confidence: high
+notes: >
+  Stewart proves the 0/0 case using the Cauchy Mean Value Theorem
+  (a generalization of MVT). The ∞/∞ case is stated without
+  complete proof. The rule also applies to one-sided limits and
+  limits at infinity. Rudin (5.13) proves both the 0/0 and ∞/∞
+  cases rigorously using the generalized MVT (5.9), and allows
+  -∞ <= a < b <= +∞ (extended reals).

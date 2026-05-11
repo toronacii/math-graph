@@ -1,0 +1,27 @@
+id: definition.refinement-partition
+type: definition
+status: draft
+
+title:
+  en: Refinement of a Partition
+
+statement:
+  natural:
+    en: >
+      We say that the partition P* is a refinement of P if P* contains P
+      (every point of P is a point of P*). Given two partitions P_1 and P_2,
+      their common refinement is P* = P_1 union P_2.
+  latex: |
+    P^* \supseteq P \quad\text{(refinement)}; \quad
+    P^* = P_1 \cup P_2 \quad\text{(common refinement)}
+
+proved_by: []
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "6"
+    section: "6.3"
+
+confidence: high

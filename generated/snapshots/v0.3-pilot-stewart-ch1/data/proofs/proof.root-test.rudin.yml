@@ -1,0 +1,24 @@
+id: proof.root-test.rudin
+type: proof
+status: draft
+
+proves: theorem.root-test
+
+uses:
+  - definition.upper-lower-limits
+  - theorem.characterization-lim-sup
+  - theorem.comparison-test-series
+  - theorem.geometric-series
+  - theorem.divergence-test
+
+style: cases
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.33"
+
+confidence: high
+notes: >
+  α<1: choose β with α<β<1, then |a_n|<β^n eventually, compare with geometric. α>1: |a_n|>1 infinitely often, terms don't → 0.

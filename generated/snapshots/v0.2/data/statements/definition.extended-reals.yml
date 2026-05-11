@@ -1,0 +1,28 @@
+id: definition.extended-reals
+type: definition
+status: draft
+
+title:
+  en: Extended Real Number System
+
+statement:
+  natural:
+    en: >
+      The extended real number system consists of the real field R and
+      two symbols, +∞ and -∞, with -∞ < x < +∞ for every x ∈ R.
+      Every nonempty subset of the extended reals has a least upper
+      bound. The extended real number system does not form a field.
+  latex: |
+    -\infty < x < +\infty \quad \text{for every } x \in \mathbb{R}
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "1"
+    section: "1.23"
+
+confidence: high
+notes: >
+  Rudin 1.23. Arithmetic conventions with ±∞ are defined but
+  the system is not a field.

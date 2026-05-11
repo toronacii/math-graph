@@ -1,0 +1,23 @@
+id: proof.divergence-test.stewart
+type: proof
+status: draft
+
+proves: theorem.divergence-test
+
+uses:
+  - definition.infinite-series
+  - definition.sequence
+
+style: direct
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "11"
+    section: "11.2"
+
+confidence: high
+notes: >
+  Contrapositive of: if ∑ aₙ converges, then lim aₙ = 0.
+  Proof: if ∑ aₙ = s, then sₙ → s and sₙ₋₁ → s. Since
+  aₙ = sₙ - sₙ₋₁, we get aₙ → s - s = 0.

@@ -1,0 +1,27 @@
+id: definition.complex-conjugate
+type: definition
+status: draft
+
+title:
+  en: Complex Conjugate
+
+statement:
+  natural:
+    en: >
+      If a, b are real and z = a + bi, then the complex number
+      z̄ = a - bi is called the conjugate of z. The numbers a and b
+      are the real part and the imaginary part of z, respectively.
+      We write a = Re(z), b = Im(z).
+  latex: |
+    z = a + bi \implies \bar{z} = a - bi, \quad a = \operatorname{Re}(z), \quad b = \operatorname{Im}(z)
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "1"
+    section: "1.30"
+
+confidence: high
+notes: >
+  Rudin 1.30.

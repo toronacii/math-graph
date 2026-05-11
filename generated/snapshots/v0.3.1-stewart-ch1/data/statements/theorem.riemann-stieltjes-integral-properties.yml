@@ -1,0 +1,35 @@
+id: theorem.riemann-stieltjes-integral-properties
+type: theorem
+status: draft
+
+title:
+  en: Properties of the Riemann-Stieltjes Integral
+
+statement:
+  natural:
+    en: >
+      (a) If f_1, f_2 in R(alpha) on [a, b], then f_1 + f_2 in R(alpha),
+      cf in R(alpha) for every constant c, and the integral is linear.
+      (b) If f_1(x) <= f_2(x) on [a, b], then integral f_1 d alpha <= integral f_2 d alpha.
+      (c) If f in R(alpha) on [a, b] and a < c < b, then f in R(alpha)
+      on [a, c] and [c, b], and the integral is additive over subintervals.
+      (d) If f in R(alpha) and |f(x)| <= M, then |integral f d alpha| <= M[alpha(b) - alpha(a)].
+      (e) If f in R(alpha_1) and f in R(alpha_2), then f in R(alpha_1 + alpha_2)
+      and the integral is linear in alpha.
+  latex: |
+    \int_a^b (f_1 + f_2)\,d\alpha
+    = \int_a^b f_1\,d\alpha + \int_a^b f_2\,d\alpha \\
+    \int_a^c f\,d\alpha + \int_c^b f\,d\alpha = \int_a^b f\,d\alpha \\
+    \left|\int_a^b f\,d\alpha\right| \le M[\alpha(b) - \alpha(a)]
+
+proved_by:
+  - proof.riemann-stieltjes-integral-properties.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "6"
+    section: "6.12"
+
+confidence: high

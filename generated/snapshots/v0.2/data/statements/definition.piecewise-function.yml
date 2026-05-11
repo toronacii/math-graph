@@ -1,0 +1,28 @@
+id: definition.piecewise-function
+type: definition
+status: draft
+
+title:
+  en: Piecewise-defined function
+  es: Función definida por partes
+
+statement:
+  natural:
+    es: >
+      Una función definida por partes es una función que se define
+      mediante distintas fórmulas en diferentes partes de su dominio.
+    en: >
+      A piecewise-defined function is a function that is defined by
+      different formulas in different parts of its domain.
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.1"
+
+confidence: medium
+notes: >
+  Stewart introduces piecewise functions in section 1.1 with examples
+  including the absolute value function and step functions.

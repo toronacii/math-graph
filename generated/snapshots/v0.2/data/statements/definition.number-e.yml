@@ -1,0 +1,33 @@
+id: definition.number-e
+type: definition
+status: draft
+
+title:
+  en: The number e
+  es: El número e
+
+statement:
+  natural:
+    es: >
+      El número e es el número tal que lim(h→0) (e^h - 1)/h = 1.
+      Equivalentemente, e = lim(n→∞) (1 + 1/n)^n. Su valor
+      aproximado es e ≈ 2.71828.
+    en: >
+      The number e is the number such that lim(h→0) (e^h - 1)/h = 1.
+      Equivalently, e = lim(n→∞) (1 + 1/n)^n. Its approximate value
+      is e ≈ 2.71828.
+  latex: |
+    e = \lim_{n \to \infty}\left(1 + \frac{1}{n}\right)^n \approx 2.71828
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.1"
+
+confidence: high
+notes: >
+  Stewart defines e as the base for which the derivative of the
+  exponential equals itself. This connects to the natural exponential
+  function defined in Chapter 1.

@@ -1,0 +1,23 @@
+id: proof.limit-cosx-minus-1-over-x.stewart
+type: proof
+status: draft
+
+proves: corollary.limit-cosx-minus-1-over-x
+
+uses:
+  - theorem.limit-sinx-over-x
+  - theorem.limit-laws
+
+style: algebraic
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.3"
+
+confidence: medium
+notes: >
+  Multiply numerator and denominator by (cos x + 1), use the identity
+  cos²x - 1 = -sin²x, then apply the limit laws and the result
+  lim sin(x)/x = 1.

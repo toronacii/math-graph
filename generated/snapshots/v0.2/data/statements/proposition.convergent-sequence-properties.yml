@@ -1,0 +1,32 @@
+id: proposition.convergent-sequence-properties
+type: proposition
+status: draft
+
+title:
+  en: Properties of Convergent Sequences
+
+statement:
+  natural:
+    en: >
+      (a) {p_n} converges to p if and only if every neighborhood of p contains
+      all but finitely many terms of {p_n}. (b) If {p_n} converges, its limit
+      is unique. (c) If {p_n} converges, then {p_n} is bounded. (d) If E is a
+      subset of a metric space X and p is a limit point of E, then there is a
+      sequence {p_n} in E such that p_n → p.
+
+  latex: |
+    p_n \to p \iff \forall \varepsilon > 0,\; \exists N : n \geq N \implies d(p_n, p) < \varepsilon
+
+proved_by:
+  - proof.convergent-sequence-properties.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.2"
+
+confidence: high
+notes: >
+  Theorem 3.2 from Rudin.

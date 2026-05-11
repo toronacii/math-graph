@@ -1,0 +1,31 @@
+id: theorem.existence-of-nth-roots
+type: theorem
+status: draft
+
+title:
+  en: Existence and Uniqueness of nth Roots
+
+statement:
+  natural:
+    en: >
+      For every real x > 0 and every integer n > 0 there is one and
+      only one positive real y such that y^n = x. This number y is
+      written ⁿ√x or x^(1/n).
+  latex: |
+    \forall x > 0,\; \forall n \in \mathbb{Z}^+,\; \exists!\; y > 0:\; y^n = x
+
+proved_by:
+  - proof.existence-of-nth-roots.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "1"
+    section: "1.21"
+
+confidence: high
+notes: >
+  Rudin Theorem 1.21. Proof uses the LUB property: y = sup E
+  where E = {t > 0 : t^n < x}, then shows y^n < x and y^n > x
+  both lead to contradictions.

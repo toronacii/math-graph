@@ -1,0 +1,30 @@
+id: theorem.existence-of-reals
+type: theorem
+status: draft
+
+title:
+  en: Existence of the Real Field
+
+statement:
+  natural:
+    en: >
+      There exists an ordered field R which has the least-upper-bound
+      property. Moreover, R contains Q as a subfield.
+  latex: |
+    \exists\; \mathbb{R} \text{ ordered field with LUB property}, \quad \mathbb{Q} \subset \mathbb{R}
+
+proved_by:
+  - proof.existence-of-reals.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "1"
+    section: "1.19"
+
+confidence: high
+notes: >
+  Rudin Theorem 1.19. The core existence theorem of Chapter 1.
+  Proof via Dedekind cuts is given in the Appendix (Steps 1-9).
+  Any two ordered fields with the LUB property are isomorphic.

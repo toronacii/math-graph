@@ -1,0 +1,33 @@
+id: theorem.sum-rule
+type: theorem
+status: draft
+
+title:
+  en: The Sum Rule
+  es: Regla de la suma
+
+statement:
+  natural:
+    es: >
+      Si f y g son funciones diferenciables, entonces
+      d/dx[f(x) + g(x)] = d/dx f(x) + d/dx g(x).
+    en: >
+      If f and g are differentiable functions, then
+      d/dx[f(x) + g(x)] = d/dx f(x) + d/dx g(x).
+  latex: |
+    \frac{d}{dx}\bigl[f(x) + g(x)\bigr] = \frac{d}{dx}f(x) + \frac{d}{dx}g(x)
+
+proved_by:
+  - proof.sum-rule.stewart
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.1"
+
+confidence: high
+notes: >
+  Proved using the definition of the derivative and the sum law
+  for limits.

@@ -1,0 +1,32 @@
+id: theorem.subsequence-compact
+type: theorem
+status: draft
+
+title:
+  en: Convergent Subsequences in Compact Spaces
+
+statement:
+  natural:
+    en: >
+      (a) If {p_n} is a sequence in a compact metric space X, then some
+      subsequence of {p_n} converges to a point of X. (b) Every bounded
+      sequence in R^k contains a convergent subsequence (Bolzano-Weierstrass).
+
+  latex: |
+    \{p_n\} \subset X \text{ compact} \implies \exists \{p_{n_k}\} \text{ convergent}
+
+proved_by:
+  - proof.subsequence-compact.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.6"
+
+confidence: high
+notes: >
+  Theorem 3.6 from Rudin. Part (b) is the Bolzano-Weierstrass theorem,
+  which follows from (a) since closed bounded subsets of R^k are compact
+  by Heine-Borel.

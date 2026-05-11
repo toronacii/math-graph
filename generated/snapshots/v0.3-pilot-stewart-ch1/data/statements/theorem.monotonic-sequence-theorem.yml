@@ -1,0 +1,40 @@
+id: theorem.monotonic-sequence-theorem
+type: theorem
+status: draft
+
+title:
+  en: Monotonic Sequence Theorem
+  es: Teorema de la sucesión monótona
+
+statement:
+  natural:
+    es: >
+      Toda sucesión acotada y monótona es convergente.
+    en: >
+      Every bounded, monotonic sequence is convergent.
+  latex: |
+    \{a_n\} \text{ bounded and monotonic}
+    \;\Longrightarrow\;
+    \{a_n\} \text{ converges}
+
+proved_by:
+  - proof.monotonic-sequence-theorem.stewart
+  - proof.monotone-convergence.rudin
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "11"
+    section: "11.1"
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.14"
+
+confidence: high
+notes: >
+  Stewart states this theorem using the Completeness Axiom
+  (least upper bound property). The proof relies on the existence
+  of the supremum for bounded sets.

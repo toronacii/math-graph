@@ -1,0 +1,28 @@
+id: definition.function
+type: definition
+status: draft
+
+title:
+  en: Function
+  es: Función
+
+statement:
+  natural:
+    es: >
+      Una función f es una regla que asigna a cada elemento x de un conjunto D
+      exactamente un elemento, denotado f(x), de un conjunto E.
+    en: >
+      A function f is a rule that assigns to each element x in a set D
+      exactly one element, called f(x), in a set E.
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.1"
+
+confidence: medium
+notes: >
+  Stewart, Capítulo 1, Sección 1.1 "Cuatro maneras de representar una función".
+  Page numbers to be confirmed against the printed edition.

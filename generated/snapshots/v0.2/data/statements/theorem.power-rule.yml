@@ -1,0 +1,32 @@
+id: theorem.power-rule
+type: theorem
+status: draft
+
+title:
+  en: The Power Rule
+  es: Regla de la potencia
+
+statement:
+  natural:
+    es: >
+      Si n es cualquier número real, entonces d/dx(x^n) = nx^{n-1}.
+    en: >
+      If n is any real number, then d/dx(x^n) = nx^{n-1}.
+  latex: |
+    \frac{d}{dx}\left(x^n\right) = n\,x^{n-1}
+
+proved_by:
+  - proof.power-rule.stewart
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.1"
+
+confidence: medium
+notes: >
+  Stewart proves the case n = positive integer using the binomial
+  theorem in section 3.1. The general case (n any real number) is
+  proved later using logarithmic differentiation in section 3.6.

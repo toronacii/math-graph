@@ -1,0 +1,33 @@
+id: theorem.conjugate-properties
+type: theorem
+status: draft
+
+title:
+  en: Properties of Complex Conjugation
+
+statement:
+  natural:
+    en: >
+      If z and w are complex, then (a) conjugate of (z + w) equals
+      conjugate(z) + conjugate(w), (b) conjugate of (zw) equals
+      conjugate(z) · conjugate(w), (c) z + conjugate(z) = 2 Re(z) and
+      z - conjugate(z) = 2i Im(z), (d) z · conjugate(z) is real and
+      positive (except when z = 0).
+  latex: |
+    \overline{z+w} = \bar{z}+\bar{w}, \quad
+    \overline{zw} = \bar{z}\bar{w}, \quad
+    z\bar{z} = |z|^2 \geq 0
+
+proved_by:
+  - proof.conjugate-properties.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "1"
+    section: "1.31"
+
+confidence: high
+notes: >
+  Rudin Theorem 1.31. Part (d) is crucial for defining |z|.

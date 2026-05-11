@@ -1,0 +1,21 @@
+id: proof.power-series-boundary.rudin
+type: proof
+status: draft
+
+proves: theorem.power-series-boundary
+
+uses:
+  - theorem.dirichlet-test
+  - definition.power-series
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.44"
+
+confidence: high
+notes: >
+  Put a_n = z^n, b_n = c_n. Partial sums of z^n bounded by 2/|1-z| when |z|=1, z≠1.

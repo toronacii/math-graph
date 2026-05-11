@@ -1,0 +1,31 @@
+id: proposition.irrationality-of-sqrt-2
+type: proposition
+status: draft
+
+title:
+  en: Irrationality of √2
+
+statement:
+  natural:
+    en: >
+      The equation p² = 2 is not satisfied by any rational p.
+      Moreover, if A is the set of all positive rationals p with p² < 2,
+      then A contains no largest number; and if B is the set of all
+      positive rationals p with p² > 2, then B contains no smallest number.
+  latex: |
+    p^2 = 2 \text{ has no solution } p \in \mathbb{Q}
+
+proved_by:
+  - proof.irrationality-of-sqrt-2.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "1"
+    section: "1.1"
+
+confidence: high
+notes: >
+  Rudin 1.1 (Example). Demonstrates that Q has gaps. The proof
+  constructs explicit rational witnesses via q = (2p+2)/(p+2).

@@ -1,0 +1,24 @@
+id: proof.quotient-rule.rudin
+type: proof
+status: draft
+
+proves: theorem.quotient-rule
+
+uses:
+  - definition.derivative-at-point
+  - theorem.differentiable-implies-continuous
+  - theorem.limit-laws
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "5"
+    section: "5.3"
+
+confidence: high
+notes: >
+  Let h = f/g. Then (h(t) - h(x))/(t - x) =
+  (1/(g(t)g(x)))[g(x)(f(t)-f(x))/(t-x) - f(x)(g(t)-g(x))/(t-x)].
+  Letting t → x, applying Theorems 4.4 and 5.2, we obtain (c).

@@ -1,0 +1,36 @@
+id: theorem.integrability-of-continuous-functions
+type: theorem
+status: draft
+
+title:
+  en: Integrability of continuous functions
+  es: Integrabilidad de funciones continuas
+
+statement:
+  natural:
+    es: >
+      Si f es continua en [a, b], o si f tiene sólo un número finito
+      de discontinuidades de salto, entonces f es integrable en [a, b];
+      es decir, la integral definida ∫_a^b f(x)dx existe.
+    en: >
+      If f is continuous on [a, b], or if f has only a finite number
+      of jump discontinuities, then f is integrable on [a, b]; that
+      is, the definite integral ∫_a^b f(x)dx exists.
+  latex: |
+    f \in C[a,b] \;\Rightarrow\; \int_a^b f(x)\,dx \text{ exists}
+
+proved_by:
+  - proof.integrability-of-continuous-functions.stewart
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "5"
+    section: "5.2"
+
+confidence: low
+notes: >
+  Stewart states this without proof. A rigorous proof requires
+  the uniform continuity theorem (which follows from the
+  completeness of the reals).

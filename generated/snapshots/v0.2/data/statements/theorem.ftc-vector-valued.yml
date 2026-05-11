@@ -1,0 +1,30 @@
+id: theorem.ftc-vector-valued
+type: theorem
+status: draft
+
+title:
+  en: Fundamental Theorem of Calculus for Vector-Valued Functions
+
+statement:
+  natural:
+    en: >
+      If f and F map [a, b] into R^k, if f in R on [a, b], and if F' = f,
+      then integral_a^b f(t) dt = F(b) - F(a).
+  latex: |
+    \mathbf{f}: [a,b] \to \mathbb{R}^k,\;
+    \mathbf{f} \in \mathscr{R},\;
+    \mathbf{F}' = \mathbf{f}
+    \implies
+    \int_a^b \mathbf{f}(t)\,dt = \mathbf{F}(b) - \mathbf{F}(a)
+
+proved_by:
+  - proof.ftc-vector-valued.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "6"
+    section: "6.24"
+
+confidence: high

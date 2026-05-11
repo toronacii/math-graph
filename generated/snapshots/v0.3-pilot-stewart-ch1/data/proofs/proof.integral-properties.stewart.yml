@@ -1,0 +1,23 @@
+id: proof.integral-properties.stewart
+type: proof
+status: draft
+
+proves: proposition.integral-properties
+
+uses:
+  - definition.definite-integral
+  - theorem.limit-laws
+
+style: direct
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "5"
+    section: "5.2"
+
+confidence: high
+notes: >
+  Each property follows from the corresponding limit law applied
+  to the Riemann sum. For example, ∑[f(x_i*)+g(x_i*)]Δx =
+  ∑f(x_i*)Δx + ∑g(x_i*)Δx, then take limits.

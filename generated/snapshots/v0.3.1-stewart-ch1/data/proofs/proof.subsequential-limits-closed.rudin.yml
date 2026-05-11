@@ -1,0 +1,23 @@
+id: proof.subsequential-limits-closed.rudin
+type: proof
+status: draft
+
+proves: theorem.subsequential-limits-closed
+
+uses:
+  - definition.subsequence
+  - definition.neighborhood-limit-point-open-closed
+  - definition.metric-space
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.7"
+
+confidence: high
+notes: >
+  Let q be limit point of E*. Construct subsequence converging to q by
+  choosing n_i with d(q, p_{n_i}) ≤ 2^{1-i}δ.

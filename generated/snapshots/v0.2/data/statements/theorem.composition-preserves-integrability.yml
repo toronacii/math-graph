@@ -1,0 +1,30 @@
+id: theorem.composition-preserves-integrability
+type: theorem
+status: draft
+
+title:
+  en: Composition with Continuous Function Preserves Integrability
+
+statement:
+  natural:
+    en: >
+      Suppose f is in R(alpha) on [a, b], m <= f <= M, phi is continuous
+      on [m, M], and h(x) = phi(f(x)) on [a, b]. Then h is in R(alpha)
+      on [a, b].
+  latex: |
+    f \in \mathscr{R}(\alpha),\;
+    \phi \in C[m,M],\;
+    h = \phi \circ f
+    \implies h \in \mathscr{R}(\alpha)
+
+proved_by:
+  - proof.composition-preserves-integrability.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "6"
+    section: "6.11"
+
+confidence: high

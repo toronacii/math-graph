@@ -1,0 +1,31 @@
+id: theorem.derivative-general-exponential
+type: theorem
+status: draft
+
+title:
+  en: Derivative of general exponential function
+  es: Derivada de la función exponencial general
+
+statement:
+  natural:
+    es: >
+      d/dx(a^x) = a^x ln a, para a > 0, a ≠ 1.
+    en: >
+      d/dx(a^x) = a^x ln a, for a > 0, a ≠ 1.
+  latex: |
+    \frac{d}{dx}\left(a^x\right) = a^x \ln a
+
+proved_by:
+  - proof.derivative-general-exponential.stewart
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.6"
+
+confidence: high
+notes: >
+  Since a^x = e^{x ln a}, apply the chain rule:
+  d/dx(e^{x ln a}) = e^{x ln a} · ln a = a^x ln a.

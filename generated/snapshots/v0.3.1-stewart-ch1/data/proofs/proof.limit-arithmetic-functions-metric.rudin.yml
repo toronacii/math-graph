@@ -1,0 +1,20 @@
+id: proof.limit-arithmetic-functions-metric.rudin
+type: proof
+
+proves: theorem.limit-arithmetic-functions-metric
+
+uses:
+  - theorem.sequential-characterization-function-limit
+  - proposition.convergent-sequence-properties
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "4"
+    section: "4.4"
+
+confidence: high
+notes: >
+  By Theorem 4.2, reduces to the analogous properties of sequences
+  (Theorem 3.3: arithmetic of convergent sequences).

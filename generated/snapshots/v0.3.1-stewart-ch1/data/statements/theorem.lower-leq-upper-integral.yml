@@ -1,0 +1,28 @@
+id: theorem.lower-leq-upper-integral
+type: theorem
+status: draft
+
+title:
+  en: Lower Integral is at Most Upper Integral
+
+statement:
+  natural:
+    en: >
+      For any bounded real function f and monotonically increasing alpha
+      on [a, b], the lower Riemann-Stieltjes integral does not exceed
+      the upper Riemann-Stieltjes integral.
+  latex: |
+    \underline{\int_a^b} f\,d\alpha \;\le\;
+    \overline{\int_a^b} f\,d\alpha
+
+proved_by:
+  - proof.lower-leq-upper-integral.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "6"
+    section: "6.5"
+
+confidence: high

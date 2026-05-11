@@ -1,0 +1,28 @@
+id: proposition.de-morgan
+type: proposition
+status: draft
+
+title:
+  en: De Morgan's Law
+
+statement:
+  natural:
+    en: >
+      Let {Eα} be a collection of sets. Then (⋃α Eα)ᶜ = ⋂α Eαᶜ.
+
+  latex: |
+    \left(\bigcup_\alpha E_\alpha\right)^c = \bigcap_\alpha E_\alpha^c
+
+proved_by:
+  - proof.de-morgan.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "2"
+    section: "2.22"
+
+confidence: high
+notes: >
+  Theorem 2.22 in Rudin. De Morgan's law for arbitrary collections of sets.

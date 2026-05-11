@@ -1,0 +1,20 @@
+id: proof.summation-by-parts.rudin
+type: proof
+status: draft
+
+proves: theorem.summation-by-parts
+
+uses:
+  - definition.infinite-series
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.41"
+
+confidence: high
+notes: >
+  Abel's summation formula: write a_n = A_n - A_{n-1}, substitute and rearrange.

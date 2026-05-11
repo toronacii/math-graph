@@ -1,0 +1,33 @@
+id: theorem.integration-by-parts-riemann
+type: theorem
+status: draft
+
+title:
+  en: Integration by Parts (Riemann Integral)
+
+statement:
+  natural:
+    en: >
+      Suppose F and G are differentiable functions on [a, b],
+      F' = f in R, and G' = g in R. Then
+      integral_a^b F(x) g(x) dx = F(b)G(b) - F(a)G(a) - integral_a^b f(x) G(x) dx.
+  latex: |
+    F' = f \in \mathscr{R},\; G' = g \in \mathscr{R}
+    \implies
+    \int_a^b F g\,dx = F(b)G(b) - F(a)G(a) - \int_a^b f G\,dx
+
+proved_by:
+  - proof.integration-by-parts-riemann.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "6"
+    section: "6.22"
+
+confidence: high
+notes: >
+  Rudin's version requires only F', G' in R (integrable), not
+  necessarily continuous. Stewart's integration-by-parts-definite
+  typically requires continuous derivatives.

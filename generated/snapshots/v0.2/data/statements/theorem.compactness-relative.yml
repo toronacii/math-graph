@@ -1,0 +1,25 @@
+id: theorem.compactness-relative
+type: theorem
+status: draft
+
+title:
+  en: Compactness is Independent of the Ambient Space
+
+statement:
+  natural:
+    en: >
+      Suppose K ⊂ Y ⊂ X. Then K is compact relative to X if and only if K is compact relative to Y.
+
+proved_by:
+  - proof.compactness-relative.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "2"
+    section: "2.33"
+
+confidence: high
+notes: >
+  Theorem 2.33 in Rudin. Compactness is an intrinsic property, not dependent on the ambient space.

@@ -1,0 +1,26 @@
+id: proof.arc-length-formula.rudin
+type: proof
+status: draft
+
+proves: theorem.arc-length-formula
+
+uses:
+  - theorem.ftc-vector-valued
+  - theorem.integral-triangle-inequality-vector
+  - theorem.compact-uniform-continuity
+  - definition.curve-arc-rectifiable
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "6"
+    section: "6.27"
+
+confidence: high
+notes: >
+  Upper bound: |gamma(x_i) - gamma(x_{i-1})| = |integral gamma' dt|
+  <= integral |gamma'| dt, so Lambda(P) <= integral |gamma'| dt.
+  Lower bound: use uniform continuity of gamma' to show
+  integral |gamma'| dt <= Lambda(P) + 2 epsilon (b-a) for fine enough P.

@@ -1,0 +1,34 @@
+id: theorem.net-change-theorem
+type: theorem
+status: draft
+
+title:
+  en: The Net Change Theorem
+  es: Teorema del cambio neto
+
+statement:
+  natural:
+    es: >
+      La integral de una tasa de cambio es el cambio neto:
+      ∫_a^b F'(x) dx = F(b) - F(a).
+    en: >
+      The integral of a rate of change is the net change:
+      ∫_a^b F'(x) dx = F(b) - F(a).
+  latex: |
+    \int_a^b F'(x)\,dx = F(b) - F(a)
+
+proved_by:
+  - proof.net-change-theorem.stewart
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "5"
+    section: "5.4"
+
+confidence: high
+notes: >
+  This is a restatement of FTC Part 2 interpreted in terms of
+  rates of change. Stewart presents it as a conceptual framework
+  for applications (displacement, accumulated quantity, etc.).

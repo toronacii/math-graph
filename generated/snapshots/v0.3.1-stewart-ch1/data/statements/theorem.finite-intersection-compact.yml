@@ -1,0 +1,25 @@
+id: theorem.finite-intersection-compact
+type: theorem
+status: draft
+
+title:
+  en: Finite Intersection Property for Compact Sets
+
+statement:
+  natural:
+    en: >
+      If {Kα} is a collection of compact subsets of a metric space such that every finite subcollection has nonempty intersection, then ⋂ Kα is nonempty.
+
+proved_by:
+  - proof.finite-intersection-compact.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "2"
+    section: "2.36"
+
+confidence: high
+notes: >
+  Theorem 2.36 in Rudin. The finite intersection property characterization of compactness.

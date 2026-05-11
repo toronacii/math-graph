@@ -1,0 +1,858 @@
+{
+  "$defs": {
+    "AmbientBlock": {
+      "additionalProperties": false,
+      "description": "Ambient mathematical / logical context.\n\nUsed to disambiguate identically-named results in different contexts.\nSuggested vocabulary (not enforced): metric-space, topological-space,\ncomplete-ordered-field, ordered-field, normed-vector-space,\nclassical-first-order-logic, intuitionistic-logic, ZFC, manifold,\nsmooth-manifold, category, abelian-category, etc.",
+      "properties": {
+        "structures": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "title": "Structures",
+          "type": "array"
+        },
+        "logic": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Logic"
+        },
+        "foundations": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Foundations"
+        },
+        "notes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Notes"
+        }
+      },
+      "title": "AmbientBlock",
+      "type": "object"
+    },
+    "ConceptDependency": {
+      "additionalProperties": false,
+      "description": "A conceptual dependency edge between statements (NOT a proof edge).\n\nUse for: definition uses another concept; theorem operates inside an\nambient structure recorded elsewhere; statement specializes another.\n\nThese edges DO NOT participate in the Statement -> Proof -> Statement\nderivation graph. They form a separate `concept` graph layer used for\nnavigation, retrieval, and ambient-context analysis.",
+      "properties": {
+        "id": {
+          "minLength": 1,
+          "title": "Id",
+          "type": "string"
+        },
+        "role": {
+          "default": "uses_concept",
+          "enum": [
+            "specializes",
+            "uses_concept",
+            "extends",
+            "instance_of",
+            "ambient"
+          ],
+          "title": "Role",
+          "type": "string"
+        },
+        "confidence": {
+          "anyOf": [
+            {
+              "enum": [
+                "low",
+                "medium",
+                "high"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Confidence"
+        },
+        "notes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Notes"
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "title": "ConceptDependency",
+      "type": "object"
+    },
+    "DomainsBlock": {
+      "additionalProperties": false,
+      "description": "Mathematical branch tagging. Free-form to remain practical.\n\n`primary` should contain the principal area; `secondary` may list bridges.\nSuggested vocabulary (not enforced): real-analysis, complex-analysis,\ntopology, metric-spaces, set-theory, linear-algebra, abstract-algebra,\nnumber-theory, category-theory, mathematical-logic, geometry, etc.",
+      "properties": {
+        "primary": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "title": "Primary",
+          "type": "array"
+        },
+        "secondary": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "title": "Secondary",
+          "type": "array"
+        }
+      },
+      "title": "DomainsBlock",
+      "type": "object"
+    },
+    "GeneralityEdge": {
+      "additionalProperties": false,
+      "description": "Records a generality / specialization relationship to another statement.",
+      "properties": {
+        "target": {
+          "minLength": 1,
+          "title": "Target",
+          "type": "string"
+        },
+        "relation": {
+          "enum": [
+            "equivalent",
+            "stronger_than",
+            "weaker_than",
+            "special_case_of",
+            "incomparable",
+            "overlapping",
+            "sibling",
+            "disjoint"
+          ],
+          "title": "Relation",
+          "type": "string"
+        },
+        "notes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Notes"
+        }
+      },
+      "required": [
+        "target",
+        "relation"
+      ],
+      "title": "GeneralityEdge",
+      "type": "object"
+    },
+    "LanguageBlock": {
+      "additionalProperties": false,
+      "description": "Top-level language metadata for the entity.",
+      "properties": {
+        "original": {
+          "pattern": "^[a-z]{2}(-[A-Z]{2})?$",
+          "title": "Original",
+          "type": "string"
+        },
+        "available": {
+          "items": {
+            "pattern": "^[a-z]{2}(-[A-Z]{2})?$",
+            "type": "string"
+          },
+          "title": "Available",
+          "type": "array"
+        }
+      },
+      "required": [
+        "original"
+      ],
+      "title": "LanguageBlock",
+      "type": "object"
+    },
+    "LatexBlock": {
+      "additionalProperties": false,
+      "properties": {
+        "body": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Body"
+        },
+        "status": {
+          "default": "missing",
+          "enum": [
+            "present",
+            "informal",
+            "needs_review",
+            "missing",
+            "not_applicable"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "review_status": {
+          "default": "unreviewed",
+          "enum": [
+            "unreviewed",
+            "reviewed",
+            "approved",
+            "rejected"
+          ],
+          "title": "Review Status",
+          "type": "string"
+        },
+        "notes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Notes"
+        }
+      },
+      "title": "LatexBlock",
+      "type": "object"
+    },
+    "OntologyBlock": {
+      "additionalProperties": false,
+      "description": "Lightweight semantic typing for retrieval and clustering.",
+      "properties": {
+        "semantic_kind": {
+          "items": {
+            "enum": [
+              "object",
+              "property",
+              "relation",
+              "operator",
+              "construction",
+              "criterion",
+              "schema",
+              "principle",
+              "notation",
+              "pedagogical"
+            ],
+            "type": "string"
+          },
+          "title": "Semantic Kind",
+          "type": "array"
+        },
+        "keywords": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "title": "Keywords",
+          "type": "array"
+        }
+      },
+      "title": "OntologyBlock",
+      "type": "object"
+    },
+    "ProvenanceBlock": {
+      "additionalProperties": false,
+      "description": "Records which extraction pass produced or last touched this entity.",
+      "properties": {
+        "schema_version": {
+          "default": "0.3.1",
+          "minLength": 1,
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "rerun_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Rerun Id"
+        },
+        "extracted_by": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Extracted By"
+        },
+        "extracted_at": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Extracted At"
+        },
+        "derived_from": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "title": "Derived From",
+          "type": "array"
+        },
+        "redirected_to": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Redirected To"
+        },
+        "rerun_notes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Rerun Notes"
+        }
+      },
+      "title": "ProvenanceBlock",
+      "type": "object"
+    },
+    "QualityBlock": {
+      "additionalProperties": false,
+      "description": "Decomposed quality metadata. Each axis is independently meaningful.\n\n- extraction_confidence: the LLM/human extractor's confidence in the parse.\n- dependency_confidence: confidence that `uses` / `depends_on` is COMPLETE.\n- semantic_confidence:   confidence that the formulation is mathematically faithful.\n- translation_confidence: confidence in non-original-language translations.\n- latex_confidence:      confidence in the formal LaTeX representation.\n- source_alignment_confidence: confidence the entity matches the cited source.",
+      "properties": {
+        "extraction_confidence": {
+          "anyOf": [
+            {
+              "enum": [
+                "low",
+                "medium",
+                "high"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Extraction Confidence"
+        },
+        "dependency_confidence": {
+          "anyOf": [
+            {
+              "enum": [
+                "low",
+                "medium",
+                "high"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Dependency Confidence"
+        },
+        "semantic_confidence": {
+          "anyOf": [
+            {
+              "enum": [
+                "low",
+                "medium",
+                "high"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Semantic Confidence"
+        },
+        "translation_confidence": {
+          "anyOf": [
+            {
+              "enum": [
+                "low",
+                "medium",
+                "high"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Translation Confidence"
+        },
+        "latex_confidence": {
+          "anyOf": [
+            {
+              "enum": [
+                "low",
+                "medium",
+                "high"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Latex Confidence"
+        },
+        "source_alignment_confidence": {
+          "anyOf": [
+            {
+              "enum": [
+                "low",
+                "medium",
+                "high"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Alignment Confidence"
+        },
+        "notes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Notes"
+        }
+      },
+      "title": "QualityBlock",
+      "type": "object"
+    },
+    "Source": {
+      "additionalProperties": false,
+      "description": "Bibliographic locator. v0.3 splits section-level from theorem-level locators.",
+      "properties": {
+        "work": {
+          "minLength": 1,
+          "title": "Work",
+          "type": "string"
+        },
+        "author": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Author"
+        },
+        "edition": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Edition"
+        },
+        "year": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Year"
+        },
+        "chapter": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Chapter"
+        },
+        "section": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Section"
+        },
+        "theorem_label": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Theorem Label"
+        },
+        "page": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Page"
+        },
+        "locator": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Locator"
+        },
+        "url": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Url"
+        },
+        "source_language": {
+          "anyOf": [
+            {
+              "pattern": "^[a-z]{2}(-[A-Z]{2})?$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Language"
+        },
+        "notes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Notes"
+        }
+      },
+      "required": [
+        "work"
+      ],
+      "title": "Source",
+      "type": "object"
+    },
+    "StatementBody": {
+      "additionalProperties": false,
+      "properties": {
+        "natural": {
+          "patternProperties": {
+            "^[a-z]{2}(-[A-Z]{2})?$": {
+              "$ref": "#/$defs/TranslatedText"
+            }
+          },
+          "title": "Natural",
+          "type": "object"
+        },
+        "latex": {
+          "$ref": "#/$defs/LatexBlock"
+        }
+      },
+      "title": "StatementBody",
+      "type": "object"
+    },
+    "TranslatedText": {
+      "additionalProperties": false,
+      "description": "A single piece of human-readable text in one language with provenance.",
+      "properties": {
+        "text": {
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        },
+        "is_original": {
+          "default": false,
+          "title": "Is Original",
+          "type": "boolean"
+        },
+        "origin": {
+          "default": "human",
+          "enum": [
+            "original",
+            "human",
+            "llm",
+            "imported"
+          ],
+          "title": "Origin",
+          "type": "string"
+        },
+        "generated_by": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Generated By"
+        },
+        "review_status": {
+          "default": "unreviewed",
+          "enum": [
+            "unreviewed",
+            "reviewed",
+            "approved",
+            "rejected"
+          ],
+          "title": "Review Status",
+          "type": "string"
+        },
+        "notes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Notes"
+        }
+      },
+      "required": [
+        "text"
+      ],
+      "title": "TranslatedText",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "default": "0.3.1",
+      "enum": [
+        "0.3.0",
+        "0.3.1"
+      ],
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "id": {
+      "minLength": 1,
+      "title": "Id",
+      "type": "string"
+    },
+    "type": {
+      "enum": [
+        "axiom",
+        "definition",
+        "lemma",
+        "proposition",
+        "theorem",
+        "corollary",
+        "conjecture"
+      ],
+      "title": "Type",
+      "type": "string"
+    },
+    "status": {
+      "default": "extracted",
+      "enum": [
+        "extracted",
+        "reviewed",
+        "validated",
+        "audited",
+        "stable",
+        "canonical"
+      ],
+      "title": "Status",
+      "type": "string"
+    },
+    "language": {
+      "$ref": "#/$defs/LanguageBlock"
+    },
+    "title": {
+      "patternProperties": {
+        "^[a-z]{2}(-[A-Z]{2})?$": {
+          "$ref": "#/$defs/TranslatedText"
+        }
+      },
+      "title": "Title",
+      "type": "object"
+    },
+    "statement": {
+      "$ref": "#/$defs/StatementBody"
+    },
+    "proved_by": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "title": "Proved By",
+      "type": "array"
+    },
+    "depends_on": {
+      "items": {
+        "$ref": "#/$defs/ConceptDependency"
+      },
+      "title": "Depends On",
+      "type": "array"
+    },
+    "sources": {
+      "items": {
+        "$ref": "#/$defs/Source"
+      },
+      "title": "Sources",
+      "type": "array"
+    },
+    "domains": {
+      "$ref": "#/$defs/DomainsBlock"
+    },
+    "ambient": {
+      "$ref": "#/$defs/AmbientBlock"
+    },
+    "ontology": {
+      "$ref": "#/$defs/OntologyBlock"
+    },
+    "generality": {
+      "items": {
+        "$ref": "#/$defs/GeneralityEdge"
+      },
+      "title": "Generality",
+      "type": "array"
+    },
+    "quality": {
+      "$ref": "#/$defs/QualityBlock"
+    },
+    "provenance": {
+      "$ref": "#/$defs/ProvenanceBlock"
+    },
+    "notes": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Notes"
+    }
+  },
+  "required": [
+    "id",
+    "type",
+    "language",
+    "title",
+    "statement"
+  ],
+  "title": "Statement",
+  "type": "object"
+}

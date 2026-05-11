@@ -1,0 +1,23 @@
+id: proof.intermediate-value-theorem.stewart
+type: proof
+status: draft
+
+proves: theorem.intermediate-value-theorem
+
+uses:
+  - definition.continuity-on-interval
+
+style: assumed
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.5"
+
+confidence: low
+notes: >
+  Stewart states the IVT without proof in section 2.5, noting that
+  a proof based on the Completeness Axiom of the real numbers is
+  given in Appendix F. The proof relies on the least upper bound
+  property, which is not developed in the main text.

@@ -1,0 +1,51 @@
+id: theorem.limit-laws
+type: theorem
+status: draft
+
+title:
+  en: Limit laws
+  es: Leyes de los límites
+
+statement:
+  natural:
+    es: >
+      Suponga que c es una constante y que los límites lim(x→a) f(x) y
+      lim(x→a) g(x) existen. Entonces:
+      1. lim(x→a) [f(x) + g(x)] = lim(x→a) f(x) + lim(x→a) g(x),
+      2. lim(x→a) [f(x) - g(x)] = lim(x→a) f(x) - lim(x→a) g(x),
+      3. lim(x→a) [cf(x)] = c lim(x→a) f(x),
+      4. lim(x→a) [f(x)g(x)] = lim(x→a) f(x) · lim(x→a) g(x),
+      5. lim(x→a) [f(x)/g(x)] = lim(x→a) f(x) / lim(x→a) g(x),
+      si lim(x→a) g(x) ≠ 0.
+    en: >
+      Suppose that c is a constant and the limits lim(x→a) f(x) and
+      lim(x→a) g(x) exist. Then:
+      1. lim(x→a) [f(x) + g(x)] = lim(x→a) f(x) + lim(x→a) g(x),
+      2. lim(x→a) [f(x) - g(x)] = lim(x→a) f(x) - lim(x→a) g(x),
+      3. lim(x→a) [cf(x)] = c lim(x→a) f(x),
+      4. lim(x→a) [f(x)g(x)] = lim(x→a) f(x) · lim(x→a) g(x),
+      5. lim(x→a) [f(x)/g(x)] = lim(x→a) f(x) / lim(x→a) g(x),
+      provided lim(x→a) g(x) ≠ 0.
+  latex: |
+    \begin{aligned}
+    &\lim_{x \to a} [f(x) + g(x)] = \lim_{x \to a} f(x) + \lim_{x \to a} g(x) \\
+    &\lim_{x \to a} [f(x) - g(x)] = \lim_{x \to a} f(x) - \lim_{x \to a} g(x) \\
+    &\lim_{x \to a} [c \cdot f(x)] = c \cdot \lim_{x \to a} f(x) \\
+    &\lim_{x \to a} [f(x) \cdot g(x)] = \lim_{x \to a} f(x) \cdot \lim_{x \to a} g(x) \\
+    &\lim_{x \to a} \frac{f(x)}{g(x)} = \frac{\lim_{x \to a} f(x)}{\lim_{x \to a} g(x)} \quad \text{si } \lim_{x \to a} g(x) \neq 0
+    \end{aligned}
+
+proved_by:
+  - proof.limit-laws.stewart
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.3"
+
+confidence: medium
+notes: >
+  Stewart presents these as the fundamental laws for computing limits.
+  The proofs use the epsilon-delta definition from section 2.4.

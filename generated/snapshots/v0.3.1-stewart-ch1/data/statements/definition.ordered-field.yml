@@ -1,0 +1,26 @@
+id: definition.ordered-field
+type: definition
+status: draft
+
+title:
+  en: Ordered Field
+
+statement:
+  natural:
+    en: >
+      An ordered field is a field F which is also an ordered set, such
+      that (i) x + y < x + z if y < z, for all x, y, z ∈ F, and
+      (ii) xy > 0 if x > 0 and y > 0. If x > 0, we call x positive;
+      if x < 0, x is negative.
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "1"
+    section: "1.17"
+
+confidence: high
+notes: >
+  Rudin 1.17. Q is an ordered field. The compatibility conditions
+  ensure that order interacts properly with the field operations.

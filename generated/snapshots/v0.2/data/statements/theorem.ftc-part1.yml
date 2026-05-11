@@ -1,0 +1,38 @@
+id: theorem.ftc-part1
+type: theorem
+status: draft
+
+title:
+  en: The Fundamental Theorem of Calculus, Part 1
+  es: Teorema fundamental del cálculo, parte 1
+
+statement:
+  natural:
+    es: >
+      Si f es continua en [a, b], entonces la función g definida por
+      g(x) = ∫_a^x f(t) dt, con a ≤ x ≤ b, es continua en [a, b]
+      y derivable en (a, b), y g'(x) = f(x).
+    en: >
+      If f is continuous on [a, b], then the function g defined by
+      g(x) = ∫_a^x f(t) dt, for a ≤ x ≤ b, is continuous on [a, b]
+      and differentiable on (a, b), and g'(x) = f(x).
+  latex: |
+    g(x) = \int_a^x f(t)\,dt
+    \;\Rightarrow\;
+    g'(x) = f(x)
+
+proved_by:
+  - proof.ftc-part1.stewart
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "5"
+    section: "5.3"
+
+confidence: high
+notes: >
+  FTC Part 1 establishes that differentiation and integration are
+  inverse processes. It says that every continuous function has an
+  antiderivative, and provides a way to construct it.

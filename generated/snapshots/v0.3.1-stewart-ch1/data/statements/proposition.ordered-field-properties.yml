@@ -1,0 +1,29 @@
+id: proposition.ordered-field-properties
+type: proposition
+status: draft
+
+title:
+  en: Properties of Ordered Fields
+
+statement:
+  natural:
+    en: >
+      In every ordered field: (a) If x > 0 then -x < 0, and vice versa.
+      (b) If x > 0 and y < z then xy < xz. (c) If x < 0 and y < z then
+      xy > xz. (d) If x ≠ 0 then x² > 0; in particular 1 > 0.
+      (e) If 0 < x < y then 0 < 1/y < 1/x.
+
+proved_by:
+  - proof.ordered-field-properties.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "1"
+    section: "1.18"
+
+confidence: high
+notes: >
+  Rudin Proposition 1.18. Standard ordering properties that hold
+  in any ordered field.

@@ -1,0 +1,24 @@
+id: proof.change-of-variable-integral.rudin
+type: proof
+status: draft
+
+proves: theorem.change-of-variable-integral
+
+uses:
+  - theorem.riemann-stieltjes-integrability-criterion
+  - definition.riemann-stieltjes-integral
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "6"
+    section: "6.19"
+
+confidence: high
+notes: >
+  Each partition P of [a,b] corresponds to Q of [A,B] via x_i = phi(y_i).
+  Since phi is bijective, all partitions of [A,B] arise this way.
+  The values of f on [x_{i-1}, x_i] equal those of g on [y_{i-1}, y_i],
+  so U(Q,g,beta) = U(P,f,alpha) and L(Q,g,beta) = L(P,f,alpha).

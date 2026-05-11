@@ -1,0 +1,31 @@
+id: theorem.derivative-log-base-a
+type: theorem
+status: draft
+
+title:
+  en: Derivative of logarithm base a
+  es: Derivada del logaritmo en base a
+
+statement:
+  natural:
+    es: >
+      d/dx(log_a x) = 1/(x ln a), para x > 0, a > 0, a ≠ 1.
+    en: >
+      d/dx(log_a x) = 1/(x ln a), for x > 0, a > 0, a ≠ 1.
+  latex: |
+    \frac{d}{dx}(\log_a x) = \frac{1}{x \ln a}
+
+proved_by:
+  - proof.derivative-log-base-a.stewart
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.6"
+
+confidence: high
+notes: >
+  Follows from the change of base formula log_a x = ln x / ln a
+  and the derivative of ln x.

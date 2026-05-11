@@ -1,0 +1,24 @@
+id: proof.laws-of-exponents.stewart
+type: proof
+status: draft
+
+proves: proposition.laws-of-exponents
+
+uses:
+  - definition.exponential-function
+
+style: assumed
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.4"
+
+confidence: low
+notes: >
+  Stewart states the laws of exponents without proof in section 1.4,
+  treating them as known results from precalculus extended to real
+  exponents. A rigorous proof requires the construction of the real
+  exponential via limits or the natural logarithm, which appears
+  later in the text.

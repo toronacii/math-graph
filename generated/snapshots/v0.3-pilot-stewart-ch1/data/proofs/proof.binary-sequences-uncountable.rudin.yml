@@ -1,0 +1,21 @@
+id: proof.binary-sequences-uncountable.rudin
+type: proof
+status: draft
+
+proves: theorem.binary-sequences-uncountable
+
+uses:
+  - definition.finite-countable-sets
+  - definition.sequence
+
+style: diagonal
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "2"
+    section: "2.14"
+
+confidence: high
+notes: >
+  Cantor's diagonal argument. Given any countable subset E = {s₁,s₂,...}, construct s differing from sₙ in the nth digit.

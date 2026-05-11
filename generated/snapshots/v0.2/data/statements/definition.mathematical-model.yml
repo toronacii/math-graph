@@ -1,0 +1,28 @@
+id: definition.mathematical-model
+type: definition
+status: draft
+
+title:
+  en: Mathematical model
+  es: Modelo matemático
+
+statement:
+  natural:
+    es: >
+      Un modelo matemático es una descripción matemática (a menudo por
+      medio de una función o una ecuación) de un fenómeno del mundo real.
+    en: >
+      A mathematical model is a mathematical description (often by means
+      of a function or an equation) of a real-world phenomenon.
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.2"
+
+confidence: medium
+notes: >
+  Stewart opens section 1.2 discussing the modeling process before
+  cataloging essential function families.

@@ -1,0 +1,20 @@
+id: proof.divergence-test.rudin
+type: proof
+status: draft
+
+proves: theorem.divergence-test
+
+uses:
+  - proposition.cauchy-criterion-series
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.23"
+
+confidence: high
+notes: >
+  Take m=n in the Cauchy criterion: |a_n| ≤ ε for n≥N, so a_n → 0.

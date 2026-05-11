@@ -1,0 +1,27 @@
+id: proof.integrating-factor-method.stewart
+type: proof
+status: draft
+
+proves: proposition.integrating-factor-method
+
+uses:
+  - definition.first-order-linear-equation
+  - theorem.product-rule
+  - theorem.ftc-part2
+  - theorem.chain-rule
+
+style: direct
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "9"
+    section: "9.5"
+
+confidence: high
+notes: >
+  Let I(x) = e^{∫P(x)dx}. Then I'(x) = P(x)I(x) by the chain rule.
+  Multiplying dy/dx + P(x)y = Q(x) by I(x):
+  I(x)dy/dx + I(x)P(x)y = I(x)Q(x). The left side is d/dx[I(x)y]
+  by the product rule. Integrating both sides using FTC gives
+  I(x)y = ∫I(x)Q(x)dx, so y = (1/I(x))∫I(x)Q(x)dx.

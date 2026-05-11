@@ -1,0 +1,25 @@
+id: theorem.connected-subsets-of-r
+type: theorem
+status: draft
+
+title:
+  en: Characterization of Connected Subsets of R
+
+statement:
+  natural:
+    en: >
+      A subset E of the real line R¹ is connected if and only if: whenever x ∈ E, y ∈ E, and x < z < y, then z ∈ E.
+
+proved_by:
+  - proof.connected-subsets-of-r.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "2"
+    section: "2.47"
+
+confidence: high
+notes: >
+  Theorem 2.47 in Rudin. Connected subsets of R are precisely the intervals.

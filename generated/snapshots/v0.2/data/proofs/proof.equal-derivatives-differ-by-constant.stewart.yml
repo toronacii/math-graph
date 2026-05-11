@@ -1,0 +1,22 @@
+id: proof.equal-derivatives-differ-by-constant.stewart
+type: proof
+status: draft
+
+proves: corollary.equal-derivatives-differ-by-constant
+
+uses:
+  - corollary.zero-derivative-constant
+  - corollary.difference-rule
+
+style: direct
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "4"
+    section: "4.2"
+
+confidence: high
+notes: >
+  Let h = f - g. Then h'(x) = f'(x) - g'(x) = 0 for all x in (a,b).
+  By the zero-derivative corollary, h is constant.

@@ -1,0 +1,25 @@
+id: proof.generalized-mean-value-theorem.rudin
+type: proof
+status: draft
+
+proves: theorem.generalized-mean-value-theorem
+
+uses:
+  - theorem.fermat-theorem
+  - theorem.extreme-value-theorem-compact-metric
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "5"
+    section: "5.9"
+
+confidence: high
+notes: >
+  Put h(t) = [f(b)-f(a)]g(t) - [g(b)-g(a)]f(t). Then h is continuous
+  on [a,b], differentiable in (a,b), and h(a) = f(b)g(a) - f(a)g(b) = h(b).
+  If h is constant, h'(x) = 0 for every x. Otherwise, h attains its
+  maximum or minimum at some interior point x (by Theorem 4.16, EVT
+  on compact sets), and Theorem 5.8 gives h'(x) = 0.

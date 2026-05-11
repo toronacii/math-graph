@@ -1,0 +1,31 @@
+id: definition.continuity-on-interval
+type: definition
+status: draft
+
+title:
+  en: Continuity on an interval
+  es: Continuidad en un intervalo
+
+statement:
+  natural:
+    es: >
+      Una función f es continua en un intervalo si es continua en cada
+      punto del intervalo. En los extremos de un intervalo cerrado se
+      requiere continuidad lateral: f es continua por la derecha en a si
+      lim(x→a⁺) f(x) = f(a), y continua por la izquierda en b si
+      lim(x→b⁻) f(x) = f(b).
+    en: >
+      A function f is continuous on an interval if it is continuous at
+      every point of the interval. At endpoints of a closed interval,
+      one-sided continuity is required: f is continuous from the right
+      at a if lim(x→a⁺) f(x) = f(a), and continuous from the left at b
+      if lim(x→b⁻) f(x) = f(b).
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.5"
+
+confidence: medium

@@ -1,0 +1,24 @@
+id: proof.field-zero-product.rudin
+type: proof
+status: draft
+
+proves: proposition.field-zero-product
+
+uses:
+  - definition.field
+  - proposition.addition-cancellation
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "1"
+    section: "1.16"
+
+confidence: high
+notes: >
+  (a) 0x + 0x = (0+0)x = 0x, so 0x = 0 by 1.14(b).
+  (b) If xy = 0 and x,y ≠ 0, then 1 = (1/x)(1/y)xy = 0, contradiction.
+  (c) (-x)y + xy = (-x+x)y = 0y = 0, so (-x)y = -(xy) by 1.14(c).
+  (d) (-x)(-y) = -[x(-y)] = -[-(xy)] = xy by (c) and 1.14(d).

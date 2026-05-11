@@ -1,0 +1,35 @@
+id: theorem.substitution-rule
+type: theorem
+status: draft
+
+title:
+  en: The Substitution Rule
+  es: Regla de sustitución
+
+statement:
+  natural:
+    es: >
+      Si u = g(x) es una función derivable cuyo rango es un intervalo
+      I y f es continua en I, entonces
+      ∫ f(g(x)) g'(x) dx = ∫ f(u) du.
+    en: >
+      If u = g(x) is a differentiable function whose range is an
+      interval I and f is continuous on I, then
+      ∫ f(g(x)) g'(x) dx = ∫ f(u) du.
+  latex: |
+    \int f(g(x))\,g'(x)\,dx = \int f(u)\,du
+
+proved_by:
+  - proof.substitution-rule.stewart
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "5"
+    section: "5.5"
+
+confidence: high
+notes: >
+  The substitution rule is the integration counterpart of the chain
+  rule. It works by reversing the chain rule for derivatives.

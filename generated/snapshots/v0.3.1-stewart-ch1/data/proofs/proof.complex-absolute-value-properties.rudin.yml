@@ -1,0 +1,25 @@
+id: proof.complex-absolute-value-properties.rudin
+type: proof
+status: draft
+
+proves: theorem.complex-absolute-value-properties
+
+uses:
+  - definition.complex-absolute-value
+  - definition.complex-conjugate
+  - theorem.conjugate-properties
+  - theorem.existence-of-nth-roots
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "1"
+    section: "1.33"
+
+confidence: high
+notes: >
+  (c) |zw|² = (ac-bd)² + (ad+bc)² = (a²+b²)(c²+d²) = |z|²|w|²,
+  then uniqueness of square roots. (e) Triangle inequality:
+  |z+w|² = |z|² + 2Re(zw̄) + |w|² ≤ (|z|+|w|)² using |Re(zw̄)| ≤ |zw̄| = |z||w|.

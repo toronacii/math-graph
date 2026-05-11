@@ -1,0 +1,21 @@
+id: proof.limit-power-law.stewart
+type: proof
+status: draft
+
+proves: theorem.limit-power-law
+
+uses:
+  - theorem.limit-laws
+
+style: direct
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.3"
+
+confidence: medium
+notes: >
+  Follows by repeated application of the product law (law 4) with
+  g = f, using induction on n.

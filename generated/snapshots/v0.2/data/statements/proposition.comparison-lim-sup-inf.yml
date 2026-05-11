@@ -1,0 +1,30 @@
+id: proposition.comparison-lim-sup-inf
+type: proposition
+status: draft
+
+title:
+  en: Comparison of lim sup and lim inf
+
+statement:
+  natural:
+    en: >
+      If s_n ≤ t_n for all n ≥ N (for some fixed N), then
+      lim inf s_n ≤ lim inf t_n and lim sup s_n ≤ lim sup t_n.
+
+  latex: |
+    s_n \leq t_n \implies \liminf s_n \leq \liminf t_n,\; \limsup s_n \leq \limsup t_n
+
+proved_by:
+  - proof.comparison-lim-sup-inf.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.19"
+
+confidence: high
+notes: >
+  Theorem 3.19 from Rudin. Classified as proposition since the result
+  follows directly from the definitions.

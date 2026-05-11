@@ -1,0 +1,19 @@
+id: proof.continuous-compact-to-rk-closed-bounded.rudin
+type: proof
+
+proves: theorem.continuous-compact-to-rk-closed-bounded
+
+uses:
+  - theorem.continuous-image-compact
+  - theorem.heine-borel
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "4"
+    section: "4.15"
+
+confidence: high
+notes: >
+  Follows from Theorem 2.41: compact subsets of R^k are closed and bounded.

@@ -1,0 +1,23 @@
+id: proof.e-as-limit.rudin
+type: proof
+status: draft
+
+proves: theorem.e-as-limit
+
+uses:
+  - definition.number-e
+  - proposition.special-sequence-limits
+  - proposition.comparison-lim-sup-inf
+  - definition.upper-lower-limits
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.31"
+
+confidence: high
+notes: >
+  Binomial expansion of (1+1/n)^n shows t_n ≤ s_n, so lim sup t_n ≤ e. Lower bound by fixing m<n then letting n→∞, m→∞ gives lim inf t_n ≥ e.

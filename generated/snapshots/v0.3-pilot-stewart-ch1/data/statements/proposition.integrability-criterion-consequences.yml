@@ -1,0 +1,33 @@
+id: proposition.integrability-criterion-consequences
+type: proposition
+status: draft
+
+title:
+  en: Consequences of the Integrability Criterion
+
+statement:
+  natural:
+    en: >
+      (a) If U(P,f,alpha) - L(P,f,alpha) < epsilon holds for some P and
+      epsilon, then it holds for every refinement of P.
+      (b) If this holds for P = {x_0,...,x_n} and s_i, t_i are arbitrary
+      points in [x_{i-1}, x_i], then sum |f(s_i) - f(t_i)| Delta alpha_i < epsilon.
+      (c) If f in R(alpha) and the hypotheses of (b) hold, then
+      |sum f(t_i) Delta alpha_i - integral f d alpha| < epsilon.
+  latex: |
+    \sum_{i=1}^{n} |f(s_i) - f(t_i)|\,\Delta\alpha_i < \varepsilon
+    \quad\text{and}\quad
+    \left|\sum_{i=1}^{n} f(t_i)\,\Delta\alpha_i
+    - \int_a^b f\,d\alpha\right| < \varepsilon
+
+proved_by:
+  - proof.integrability-criterion-consequences.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "6"
+    section: "6.7"
+
+confidence: high

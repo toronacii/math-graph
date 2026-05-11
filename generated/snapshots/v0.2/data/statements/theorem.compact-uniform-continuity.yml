@@ -1,0 +1,30 @@
+id: theorem.compact-uniform-continuity
+type: theorem
+status: draft
+
+title:
+  en: Continuous on Compact Implies Uniformly Continuous
+
+statement:
+  natural:
+    en: >
+      Let f be a continuous mapping of a compact metric space X into a
+      metric space Y. Then f is uniformly continuous on X.
+  latex: |
+    f : X \to Y \text{ continuous},\; X \text{ compact}
+    \;\Rightarrow\; f \text{ uniformly continuous on } X
+
+proved_by:
+  - proof.compact-uniform-continuity.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "4"
+    section: "4.19"
+
+confidence: high
+notes: >
+  The proof uses the Lebesgue covering lemma idea: extract a finite
+  subcover from neighborhoods, then take δ as half the minimum radius.

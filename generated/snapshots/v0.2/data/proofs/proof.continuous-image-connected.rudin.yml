@@ -1,0 +1,22 @@
+id: proof.continuous-image-connected.rudin
+type: proof
+
+proves: theorem.continuous-image-connected
+
+uses:
+  - definition.separated-connected
+  - definition.continuity-metric
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "4"
+    section: "4.22"
+
+confidence: high
+notes: >
+  By contradiction: if f(E) = A ∪ B separated, put G = E ∩ f⁻¹(A),
+  H = E ∩ f⁻¹(B). Since f continuous and A̅ closed, f⁻¹(A̅) closed,
+  G̅ ⊂ f⁻¹(A̅), so f(G̅) ⊂ A̅. Since f(H)=B and A̅∩B=∅, G̅∩H=∅.
+  Similarly G∩H̅=∅. So G,H separated, contradicting E connected.

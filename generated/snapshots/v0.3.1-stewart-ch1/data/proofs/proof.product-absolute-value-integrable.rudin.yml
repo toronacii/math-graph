@@ -1,0 +1,24 @@
+id: proof.product-absolute-value-integrable.rudin
+type: proof
+status: draft
+
+proves: theorem.product-absolute-value-integrable
+
+uses:
+  - theorem.composition-preserves-integrability
+  - theorem.riemann-stieltjes-integral-properties
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "6"
+    section: "6.13"
+
+confidence: high
+notes: >
+  (a) Take phi(t) = t^2 to get f^2 in R(alpha). Then use
+  4fg = (f+g)^2 - (f-g)^2 and linearity.
+  (b) Take phi(t) = |t| to get |f| in R(alpha). For the inequality,
+  choose c = +-1 so that c * integral f >= 0, then |integral f| = integral cf <= integral |f|.

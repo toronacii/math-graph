@@ -1,0 +1,23 @@
+id: proof.convergence-in-rk.rudin
+type: proof
+status: draft
+
+proves: proposition.convergence-in-rk
+
+uses:
+  - definition.convergent-sequence
+  - definition.euclidean-k-space
+  - theorem.algebraic-limit-theorem
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.4"
+
+confidence: high
+notes: >
+  Component inequality |α_{j,n} - α_j| ≤ |x_n - x| gives forward
+  direction; sum of squares gives reverse.

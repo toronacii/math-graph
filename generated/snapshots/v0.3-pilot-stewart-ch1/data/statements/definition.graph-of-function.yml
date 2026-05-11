@@ -1,0 +1,94 @@
+schema_version: "0.3.0"
+id: definition.graph-of-function
+type: definition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Gráfica de una función
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Graph of a function
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Si f es una función con dominio D, entonces su gráfica es el
+        conjunto de pares ordenados {(x, f(x)) : x ∈ D}, considerado
+        como subconjunto del plano cartesiano.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        If f is a function with domain D, its graph is the set of
+        ordered pairs {(x, f(x)) : x ∈ D}, regarded as a subset of the
+        Cartesian plane.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      \{(x, f(x)) \mid x \in D\}
+    status: present
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: definition.function
+    role: uses_concept
+    confidence: high
+  - id: definition.domain
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.1"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [geometry]
+
+ambient:
+  structures: [cartesian-plane]
+  notes: >
+    Stewart embeds the graph in R^2 implicitly via "el plano cartesiano".
+
+ontology:
+  semantic_kind: [construction]
+  keywords: [graph, function, ordered-pair, cartesian-plane]
+
+generality: []
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: medium
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.0"
+  rerun_id: v0.3-pilot-stewart-ch1
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []

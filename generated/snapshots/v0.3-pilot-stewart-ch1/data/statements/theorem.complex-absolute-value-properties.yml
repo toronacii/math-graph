@@ -1,0 +1,29 @@
+id: theorem.complex-absolute-value-properties
+type: theorem
+status: draft
+
+title:
+  en: Properties of Complex Absolute Value
+
+statement:
+  natural:
+    en: >
+      Let z and w be complex numbers. Then (a) |z| > 0 unless z = 0,
+      |0| = 0, (b) |z̄| = |z|, (c) |zw| = |z||w|, (d) |Re z| ≤ |z|,
+      (e) |z + w| ≤ |z| + |w| (triangle inequality).
+  latex: |
+    |zw| = |z||w|, \quad |z+w| \leq |z| + |w|
+
+proved_by:
+  - proof.complex-absolute-value-properties.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "1"
+    section: "1.33"
+
+confidence: high
+notes: >
+  Rudin Theorem 1.33. Part (e) is the triangle inequality for C.

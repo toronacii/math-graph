@@ -1,0 +1,33 @@
+id: corollary.derivative-no-simple-discontinuities
+type: corollary
+status: draft
+
+title:
+  en: Derivatives Cannot Have Simple Discontinuities
+
+statement:
+  natural:
+    en: >
+      If f is differentiable on [a, b], then f' cannot have any simple
+      discontinuities (jump discontinuities) on [a, b].
+  latex: |
+    f \text{ differentiable on } [a,b]
+    \;\Rightarrow\;
+    f' \text{ has no simple discontinuities on } [a,b]
+
+proved_by:
+  - proof.derivative-no-simple-discontinuities.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "5"
+    section: "5.12"
+
+confidence: high
+notes: >
+  Immediate consequence of Darboux's theorem (5.12): since
+  derivatives have the intermediate value property, they cannot
+  have jump discontinuities. However, f' may have discontinuities
+  of the second kind, as shown by Example 5.6(b).

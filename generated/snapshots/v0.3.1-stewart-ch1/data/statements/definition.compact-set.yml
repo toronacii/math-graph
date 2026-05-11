@@ -1,0 +1,22 @@
+id: definition.compact-set
+type: definition
+status: draft
+
+title:
+  en: Compact Set
+
+statement:
+  natural:
+    en: >
+      A subset K of a metric space X is compact if every open cover of K contains a finite subcover. That is, if {Gα} covers K, then there exist finitely many indices α₁, ..., αₙ such that K ⊂ Gα₁ ∪ ... ∪ Gαₙ.
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "2"
+    section: "2.32"
+
+confidence: high
+notes: >
+  Definition 2.32 from Rudin. The open-cover definition of compactness.

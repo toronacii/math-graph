@@ -1,0 +1,26 @@
+id: proof.chain-rule.rudin
+type: proof
+status: draft
+
+proves: theorem.chain-rule
+
+uses:
+  - definition.derivative-at-point
+  - definition.continuity-metric
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "5"
+    section: "5.5"
+
+confidence: high
+notes: >
+  Let y = f(x). Write f(t) - f(x) = (t - x)[f'(x) + u(t)] and
+  g(s) - g(y) = (s - y)[g'(y) + v(s)] where u(t) → 0 and v(s) → 0.
+  Setting s = f(t): (h(t) - h(x))/(t - x) = [g'(y) + v(s)][f'(x) + u(t)].
+  As t → x, s → y by continuity of f, giving h'(x) = g'(f(x))f'(x).
+  This avoids the division-by-zero issue since it never divides by
+  f(t) - f(x).

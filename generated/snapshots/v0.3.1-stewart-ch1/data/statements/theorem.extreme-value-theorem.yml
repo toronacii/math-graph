@@ -1,0 +1,38 @@
+id: theorem.extreme-value-theorem
+type: theorem
+status: draft
+
+title:
+  en: The Extreme Value Theorem
+  es: Teorema del valor extremo
+
+statement:
+  natural:
+    es: >
+      Si f es continua en un intervalo cerrado [a, b], entonces f
+      alcanza un valor máximo absoluto f(c) y un valor mínimo absoluto
+      f(d) en algún par de números c y d en [a, b].
+    en: >
+      If f is continuous on a closed interval [a, b], then f attains
+      an absolute maximum value f(c) and an absolute minimum value
+      f(d) at some numbers c and d in [a, b].
+  latex: |
+    f \text{ continuous on } [a,b]
+    \;\Rightarrow\;
+    \exists\, c,d \in [a,b] : f(d) \leq f(x) \leq f(c)\;\;\forall\, x \in [a,b]
+
+proved_by:
+  - proof.extreme-value-theorem.stewart
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "4"
+    section: "4.1"
+
+confidence: low
+notes: >
+  Stewart states this theorem without proof. The proof requires the
+  completeness of the real numbers (Bolzano-Weierstrass theorem or
+  equivalent). It depends on continuity on a closed interval.

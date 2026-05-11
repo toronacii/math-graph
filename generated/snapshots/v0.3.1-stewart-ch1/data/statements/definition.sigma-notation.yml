@@ -1,0 +1,29 @@
+id: definition.sigma-notation
+type: definition
+status: draft
+
+title:
+  en: Sigma notation
+  es: Notación sigma
+
+statement:
+  natural:
+    es: >
+      La notación sigma se usa para escribir sumas de manera compacta.
+      Si a_m, a_{m+1}, ..., a_n son números reales y m, n son enteros
+      con m ≤ n, entonces ∑_{i=m}^{n} a_i = a_m + a_{m+1} + ... + a_n.
+    en: >
+      Sigma notation is used to write sums in a compact form. If
+      a_m, a_{m+1}, ..., a_n are real numbers and m, n are integers
+      with m ≤ n, then ∑_{i=m}^{n} a_i = a_m + a_{m+1} + ... + a_n.
+  latex: |
+    \sum_{i=m}^{n} a_i = a_m + a_{m+1} + \cdots + a_n
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "5"
+    section: "5.1"
+
+confidence: high

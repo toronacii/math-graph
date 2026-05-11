@@ -1,0 +1,21 @@
+id: proof.derivative-constant.stewart
+type: proof
+status: draft
+
+proves: theorem.derivative-constant
+
+uses:
+  - definition.derivative-function
+
+style: direct
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.1"
+
+confidence: high
+notes: >
+  f'(x) = lim(h→0) (f(x+h) - f(x))/h = lim(h→0) (c - c)/h
+  = lim(h→0) 0 = 0.

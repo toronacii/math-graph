@@ -1,0 +1,23 @@
+id: definition.ordered-set
+type: definition
+status: draft
+
+title:
+  en: Ordered Set
+
+statement:
+  natural:
+    en: >
+      An ordered set is a set S in which an order is defined.
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "1"
+    section: "1.6"
+
+confidence: high
+notes: >
+  Rudin 1.6. Q is an ordered set with the usual order r < s
+  defined to mean s - r is a positive rational.

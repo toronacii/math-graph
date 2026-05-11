@@ -1,0 +1,137 @@
+chapter: "2"
+chapter_title: Basic Topology
+source:
+  work: "Principles of Mathematical Analysis"
+  author: Walter Rudin
+  edition: "3"
+  language: en
+  sections_processed:
+    - "2.1"
+    - "2.3"
+    - "2.4"
+    - "2.7"
+    - "2.8"
+    - "2.9"
+    - "2.12"
+    - "2.13"
+    - "2.14"
+    - "2.15"
+    - "2.17"
+    - "2.18"
+    - "2.19"
+    - "2.20"
+    - "2.22"
+    - "2.23"
+    - "2.24"
+    - "2.26"
+    - "2.27"
+    - "2.28"
+    - "2.30"
+    - "2.31"
+    - "2.32"
+    - "2.33"
+    - "2.34"
+    - "2.35"
+    - "2.36"
+    - "2.37"
+    - "2.38"
+    - "2.39"
+    - "2.40"
+    - "2.41"
+    - "2.42"
+    - "2.43"
+    - "2.45"
+    - "2.47"
+
+extraction_date: "2026-05-10"
+validation_status: pass
+
+statistics:
+  total_nodes: 72
+  total_edges: 94
+
+  nodes_by_type:
+    definition: 12
+    proposition: 10
+    theorem: 12
+    lemma: 2
+    corollary: 6
+    axiom: 0
+    conjecture: 0
+    proof: 30
+
+  proofs_by_style:
+    direct: 27
+    contradiction: 5
+    epsilon-delta: 4
+    construction: 2
+    diagonal: 1
+    algebraic: 1
+    geometric: 1
+    induction: 1
+    assumed: 1
+
+  proofs_by_confidence:
+    high: 30
+
+  edges_by_relation:
+    uses: 64
+    proves: 30
+
+  root_nodes: 12
+  root_node_ids:
+    - definition.function-mapping
+    - definition.equivalence-cardinality
+    - definition.finite-countable-sets
+    - definition.sequence
+    - definition.union-intersection
+    - definition.metric-space
+    - definition.segment-interval-cell-ball
+    - definition.neighborhood-limit-point-open-closed
+    - definition.closure
+    - definition.open-cover
+    - definition.compact-set
+    - definition.separated-connected
+
+  leaf_nodes: 0
+
+  isolated_nodes: 0
+  isolated_node_ids: []
+
+  connected_components: 1
+  connected_component_sizes:
+    - 72
+
+  cross_chapter_edges: 12
+  cross_chapter_deps:
+    - from: proof.de-morgan.rudin
+      to: definition.set-membership-subset
+    - from: proof.rationals-countable.rudin
+      to: definition.rational-numbers
+    - from: proof.nested-intervals.rudin
+      to: definition.supremum
+    - from: proof.nested-intervals.rudin
+      to: definition.least-upper-bound-property
+    - from: proof.k-cell-compact.rudin
+      to: theorem.archimedean-density
+    - from: proof.sup-in-closure.rudin
+      to: definition.supremum
+    - from: proof.connected-subsets-of-r.rudin
+      to: definition.supremum
+
+  graph_density: 0.0184
+  average_degree: 2.61
+
+cumulative:
+  total_nodes: 389
+  total_edges: 459
+  nodes_by_type:
+    definition: 125
+    proposition: 33
+    theorem: 85
+    lemma: 2
+    corollary: 12
+    proof: 132
+  graph_density: 0.0030
+  connected_components: 59
+  average_degree: 2.36

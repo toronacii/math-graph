@@ -1,0 +1,38 @@
+id: definition.improper-integral-type2
+type: definition
+status: draft
+
+title:
+  en: Improper integral (Type 2 — discontinuous integrand)
+  es: Integral impropia (Tipo 2 — integrando discontinuo)
+
+statement:
+  natural:
+    es: >
+      (a) Si f es continua en [a, b) y es discontinua en b, entonces
+      ∫_a^b f(x) dx = lim_{t→b⁻} ∫_a^t f(x) dx, si este límite existe.
+      (b) Si f es continua en (a, b] y es discontinua en a, entonces
+      ∫_a^b f(x) dx = lim_{t→a⁺} ∫_t^b f(x) dx, si este límite existe.
+      La integral impropia se llama convergente si el límite existe
+      y divergente si no existe.
+    en: >
+      (a) If f is continuous on [a, b) and is discontinuous at b, then
+      ∫_a^b f(x) dx = lim_{t→b⁻} ∫_a^t f(x) dx, if this limit exists.
+      (b) If f is continuous on (a, b] and is discontinuous at a, then
+      ∫_a^b f(x) dx = lim_{t→a⁺} ∫_t^b f(x) dx, if this limit exists.
+      The improper integral is called convergent if the limit exists
+      and divergent if it does not.
+  latex: |
+    \int_a^b f(x)\,dx = \lim_{t \to b^-} \int_a^t f(x)\,dx
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "7"
+    section: "7.8"
+
+confidence: high
+notes: >
+  Type 2 improper integrals handle discontinuities of the integrand
+  at the endpoints of the interval of integration.

@@ -1,0 +1,29 @@
+id: theorem.dirichlet-test
+type: theorem
+status: draft
+
+title:
+  en: Dirichlet's Test
+
+statement:
+  natural:
+    en: >
+      If the partial sums A_n of Σa_n are bounded, b_0 ≥ b_1 ≥ b_2 ≥ ..., and
+      lim b_n = 0, then Σa_n b_n converges.
+
+  latex: |
+    |A_n| \leq M,\; b_n \downarrow 0 \implies \sum a_n b_n \text{ converges}
+
+proved_by:
+  - proof.dirichlet-test.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.42"
+
+confidence: high
+notes: >
+  Theorem 3.42 from Rudin.

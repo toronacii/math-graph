@@ -1,0 +1,21 @@
+id: proof.ftc-vector-valued.rudin
+type: proof
+status: draft
+
+proves: theorem.ftc-vector-valued
+
+uses:
+  - theorem.fundamental-theorem-of-calculus
+  - definition.vector-valued-integral
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "6"
+    section: "6.24"
+
+confidence: high
+notes: >
+  Apply Theorem 6.21 to each component f_j with antiderivative F_j.

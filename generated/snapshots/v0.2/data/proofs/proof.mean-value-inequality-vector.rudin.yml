@@ -1,0 +1,25 @@
+id: proof.mean-value-inequality-vector.rudin
+type: proof
+status: draft
+
+proves: theorem.mean-value-inequality-vector
+
+uses:
+  - theorem.mean-value-theorem
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "5"
+    section: "5.19"
+
+confidence: high
+notes: >
+  Put z = f(b) - f(a) and define phi(t) = z . f(t) (inner product).
+  Then phi is real-valued and continuous on [a,b], differentiable in (a,b).
+  By the real MVT: phi(b) - phi(a) = (b - a)phi'(x) = (b - a)z . f'(x)
+  for some x in (a,b). But phi(b) - phi(a) = z . z = |z|^2.
+  By the Schwarz inequality: |z|^2 = (b - a)|z . f'(x)| <= (b - a)|z||f'(x)|.
+  Hence |z| <= (b - a)|f'(x)|. Proof due to V. P. Havin.

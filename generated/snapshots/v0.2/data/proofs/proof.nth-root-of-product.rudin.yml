@@ -1,0 +1,22 @@
+id: proof.nth-root-of-product.rudin
+type: proof
+status: draft
+
+proves: corollary.nth-root-of-product
+
+uses:
+  - theorem.existence-of-nth-roots
+  - definition.field
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "1"
+    section: "1.21"
+
+confidence: high
+notes: >
+  Put α = a^{1/n}, β = b^{1/n}. Then ab = α^n β^n = (αβ)^n
+  by commutativity. Uniqueness gives (ab)^{1/n} = αβ.

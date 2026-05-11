@@ -1,0 +1,23 @@
+id: proof.comparison-test-series.stewart
+type: proof
+status: draft
+
+proves: theorem.comparison-test-series
+
+uses:
+  - definition.infinite-series
+  - theorem.monotonic-sequence-theorem
+
+style: direct
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "11"
+    section: "11.4"
+
+confidence: high
+notes: >
+  Part (i): The partial sums of ∑ aₙ are bounded above by ∑ bₙ
+  and increasing (since aₙ ≥ 0). By the Monotonic Sequence Theorem,
+  they converge. Part (ii): follows from part (i) by contraposition.

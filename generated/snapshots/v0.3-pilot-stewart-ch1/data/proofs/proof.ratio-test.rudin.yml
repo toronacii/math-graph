@@ -1,0 +1,22 @@
+id: proof.ratio-test.rudin
+type: proof
+status: draft
+
+proves: theorem.ratio-test
+
+uses:
+  - theorem.comparison-test-series
+  - theorem.geometric-series
+  - theorem.divergence-test
+
+style: cases
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.34"
+
+confidence: high
+notes: >
+  (a) |a_{n+1}|<β|a_n| gives |a_n| < |a_N|β^{n-N}, compare geometric. (b) |a_n| increasing so a_n ↛ 0.

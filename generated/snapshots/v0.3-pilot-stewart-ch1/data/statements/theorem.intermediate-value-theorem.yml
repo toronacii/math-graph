@@ -1,0 +1,42 @@
+id: theorem.intermediate-value-theorem
+type: theorem
+status: draft
+
+title:
+  en: Intermediate Value Theorem
+  es: Teorema del valor intermedio
+
+statement:
+  natural:
+    es: >
+      Suponga que f es continua en el intervalo cerrado [a, b] y sea N
+      cualquier número entre f(a) y f(b), donde f(a) ≠ f(b). Entonces
+      existe un número c en (a, b) tal que f(c) = N.
+    en: >
+      Suppose that f is continuous on the closed interval [a, b] and let
+      N be any number between f(a) and f(b), where f(a) ≠ f(b). Then
+      there exists a number c in (a, b) such that f(c) = N.
+  latex: |
+    f \text{ continua en } [a,b], \; N \text{ entre } f(a) \text{ y } f(b) \implies \exists\, c \in (a,b) : f(c) = N
+
+proved_by:
+  - proof.intermediate-value-theorem.stewart
+  - proof.intermediate-value-theorem.rudin
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.5"
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "4"
+    section: "4.23"
+
+confidence: high
+notes: >
+  Stewart states the IVT without proof in section 2.5. Rudin proves it
+  in Theorem 4.23 via the continuous image of connected sets (Thm 4.22)
+  and the characterization of connected subsets of R (Thm 2.47).

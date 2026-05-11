@@ -1,0 +1,23 @@
+id: proof.noncompact-counterexamples.rudin
+type: proof
+
+proves: theorem.noncompact-counterexamples
+
+uses:
+  - theorem.continuity-arithmetic-operations
+  - definition.uniform-continuity
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "4"
+    section: "4.20"
+
+confidence: high
+notes: >
+  For bounded noncompact E: limit point x₀ ∉ E exists.
+  (a) f(x) = 1/(x−x₀) is continuous, unbounded.
+  (b) g(x) = 1/(1+(x−x₀)²) is bounded, sup=1 not attained.
+  (c) f above is not uniformly continuous.
+  For unbounded E: f(x)=x for (a), h(x)=x²/(1+x²) for (b).

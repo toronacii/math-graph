@@ -1,0 +1,20 @@
+id: proof.alternating-series-test.rudin
+type: proof
+status: draft
+
+proves: theorem.alternating-series-test
+
+uses:
+  - theorem.dirichlet-test
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.43"
+
+confidence: high
+notes: >
+  Apply Theorem 3.42 with a_n = (-1)^{n+1}, b_n = |c_n|.

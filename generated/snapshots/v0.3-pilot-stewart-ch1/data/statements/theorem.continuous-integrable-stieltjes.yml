@@ -1,0 +1,31 @@
+id: theorem.continuous-integrable-stieltjes
+type: theorem
+status: draft
+
+title:
+  en: Continuous Functions are Riemann-Stieltjes Integrable
+
+statement:
+  natural:
+    en: >
+      If f is continuous on [a, b] then f is in R(alpha) on [a, b]
+      for every monotonically increasing alpha.
+  latex: |
+    f \in C[a,b] \implies f \in \mathscr{R}(\alpha)
+
+proved_by:
+  - proof.continuous-integrable-stieltjes.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "6"
+    section: "6.8"
+
+confidence: high
+notes: >
+  This is strictly more general than the Stewart version
+  (theorem.integrability-of-continuous-functions) which only treats
+  the Riemann integral (alpha(x) = x). The proof uses uniform
+  continuity on [a, b] (compact, hence Theorem 4.19 applies).

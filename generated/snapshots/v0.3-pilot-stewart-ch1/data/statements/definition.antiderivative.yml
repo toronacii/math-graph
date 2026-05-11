@@ -1,0 +1,27 @@
+id: definition.antiderivative
+type: definition
+status: draft
+
+title:
+  en: Antiderivative
+  es: Antiderivada
+
+statement:
+  natural:
+    es: >
+      Una antiderivada de f en un intervalo I es una función F tal
+      que F'(x) = f(x) para toda x en I.
+    en: >
+      An antiderivative of f on an interval I is a function F such
+      that F'(x) = f(x) for all x in I.
+  latex: |
+    F'(x) = f(x) \quad \forall\, x \in I
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "4"
+    section: "4.9"
+
+confidence: high

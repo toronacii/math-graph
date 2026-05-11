@@ -1,0 +1,22 @@
+id: proof.mertens.rudin
+type: proof
+status: draft
+
+proves: theorem.mertens
+
+uses:
+  - definition.cauchy-product
+  - definition.absolute-convergence
+  - theorem.algebraic-limit-theorem
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.50"
+
+confidence: high
+notes: >
+  Write C_n = A_n B + γ_n where γ_n = a_0β_n + a_1β_{n-1} + ... + a_nβ_0. Show γ_n→0 using absolute convergence of Σa_n and β_n→0.

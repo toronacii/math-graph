@@ -1,0 +1,26 @@
+id: proof.subsequence-compact.rudin
+type: proof
+status: draft
+
+proves: theorem.subsequence-compact
+
+uses:
+  - definition.compact-set
+  - definition.subsequence
+  - definition.neighborhood-limit-point-open-closed
+  - theorem.bolzano-weierstrass
+  - theorem.k-cell-compact
+
+style: cases
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.6"
+
+confidence: high
+notes: >
+  (a) If range finite, constant subsequence; if infinite, limit point
+  exists by Thm 2.37, pick n_i with d(p, p_{n_i}) < 1/i.
+  (b) Bounded subset of R^k lies in compact set.

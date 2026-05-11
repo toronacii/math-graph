@@ -1,0 +1,23 @@
+id: proof.continuity-of-combinations.stewart
+type: proof
+status: draft
+
+proves: theorem.continuity-of-combinations
+
+uses:
+  - definition.continuity-at-point
+  - theorem.limit-laws
+
+style: direct
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.5"
+
+confidence: medium
+notes: >
+  Direct application of the limit laws to the definition of
+  continuity. For example, lim(x→a) [f(x) + g(x)] =
+  lim(x→a) f(x) + lim(x→a) g(x) = f(a) + g(a) = (f + g)(a).

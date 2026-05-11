@@ -1,0 +1,23 @@
+id: proof.derivative-sum-rule.rudin
+type: proof
+status: draft
+
+proves: theorem.derivative-sum-rule
+
+uses:
+  - definition.derivative-at-point
+  - theorem.limit-laws
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "5"
+    section: "5.3"
+
+confidence: high
+notes: >
+  Rudin states "(a) is clear, by Theorem 4.4." The sum of
+  difference quotients converges to the sum of derivatives by
+  the limit sum law.

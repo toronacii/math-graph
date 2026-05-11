@@ -1,0 +1,27 @@
+id: definition.inflection-point
+type: definition
+status: draft
+
+title:
+  en: Inflection point
+  es: Punto de inflexión
+
+statement:
+  natural:
+    es: >
+      Un punto P en una curva y = f(x) es un punto de inflexión si
+      f es continua en P y la curva cambia de cóncava hacia arriba a
+      cóncava hacia abajo o viceversa en P.
+    en: >
+      A point P on a curve y = f(x) is an inflection point if f is
+      continuous at P and the curve changes from concave upward to
+      concave downward or vice versa at P.
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "4"
+    section: "4.3"
+
+confidence: high

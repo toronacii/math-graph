@@ -1,0 +1,27 @@
+id: theorem.complex-field
+type: theorem
+status: draft
+
+title:
+  en: Complex Numbers Form a Field
+
+statement:
+  natural:
+    en: >
+      The definitions of addition and multiplication of complex numbers
+      (ordered pairs of reals) turn the set of all complex numbers into
+      a field, with (0, 0) and (1, 0) in the role of 0 and 1.
+
+proved_by:
+  - proof.complex-field.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "1"
+    section: "1.25"
+
+confidence: high
+notes: >
+  Rudin Theorem 1.25. Proof verifies all field axioms directly.

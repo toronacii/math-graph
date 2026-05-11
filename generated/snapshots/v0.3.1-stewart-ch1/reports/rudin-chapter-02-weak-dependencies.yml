@@ -1,0 +1,51 @@
+weak_dependencies: []
+
+implicit_algebraic_imports:
+  - concept: Set theory (ZFC or naive)
+    used_by:
+      - proposition.de-morgan
+      - definition.union-intersection
+      - definition.closure
+      - definition.open-cover
+      - definition.compact-set
+      - definition.separated-connected
+    notes: >
+      Rudin uses set-theoretic operations (union, intersection,
+      complement, power set, indexed families) throughout Chapter 2
+      without axiomatizing them. This is the same foundational
+      assumption noted in Chapter 1.
+
+  - concept: Completeness of the reals
+    used_by:
+      - lemma.nested-intervals
+      - theorem.connected-subsets-of-r
+      - proposition.sup-in-closure
+    notes: >
+      Several proofs rely on the least-upper-bound property of R,
+      which is tracked via explicit edges to definition.supremum,
+      definition.least-upper-bound-property, and
+      theorem.existence-of-reals from Chapter 1.
+
+  - concept: Properties of Euclidean distance
+    used_by:
+      - theorem.heine-borel
+      - theorem.bolzano-weierstrass
+      - theorem.k-cell-compact
+    notes: >
+      Rudin uses properties of the Euclidean metric in Rk
+      (triangle inequality, coordinate projections) that trace back
+      to Chapter 1 definitions. The connection to
+      definition.euclidean-k-space is implicit in some proofs.
+
+epistemic_debt_summary:
+  total_weak_proofs: 0
+  total_inherited_weak: 0
+  total_implicit_imports: 3
+  affected_chain_depth: 0
+  resolution_chapter_estimate: "N/A — no weak proofs in Rudin Ch2"
+  notes: >
+    Rudin Chapter 2 has no weak dependencies. All 30 proofs have
+    confidence: high. The implicit imports are standard foundational
+    assumptions (set theory, completeness, Euclidean distance) that
+    are either explicitly tracked via cross-chapter edges or are
+    conventional for a topology chapter in an analysis textbook.

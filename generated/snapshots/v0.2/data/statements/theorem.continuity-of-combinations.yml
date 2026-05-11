@@ -1,0 +1,33 @@
+id: theorem.continuity-of-combinations
+type: theorem
+status: draft
+
+title:
+  en: Continuity of algebraic combinations
+  es: Continuidad de combinaciones algebraicas
+
+statement:
+  natural:
+    es: >
+      Si f y g son continuas en a y c es una constante, entonces las
+      siguientes funciones también son continuas en a: f + g, f - g,
+      cf, fg, y f/g (si g(a) ≠ 0).
+    en: >
+      If f and g are continuous at a and c is a constant, then the
+      following functions are also continuous at a: f + g, f - g,
+      cf, fg, and f/g (if g(a) ≠ 0).
+
+proved_by:
+  - proof.continuity-of-combinations.stewart
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.5"
+
+confidence: medium
+notes: >
+  Follows directly from the limit laws applied to the definition
+  of continuity.

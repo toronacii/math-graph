@@ -1,0 +1,24 @@
+id: proof.special-sequence-limits.rudin
+type: proof
+status: draft
+
+proves: proposition.special-sequence-limits
+
+uses:
+  - definition.convergent-sequence
+  - theorem.archimedean-density
+  - proposition.convergent-sequence-properties
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.20"
+
+confidence: high
+notes: >
+  (a) Archimedean. (b) Binomial theorem gives 0 < x_n ≤ (p-1)/n.
+  (c) Binomial gives 0 ≤ x_n ≤ √(2/(n-1)). (d) Choose k>α, binomial
+  lower bound on (1+p)^n. (e) α=0 in (d).

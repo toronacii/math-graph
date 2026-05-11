@@ -1,0 +1,23 @@
+id: proof.inverse-graph-reflection.stewart
+type: proof
+status: draft
+
+proves: proposition.inverse-graph-reflection
+
+uses:
+  - definition.inverse-function
+  - definition.graph-of-function
+
+style: direct
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.5"
+
+confidence: medium
+notes: >
+  Stewart argues that (a, b) is on the graph of f iff f(a) = b iff
+  f⁻¹(b) = a iff (b, a) is on the graph of f⁻¹. The transformation
+  (a, b) → (b, a) is precisely reflection about the line y = x.

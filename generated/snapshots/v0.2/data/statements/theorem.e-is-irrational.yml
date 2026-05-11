@@ -1,0 +1,28 @@
+id: theorem.e-is-irrational
+type: theorem
+status: draft
+
+title:
+  en: e is Irrational
+
+statement:
+  natural:
+    en: >
+      The number e is irrational.
+
+  latex: |
+    e \notin \mathbb{Q}
+
+proved_by:
+  - proof.e-is-irrational.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.32"
+
+confidence: high
+notes: >
+  Theorem 3.32 from Rudin.

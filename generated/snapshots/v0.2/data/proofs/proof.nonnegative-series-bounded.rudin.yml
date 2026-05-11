@@ -1,0 +1,22 @@
+id: proof.nonnegative-series-bounded.rudin
+type: proof
+status: draft
+
+proves: proposition.nonnegative-series-bounded
+
+uses:
+  - definition.infinite-series
+  - definition.monotonic-sequence
+  - theorem.monotonic-sequence-theorem
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.24"
+
+confidence: high
+notes: >
+  Partial sums are monotonically increasing; bounded iff convergent by monotone convergence.

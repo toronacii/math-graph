@@ -1,0 +1,25 @@
+id: proof.derivative-cos.stewart
+type: proof
+status: draft
+
+proves: theorem.derivative-cos
+
+uses:
+  - definition.derivative-function
+  - theorem.limit-sinx-over-x
+  - corollary.limit-cosx-minus-1-over-x
+  - theorem.limit-laws
+
+style: direct
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.3"
+
+confidence: high
+notes: >
+  cos(x+h) = cos x cos h - sin x sin h by the addition formula.
+  Then [cos(x+h) - cos x]/h = cos x · (cos h - 1)/h - sin x · sin h/h.
+  As h→0, this gives 0 - sin x = -sin x.

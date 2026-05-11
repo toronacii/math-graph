@@ -1,0 +1,12 @@
+source: rudin
+chapter: '7'
+mode: extraction
+estimated_tokens: 8377
+estimated_chars: 33508
+locator_mappings: 194
+collision_candidates_nearby: 13
+multi_source_nodes: 23
+weak_dependencies: 28
+ontology_warnings: 5
+topic_keywords: 5
+retrieval_strategy: topic-keywords + nearby-chapters + frontier

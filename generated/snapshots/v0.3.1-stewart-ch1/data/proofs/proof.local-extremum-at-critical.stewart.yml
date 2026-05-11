@@ -1,0 +1,23 @@
+id: proof.local-extremum-at-critical.stewart
+type: proof
+status: draft
+
+proves: proposition.local-extremum-at-critical
+
+uses:
+  - theorem.fermat-theorem
+  - definition.critical-number
+
+style: direct
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "4"
+    section: "4.1"
+
+confidence: high
+notes: >
+  If f has a local extremum at c, then either f'(c) does not exist
+  (so c is critical by definition) or f'(c) exists and equals 0
+  by Fermat's theorem (so c is also critical).

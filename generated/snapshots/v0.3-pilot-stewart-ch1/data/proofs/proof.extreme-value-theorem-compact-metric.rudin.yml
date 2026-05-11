@@ -1,0 +1,20 @@
+id: proof.extreme-value-theorem-compact-metric.rudin
+type: proof
+
+proves: theorem.extreme-value-theorem-compact-metric
+
+uses:
+  - theorem.continuous-compact-to-rk-closed-bounded
+  - definition.supremum
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "4"
+    section: "4.16"
+
+confidence: high
+notes: >
+  By Theorem 4.15, f(X) is a closed and bounded set of real numbers.
+  By Theorem 2.28, a closed bounded set contains its sup and inf.

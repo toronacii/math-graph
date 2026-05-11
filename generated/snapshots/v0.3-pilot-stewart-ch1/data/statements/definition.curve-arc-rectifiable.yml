@@ -1,0 +1,30 @@
+id: definition.curve-arc-rectifiable
+type: definition
+status: draft
+
+title:
+  en: Curve, Arc, and Rectifiable Curve
+
+statement:
+  natural:
+    en: >
+      A continuous mapping gamma of an interval [a, b] into R^k is called
+      a curve. If gamma is one-to-one, it is called an arc. If gamma(a) = gamma(b),
+      it is a closed curve. For each partition P = {x_0, ..., x_n} of [a, b],
+      define Lambda(P, gamma) = sum |gamma(x_i) - gamma(x_{i-1})|. The length
+      of gamma is Lambda(gamma) = sup Lambda(P, gamma) over all partitions.
+      If Lambda(gamma) < infinity, gamma is rectifiable.
+  latex: |
+    \Lambda(P, \gamma) = \sum_{i=1}^{n} |\gamma(x_i) - \gamma(x_{i-1})|,
+    \quad \Lambda(\gamma) = \sup_P \Lambda(P, \gamma)
+
+proved_by: []
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "6"
+    section: "6.26"
+
+confidence: high

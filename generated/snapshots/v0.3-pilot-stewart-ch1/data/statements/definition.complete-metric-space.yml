@@ -1,0 +1,25 @@
+id: definition.complete-metric-space
+type: definition
+status: draft
+
+title:
+  en: Complete Metric Space
+
+statement:
+  natural:
+    en: >
+      A metric space in which every Cauchy sequence converges is said to be complete.
+
+  latex: |
+    \{p_n\} \text{ Cauchy} \implies \{p_n\} \text{ converges}
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.12"
+
+confidence: high
+notes: >
+  Definition 3.12 from Rudin's Principles of Mathematical Analysis.

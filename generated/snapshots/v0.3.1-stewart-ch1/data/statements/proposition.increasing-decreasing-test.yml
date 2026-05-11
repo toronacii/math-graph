@@ -1,0 +1,47 @@
+id: proposition.increasing-decreasing-test
+type: proposition
+status: draft
+
+title:
+  en: Increasing/Decreasing Test
+  es: Prueba creciente/decreciente
+
+statement:
+  natural:
+    es: >
+      (a) Si f'(x) > 0 en un intervalo, entonces f es creciente en
+      ese intervalo. (b) Si f'(x) < 0 en un intervalo, entonces f
+      es decreciente en ese intervalo.
+    en: >
+      (a) If f'(x) > 0 on an interval, then f is increasing on that
+      interval. (b) If f'(x) < 0 on an interval, then f is decreasing
+      on that interval.
+  latex: |
+    f'(x) > 0 \;\Rightarrow\; f \text{ increasing}
+    \qquad
+    f'(x) < 0 \;\Rightarrow\; f \text{ decreasing}
+
+proved_by:
+  - proof.increasing-decreasing-test.stewart
+  - proof.increasing-decreasing-test.rudin
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "4"
+    section: "4.3"
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "5"
+    section: "5.11"
+
+confidence: high
+notes: >
+  Direct consequence of the Mean Value Theorem. Rudin (5.11)
+  states three parts: (a) f' >= 0 implies monotonically increasing,
+  (b) f' = 0 implies constant, (c) f' <= 0 implies monotonically
+  decreasing. Stewart uses strict inequalities (f' > 0 implies
+  increasing, f' < 0 implies decreasing). Rudin's non-strict
+  version subsumes Stewart's strict version.

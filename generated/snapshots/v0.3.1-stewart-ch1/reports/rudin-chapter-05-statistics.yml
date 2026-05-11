@@ -1,0 +1,63 @@
+cumulative:
+  nodes: 527
+  edges: 687
+  statements: 326
+  proofs: 201
+  definitions: 143
+  propositions: 43
+  theorems: 123
+  lemmas: 2
+  corollaries: 15
+
+chapter_5:
+  new_statements: 6
+  new_proofs: 15
+  total_new_entities: 21
+  shared_statements_updated: 13
+  breakdown:
+    definitions: 0
+    propositions: 0
+    theorems: 5
+    corollaries: 1
+    proofs: 15
+
+  reclassifications: 0
+
+  shared_with_stewart: 9
+  shared_theorems:
+    - theorem.differentiable-implies-continuous
+    - theorem.product-rule
+    - theorem.quotient-rule
+    - theorem.chain-rule
+    - theorem.fermat-theorem
+    - theorem.mean-value-theorem
+    - theorem.lhopitals-rule
+    - proposition.increasing-decreasing-test
+    - corollary.zero-derivative-constant
+
+  shared_definitions:
+    - definition.derivative-at-point
+    - definition.local-maximum
+    - definition.local-minimum
+    - definition.second-derivative
+
+  new_theorems:
+    - theorem.derivative-sum-rule
+    - theorem.generalized-mean-value-theorem
+    - theorem.darboux-theorem
+    - theorem.taylor-theorem
+    - theorem.mean-value-inequality-vector
+    - corollary.derivative-no-simple-discontinuities
+
+  cross_chapter_dependencies: 5
+  top_dependencies:
+    - definition.derivative-at-point (x8)
+    - theorem.limit-laws (x4)
+    - theorem.differentiable-implies-continuous (x3)
+    - theorem.mean-value-theorem (x5)
+    - theorem.fermat-theorem (x3)
+    - theorem.generalized-mean-value-theorem (x2)
+    - theorem.extreme-value-theorem-compact-metric (x2)
+    - definition.continuity-metric (x1)
+    - definition.local-maximum (x1)
+    - definition.limit-extended-real (x1)

@@ -1,0 +1,25 @@
+id: corollary.nested-compact-nonempty
+type: corollary
+status: draft
+
+title:
+  en: Nested Sequence of Compact Sets Has Nonempty Intersection
+
+statement:
+  natural:
+    en: >
+      If {Kₙ} is a sequence of nonempty compact sets with Kₙ ⊃ Kₙ₊₁, then ⋂Kₙ is nonempty.
+
+proved_by:
+  - proof.nested-compact-nonempty.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "2"
+    section: "2.36"
+
+confidence: high
+notes: >
+  Corollary to Theorem 2.36 in Rudin. Nested decreasing sequence version of the finite intersection property.

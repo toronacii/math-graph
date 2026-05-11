@@ -1,0 +1,36 @@
+id: definition.volume-by-cross-sections
+type: definition
+status: draft
+
+title:
+  en: Volume by cross-sections
+  es: Volumen por secciones transversales
+
+statement:
+  natural:
+    es: >
+      Sea S un sólido que se extiende desde x = a hasta x = b.
+      Si la sección transversal de S en el plano P_x, perpendicular
+      al eje x, tiene área A(x), donde A es una función continua,
+      entonces el volumen de S es V = ∫_a^b A(x) dx.
+    en: >
+      Let S be a solid that lies between x = a and x = b.
+      If the cross-sectional area of S in the plane P_x, perpendicular
+      to the x-axis, is A(x), where A is a continuous function,
+      then the volume of S is V = ∫_a^b A(x) dx.
+  latex: |
+    V = \int_a^b A(x)\,dx
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "6"
+    section: "6.2"
+
+confidence: high
+notes: >
+  The general volume formula obtained by slicing the solid into thin
+  slabs of thickness Δx. The cross-sectional area A(x) must be a
+  known, continuous function. Disk and washer methods are special
+  cases of this definition.

@@ -1,0 +1,21 @@
+id: proof.neighborhood-is-open.rudin
+type: proof
+status: draft
+
+proves: proposition.neighborhood-is-open
+
+uses:
+  - definition.metric-space
+  - definition.neighborhood-limit-point-open-closed
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "2"
+    section: "2.19"
+
+confidence: high
+notes: >
+  For q ∈ Nr(p), set h = r - d(p,q). Then Nh(q) ⊂ Nr(p) by triangle inequality.

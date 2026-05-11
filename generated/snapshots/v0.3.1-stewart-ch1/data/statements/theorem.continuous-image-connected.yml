@@ -1,0 +1,32 @@
+id: theorem.continuous-image-connected
+type: theorem
+status: draft
+
+title:
+  en: Continuous Image of a Connected Set is Connected
+
+statement:
+  natural:
+    en: >
+      If f is a continuous mapping of a metric space X into a metric
+      space Y, and if E is a connected subset of X, then f(E) is
+      connected.
+  latex: |
+    f : X \to Y \text{ continuous},\; E \subset X \text{ connected}
+    \;\Rightarrow\; f(E) \text{ connected}
+
+proved_by:
+  - proof.continuous-image-connected.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "4"
+    section: "4.22"
+
+confidence: high
+notes: >
+  Fundamental result connecting continuity and connectedness. The
+  Intermediate Value Theorem follows as a corollary via the
+  characterization of connected subsets of R (Theorem 2.47).

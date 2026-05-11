@@ -1,0 +1,30 @@
+id: theorem.continuous-image-compact
+type: theorem
+status: draft
+
+title:
+  en: Continuous Image of a Compact Set is Compact
+
+statement:
+  natural:
+    en: >
+      Suppose f is a continuous mapping of a compact metric space X
+      into a metric space Y. Then f(X) is compact.
+  latex: |
+    f : X \to Y \text{ continuous},\; X \text{ compact}
+    \;\Rightarrow\; f(X) \text{ compact}
+
+proved_by:
+  - proof.continuous-image-compact.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "4"
+    section: "4.14"
+
+confidence: high
+notes: >
+  Fundamental result connecting continuity and compactness. Many
+  important theorems (4.15, 4.16, 4.17, 4.19) follow as consequences.

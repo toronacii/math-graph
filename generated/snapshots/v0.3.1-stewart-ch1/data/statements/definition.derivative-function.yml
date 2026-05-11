@@ -1,0 +1,31 @@
+id: definition.derivative-function
+type: definition
+status: draft
+
+title:
+  en: Derivative as a function
+  es: La derivada como función
+
+statement:
+  natural:
+    es: >
+      La derivada de una función f es la función f' definida por
+      f'(x) = lim(h→0) (f(x + h) - f(x)) / h para todo x donde este
+      límite exista. El dominio de f' es el conjunto de todos los x
+      para los que el límite existe.
+    en: >
+      The derivative of a function f is the function f' defined by
+      f'(x) = lim(h→0) (f(x + h) - f(x)) / h for all x where this
+      limit exists. The domain of f' is the set of all x for which
+      the limit exists.
+  latex: |
+    f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.8"
+
+confidence: high

@@ -1,0 +1,41 @@
+id: theorem.divergence-test
+type: theorem
+status: draft
+
+title:
+  en: Test for Divergence
+  es: Prueba de divergencia
+
+statement:
+  natural:
+    es: >
+      Si lim(n→∞) aₙ no existe o si lim(n→∞) aₙ ≠ 0, entonces
+      la serie ∑ aₙ diverge.
+    en: >
+      If lim(n→∞) aₙ does not exist or if lim(n→∞) aₙ ≠ 0, then
+      the series ∑ aₙ diverges.
+  latex: |
+    \lim_{n \to \infty} a_n \ne 0
+    \;\Longrightarrow\;
+    \sum a_n \text{ diverges}
+
+proved_by:
+  - proof.divergence-test.stewart
+  - proof.divergence-test.rudin
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "11"
+    section: "11.2"
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.23"
+
+confidence: high
+notes: >
+  The converse is false: lim aₙ = 0 does not imply convergence
+  (e.g., the harmonic series).

@@ -1,0 +1,26 @@
+id: definition.order-relation
+type: definition
+status: draft
+
+title:
+  en: Order Relation
+
+statement:
+  natural:
+    en: >
+      Let S be a set. An order on S is a relation, denoted by <, with
+      the following two properties: (i) If x ∈ S and y ∈ S then one and
+      only one of the statements x < y, x = y, y < x is true (trichotomy).
+      (ii) If x, y, z ∈ S, if x < y and y < z, then x < z (transitivity).
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "1"
+    section: "1.5"
+
+confidence: high
+notes: >
+  Rudin 1.5. This is a total (linear) order. The notation x ≤ y
+  means x < y or x = y.

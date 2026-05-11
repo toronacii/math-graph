@@ -1,0 +1,25 @@
+id: proof.integral-test.stewart
+type: proof
+status: draft
+
+proves: theorem.integral-test
+
+uses:
+  - definition.infinite-series
+  - definition.improper-integral-type1
+  - proposition.integral-comparison
+
+style: direct
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "11"
+    section: "11.3"
+
+confidence: high
+notes: >
+  By comparing the partial sums with upper and lower Riemann sums
+  for the integral. Since f is decreasing, f(n+1) ≤ ∫_n^{n+1} f(x)dx
+  ≤ f(n). Summing gives the comparison between partial sums and
+  the integral. Bounded monotone sequences converge.

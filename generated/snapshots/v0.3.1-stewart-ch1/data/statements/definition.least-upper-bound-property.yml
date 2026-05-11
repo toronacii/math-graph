@@ -1,0 +1,25 @@
+id: definition.least-upper-bound-property
+type: definition
+status: draft
+
+title:
+  en: Least-Upper-Bound Property
+
+statement:
+  natural:
+    en: >
+      An ordered set S is said to have the least-upper-bound property
+      if the following is true: if E ⊂ S, E is not empty, and E is
+      bounded above, then sup E exists in S.
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "1"
+    section: "1.10"
+
+confidence: high
+notes: >
+  Rudin 1.10. Example 1.9(a) shows that Q does not have the
+  least-upper-bound property. This is the completeness axiom for R.

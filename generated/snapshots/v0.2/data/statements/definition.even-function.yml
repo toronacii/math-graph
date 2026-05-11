@@ -1,0 +1,32 @@
+id: definition.even-function
+type: definition
+status: draft
+
+title:
+  en: Even function
+  es: Función par
+
+statement:
+  natural:
+    es: >
+      Una función f es par si para todo x en su dominio se cumple
+      f(-x) = f(x). Geométricamente, la gráfica de una función par es
+      simétrica respecto al eje y.
+    en: >
+      A function f is even if f(-x) = f(x) for every x in its domain.
+      Geometrically, the graph of an even function is symmetric about the
+      y-axis.
+  latex: |
+    f(-x) = f(x) \quad \forall x \in D
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.1"
+
+confidence: medium
+notes: >
+  Stewart introduces even and odd functions in section 1.1 alongside
+  symmetry properties.

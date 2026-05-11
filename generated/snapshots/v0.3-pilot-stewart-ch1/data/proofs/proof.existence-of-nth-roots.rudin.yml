@@ -1,0 +1,26 @@
+id: proof.existence-of-nth-roots.rudin
+type: proof
+status: draft
+
+proves: theorem.existence-of-nth-roots
+
+uses:
+  - theorem.existence-of-reals
+  - definition.supremum
+  - definition.least-upper-bound-property
+  - proposition.ordered-field-properties
+
+style: contradiction
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "1"
+    section: "1.21"
+
+confidence: high
+notes: >
+  Let E = {t > 0 : t^n < x}, y = sup E. Show y^n < x leads to
+  (y+h)^n < x for small h (contradicting sup), and y^n > x leads
+  to y-k being a smaller upper bound (contradicting least).
+  Uses the identity b^n - a^n = (b-a)(b^{n-1} + ... + a^{n-1}).

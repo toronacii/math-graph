@@ -1,0 +1,42 @@
+id: theorem.fermat-theorem
+type: theorem
+status: draft
+
+title:
+  en: Fermat's Theorem
+  es: Teorema de Fermat
+
+statement:
+  natural:
+    es: >
+      Si f tiene un máximo o mínimo local en c y f'(c) existe,
+      entonces f'(c) = 0.
+    en: >
+      If f has a local maximum or minimum at c, and f'(c) exists,
+      then f'(c) = 0.
+  latex: |
+    f \text{ has local extremum at } c \;\wedge\; f'(c) \text{ exists}
+    \;\Rightarrow\; f'(c) = 0
+
+proved_by:
+  - proof.fermat-theorem.stewart
+  - proof.fermat-theorem.rudin
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "4"
+    section: "4.1"
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "5"
+    section: "5.8"
+
+confidence: high
+notes: >
+  Stewart proves this by analyzing one-sided limits of the
+  difference quotient at a local maximum. Rudin (5.8) gives the
+  same proof: left-hand quotient >= 0 and right-hand quotient <= 0
+  force f'(x) = 0. The key lemma for the Mean Value Theorem.

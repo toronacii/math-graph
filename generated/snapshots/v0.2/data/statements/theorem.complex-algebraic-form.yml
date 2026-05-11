@@ -1,0 +1,28 @@
+id: theorem.complex-algebraic-form
+type: theorem
+status: draft
+
+title:
+  en: Algebraic Form of Complex Numbers
+
+statement:
+  natural:
+    en: >
+      If a and b are real, then (a, b) = a + bi.
+  latex: |
+    (a, b) = a + bi
+
+proved_by:
+  - proof.complex-algebraic-form.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "1"
+    section: "1.29"
+
+confidence: high
+notes: >
+  Rudin Theorem 1.29. Bridges ordered-pair definition with
+  classical notation.

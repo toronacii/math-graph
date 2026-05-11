@@ -1,0 +1,148 @@
+# ============================================================================
+# v0.3 PROOF TEMPLATE
+# ----------------------------------------------------------------------------
+# Schema:   schema/v03.py  (SCHEMA_VERSION = "0.3.1")
+# JSON:     schema/v03.proof.schema.json
+# Docs:     docs/v0.3/04-dependency-edges.md, 05-quality-metadata.md,
+#           08-status-lifecycle.md, 09-rerun-architecture.md
+# Prompt:   schema/v03/templates/EXTRACTION_PROMPT.md
+#
+# A proof node connects ONE statement (`proves`) to the set of statements it
+# relies on (`uses` and `parts[].uses`). Proof nodes do NOT contain a full
+# formal derivation; they record the DEPENDENCY STRUCTURE plus an optional
+# informal sketch.
+# ============================================================================
+
+schema_version: "0.3.1"
+id: proof.example.rudin                # MUST match file name; format:
+                                       #   proof.<statement-name>.<source-or-style>
+type: proof
+status: extracted                       # see docs/v0.3/08-status-lifecycle.md
+
+# The statement this proof establishes. MUST be an existing statement id.
+proves: theorem.example
+
+# Optional proof-style hint. Free-form. Common values:
+# direct | contradiction | induction | construction | computational |
+# diagram-chase | probabilistic.
+style: direct
+
+# ----- USES (proof-edge dependencies, see docs/v0.3/04-dependency-edges.md)
+# STRUCTURED edges, NOT a flat list of strings (the v0.2 pathology).
+# Each entry:
+#   id          -> a STATEMENT id (proofs are rejected; `extra=forbid`)
+#   role        -> what KIND of usage this is:
+#                  essential    - the proof would fail without it
+#                  background   - context; proof could be reframed without it
+#                  notation     - supplies only symbols / vocabulary
+#                  existence    - supplies an existence/completeness principle
+#                  definition   - supplies a definitional unfolding
+#                  lemma_local  - used in only one direction / case
+#                  implicit     - implicitly imported (foundational / convention)
+#   confidence  -> low | medium | high  (REQUIRED; default 'high' if certain)
+#   implicit    -> true if the dependency was INFERRED (author did not cite it)
+#                  rather than literally cited in the proof text. Distinct
+#                  from `role: implicit`; this flag is metadata about the
+#                  edge's PROVENANCE, not its mathematical role.
+#   locality    -> optional name of the proof part/case where used
+#                  (typically left empty here and populated via `parts[]`).
+#   notes       -> free-form
+#
+# COMPLETENESS RULE: prefer SLIGHTLY OVER-INCLUSIVE `uses` with explicit
+# `confidence: medium` over an under-inclusive list with `confidence: high`.
+# `dependency_confidence` in the `quality` block tracks list completeness.
+uses:
+  - id: theorem.continuous-image-connected
+    role: essential
+    confidence: high
+    implicit: false
+  - id: definition.metric-space
+    role: notation
+    confidence: high
+    implicit: true
+    notes: imported by ambient context
+
+# ----- PARTS (optional, see docs/v0.3/04-dependency-edges.md §Parts) -------
+# Use ONLY when the proof has clearly separable sub-arguments worth pinning
+# dependencies to (e.g., "forward" vs "converse", multiple cases, an explicit
+# construction step). Otherwise omit `parts` entirely.
+#
+# kind: direction | case | subclaim | construction | reduction
+# `uses` within a part follows the same schema as top-level `uses`. If you
+# use `parts`, you MAY keep top-level `uses` empty and put everything inside
+# the parts; the SQLite builder records the part name as `locality` so both
+# styles coexist cleanly.
+parts:
+  - name: forward
+    kind: direction
+    description: Showing existence of c.
+    uses:
+      - id: theorem.connected-subsets-of-r
+        role: essential
+        confidence: high
+  - name: converse
+    kind: direction
+    description: Uniqueness up to ordering.
+    uses: []
+
+# ----- SOURCES -------------------------------------------------------------
+# Identical schema to the statement template. Cite EVERY source that
+# contributes a version of this proof. theorem_label, page, section are all
+# desirable for locator precision. See EXTRACTION_PROMPT.md
+# §"Source locator requirements".
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    year: 1976
+    chapter: "4"
+    section: "4.23"
+    theorem_label: "Theorem 4.23"
+    page: "93"
+    source_language: en
+
+# ----- SKETCH (optional) ---------------------------------------------------
+# Multilingual informal proof outline. Same originality / translation rules
+# as `statement.natural`: exactly one `is_original: true` entry, in the
+# language declared by the proof's source.
+# Keep it COMPACT — sketches exist to give reviewers context, not to encode
+# the formal argument.
+sketch:
+  en:
+    text: >
+      Apply Theorem 4.22 then Theorem 2.47.
+    is_original: true
+    origin: human
+    review_status: unreviewed
+
+# ----- QUALITY (see docs/v0.3/05-quality-metadata.md) ----------------------
+# Six axes — same shape as statements; `null` = unassessed.
+# Most relevant axes for proofs:
+#   extraction_confidence       -> confidence in the parse
+#   dependency_confidence       -> is `uses` COMPLETE? (this is the key axis)
+#   semantic_confidence         -> does the proof argument actually establish `proves`?
+#   source_alignment_confidence -> does this proof match the cited source?
+# `translation_confidence` and `latex_confidence` rarely apply to proofs;
+# leave them null unless `sketch` is translated or the proof body uses LaTeX.
+quality:
+  extraction_confidence: high
+  dependency_confidence: medium
+  semantic_confidence: high
+  source_alignment_confidence: high
+  # translation_confidence: medium       # set if sketch has non-original translations
+  # latex_confidence: high               # set if proof body contains LaTeX
+
+# ----- PROVENANCE ----------------------------------------------------------
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3-2026-06-01
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-06-01"
+  derived_from: []
+
+# Free-form notes. Use to flag:
+#   * implicit completeness imports
+#   * known gaps in `uses`
+#   * audit-time open questions
+notes: >
+  Free-form notes for reviewers. List any implicit completeness imports here.

@@ -1,0 +1,25 @@
+id: proof.chain-rule.stewart
+type: proof
+status: draft
+
+proves: theorem.chain-rule
+
+uses:
+  - definition.derivative-function
+  - theorem.differentiable-implies-continuous
+  - theorem.limit-laws
+
+style: direct
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.4"
+
+confidence: high
+notes: >
+  Define ε(Δu) so that Δy = f'(u)Δu + ε·Δu where ε→0 as Δu→0
+  (and ε(0) = 0). Then Δy/Δx = f'(u) · Δu/Δx + ε · Δu/Δx.
+  As Δx→0, Δu→0 (by continuity of g), so ε→0, giving
+  dy/dx = f'(u) · du/dx.

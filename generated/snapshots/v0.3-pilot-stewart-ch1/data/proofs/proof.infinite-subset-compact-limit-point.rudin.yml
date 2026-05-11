@@ -1,0 +1,21 @@
+id: proof.infinite-subset-compact-limit-point.rudin
+type: proof
+status: draft
+
+proves: theorem.infinite-subset-compact-limit-point
+
+uses:
+  - definition.compact-set
+  - definition.neighborhood-limit-point-open-closed
+
+style: contradiction
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "2"
+    section: "2.37"
+
+confidence: high
+notes: >
+  If no point of K is a limit point of E, each q ∈ K has Vq with at most one point of E. No finite subcollection covers E ⊂ K — contradicts compactness.

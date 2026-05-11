@@ -1,0 +1,31 @@
+id: definition.vertical-asymptote
+type: definition
+status: draft
+
+title:
+  en: Vertical asymptote
+  es: Asíntota vertical
+
+statement:
+  natural:
+    es: >
+      La recta vertical x = a se llama asíntota vertical de la curva
+      y = f(x) si se cumple al menos una de las siguientes condiciones:
+      lim(x→a) f(x) = ∞, lim(x→a) f(x) = -∞,
+      lim(x→a⁺) f(x) = ∞, lim(x→a⁺) f(x) = -∞,
+      lim(x→a⁻) f(x) = ∞, lim(x→a⁻) f(x) = -∞.
+    en: >
+      The vertical line x = a is called a vertical asymptote of the
+      curve y = f(x) if at least one of the following holds:
+      lim(x→a) f(x) = ∞, lim(x→a) f(x) = -∞,
+      lim(x→a⁺) f(x) = ∞, lim(x→a⁺) f(x) = -∞,
+      lim(x→a⁻) f(x) = ∞, lim(x→a⁻) f(x) = -∞.
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.2"
+
+confidence: medium

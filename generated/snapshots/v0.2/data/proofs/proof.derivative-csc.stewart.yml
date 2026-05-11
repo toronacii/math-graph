@@ -1,0 +1,23 @@
+id: proof.derivative-csc.stewart
+type: proof
+status: draft
+
+proves: theorem.derivative-csc
+
+uses:
+  - theorem.derivative-sin
+  - theorem.quotient-rule
+
+style: direct
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.3"
+
+confidence: high
+notes: >
+  csc x = 1/sin x. By the quotient rule:
+  d/dx(csc x) = [0 · sin x - 1 · cos x] / sin²x
+  = -cos x / sin²x = -(1/sin x)(cos x/sin x) = -csc x cot x.

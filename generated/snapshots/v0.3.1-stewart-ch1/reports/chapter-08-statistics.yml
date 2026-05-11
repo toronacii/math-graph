@@ -1,0 +1,78 @@
+chapter: "8"
+chapter_title: Further Applications of Integration
+source:
+  work: "Calculo de una variable — Trascendentes tempranas"
+  author: James Stewart
+  edition: "7"
+  language: es
+  sections_processed:
+    - "8.1"
+    - "8.2"
+
+extraction_date: "2026-05-10"
+validation_status: pass
+
+cumulative_statistics:
+  total_nodes: 222
+  total_edges: 243
+
+  nodes_by_type:
+    definition: 82
+    proposition: 17
+    theorem: 48
+    corollary: 5
+    lemma: 0
+    axiom: 0
+    conjecture: 0
+    proof: 70
+
+  nodes_by_kind:
+    statement: 152
+    proof: 70
+
+  edges_by_relation:
+    uses: 173
+    proves: 70
+
+  proofs_by_style:
+    direct: 60
+    epsilon-delta: 4
+    assumed: 4
+    algebraic: 1
+    geometric: 1
+
+  proofs_by_confidence:
+    high: 46
+    medium: 19
+    low: 5
+
+  root_nodes: 82
+  isolated_nodes: 43
+  connected_components: 45
+  connected_component_sizes:
+    - 176
+    - 3
+    - 1
+    - 1
+    - 1
+
+  graph_density: 0.0050
+  average_degree: 2.19
+
+chapter_delta:
+  new_nodes: 2
+  new_edges: 0
+  new_definitions: 2
+  new_propositions: 0
+  new_theorems: 0
+  new_corollaries: 0
+  new_proofs: 0
+  reclassifications: 0
+
+sections_skipped:
+  - section: "8.3"
+    reason: "Applications to physics and engineering — no new math entities"
+  - section: "8.4"
+    reason: "Applications to economics and biology — no new math entities"
+  - section: "8.5"
+    reason: "Probability — introduces probability concepts outside core calculus scope"

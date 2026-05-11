@@ -1,0 +1,20 @@
+id: proof.net-change-theorem.stewart
+type: proof
+status: draft
+
+proves: theorem.net-change-theorem
+
+uses:
+  - theorem.ftc-part2
+
+style: direct
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "5"
+    section: "5.4"
+
+confidence: high
+notes: >
+  Direct application of FTC Part 2 with f = F'.

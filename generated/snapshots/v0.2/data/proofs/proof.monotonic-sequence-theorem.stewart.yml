@@ -1,0 +1,26 @@
+id: proof.monotonic-sequence-theorem.stewart
+type: proof
+status: draft
+
+proves: theorem.monotonic-sequence-theorem
+
+uses:
+  - definition.sequence
+
+style: assumed
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "11"
+    section: "11.1"
+
+confidence: low
+notes: >
+  Stewart states this theorem relies on the Completeness Axiom
+  (every nonempty bounded above set of reals has a least upper
+  bound). He does not provide a formal proof. The argument is:
+  if {aₙ} is increasing and bounded above, let L = sup{aₙ}.
+  Then for any ε > 0, L - ε is not an upper bound, so there
+  exists N with aₙ > L - ε for n > N. Since aₙ ≤ L, we have
+  |aₙ - L| < ε.

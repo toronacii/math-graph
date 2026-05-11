@@ -1,0 +1,32 @@
+id: theorem.limit-sinx-over-x
+type: theorem
+status: draft
+
+title:
+  en: Limit of sin(x)/x as x approaches 0
+  es: Límite de sen(x)/x cuando x tiende a 0
+
+statement:
+  natural:
+    es: >
+      El límite de sen(x)/x cuando x tiende a 0 es igual a 1.
+    en: >
+      The limit of sin(x)/x as x approaches 0 equals 1.
+  latex: |
+    \lim_{x \to 0} \frac{\sin x}{x} = 1
+
+proved_by:
+  - proof.limit-sinx-over-x.stewart
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.3"
+
+confidence: medium
+notes: >
+  Stewart proves this using the squeeze theorem with a geometric
+  argument involving areas of sectors and triangles in the unit circle.
+  This result is essential for differentiating trigonometric functions.

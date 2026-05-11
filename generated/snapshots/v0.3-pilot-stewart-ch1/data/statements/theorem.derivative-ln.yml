@@ -1,0 +1,31 @@
+id: theorem.derivative-ln
+type: theorem
+status: draft
+
+title:
+  en: Derivative of the natural logarithm
+  es: Derivada del logaritmo natural
+
+statement:
+  natural:
+    es: >
+      d/dx(ln x) = 1/x, para x > 0.
+    en: >
+      d/dx(ln x) = 1/x, for x > 0.
+  latex: |
+    \frac{d}{dx}(\ln x) = \frac{1}{x}
+
+proved_by:
+  - proof.derivative-ln.stewart
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.6"
+
+confidence: high
+notes: >
+  Derived via implicit differentiation: if y = ln x then e^y = x,
+  so e^y · dy/dx = 1, giving dy/dx = 1/e^y = 1/x.

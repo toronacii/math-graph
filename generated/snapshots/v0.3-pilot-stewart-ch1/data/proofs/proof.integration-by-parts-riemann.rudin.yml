@@ -1,0 +1,23 @@
+id: proof.integration-by-parts-riemann.rudin
+type: proof
+status: draft
+
+proves: theorem.integration-by-parts-riemann
+
+uses:
+  - theorem.fundamental-theorem-of-calculus
+  - theorem.product-absolute-value-integrable
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "6"
+    section: "6.22"
+
+confidence: high
+notes: >
+  Put H(x) = F(x)G(x). Then H' = F'G + FG' = fG + Fg. Since f, g in R
+  and F, G continuous (hence bounded), fG and Fg are in R by Theorem 6.13.
+  Apply Theorem 6.21 to H.

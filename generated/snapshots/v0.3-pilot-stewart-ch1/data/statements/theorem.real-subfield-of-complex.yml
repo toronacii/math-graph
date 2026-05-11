@@ -1,0 +1,29 @@
+id: theorem.real-subfield-of-complex
+type: theorem
+status: draft
+
+title:
+  en: Real Numbers as Subfield of Complex Numbers
+
+statement:
+  natural:
+    en: >
+      For any real numbers a and b, (a, 0) + (b, 0) = (a + b, 0) and
+      (a, 0)(b, 0) = (ab, 0). Hence the complex numbers of the form
+      (a, 0) have the same arithmetic properties as the corresponding
+      real numbers a.
+
+proved_by:
+  - proof.real-subfield-of-complex.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "1"
+    section: "1.26"
+
+confidence: high
+notes: >
+  Rudin Theorem 1.26. Identifies (a, 0) with a, making R a
+  subfield of C.

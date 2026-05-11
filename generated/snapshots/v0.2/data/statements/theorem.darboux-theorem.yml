@@ -1,0 +1,35 @@
+id: theorem.darboux-theorem
+type: theorem
+status: draft
+
+title:
+  en: Darboux's Theorem (Intermediate Value Property of Derivatives)
+
+statement:
+  natural:
+    en: >
+      Suppose f is a real differentiable function on [a, b] and suppose
+      f'(a) < lambda < f'(b). Then there is a point x in (a, b) such
+      that f'(x) = lambda. A similar result holds if f'(a) > f'(b).
+  latex: |
+    f'(a) < \lambda < f'(b)
+    \;\Rightarrow\;
+    \exists\, x \in (a,b) : f'(x) = \lambda
+
+proved_by:
+  - proof.darboux-theorem.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "5"
+    section: "5.12"
+
+confidence: high
+notes: >
+  This theorem shows that derivatives, even when discontinuous,
+  satisfy the intermediate value property. The proof considers
+  g(t) = f(t) - lambda*t and applies the extreme value theorem
+  (4.16) and Fermat's theorem (5.8). Rudin labels this result
+  as Theorem 5.12; it is classically known as Darboux's theorem.

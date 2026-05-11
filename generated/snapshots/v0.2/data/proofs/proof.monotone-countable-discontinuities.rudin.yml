@@ -1,0 +1,22 @@
+id: proof.monotone-countable-discontinuities.rudin
+type: proof
+
+proves: theorem.monotone-countable-discontinuities
+
+uses:
+  - theorem.monotone-one-sided-limits
+  - definition.finite-countable-sets
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "4"
+    section: "4.30"
+
+confidence: high
+notes: >
+  For f increasing, at each discontinuity x associate a rational r(x)
+  with f(x−) < r(x) < f(x+). Since x₁ < x₂ implies f(x₁+) ≤ f(x₂−),
+  we get r(x₁) ≠ r(x₂). This is a 1-1 map from discontinuities into Q,
+  hence the set is at most countable.

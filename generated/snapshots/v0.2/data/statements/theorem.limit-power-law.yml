@@ -1,0 +1,33 @@
+id: theorem.limit-power-law
+type: theorem
+status: draft
+
+title:
+  en: Power law for limits
+  es: Ley de la potencia para límites
+
+statement:
+  natural:
+    es: >
+      Si lim(x→a) f(x) existe y n es un entero positivo, entonces
+      lim(x→a) [f(x)]ⁿ = [lim(x→a) f(x)]ⁿ.
+    en: >
+      If lim(x→a) f(x) exists and n is a positive integer, then
+      lim(x→a) [f(x)]ⁿ = [lim(x→a) f(x)]ⁿ.
+  latex: |
+    \lim_{x \to a} [f(x)]^n = \left[\lim_{x \to a} f(x)\right]^n
+
+proved_by:
+  - proof.limit-power-law.stewart
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.3"
+
+confidence: medium
+notes: >
+  Follows from repeated application of the product law (law 4 of
+  the limit laws).

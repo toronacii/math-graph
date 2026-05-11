@@ -1,0 +1,36 @@
+id: proposition.local-extremum-at-critical
+type: proposition
+status: draft
+
+title:
+  en: Local extrema occur at critical numbers
+  es: Los extremos locales ocurren en números críticos
+
+statement:
+  natural:
+    es: >
+      Si f tiene un extremo local en c, entonces c es un número
+      crítico de f.
+    en: >
+      If f has a local extremum at c, then c is a critical number
+      of f.
+  latex: |
+    f \text{ has local extremum at } c
+    \;\Rightarrow\;
+    c \text{ is a critical number of } f
+
+proved_by:
+  - proof.local-extremum-at-critical.stewart
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "4"
+    section: "4.1"
+
+confidence: high
+notes: >
+  Direct consequence of Fermat's theorem: if f'(c) exists then
+  f'(c) = 0, and if f'(c) does not exist, c is still a critical
+  number by definition.

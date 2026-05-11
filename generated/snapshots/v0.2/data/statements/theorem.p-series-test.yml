@@ -1,0 +1,28 @@
+id: theorem.p-series-test
+type: theorem
+status: draft
+
+title:
+  en: p-Series Test
+
+statement:
+  natural:
+    en: >
+      The series Σ1/n^p converges if p > 1 and diverges if p ≤ 1.
+
+  latex: |
+    \sum \frac{1}{n^p} \text{ converges} \iff p > 1
+
+proved_by:
+  - proof.p-series-test.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.28"
+
+confidence: high
+notes: >
+  Theorem 3.28 from Rudin.

@@ -1,0 +1,31 @@
+id: definition.left-hand-limit
+type: definition
+status: draft
+
+title:
+  en: Left-hand limit
+  es: Límite lateral izquierdo
+
+statement:
+  natural:
+    es: >
+      Se escribe lim(x→a⁻) f(x) = L y se dice que el límite lateral
+      izquierdo de f(x) cuando x tiende a a es L si es posible hacer
+      que los valores de f(x) estén arbitrariamente cerca de L con sólo
+      tomar x suficientemente cerca de a por la izquierda (x < a).
+    en: >
+      We write lim(x→a⁻) f(x) = L and say the left-hand limit of f(x)
+      as x approaches a equals L if we can make the values of f(x)
+      arbitrarily close to L by taking x sufficiently close to a with
+      x < a.
+  latex: |
+    \lim_{x \to a^-} f(x) = L
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.2"
+
+confidence: medium

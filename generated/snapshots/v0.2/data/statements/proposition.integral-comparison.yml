@@ -1,0 +1,39 @@
+id: proposition.integral-comparison
+type: proposition
+status: draft
+
+title:
+  en: Comparison properties of the integral
+  es: Propiedades de comparación de la integral
+
+statement:
+  natural:
+    es: >
+      Si f y g son integrables en [a, b]:
+      1. Si f(x) ≥ 0 para a ≤ x ≤ b, entonces ∫_a^b f(x) dx ≥ 0.
+      2. Si f(x) ≥ g(x) para a ≤ x ≤ b, entonces
+      ∫_a^b f(x) dx ≥ ∫_a^b g(x) dx.
+      3. Si m ≤ f(x) ≤ M para a ≤ x ≤ b, entonces
+      m(b-a) ≤ ∫_a^b f(x) dx ≤ M(b-a).
+    en: >
+      If f and g are integrable on [a, b]:
+      1. If f(x) ≥ 0 for a ≤ x ≤ b, then ∫_a^b f(x) dx ≥ 0.
+      2. If f(x) ≥ g(x) for a ≤ x ≤ b, then
+      ∫_a^b f(x) dx ≥ ∫_a^b g(x) dx.
+      3. If m ≤ f(x) ≤ M for a ≤ x ≤ b, then
+      m(b-a) ≤ ∫_a^b f(x) dx ≤ M(b-a).
+
+proved_by:
+  - proof.integral-comparison.stewart
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "5"
+    section: "5.2"
+
+confidence: high
+notes: >
+  Follow from the definition: non-negative integrands produce
+  non-negative Riemann sums, and limits preserve inequalities.

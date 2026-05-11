@@ -1,0 +1,31 @@
+id: definition.continuity-metric
+type: definition
+status: draft
+
+title:
+  en: Continuity at a Point (Metric Spaces)
+
+statement:
+  natural:
+    en: >
+      Suppose X and Y are metric spaces, E ⊂ X, p ∈ E, and f maps E
+      into Y. Then f is continuous at p if for every ε > 0 there exists
+      δ > 0 such that d_Y(f(x), f(p)) < ε for all x ∈ E with
+      d_X(x, p) < δ. If f is continuous at every point of E, then f is
+      continuous on E.
+  latex: |
+    \forall \varepsilon > 0,\; \exists\, \delta > 0 : d_X(x,p) < \delta,\; x \in E
+    \;\Rightarrow\; d_Y(f(x), f(p)) < \varepsilon
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "4"
+    section: "4.5"
+
+confidence: high
+notes: >
+  Rudin Definition 4.5. Note that f must be defined at p. If p is an
+  isolated point of E, every function on E is continuous at p. Strictly
+  more general than Stewart's definition.continuity-at-point.

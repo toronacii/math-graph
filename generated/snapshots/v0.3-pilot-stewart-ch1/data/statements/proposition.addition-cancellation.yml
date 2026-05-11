@@ -1,0 +1,28 @@
+id: proposition.addition-cancellation
+type: proposition
+status: draft
+
+title:
+  en: Consequences of Addition Axioms
+
+statement:
+  natural:
+    en: >
+      The axioms for addition imply: (a) If x + y = x + z then y = z.
+      (b) If x + y = x then y = 0. (c) If x + y = 0 then y = -x.
+      (d) -(-x) = x.
+
+proved_by:
+  - proof.addition-cancellation.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "1"
+    section: "1.14"
+
+confidence: high
+notes: >
+  Rudin Proposition 1.14. (b) asserts uniqueness of additive identity,
+  (c) asserts uniqueness of additive inverse.

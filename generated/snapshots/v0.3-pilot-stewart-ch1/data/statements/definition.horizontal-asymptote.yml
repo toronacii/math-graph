@@ -1,0 +1,25 @@
+id: definition.horizontal-asymptote
+type: definition
+status: draft
+
+title:
+  en: Horizontal asymptote
+  es: Asíntota horizontal
+
+statement:
+  natural:
+    es: >
+      La recta y = L se llama asíntota horizontal de la curva y = f(x)
+      si lim(x→∞) f(x) = L o lim(x→-∞) f(x) = L.
+    en: >
+      The line y = L is called a horizontal asymptote of the curve
+      y = f(x) if lim(x→∞) f(x) = L or lim(x→-∞) f(x) = L.
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.6"
+
+confidence: medium

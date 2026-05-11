@@ -1,0 +1,37 @@
+id: corollary.equal-derivatives-differ-by-constant
+type: corollary
+status: draft
+
+title:
+  en: Equal derivatives differ by a constant
+  es: Derivadas iguales difieren en una constante
+
+statement:
+  natural:
+    es: >
+      Si f'(x) = g'(x) para toda x en un intervalo (a, b), entonces
+      f - g es constante en (a, b); es decir, f(x) = g(x) + c para
+      alguna constante c.
+    en: >
+      If f'(x) = g'(x) for all x in an interval (a, b), then
+      f - g is constant on (a, b); that is, f(x) = g(x) + c for
+      some constant c.
+  latex: |
+    f'(x) = g'(x) \;\forall\, x \in (a,b)
+    \;\Rightarrow\;
+    f(x) = g(x) + c
+
+proved_by:
+  - proof.equal-derivatives-differ-by-constant.stewart
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "4"
+    section: "4.2"
+
+confidence: high
+notes: >
+  Apply the zero-derivative-implies-constant corollary to
+  h(x) = f(x) - g(x).

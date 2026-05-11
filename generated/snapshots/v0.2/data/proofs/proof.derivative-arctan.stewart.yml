@@ -1,0 +1,24 @@
+id: proof.derivative-arctan.stewart
+type: proof
+status: draft
+
+proves: theorem.derivative-arctan
+
+uses:
+  - definition.inverse-function
+  - theorem.derivative-tan
+  - theorem.chain-rule
+
+style: direct
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.5"
+
+confidence: high
+notes: >
+  Let y = tan⁻¹ x, so tan y = x. Differentiate implicitly:
+  sec²y · dy/dx = 1, so dy/dx = 1/sec²y = cos²y.
+  Since 1 + tan²y = sec²y, we get dy/dx = 1/(1 + tan²y) = 1/(1 + x²).

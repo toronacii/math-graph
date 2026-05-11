@@ -1,0 +1,229 @@
+{
+  "$defs": {
+    "Source": {
+      "additionalProperties": false,
+      "description": "Bibliographic locator for a statement or proof.",
+      "properties": {
+        "work": {
+          "minLength": 1,
+          "title": "Work",
+          "type": "string"
+        },
+        "author": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Author"
+        },
+        "edition": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Edition"
+        },
+        "chapter": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Chapter"
+        },
+        "section": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Section"
+        },
+        "page": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Page"
+        },
+        "locator": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Locator"
+        },
+        "url": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Url"
+        }
+      },
+      "required": [
+        "work"
+      ],
+      "title": "Source",
+      "type": "object"
+    },
+    "StatementBody": {
+      "additionalProperties": false,
+      "properties": {
+        "natural": {
+          "patternProperties": {
+            "^[a-z]{2}(-[A-Z]{2})?$": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "title": "Natural",
+          "type": "object"
+        },
+        "latex": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Latex"
+        }
+      },
+      "title": "StatementBody",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "minLength": 1,
+      "title": "Id",
+      "type": "string"
+    },
+    "type": {
+      "enum": [
+        "axiom",
+        "definition",
+        "lemma",
+        "proposition",
+        "theorem",
+        "corollary",
+        "conjecture"
+      ],
+      "title": "Type",
+      "type": "string"
+    },
+    "status": {
+      "default": "draft",
+      "enum": [
+        "draft",
+        "reviewed",
+        "published"
+      ],
+      "title": "Status",
+      "type": "string"
+    },
+    "title": {
+      "patternProperties": {
+        "^[a-z]{2}(-[A-Z]{2})?$": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "title": "Title",
+      "type": "object"
+    },
+    "statement": {
+      "$ref": "#/$defs/StatementBody"
+    },
+    "proved_by": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "title": "Proved By",
+      "type": "array"
+    },
+    "sources": {
+      "items": {
+        "$ref": "#/$defs/Source"
+      },
+      "title": "Sources",
+      "type": "array"
+    },
+    "confidence": {
+      "anyOf": [
+        {
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ],
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Confidence"
+    },
+    "notes": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Notes"
+    }
+  },
+  "required": [
+    "id",
+    "type",
+    "title",
+    "statement"
+  ],
+  "title": "Statement",
+  "type": "object"
+}

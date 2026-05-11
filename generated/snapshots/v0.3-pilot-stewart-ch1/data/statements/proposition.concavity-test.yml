@@ -1,0 +1,37 @@
+id: proposition.concavity-test
+type: proposition
+status: draft
+
+title:
+  en: Concavity Test
+  es: Prueba de concavidad
+
+statement:
+  natural:
+    es: >
+      (a) Si f''(x) > 0 para toda x en I, entonces la gráfica de f
+      es cóncava hacia arriba en I. (b) Si f''(x) < 0 para toda x
+      en I, entonces la gráfica de f es cóncava hacia abajo en I.
+    en: >
+      (a) If f''(x) > 0 for all x in I, then the graph of f is
+      concave upward on I. (b) If f''(x) < 0 for all x in I, then
+      the graph of f is concave downward on I.
+  latex: |
+    f''(x) > 0 \;\Rightarrow\; f \text{ concave up}
+    \qquad
+    f''(x) < 0 \;\Rightarrow\; f \text{ concave down}
+
+proved_by:
+  - proof.concavity-test.stewart
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "4"
+    section: "4.3"
+
+confidence: high
+notes: >
+  f'' > 0 means f' is increasing, so the slope of the tangent
+  line is increasing, hence the curve lies above its tangents.

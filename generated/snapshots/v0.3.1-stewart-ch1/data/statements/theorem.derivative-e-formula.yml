@@ -1,0 +1,33 @@
+id: theorem.derivative-e-formula
+type: theorem
+status: draft
+
+title:
+  en: The number e as a limit
+  es: El número e como límite
+
+statement:
+  natural:
+    es: >
+      e = lim(x→0) (1 + x)^{1/x}. Esta fórmula es consecuencia
+      de la derivada de ln x evaluada en x = 1.
+    en: >
+      e = lim(x→0) (1 + x)^{1/x}. This formula is a consequence
+      of the derivative of ln x evaluated at x = 1.
+  latex: |
+    e = \lim_{x \to 0}(1 + x)^{1/x}
+
+proved_by:
+  - proof.derivative-e-formula.stewart
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.6"
+
+confidence: high
+notes: >
+  Stewart derives this from ln'(1) = 1: lim(x→0) [ln(1+x)]/x = 1,
+  so lim(x→0) ln(1+x)^{1/x} = 1, hence (1+x)^{1/x} → e.

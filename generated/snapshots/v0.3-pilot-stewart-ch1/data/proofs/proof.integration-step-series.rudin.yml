@@ -1,0 +1,26 @@
+id: proof.integration-step-series.rudin
+type: proof
+status: draft
+
+proves: theorem.integration-step-series
+
+uses:
+  - theorem.integration-step-function
+  - theorem.riemann-stieltjes-integral-properties
+  - theorem.comparison-test-series
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "6"
+    section: "6.16"
+
+confidence: high
+notes: >
+  Split alpha = alpha_1 + alpha_2 where alpha_1 is the first N terms
+  and alpha_2 is the tail. By Theorems 6.12 and 6.15,
+  integral f d alpha_1 = sum_{n=1}^N c_n f(s_n). Since
+  alpha_2(b) - alpha_2(a) < epsilon, integral f d alpha_2 is small.
+  Letting N -> infinity gives the result.

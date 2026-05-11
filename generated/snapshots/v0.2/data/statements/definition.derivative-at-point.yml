@@ -1,0 +1,39 @@
+id: definition.derivative-at-point
+type: definition
+status: draft
+
+title:
+  en: Derivative of a function at a point
+  es: Derivada de una función en un punto
+
+statement:
+  natural:
+    es: >
+      La derivada de una función f en un número a, denotada f'(a), es
+      f'(a) = lim(h→0) (f(a + h) - f(a)) / h, si este límite existe.
+      Equivalentemente, f'(a) = lim(x→a) (f(x) - f(a)) / (x - a).
+    en: >
+      The derivative of a function f at a number a, denoted f'(a), is
+      f'(a) = lim(h→0) (f(a + h) - f(a)) / h, if this limit exists.
+      Equivalently, f'(a) = lim(x→a) (f(x) - f(a)) / (x - a).
+  latex: |
+    f'(a) = \lim_{h \to 0} \frac{f(a+h) - f(a)}{h}
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.7"
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "5"
+    section: "5.1"
+
+confidence: high
+notes: >
+  Stewart presents both forms of the derivative definition. The
+  tangent line slope from 2.1 is now formally identified as the
+  derivative. Rudin defines the derivative identically as
+  f'(x) = lim_{t→x} (f(t) - f(x))/(t - x) for real-valued f on [a,b].

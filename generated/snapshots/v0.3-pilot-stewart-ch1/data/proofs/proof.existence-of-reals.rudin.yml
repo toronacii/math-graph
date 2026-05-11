@@ -1,0 +1,29 @@
+id: proof.existence-of-reals.rudin
+type: proof
+status: draft
+
+proves: theorem.existence-of-reals
+
+uses:
+  - definition.field
+  - definition.ordered-field
+  - definition.least-upper-bound-property
+  - definition.rational-numbers
+  - definition.order-relation
+  - proposition.addition-cancellation
+
+style: construction
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "1"
+    section: "1.19"
+
+confidence: high
+notes: >
+  Proof via Dedekind cuts (Appendix, Steps 1-9). A cut is a proper
+  nonempty subset α of Q such that: (I) α ≠ Q, (II) if p ∈ α and
+  q < p then q ∈ α, (III) α has no largest member. Addition and
+  multiplication of cuts are defined and verified to satisfy field
+  axioms. The LUB property follows from taking unions of cuts.

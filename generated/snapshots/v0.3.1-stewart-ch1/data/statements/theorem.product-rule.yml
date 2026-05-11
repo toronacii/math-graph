@@ -1,0 +1,41 @@
+id: theorem.product-rule
+type: theorem
+status: draft
+
+title:
+  en: The Product Rule
+  es: Regla del producto
+
+statement:
+  natural:
+    es: >
+      Si f y g son funciones diferenciables, entonces
+      d/dx[f(x)g(x)] = f(x) g'(x) + g(x) f'(x).
+    en: >
+      If f and g are both differentiable functions, then
+      d/dx[f(x)g(x)] = f(x) g'(x) + g(x) f'(x).
+  latex: |
+    \frac{d}{dx}\bigl[f(x)\,g(x)\bigr] = f(x)\,g'(x) + g(x)\,f'(x)
+
+proved_by:
+  - proof.product-rule.stewart
+  - proof.product-rule.rudin
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.2"
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "5"
+    section: "5.3"
+
+confidence: high
+notes: >
+  Stewart proves this by adding and subtracting f(x+h)g(x) in the
+  difference quotient. Rudin (5.3b) uses h(t)-h(x) = f(t)[g(t)-g(x)]
+  + g(x)[f(t)-f(x)] and applies Theorem 5.2 (differentiable implies
+  continuous) and limit laws.

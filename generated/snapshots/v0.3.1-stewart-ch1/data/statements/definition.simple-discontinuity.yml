@@ -1,0 +1,28 @@
+id: definition.simple-discontinuity
+type: definition
+status: draft
+
+title:
+  en: Discontinuities of the First and Second Kind
+
+statement:
+  natural:
+    en: >
+      Let f be defined on (a, b). If f is discontinuous at a point x,
+      and if f(x+) and f(x−) both exist, then f is said to have a
+      discontinuity of the first kind (or a simple discontinuity) at x.
+      Otherwise the discontinuity is said to be of the second kind.
+  latex: |
+    \text{Simple discontinuity at } x \iff f(x+) \text{ and } f(x-) \text{ both exist}
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "4"
+    section: "4.26"
+
+confidence: high
+notes: >
+  A simple discontinuity can occur in two ways: either f(x+) ≠ f(x−)
+  (jump discontinuity), or f(x+) = f(x−) ≠ f(x) (removable discontinuity).

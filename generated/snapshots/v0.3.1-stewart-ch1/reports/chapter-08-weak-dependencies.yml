@@ -1,0 +1,121 @@
+weak_dependencies:
+
+  # All inherited from Chapter 7 — no changes
+  - proof: proof.laws-of-exponents.stewart
+    proves: proposition.laws-of-exponents
+    issue: assumed-foundational-algebra
+    confidence: low
+    style: assumed
+    chapter: "1"
+    propagates_to:
+      - proof.laws-of-logarithms.stewart
+      - proof.change-of-base-formula.stewart
+      - proof.derivative-log-base-a.stewart
+    notes: Unchanged.
+
+  - proof: proof.intermediate-value-theorem.stewart
+    proves: theorem.intermediate-value-theorem
+    issue: assumed-completeness-axiom
+    confidence: low
+    style: assumed
+    chapter: "2"
+    propagates_to:
+      - proof.mean-value-theorem-integrals.stewart
+    notes: Unchanged.
+
+  - proof: proof.limit-root-law.stewart
+    proves: theorem.limit-root-law
+    issue: incomplete-proof
+    confidence: low
+    style: epsilon-delta
+    chapter: "2"
+    propagates_to: []
+    notes: Unchanged.
+
+  - proof: proof.extreme-value-theorem.stewart
+    proves: theorem.extreme-value-theorem
+    issue: assumed-completeness-axiom
+    confidence: low
+    style: assumed
+    chapter: "4"
+    propagates_to:
+      - proof.rolles-theorem.stewart
+      - proof.mean-value-theorem.stewart
+      - proof.zero-derivative-constant.stewart
+      - proof.equal-derivatives-differ-by-constant.stewart
+      - proof.increasing-decreasing-test.stewart
+      - proof.first-derivative-test.stewart
+      - proof.concavity-test.stewart
+      - proof.second-derivative-test.stewart
+      - proof.lhopitals-rule.stewart
+      - proof.general-antiderivative.stewart
+      - proof.ftc-part2.stewart
+      - proof.net-change-theorem.stewart
+      - proof.substitution-rule-definite.stewart
+      - proof.integrals-symmetric-functions.stewart
+      - proof.mean-value-theorem-integrals.stewart
+      - proof.integration-by-parts-definite.stewart
+    notes: Unchanged from Chapter 7.
+
+  - proof: proof.lhopitals-rule.stewart
+    proves: theorem.lhopitals-rule
+    issue: partial-proof
+    confidence: medium
+    style: direct
+    chapter: "4"
+    propagates_to: []
+    notes: Unchanged.
+
+  - proof: proof.integrability-of-continuous-functions.stewart
+    proves: theorem.integrability-of-continuous-functions
+    issue: assumed-uniform-continuity
+    confidence: low
+    style: assumed
+    chapter: "5"
+    propagates_to:
+      - proof.integral-properties.stewart
+      - proof.integral-comparison.stewart
+      - proof.ftc-part1.stewart
+    notes: Unchanged.
+
+  - proof: proof.comparison-theorem-integrals.stewart
+    proves: theorem.comparison-theorem-integrals
+    issue: relies-on-monotone-convergence
+    confidence: medium
+    style: direct
+    chapter: "7"
+    propagates_to: []
+    notes: Unchanged.
+
+implicit_algebraic_imports:
+  # All inherited, unchanged from Chapter 7
+  - concept: Real number field axioms
+    chapter: "1-2"
+  - concept: Precalculus trigonometry
+    chapter: "1-3"
+  - concept: Triangle inequality
+    chapter: "2"
+  - concept: Archimedean property
+    chapter: "2"
+  - concept: Binomial theorem
+    chapter: "3"
+  - concept: Pythagorean identity
+    chapter: "3"
+  - concept: Cauchy Mean Value Theorem
+    chapter: "4"
+  - concept: Summation identities and properties
+    chapter: "5"
+  - concept: Monotone convergence (bounded monotone sequences converge)
+    chapter: "7"
+
+epistemic_debt_summary:
+  total_weak_proofs: 5
+  total_partial_proofs: 3
+  total_inherited_weak: 5
+  total_implicit_imports: 9
+  affected_chain_depth: 10
+  new_weak_since_chapter_7: 0
+  new_partial_since_chapter_7: 0
+  new_implicit_since_chapter_7: 0
+  critical_debt: >
+    No new epistemic debt. Chapter 8 added only isolated definitions.

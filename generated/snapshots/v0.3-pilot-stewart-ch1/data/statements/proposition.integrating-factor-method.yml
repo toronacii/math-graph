@@ -1,0 +1,40 @@
+id: proposition.integrating-factor-method
+type: proposition
+status: draft
+
+title:
+  en: Integrating factor method
+  es: Método del factor integrante
+
+statement:
+  natural:
+    es: >
+      La ecuación diferencial lineal dy/dx + P(x)y = Q(x) se resuelve
+      multiplicando ambos lados por el factor integrante
+      I(x) = e^{∫P(x)dx}. La solución es
+      y = (1/I(x)) ∫ I(x)Q(x) dx.
+    en: >
+      The linear differential equation dy/dx + P(x)y = Q(x) is solved
+      by multiplying both sides by the integrating factor
+      I(x) = e^{∫P(x)dx}. The solution is
+      y = (1/I(x)) ∫ I(x)Q(x) dx.
+  latex: |
+    I(x) = e^{\int P(x)\,dx}
+    \qquad
+    y = \frac{1}{I(x)}\int I(x)\,Q(x)\,dx
+
+proved_by:
+  - proof.integrating-factor-method.stewart
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "9"
+    section: "9.5"
+
+confidence: high
+notes: >
+  The integrating factor transforms the left side into the derivative
+  of a product: d/dx[I(x)y] = I(x)Q(x). This is then integrated
+  using the FTC.

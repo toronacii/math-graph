@@ -1,0 +1,25 @@
+id: theorem.continuity-arithmetic-operations
+type: theorem
+status: draft
+
+title:
+  en: Continuity of Arithmetic Operations
+
+statement:
+  natural:
+    en: >
+      Let f and g be complex continuous functions on a metric space X.
+      Then f + g, fg, and f/g are continuous on X. In the last case,
+      g(x) ≠ 0 for all x ∈ X.
+
+proved_by:
+  - proof.continuity-arithmetic-operations.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "4"
+    section: "4.9"
+
+confidence: high

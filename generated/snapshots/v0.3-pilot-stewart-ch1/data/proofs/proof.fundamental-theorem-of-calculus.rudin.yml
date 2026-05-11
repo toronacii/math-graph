@@ -1,0 +1,26 @@
+id: proof.fundamental-theorem-of-calculus.rudin
+type: proof
+status: draft
+
+proves: theorem.fundamental-theorem-of-calculus
+
+uses:
+  - theorem.riemann-stieltjes-integrability-criterion
+  - proposition.integrability-criterion-consequences
+  - theorem.mean-value-theorem
+  - definition.derivative-at-point
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "6"
+    section: "6.21"
+
+confidence: high
+notes: >
+  Choose partition P with U(P,f) - L(P,f) < epsilon. MVT gives t_i
+  with F(x_i) - F(x_{i-1}) = f(t_i) Delta x_i. Thus
+  sum f(t_i) Delta x_i = F(b) - F(a). By Theorem 6.7(c),
+  |F(b) - F(a) - integral f| < epsilon.

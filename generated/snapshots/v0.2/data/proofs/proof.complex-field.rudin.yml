@@ -1,0 +1,24 @@
+id: proof.complex-field.rudin
+type: proof
+status: draft
+
+proves: theorem.complex-field
+
+uses:
+  - definition.complex-number
+  - definition.field
+  - proposition.ordered-field-properties
+
+style: verification
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "1"
+    section: "1.25"
+
+confidence: high
+notes: >
+  Direct verification of all field axioms (A1)-(A5), (M1)-(M5),
+  and (D) for ordered pairs with the defined operations. The
+  multiplicative inverse of (a,b) ≠ (0,0) is (a/(a²+b²), -b/(a²+b²)).

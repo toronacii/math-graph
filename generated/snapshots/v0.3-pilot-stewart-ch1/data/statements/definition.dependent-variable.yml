@@ -1,0 +1,94 @@
+schema_version: "0.3.0"
+id: definition.dependent-variable
+type: definition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Variable dependiente
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Dependent variable
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        La variable dependiente de una función f es el símbolo y que
+        representa el valor f(x). Se dice dependiente porque su valor
+        queda determinado por la elección de x.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        The dependent variable of a function f is the symbol y
+        representing the value f(x). It is called dependent because its
+        value is determined by the choice of x.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    status: not_applicable
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: definition.function
+    role: uses_concept
+    confidence: high
+  - id: definition.independent-variable
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.1"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: []
+
+ambient:
+  structures: []
+
+ontology:
+  semantic_kind: [object]
+  keywords: [variable, notation, dependent]
+
+generality: []
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: medium
+  translation_confidence: medium
+  latex_confidence: null
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.0"
+  rerun_id: v0.3-pilot-stewart-ch1
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Same notational-vs-object tension as definition.independent-variable.
+  Logged for audit.

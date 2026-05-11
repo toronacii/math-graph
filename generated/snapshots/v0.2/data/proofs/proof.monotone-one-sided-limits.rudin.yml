@@ -1,0 +1,24 @@
+id: proof.monotone-one-sided-limits.rudin
+type: proof
+
+proves: theorem.monotone-one-sided-limits
+
+uses:
+  - definition.monotonically-increasing-function
+  - definition.right-left-limits
+  - definition.least-upper-bound-property
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "4"
+    section: "4.29"
+
+confidence: high
+notes: >
+  Let A = sup{f(t): a<t<x}. Then A ≤ f(x). For any ε>0, ∃δ>0
+  with A−ε < f(x−δ) ≤ A. Monotonicity gives f(x−δ) ≤ f(t) ≤ A
+  for x−δ<t<x, so |f(t)−A| < ε. Hence f(x−) = A.
+  The inequality f(x+) ≤ f(y−) follows by comparing inf and sup
+  over (x,y).

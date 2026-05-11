@@ -1,0 +1,32 @@
+id: definition.natural-logarithm
+type: definition
+status: draft
+
+title:
+  en: Natural logarithm
+  es: Logaritmo natural
+
+statement:
+  natural:
+    es: >
+      El logaritmo natural es el logaritmo con base e, denotado ln.
+      Es decir, ln(x) = logₑ(x). Equivalentemente, ln(x) = y si y
+      sólo si eʸ = x.
+    en: >
+      The natural logarithm is the logarithm with base e, denoted ln.
+      That is, ln(x) = logₑ(x). Equivalently, ln(x) = y if and only
+      if eʸ = x.
+  latex: |
+    \ln x = \log_e x
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.5"
+
+confidence: medium
+notes: >
+  Stewart defines the natural logarithm in section 1.5 as the inverse
+  of the natural exponential function.

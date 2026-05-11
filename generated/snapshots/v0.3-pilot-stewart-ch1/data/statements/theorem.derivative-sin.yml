@@ -1,0 +1,32 @@
+id: theorem.derivative-sin
+type: theorem
+status: draft
+
+title:
+  en: Derivative of sine
+  es: Derivada del seno
+
+statement:
+  natural:
+    es: >
+      d/dx(sin x) = cos x.
+    en: >
+      d/dx(sin x) = cos x.
+  latex: |
+    \frac{d}{dx}(\sin x) = \cos x
+
+proved_by:
+  - proof.derivative-sin.stewart
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.3"
+
+confidence: high
+notes: >
+  Stewart proves this from the definition of the derivative using
+  the addition formula for sine and the special limits sin(h)/h → 1
+  and (cos h - 1)/h → 0.

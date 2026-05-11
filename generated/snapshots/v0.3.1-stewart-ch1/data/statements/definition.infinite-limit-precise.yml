@@ -1,0 +1,31 @@
+id: definition.infinite-limit-precise
+type: definition
+status: draft
+
+title:
+  en: Precise definition of infinite limit
+  es: Definición precisa de límite infinito
+
+statement:
+  natural:
+    es: >
+      Sea f una función definida en algún intervalo abierto que contiene
+      al número a, excepto posiblemente en a misma. Se dice que
+      lim(x→a) f(x) = ∞ si para todo número positivo M existe un
+      δ > 0 tal que si 0 < |x - a| < δ entonces f(x) > M.
+    en: >
+      Let f be a function defined on some open interval that contains
+      the number a, except possibly at a itself. We say
+      lim(x→a) f(x) = ∞ if for every positive number M there exists a
+      δ > 0 such that if 0 < |x - a| < δ then f(x) > M.
+  latex: |
+    \forall M > 0, \; \exists \delta > 0 : 0 < |x - a| < \delta \implies f(x) > M
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.4"
+
+confidence: high

@@ -1,0 +1,22 @@
+id: definition.union-intersection
+type: definition
+status: draft
+
+title:
+  en: Union and Intersection of Families of Sets
+
+statement:
+  natural:
+    en: >
+      If {Eα} is a family of sets indexed by A, the union ⋃α Eα is the set of all x belonging to at least one Eα. The intersection ⋂α Eα is the set of all x belonging to every Eα. If A ∩ B is not empty, A and B intersect; otherwise they are disjoint.
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "2"
+    section: "2.9"
+
+confidence: high
+notes: >
+  Definition 2.9 from Rudin. Generalizes union and intersection to arbitrary indexed families.

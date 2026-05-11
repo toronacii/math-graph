@@ -1,0 +1,34 @@
+id: theorem.limit-one-over-x-at-infinity
+type: theorem
+status: draft
+
+title:
+  en: Limit of 1/x as x approaches infinity
+  es: Límite de 1/x cuando x tiende a infinito
+
+statement:
+  natural:
+    es: >
+      lim(x→∞) 1/xʳ = 0 y lim(x→-∞) 1/xʳ = 0 si r > 0 es un
+      número racional y xʳ está definido para todo x.
+    en: >
+      lim(x→∞) 1/xʳ = 0 and lim(x→-∞) 1/xʳ = 0 if r > 0 is a
+      rational number and xʳ is defined for all x.
+  latex: |
+    \lim_{x \to \infty} \frac{1}{x^r} = 0 \quad (r > 0)
+
+proved_by:
+  - proof.limit-one-over-x-at-infinity.stewart
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.6"
+
+confidence: medium
+notes: >
+  This is the fundamental building block for evaluating limits at
+  infinity of rational functions by dividing numerator and denominator
+  by the highest power of x.

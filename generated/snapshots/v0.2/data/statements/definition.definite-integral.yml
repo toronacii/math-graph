@@ -1,0 +1,43 @@
+id: definition.definite-integral
+type: definition
+status: draft
+
+title:
+  en: Definite integral
+  es: Integral definida
+
+statement:
+  natural:
+    es: >
+      Si f es una función definida para a ≤ x ≤ b, dividimos el
+      intervalo [a, b] en n subintervalos de igual ancho Δx = (b-a)/n.
+      Sean x_0 = a, x_1, x_2, ..., x_n = b los extremos de estos
+      subintervalos y sean x_1*, x_2*, ..., x_n* cualesquiera puntos
+      muestrales en estos subintervalos. Entonces la integral definida
+      de f desde a hasta b es ∫_a^b f(x)dx = lim(n→∞) ∑_{i=1}^{n}
+      f(x_i*) Δx, siempre que este límite exista y tenga el mismo
+      valor para todas las elecciones posibles de puntos muestrales.
+    en: >
+      If f is a function defined for a ≤ x ≤ b, we divide the
+      interval [a, b] into n subintervals of equal width Δx = (b-a)/n.
+      Let x_0 = a, x_1, x_2, ..., x_n = b be the endpoints of these
+      subintervals and let x_1*, x_2*, ..., x_n* be any sample points
+      in these subintervals. Then the definite integral of f from a
+      to b is ∫_a^b f(x)dx = lim(n→∞) ∑_{i=1}^{n} f(x_i*) Δx,
+      provided that this limit exists and gives the same value for
+      all possible choices of sample points.
+  latex: |
+    \int_a^b f(x)\,dx = \lim_{n \to \infty} \sum_{i=1}^{n} f(x_i^*)\,\Delta x
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "5"
+    section: "5.2"
+
+confidence: high
+notes: >
+  When this limit exists, f is said to be integrable on [a, b].
+  Stewart notes that a and b are the limits of integration, f(x)
+  is the integrand, and dx indicates the variable of integration.

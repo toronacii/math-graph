@@ -1,0 +1,21 @@
+id: proof.nested-k-cells.rudin
+type: proof
+status: draft
+
+proves: lemma.nested-k-cells
+
+uses:
+  - lemma.nested-intervals
+  - definition.segment-interval-cell-ball
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "2"
+    section: "2.39"
+
+confidence: high
+notes: >
+  Project each k-cell onto coordinate intervals. Apply Theorem 2.38 to each coordinate.

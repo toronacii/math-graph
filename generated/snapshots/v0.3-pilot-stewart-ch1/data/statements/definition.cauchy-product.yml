@@ -1,0 +1,26 @@
+id: definition.cauchy-product
+type: definition
+status: draft
+
+title:
+  en: Cauchy Product
+
+statement:
+  natural:
+    en: >
+      Given two series Σa_n and Σb_n, we put c_n = Σ_{k=0}^n a_k b_{n-k} and call
+      Σc_n the Cauchy product of the two given series.
+
+  latex: |
+    c_n = \sum_{k=0}^{n} a_k b_{n-k}
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.48"
+
+confidence: high
+notes: >
+  Definition 3.48 from Rudin's Principles of Mathematical Analysis.

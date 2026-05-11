@@ -1,0 +1,31 @@
+id: definition.vertical-shift
+type: definition
+status: draft
+
+title:
+  en: Vertical shift
+  es: Traslación vertical
+
+statement:
+  natural:
+    es: >
+      Si c > 0, la gráfica de y = f(x) + c se obtiene desplazando la
+      gráfica de y = f(x) hacia arriba c unidades. La gráfica de
+      y = f(x) - c se obtiene desplazando la gráfica hacia abajo c unidades.
+    en: >
+      If c > 0, the graph of y = f(x) + c is obtained by shifting the
+      graph of y = f(x) upward c units. The graph of y = f(x) - c is
+      obtained by shifting the graph downward c units.
+  latex: |
+    y = f(x) + c \quad (c > 0 \text{: arriba}), \quad y = f(x) - c \quad (c > 0 \text{: abajo})
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.3"
+
+confidence: medium
+notes: >
+  Part of the catalog of transformations in section 1.3.

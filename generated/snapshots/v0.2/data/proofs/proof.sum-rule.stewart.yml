@@ -1,0 +1,23 @@
+id: proof.sum-rule.stewart
+type: proof
+status: draft
+
+proves: theorem.sum-rule
+
+uses:
+  - definition.derivative-function
+  - theorem.limit-laws
+
+style: direct
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.1"
+
+confidence: high
+notes: >
+  d/dx[f(x)+g(x)] = lim(h→0) {[f(x+h)+g(x+h)] - [f(x)+g(x)]}/h
+  = lim(h→0) [f(x+h)-f(x)]/h + lim(h→0) [g(x+h)-g(x)]/h
+  = f'(x) + g'(x) by the sum law for limits.

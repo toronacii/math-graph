@@ -1,0 +1,19 @@
+id: proof.monotone-no-second-kind-discontinuity.rudin
+type: proof
+
+proves: corollary.monotone-no-second-kind-discontinuity
+
+uses:
+  - theorem.monotone-one-sided-limits
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "4"
+    section: "4.29"
+
+confidence: high
+notes: >
+  Direct consequence of Theorem 4.29: both f(x+) and f(x−) exist
+  at every point, so any discontinuity must be of the first kind.

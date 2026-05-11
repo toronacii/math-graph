@@ -1,0 +1,27 @@
+id: definition.divergence-to-infinity
+type: definition
+status: draft
+
+title:
+  en: Divergence to Infinity
+
+statement:
+  natural:
+    en: >
+      A sequence {s_n} of real numbers is said to diverge to +∞ if for every real
+      number M there exists an integer N such that n ≥ N implies s_n ≥ M. Similarly,
+      {s_n} diverges to -∞ if for every real M there exists N such that n ≥ N implies s_n ≤ M.
+
+  latex: |
+    s_n \to +\infty \iff \forall M \in \mathbb{R},\; \exists N : n \geq N \implies s_n \geq M
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.15"
+
+confidence: high
+notes: >
+  Definition 3.15 from Rudin's Principles of Mathematical Analysis.

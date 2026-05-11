@@ -5,6 +5,57 @@
 
 ---
 
+## 0. v0.3 Transition (READ FIRST)
+
+As of 2026-05-11, the project is **transitioning from v0.2 → v0.3**.
+
+- The full v0.2 prototype (527 nodes / 687 edges, Stewart Ch1–11 + Rudin
+  Ch1–6) is **frozen** at `generated/snapshots/v0.2/` with `MANIFEST.yml`
+  and `hashes.txt`. It is read-only and is no longer rebuilt.
+- v0.3 is a **clean redesign**, NOT backward-compatible at the YAML level.
+  Headline changes:
+  - schema_version field, hardened Pydantic models in `schema/v03.py`
+  - explicit `language` block + `is_original` flags on multilingual content
+  - `LatexBlock` lifecycle (`absent` / `present` / `not_applicable`)
+  - **two-layer dependency graph**: `Proof.uses` (derivation) +
+    `Statement.depends_on` (concept layer) — fixes "definitions as roots"
+  - **6-axis quality** (extraction / dependency / semantic / translation /
+    latex / source_alignment) replacing single `confidence` field
+  - 6-step status lifecycle with validator-enforced promotion gates
+  - structured `Provenance` (page + theorem_label + locator)
+  - `Domains`, `Ambient`, `Ontology`, `Generality` blocks (free-form)
+  - snapshot-based rerun architecture (`scripts/snapshot.py`,
+    `scripts/diff_graphs.py`)
+- v0.2 module (`schema/models.py` + `scripts/loader.py` etc.) and v0.3
+  module (`schema/v03.py` + `scripts/v03/`) **coexist**. v0.3 outputs go
+  to `generated/v0.3/`, NOT `generated/graph/`. Loader skips files
+  without `schema_version` so legacy YAML is ignored, not validated.
+- **Authoritative reference**: `docs/v0.3/` (00 → 13). Sections 4–13 of
+  this document describe the v0.2 state at freeze and remain only as
+  historical baseline.
+
+### v0.3 Pipeline (current)
+
+```bash
+uv run python -m scripts.v03.validate                 # schema + invariants
+uv run python -m scripts.v03.build_db                 # → generated/v0.3/
+uv run python -m scripts.snapshot --label v0.3-YYYY-MM-DD
+uv run python -m scripts.diff_graphs <a> <b>          # snapshot comparison
+```
+
+### Status of v0.3 Work
+
+Done: v0.3 schema + loader + validator + build_db + snapshot/diff/migrate
+tools; full `docs/v0.3/` set; `tests/v03/` (17 tests, all passing);
+v0.2 baseline frozen + hashed (655 files).
+
+Next: extend `scripts/export_schema.py` for v0.3 JSON Schema; add
+`pyproject.toml` console aliases; build `scripts/v03/make_context_pack.py`;
+update extraction prompt templates; pilot rerun on Stewart Ch1; full
+Stewart+Rudin rerun.
+
+---
+
 ## 1. What Is This Project?
 
 A **Mathematical Knowledge Graph (MKG)**: a dependency graph of mathematical

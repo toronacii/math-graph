@@ -1,0 +1,29 @@
+id: proposition.root-test-stronger-than-ratio
+type: proposition
+status: draft
+
+title:
+  en: Root Test is Stronger than Ratio Test
+
+statement:
+  natural:
+    en: >
+      For any sequence {c_n} of positive numbers, lim inf(c_{n+1}/c_n) ≤ lim inf c_n^{1/n}
+      ≤ lim sup c_n^{1/n} ≤ lim sup(c_{n+1}/c_n).
+
+  latex: |
+    \liminf \frac{c_{n+1}}{c_n} \leq \liminf \sqrt[n]{c_n} \leq \limsup \sqrt[n]{c_n} \leq \limsup \frac{c_{n+1}}{c_n}
+
+proved_by:
+  - proof.root-test-stronger-than-ratio.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "3"
+    section: "3.37"
+
+confidence: high
+notes: >
+  Theorem 3.37 from Rudin.

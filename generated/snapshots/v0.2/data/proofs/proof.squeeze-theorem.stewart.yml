@@ -1,0 +1,23 @@
+id: proof.squeeze-theorem.stewart
+type: proof
+status: draft
+
+proves: theorem.squeeze-theorem
+
+uses:
+  - definition.epsilon-delta-limit
+
+style: epsilon-delta
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.3"
+
+confidence: medium
+notes: >
+  Given epsilon > 0, since lim f(x) = L and lim h(x) = L, there
+  exist delta_1 and delta_2 such that f(x) and h(x) are within
+  epsilon of L. Taking delta = min(delta_1, delta_2), the inequality
+  f(x) <= g(x) <= h(x) forces g(x) within epsilon of L.

@@ -1,0 +1,22 @@
+id: proof.complex-algebraic-form.rudin
+type: proof
+status: draft
+
+proves: theorem.complex-algebraic-form
+
+uses:
+  - definition.imaginary-unit
+  - definition.complex-number
+  - theorem.real-subfield-of-complex
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "1"
+    section: "1.29"
+
+confidence: high
+notes: >
+  a + bi = (a,0) + (b,0)(0,1) = (a,0) + (0,b) = (a,b).
