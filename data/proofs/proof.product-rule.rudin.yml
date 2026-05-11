@@ -1,0 +1,24 @@
+id: proof.product-rule.rudin
+type: proof
+status: draft
+
+proves: theorem.product-rule
+
+uses:
+  - definition.derivative-at-point
+  - theorem.differentiable-implies-continuous
+  - theorem.limit-laws
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "5"
+    section: "5.3"
+
+confidence: high
+notes: >
+  Let h = fg. Then h(t) - h(x) = f(t)[g(t) - g(x)] + g(x)[f(t) - f(x)].
+  Dividing by t - x and noting f(t) → f(x) as t → x (by Theorem 5.2),
+  the product rule follows from Theorem 4.4 (limit laws).

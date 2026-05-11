@@ -1,0 +1,24 @@
+id: theorem.continuous-compact-to-rk-closed-bounded
+type: theorem
+status: draft
+
+title:
+  en: Continuous Image of Compact Set into R^k is Closed and Bounded
+
+statement:
+  natural:
+    en: >
+      If f is a continuous mapping of a compact metric space X into
+      R^k, then f(X) is closed and bounded. Thus f is bounded.
+
+proved_by:
+  - proof.continuous-compact-to-rk-closed-bounded.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "4"
+    section: "4.15"
+
+confidence: high

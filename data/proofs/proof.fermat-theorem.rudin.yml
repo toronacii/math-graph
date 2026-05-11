@@ -1,0 +1,24 @@
+id: proof.fermat-theorem.rudin
+type: proof
+status: draft
+
+proves: theorem.fermat-theorem
+
+uses:
+  - definition.derivative-at-point
+  - definition.local-maximum
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "5"
+    section: "5.8"
+
+confidence: high
+notes: >
+  Choose delta so that f(t) <= f(x) for |t - x| < delta. For
+  x - delta < t < x: (f(t) - f(x))/(t - x) >= 0, so f'(x) >= 0.
+  For x < t < x + delta: (f(t) - f(x))/(t - x) <= 0, so f'(x) <= 0.
+  Hence f'(x) = 0. Same argument applies for local minima.

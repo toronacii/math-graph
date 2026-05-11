@@ -25,9 +25,15 @@ sources:
     edition: "7"
     chapter: "2"
     section: "2.7"
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "5"
+    section: "5.1"
 
 confidence: high
 notes: >
   Stewart presents both forms of the derivative definition. The
   tangent line slope from 2.1 is now formally identified as the
-  derivative.
+  derivative. Rudin defines the derivative identically as
+  f'(x) = lim_{t→x} (f(t) - f(x))/(t - x) for real-valued f on [a,b].

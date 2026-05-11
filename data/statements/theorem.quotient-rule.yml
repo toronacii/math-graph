@@ -20,6 +20,7 @@ statement:
 
 proved_by:
   - proof.quotient-rule.stewart
+  - proof.quotient-rule.rudin
 
 sources:
   - work: Cálculo de una variable — Trascendentes tempranas
@@ -27,9 +28,15 @@ sources:
     edition: "7"
     chapter: "3"
     section: "3.2"
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "5"
+    section: "5.3"
 
 confidence: high
 notes: >
   Stewart derives the quotient rule using a similar technique to
   the product rule, adding and subtracting f(x)g(x) in the
-  numerator of the difference quotient.
+  numerator of the difference quotient. Rudin (5.3c) lets h = f/g
+  and applies Theorems 4.4 and 5.2.

@@ -25,5 +25,14 @@ sources:
     edition: "7"
     chapter: "4"
     section: "4.1"
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "5"
+    section: "5.7"
 
 confidence: high
+notes: >
+  Rudin defines local minimum on a general metric space X:
+  f(q) >= f(p) for all q with d(p,q) < delta. On R this is
+  equivalent to Stewart's definition with open intervals.

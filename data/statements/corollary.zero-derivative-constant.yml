@@ -21,6 +21,7 @@ statement:
 
 proved_by:
   - proof.zero-derivative-constant.stewart
+  - proof.zero-derivative-constant.rudin
 
 sources:
   - work: Cálculo de una variable — Trascendentes tempranas
@@ -28,8 +29,14 @@ sources:
     edition: "7"
     chapter: "4"
     section: "4.2"
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "5"
+    section: "5.11"
 
 confidence: high
 notes: >
   Direct corollary of the Mean Value Theorem. For any x1, x2 in
   (a,b), MVT gives f(x2) - f(x1) = f'(c)(x2 - x1) = 0.
+  Rudin states this as part (b) of Theorem 5.11.

@@ -1,0 +1,33 @@
+id: theorem.continuity-of-composition-metric
+type: theorem
+status: draft
+
+title:
+  en: Continuity of Composition (Metric Spaces)
+
+statement:
+  natural:
+    en: >
+      Suppose X, Y, Z are metric spaces, E ⊂ X, f maps E into Y, g
+      maps f(E) into Z, and h(x) = g(f(x)) for x ∈ E. If f is
+      continuous at p ∈ E and g is continuous at f(p), then h is
+      continuous at p.
+  latex: |
+    f \text{ continuous at } p,\; g \text{ continuous at } f(p)
+    \;\Rightarrow\; g \circ f \text{ continuous at } p
+
+proved_by:
+  - proof.continuity-of-composition-metric.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "4"
+    section: "4.7"
+
+confidence: high
+notes: >
+  Strictly more general than Stewart's theorem.continuity-of-composition
+  which is stated for real functions. The proof structure is the same
+  (chain two ε-δ arguments).

@@ -1,0 +1,30 @@
+id: definition.uniform-continuity
+type: definition
+status: draft
+
+title:
+  en: Uniform Continuity
+
+statement:
+  natural:
+    en: >
+      Let f be a mapping of a metric space X into a metric space Y. We
+      say that f is uniformly continuous on X if for every ε > 0 there
+      exists δ > 0 such that d_Y(f(p), f(q)) < ε for all p and q in X
+      for which d_X(p, q) < δ.
+  latex: |
+    \forall \varepsilon > 0,\; \exists\, \delta > 0 :
+    d_X(p,q) < \delta \;\Rightarrow\; d_Y(f(p), f(q)) < \varepsilon
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "4"
+    section: "4.18"
+
+confidence: high
+notes: >
+  Rudin Definition 4.18. Key distinction from pointwise continuity: the
+  same δ works for all points simultaneously. Every uniformly continuous
+  function is continuous, but not conversely in general.

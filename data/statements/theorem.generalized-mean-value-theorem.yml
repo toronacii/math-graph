@@ -1,0 +1,34 @@
+id: theorem.generalized-mean-value-theorem
+type: theorem
+status: draft
+
+title:
+  en: Generalized Mean Value Theorem (Cauchy)
+
+statement:
+  natural:
+    en: >
+      If f and g are continuous real functions on [a, b] which are
+      differentiable in (a, b), then there is a point x in (a, b) at
+      which [f(b) - f(a)]g'(x) = [g(b) - g(a)]f'(x).
+  latex: |
+    [f(b) - f(a)]\,g'(x) = [g(b) - g(a)]\,f'(x)
+
+proved_by:
+  - proof.generalized-mean-value-theorem.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "5"
+    section: "5.9"
+
+confidence: high
+notes: >
+  Also known as Cauchy's mean value theorem. Rudin derives the
+  ordinary MVT (5.10) as the special case g(x) = x. The proof
+  constructs h(t) = [f(b)-f(a)]g(t) - [g(b)-g(a)]f(t), shows
+  h(a) = h(b), and applies the extreme value theorem (4.16) and
+  Fermat's theorem (5.8) to find x where h'(x) = 0. This theorem
+  is the key tool for proving L'Hospital's rule (5.13).

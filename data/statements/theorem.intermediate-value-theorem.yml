@@ -21,6 +21,7 @@ statement:
 
 proved_by:
   - proof.intermediate-value-theorem.stewart
+  - proof.intermediate-value-theorem.rudin
 
 sources:
   - work: Cálculo de una variable — Trascendentes tempranas
@@ -28,10 +29,14 @@ sources:
     edition: "7"
     chapter: "2"
     section: "2.5"
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "4"
+    section: "4.23"
 
-confidence: medium
+confidence: high
 notes: >
-  Stewart states the IVT without proof in section 2.5, noting that
-  a proof based on the completeness axiom of the real numbers can
-  be found in Appendix F. It is used extensively for existence proofs
-  (e.g., showing a root exists in an interval).
+  Stewart states the IVT without proof in section 2.5. Rudin proves it
+  in Theorem 4.23 via the continuous image of connected sets (Thm 4.22)
+  and the characterization of connected subsets of R (Thm 2.47).

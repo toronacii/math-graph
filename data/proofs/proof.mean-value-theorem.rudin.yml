@@ -1,0 +1,21 @@
+id: proof.mean-value-theorem.rudin
+type: proof
+status: draft
+
+proves: theorem.mean-value-theorem
+
+uses:
+  - theorem.generalized-mean-value-theorem
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "5"
+    section: "5.10"
+
+confidence: high
+notes: >
+  Take g(x) = x in Theorem 5.9 (generalized MVT). Then
+  [f(b) - f(a)] · 1 = [b - a] · f'(x) for some x in (a,b).

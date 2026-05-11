@@ -23,6 +23,7 @@ statement:
 
 proved_by:
   - proof.increasing-decreasing-test.stewart
+  - proof.increasing-decreasing-test.rudin
 
 sources:
   - work: Cálculo de una variable — Trascendentes tempranas
@@ -30,7 +31,17 @@ sources:
     edition: "7"
     chapter: "4"
     section: "4.3"
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "5"
+    section: "5.11"
 
 confidence: high
 notes: >
-  Direct consequence of the Mean Value Theorem.
+  Direct consequence of the Mean Value Theorem. Rudin (5.11)
+  states three parts: (a) f' >= 0 implies monotonically increasing,
+  (b) f' = 0 implies constant, (c) f' <= 0 implies monotonically
+  decreasing. Stewart uses strict inequalities (f' > 0 implies
+  increasing, f' < 0 implies decreasing). Rudin's non-strict
+  version subsumes Stewart's strict version.

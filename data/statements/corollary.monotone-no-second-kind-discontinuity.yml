@@ -1,0 +1,23 @@
+id: corollary.monotone-no-second-kind-discontinuity
+type: corollary
+status: draft
+
+title:
+  en: Monotonic Functions Have No Discontinuities of the Second Kind
+
+statement:
+  natural:
+    en: >
+      Monotonic functions have no discontinuities of the second kind.
+
+proved_by:
+  - proof.monotone-no-second-kind-discontinuity.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "4"
+    section: "4.29"
+
+confidence: high

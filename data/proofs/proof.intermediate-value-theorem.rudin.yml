@@ -1,0 +1,21 @@
+id: proof.intermediate-value-theorem.rudin
+type: proof
+
+proves: theorem.intermediate-value-theorem
+
+uses:
+  - theorem.continuous-image-connected
+  - theorem.connected-subsets-of-r
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "4"
+    section: "4.23"
+
+confidence: high
+notes: >
+  By Theorem 2.47, [a,b] is connected. By Theorem 4.22, f([a,b])
+  is a connected subset of R¹. By Theorem 2.47 again, f([a,b])
+  contains every value between f(a) and f(b).

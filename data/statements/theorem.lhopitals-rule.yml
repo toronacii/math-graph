@@ -30,6 +30,7 @@ statement:
 
 proved_by:
   - proof.lhopitals-rule.stewart
+  - proof.lhopitals-rule.rudin
 
 sources:
   - work: Cálculo de una variable — Trascendentes tempranas
@@ -37,10 +38,17 @@ sources:
     edition: "7"
     chapter: "4"
     section: "4.4"
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "5"
+    section: "5.13"
 
-confidence: medium
+confidence: high
 notes: >
   Stewart proves the 0/0 case using the Cauchy Mean Value Theorem
   (a generalization of MVT). The ∞/∞ case is stated without
   complete proof. The rule also applies to one-sided limits and
-  limits at infinity.
+  limits at infinity. Rudin (5.13) proves both the 0/0 and ∞/∞
+  cases rigorously using the generalized MVT (5.9), and allows
+  -∞ <= a < b <= +∞ (extended reals).

@@ -1,0 +1,32 @@
+id: proposition.continuity-limit-point-equivalence
+type: proposition
+status: draft
+
+title:
+  en: Continuity Equals Limit at Limit Points
+
+statement:
+  natural:
+    en: >
+      In the situation of Definition 4.5, assume also that p is a limit
+      point of E. Then f is continuous at p if and only if
+      lim_{x→p} f(x) = f(p).
+  latex: |
+    p \text{ limit point of } E \;\Rightarrow\;
+    \bigl(f \text{ continuous at } p \iff \lim_{x \to p} f(x) = f(p)\bigr)
+
+proved_by:
+  - proof.continuity-limit-point-equivalence.rudin
+
+notes: >
+  Reclassified from theorem to proposition: trivial comparison of
+  Definitions 4.1 and 4.5, serving as a utility bridge fact.
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "4"
+    section: "4.6"
+
+confidence: high

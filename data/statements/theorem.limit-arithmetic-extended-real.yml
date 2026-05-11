@@ -1,0 +1,30 @@
+id: theorem.limit-arithmetic-extended-real
+type: theorem
+status: draft
+
+title:
+  en: Arithmetic of Limits in the Extended Real Number System
+
+statement:
+  natural:
+    en: >
+      Let f and g be defined on E. Suppose f(t) → A and g(t) → B as
+      t → x (in the extended real number system). Then
+      (a) f(t) → A' implies A' = A (uniqueness);
+      (b) (f+g)(t) → A + B; (c) (fg)(t) → AB; (d) (f/g)(t) → A/B,
+      provided the right members are defined.
+
+proved_by:
+  - proof.limit-arithmetic-extended-real.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "4"
+    section: "4.34"
+
+confidence: high
+notes: >
+  The expressions ∞ − ∞, 0·∞, ∞/∞, A/0 are not defined.
+  Proof is analogous to Theorem 4.4.

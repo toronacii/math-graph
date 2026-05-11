@@ -45,6 +45,52 @@
     },
     "type": "corollary"
   },
+  "corollary.continuity-closed-preimage": {
+    "confidence": "high",
+    "id": "corollary.continuity-closed-preimage",
+    "kind": "statement",
+    "natural": {
+      "en": "A mapping f of a metric space X into a metric space Y is continuous if and only if f⁻¹(C) is closed in X for every closed set C in Y."
+    },
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "4",
+        "edition": "3",
+        "section": "4.8",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Continuity via Closed Preimages"
+    },
+    "type": "corollary"
+  },
+  "corollary.derivative-no-simple-discontinuities": {
+    "confidence": "high",
+    "id": "corollary.derivative-no-simple-discontinuities",
+    "kind": "statement",
+    "latex": "f \\text{ differentiable on } [a,b]\n\\;\\Rightarrow\\;\nf' \\text{ has no simple discontinuities on } [a,b]\n",
+    "natural": {
+      "en": "If f is differentiable on [a, b], then f' cannot have any simple discontinuities (jump discontinuities) on [a, b]."
+    },
+    "notes": "Immediate consequence of Darboux's theorem (5.12): since derivatives have the intermediate value property, they cannot have jump discontinuities. However, f' may have discontinuities of the second kind, as shown by Example 5.6(b).\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "5",
+        "edition": "3",
+        "section": "5.12",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Derivatives Cannot Have Simple Discontinuities"
+    },
+    "type": "corollary"
+  },
   "corollary.difference-rule": {
     "confidence": "high",
     "id": "corollary.difference-rule",
@@ -169,6 +215,28 @@
     },
     "type": "corollary"
   },
+  "corollary.monotone-no-second-kind-discontinuity": {
+    "confidence": "high",
+    "id": "corollary.monotone-no-second-kind-discontinuity",
+    "kind": "statement",
+    "natural": {
+      "en": "Monotonic functions have no discontinuities of the second kind."
+    },
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "4",
+        "edition": "3",
+        "section": "4.29",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Monotonic Functions Have No Discontinuities of the Second Kind"
+    },
+    "type": "corollary"
+  },
   "corollary.nested-compact-nonempty": {
     "confidence": "high",
     "id": "corollary.nested-compact-nonempty",
@@ -265,6 +333,28 @@
     },
     "type": "corollary"
   },
+  "corollary.uniqueness-of-function-limit": {
+    "confidence": "high",
+    "id": "corollary.uniqueness-of-function-limit",
+    "kind": "statement",
+    "natural": {
+      "en": "If f has a limit at p, this limit is unique."
+    },
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "4",
+        "edition": "3",
+        "section": "4.2",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Uniqueness of Function Limits"
+    },
+    "type": "corollary"
+  },
   "corollary.zero-derivative-constant": {
     "confidence": "high",
     "id": "corollary.zero-derivative-constant",
@@ -274,7 +364,7 @@
       "en": "If f'(x) = 0 for all x in an interval (a, b), then f is constant on (a, b).",
       "es": "Si f'(x) = 0 para toda x en un intervalo (a, b), entonces f es constante en (a, b)."
     },
-    "notes": "Direct corollary of the Mean Value Theorem. For any x1, x2 in (a,b), MVT gives f(x2) - f(x1) = f'(c)(x2 - x1) = 0.\n",
+    "notes": "Direct corollary of the Mean Value Theorem. For any x1, x2 in (a,b), MVT gives f(x2) - f(x1) = f'(c)(x2 - x1) = 0. Rudin states this as part (b) of Theorem 5.11.\n",
     "sources": [
       {
         "author": "James Stewart",
@@ -282,6 +372,13 @@
         "edition": "7",
         "section": "4.2",
         "work": "Cálculo de una variable — Trascendentes tempranas"
+      },
+      {
+        "author": "Walter Rudin",
+        "chapter": "5",
+        "edition": "3",
+        "section": "5.11",
+        "work": "Principles of Mathematical Analysis"
       }
     ],
     "status": "draft",
@@ -650,6 +747,29 @@
     },
     "type": "definition"
   },
+  "definition.bounded-mapping": {
+    "confidence": "high",
+    "id": "definition.bounded-mapping",
+    "kind": "statement",
+    "latex": "\\exists\\, M \\in \\mathbb{R} : |\\mathbf{f}(x)| \\leq M \\;\\;\\forall\\, x \\in E\n",
+    "natural": {
+      "en": "A mapping f of a set E into R^k is said to be bounded if there is a real number M such that |f(x)| ≤ M for all x ∈ E."
+    },
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "4",
+        "edition": "3",
+        "section": "4.13",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Bounded Mapping"
+    },
+    "type": "definition"
+  },
   "definition.cauchy-product": {
     "confidence": "high",
     "id": "definition.cauchy-product",
@@ -965,6 +1085,30 @@
     },
     "type": "definition"
   },
+  "definition.continuity-metric": {
+    "confidence": "high",
+    "id": "definition.continuity-metric",
+    "kind": "statement",
+    "latex": "\\forall \\varepsilon > 0,\\; \\exists\\, \\delta > 0 : d_X(x,p) < \\delta,\\; x \\in E\n\\;\\Rightarrow\\; d_Y(f(x), f(p)) < \\varepsilon\n",
+    "natural": {
+      "en": "Suppose X and Y are metric spaces, E ⊂ X, p ∈ E, and f maps E into Y. Then f is continuous at p if for every ε > 0 there exists δ > 0 such that d_Y(f(x), f(p)) < ε for all x ∈ E with d_X(x, p) < δ. If f is continuous at every point of E, then f is continuous on E."
+    },
+    "notes": "Rudin Definition 4.5. Note that f must be defined at p. If p is an isolated point of E, every function on E is continuous at p. Strictly more general than Stewart's definition.continuity-at-point.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "4",
+        "edition": "3",
+        "section": "4.5",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Continuity at a Point (Metric Spaces)"
+    },
+    "type": "definition"
+  },
   "definition.continuity-on-interval": {
     "confidence": "medium",
     "id": "definition.continuity-on-interval",
@@ -1124,7 +1268,7 @@
       "en": "The derivative of a function f at a number a, denoted f'(a), is f'(a) = lim(h→0) (f(a + h) - f(a)) / h, if this limit exists. Equivalently, f'(a) = lim(x→a) (f(x) - f(a)) / (x - a).",
       "es": "La derivada de una función f en un número a, denotada f'(a), es f'(a) = lim(h→0) (f(a + h) - f(a)) / h, si este límite existe. Equivalentemente, f'(a) = lim(x→a) (f(x) - f(a)) / (x - a)."
     },
-    "notes": "Stewart presents both forms of the derivative definition. The tangent line slope from 2.1 is now formally identified as the derivative.\n",
+    "notes": "Stewart presents both forms of the derivative definition. The tangent line slope from 2.1 is now formally identified as the derivative. Rudin defines the derivative identically as f'(x) = lim_{t→x} (f(t) - f(x))/(t - x) for real-valued f on [a,b].\n",
     "sources": [
       {
         "author": "James Stewart",
@@ -1132,6 +1276,13 @@
         "edition": "7",
         "section": "2.7",
         "work": "Cálculo de una variable — Trascendentes tempranas"
+      },
+      {
+        "author": "Walter Rudin",
+        "chapter": "5",
+        "edition": "3",
+        "section": "5.1",
+        "work": "Principles of Mathematical Analysis"
       }
     ],
     "status": "draft",
@@ -2161,6 +2312,29 @@
     },
     "type": "definition"
   },
+  "definition.limit-extended-real": {
+    "confidence": "high",
+    "id": "definition.limit-extended-real",
+    "kind": "statement",
+    "natural": {
+      "en": "For any real c, the set (c, +∞) is a neighborhood of +∞ and (−∞, c) is a neighborhood of −∞. Let f be a real function on E. We say f(t) → A as t → x, where A and x are in the extended real number system, if for every neighborhood U of A there is a neighborhood V of x such that V ∩ E is not empty and f(t) ∈ U for all t ∈ V ∩ E, t ≠ x."
+    },
+    "notes": "Combines Rudin Definitions 4.32 and 4.33. Extends the limit concept to handle ±∞ as both the value of the limit and the point of approach.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "4",
+        "edition": "3",
+        "section": "4.32-4.33",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Limits in the Extended Real Number System"
+    },
+    "type": "definition"
+  },
   "definition.limit-of-function": {
     "confidence": "medium",
     "id": "definition.limit-of-function",
@@ -2184,6 +2358,30 @@
     "title": {
       "en": "Limit of a function",
       "es": "Límite de una función"
+    },
+    "type": "definition"
+  },
+  "definition.limit-of-function-metric": {
+    "confidence": "high",
+    "id": "definition.limit-of-function-metric",
+    "kind": "statement",
+    "latex": "\\forall \\varepsilon > 0,\\; \\exists\\, \\delta > 0 : 0 < d_X(x,p) < \\delta,\\; x \\in E\n\\;\\Rightarrow\\; d_Y(f(x), q) < \\varepsilon\n",
+    "natural": {
+      "en": "Let X and Y be metric spaces, E ⊂ X, f maps E into Y, and p is a limit point of E. We write lim_{x→p} f(x) = q if for every ε > 0 there exists δ > 0 such that d_Y(f(x), q) < ε for all x ∈ E with 0 < d_X(x, p) < δ."
+    },
+    "notes": "Rudin Definition 4.1. Generalizes the limit concept to arbitrary metric spaces. The point p must be a limit point of E but need not belong to E. Strictly more general than Stewart's definition.limit-of-function which is restricted to real functions on R.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "4",
+        "edition": "3",
+        "section": "4.1",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Limit of a Function (Metric Spaces)"
     },
     "type": "definition"
   },
@@ -2222,6 +2420,7 @@
       "en": "A number f(c) is a local maximum value of f if f(c) ≥ f(x) when x is near c (that is, f(c) ≥ f(x) for all x in some open interval containing c).",
       "es": "Un número f(c) es un valor máximo local de f si f(c) ≥ f(x) cuando x está cerca de c (es decir, f(c) ≥ f(x) para toda x en algún intervalo abierto que contenga a c)."
     },
+    "notes": "Rudin defines local maximum on a general metric space X: f(q) <= f(p) for all q with d(p,q) < delta. On R this is equivalent to Stewart's definition with open intervals.\n",
     "sources": [
       {
         "author": "James Stewart",
@@ -2229,6 +2428,13 @@
         "edition": "7",
         "section": "4.1",
         "work": "Cálculo de una variable — Trascendentes tempranas"
+      },
+      {
+        "author": "Walter Rudin",
+        "chapter": "5",
+        "edition": "3",
+        "section": "5.7",
+        "work": "Principles of Mathematical Analysis"
       }
     ],
     "status": "draft",
@@ -2247,6 +2453,7 @@
       "en": "A number f(c) is a local minimum value of f if f(c) ≤ f(x) when x is near c (that is, f(c) ≤ f(x) for all x in some open interval containing c).",
       "es": "Un número f(c) es un valor mínimo local de f si f(c) ≤ f(x) cuando x está cerca de c (es decir, f(c) ≤ f(x) para toda x en algún intervalo abierto que contenga a c)."
     },
+    "notes": "Rudin defines local minimum on a general metric space X: f(q) >= f(p) for all q with d(p,q) < delta. On R this is equivalent to Stewart's definition with open intervals.\n",
     "sources": [
       {
         "author": "James Stewart",
@@ -2254,6 +2461,13 @@
         "edition": "7",
         "section": "4.1",
         "work": "Cálculo de una variable — Trascendentes tempranas"
+      },
+      {
+        "author": "Walter Rudin",
+        "chapter": "5",
+        "edition": "3",
+        "section": "5.7",
+        "work": "Principles of Mathematical Analysis"
       }
     ],
     "status": "draft",
@@ -2385,6 +2599,30 @@
     "status": "draft",
     "title": {
       "en": "Monotonic Sequence"
+    },
+    "type": "definition"
+  },
+  "definition.monotonically-increasing-function": {
+    "confidence": "high",
+    "id": "definition.monotonically-increasing-function",
+    "kind": "statement",
+    "latex": "x < y \\;\\Rightarrow\\; f(x) \\leq f(y) \\quad \\text{(monotonically increasing)}\n",
+    "natural": {
+      "en": "Let f be real on (a, b). Then f is monotonically increasing on (a, b) if a < x < y < b implies f(x) ≤ f(y). If the inequality is reversed, f is monotonically decreasing. The class of monotonic functions consists of both increasing and decreasing functions."
+    },
+    "notes": "Rudin uses non-strict inequality (≤) for monotonically increasing. Compare with definition.monotonic-sequence which covers sequences.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "4",
+        "edition": "3",
+        "section": "4.28",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Monotonically Increasing and Decreasing Functions"
     },
     "type": "definition"
   },
@@ -3007,6 +3245,29 @@
     },
     "type": "definition"
   },
+  "definition.right-left-limits": {
+    "confidence": "high",
+    "id": "definition.right-left-limits",
+    "kind": "statement",
+    "latex": "f(x+) = \\lim_{\\substack{t \\to x \\\\ t > x}} f(t), \\qquad\nf(x-) = \\lim_{\\substack{t \\to x \\\\ t < x}} f(t)\n",
+    "natural": {
+      "en": "Let f be defined on (a, b). For any point x with a ≤ x < b, we write f(x+) = q if f(t_n) → q as n → ∞ for all sequences {t_n} in (x, b) such that t_n → x. For a < x ≤ b, we define f(x−) analogously using sequences in (a, x). The limit lim_{t→x} f(t) exists if and only if f(x+) = f(x−)."
+    },
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "4",
+        "edition": "3",
+        "section": "4.25",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Right-hand and Left-hand Limits"
+    },
+    "type": "definition"
+  },
   "definition.secant-line": {
     "confidence": "medium",
     "id": "definition.secant-line",
@@ -3034,7 +3295,7 @@
     "type": "definition"
   },
   "definition.second-derivative": {
-    "confidence": "medium",
+    "confidence": "high",
     "id": "definition.second-derivative",
     "kind": "statement",
     "latex": "f''(x) = \\frac{d^2 y}{dx^2} = \\frac{d}{dx}\\!\\left(\\frac{dy}{dx}\\right)\n",
@@ -3042,7 +3303,7 @@
       "en": "If f' is itself a differentiable function, then the second derivative of f is the function f'' = (f')'. It is also denoted d²y/dx².",
       "es": "Si f' es en sí misma una función diferenciable, entonces la segunda derivada de f es la función f'' = (f')'. Se denota también como d²y/dx²."
     },
-    "notes": "Stewart introduces higher-order derivatives (f'', f''', f⁽⁴⁾, etc.) in section 2.8 and interprets the second derivative as acceleration in the context of motion.\n",
+    "notes": "Stewart introduces higher-order derivatives (f'', f''', f⁽⁴⁾, etc.) in section 2.8 and interprets the second derivative as acceleration in the context of motion. Rudin (5.14) formally defines the nth derivative f^(n) as the derivative of f^(n-1), and notes that f^(n)(x) existing requires f^(n-1) to exist in a neighborhood of x.\n",
     "sources": [
       {
         "author": "James Stewart",
@@ -3050,6 +3311,13 @@
         "edition": "7",
         "section": "2.8",
         "work": "Cálculo de una variable — Trascendentes tempranas"
+      },
+      {
+        "author": "Walter Rudin",
+        "chapter": "5",
+        "edition": "3",
+        "section": "5.14",
+        "work": "Principles of Mathematical Analysis"
       }
     ],
     "status": "draft",
@@ -3200,6 +3468,30 @@
     "title": {
       "en": "Sigma notation",
       "es": "Notación sigma"
+    },
+    "type": "definition"
+  },
+  "definition.simple-discontinuity": {
+    "confidence": "high",
+    "id": "definition.simple-discontinuity",
+    "kind": "statement",
+    "latex": "\\text{Simple discontinuity at } x \\iff f(x+) \\text{ and } f(x-) \\text{ both exist}\n",
+    "natural": {
+      "en": "Let f be defined on (a, b). If f is discontinuous at a point x, and if f(x+) and f(x−) both exist, then f is said to have a discontinuity of the first kind (or a simple discontinuity) at x. Otherwise the discontinuity is said to be of the second kind."
+    },
+    "notes": "A simple discontinuity can occur in two ways: either f(x+) ≠ f(x−) (jump discontinuity), or f(x+) = f(x−) ≠ f(x) (removable discontinuity).\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "4",
+        "edition": "3",
+        "section": "4.26",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Discontinuities of the First and Second Kind"
     },
     "type": "definition"
   },
@@ -3425,6 +3717,30 @@
     "title": {
       "en": "Trigonometric functions",
       "es": "Funciones trigonométricas"
+    },
+    "type": "definition"
+  },
+  "definition.uniform-continuity": {
+    "confidence": "high",
+    "id": "definition.uniform-continuity",
+    "kind": "statement",
+    "latex": "\\forall \\varepsilon > 0,\\; \\exists\\, \\delta > 0 :\nd_X(p,q) < \\delta \\;\\Rightarrow\\; d_Y(f(p), f(q)) < \\varepsilon\n",
+    "natural": {
+      "en": "Let f be a mapping of a metric space X into a metric space Y. We say that f is uniformly continuous on X if for every ε > 0 there exists δ > 0 such that d_Y(f(p), f(q)) < ε for all p and q in X for which d_X(p, q) < δ."
+    },
+    "notes": "Rudin Definition 4.18. Key distinction from pointwise continuity: the same δ works for all points simultaneously. Every uniformly continuous function is continuous, but not conversely in general.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "4",
+        "edition": "3",
+        "section": "4.18",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Uniform Continuity"
     },
     "type": "definition"
   },
@@ -4072,6 +4388,29 @@
       "theorem.k-cell-compact"
     ]
   },
+  "proof.chain-rule.rudin": {
+    "confidence": "high",
+    "id": "proof.chain-rule.rudin",
+    "kind": "proof",
+    "notes": "Let y = f(x). Write f(t) - f(x) = (t - x)[f'(x) + u(t)] and g(s) - g(y) = (s - y)[g'(y) + v(s)] where u(t) → 0 and v(s) → 0. Setting s = f(t): (h(t) - h(x))/(t - x) = [g'(y) + v(s)][f'(x) + u(t)]. As t → x, s → y by continuity of f, giving h'(x) = g'(f(x))f'(x). This avoids the division-by-zero issue since it never divides by f(t) - f(x).\n",
+    "proves": "theorem.chain-rule",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "5",
+        "edition": "3",
+        "section": "5.5",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "definition.continuity-metric",
+      "definition.derivative-at-point"
+    ]
+  },
   "proof.chain-rule.stewart": {
     "confidence": "high",
     "id": "proof.chain-rule.stewart",
@@ -4238,6 +4577,29 @@
       "definition.compact-set",
       "definition.metric-space",
       "definition.neighborhood-limit-point-open-closed"
+    ]
+  },
+  "proof.compact-uniform-continuity.rudin": {
+    "confidence": "high",
+    "id": "proof.compact-uniform-continuity.rudin",
+    "kind": "proof",
+    "notes": "For each p ∈ X, get φ(p) > 0 with d_Y(f(p),f(q)) < ε/2 when d_X(p,q) < φ(p). Let J(p) = B(p, φ(p)/2). Compactness gives finite subcover J(p₁),...,J(pₙ). Set δ = min{φ(pᵢ)}/2. For d_X(p,q) < δ, find pₘ with p ∈ J(pₘ), then both p and q are within φ(pₘ) of pₘ, so d_Y(f(p),f(q)) < ε by triangle inequality.\n",
+    "proves": "theorem.compact-uniform-continuity",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "4",
+        "edition": "3",
+        "section": "4.19",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "type": "proof",
+    "uses": [
+      "definition.compact-set",
+      "definition.continuity-metric",
+      "definition.uniform-continuity"
     ]
   },
   "proof.compactness-relative.rudin": {
@@ -4522,6 +4884,93 @@
       "theorem.limit-laws"
     ]
   },
+  "proof.continuity-arithmetic-operations.rudin": {
+    "confidence": "high",
+    "id": "proof.continuity-arithmetic-operations.rudin",
+    "kind": "proof",
+    "notes": "At isolated points, trivial. At limit points, follows from Theorems 4.4 and 4.6.\n",
+    "proves": "theorem.continuity-arithmetic-operations",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "4",
+        "edition": "3",
+        "section": "4.9",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "type": "proof",
+    "uses": [
+      "proposition.continuity-limit-point-equivalence",
+      "theorem.limit-arithmetic-functions-metric"
+    ]
+  },
+  "proof.continuity-closed-preimage.rudin": {
+    "confidence": "high",
+    "id": "proof.continuity-closed-preimage.rudin",
+    "kind": "proof",
+    "notes": "A set is closed iff its complement is open, and f⁻¹(Eᶜ) = [f⁻¹(E)]ᶜ.\n",
+    "proves": "corollary.continuity-closed-preimage",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "4",
+        "edition": "3",
+        "section": "4.8",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "type": "proof",
+    "uses": [
+      "definition.neighborhood-limit-point-open-closed",
+      "theorem.continuity-open-preimage"
+    ]
+  },
+  "proof.continuity-components-rk.rudin": {
+    "confidence": "high",
+    "id": "proof.continuity-components-rk.rudin",
+    "kind": "proof",
+    "notes": "Part (a): |f_j(x) - f_j(y)| ≤ |f(x) - f(y)| = (Σ|f_i(x)-f_i(y)|²)^{1/2}. Part (b): follows from (a) and Theorem 4.9.\n",
+    "proves": "theorem.continuity-components-rk",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "4",
+        "edition": "3",
+        "section": "4.10",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "type": "proof",
+    "uses": [
+      "theorem.continuity-arithmetic-operations"
+    ]
+  },
+  "proof.continuity-limit-point-equivalence.rudin": {
+    "confidence": "high",
+    "id": "proof.continuity-limit-point-equivalence.rudin",
+    "kind": "proof",
+    "notes": "Immediate from comparing Definitions 4.1 and 4.5. The only difference is that continuity uses d_X(x,p) < δ while the limit uses 0 < d_X(x,p) < δ; at a limit point, p ∈ E makes f(p) the relevant value.\n",
+    "proves": "proposition.continuity-limit-point-equivalence",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "4",
+        "edition": "3",
+        "section": "4.6",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "type": "proof",
+    "uses": [
+      "definition.continuity-metric",
+      "definition.limit-of-function-metric"
+    ]
+  },
   "proof.continuity-of-combinations.stewart": {
     "confidence": "medium",
     "id": "proof.continuity-of-combinations.stewart",
@@ -4543,6 +4992,27 @@
     "uses": [
       "definition.continuity-at-point",
       "theorem.limit-laws"
+    ]
+  },
+  "proof.continuity-of-composition-metric.rudin": {
+    "confidence": "high",
+    "id": "proof.continuity-of-composition-metric.rudin",
+    "kind": "proof",
+    "notes": "Chain two ε-δ arguments: g continuous at f(p) gives η for ε; f continuous at p gives δ for η. Then d_X(x,p) < δ implies d_Z(h(x), h(p)) < ε.\n",
+    "proves": "theorem.continuity-of-composition-metric",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "4",
+        "edition": "3",
+        "section": "4.7",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "type": "proof",
+    "uses": [
+      "definition.continuity-metric"
     ]
   },
   "proof.continuity-of-composition.stewart": {
@@ -4567,6 +5037,118 @@
       "definition.composition-of-functions",
       "definition.continuity-at-point",
       "definition.epsilon-delta-limit"
+    ]
+  },
+  "proof.continuity-open-preimage.rudin": {
+    "confidence": "high",
+    "id": "proof.continuity-open-preimage.rudin",
+    "kind": "proof",
+    "notes": "Forward: f continuous, V open in Y. For p ∈ f⁻¹(V), f(p) ∈ V, so ∃ε with B(f(p),ε) ⊂ V. By continuity, ∃δ: d(x,p)<δ ⟹ f(x)∈V, so B(p,δ) ⊂ f⁻¹(V). Converse: given p, ε>0, let V = B(f(p),ε); V open, so f⁻¹(V) open, contains p, so ∃δ: B(p,δ) ⊂ f⁻¹(V).\n",
+    "proves": "theorem.continuity-open-preimage",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "4",
+        "edition": "3",
+        "section": "4.8",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "type": "proof",
+    "uses": [
+      "definition.continuity-metric",
+      "definition.neighborhood-limit-point-open-closed"
+    ]
+  },
+  "proof.continuous-bijection-compact-inverse.rudin": {
+    "confidence": "high",
+    "id": "proof.continuous-bijection-compact-inverse.rudin",
+    "kind": "proof",
+    "notes": "Apply Thm 4.8 to f⁻¹: need f(V) open in Y for V open in X. Vᶜ closed in X, hence compact (Thm 2.35); f(Vᶜ) compact (Thm 4.14), hence closed (Thm 2.34). Since f is bijective, f(V) = [f(Vᶜ)]ᶜ, open.\n",
+    "proves": "theorem.continuous-bijection-compact-inverse",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "4",
+        "edition": "3",
+        "section": "4.17",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "type": "proof",
+    "uses": [
+      "definition.compact-set",
+      "proposition.compact-is-closed",
+      "theorem.continuity-open-preimage",
+      "theorem.continuous-image-compact"
+    ]
+  },
+  "proof.continuous-compact-to-rk-closed-bounded.rudin": {
+    "confidence": "high",
+    "id": "proof.continuous-compact-to-rk-closed-bounded.rudin",
+    "kind": "proof",
+    "notes": "Follows from Theorem 2.41: compact subsets of R^k are closed and bounded.\n",
+    "proves": "theorem.continuous-compact-to-rk-closed-bounded",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "4",
+        "edition": "3",
+        "section": "4.15",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "type": "proof",
+    "uses": [
+      "theorem.continuous-image-compact",
+      "theorem.heine-borel"
+    ]
+  },
+  "proof.continuous-image-compact.rudin": {
+    "confidence": "high",
+    "id": "proof.continuous-image-compact.rudin",
+    "kind": "proof",
+    "notes": "Let {V_α} be an open cover of f(X). By Thm 4.8, each f⁻¹(V_α) is open. Since X is compact, finitely many cover X: X ⊂ f⁻¹(V_{α₁}) ∪ ... ∪ f⁻¹(V_{αₙ}). Then f(X) ⊂ V_{α₁} ∪ ... ∪ V_{αₙ}.\n",
+    "proves": "theorem.continuous-image-compact",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "4",
+        "edition": "3",
+        "section": "4.14",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "type": "proof",
+    "uses": [
+      "definition.compact-set",
+      "theorem.continuity-open-preimage"
+    ]
+  },
+  "proof.continuous-image-connected.rudin": {
+    "confidence": "high",
+    "id": "proof.continuous-image-connected.rudin",
+    "kind": "proof",
+    "notes": "By contradiction: if f(E) = A ∪ B separated, put G = E ∩ f⁻¹(A), H = E ∩ f⁻¹(B). Since f continuous and A̅ closed, f⁻¹(A̅) closed, G̅ ⊂ f⁻¹(A̅), so f(G̅) ⊂ A̅. Since f(H)=B and A̅∩B=∅, G̅∩H=∅. Similarly G∩H̅=∅. So G,H separated, contradicting E connected.\n",
+    "proves": "theorem.continuous-image-connected",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "4",
+        "edition": "3",
+        "section": "4.22",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "type": "proof",
+    "uses": [
+      "definition.continuity-metric",
+      "definition.separated-connected"
     ]
   },
   "proof.convergence-in-rk.rudin": {
@@ -4639,6 +5221,29 @@
       "definition.finite-countable-sets",
       "definition.sequence",
       "proposition.infinite-subset-countable"
+    ]
+  },
+  "proof.darboux-theorem.rudin": {
+    "confidence": "high",
+    "id": "proof.darboux-theorem.rudin",
+    "kind": "proof",
+    "notes": "Put g(t) = f(t) - lambda*t. Then g'(a) < 0, so g(t1) < g(a) for some t1 in (a,b), and g'(b) > 0, so g(t2) < g(b) for some t2 in (a,b). Hence g attains its minimum on [a,b] (Theorem 4.16, EVT) at some interior point x with a < x < b. By Theorem 5.8 (Fermat), g'(x) = 0, so f'(x) = lambda.\n",
+    "proves": "theorem.darboux-theorem",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "5",
+        "edition": "3",
+        "section": "5.12",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "theorem.extreme-value-theorem-compact-metric",
+      "theorem.fermat-theorem"
     ]
   },
   "proof.de-morgan.rudin": {
@@ -4973,6 +5578,28 @@
       "theorem.derivative-ln"
     ]
   },
+  "proof.derivative-no-simple-discontinuities.rudin": {
+    "confidence": "high",
+    "id": "proof.derivative-no-simple-discontinuities.rudin",
+    "kind": "proof",
+    "notes": "Immediate from Darboux's theorem (5.12). A simple (jump) discontinuity at c would mean the left and right limits of f' exist but differ, violating the intermediate value property established by 5.12.\n",
+    "proves": "corollary.derivative-no-simple-discontinuities",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "5",
+        "edition": "3",
+        "section": "5.12",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "theorem.darboux-theorem"
+    ]
+  },
   "proof.derivative-sec.stewart": {
     "confidence": "high",
     "id": "proof.derivative-sec.stewart",
@@ -5019,6 +5646,29 @@
       "definition.derivative-function",
       "theorem.limit-laws",
       "theorem.limit-sinx-over-x"
+    ]
+  },
+  "proof.derivative-sum-rule.rudin": {
+    "confidence": "high",
+    "id": "proof.derivative-sum-rule.rudin",
+    "kind": "proof",
+    "notes": "Rudin states \"(a) is clear, by Theorem 4.4.\" The sum of difference quotients converges to the sum of derivatives by the limit sum law.\n",
+    "proves": "theorem.derivative-sum-rule",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "5",
+        "edition": "3",
+        "section": "5.3",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "definition.derivative-at-point",
+      "theorem.limit-laws"
     ]
   },
   "proof.derivative-tan.stewart": {
@@ -5090,6 +5740,29 @@
     "uses": [
       "theorem.constant-multiple-rule",
       "theorem.sum-rule"
+    ]
+  },
+  "proof.differentiable-implies-continuous.rudin": {
+    "confidence": "high",
+    "id": "proof.differentiable-implies-continuous.rudin",
+    "kind": "proof",
+    "notes": "As t → x: f(t) - f(x) = [(f(t) - f(x))/(t - x)] · (t - x) → f'(x) · 0 = 0, by Theorem 4.4 (limit laws). Hence f is continuous at x.\n",
+    "proves": "theorem.differentiable-implies-continuous",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "5",
+        "edition": "3",
+        "section": "5.2",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "definition.derivative-at-point",
+      "theorem.limit-laws"
     ]
   },
   "proof.differentiable-implies-continuous.stewart": {
@@ -5354,6 +6027,28 @@
       "proposition.addition-cancellation"
     ]
   },
+  "proof.extreme-value-theorem-compact-metric.rudin": {
+    "confidence": "high",
+    "id": "proof.extreme-value-theorem-compact-metric.rudin",
+    "kind": "proof",
+    "notes": "By Theorem 4.15, f(X) is a closed and bounded set of real numbers. By Theorem 2.28, a closed bounded set contains its sup and inf.\n",
+    "proves": "theorem.extreme-value-theorem-compact-metric",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "4",
+        "edition": "3",
+        "section": "4.16",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "type": "proof",
+    "uses": [
+      "definition.supremum",
+      "theorem.continuous-compact-to-rk-closed-bounded"
+    ]
+  },
   "proof.extreme-value-theorem.stewart": {
     "confidence": "low",
     "id": "proof.extreme-value-theorem.stewart",
@@ -5374,6 +6069,29 @@
     "type": "proof",
     "uses": [
       "definition.continuity-on-interval"
+    ]
+  },
+  "proof.fermat-theorem.rudin": {
+    "confidence": "high",
+    "id": "proof.fermat-theorem.rudin",
+    "kind": "proof",
+    "notes": "Choose delta so that f(t) <= f(x) for |t - x| < delta. For x - delta < t < x: (f(t) - f(x))/(t - x) >= 0, so f'(x) >= 0. For x < t < x + delta: (f(t) - f(x))/(t - x) <= 0, so f'(x) <= 0. Hence f'(x) = 0. Same argument applies for local minima.\n",
+    "proves": "theorem.fermat-theorem",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "5",
+        "edition": "3",
+        "section": "5.8",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "definition.derivative-at-point",
+      "definition.local-maximum"
     ]
   },
   "proof.fermat-theorem.stewart": {
@@ -5565,6 +6283,29 @@
       "definition.antiderivative"
     ]
   },
+  "proof.generalized-mean-value-theorem.rudin": {
+    "confidence": "high",
+    "id": "proof.generalized-mean-value-theorem.rudin",
+    "kind": "proof",
+    "notes": "Put h(t) = [f(b)-f(a)]g(t) - [g(b)-g(a)]f(t). Then h is continuous on [a,b], differentiable in (a,b), and h(a) = f(b)g(a) - f(a)g(b) = h(b). If h is constant, h'(x) = 0 for every x. Otherwise, h attains its maximum or minimum at some interior point x (by Theorem 4.16, EVT on compact sets), and Theorem 5.8 gives h'(x) = 0.\n",
+    "proves": "theorem.generalized-mean-value-theorem",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "5",
+        "edition": "3",
+        "section": "5.9",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "theorem.extreme-value-theorem-compact-metric",
+      "theorem.fermat-theorem"
+    ]
+  },
   "proof.geometric-series.rudin": {
     "confidence": "high",
     "id": "proof.geometric-series.rudin",
@@ -5681,6 +6422,28 @@
     "uses": [
       "definition.complex-number",
       "definition.imaginary-unit"
+    ]
+  },
+  "proof.increasing-decreasing-test.rudin": {
+    "confidence": "high",
+    "id": "proof.increasing-decreasing-test.rudin",
+    "kind": "proof",
+    "notes": "For any x1, x2 in (a,b) with x1 < x2, MVT gives f(x2) - f(x1) = (x2 - x1)f'(x) for some x between x1 and x2. If f'(x) >= 0, then f(x2) >= f(x1) (monotonically increasing). If f'(x) <= 0, then f(x2) <= f(x1) (monotonically decreasing).\n",
+    "proves": "proposition.increasing-decreasing-test",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "5",
+        "edition": "3",
+        "section": "5.11",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "theorem.mean-value-theorem"
     ]
   },
   "proof.increasing-decreasing-test.stewart": {
@@ -5943,6 +6706,28 @@
       "theorem.product-rule"
     ]
   },
+  "proof.intermediate-value-theorem.rudin": {
+    "confidence": "high",
+    "id": "proof.intermediate-value-theorem.rudin",
+    "kind": "proof",
+    "notes": "By Theorem 2.47, [a,b] is connected. By Theorem 4.22, f([a,b]) is a connected subset of R¹. By Theorem 2.47 again, f([a,b]) contains every value between f(a) and f(b).\n",
+    "proves": "theorem.intermediate-value-theorem",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "4",
+        "edition": "3",
+        "section": "4.23",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "type": "proof",
+    "uses": [
+      "theorem.connected-subsets-of-r",
+      "theorem.continuous-image-connected"
+    ]
+  },
   "proof.intermediate-value-theorem.stewart": {
     "confidence": "low",
     "id": "proof.intermediate-value-theorem.stewart",
@@ -6102,6 +6887,29 @@
       "proposition.laws-of-exponents"
     ]
   },
+  "proof.lhopitals-rule.rudin": {
+    "confidence": "high",
+    "id": "proof.lhopitals-rule.rudin",
+    "kind": "proof",
+    "notes": "Case -∞ < A < +∞: Choose r with A < r < q. By hypothesis (13), f'(x)/g'(x) < r near a. By the generalized MVT (5.9), (f(x)-f(y))/(g(x)-g(y)) = f'(t)/g'(t) < r for some t between x and y. For the 0/0 case: let x → a to get f(y)/g(y) <= r < q. For the ∞/∞ case: multiply by (g(x)-g(y))/g(x) and let x → a to get f(x)/g(x) < q. A symmetric argument with p < A gives the lower bound. Cases A = +∞ and A = -∞ are handled similarly.\n",
+    "proves": "theorem.lhopitals-rule",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "5",
+        "edition": "3",
+        "section": "5.13",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "definition.limit-extended-real",
+      "theorem.generalized-mean-value-theorem"
+    ]
+  },
   "proof.lhopitals-rule.stewart": {
     "confidence": "medium",
     "id": "proof.lhopitals-rule.stewart",
@@ -6124,6 +6932,50 @@
       "definition.indeterminate-form",
       "theorem.limit-laws",
       "theorem.mean-value-theorem"
+    ]
+  },
+  "proof.limit-arithmetic-extended-real.rudin": {
+    "confidence": "high",
+    "id": "proof.limit-arithmetic-extended-real.rudin",
+    "kind": "proof",
+    "notes": "Proof analogous to Theorem 4.4, using neighborhoods of ±∞. Rudin states it for completeness without giving a new proof.\n",
+    "proves": "theorem.limit-arithmetic-extended-real",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "4",
+        "edition": "3",
+        "section": "4.34",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "type": "proof",
+    "uses": [
+      "definition.limit-extended-real",
+      "theorem.limit-arithmetic-functions-metric"
+    ]
+  },
+  "proof.limit-arithmetic-functions-metric.rudin": {
+    "confidence": "high",
+    "id": "proof.limit-arithmetic-functions-metric.rudin",
+    "kind": "proof",
+    "notes": "By Theorem 4.2, reduces to the analogous properties of sequences (Theorem 3.3: arithmetic of convergent sequences).\n",
+    "proves": "theorem.limit-arithmetic-functions-metric",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "4",
+        "edition": "3",
+        "section": "4.4",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "type": "proof",
+    "uses": [
+      "proposition.convergent-sequence-properties",
+      "theorem.sequential-characterization-function-limit"
     ]
   },
   "proof.limit-comparison-test.stewart": {
@@ -6378,6 +7230,28 @@
       "definition.upper-bound"
     ]
   },
+  "proof.mean-value-inequality-vector.rudin": {
+    "confidence": "high",
+    "id": "proof.mean-value-inequality-vector.rudin",
+    "kind": "proof",
+    "notes": "Put z = f(b) - f(a) and define phi(t) = z . f(t) (inner product). Then phi is real-valued and continuous on [a,b], differentiable in (a,b). By the real MVT: phi(b) - phi(a) = (b - a)phi'(x) = (b - a)z . f'(x) for some x in (a,b). But phi(b) - phi(a) = z . z = |z|^2. By the Schwarz inequality: |z|^2 = (b - a)|z . f'(x)| <= (b - a)|z||f'(x)|. Hence |z| <= (b - a)|f'(x)|. Proof due to V. P. Havin.\n",
+    "proves": "theorem.mean-value-inequality-vector",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "5",
+        "edition": "3",
+        "section": "5.19",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "theorem.mean-value-theorem"
+    ]
+  },
   "proof.mean-value-theorem-integrals.stewart": {
     "confidence": "high",
     "id": "proof.mean-value-theorem-integrals.stewart",
@@ -6403,6 +7277,28 @@
       "proposition.integral-comparison",
       "theorem.extreme-value-theorem",
       "theorem.intermediate-value-theorem"
+    ]
+  },
+  "proof.mean-value-theorem.rudin": {
+    "confidence": "high",
+    "id": "proof.mean-value-theorem.rudin",
+    "kind": "proof",
+    "notes": "Take g(x) = x in Theorem 5.9 (generalized MVT). Then [f(b) - f(a)] · 1 = [b - a] · f'(x) for some x in (a,b).\n",
+    "proves": "theorem.mean-value-theorem",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "5",
+        "edition": "3",
+        "section": "5.10",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "theorem.generalized-mean-value-theorem"
     ]
   },
   "proof.mean-value-theorem.stewart": {
@@ -6478,6 +7374,72 @@
       "definition.monotonic-sequence",
       "definition.supremum",
       "proposition.convergent-sequence-properties"
+    ]
+  },
+  "proof.monotone-countable-discontinuities.rudin": {
+    "confidence": "high",
+    "id": "proof.monotone-countable-discontinuities.rudin",
+    "kind": "proof",
+    "notes": "For f increasing, at each discontinuity x associate a rational r(x) with f(x−) < r(x) < f(x+). Since x₁ < x₂ implies f(x₁+) ≤ f(x₂−), we get r(x₁) ≠ r(x₂). This is a 1-1 map from discontinuities into Q, hence the set is at most countable.\n",
+    "proves": "theorem.monotone-countable-discontinuities",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "4",
+        "edition": "3",
+        "section": "4.30",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "type": "proof",
+    "uses": [
+      "definition.finite-countable-sets",
+      "theorem.monotone-one-sided-limits"
+    ]
+  },
+  "proof.monotone-no-second-kind-discontinuity.rudin": {
+    "confidence": "high",
+    "id": "proof.monotone-no-second-kind-discontinuity.rudin",
+    "kind": "proof",
+    "notes": "Direct consequence of Theorem 4.29: both f(x+) and f(x−) exist at every point, so any discontinuity must be of the first kind.\n",
+    "proves": "corollary.monotone-no-second-kind-discontinuity",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "4",
+        "edition": "3",
+        "section": "4.29",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "type": "proof",
+    "uses": [
+      "theorem.monotone-one-sided-limits"
+    ]
+  },
+  "proof.monotone-one-sided-limits.rudin": {
+    "confidence": "high",
+    "id": "proof.monotone-one-sided-limits.rudin",
+    "kind": "proof",
+    "notes": "Let A = sup{f(t): a<t<x}. Then A ≤ f(x). For any ε>0, ∃δ>0 with A−ε < f(x−δ) ≤ A. Monotonicity gives f(x−δ) ≤ f(t) ≤ A for x−δ<t<x, so |f(t)−A| < ε. Hence f(x−) = A. The inequality f(x+) ≤ f(y−) follows by comparing inf and sup over (x,y).\n",
+    "proves": "theorem.monotone-one-sided-limits",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "4",
+        "edition": "3",
+        "section": "4.29",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "type": "proof",
+    "uses": [
+      "definition.least-upper-bound-property",
+      "definition.monotonically-increasing-function",
+      "definition.right-left-limits"
     ]
   },
   "proof.monotonic-sequence-theorem.stewart": {
@@ -6659,6 +7621,28 @@
     "type": "proof",
     "uses": [
       "theorem.ftc-part2"
+    ]
+  },
+  "proof.noncompact-counterexamples.rudin": {
+    "confidence": "high",
+    "id": "proof.noncompact-counterexamples.rudin",
+    "kind": "proof",
+    "notes": "For bounded noncompact E: limit point x₀ ∉ E exists. (a) f(x) = 1/(x−x₀) is continuous, unbounded. (b) g(x) = 1/(1+(x−x₀)²) is bounded, sup=1 not attained. (c) f above is not uniformly continuous. For unbounded E: f(x)=x for (a), h(x)=x²/(1+x²) for (b).\n",
+    "proves": "theorem.noncompact-counterexamples",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "4",
+        "edition": "3",
+        "section": "4.20",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "type": "proof",
+    "uses": [
+      "definition.uniform-continuity",
+      "theorem.continuity-arithmetic-operations"
     ]
   },
   "proof.nonnegative-series-bounded.rudin": {
@@ -6943,6 +7927,30 @@
       "theorem.power-series-convergence"
     ]
   },
+  "proof.product-rule.rudin": {
+    "confidence": "high",
+    "id": "proof.product-rule.rudin",
+    "kind": "proof",
+    "notes": "Let h = fg. Then h(t) - h(x) = f(t)[g(t) - g(x)] + g(x)[f(t) - f(x)]. Dividing by t - x and noting f(t) → f(x) as t → x (by Theorem 5.2), the product rule follows from Theorem 4.4 (limit laws).\n",
+    "proves": "theorem.product-rule",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "5",
+        "edition": "3",
+        "section": "5.3",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "definition.derivative-at-point",
+      "theorem.differentiable-implies-continuous",
+      "theorem.limit-laws"
+    ]
+  },
   "proof.product-rule.stewart": {
     "confidence": "high",
     "id": "proof.product-rule.stewart",
@@ -6963,6 +7971,30 @@
     "type": "proof",
     "uses": [
       "definition.derivative-function",
+      "theorem.differentiable-implies-continuous",
+      "theorem.limit-laws"
+    ]
+  },
+  "proof.quotient-rule.rudin": {
+    "confidence": "high",
+    "id": "proof.quotient-rule.rudin",
+    "kind": "proof",
+    "notes": "Let h = f/g. Then (h(t) - h(x))/(t - x) = (1/(g(t)g(x)))[g(x)(f(t)-f(x))/(t-x) - f(x)(g(t)-g(x))/(t-x)]. Letting t → x, applying Theorems 4.4 and 5.2, we obtain (c).\n",
+    "proves": "theorem.quotient-rule",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "5",
+        "edition": "3",
+        "section": "5.3",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "definition.derivative-at-point",
       "theorem.differentiable-implies-continuous",
       "theorem.limit-laws"
     ]
@@ -7253,6 +8285,28 @@
       "proposition.first-derivative-test"
     ]
   },
+  "proof.sequential-characterization-function-limit.rudin": {
+    "confidence": "high",
+    "id": "proof.sequential-characterization-function-limit.rudin",
+    "kind": "proof",
+    "notes": "Forward: given ε-δ limit, any sequence p_n → p with p_n ≠ p eventually enters the δ-ball, so f(p_n) enters the ε-ball. Converse: contrapositive — if ε-δ fails, construct a sequence with δ_n = 1/n witnessing failure.\n",
+    "proves": "theorem.sequential-characterization-function-limit",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "4",
+        "edition": "3",
+        "section": "4.2",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "type": "proof",
+    "uses": [
+      "definition.convergent-sequence",
+      "definition.limit-of-function-metric"
+    ]
+  },
   "proof.series-addition.rudin": {
     "confidence": "high",
     "id": "proof.series-addition.rudin",
@@ -7510,6 +8564,29 @@
       "theorem.squeeze-theorem"
     ]
   },
+  "proof.taylor-theorem.rudin": {
+    "confidence": "high",
+    "id": "proof.taylor-theorem.rudin",
+    "kind": "proof",
+    "notes": "Let M be defined by f(beta) = P(beta) + M(beta - alpha)^n, and put g(t) = f(t) - P(t) - M(t - alpha)^n. Then g^(n)(t) = f^(n)(t) - n!M and g(alpha) = g'(alpha) = ... = g^(n-1)(alpha) = 0. Since g(beta) = 0, MVT gives g'(x1) = 0 for some x1 between alpha and beta. Since g'(alpha) = 0, MVT gives g''(x2) = 0 for some x2 between alpha and x1. After n steps: g^(n)(xn) = 0, so f^(n)(xn) = n!M.\n",
+    "proves": "theorem.taylor-theorem",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "5",
+        "edition": "3",
+        "section": "5.15",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "definition.second-derivative",
+      "theorem.mean-value-theorem"
+    ]
+  },
   "proof.unions-intersections-open-closed.rudin": {
     "confidence": "high",
     "id": "proof.unions-intersections-open-closed.rudin",
@@ -7534,6 +8611,28 @@
       "proposition.open-iff-complement-closed"
     ]
   },
+  "proof.uniqueness-of-function-limit.rudin": {
+    "confidence": "high",
+    "id": "proof.uniqueness-of-function-limit.rudin",
+    "kind": "proof",
+    "notes": "Follows from Theorem 3.2(b) (uniqueness of sequence limits) and the sequential characterization (Theorem 4.2).\n",
+    "proves": "corollary.uniqueness-of-function-limit",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "4",
+        "edition": "3",
+        "section": "4.2",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "type": "proof",
+    "uses": [
+      "proposition.convergent-sequence-properties",
+      "theorem.sequential-characterization-function-limit"
+    ]
+  },
   "proof.vertical-line-test.stewart": {
     "confidence": "medium",
     "id": "proof.vertical-line-test.stewart",
@@ -7555,6 +8654,28 @@
     "uses": [
       "definition.function",
       "definition.graph-of-function"
+    ]
+  },
+  "proof.zero-derivative-constant.rudin": {
+    "confidence": "high",
+    "id": "proof.zero-derivative-constant.rudin",
+    "kind": "proof",
+    "notes": "Part (b) of Theorem 5.11. For any x1, x2 in (a,b), MVT gives f(x2) - f(x1) = (x2 - x1)f'(x) = 0. Hence f is constant.\n",
+    "proves": "corollary.zero-derivative-constant",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "5",
+        "edition": "3",
+        "section": "5.11",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      "theorem.mean-value-theorem"
     ]
   },
   "proof.zero-derivative-constant.stewart": {
@@ -7797,6 +8918,30 @@
     },
     "type": "proposition"
   },
+  "proposition.continuity-limit-point-equivalence": {
+    "confidence": "high",
+    "id": "proposition.continuity-limit-point-equivalence",
+    "kind": "statement",
+    "latex": "p \\text{ limit point of } E \\;\\Rightarrow\\;\n\\bigl(f \\text{ continuous at } p \\iff \\lim_{x \\to p} f(x) = f(p)\\bigr)\n",
+    "natural": {
+      "en": "In the situation of Definition 4.5, assume also that p is a limit point of E. Then f is continuous at p if and only if lim_{x→p} f(x) = f(p)."
+    },
+    "notes": "Reclassified from theorem to proposition: trivial comparison of Definitions 4.1 and 4.5, serving as a utility bridge fact.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "4",
+        "edition": "3",
+        "section": "4.6",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Continuity Equals Limit at Limit Points"
+    },
+    "type": "proposition"
+  },
   "proposition.convergence-in-rk": {
     "confidence": "high",
     "id": "proposition.convergence-in-rk",
@@ -8001,7 +9146,7 @@
       "en": "(a) If f'(x) > 0 on an interval, then f is increasing on that interval. (b) If f'(x) < 0 on an interval, then f is decreasing on that interval.",
       "es": "(a) Si f'(x) > 0 en un intervalo, entonces f es creciente en ese intervalo. (b) Si f'(x) < 0 en un intervalo, entonces f es decreciente en ese intervalo."
     },
-    "notes": "Direct consequence of the Mean Value Theorem.\n",
+    "notes": "Direct consequence of the Mean Value Theorem. Rudin (5.11) states three parts: (a) f' >= 0 implies monotonically increasing, (b) f' = 0 implies constant, (c) f' <= 0 implies monotonically decreasing. Stewart uses strict inequalities (f' > 0 implies increasing, f' < 0 implies decreasing). Rudin's non-strict version subsumes Stewart's strict version.\n",
     "sources": [
       {
         "author": "James Stewart",
@@ -8009,6 +9154,13 @@
         "edition": "7",
         "section": "4.3",
         "work": "Cálculo de una variable — Trascendentes tempranas"
+      },
+      {
+        "author": "Walter Rudin",
+        "chapter": "5",
+        "edition": "3",
+        "section": "5.11",
+        "work": "Principles of Mathematical Analysis"
       }
     ],
     "status": "draft",
@@ -8868,7 +10020,7 @@
       "en": "If g is differentiable at x and f is differentiable at g(x), then the composite function F = f ∘ g defined by F(x) = f(g(x)) is differentiable at x and F' is given by F'(x) = f'(g(x)) · g'(x). In Leibniz notation, if y = f(u) and u = g(x) are differentiable functions, then dy/dx = (dy/du)(du/dx).",
       "es": "Si g es diferenciable en x y f es diferenciable en g(x), entonces la función compuesta F = f ∘ g definida por F(x) = f(g(x)) es diferenciable en x y F' se obtiene mediante F'(x) = f'(g(x)) · g'(x). En notación de Leibniz, si y = f(u) y u = g(x) son funciones diferenciables, entonces dy/dx = (dy/du)(du/dx)."
     },
-    "notes": "One of the most important rules in calculus. Stewart proves it using an increment formulation that avoids dividing by Δu = 0.\n",
+    "notes": "One of the most important rules in calculus. Stewart proves it using an increment formulation that avoids dividing by Δu = 0. Rudin (5.5) uses the same approach with error functions u(t), v(s) and the continuity of f to conclude s → y as t → x.\n",
     "sources": [
       {
         "author": "James Stewart",
@@ -8876,6 +10028,13 @@
         "edition": "7",
         "section": "3.4",
         "work": "Cálculo de una variable — Trascendentes tempranas"
+      },
+      {
+        "author": "Walter Rudin",
+        "chapter": "5",
+        "edition": "3",
+        "section": "5.5",
+        "work": "Principles of Mathematical Analysis"
       }
     ],
     "status": "draft",
@@ -8906,6 +10065,30 @@
     "status": "draft",
     "title": {
       "en": "Characterization of lim sup"
+    },
+    "type": "theorem"
+  },
+  "theorem.compact-uniform-continuity": {
+    "confidence": "high",
+    "id": "theorem.compact-uniform-continuity",
+    "kind": "statement",
+    "latex": "f : X \\to Y \\text{ continuous},\\; X \\text{ compact}\n\\;\\Rightarrow\\; f \\text{ uniformly continuous on } X\n",
+    "natural": {
+      "en": "Let f be a continuous mapping of a compact metric space X into a metric space Y. Then f is uniformly continuous on X."
+    },
+    "notes": "The proof uses the Lebesgue covering lemma idea: extract a finite subcover from neighborhoods, then take δ as half the minimum radius.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "4",
+        "edition": "3",
+        "section": "4.19",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Continuous on Compact Implies Uniformly Continuous"
     },
     "type": "theorem"
   },
@@ -9134,6 +10317,50 @@
     },
     "type": "theorem"
   },
+  "theorem.continuity-arithmetic-operations": {
+    "confidence": "high",
+    "id": "theorem.continuity-arithmetic-operations",
+    "kind": "statement",
+    "natural": {
+      "en": "Let f and g be complex continuous functions on a metric space X. Then f + g, fg, and f/g are continuous on X. In the last case, g(x) ≠ 0 for all x ∈ X."
+    },
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "4",
+        "edition": "3",
+        "section": "4.9",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Continuity of Arithmetic Operations"
+    },
+    "type": "theorem"
+  },
+  "theorem.continuity-components-rk": {
+    "confidence": "high",
+    "id": "theorem.continuity-components-rk",
+    "kind": "statement",
+    "natural": {
+      "en": "(a) Let f₁, ..., f_k be real functions on a metric space X, and let f be the mapping into R^k defined by f(x) = (f₁(x), ..., f_k(x)). Then f is continuous if and only if each f_j is continuous. (b) If f and g are continuous mappings of X into R^k, then f + g and f · g are continuous on X."
+    },
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "4",
+        "edition": "3",
+        "section": "4.10",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Continuity of Vector-Valued Functions via Components"
+    },
+    "type": "theorem"
+  },
   "theorem.continuity-of-combinations": {
     "confidence": "medium",
     "id": "theorem.continuity-of-combinations",
@@ -9184,6 +10411,147 @@
     },
     "type": "theorem"
   },
+  "theorem.continuity-of-composition-metric": {
+    "confidence": "high",
+    "id": "theorem.continuity-of-composition-metric",
+    "kind": "statement",
+    "latex": "f \\text{ continuous at } p,\\; g \\text{ continuous at } f(p)\n\\;\\Rightarrow\\; g \\circ f \\text{ continuous at } p\n",
+    "natural": {
+      "en": "Suppose X, Y, Z are metric spaces, E ⊂ X, f maps E into Y, g maps f(E) into Z, and h(x) = g(f(x)) for x ∈ E. If f is continuous at p ∈ E and g is continuous at f(p), then h is continuous at p."
+    },
+    "notes": "Strictly more general than Stewart's theorem.continuity-of-composition which is stated for real functions. The proof structure is the same (chain two ε-δ arguments).\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "4",
+        "edition": "3",
+        "section": "4.7",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Continuity of Composition (Metric Spaces)"
+    },
+    "type": "theorem"
+  },
+  "theorem.continuity-open-preimage": {
+    "confidence": "high",
+    "id": "theorem.continuity-open-preimage",
+    "kind": "statement",
+    "latex": "f : X \\to Y \\text{ continuous} \\;\\iff\\;\nV \\text{ open in } Y \\Rightarrow f^{-1}(V) \\text{ open in } X\n",
+    "natural": {
+      "en": "A mapping f of a metric space X into a metric space Y is continuous on X if and only if f⁻¹(V) is open in X for every open set V in Y."
+    },
+    "notes": "This topological characterization of continuity is fundamental. It motivates the general definition of continuity in topology.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "4",
+        "edition": "3",
+        "section": "4.8",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Continuity via Open Preimages"
+    },
+    "type": "theorem"
+  },
+  "theorem.continuous-bijection-compact-inverse": {
+    "confidence": "high",
+    "id": "theorem.continuous-bijection-compact-inverse",
+    "kind": "statement",
+    "latex": "f : X \\xrightarrow{\\text{cont., 1-1, onto}} Y,\\; X \\text{ compact}\n\\;\\Rightarrow\\; f^{-1} : Y \\to X \\text{ continuous}\n",
+    "natural": {
+      "en": "Suppose f is a continuous 1-1 mapping of a compact metric space X onto a metric space Y. Then the inverse mapping f⁻¹ (defined by f⁻¹(f(x)) = x for x ∈ X) is a continuous mapping of Y onto X."
+    },
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "4",
+        "edition": "3",
+        "section": "4.17",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Continuous Bijection from Compact Space has Continuous Inverse"
+    },
+    "type": "theorem"
+  },
+  "theorem.continuous-compact-to-rk-closed-bounded": {
+    "confidence": "high",
+    "id": "theorem.continuous-compact-to-rk-closed-bounded",
+    "kind": "statement",
+    "natural": {
+      "en": "If f is a continuous mapping of a compact metric space X into R^k, then f(X) is closed and bounded. Thus f is bounded."
+    },
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "4",
+        "edition": "3",
+        "section": "4.15",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Continuous Image of Compact Set into R^k is Closed and Bounded"
+    },
+    "type": "theorem"
+  },
+  "theorem.continuous-image-compact": {
+    "confidence": "high",
+    "id": "theorem.continuous-image-compact",
+    "kind": "statement",
+    "latex": "f : X \\to Y \\text{ continuous},\\; X \\text{ compact}\n\\;\\Rightarrow\\; f(X) \\text{ compact}\n",
+    "natural": {
+      "en": "Suppose f is a continuous mapping of a compact metric space X into a metric space Y. Then f(X) is compact."
+    },
+    "notes": "Fundamental result connecting continuity and compactness. Many important theorems (4.15, 4.16, 4.17, 4.19) follow as consequences.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "4",
+        "edition": "3",
+        "section": "4.14",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Continuous Image of a Compact Set is Compact"
+    },
+    "type": "theorem"
+  },
+  "theorem.continuous-image-connected": {
+    "confidence": "high",
+    "id": "theorem.continuous-image-connected",
+    "kind": "statement",
+    "latex": "f : X \\to Y \\text{ continuous},\\; E \\subset X \\text{ connected}\n\\;\\Rightarrow\\; f(E) \\text{ connected}\n",
+    "natural": {
+      "en": "If f is a continuous mapping of a metric space X into a metric space Y, and if E is a connected subset of X, then f(E) is connected."
+    },
+    "notes": "Fundamental result connecting continuity and connectedness. The Intermediate Value Theorem follows as a corollary via the characterization of connected subsets of R (Theorem 2.47).\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "4",
+        "edition": "3",
+        "section": "4.22",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Continuous Image of a Connected Set is Connected"
+    },
+    "type": "theorem"
+  },
   "theorem.countable-union-countable": {
     "confidence": "high",
     "id": "theorem.countable-union-countable",
@@ -9204,6 +10572,30 @@
     "status": "draft",
     "title": {
       "en": "Countable Union of Countable Sets is Countable"
+    },
+    "type": "theorem"
+  },
+  "theorem.darboux-theorem": {
+    "confidence": "high",
+    "id": "theorem.darboux-theorem",
+    "kind": "statement",
+    "latex": "f'(a) < \\lambda < f'(b)\n\\;\\Rightarrow\\;\n\\exists\\, x \\in (a,b) : f'(x) = \\lambda\n",
+    "natural": {
+      "en": "Suppose f is a real differentiable function on [a, b] and suppose f'(a) < lambda < f'(b). Then there is a point x in (a, b) such that f'(x) = lambda. A similar result holds if f'(a) > f'(b)."
+    },
+    "notes": "This theorem shows that derivatives, even when discontinuous, satisfy the intermediate value property. The proof considers g(t) = f(t) - lambda*t and applies the extreme value theorem (4.16) and Fermat's theorem (5.8). Rudin labels this result as Theorem 5.12; it is classically known as Darboux's theorem.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "5",
+        "edition": "3",
+        "section": "5.12",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Darboux's Theorem (Intermediate Value Property of Derivatives)"
     },
     "type": "theorem"
   },
@@ -9597,6 +10989,30 @@
     },
     "type": "theorem"
   },
+  "theorem.derivative-sum-rule": {
+    "confidence": "high",
+    "id": "theorem.derivative-sum-rule",
+    "kind": "statement",
+    "latex": "(f + g)'(x) = f'(x) + g'(x)\n",
+    "natural": {
+      "en": "If f and g are defined on [a, b] and are differentiable at a point x in [a, b], then f + g is differentiable at x and (f + g)'(x) = f'(x) + g'(x)."
+    },
+    "notes": "Rudin (5.3a) states this as part of a combined theorem with the product and quotient rules. Stewart treats the sum rule as immediate from limit laws and does not give it a separate theorem number.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "5",
+        "edition": "3",
+        "section": "5.3",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Sum Rule for Derivatives"
+    },
+    "type": "theorem"
+  },
   "theorem.derivative-tan": {
     "confidence": "high",
     "id": "theorem.derivative-tan",
@@ -9632,7 +11048,7 @@
       "en": "If f is differentiable at a, then f is continuous at a.",
       "es": "Si f es diferenciable en a, entonces f es continua en a."
     },
-    "notes": "Stewart proves this theorem in section 2.8. The converse is false: f(x) = |x| is continuous at 0 but not differentiable there.\n",
+    "notes": "Stewart proves this theorem in section 2.8. The converse is false: f(x) = |x| is continuous at 0 but not differentiable there. Rudin (5.2) gives the same proof using Theorem 4.4 (limit laws).\n",
     "sources": [
       {
         "author": "James Stewart",
@@ -9640,6 +11056,13 @@
         "edition": "7",
         "section": "2.8",
         "work": "Cálculo de una variable — Trascendentes tempranas"
+      },
+      {
+        "author": "Walter Rudin",
+        "chapter": "5",
+        "edition": "3",
+        "section": "5.2",
+        "work": "Principles of Mathematical Analysis"
       }
     ],
     "status": "draft",
@@ -9852,6 +11275,30 @@
     },
     "type": "theorem"
   },
+  "theorem.extreme-value-theorem-compact-metric": {
+    "confidence": "high",
+    "id": "theorem.extreme-value-theorem-compact-metric",
+    "kind": "statement",
+    "latex": "f : X \\to \\mathbb{R} \\text{ continuous},\\; X \\text{ compact}\n\\;\\Rightarrow\\; \\exists\\, p,q \\in X : f(p) = \\sup f,\\; f(q) = \\inf f\n",
+    "natural": {
+      "en": "Suppose f is a continuous real function on a compact metric space X, and M = sup_{p∈X} f(p), m = inf_{p∈X} f(p). Then there exist points p, q ∈ X such that f(p) = M and f(q) = m."
+    },
+    "notes": "Strictly more general than Stewart's theorem.extreme-value-theorem which is restricted to continuous functions on [a,b] ⊂ R. In R with the standard topology, [a,b] is compact (Heine-Borel), so Stewart's version is a special case.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "4",
+        "edition": "3",
+        "section": "4.16",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Extreme Value Theorem (Compact Metric Spaces)"
+    },
+    "type": "theorem"
+  },
   "theorem.fermat-theorem": {
     "confidence": "high",
     "id": "theorem.fermat-theorem",
@@ -9861,7 +11308,7 @@
       "en": "If f has a local maximum or minimum at c, and f'(c) exists, then f'(c) = 0.",
       "es": "Si f tiene un máximo o mínimo local en c y f'(c) existe, entonces f'(c) = 0."
     },
-    "notes": "Stewart proves this by analyzing one-sided limits of the difference quotient at a local maximum. The key lemma for Rolle's theorem and the Mean Value Theorem.\n",
+    "notes": "Stewart proves this by analyzing one-sided limits of the difference quotient at a local maximum. Rudin (5.8) gives the same proof: left-hand quotient >= 0 and right-hand quotient <= 0 force f'(x) = 0. The key lemma for the Mean Value Theorem.\n",
     "sources": [
       {
         "author": "James Stewart",
@@ -9869,6 +11316,13 @@
         "edition": "7",
         "section": "4.1",
         "work": "Cálculo de una variable — Trascendentes tempranas"
+      },
+      {
+        "author": "Walter Rudin",
+        "chapter": "5",
+        "edition": "3",
+        "section": "5.8",
+        "work": "Principles of Mathematical Analysis"
       }
     ],
     "status": "draft",
@@ -9976,6 +11430,30 @@
     "title": {
       "en": "General antiderivative",
       "es": "Antiderivada general"
+    },
+    "type": "theorem"
+  },
+  "theorem.generalized-mean-value-theorem": {
+    "confidence": "high",
+    "id": "theorem.generalized-mean-value-theorem",
+    "kind": "statement",
+    "latex": "[f(b) - f(a)]\\,g'(x) = [g(b) - g(a)]\\,f'(x)\n",
+    "natural": {
+      "en": "If f and g are continuous real functions on [a, b] which are differentiable in (a, b), then there is a point x in (a, b) at which [f(b) - f(a)]g'(x) = [g(b) - g(a)]f'(x)."
+    },
+    "notes": "Also known as Cauchy's mean value theorem. Rudin derives the ordinary MVT (5.10) as the special case g(x) = x. The proof constructs h(t) = [f(b)-f(a)]g(t) - [g(b)-g(a)]f(t), shows h(a) = h(b), and applies the extreme value theorem (4.16) and Fermat's theorem (5.8) to find x where h'(x) = 0. This theorem is the key tool for proving L'Hospital's rule (5.13).\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "5",
+        "edition": "3",
+        "section": "5.9",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Generalized Mean Value Theorem (Cauchy)"
     },
     "type": "theorem"
   },
@@ -10185,7 +11663,7 @@
     "type": "theorem"
   },
   "theorem.intermediate-value-theorem": {
-    "confidence": "medium",
+    "confidence": "high",
     "id": "theorem.intermediate-value-theorem",
     "kind": "statement",
     "latex": "f \\text{ continua en } [a,b], \\; N \\text{ entre } f(a) \\text{ y } f(b) \\implies \\exists\\, c \\in (a,b) : f(c) = N\n",
@@ -10193,7 +11671,7 @@
       "en": "Suppose that f is continuous on the closed interval [a, b] and let N be any number between f(a) and f(b), where f(a) ≠ f(b). Then there exists a number c in (a, b) such that f(c) = N.",
       "es": "Suponga que f es continua en el intervalo cerrado [a, b] y sea N cualquier número entre f(a) y f(b), donde f(a) ≠ f(b). Entonces existe un número c en (a, b) tal que f(c) = N."
     },
-    "notes": "Stewart states the IVT without proof in section 2.5, noting that a proof based on the completeness axiom of the real numbers can be found in Appendix F. It is used extensively for existence proofs (e.g., showing a root exists in an interval).\n",
+    "notes": "Stewart states the IVT without proof in section 2.5. Rudin proves it in Theorem 4.23 via the continuous image of connected sets (Thm 4.22) and the characterization of connected subsets of R (Thm 2.47).\n",
     "sources": [
       {
         "author": "James Stewart",
@@ -10201,6 +11679,13 @@
         "edition": "7",
         "section": "2.5",
         "work": "Cálculo de una variable — Trascendentes tempranas"
+      },
+      {
+        "author": "Walter Rudin",
+        "chapter": "4",
+        "edition": "3",
+        "section": "4.23",
+        "work": "Principles of Mathematical Analysis"
       }
     ],
     "status": "draft",
@@ -10234,7 +11719,7 @@
     "type": "theorem"
   },
   "theorem.lhopitals-rule": {
-    "confidence": "medium",
+    "confidence": "high",
     "id": "theorem.lhopitals-rule",
     "kind": "statement",
     "latex": "\\lim_{x \\to a}\\frac{f(x)}{g(x)}\n= \\lim_{x \\to a}\\frac{f'(x)}{g'(x)}\n",
@@ -10242,7 +11727,7 @@
       "en": "Suppose that f and g are differentiable and g'(x) ≠ 0 near a (except possibly at a). Suppose that lim(x→a) f(x) = 0 and lim(x→a) g(x) = 0, or that lim(x→a) f(x) = ±∞ and lim(x→a) g(x) = ±∞ (i.e., we have an indeterminate form of type 0/0 or ∞/∞). Then lim(x→a) f(x)/g(x) = lim(x→a) f'(x)/g'(x), if the limit on the right side exists (or is ±∞).",
       "es": "Suponga que f y g son derivables y que g'(x) ≠ 0 cerca de a (excepto posiblemente en a). Suponga que lim(x→a) f(x) = 0 y lim(x→a) g(x) = 0, o que lim(x→a) f(x) = ±∞ y lim(x→a) g(x) = ±∞ (es decir, que se tiene una forma indeterminada 0/0 o ∞/∞). Entonces lim(x→a) f(x)/g(x) = lim(x→a) f'(x)/g'(x), si el límite del lado derecho existe (o es ±∞)."
     },
-    "notes": "Stewart proves the 0/0 case using the Cauchy Mean Value Theorem (a generalization of MVT). The ∞/∞ case is stated without complete proof. The rule also applies to one-sided limits and limits at infinity.\n",
+    "notes": "Stewart proves the 0/0 case using the Cauchy Mean Value Theorem (a generalization of MVT). The ∞/∞ case is stated without complete proof. The rule also applies to one-sided limits and limits at infinity. Rudin (5.13) proves both the 0/0 and ∞/∞ cases rigorously using the generalized MVT (5.9), and allows -∞ <= a < b <= +∞ (extended reals).\n",
     "sources": [
       {
         "author": "James Stewart",
@@ -10250,12 +11735,65 @@
         "edition": "7",
         "section": "4.4",
         "work": "Cálculo de una variable — Trascendentes tempranas"
+      },
+      {
+        "author": "Walter Rudin",
+        "chapter": "5",
+        "edition": "3",
+        "section": "5.13",
+        "work": "Principles of Mathematical Analysis"
       }
     ],
     "status": "draft",
     "title": {
       "en": "L'Hopital's Rule",
       "es": "Regla de L'Hopital"
+    },
+    "type": "theorem"
+  },
+  "theorem.limit-arithmetic-extended-real": {
+    "confidence": "high",
+    "id": "theorem.limit-arithmetic-extended-real",
+    "kind": "statement",
+    "natural": {
+      "en": "Let f and g be defined on E. Suppose f(t) → A and g(t) → B as t → x (in the extended real number system). Then (a) f(t) → A' implies A' = A (uniqueness); (b) (f+g)(t) → A + B; (c) (fg)(t) → AB; (d) (f/g)(t) → A/B, provided the right members are defined."
+    },
+    "notes": "The expressions ∞ − ∞, 0·∞, ∞/∞, A/0 are not defined. Proof is analogous to Theorem 4.4.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "4",
+        "edition": "3",
+        "section": "4.34",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Arithmetic of Limits in the Extended Real Number System"
+    },
+    "type": "theorem"
+  },
+  "theorem.limit-arithmetic-functions-metric": {
+    "confidence": "high",
+    "id": "theorem.limit-arithmetic-functions-metric",
+    "kind": "statement",
+    "latex": "\\lim_{x \\to p}(f+g)(x) = A+B, \\quad\n\\lim_{x \\to p}(fg)(x) = AB, \\quad\n\\lim_{x \\to p}\\frac{f}{g}(x) = \\frac{A}{B} \\;(B \\neq 0)\n",
+    "natural": {
+      "en": "Suppose E ⊂ X (a metric space), p is a limit point of E, f and g are complex functions on E, and lim_{x→p} f(x) = A, lim_{x→p} g(x) = B. Then (a) lim_{x→p}(f+g)(x) = A + B; (b) lim_{x→p}(fg)(x) = AB; (c) lim_{x→p}(f/g)(x) = A/B if B ≠ 0."
+    },
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "4",
+        "edition": "3",
+        "section": "4.4",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Arithmetic of Function Limits (Metric Spaces)"
     },
     "type": "theorem"
   },
@@ -10437,6 +11975,30 @@
     },
     "type": "theorem"
   },
+  "theorem.mean-value-inequality-vector": {
+    "confidence": "high",
+    "id": "theorem.mean-value-inequality-vector",
+    "kind": "statement",
+    "latex": "|\\mathbf{f}(b) - \\mathbf{f}(a)| \\leq (b - a)\\,|\\mathbf{f}'(x)|\n",
+    "natural": {
+      "en": "Suppose f is a continuous mapping of [a, b] into R^k and f is differentiable in (a, b). Then there exists x in (a, b) such that |f(b) - f(a)| <= (b - a)|f'(x)|."
+    },
+    "notes": "The mean value theorem fails for vector-valued functions (Example 5.17 shows f(x) = e^{ix} has f(2pi)-f(0) = 0 but |f'(x)| = 1). This inequality is the best substitute. The proof uses the inner product z = f(b) - f(a), reduces to a real-valued function phi(t) = z . f(t), applies the real MVT, and finishes with the Schwarz inequality. Proof due to V. P. Havin.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "5",
+        "edition": "3",
+        "section": "5.19",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Mean Value Inequality for Vector-Valued Functions"
+    },
+    "type": "theorem"
+  },
   "theorem.mean-value-theorem": {
     "confidence": "high",
     "id": "theorem.mean-value-theorem",
@@ -10446,7 +12008,7 @@
       "en": "Let f be a function that satisfies the following hypotheses: 1. f is continuous on the closed interval [a, b]. 2. f is differentiable on the open interval (a, b). Then there is a number c in (a, b) such that f'(c) = (f(b) - f(a)) / (b - a), or equivalently, f(b) - f(a) = f'(c)(b - a).",
       "es": "Sea f una función que satisface las dos hipótesis siguientes: 1. f es continua en el intervalo cerrado [a, b]. 2. f es derivable en el intervalo abierto (a, b). Entonces existe un número c en (a, b) tal que f'(c) = (f(b) - f(a)) / (b - a), o equivalentemente, f(b) - f(a) = f'(c)(b - a)."
     },
-    "notes": "One of the most important theorems in calculus. Stewart proves it by applying Rolle's theorem to the auxiliary function h(x) = f(x) - [f(a) + ((f(b)-f(a))/(b-a))(x-a)].\n",
+    "notes": "One of the most important theorems in calculus. Stewart proves it by applying Rolle's theorem to the auxiliary function h(x) = f(x) - [f(a) + ((f(b)-f(a))/(b-a))(x-a)]. Rudin (5.10) derives it as a corollary of the generalized mean value theorem (5.9) by taking g(x) = x.\n",
     "sources": [
       {
         "author": "James Stewart",
@@ -10454,6 +12016,13 @@
         "edition": "7",
         "section": "4.2",
         "work": "Cálculo de una variable — Trascendentes tempranas"
+      },
+      {
+        "author": "Walter Rudin",
+        "chapter": "5",
+        "edition": "3",
+        "section": "5.10",
+        "work": "Principles of Mathematical Analysis"
       }
     ],
     "status": "draft",
@@ -10513,6 +12082,52 @@
     },
     "type": "theorem"
   },
+  "theorem.monotone-countable-discontinuities": {
+    "confidence": "high",
+    "id": "theorem.monotone-countable-discontinuities",
+    "kind": "statement",
+    "latex": "f \\text{ monotonic on } (a,b) \\;\\Rightarrow\\;\n\\{x \\in (a,b) : f \\text{ discontinuous at } x\\} \\text{ is at most countable}\n",
+    "natural": {
+      "en": "Let f be monotonic on (a, b). Then the set of points of (a, b) at which f is discontinuous is at most countable."
+    },
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "4",
+        "edition": "3",
+        "section": "4.30",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Monotone Functions Have at Most Countably Many Discontinuities"
+    },
+    "type": "theorem"
+  },
+  "theorem.monotone-one-sided-limits": {
+    "confidence": "high",
+    "id": "theorem.monotone-one-sided-limits",
+    "kind": "statement",
+    "latex": "\\sup_{a < t < x} f(t) = f(x-) \\leq f(x) \\leq f(x+) = \\inf_{x < t < b} f(t)\n",
+    "natural": {
+      "en": "Let f be monotonically increasing on (a, b). Then f(x+) and f(x−) exist at every point x of (a, b). More precisely, sup_{a<t<x} f(t) = f(x−) ≤ f(x) ≤ f(x+) = inf_{x<t<b} f(t). Furthermore, if a < x < y < b, then f(x+) ≤ f(y−)."
+    },
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "4",
+        "edition": "3",
+        "section": "4.29",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "One-Sided Limits of Monotone Functions"
+    },
+    "type": "theorem"
+  },
   "theorem.monotonic-sequence-theorem": {
     "confidence": "high",
     "id": "theorem.monotonic-sequence-theorem",
@@ -10569,6 +12184,29 @@
     "title": {
       "en": "The Net Change Theorem",
       "es": "Teorema del cambio neto"
+    },
+    "type": "theorem"
+  },
+  "theorem.noncompact-counterexamples": {
+    "confidence": "high",
+    "id": "theorem.noncompact-counterexamples",
+    "kind": "statement",
+    "natural": {
+      "en": "Let E be a noncompact set in R¹. Then (a) there exists a continuous function on E which is not bounded; (b) there exists a continuous and bounded function on E which has no maximum. If in addition E is bounded, then (c) there exists a continuous function on E which is not uniformly continuous."
+    },
+    "notes": "Shows that compactness is essential in Theorems 4.14, 4.15, 4.16, and 4.19. Part (c) would be false if boundedness were omitted (e.g., every function on the integers is uniformly continuous).\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "4",
+        "edition": "3",
+        "section": "4.20",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Necessity of Compactness for Continuity Theorems"
     },
     "type": "theorem"
   },
@@ -10759,7 +12397,7 @@
       "en": "If f and g are both differentiable functions, then d/dx[f(x)g(x)] = f(x) g'(x) + g(x) f'(x).",
       "es": "Si f y g son funciones diferenciables, entonces d/dx[f(x)g(x)] = f(x) g'(x) + g(x) f'(x)."
     },
-    "notes": "Stewart proves this by adding and subtracting f(x+h)g(x) in the difference quotient.\n",
+    "notes": "Stewart proves this by adding and subtracting f(x+h)g(x) in the difference quotient. Rudin (5.3b) uses h(t)-h(x) = f(t)[g(t)-g(x)] + g(x)[f(t)-f(x)] and applies Theorem 5.2 (differentiable implies continuous) and limit laws.\n",
     "sources": [
       {
         "author": "James Stewart",
@@ -10767,6 +12405,13 @@
         "edition": "7",
         "section": "3.2",
         "work": "Cálculo de una variable — Trascendentes tempranas"
+      },
+      {
+        "author": "Walter Rudin",
+        "chapter": "5",
+        "edition": "3",
+        "section": "5.3",
+        "work": "Principles of Mathematical Analysis"
       }
     ],
     "status": "draft",
@@ -10785,7 +12430,7 @@
       "en": "If f and g are differentiable functions, then d/dx[f(x)/g(x)] = [g(x)f'(x) - f(x)g'(x)] / [g(x)]^2.",
       "es": "Si f y g son funciones diferenciables, entonces d/dx[f(x)/g(x)] = [g(x)f'(x) - f(x)g'(x)] / [g(x)]^2."
     },
-    "notes": "Stewart derives the quotient rule using a similar technique to the product rule, adding and subtracting f(x)g(x) in the numerator of the difference quotient.\n",
+    "notes": "Stewart derives the quotient rule using a similar technique to the product rule, adding and subtracting f(x)g(x) in the numerator of the difference quotient. Rudin (5.3c) lets h = f/g and applies Theorems 4.4 and 5.2.\n",
     "sources": [
       {
         "author": "James Stewart",
@@ -10793,6 +12438,13 @@
         "edition": "7",
         "section": "3.2",
         "work": "Cálculo de una variable — Trascendentes tempranas"
+      },
+      {
+        "author": "Walter Rudin",
+        "chapter": "5",
+        "edition": "3",
+        "section": "5.3",
+        "work": "Principles of Mathematical Analysis"
       }
     ],
     "status": "draft",
@@ -10960,6 +12612,29 @@
     "status": "draft",
     "title": {
       "en": "Schwarz Inequality"
+    },
+    "type": "theorem"
+  },
+  "theorem.sequential-characterization-function-limit": {
+    "confidence": "high",
+    "id": "theorem.sequential-characterization-function-limit",
+    "kind": "statement",
+    "latex": "\\lim_{x \\to p} f(x) = q \\;\\iff\\;\n\\lim_{n \\to \\infty} f(p_n) = q \\text{ for every } \\{p_n\\} \\subset E\n\\text{ with } p_n \\neq p,\\; p_n \\to p\n",
+    "natural": {
+      "en": "Let X, Y be metric spaces, E ⊂ X, f: E → Y, and p a limit point of E. Then lim_{x→p} f(x) = q if and only if lim_{n→∞} f(p_n) = q for every sequence {p_n} in E such that p_n ≠ p and lim_{n→∞} p_n = p."
+    },
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "4",
+        "edition": "3",
+        "section": "4.2",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Sequential Characterization of Function Limits"
     },
     "type": "theorem"
   },
@@ -11162,6 +12837,30 @@
     "title": {
       "en": "Taylor's theorem (remainder convergence)",
       "es": "Teorema de Taylor (convergencia del residuo)"
+    },
+    "type": "theorem"
+  },
+  "theorem.taylor-theorem": {
+    "confidence": "high",
+    "id": "theorem.taylor-theorem",
+    "kind": "statement",
+    "latex": "f(\\beta) = \\sum_{k=0}^{n-1} \\frac{f^{(k)}(\\alpha)}{k!}(\\beta - \\alpha)^k\n+ \\frac{f^{(n)}(x)}{n!}(\\beta - \\alpha)^n\n",
+    "natural": {
+      "en": "Suppose f is a real function on [a, b], n is a positive integer, f^(n-1) is continuous on [a, b], f^(n)(t) exists for every t in (a, b). Let alpha, beta be distinct points of [a, b], and define P(t) = sum_{k=0}^{n-1} f^(k)(alpha)/k! * (t - alpha)^k. Then there exists a point x between alpha and beta such that f(beta) = P(beta) + f^(n)(x)/n! * (beta - alpha)^n."
+    },
+    "notes": "For n = 1 this reduces to the mean value theorem. The theorem shows that f can be approximated by a polynomial of degree n-1, with the Lagrange remainder f^(n)(x)/n! * (beta - alpha)^n providing an error estimate. Different from Taylor series convergence (which concerns infinite series); this is a finite approximation result.\n",
+    "sources": [
+      {
+        "author": "Walter Rudin",
+        "chapter": "5",
+        "edition": "3",
+        "section": "5.15",
+        "work": "Principles of Mathematical Analysis"
+      }
+    ],
+    "status": "draft",
+    "title": {
+      "en": "Taylor's Theorem (with Lagrange Remainder)"
     },
     "type": "theorem"
   },

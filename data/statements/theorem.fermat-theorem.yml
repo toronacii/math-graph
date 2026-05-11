@@ -20,6 +20,7 @@ statement:
 
 proved_by:
   - proof.fermat-theorem.stewart
+  - proof.fermat-theorem.rudin
 
 sources:
   - work: Cálculo de una variable — Trascendentes tempranas
@@ -27,9 +28,15 @@ sources:
     edition: "7"
     chapter: "4"
     section: "4.1"
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "5"
+    section: "5.8"
 
 confidence: high
 notes: >
   Stewart proves this by analyzing one-sided limits of the
-  difference quotient at a local maximum. The key lemma for
-  Rolle's theorem and the Mean Value Theorem.
+  difference quotient at a local maximum. Rudin (5.8) gives the
+  same proof: left-hand quotient >= 0 and right-hand quotient <= 0
+  force f'(x) = 0. The key lemma for the Mean Value Theorem.

@@ -27,6 +27,7 @@ statement:
 
 proved_by:
   - proof.mean-value-theorem.stewart
+  - proof.mean-value-theorem.rudin
 
 sources:
   - work: Cálculo de una variable — Trascendentes tempranas
@@ -34,9 +35,16 @@ sources:
     edition: "7"
     chapter: "4"
     section: "4.2"
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "5"
+    section: "5.10"
 
 confidence: high
 notes: >
   One of the most important theorems in calculus. Stewart proves
   it by applying Rolle's theorem to the auxiliary function
   h(x) = f(x) - [f(a) + ((f(b)-f(a))/(b-a))(x-a)].
+  Rudin (5.10) derives it as a corollary of the generalized mean
+  value theorem (5.9) by taking g(x) = x.

@@ -1,0 +1,27 @@
+id: definition.right-left-limits
+type: definition
+status: draft
+
+title:
+  en: Right-hand and Left-hand Limits
+
+statement:
+  natural:
+    en: >
+      Let f be defined on (a, b). For any point x with a ≤ x < b, we
+      write f(x+) = q if f(t_n) → q as n → ∞ for all sequences {t_n}
+      in (x, b) such that t_n → x. For a < x ≤ b, we define f(x−)
+      analogously using sequences in (a, x). The limit lim_{t→x} f(t)
+      exists if and only if f(x+) = f(x−).
+  latex: |
+    f(x+) = \lim_{\substack{t \to x \\ t > x}} f(t), \qquad
+    f(x-) = \lim_{\substack{t \to x \\ t < x}} f(t)
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "4"
+    section: "4.25"
+
+confidence: high

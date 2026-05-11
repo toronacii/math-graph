@@ -27,6 +27,7 @@ statement:
 
 proved_by:
   - proof.chain-rule.stewart
+  - proof.chain-rule.rudin
 
 sources:
   - work: Cálculo de una variable — Trascendentes tempranas
@@ -34,8 +35,15 @@ sources:
     edition: "7"
     chapter: "3"
     section: "3.4"
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "5"
+    section: "5.5"
 
 confidence: high
 notes: >
   One of the most important rules in calculus. Stewart proves it
   using an increment formulation that avoids dividing by Δu = 0.
+  Rudin (5.5) uses the same approach with error functions u(t), v(s)
+  and the continuity of f to conclude s → y as t → x.

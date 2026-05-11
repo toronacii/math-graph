@@ -1,0 +1,7 @@
+weak_dependencies: []
+
+notes: >
+  No weak dependencies in Chapter 5. All Rudin proofs have confidence
+  high. All dependency references resolve to existing graph nodes.
+  The chapter has high overlap with Stewart, and all shared nodes
+  already had well-established dependencies.

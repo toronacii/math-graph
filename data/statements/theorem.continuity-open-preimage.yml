@@ -1,0 +1,31 @@
+id: theorem.continuity-open-preimage
+type: theorem
+status: draft
+
+title:
+  en: Continuity via Open Preimages
+
+statement:
+  natural:
+    en: >
+      A mapping f of a metric space X into a metric space Y is
+      continuous on X if and only if f⁻¹(V) is open in X for every
+      open set V in Y.
+  latex: |
+    f : X \to Y \text{ continuous} \;\iff\;
+    V \text{ open in } Y \Rightarrow f^{-1}(V) \text{ open in } X
+
+proved_by:
+  - proof.continuity-open-preimage.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "4"
+    section: "4.8"
+
+confidence: high
+notes: >
+  This topological characterization of continuity is fundamental. It
+  motivates the general definition of continuity in topology.

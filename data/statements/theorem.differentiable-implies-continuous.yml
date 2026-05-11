@@ -17,6 +17,7 @@ statement:
 
 proved_by:
   - proof.differentiable-implies-continuous.stewart
+  - proof.differentiable-implies-continuous.rudin
 
 sources:
   - work: Cálculo de una variable — Trascendentes tempranas
@@ -24,8 +25,14 @@ sources:
     edition: "7"
     chapter: "2"
     section: "2.8"
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "5"
+    section: "5.2"
 
 confidence: high
 notes: >
   Stewart proves this theorem in section 2.8. The converse is false:
   f(x) = |x| is continuous at 0 but not differentiable there.
+  Rudin (5.2) gives the same proof using Theorem 4.4 (limit laws).

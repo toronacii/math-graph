@@ -19,6 +19,7 @@ statement:
 
 proved_by:
   - proof.product-rule.stewart
+  - proof.product-rule.rudin
 
 sources:
   - work: Cálculo de una variable — Trascendentes tempranas
@@ -26,8 +27,15 @@ sources:
     edition: "7"
     chapter: "3"
     section: "3.2"
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "5"
+    section: "5.3"
 
 confidence: high
 notes: >
   Stewart proves this by adding and subtracting f(x+h)g(x) in the
-  difference quotient.
+  difference quotient. Rudin (5.3b) uses h(t)-h(x) = f(t)[g(t)-g(x)]
+  + g(x)[f(t)-f(x)] and applies Theorem 5.2 (differentiable implies
+  continuous) and limit laws.
