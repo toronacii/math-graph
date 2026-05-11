@@ -1,0 +1,106 @@
+schema_version: "0.3.1"
+id: theorem.continuity-arithmetic
+type: theorem
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Aritmética de funciones continuas
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Arithmetic of continuous functions
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Si f y g son continuas en x = a y c es una constante,
+        entonces las siguientes funciones son también continuas en
+        x = a: (1) f + g; (2) f − g; (3) c f; (4) f g;
+        (5) f / g, siempre que g(a) ≠ 0.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        If f and g are continuous at x = a and c is a constant,
+        then the following functions are also continuous at x = a:
+        (1) f + g; (2) f − g; (3) c f; (4) f g;
+        (5) f / g, provided g(a) ≠ 0.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      f, g \text{ continuous at } a \implies
+      f \pm g,\ cf,\ fg,\ f/g\ (g(a) \neq 0)
+      \text{ continuous at } a
+    status: present
+    review_status: unreviewed
+
+proved_by:
+  - proof.continuity-arithmetic.stewart
+
+depends_on:
+  - id: definition.continuity-at-point
+    role: uses_concept
+    confidence: high
+  - id: definition.arithmetic-of-functions
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.5"
+    theorem_label: "Teorema 4"
+    page: "121"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [real-analysis]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [property, schema]
+  keywords: [continuity, arithmetic, sum, difference, product, quotient, constant-multiple]
+
+generality: []
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: medium
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Type-A bundle of five continuity-closure laws (mirror of
+  proposition.limit-laws). Stewart proves only inciso 1 (sum)
+  explicitly; the others follow by the same template from the
+  matching limit law. dependency_confidence: medium reflects this
+  bundling.

@@ -1,0 +1,140 @@
+rerun_id: v0.3.1-stewart-full
+chapter: "2"
+chapter_title:
+  es: Límites y derivadas
+  en: Limits and Derivatives
+sections_covered:
+  - "2.1"
+  - "2.2"
+  - "2.3"
+sections_pending:
+  - "2.4"   # Definición precisa de límite (epsilon-delta)
+  - "2.5"   # Continuidad
+  - "2.6"   # Límites al infinito; asíntotas horizontales
+  - "2.7"   # Derivadas y razones de cambio
+  - "2.8"   # La derivada como una función
+partial: true
+snapshot_label: v0.3.1-stewart-full-ch2-partial
+generated_at: "2026-05-11"
+
+counts:
+  total_nodes: 65
+  statements: 58
+  proofs: 7
+  new_in_partial:
+    statements: 19
+    proofs: 2
+  by_section_statements_ch2:
+    "2.1": 2     # secant-line, average-velocity
+    "2.2": 7     # limit, left/right one-sided, iff-thm, infinite, neg-infinite, vertical-asymptote
+    "2.3": 10    # limit-laws, power-law, of-constant, of-identity, power-of-x, root-law,
+                 # direct-substitution, equality-near-point, monotonicity, squeeze-theorem
+  total_edges: 133
+  by_role:
+    uses_concept: 104
+    instance_of: 3
+    definition: 8       # role on Proof.uses
+    essential: 7        # role on Proof.uses
+    extends: 2
+    specializes: 2
+    proves: 7           # statement -> proof edges
+
+graph_density:
+  nodes: 65
+  edges: 133
+  density: 0.0320       # edges / (n*(n-1))
+  components: 1
+
+hubs_post_partial:
+  most_referenced:
+    - id: definition.function
+      in_degree: 33
+      role: universal hub; +6 from Ch1
+    - id: definition.limit-of-function
+      in_degree: 14
+      role: NEW hub — already 2nd most-referenced after one chapter
+    - id: definition.domain
+      in_degree: 13
+    - id: definition.graph-of-function
+      in_degree: 8
+  most_depending:
+    - id: proposition.direct-substitution-property
+      out_degree: 7
+      role: derived result citing limit-laws + power-of-x + of-constant + types
+    - id: definition.vertical-asymptote
+      out_degree: 5
+
+orphan_count: 23
+orphan_explanation: >
+  17 from Ch1 (transformations, parity, abs-value, model, inverse-
+  trig — leaves expected to gain edges in Ch2 §2.5+, Ch3, Ch5–7),
+  plus 6 new Ch2 leaves: secant-line, average-velocity (motivation
+  for §2.7 derivative), proposition.{limit-monotonicity, limit-
+  equality-near-point, direct-substitution-property} (used in
+  examples but not by other Ch2 statements yet), and
+  definition.vertical-asymptote (referenced in Ch2 examples and
+  Ch4 horizontal asymptotes; gains incoming edges from §2.6).
+
+quality_summary:
+  status_distribution:
+    extracted: 65
+  dependency_confidence_set: 65
+  semantic_confidence_set: 65
+  latex_present: 33    # +10 from Ch1
+  latex_not_applicable: 16  # +2 (secant-line, vertical-asymptote)
+  latex_informal: 6    # +5: limit definitions and infinite-limits use informal LaTeX
+  latex_missing: 0
+  semantic_dependency_audit_status: pending
+
+provenance_audit:
+  schema_version_check:
+    "0.3.1": 65
+  rerun_id_check:
+    v0.3.1-stewart-full: 65
+  language_original_check:
+    es: 65
+  is_original_uniqueness: pass
+  source_locator_integrity: pass
+  page_locators_present: 21   # NEW: every Ch2 entity carries page locator
+
+architectural_audit_application:
+  bundled_definition_splits:
+    applied:
+      - left-hand-limit and right-hand-limit split as siblings (Stewart numbers them as Def 2 + paragraph; preserved as atoms)
+      - infinite-limit and negative-infinite-limit split as siblings (Stewart Def 4 + Def 5)
+    accepted_as_explicit_debt:
+      - proposition.limit-laws (Type-A bundle of 5 arithmetic laws — sum, diff, const-mult, prod, quot)
+      - proposition.limit-root-law (Type-A bundle of Stewart Laws 10+11)
+      - definition.vertical-asymptote (Type-A bundle of 6 divergence conditions)
+  proof_uses_role_precision: ok    # 7 proofs, every uses[] entry carries a role
+  honest_dependency_confidence: ok # 7 entities at medium reflecting genuine debt
+  generality_edge_ownership: ok    # left-hand-limit, infinite-limit own their sibling edges (alphabetical earliest)
+
+semantic_debt_register_new_in_ch2_partial:
+  - definition.limit-of-function           # informal "arbitrarily close" — rigorous epsilon-delta separate node in §2.4
+  - definition.left-hand-limit             # informal version
+  - definition.right-hand-limit            # informal version
+  - definition.infinite-limit              # informal divergence
+  - definition.negative-infinite-limit     # informal divergence
+  - proposition.limit-laws                 # Type-A bundle of 5 laws
+  - proposition.limit-root-law             # Type-A bundle of Laws 10+11
+  - definition.vertical-asymptote          # Type-A bundle of 6 divergence conditions
+  - proposition.limit-monotonicity         # no proof yet (Apéndice F)
+  - theorem.squeeze-theorem                # no proof yet (Apéndice F)
+  - proposition.direct-substitution-property  # no proof yet (Ejercicios 55-56)
+
+deferred_proof_nodes:
+  - proves: proposition.limit-laws
+    reason: Stewart defers all five law proofs to Apéndice F; proof of Law 1 (sum) requires definition.epsilon-delta-limit (§2.4)
+  - proves: proposition.limit-of-constant
+    reason: deferred to §2.4 exercises (epsilon-delta with arbitrary δ)
+  - proves: proposition.limit-of-identity
+    reason: deferred to §2.4 exercises (epsilon-delta with δ = ε)
+  - proves: proposition.limit-root-law
+    reason: deferred to §2.5 (continuity)
+  - proves: proposition.direct-substitution-property
+    reason: deferred to §2.3 Exercises 55-56
+  - proves: proposition.limit-monotonicity
+    reason: Stewart defers to Apéndice F
+  - proves: theorem.squeeze-theorem
+    reason: Stewart defers to Apéndice F

@@ -1,0 +1,100 @@
+schema_version: "0.3.1"
+id: proposition.limit-equality-near-point
+type: proposition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Si f = g cerca de a, entonces tienen el mismo límite en a
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: If f = g near a, then they share the same limit at a
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Si f(x) = g(x) cuando x ≠ a (en algún intervalo abierto
+        alrededor de a), entonces lím_{x→a} f(x) = lím_{x→a} g(x),
+        siempre que el límite exista.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        If f(x) = g(x) when x ≠ a (on some open interval around a),
+        then lim_{x→a} f(x) = lim_{x→a} g(x), provided the limit
+        exists.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      f(x) = g(x) \;\text{para } x \neq a
+      \;\;\Longrightarrow\;\;
+      \lim_{x \to a} f(x) = \lim_{x \to a} g(x)
+    status: present
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: definition.limit-of-function
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.3"
+    locator: "Recuadro tras el ejemplo 3 (sección 2.3)"
+    page: "102"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [real-analysis]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [property, principle]
+  keywords: [limit, locality, agreement-near-point]
+
+generality: []
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Locality principle for limits — Stewart states it as a boxed
+  fact between Examples 3 and 4. Used in Examples 3, 4, 5, 6 to
+  cancel common factors / simplify the expression before
+  evaluating. No proof in the main text (it follows directly from
+  Definition 1, since the limit only depends on values at x ≠ a).

@@ -1,0 +1,101 @@
+schema_version: "0.3.1"
+id: definition.average-velocity
+type: definition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Velocidad promedio
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Average velocity
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Para una partícula cuya posición en el instante t es s(t),
+        la velocidad promedio en el intervalo [t₁, t₂] es el cociente
+        del cambio de posición entre el tiempo transcurrido,
+        (s(t₂) − s(t₁)) / (t₂ − t₁).
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        For a particle whose position at time t is s(t), the average
+        velocity over the interval [t₁, t₂] is the ratio of the
+        change in position to the elapsed time,
+        (s(t₂) − s(t₁)) / (t₂ − t₁).
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      \overline{v}_{[t_1,t_2]} \;=\;
+      \frac{\,s(t_2) - s(t_1)\,}{t_2 - t_1}
+    status: present
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: definition.function
+    role: uses_concept
+    confidence: high
+    notes: position s as a function of time t
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.1"
+    locator: "El problema de la velocidad (sección 2.1)"
+    page: "84"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [physics-applications]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [object, operator]
+  keywords: [velocity, average, kinematics, difference-quotient]
+
+generality: []
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Forms the difference-quotient kernel that becomes the derivative
+  in §2.7 once the limit as t₂ → t₁ is taken. The "instantaneous
+  velocity" formal node is deferred to §2.7 since Stewart does not
+  define it formally in §2.1.

@@ -1,0 +1,95 @@
+schema_version: "0.3.1"
+id: definition.absolute-value
+type: definition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Valor absoluto
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Absolute value
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        El valor absoluto de un número a, denotado |a|, se define como
+        a si a ≥ 0 y como -a si a < 0. Geométricamente, |a| representa
+        la distancia de a al origen en la recta numérica.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        The absolute value of a number a, denoted |a|, is defined as
+        a if a ≥ 0 and as -a if a < 0. Geometrically, |a| represents
+        the distance from a to the origin on the number line.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      |a| = \begin{cases} a & \text{si } a \geq 0 \\ -a & \text{si } a < 0 \end{cases}
+    status: present
+    review_status: unreviewed
+
+proved_by: []
+depends_on:
+  - id: definition.piecewise-function
+    role: instance_of
+    confidence: high
+    notes: Stewart frames |·| as the canonical example of a piecewise function.
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.1"
+    locator: "Funciones definidas por partes (sección 1.1)"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [real-analysis]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [operator]
+  keywords: [absolute-value, modulus, distance, piecewise]
+
+generality: []
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: medium
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Future merge candidate with Rudin's |·| as a metric/norm on R/C;
+  cross-source generality edge will be added once Rudin is re-extracted
+  under v0.3.1.

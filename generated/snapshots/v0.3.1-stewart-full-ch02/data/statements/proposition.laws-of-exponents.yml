@@ -1,0 +1,108 @@
+schema_version: "0.3.1"
+id: proposition.laws-of-exponents
+type: proposition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Leyes de los exponentes
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Laws of exponents
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Si a, b > 0 y x, y son números reales cualesquiera:
+        (1) a^(x+y) = aˣ · aʸ;
+        (2) a^(x−y) = aˣ / aʸ;
+        (3) (aˣ)ʸ = a^(x·y);
+        (4) (a·b)ˣ = aˣ · bˣ.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        If a, b > 0 and x, y are any real numbers:
+        (1) a^(x+y) = aˣ · aʸ;
+        (2) a^(x−y) = aˣ / aʸ;
+        (3) (aˣ)ʸ = a^(x·y);
+        (4) (a·b)ˣ = aˣ · bˣ.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      a^{x+y} = a^{x} a^{y}, \quad
+      a^{x-y} = \tfrac{a^{x}}{a^{y}}, \quad
+      (a^{x})^{y} = a^{xy}, \quad
+      (ab)^{x} = a^{x} b^{x}
+    status: present
+    review_status: unreviewed
+
+proved_by: []
+depends_on:
+  - id: definition.exponential-function
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.5"
+    locator: "Leyes de los exponentes (sección 1.5)"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [algebra]
+
+ambient:
+  structures: [real-line]
+  notes: >
+    Stated by Stewart without proof at the calculus level (proof
+    requires the rigorous construction of a^x for real x). At the
+    rational-exponent level the laws follow algebraically; the
+    real-exponent extension is justified by continuity once it is
+    available.
+
+ontology:
+  semantic_kind: [schema, principle]
+  keywords: [laws-of-exponents, algebraic-identity]
+
+generality: []
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: medium
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart asserts these without proof at this level. No proof node
+  authored; flagged as proved_by: [] with the understanding that
+  rigorous derivation is deferred to Ch3+. Type-A bundle of four
+  algebraic identities (shared apparatus).

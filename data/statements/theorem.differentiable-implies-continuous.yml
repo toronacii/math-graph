@@ -1,0 +1,104 @@
+schema_version: "0.3.1"
+id: theorem.differentiable-implies-continuous
+type: theorem
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Derivabilidad implica continuidad
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Differentiability implies continuity
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Si f es derivable en x = a, entonces f es continua en
+        x = a. El recíproco es falso: hay funciones continuas que
+        no son derivables (por ejemplo, f(x) = |x| en x = 0).
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        If f is differentiable at x = a, then f is continuous at
+        x = a. The converse is false: there are continuous
+        functions that are not differentiable (for example,
+        f(x) = |x| at x = 0).
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      f'(a) \text{ exists } \;\Longrightarrow\;
+      \lim_{x \to a} f(x) = f(a)
+    status: present
+    review_status: unreviewed
+
+proved_by:
+  - proof.differentiable-implies-continuous.stewart
+
+depends_on:
+  - id: definition.differentiable-at-point
+    role: uses_concept
+    confidence: high
+  - id: definition.continuity-at-point
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.8"
+    theorem_label: "Teorema 4"
+    page: "158"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [analysis]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [principle, relation]
+  keywords: [differentiability, continuity, implication]
+
+generality: []
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  The non-converse remark (|x| at 0) is recorded inside the
+  natural-language statement but is established as fact through
+  proposition.non-differentiability-cases (which uses the |x|
+  example explicitly) and the continuity of |x| from §2.5. The
+  theorem itself only asserts the forward implication.

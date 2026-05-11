@@ -1,0 +1,94 @@
+chapter: "2"
+chapter_title: Limits and Derivatives
+source:
+  work: "Calculo de una variable — Trascendentes tempranas"
+  author: James Stewart
+  edition: "7"
+  language: es
+  sections_processed:
+    - "2.1"
+    - "2.2"
+    - "2.3"
+    - "2.4"
+    - "2.5"
+    - "2.6"
+    - "2.7"
+    - "2.8"
+
+extraction_date: "2026-05-10"
+validation_status: pass
+
+cumulative_statistics:
+  total_nodes: 95
+  total_edges: 58
+
+  nodes_by_type:
+    definition: 55
+    proposition: 9
+    theorem: 8
+    corollary: 1
+    lemma: 0
+    axiom: 0
+    conjecture: 0
+    proof: 20
+
+  nodes_by_kind:
+    statement: 75
+    proof: 20
+
+  edges_by_relation:
+    uses: 38
+    proves: 20
+
+  proofs_by_style:
+    direct: 11
+    epsilon-delta: 4
+    assumed: 2
+    algebraic: 1
+    geometric: 1
+
+  proofs_by_confidence:
+    high: 1
+    medium: 16
+    low: 3
+
+  root_nodes: 55
+  leaf_nodes: 51
+  isolated_nodes: 36
+  connected_components: 42
+  connected_component_sizes:
+    - 27
+    - 12
+    - 9
+    - 5
+    - 3
+    - 3
+    - 1
+    - 1
+    - 1
+    - 1
+
+  longest_dependency_chain:
+    depth: 7
+    statement_depth: 3
+    path:
+      - definition.epsilon-delta-limit
+      - proof.squeeze-theorem.stewart
+      - theorem.squeeze-theorem
+      - proof.limit-sinx-over-x.stewart
+      - theorem.limit-sinx-over-x
+      - proof.limit-cosx-minus-1-over-x.stewart
+      - corollary.limit-cosx-minus-1-over-x
+
+  graph_density: 0.0065
+  average_degree: 1.221
+
+chapter_delta:
+  new_nodes: 49
+  new_edges: 37
+  new_definitions: 23
+  new_propositions: 2
+  new_theorems: 8
+  new_corollaries: 1
+  new_proofs: 13
+  reclassifications: 1

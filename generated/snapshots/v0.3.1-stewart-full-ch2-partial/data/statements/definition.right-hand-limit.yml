@@ -1,0 +1,102 @@
+schema_version: "0.3.1"
+id: definition.right-hand-limit
+type: definition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Límite por la derecha
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Right-hand limit
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Decimos que lím_{x→a⁺} f(x) = L (el límite de f(x) cuando
+        x tiende a a por la derecha es igual a L) si podemos hacer
+        que los valores de f(x) se acerquen arbitrariamente a L
+        tomando x suficientemente cercanos a a, pero mayores que a.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        We say lim_{x→a⁺} f(x) = L (the right-hand limit of f(x) as
+        x approaches a equals L) if we can make the values of f(x)
+        arbitrarily close to L by taking x sufficiently close to a
+        but greater than a.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      \lim_{x \to a^{+}} f(x) = L
+    status: informal
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: definition.function
+    role: uses_concept
+    confidence: high
+  - id: definition.limit-of-function
+    role: specializes
+    confidence: high
+    notes: same intuitive scheme restricted to x > a
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.2"
+    locator: "Párrafo posterior a Definición 2 (sección 2.2)"
+    page: "92"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [real-analysis]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [object, relation]
+  keywords: [limit, one-sided, right-hand]
+
+generality: []
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: medium
+  translation_confidence: high
+  latex_confidence: medium
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Sibling of definition.left-hand-limit; the sibling edge is owned
+  by the alphabetically-earlier left-hand-limit per policy 04.
+  Pedagogical version; rigorous epsilon-delta sibling lands in §2.4.

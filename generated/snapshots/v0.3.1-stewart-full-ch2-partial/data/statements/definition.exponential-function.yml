@@ -1,0 +1,104 @@
+schema_version: "0.3.1"
+id: definition.exponential-function
+type: definition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Función exponencial
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Exponential function
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Una función exponencial es una función de la forma
+        f(x) = aˣ, donde la base a es una constante positiva
+        (a > 0, a ≠ 1). El dominio es R y el rango es (0, ∞).
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        An exponential function is a function of the form
+        f(x) = aˣ, where the base a is a positive constant
+        (a > 0, a ≠ 1). The domain is R and the range is (0, ∞).
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      f(x) = a^{x}, \qquad a > 0,\; a \ne 1
+    status: present
+    review_status: unreviewed
+
+proved_by: []
+depends_on:
+  - id: definition.function
+    role: uses_concept
+    confidence: high
+  - id: definition.power-function
+    role: uses_concept
+    confidence: medium
+    notes: Power vs. exponential differ in which slot is variable; related but distinct.
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.5"
+    locator: "Funciones exponenciales (sección 1.5)"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [real-analysis]
+
+ambient:
+  structures: [real-line]
+  notes: >
+    Stewart defines a^x informally for real x by extension from
+    rational exponents, without rigorously constructing the
+    real-exponent operation (that requires either continuity +
+    density of Q in R, or the integral / inverse-of-log construction).
+    Honest semantic_confidence reflects this informal extension.
+
+ontology:
+  semantic_kind: [object]
+  keywords: [exponential, base, growth, decay]
+
+generality: []
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: medium
+  translation_confidence: medium
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Real-exponent extension is informal in Stewart. Future Rudin-side
+  rigorous definition (via sup of rational exponents, or via
+  integral of 1/t) becomes a stronger sibling node, NOT a merge.

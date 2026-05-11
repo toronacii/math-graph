@@ -1,0 +1,106 @@
+schema_version: "0.3.1"
+id: definition.negative-infinite-limit
+type: definition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Límite menos infinito
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Negative infinite limit
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Sea f definida por ambos lados de a, excepto posiblemente
+        en a misma. Entonces lím_{x→a} f(x) = −∞ significa que los
+        valores de f(x) pueden ser negativos arbitrariamente
+        grandes, tomando x suficientemente cerca de a, pero no
+        igual a a.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        Let f be defined on both sides of a, except possibly at a
+        itself. Then lim_{x→a} f(x) = −∞ means that the values of
+        f(x) can be made arbitrarily large negative by taking x
+        sufficiently close to a, but not equal to a.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      \lim_{x \to a} f(x) = -\infty
+    status: informal
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: definition.function
+    role: uses_concept
+    confidence: high
+  - id: definition.limit-of-function
+    role: extends
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.2"
+    theorem_label: "Definición 5"
+    page: "94"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [real-analysis]
+
+ambient:
+  structures: [extended-real-line]
+
+ontology:
+  semantic_kind: [object, relation]
+  keywords: [limit, negative-infinity, divergence]
+
+generality:
+  - target: definition.negative-infinite-limit-precise
+    relation: equivalent
+    notes: >
+      Rigorous reformulation in §2.4 Definición 7. Owned here per
+      policy 04 (alphabetically earlier id). DO NOT merge.
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: medium
+  translation_confidence: high
+  latex_confidence: medium
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Sibling of definition.infinite-limit; the sibling edge is owned
+  by the alphabetically-earlier infinite-limit per policy 04.

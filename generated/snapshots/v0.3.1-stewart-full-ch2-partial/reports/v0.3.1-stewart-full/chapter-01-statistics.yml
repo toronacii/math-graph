@@ -1,0 +1,144 @@
+rerun_id: v0.3.1-stewart-full
+chapter: "1"
+chapter_title:
+  es: Funciones y modelos
+  en: Functions and Models
+sections_covered:
+  - "1.1"
+  - "1.2"
+  - "1.3"
+  - "1.5"
+  - "1.6"
+sections_skipped:
+  - "1.4"   # Calculadoras y computadoras — no mathematical content
+partial: false
+snapshot_label: v0.3.1-stewart-full-ch01
+generated_at: "2026-05-11"
+
+counts:
+  total_nodes: 44
+  statements: 39
+  proofs: 5
+  by_type:
+    definition: 33
+    proposition: 6
+    proof: 5
+  by_section_statements:
+    "1.1": 13
+    "1.2": 7
+    "1.3": 7
+    "1.5": 3
+    "1.6": 9
+  total_edges: 88
+  by_role:
+    uses_concept: 68
+    instance_of: 3
+    definition: 8     # role on Proof.uses
+    essential: 4      # role on Proof.uses
+    proved_by: 5      # statement -> proof edges (counted via build)
+
+graph_density:
+  nodes: 44
+  edges: 88
+  density: 0.0466     # edges / (n*(n-1))
+  components: 1
+
+hubs:
+  most_referenced:
+    - id: definition.function
+      in_degree: 27
+      role: foundational atom; cited by every Ch1 entity
+    - id: definition.domain
+      in_degree: 11
+      role: ubiquitous attribute hub
+    - id: definition.graph-of-function
+      in_degree: 7
+      role: geometric anchor for transformations and tests
+    - id: definition.one-to-one-function
+      in_degree: 3
+    - id: definition.inverse-function
+      in_degree: 3
+    - id: definition.exponential-function
+      in_degree: 3
+    - id: definition.logarithmic-function
+      in_degree: 3
+  most_depending:
+    - id: definition.inverse-function
+      out_degree: 5
+    - id: definition.graph-of-function
+      out_degree: 4
+    - id: definition.logarithmic-function
+      out_degree: 4
+    - id: proposition.cancellation-equations
+      out_degree: 4
+
+orphan_count: 16
+orphan_sample:
+  - definition.vertical-translation
+  - definition.horizontal-translation
+  - definition.horizontal-stretch
+  - definition.vertical-stretch
+  - definition.reflection
+  - definition.arithmetic-of-functions
+  - definition.absolute-value
+  - definition.mathematical-model
+  - definition.even-function
+  - definition.decreasing-function
+  - definition.inverse-trigonometric-function
+orphan_explanation: >
+  These are "leaf" Ch1 atoms with no Ch1 dependents — expected for
+  transformations, parity properties, the absolute-value example,
+  and the inverse-trig family. Most will gain incoming edges in
+  Ch2 (limits / continuity will reference them), Ch3 (derivatives
+  of inverse-trig and exp/log), and Ch5–7 (integration formulas).
+  Orphan status is informational, not a defect.
+
+quality_summary:
+  status_distribution:
+    extracted: 44
+  dependency_confidence_set: 44
+  semantic_confidence_set: 44
+  latex_present: 23
+  latex_not_applicable: 14
+  latex_informal: 1
+  latex_missing: 0
+  semantic_dependency_audit_status: pending
+
+provenance_audit:
+  schema_version_check:
+    "0.3.1": 44
+  rerun_id_check:
+    v0.3.1-stewart-full: 44
+  language_original_check:
+    es: 44
+  is_original_uniqueness: pass
+  source_locator_integrity: pass    # all entities carry section + locator
+  page_locators_present: 0           # PDF page extraction deferred
+
+architectural_audit_application:
+  bundled_definition_splits:
+    applied:
+      - definition.{domain, range, independent-variable, dependent-variable, graph-of-function} split from the bundled function box
+      - composition vs. arithmetic-of-functions split (Stewart bundles four pointwise ops; we kept arithmetic as a Type-A bundle but separated it from composition)
+    accepted_as_explicit_debt:
+      - definition.trigonometric-function (six functions in one paragraph) — per user directive 2026-05-11, kept as bundle
+      - definition.inverse-trigonometric-function (six inverses in one paragraph) — same
+      - definition.arithmetic-of-functions (sum, difference, product, quotient as Type-A bundle)
+      - definition.reflection (x-axis and y-axis reflections as Type-A bundle)
+      - definition.{vertical,horizontal}-stretch (stretch + compression parameterized by c regime)
+      - proposition.laws-of-logarithms (3 laws Type-A bundle)
+      - proposition.laws-of-exponents (4 laws Type-A bundle)
+  proof_uses_role_precision: ok    # 5 proofs, every uses[] entry carries role: definition or essential
+  honest_dependency_confidence: ok # 5 entities at medium reflecting genuine debt
+  generality_edge_ownership: ok    # all sibling/special_case_of edges owned by alphabetically-earlier id
+
+semantic_debt_register:
+  - definition.trigonometric-function           # bundle (kept per user directive)
+  - definition.inverse-trigonometric-function   # bundle (kept per user directive)
+  - definition.algebraic-function               # informal LaTeX (status: informal)
+  - definition.exponential-function             # informal real-exponent extension
+  - definition.natural-exponential-function     # forward reference to derivative for e
+  - definition.logarithmic-function             # inherits exp informal real-exponent
+  - definition.linear-function                  # terminology collision with future linear-map
+  - definition.power-function                   # schematic domain (depends on exponent)
+  - definition.arithmetic-of-functions          # Type-A bundle (4 ops)

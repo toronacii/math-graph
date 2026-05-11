@@ -1,0 +1,141 @@
+weak_dependencies:
+
+  # Inherited from Chapter 1
+  - proof: proof.laws-of-exponents.stewart
+    proves: proposition.laws-of-exponents
+    issue: assumed-foundational-algebra
+    confidence: low
+    style: assumed
+    chapter: "1"
+    propagates_to:
+      - proof.laws-of-logarithms.stewart
+      - proof.change-of-base-formula.stewart
+      - proof.derivative-log-base-a.stewart
+    notes: >
+      Unchanged from Chapter 2. Stewart assumes exponent laws without
+      formal derivation. Epistemic debt now propagates further: the
+      change-of-base formula feeds proof.derivative-log-base-a.stewart.
+
+  # Inherited from Chapter 2
+  - proof: proof.intermediate-value-theorem.stewart
+    proves: theorem.intermediate-value-theorem
+    issue: assumed-completeness-axiom
+    confidence: low
+    style: assumed
+    chapter: "2"
+    propagates_to: []
+    notes: >
+      Unchanged from Chapter 2. IVT is not directly used by any
+      Chapter 3 proof, but may become relevant in Chapter 4
+      (existence of extrema, Rolle's theorem).
+    resolution_path: >
+      Can be resolved by adding the Completeness Axiom as an explicit
+      axiom node and providing the Appendix F proof.
+
+  - proof: proof.limit-root-law.stewart
+    proves: theorem.limit-root-law
+    issue: incomplete-proof
+    confidence: low
+    style: epsilon-delta
+    chapter: "2"
+    propagates_to: []
+    notes: >
+      Unchanged from Chapter 2. Not directly referenced by Chapter 3
+      proofs (power rule with fractional exponents uses logarithmic
+      differentiation instead).
+
+  # New in Chapter 3
+  - proof: proof.power-rule.stewart
+    proves: theorem.power-rule
+    issue: partial-proof
+    confidence: medium
+    style: direct
+    chapter: "3"
+    propagates_to:
+      - proof.power-rule-combined-chain.stewart
+    notes: >
+      Stewart proves only the positive integer case in 3.1 using the
+      binomial theorem. The general case (all real n) is completed in
+      3.6 via logarithmic differentiation. The proof is sound but
+      incomplete at the point of introduction. The chain-rule corollary
+      inherits this partial status.
+    resolution_path: >
+      Fully resolved within the textbook by section 3.6. Could add
+      a second proof node proof.power-rule.logarithmic with the
+      general case.
+
+implicit_algebraic_imports:
+
+  # Inherited from Chapters 1-2
+  - concept: Real number field axioms
+    used_by:
+      - definition.function
+      - definition.domain
+      - definition.range
+      - definition.epsilon-delta-limit
+      - definition.continuity-at-point
+    chapter: "1-2"
+    notes: >
+      Unchanged. The epsilon-delta definition and continuity assume
+      completeness and order properties.
+
+  - concept: Precalculus trigonometry
+    used_by:
+      - definition.trigonometric-function
+      - theorem.limit-sinx-over-x
+      - proof.derivative-sin.stewart
+      - proof.derivative-cos.stewart
+    chapter: "1-3"
+    notes: >
+      Extended in Chapter 3. The proofs of d/dx(sin x) and d/dx(cos x)
+      use the angle addition formulas sin(A+B) and cos(A+B), which
+      are imported from precalculus without formal justification.
+
+  - concept: Triangle inequality
+    used_by:
+      - proof.limit-laws.stewart
+    chapter: "2"
+    notes: Unchanged.
+
+  - concept: Archimedean property
+    used_by:
+      - proof.limit-one-over-x-at-infinity.stewart
+    chapter: "2"
+    notes: Unchanged.
+
+  # New in Chapter 3
+  - concept: Binomial theorem
+    used_by:
+      - proof.power-rule.stewart
+    chapter: "3"
+    notes: >
+      The proof of the power rule for positive integers uses the
+      binomial expansion (x+h)^n = sum of binomial coefficients.
+      This is a combinatorial result imported without proof.
+
+  - concept: Pythagorean identity (sin²x + cos²x = 1)
+    used_by:
+      - proof.derivative-tan.stewart
+      - proof.derivative-cot.stewart
+      - proof.derivative-arcsin.stewart
+      - proof.derivative-arccos.stewart
+    chapter: "3"
+    notes: >
+      The proofs of trig and inverse trig derivatives use sin²x + cos²x = 1
+      and 1 + tan²x = sec²x to simplify expressions. These identities
+      are assumed from precalculus trigonometry.
+
+epistemic_debt_summary:
+  total_weak_proofs: 3
+  total_partial_proofs: 1
+  total_inherited_weak: 3
+  total_implicit_imports: 6
+  affected_chain_depth: 5
+  new_weak_since_chapter_2: 0
+  new_partial_since_chapter_2: 1
+  new_implicit_since_chapter_2: 2
+  resolution_chapter_estimate:
+    laws_of_exponents: "7"
+    ivt: "Appendix F (completeness axiom)"
+    root_law: "depends on IVT resolution"
+    power_rule_general: "3.6 (already resolved in text)"

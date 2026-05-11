@@ -1,0 +1,17 @@
+weak_dependencies:
+  # All inherited from Chapter 9 — no changes
+  notes: >
+    No new weak dependencies. Chapter 10 added only isolated definitions
+    with no proofs.
+
+epistemic_debt_summary:
+  total_weak_proofs: 5
+  total_partial_proofs: 3
+  total_inherited_weak: 5
+  total_implicit_imports: 9
+  affected_chain_depth: 10
+  new_weak_since_chapter_9: 0
+  new_partial_since_chapter_9: 0
+  new_implicit_since_chapter_9: 0
+  critical_debt: >
+    No new epistemic debt. All existing debt unchanged.

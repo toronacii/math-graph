@@ -1,0 +1,122 @@
+schema_version: "0.3.1"
+id: definition.epsilon-delta-limit
+type: definition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Definición precisa de límite (ε–δ)
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Precise (epsilon–delta) definition of limit
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Sea f una función definida sobre algún intervalo abierto que
+        contiene al número a, excepto posiblemente en a misma.
+        Entonces decimos que el límite de f(x) cuando x tiende a a
+        es L, y lo expresamos como lím_{x→a} f(x) = L, si para cada
+        número ε > 0 existe un número δ > 0 tal que si
+        0 < |x − a| < δ entonces |f(x) − L| < ε.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        Let f be a function defined on some open interval that
+        contains the number a, except possibly at a itself. Then we
+        say that the limit of f(x) as x approaches a is L, and we
+        write lim_{x→a} f(x) = L, if for every number ε > 0 there is
+        a number δ > 0 such that if 0 < |x − a| < δ then
+        |f(x) − L| < ε.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      \lim_{x \to a} f(x) = L
+      \iff
+      \forall \varepsilon > 0,\ \exists \delta > 0:\
+      0 < |x - a| < \delta \implies |f(x) - L| < \varepsilon
+    status: present
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: definition.function
+    role: uses_concept
+    confidence: high
+  - id: definition.absolute-value
+    role: uses_concept
+    confidence: high
+    notes: "|x − a| and |f(x) − L| are the two distance expressions"
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.4"
+    theorem_label: "Definición 2"
+    page: "110"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [real-analysis]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [criterion, relation]
+  keywords: [limit, epsilon-delta, rigorous, quantifier]
+
+generality:
+  - target: definition.limit-of-function
+    relation: equivalent
+    notes: >
+      Rigorous (Cauchy/Weierstrass) reformulation of the informal
+      §2.2 definition. Owned here per policy 04 (alphabetically
+      earlier id: 'epsilon-delta-limit' < 'limit-of-function').
+      DO NOT merge — the informal node preserves the pedagogical
+      "arbitrarily close / sufficiently close" formulation; this
+      node carries the universal/existential structure used in
+      proofs.
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart §2.4 Definición 2 (Cauchy/Weierstrass formulation). The
+  informal sibling definition.limit-of-function (§2.2) is preserved
+  as a separate node; equivalence is recorded as a generality edge,
+  NOT a merge. semantic_confidence: high (vs medium for the informal
+  version) and latex.status: present (the LaTeX body fully captures
+  the quantifier structure).

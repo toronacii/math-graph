@@ -1,0 +1,110 @@
+schema_version: "0.3.1"
+id: definition.instantaneous-velocity
+type: definition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Velocidad instantánea
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Instantaneous velocity
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Si un objeto se mueve a lo largo de una línea recta con
+        función posición s = f(t), la velocidad (o velocidad
+        instantánea) en el instante t = a se define como el límite
+        de las velocidades promedio sobre intervalos cada vez más
+        cortos: v(a) = lím_{h→0} (f(a + h) − f(a)) / h, siempre que
+        este límite exista.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        If an object moves along a straight line with position
+        function s = f(t), the velocity (or instantaneous velocity)
+        at time t = a is defined as the limit of the average
+        velocities over shorter and shorter time intervals:
+        v(a) = lim_{h→0} (f(a + h) − f(a)) / h, provided this limit
+        exists.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      v(a) \;=\; \lim_{h \to 0} \frac{f(a + h) - f(a)}{h}
+    status: present
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: definition.average-velocity
+    role: uses_concept
+    confidence: high
+    notes: instantaneous velocity is the limit of the average velocity
+  - id: definition.limit-of-function
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.7"
+    theorem_label: "Ecuación 3"
+    page: "145"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [physics-applications]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [object, operator]
+  keywords: [velocity, instantaneous, kinematics, derivative-as-velocity]
+
+generality: []
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Closes the §2.1 deferred entry for instantaneous velocity; the
+  §2.1 setup discussed velocity informally via the falling-ball
+  example, but the formal definition appears here in §2.7 (Eq 3).
+  The identification velocity = derivative is captured separately
+  through definition.derivative-at-point: v(a) is literally the
+  same difference-quotient limit as f'(a) when f is the position
+  function, which is the kinematic instance of the derivative.

@@ -1,0 +1,106 @@
+schema_version: "0.3.1"
+id: definition.right-hand-limit-precise
+type: definition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Definición precisa de límite por la derecha (ε–δ)
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Precise (epsilon–delta) definition of right-hand limit
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        lím_{x→a⁺} f(x) = L si para todo número ε > 0 existe un
+        número δ > 0 tal que si a < x < a + δ entonces
+        |f(x) − L| < ε.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        lim_{x→a⁺} f(x) = L if for every ε > 0 there is a number
+        δ > 0 such that if a < x < a + δ then |f(x) − L| < ε.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      \lim_{x \to a^{+}} f(x) = L
+      \iff
+      \forall \varepsilon > 0,\ \exists \delta > 0:\
+      a < x < a + \delta \implies |f(x) - L| < \varepsilon
+    status: present
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: definition.function
+    role: uses_concept
+    confidence: high
+  - id: definition.absolute-value
+    role: uses_concept
+    confidence: high
+  - id: definition.epsilon-delta-limit
+    role: specializes
+    confidence: high
+    notes: same scheme with x restricted to the right half-interval
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.4"
+    theorem_label: "Definición 4"
+    page: "113"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [real-analysis]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [criterion, relation]
+  keywords: [limit, one-sided, right-hand, epsilon-delta, rigorous]
+
+generality: []
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart §2.4 Definición 4. Sibling edge to left-hand-limit-precise
+  is recorded on left-hand-limit-precise (alphabetically earlier).
+  Equivalence with the informal §2.2 sibling definition.right-hand-
+  limit is recorded on the informal node.

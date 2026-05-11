@@ -1,0 +1,109 @@
+schema_version: "0.3.1"
+id: theorem.limit-of-reciprocal-power
+type: theorem
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Límite al infinito de 1/xʳ
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Limit at infinity of 1/x^r
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Si r > 0 es un número racional, entonces lím_{x→∞} 1/x^r = 0.
+        Si r > 0 es un número racional tal que x^r está definida para
+        toda x, entonces lím_{x→−∞} 1/x^r = 0.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        If r > 0 is a rational number, then lim_{x→∞} 1/x^r = 0. If
+        r > 0 is a rational number such that x^r is defined for all
+        x, then lim_{x→−∞} 1/x^r = 0.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      r \in \mathbb{Q}_{>0} \implies \lim_{x \to \infty} \frac{1}{x^r} = 0; \\
+      r \in \mathbb{Q}_{>0} \text{ with } x^r \text{ defined for all } x
+      \implies \lim_{x \to -\infty} \frac{1}{x^r} = 0
+    status: present
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: definition.limit-at-infinity
+    role: uses_concept
+    confidence: high
+  - id: definition.negative-limit-at-infinity
+    role: uses_concept
+    confidence: high
+  - id: definition.power-function
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.6"
+    theorem_label: "Teorema 5"
+    page: "133"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [real-analysis]
+
+ambient:
+  structures: [extended-real-line]
+
+ontology:
+  semantic_kind: [property]
+  keywords: [limit-at-infinity, reciprocal-power, asymptotic-decay]
+
+generality: []
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: medium
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart §2.6 Teorema 5. Asserted with a justification sketch
+  ("combinando las leyes 6 y 11 con los resultados del ejemplo 2"),
+  but no rigorous proof in main text. Example 14 proves the r = 1
+  case from definition.epsilon-N-limit-at-infinity. Deferred-proof
+  entry: a complete proof requires an extension of proposition.
+  limit-power-law to rational exponents and to x → ∞ (limit laws
+  generalize per Stewart's remark on p.133). dependency_confidence:
+  medium reflects the missing proof node.

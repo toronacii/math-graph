@@ -1,0 +1,82 @@
+schema_version: "0.3.1"
+id: proof.continuity-of-polynomials-and-rationals.stewart
+type: proof
+status: extracted
+
+proves: theorem.continuity-of-polynomials-and-rationals
+style: direct
+
+uses:
+  - id: proposition.limit-of-constant
+    role: essential
+    confidence: high
+    notes: lim_{x→a} c = c (Ley 7)
+  - id: proposition.limit-power-of-x
+    role: essential
+    confidence: high
+    notes: lim_{x→a} x^m = a^m (Ley 9), establishing continuity of x ↦ x^m
+  - id: theorem.continuity-arithmetic
+    role: essential
+    confidence: high
+    notes: >
+      Constant-multiple (inciso 3) builds c x^m from x^m; sum
+      (inciso 1) assembles the polynomial; quotient (inciso 5)
+      handles the rational case where the denominator is non-zero.
+  - id: definition.polynomial
+    role: definition
+    confidence: high
+  - id: definition.rational-function
+    role: definition
+    confidence: high
+
+parts:
+  - name: polynomial
+    kind: case
+    description: P(x) = c_n x^n + … + c_0 is continuous on ℝ.
+    uses: []
+  - name: rational
+    kind: case
+    description: f = P/Q is continuous wherever Q ≠ 0.
+    uses: []
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.5"
+    locator: "Demostración del Teorema 5"
+    page: "122"
+    source_language: es
+
+sketch:
+  es:
+    text: >
+      (a) lím_{x→a} c = c (Ley 7) y lím_{x→a} x^m = a^m (Ley 9),
+      es decir, x ↦ x^m es continua. Por el inciso 3 del Teorema 4
+      la función c·x^m es continua. Como P es una suma de tales
+      funciones más una constante, por el inciso 1 del Teorema 4 P
+      es continua. (b) Si f = P/Q con P, Q polinomiales y D = {x :
+      Q(x) ≠ 0}, entonces P y Q son continuas en D y por el inciso 5
+      del Teorema 4, f es continua en cada punto de D.
+    is_original: true
+    origin: original
+    review_status: unreviewed
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart §2.5 explicit proof. Top-level uses[] carries the shared
+  ingredients; parts[] carries the case structure (no per-case
+  extra dependencies — both cases use the same toolkit).

@@ -1,0 +1,56 @@
+schema_version: "0.3.1"
+id: proof.limit-power-law.stewart
+type: proof
+status: extracted
+
+proves: proposition.limit-power-law
+style: induction
+
+uses:
+  - id: proposition.limit-laws
+    role: essential
+    confidence: high
+    implicit: false
+    notes: >
+      product law (limit-laws #4) applied repeatedly: at step k,
+      lim [f(x)]^{k+1} = lim ([f(x)]^k · f(x))
+                     = (lim [f(x)]^k) · (lim f(x))
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.3"
+    locator: "Derivación de Ley 6 (sección 2.3)"
+    page: "100"
+    source_language: es
+
+sketch:
+  es:
+    text: >
+      Si utilizamos repetidamente la ley del producto (Ley 4) con
+      g(x) = f(x), obtenemos lím [f(x)]² = (lím f(x))²; por
+      inducción sobre n, lím [f(x)]ⁿ = (lím f(x))ⁿ.
+    is_original: true
+    origin: original
+    review_status: unreviewed
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart's wording: "Si utilizamos repetidamente la ley del
+  producto…" — induction on n, base n=1 trivial. Cites the bundled
+  proposition.limit-laws with role: essential because the product
+  law is the substantive ingredient.

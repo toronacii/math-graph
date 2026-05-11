@@ -1,0 +1,101 @@
+schema_version: "0.3.1"
+id: definition.differentiable-on-interval
+type: definition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Función derivable sobre un intervalo
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Function differentiable on an interval
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Una función f es derivable sobre un intervalo abierto
+        (a, b) [o (a, ∞) o (−∞, a) o (−∞, ∞)] si f es derivable
+        en todo número del intervalo.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        A function f is differentiable on an open interval (a, b)
+        [or (a, ∞) or (−∞, a) or (−∞, ∞)] if f is differentiable
+        at every number in the interval.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      f \text{ differentiable on } I
+        \;\Longleftrightarrow\;
+      \forall a \in I,\; f'(a) \text{ exists}
+    status: present
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: definition.differentiable-at-point
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.8"
+    theorem_label: "Definición 3 (segunda parte)"
+    page: "157"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [analysis]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [property, criterion]
+  keywords: [differentiability, global, interval]
+
+generality: []
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: medium
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Open-interval restriction matches Stewart's text. The notion of
+  differentiability on a CLOSED interval (which would require
+  one-sided derivatives at the endpoints) is NOT introduced in
+  Ch2 and is deferred. The "open interval" notion itself is
+  treated informally by Stewart and is not represented as a
+  separate definition node in the corpus.

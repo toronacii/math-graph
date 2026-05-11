@@ -1,0 +1,100 @@
+schema_version: "0.3.1"
+id: definition.vertical-translation
+type: definition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Traslación vertical
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Vertical translation
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Sea c > 0. La gráfica de y = f(x) + c se obtiene desplazando
+        la gráfica de y = f(x) verticalmente c unidades hacia arriba,
+        y la gráfica de y = f(x) − c se obtiene desplazándola c
+        unidades hacia abajo.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        Let c > 0. The graph of y = f(x) + c is the graph of
+        y = f(x) shifted vertically c units upward, and the graph of
+        y = f(x) − c is shifted c units downward.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      g(x) = f(x) + c, \qquad c \in \mathbb{R}
+    status: present
+    review_status: unreviewed
+
+proved_by: []
+depends_on:
+  - id: definition.function
+    role: uses_concept
+    confidence: high
+  - id: definition.graph-of-function
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.3"
+    locator: "Transformaciones de funciones (sección 1.3)"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [geometry]
+
+ambient:
+  structures: [real-line, cartesian-plane]
+
+ontology:
+  semantic_kind: [operator, construction]
+  keywords: [translation, shift, vertical, transformation]
+
+generality: []
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: medium
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Atomic transformation; sibling-of definition.horizontal-translation
+  (sibling edge owned by the alphabetically-earlier id, which is
+  horizontal-translation). Sign of c determined geometrically rather
+  than by separate up/down nodes (Stewart treats both directions in
+  one boxed rule).

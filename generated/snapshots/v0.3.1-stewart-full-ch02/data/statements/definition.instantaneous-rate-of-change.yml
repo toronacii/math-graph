@@ -1,0 +1,109 @@
+schema_version: "0.3.1"
+id: definition.instantaneous-rate-of-change
+type: definition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Razón de cambio instantánea
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Instantaneous rate of change
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Sea y = f(x). La razón de cambio instantánea de y respecto a
+        x en x = x₁ se define como el límite de las razones de cambio
+        promedio sobre intervalos cada vez más pequeños:
+        lím_{Δx→0} Δy/Δx = lím_{x₂→x₁} (f(x₂) − f(x₁))/(x₂ − x₁).
+        Geométricamente coincide con la pendiente de la recta
+        tangente a la curva y = f(x) en el punto P(x₁, f(x₁)).
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        Let y = f(x). The instantaneous rate of change of y with
+        respect to x at x = x₁ is defined as the limit of the
+        average rates of change over smaller and smaller intervals:
+        lim_{Δx→0} Δy/Δx = lim_{x₂→x₁} (f(x₂) − f(x₁))/(x₂ − x₁).
+        Geometrically it equals the slope of the tangent line to
+        the curve y = f(x) at the point P(x₁, f(x₁)).
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      \text{instantaneous rate of change}
+        \;=\; \lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x}
+        \;=\; \lim_{x_2 \to x_1} \frac{f(x_2) - f(x_1)}{x_2 - x_1}
+    status: present
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: definition.average-rate-of-change
+    role: uses_concept
+    confidence: high
+  - id: definition.limit-of-function
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.7"
+    theorem_label: "Ecuación 6"
+    page: "148"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [analysis]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [object, operator]
+  keywords: [rate-of-change, instantaneous, derivative-interpretation]
+
+generality: []
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart explicitly identifies this limit with f'(x₁): the
+  instantaneous rate of change is the derivative under a different
+  interpretation. The equivalent edge to definition.derivative-at-point
+  is owned by derivative-at-point per policy 04 (alphabetical edge
+  ownership).

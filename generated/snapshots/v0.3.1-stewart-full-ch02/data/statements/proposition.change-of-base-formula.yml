@@ -1,0 +1,102 @@
+schema_version: "0.3.1"
+id: proposition.change-of-base-formula
+type: proposition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Fórmula de cambio de base
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Change of base formula
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Para cualesquiera bases positivas a, b distintas de 1, y para
+        todo x > 0, se cumple logₐ x = (ln x) / (ln a), y más
+        generalmente log_b x = (logₐ x) / (logₐ b).
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        For any positive bases a, b different from 1, and for every
+        x > 0, logₐ x = (ln x) / (ln a) and, more generally,
+        log_b x = (logₐ x) / (logₐ b).
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      \log_b x = \frac{\log_a x}{\log_a b}, \qquad
+      \log_a x = \frac{\ln x}{\ln a}
+    status: present
+    review_status: unreviewed
+
+proved_by:
+  - proof.change-of-base-formula.stewart
+
+depends_on:
+  - id: definition.logarithmic-function
+    role: uses_concept
+    confidence: high
+  - id: definition.natural-logarithm
+    role: uses_concept
+    confidence: high
+  - id: proposition.laws-of-logarithms
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.6"
+    locator: "Fórmula de cambio de base (sección 1.6)"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [algebra]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [schema]
+  keywords: [change-of-base, logarithm-conversion]
+
+generality: []
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: medium
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart states both the general b-to-a form and the
+  natural-log specialization.

@@ -1,0 +1,139 @@
+schema_version: "0.3.1"
+id: proposition.non-differentiability-cases
+type: proposition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Tres casos en que una función deja de ser derivable
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Three ways a function can fail to be differentiable
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Una función f puede dejar de ser derivable en un punto
+        x = a por al menos una de las tres razones siguientes:
+        (i) la gráfica tiene una esquina o pico en (a, f(a)) y
+        los límites laterales del cociente de diferencias en a
+        son distintos (por ejemplo, f(x) = |x| en a = 0);
+        (ii) f es discontinua en a (por el contrarrecíproco del
+        teorema «derivabilidad implica continuidad»; por ejemplo,
+        una discontinuidad de salto); (iii) la curva tiene una
+        recta tangente vertical en x = a, es decir,
+        lím_{x→a} |f'(x)| = ∞.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        A function f can fail to be differentiable at a point
+        x = a for at least one of three reasons: (i) the graph
+        has a corner or cusp at (a, f(a)) and the one-sided
+        limits of the difference quotient at a disagree (for
+        example, f(x) = |x| at a = 0); (ii) f is discontinuous
+        at a (by the contrapositive of "differentiability implies
+        continuity"; for example, a jump discontinuity); (iii)
+        the curve has a vertical tangent line at x = a, i.e.
+        lim_{x→a} |f'(x)| = ∞.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      \text{Non-differentiability at } a:
+      \begin{cases}
+        \text{(i) corner: }
+          \lim_{h\to 0^{-}}\!\tfrac{f(a+h)-f(a)}{h}
+          \neq
+          \lim_{h\to 0^{+}}\!\tfrac{f(a+h)-f(a)}{h} \\
+        \text{(ii) discontinuity: }
+          \lim_{x\to a} f(x) \neq f(a)
+          \text{ or undefined} \\
+        \text{(iii) vertical tangent: }
+          \lim_{x\to a}\bigl|f'(x)\bigr| = \infty
+      \end{cases}
+    status: present
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: definition.differentiable-at-point
+    role: uses_concept
+    confidence: high
+  - id: theorem.differentiable-implies-continuous
+    role: uses_concept
+    confidence: high
+    notes: case (ii) is the contrapositive of this theorem
+  - id: definition.left-hand-limit
+    role: uses_concept
+    confidence: high
+    notes: case (i) requires distinct one-sided limits of the difference quotient
+  - id: definition.right-hand-limit
+    role: uses_concept
+    confidence: high
+    notes: case (i), companion to the left-hand limit dependency
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.8"
+    locator: "Subsección «¿Cómo deja de ser derivable una función?» (Figura 7)"
+    page: "159"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [analysis]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [criterion, pedagogical]
+  keywords: [non-differentiability, corner, jump-discontinuity, vertical-tangent]
+
+generality: []
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: medium
+  semantic_confidence: medium
+  translation_confidence: high
+  latex_confidence: medium
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart presents this as a pedagogical enumeration ("Tres
+  maneras para que f no sea derivable") rather than an exhaustive
+  classification. Marked semantic_kind: [criterion, pedagogical]
+  to flag that the three cases are typical, NOT proven exhaustive
+  — wild functions (e.g., the topologist's sine curve, nowhere-
+  differentiable continuous functions) need not fall cleanly into
+  these three buckets. semantic_confidence: medium reflects this
+  non-exhaustiveness. No proof node: the three cases are each
+  established either by a worked example (|x|) or by appealing to
+  Theorem 4 / general limit machinery.

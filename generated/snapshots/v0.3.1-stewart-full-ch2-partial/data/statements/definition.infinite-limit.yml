@@ -1,0 +1,113 @@
+schema_version: "0.3.1"
+id: definition.infinite-limit
+type: definition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Límite infinito
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Infinite limit
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Sea f una función definida por ambos lados de a, excepto
+        posiblemente en a misma. Entonces lím_{x→a} f(x) = ∞
+        significa que los valores de f(x) pueden ser
+        arbitrariamente grandes (tan grandes como queramos),
+        tomando x suficientemente cerca de a, pero no igual a a.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        Let f be a function defined on both sides of a, except
+        possibly at a itself. Then lim_{x→a} f(x) = ∞ means that
+        the values of f(x) can be made arbitrarily large (as large
+        as we like) by taking x sufficiently close to a, but not
+        equal to a.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      \lim_{x \to a} f(x) = \infty
+    status: informal
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: definition.function
+    role: uses_concept
+    confidence: high
+  - id: definition.limit-of-function
+    role: extends
+    confidence: high
+    notes: extends the limit notation to a divergent regime; ∞ is NOT a real number
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.2"
+    theorem_label: "Definición 4"
+    page: "93"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [real-analysis]
+
+ambient:
+  structures: [extended-real-line]
+
+ontology:
+  semantic_kind: [object, relation]
+  keywords: [limit, infinity, divergence]
+
+generality:
+  - target: definition.negative-infinite-limit
+    relation: sibling
+    notes: >
+      Symmetric divergence-to-minus-infinity variant. Owned by
+      infinite-limit per policy 04 (alphabetically earlier id).
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: medium
+  translation_confidence: high
+  latex_confidence: medium
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart explicitly warns that ∞ is not a number — the notation is
+  shorthand for divergence. The rigorous definition (Definición 4
+  in §2.4) is a SEPARATE node. The four one-sided infinite-limit
+  variants (lim_{a⁻}=±∞, lim_{a⁺}=±∞) are mentioned briefly in §2.2
+  but not given individual definition numbers; they are not
+  authored as separate atoms here. They will appear when needed by
+  vertical-asymptote applications.

@@ -1,0 +1,110 @@
+schema_version: "0.3.1"
+id: proposition.limit-root-law
+type: proposition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Ley de la raíz para límites
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Root law for limits
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Sea n un entero positivo. Entonces
+        lím_{x→a} ⁿ√x = ⁿ√a (si n es par, suponemos a > 0); y, más
+        generalmente, lím_{x→a} ⁿ√f(x) = ⁿ√(lím_{x→a} f(x)) (si n
+        es par, suponemos lím_{x→a} f(x) > 0).
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        Let n be a positive integer. Then
+        lim_{x→a} ⁿ√x = ⁿ√a (if n is even, assume a > 0); more
+        generally, lim_{x→a} ⁿ√f(x) = ⁿ√(lim_{x→a} f(x)) (if n is
+        even, assume lim_{x→a} f(x) > 0).
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      \lim_{x \to a} \sqrt[n]{x} = \sqrt[n]{a}, \qquad
+      \lim_{x \to a} \sqrt[n]{f(x)}
+        = \sqrt[n]{\lim_{x \to a} f(x)}
+      \qquad (n \in \mathbb{Z}_{>0})
+    status: present
+    review_status: unreviewed
+
+proved_by:
+  - proof.limit-root-law.stewart
+
+depends_on:
+  - id: definition.limit-of-function
+    role: uses_concept
+    confidence: high
+  - id: definition.power-function
+    role: uses_concept
+    confidence: medium
+    notes: ⁿ√x is a particular power function (exponent 1/n)
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.3"
+    theorem_label: "Leyes 10 y 11"
+    page: "100"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [real-analysis]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [property]
+  keywords: [limit, root, n-th-root]
+
+generality: []
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: medium
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Bundles Stewart Laws 10 (root of x) and 11 (root of f) as a
+  Type-A pair (Law 11 generalizes Law 10). Stewart says Law 11
+  follows from Law 10 (proven in §2.5 as a consequence of
+  continuity) and the square-root case is Exercise 37 of §2.4. No
+  proof node here; will be authored when §2.5 lands.
+  dependency_confidence: medium reflects the real-exponent
+  informality inherited from definition.power-function.

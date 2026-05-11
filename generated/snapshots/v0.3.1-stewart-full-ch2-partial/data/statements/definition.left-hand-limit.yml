@@ -1,0 +1,110 @@
+schema_version: "0.3.1"
+id: definition.left-hand-limit
+type: definition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Límite por la izquierda
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Left-hand limit
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Cuando escribimos lím_{x→a⁻} f(x) = L decimos que el límite
+        izquierdo de f(x) cuando x se aproxima a a (o el límite de
+        f(x) cuando x tiende a a por la izquierda) es igual a L si
+        podemos hacer que los valores de f(x) se acerquen
+        arbitrariamente a L, tanto como queramos, tomando x
+        suficientemente cercanos a a, pero menores que a.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        We write lim_{x→a⁻} f(x) = L and say the left-hand limit of
+        f(x) as x approaches a (or the limit of f(x) as x approaches
+        a from the left) equals L if we can make the values of f(x)
+        arbitrarily close to L by taking x sufficiently close to a
+        but less than a.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      \lim_{x \to a^{-}} f(x) = L
+    status: informal
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: definition.function
+    role: uses_concept
+    confidence: high
+  - id: definition.limit-of-function
+    role: specializes
+    confidence: high
+    notes: same intuitive scheme restricted to x < a
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.2"
+    theorem_label: "Definición 2"
+    page: "92"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [real-analysis]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [object, relation]
+  keywords: [limit, one-sided, left-hand]
+
+generality:
+  - target: definition.right-hand-limit
+    relation: sibling
+    notes: >
+      Symmetric one-sided variant. Owned by left-hand-limit per
+      policy 04 (alphabetically earlier id).
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: medium
+  translation_confidence: high
+  latex_confidence: medium
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Pedagogical (informal) version. The epsilon-delta variant
+  (definition.left-hand-limit-precise from v0.2 archive) is a
+  SEPARATE rigorous node to be authored when §2.4 is processed.

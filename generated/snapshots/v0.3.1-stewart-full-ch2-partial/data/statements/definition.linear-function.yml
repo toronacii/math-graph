@@ -1,0 +1,99 @@
+schema_version: "0.3.1"
+id: definition.linear-function
+type: definition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Función lineal
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Linear function
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Una función lineal es una función cuya gráfica es una recta;
+        equivalentemente, puede escribirse en la forma f(x) = m x + b,
+        donde m es la pendiente y b es la ordenada al origen.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        A linear function is a function whose graph is a straight
+        line; equivalently, it can be written as f(x) = m x + b, where
+        m is the slope and b is the y-intercept.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      f(x) = m x + b, \qquad m, b \in \mathbb{R}
+    status: present
+    review_status: unreviewed
+
+proved_by: []
+depends_on:
+  - id: definition.function
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.2"
+    locator: "Modelos lineales (sección 1.2)"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [linear-algebra]
+
+ambient:
+  structures: [real-line]
+  notes: >
+    Stewart's "linear function" in the calculus sense (affine map of
+    R) — distinct from the linear-algebra meaning (R-linear map). A
+    future Rudin/linear-algebra merge will likely create a generality
+    edge to the more restrictive `linear-map` notion.
+
+ontology:
+  semantic_kind: [object]
+  keywords: [linear, affine, line, slope, intercept]
+
+generality: []
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: medium
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Calculus-textbook "linear function" = affine real function. The
+  linear-algebra notion (no constant term, additivity) is a distinct
+  node to be created later under `definition.linear-map`.

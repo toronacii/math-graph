@@ -1,0 +1,75 @@
+schema_version: "0.3.1"
+id: proof.differentiable-implies-continuous.stewart
+type: proof
+status: extracted
+
+proves: theorem.differentiable-implies-continuous
+style: direct
+
+uses:
+  - id: definition.differentiable-at-point
+    role: definition
+    confidence: high
+    notes: hypothesis "f differentiable at a" unfolds as f'(a) = lim (f(x)−f(a))/(x−a)
+  - id: definition.continuity-at-point
+    role: definition
+    confidence: high
+    notes: goal "f continuous at a" unfolds as lim_{x→a} f(x) = f(a)
+  - id: definition.derivative-at-point
+    role: notation
+    confidence: high
+    notes: uses Eq 2.7.5 — the (x − a) form of the derivative
+  - id: proposition.limit-laws
+    role: essential
+    confidence: high
+    notes: applies the product law and the sum law to compute lim (f(x) − f(a))
+  - id: definition.limit-of-function
+    role: background
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.8"
+    locator: "Demostración del Teorema 4"
+    page: "158"
+    source_language: es
+
+sketch:
+  es:
+    text: >
+      Hipótesis: f'(a) = lím_{x→a} (f(x) − f(a))/(x − a) existe
+      (forma Eq 2.7.5 de la derivada). Para x ≠ a se puede
+      escribir f(x) − f(a) = ((f(x) − f(a))/(x − a))·(x − a).
+      Aplicando la ley del producto de los límites,
+      lím_{x→a} [f(x) − f(a)] =
+      lím_{x→a} (f(x) − f(a))/(x − a) · lím_{x→a} (x − a) =
+      f'(a) · 0 = 0. Sumando y restando f(a) y aplicando la ley
+      de la suma, lím_{x→a} f(x) = lím_{x→a} f(a) +
+      lím_{x→a} [f(x) − f(a)] = f(a) + 0 = f(a). Por lo tanto f
+      es continua en a.
+    is_original: true
+    origin: original
+    review_status: unreviewed
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Standard textbook proof. Uses Stewart's Eq 2.7.5 form of the
+  derivative (x → a, not h → 0) because the (x − a) factor is the
+  algebraic pivot. Depends on the SUM and PRODUCT cases of
+  proposition.limit-laws, both established (sum case proved
+  explicitly; product case still bundled).

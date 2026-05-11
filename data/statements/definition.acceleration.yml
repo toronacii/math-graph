@@ -1,0 +1,107 @@
+schema_version: "0.3.1"
+id: definition.acceleration
+type: definition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Aceleración
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Acceleration
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Sea s = s(t) la función posición de un objeto que se
+        desplaza a lo largo de una línea recta, con velocidad
+        v(t) = s'(t). La aceleración a(t) del objeto se define
+        como la razón de cambio de la velocidad respecto al
+        tiempo, es decir, la derivada de la velocidad y por lo
+        tanto la segunda derivada de la posición:
+        a(t) = v'(t) = s''(t).
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        Let s = s(t) be the position function of an object moving
+        along a straight line, with velocity v(t) = s'(t). The
+        acceleration a(t) of the object is defined as the rate of
+        change of velocity with respect to time, i.e. the
+        derivative of velocity and hence the second derivative of
+        position: a(t) = v'(t) = s''(t).
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      a(t) \;=\; v'(t) \;=\; s''(t)
+    status: present
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: definition.instantaneous-velocity
+    role: uses_concept
+    confidence: high
+  - id: definition.second-derivative
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.8"
+    locator: "Subsección «Derivadas superiores» — aceleración"
+    page: "161"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [physics-applications]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [object, operator]
+  keywords: [acceleration, kinematics, second-derivative-as-rate]
+
+generality: []
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Kinematic specialization of the second derivative: the second
+  derivative of an arbitrary position function. Jerk (third
+  derivative of position) is mentioned by Stewart but not given a
+  formal definition node; deferred as pedagogical aside.

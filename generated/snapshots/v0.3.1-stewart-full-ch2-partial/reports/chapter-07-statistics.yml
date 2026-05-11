@@ -1,0 +1,84 @@
+chapter: "7"
+chapter_title: Techniques of Integration
+source:
+  work: "Calculo de una variable — Trascendentes tempranas"
+  author: James Stewart
+  edition: "7"
+  language: es
+  sections_processed:
+    - "7.1"
+    - "7.8"
+
+extraction_date: "2026-05-10"
+validation_status: pass
+
+cumulative_statistics:
+  total_nodes: 220
+  total_edges: 243
+
+  nodes_by_type:
+    definition: 80
+    proposition: 17
+    theorem: 48
+    corollary: 5
+    lemma: 0
+    axiom: 0
+    conjecture: 0
+    proof: 70
+
+  nodes_by_kind:
+    statement: 150
+    proof: 70
+
+  edges_by_relation:
+    uses: 173
+    proves: 70
+
+  proofs_by_style:
+    direct: 60
+    epsilon-delta: 4
+    assumed: 4
+    algebraic: 1
+    geometric: 1
+
+  proofs_by_confidence:
+    high: 46
+    medium: 19
+    low: 5
+
+  root_nodes: 80
+  isolated_nodes: 41
+  connected_components: 43
+  connected_component_sizes:
+    - 176
+    - 3
+    - 1
+    - 1
+    - 1
+
+  graph_density: 0.0050
+  average_degree: 2.21
+
+chapter_delta:
+  new_nodes: 8
+  new_edges: 10
+  new_definitions: 2
+  new_propositions: 0
+  new_theorems: 3
+  new_corollaries: 0
+  new_proofs: 3
+  reclassifications: 0
+
+sections_skipped:
+  - section: "7.2"
+    reason: "Trigonometric integrals — methodology, no new entities"
+  - section: "7.3"
+    reason: "Trigonometric substitution — methodology, no new entities"
+  - section: "7.4"
+    reason: "Partial fractions — methodology, no new entities"
+  - section: "7.5"
+    reason: "Strategy for integration — methodology overview"
+  - section: "7.6"
+    reason: "Integration tables and CAS — tools, no new entities"
+  - section: "7.7"
+    reason: "Approximate integration — numerical methods, no new entities"
