@@ -1,0 +1,24 @@
+id: proof.integrability-criterion-consequences.rudin
+type: proof
+status: draft
+
+proves: proposition.integrability-criterion-consequences
+
+uses:
+  - theorem.refinement-upper-lower-sums
+  - theorem.riemann-stieltjes-integrability-criterion
+  - definition.riemann-stieltjes-integral
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "6"
+    section: "6.7"
+
+confidence: high
+notes: >
+  (a) follows from Theorem 6.4. (b) uses |f(s_i) - f(t_i)| <= M_i - m_i.
+  (c) uses L(P) <= sum f(t_i) Delta alpha_i <= U(P) and
+  L(P) <= integral <= U(P).

@@ -179,6 +179,11 @@
     {
       "relation": "uses",
       "source": "definition.compact-set",
+      "target": "proof.finitely-discontinuous-integrable.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.compact-set",
       "target": "proof.infinite-subset-compact-limit-point.rudin"
     },
     {
@@ -308,6 +313,21 @@
     },
     {
       "relation": "uses",
+      "source": "definition.continuity-metric",
+      "target": "proof.finitely-discontinuous-integrable.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.continuity-metric",
+      "target": "proof.indefinite-integral-differentiability.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.continuity-metric",
+      "target": "proof.integration-step-function.rudin"
+    },
+    {
+      "relation": "uses",
       "source": "definition.continuity-on-interval",
       "target": "proof.extreme-value-theorem.stewart"
     },
@@ -408,6 +428,11 @@
     },
     {
       "relation": "uses",
+      "source": "definition.curve-arc-rectifiable",
+      "target": "proof.arc-length-formula.rudin"
+    },
+    {
+      "relation": "uses",
       "source": "definition.decreasing-function",
       "target": "proof.increasing-decreasing-test.stewart"
     },
@@ -470,6 +495,11 @@
       "relation": "uses",
       "source": "definition.derivative-at-point",
       "target": "proof.ftc-part1.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.derivative-at-point",
+      "target": "proof.fundamental-theorem-of-calculus.rudin"
     },
     {
       "relation": "uses",
@@ -1083,6 +1113,11 @@
     },
     {
       "relation": "uses",
+      "source": "definition.partition",
+      "target": "proof.refinement-upper-lower-sums.rudin"
+    },
+    {
+      "relation": "uses",
       "source": "definition.polynomial",
       "target": "proof.direct-substitution-property.stewart"
     },
@@ -1135,6 +1170,81 @@
       "relation": "uses",
       "source": "definition.rearrangement-of-series",
       "target": "proof.riemann-rearrangement.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.refinement-partition",
+      "target": "proof.lower-leq-upper-integral.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.refinement-partition",
+      "target": "proof.refinement-upper-lower-sums.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.refinement-partition",
+      "target": "proof.riemann-stieltjes-integrability-criterion.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.refinement-partition",
+      "target": "proof.riemann-stieltjes-integral-properties.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.riemann-stieltjes-integral",
+      "target": "proof.change-of-variable-integral.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.riemann-stieltjes-integral",
+      "target": "proof.composition-preserves-integrability.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.riemann-stieltjes-integral",
+      "target": "proof.continuous-integrable-stieltjes.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.riemann-stieltjes-integral",
+      "target": "proof.indefinite-integral-differentiability.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.riemann-stieltjes-integral",
+      "target": "proof.integrability-criterion-consequences.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.riemann-stieltjes-integral",
+      "target": "proof.integration-step-function.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.riemann-stieltjes-integral",
+      "target": "proof.lower-leq-upper-integral.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.riemann-stieltjes-integral",
+      "target": "proof.refinement-upper-lower-sums.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.riemann-stieltjes-integral",
+      "target": "proof.riemann-stieltjes-integrability-criterion.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.riemann-stieltjes-integral",
+      "target": "proof.riemann-stieltjes-integral-properties.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.riemann-stieltjes-integral",
+      "target": "proof.stieltjes-riemann-reduction.rudin"
     },
     {
       "relation": "uses",
@@ -1323,6 +1433,11 @@
     },
     {
       "relation": "uses",
+      "source": "definition.unit-step-function",
+      "target": "proof.integration-step-function.rudin"
+    },
+    {
+      "relation": "uses",
       "source": "definition.upper-bound",
       "target": "proof.lub-implies-glb.rudin"
     },
@@ -1345,6 +1460,16 @@
       "relation": "uses",
       "source": "definition.upper-lower-limits",
       "target": "proof.root-test.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.vector-valued-integral",
+      "target": "proof.ftc-vector-valued.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.vector-valued-integral",
+      "target": "proof.integral-triangle-inequality-vector.rudin"
     },
     {
       "relation": "uses",
@@ -1395,6 +1520,11 @@
       "relation": "proves",
       "source": "proof.alternating-series-test.stewart",
       "target": "theorem.alternating-series-test"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.arc-length-formula.rudin",
+      "target": "theorem.arc-length-formula"
     },
     {
       "relation": "proves",
@@ -1450,6 +1580,11 @@
       "relation": "proves",
       "source": "proof.change-of-base-formula.stewart",
       "target": "proposition.change-of-base-formula"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.change-of-variable-integral.rudin",
+      "target": "theorem.change-of-variable-integral"
     },
     {
       "relation": "proves",
@@ -1520,6 +1655,11 @@
       "relation": "proves",
       "source": "proof.complex-field.rudin",
       "target": "theorem.complex-field"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.composition-preserves-integrability.rudin",
+      "target": "theorem.composition-preserves-integrability"
     },
     {
       "relation": "proves",
@@ -1600,6 +1740,11 @@
       "relation": "proves",
       "source": "proof.continuous-image-connected.rudin",
       "target": "theorem.continuous-image-connected"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.continuous-integrable-stieltjes.rudin",
+      "target": "theorem.continuous-integrable-stieltjes"
     },
     {
       "relation": "proves",
@@ -1823,6 +1968,11 @@
     },
     {
       "relation": "proves",
+      "source": "proof.finitely-discontinuous-integrable.rudin",
+      "target": "theorem.finitely-discontinuous-integrable"
+    },
+    {
+      "relation": "proves",
       "source": "proof.first-derivative-test.stewart",
       "target": "proposition.first-derivative-test"
     },
@@ -1835,6 +1985,16 @@
       "relation": "proves",
       "source": "proof.ftc-part2.stewart",
       "target": "theorem.ftc-part2"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.ftc-vector-valued.rudin",
+      "target": "theorem.ftc-vector-valued"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.fundamental-theorem-of-calculus.rudin",
+      "target": "theorem.fundamental-theorem-of-calculus"
     },
     {
       "relation": "proves",
@@ -1883,6 +2043,11 @@
     },
     {
       "relation": "proves",
+      "source": "proof.indefinite-integral-differentiability.rudin",
+      "target": "theorem.indefinite-integral-differentiability"
+    },
+    {
+      "relation": "proves",
       "source": "proof.infinite-subset-compact-limit-point.rudin",
       "target": "theorem.infinite-subset-compact-limit-point"
     },
@@ -1890,6 +2055,11 @@
       "relation": "proves",
       "source": "proof.infinite-subset-countable.rudin",
       "target": "proposition.infinite-subset-countable"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.integrability-criterion-consequences.rudin",
+      "target": "proposition.integrability-criterion-consequences"
     },
     {
       "relation": "proves",
@@ -1913,6 +2083,11 @@
     },
     {
       "relation": "proves",
+      "source": "proof.integral-triangle-inequality-vector.rudin",
+      "target": "theorem.integral-triangle-inequality-vector"
+    },
+    {
+      "relation": "proves",
       "source": "proof.integrals-symmetric-functions.stewart",
       "target": "proposition.integrals-symmetric-functions"
     },
@@ -1928,8 +2103,23 @@
     },
     {
       "relation": "proves",
+      "source": "proof.integration-by-parts-riemann.rudin",
+      "target": "theorem.integration-by-parts-riemann"
+    },
+    {
+      "relation": "proves",
       "source": "proof.integration-by-parts.stewart",
       "target": "theorem.integration-by-parts"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.integration-step-function.rudin",
+      "target": "theorem.integration-step-function"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.integration-step-series.rudin",
+      "target": "theorem.integration-step-series"
     },
     {
       "relation": "proves",
@@ -2043,6 +2233,11 @@
     },
     {
       "relation": "proves",
+      "source": "proof.lower-leq-upper-integral.rudin",
+      "target": "theorem.lower-leq-upper-integral"
+    },
+    {
+      "relation": "proves",
       "source": "proof.lub-implies-glb.rudin",
       "target": "theorem.lub-implies-glb"
     },
@@ -2090,6 +2285,11 @@
       "relation": "proves",
       "source": "proof.monotone-one-sided-limits.rudin",
       "target": "theorem.monotone-one-sided-limits"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.monotonic-integrable-stieltjes.rudin",
+      "target": "theorem.monotonic-integrable-stieltjes"
     },
     {
       "relation": "proves",
@@ -2198,6 +2398,11 @@
     },
     {
       "relation": "proves",
+      "source": "proof.product-absolute-value-integrable.rudin",
+      "target": "theorem.product-absolute-value-integrable"
+    },
+    {
+      "relation": "proves",
       "source": "proof.product-rule.rudin",
       "target": "theorem.product-rule"
     },
@@ -2238,8 +2443,23 @@
     },
     {
       "relation": "proves",
+      "source": "proof.refinement-upper-lower-sums.rudin",
+      "target": "theorem.refinement-upper-lower-sums"
+    },
+    {
+      "relation": "proves",
       "source": "proof.riemann-rearrangement.rudin",
       "target": "theorem.riemann-rearrangement"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.riemann-stieltjes-integrability-criterion.rudin",
+      "target": "theorem.riemann-stieltjes-integrability-criterion"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.riemann-stieltjes-integral-properties.rudin",
+      "target": "theorem.riemann-stieltjes-integral-properties"
     },
     {
       "relation": "proves",
@@ -2290,6 +2510,11 @@
       "relation": "proves",
       "source": "proof.squeeze-theorem.stewart",
       "target": "theorem.squeeze-theorem"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.stieltjes-riemann-reduction.rudin",
+      "target": "theorem.stieltjes-riemann-reduction"
     },
     {
       "relation": "proves",
@@ -2503,6 +2728,16 @@
     },
     {
       "relation": "uses",
+      "source": "proposition.integrability-criterion-consequences",
+      "target": "proof.fundamental-theorem-of-calculus.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "proposition.integrability-criterion-consequences",
+      "target": "proof.stieltjes-riemann-reduction.rudin"
+    },
+    {
+      "relation": "uses",
       "source": "proposition.integral-comparison",
       "target": "proof.comparison-theorem-integrals.stewart"
     },
@@ -2693,8 +2928,33 @@
     },
     {
       "relation": "uses",
+      "source": "theorem.compact-uniform-continuity",
+      "target": "proof.arc-length-formula.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.compact-uniform-continuity",
+      "target": "proof.composition-preserves-integrability.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.compact-uniform-continuity",
+      "target": "proof.continuous-integrable-stieltjes.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.compact-uniform-continuity",
+      "target": "proof.finitely-discontinuous-integrable.rudin"
+    },
+    {
+      "relation": "uses",
       "source": "theorem.comparison-test-series",
       "target": "proof.absolute-convergence-implies-convergence.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.comparison-test-series",
+      "target": "proof.integration-step-series.rudin"
     },
     {
       "relation": "uses",
@@ -2725,6 +2985,16 @@
       "relation": "uses",
       "source": "theorem.comparison-test-series",
       "target": "proof.root-test.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.composition-preserves-integrability",
+      "target": "proof.integral-triangle-inequality-vector.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.composition-preserves-integrability",
+      "target": "proof.product-absolute-value-integrable.rudin"
     },
     {
       "relation": "uses",
@@ -3033,6 +3303,21 @@
     },
     {
       "relation": "uses",
+      "source": "theorem.ftc-vector-valued",
+      "target": "proof.arc-length-formula.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.fundamental-theorem-of-calculus",
+      "target": "proof.ftc-vector-valued.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.fundamental-theorem-of-calculus",
+      "target": "proof.integration-by-parts-riemann.rudin"
+    },
+    {
+      "relation": "uses",
       "source": "theorem.generalized-mean-value-theorem",
       "target": "proof.lhopitals-rule.rudin"
     },
@@ -3088,13 +3373,28 @@
     },
     {
       "relation": "uses",
+      "source": "theorem.integral-triangle-inequality-vector",
+      "target": "proof.arc-length-formula.rudin"
+    },
+    {
+      "relation": "uses",
       "source": "theorem.integration-by-parts",
       "target": "proof.integration-by-parts-definite.stewart"
     },
     {
       "relation": "uses",
+      "source": "theorem.integration-step-function",
+      "target": "proof.integration-step-series.rudin"
+    },
+    {
+      "relation": "uses",
       "source": "theorem.intermediate-value-theorem",
       "target": "proof.mean-value-theorem-integrals.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.intermediate-value-theorem",
+      "target": "proof.monotonic-integrable-stieltjes.rudin"
     },
     {
       "relation": "uses",
@@ -3243,6 +3543,16 @@
     },
     {
       "relation": "uses",
+      "source": "theorem.lower-leq-upper-integral",
+      "target": "proof.riemann-stieltjes-integrability-criterion.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.mean-value-theorem",
+      "target": "proof.fundamental-theorem-of-calculus.rudin"
+    },
+    {
+      "relation": "uses",
       "source": "theorem.mean-value-theorem",
       "target": "proof.increasing-decreasing-test.rudin"
     },
@@ -3260,6 +3570,11 @@
       "relation": "uses",
       "source": "theorem.mean-value-theorem",
       "target": "proof.mean-value-inequality-vector.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.mean-value-theorem",
+      "target": "proof.stieltjes-riemann-reduction.rudin"
     },
     {
       "relation": "uses",
@@ -3328,6 +3643,11 @@
     },
     {
       "relation": "uses",
+      "source": "theorem.product-absolute-value-integrable",
+      "target": "proof.integration-by-parts-riemann.rudin"
+    },
+    {
+      "relation": "uses",
       "source": "theorem.product-rule",
       "target": "proof.integrating-factor-method.stewart"
     },
@@ -3360,6 +3680,86 @@
       "relation": "uses",
       "source": "theorem.real-subfield-of-complex",
       "target": "proof.complex-algebraic-form.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.refinement-upper-lower-sums",
+      "target": "proof.integrability-criterion-consequences.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.refinement-upper-lower-sums",
+      "target": "proof.lower-leq-upper-integral.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.refinement-upper-lower-sums",
+      "target": "proof.riemann-stieltjes-integrability-criterion.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.riemann-stieltjes-integrability-criterion",
+      "target": "proof.change-of-variable-integral.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.riemann-stieltjes-integrability-criterion",
+      "target": "proof.composition-preserves-integrability.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.riemann-stieltjes-integrability-criterion",
+      "target": "proof.continuous-integrable-stieltjes.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.riemann-stieltjes-integrability-criterion",
+      "target": "proof.finitely-discontinuous-integrable.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.riemann-stieltjes-integrability-criterion",
+      "target": "proof.fundamental-theorem-of-calculus.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.riemann-stieltjes-integrability-criterion",
+      "target": "proof.integrability-criterion-consequences.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.riemann-stieltjes-integrability-criterion",
+      "target": "proof.monotonic-integrable-stieltjes.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.riemann-stieltjes-integrability-criterion",
+      "target": "proof.riemann-stieltjes-integral-properties.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.riemann-stieltjes-integrability-criterion",
+      "target": "proof.stieltjes-riemann-reduction.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.riemann-stieltjes-integral-properties",
+      "target": "proof.indefinite-integral-differentiability.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.riemann-stieltjes-integral-properties",
+      "target": "proof.integral-triangle-inequality-vector.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.riemann-stieltjes-integral-properties",
+      "target": "proof.integration-step-series.rudin"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.riemann-stieltjes-integral-properties",
+      "target": "proof.product-absolute-value-integrable.rudin"
     },
     {
       "relation": "uses",
@@ -3821,6 +4221,14 @@
       "status": "draft",
       "title_en": "Critical number",
       "title_es": "Número crítico",
+      "type": "definition"
+    },
+    {
+      "id": "definition.curve-arc-rectifiable",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Curve, Arc, and Rectifiable Curve",
+      "title_es": "",
       "type": "definition"
     },
     {
@@ -4376,6 +4784,14 @@
       "type": "definition"
     },
     {
+      "id": "definition.partition",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Partition of an Interval",
+      "title_es": "",
+      "type": "definition"
+    },
+    {
       "id": "definition.piecewise-function",
       "kind": "statement",
       "status": "draft",
@@ -4456,6 +4872,14 @@
       "type": "definition"
     },
     {
+      "id": "definition.refinement-partition",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Refinement of a Partition",
+      "title_es": "",
+      "type": "definition"
+    },
+    {
       "id": "definition.reflection",
       "kind": "statement",
       "status": "draft",
@@ -4469,6 +4893,14 @@
       "status": "draft",
       "title_en": "Removable discontinuity",
       "title_es": "Discontinuidad evitable",
+      "type": "definition"
+    },
+    {
+      "id": "definition.riemann-stieltjes-integral",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Riemann-Stieltjes Integral",
+      "title_es": "",
       "type": "definition"
     },
     {
@@ -4648,6 +5080,14 @@
       "type": "definition"
     },
     {
+      "id": "definition.unit-step-function",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Unit Step Function",
+      "title_es": "",
+      "type": "definition"
+    },
+    {
       "id": "definition.upper-bound",
       "kind": "statement",
       "status": "draft",
@@ -4660,6 +5100,14 @@
       "kind": "statement",
       "status": "draft",
       "title_en": "Upper and Lower Limits",
+      "title_es": "",
+      "type": "definition"
+    },
+    {
+      "id": "definition.vector-valued-integral",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Integration of Vector-Valued Functions",
       "title_es": "",
       "type": "definition"
     },
@@ -4784,6 +5232,13 @@
       "type": "proof"
     },
     {
+      "id": "proof.arc-length-formula.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
       "id": "proof.archimedean-density.rudin",
       "kind": "proof",
       "status": "draft",
@@ -4855,6 +5310,13 @@
     },
     {
       "id": "proof.change-of-base-formula.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.change-of-variable-integral.rudin",
       "kind": "proof",
       "status": "draft",
       "style": "direct",
@@ -4956,6 +5418,13 @@
       "kind": "proof",
       "status": "draft",
       "style": "verification",
+      "type": "proof"
+    },
+    {
+      "id": "proof.composition-preserves-integrability.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
       "type": "proof"
     },
     {
@@ -5068,6 +5537,13 @@
       "kind": "proof",
       "status": "draft",
       "style": "",
+      "type": "proof"
+    },
+    {
+      "id": "proof.continuous-integrable-stieltjes.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
       "type": "proof"
     },
     {
@@ -5379,6 +5855,13 @@
       "type": "proof"
     },
     {
+      "id": "proof.finitely-discontinuous-integrable.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
       "id": "proof.first-derivative-test.stewart",
       "kind": "proof",
       "status": "draft",
@@ -5394,6 +5877,20 @@
     },
     {
       "id": "proof.ftc-part2.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.ftc-vector-valued.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.fundamental-theorem-of-calculus.rudin",
       "kind": "proof",
       "status": "draft",
       "style": "direct",
@@ -5463,6 +5960,13 @@
       "type": "proof"
     },
     {
+      "id": "proof.indefinite-integral-differentiability.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
       "id": "proof.infinite-subset-compact-limit-point.rudin",
       "kind": "proof",
       "status": "draft",
@@ -5474,6 +5978,13 @@
       "kind": "proof",
       "status": "draft",
       "style": "construction",
+      "type": "proof"
+    },
+    {
+      "id": "proof.integrability-criterion-consequences.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
       "type": "proof"
     },
     {
@@ -5505,6 +6016,13 @@
       "type": "proof"
     },
     {
+      "id": "proof.integral-triangle-inequality-vector.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
       "id": "proof.integrals-symmetric-functions.stewart",
       "kind": "proof",
       "status": "draft",
@@ -5526,7 +6044,28 @@
       "type": "proof"
     },
     {
+      "id": "proof.integration-by-parts-riemann.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
       "id": "proof.integration-by-parts.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.integration-step-function.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.integration-step-series.rudin",
       "kind": "proof",
       "status": "draft",
       "style": "direct",
@@ -5687,6 +6226,13 @@
       "type": "proof"
     },
     {
+      "id": "proof.lower-leq-upper-integral.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
       "id": "proof.lub-implies-glb.rudin",
       "kind": "proof",
       "status": "draft",
@@ -5754,6 +6300,13 @@
       "kind": "proof",
       "status": "draft",
       "style": "",
+      "type": "proof"
+    },
+    {
+      "id": "proof.monotonic-integrable-stieltjes.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
       "type": "proof"
     },
     {
@@ -5904,6 +6457,13 @@
       "type": "proof"
     },
     {
+      "id": "proof.product-absolute-value-integrable.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
       "id": "proof.product-rule.rudin",
       "kind": "proof",
       "status": "draft",
@@ -5960,10 +6520,31 @@
       "type": "proof"
     },
     {
+      "id": "proof.refinement-upper-lower-sums.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
       "id": "proof.riemann-rearrangement.rudin",
       "kind": "proof",
       "status": "draft",
       "style": "construction",
+      "type": "proof"
+    },
+    {
+      "id": "proof.riemann-stieltjes-integrability-criterion.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.riemann-stieltjes-integral-properties.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
       "type": "proof"
     },
     {
@@ -6034,6 +6615,13 @@
       "kind": "proof",
       "status": "draft",
       "style": "epsilon-delta",
+      "type": "proof"
+    },
+    {
+      "id": "proof.stieltjes-riemann-reduction.rudin",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
       "type": "proof"
     },
     {
@@ -6295,6 +6883,14 @@
       "type": "proposition"
     },
     {
+      "id": "proposition.integrability-criterion-consequences",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Consequences of the Integrability Criterion",
+      "title_es": "",
+      "type": "proposition"
+    },
+    {
       "id": "proposition.integral-comparison",
       "kind": "statement",
       "status": "draft",
@@ -6519,6 +7115,14 @@
       "type": "theorem"
     },
     {
+      "id": "theorem.arc-length-formula",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Arc Length Formula for Continuously Differentiable Curves",
+      "title_es": "",
+      "type": "theorem"
+    },
+    {
       "id": "theorem.archimedean-density",
       "kind": "statement",
       "status": "draft",
@@ -6564,6 +7168,14 @@
       "status": "draft",
       "title_en": "The Chain Rule",
       "title_es": "Regla de la cadena",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.change-of-variable-integral",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Change of Variable for Riemann-Stieltjes Integrals",
+      "title_es": "",
       "type": "theorem"
     },
     {
@@ -6627,6 +7239,14 @@
       "kind": "statement",
       "status": "draft",
       "title_en": "Complex Numbers Form a Field",
+      "title_es": "",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.composition-preserves-integrability",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Composition with Continuous Function Preserves Integrability",
       "title_es": "",
       "type": "theorem"
     },
@@ -6731,6 +7351,14 @@
       "kind": "statement",
       "status": "draft",
       "title_en": "Continuous Image of a Connected Set is Connected",
+      "title_es": "",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.continuous-integrable-stieltjes",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Continuous Functions are Riemann-Stieltjes Integrable",
       "title_es": "",
       "type": "theorem"
     },
@@ -6983,6 +7611,14 @@
       "type": "theorem"
     },
     {
+      "id": "theorem.finitely-discontinuous-integrable",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Bounded Functions with Finitely Many Discontinuities are Integrable",
+      "title_es": "",
+      "type": "theorem"
+    },
+    {
       "id": "theorem.ftc-part1",
       "kind": "statement",
       "status": "draft",
@@ -6996,6 +7632,22 @@
       "status": "draft",
       "title_en": "The Fundamental Theorem of Calculus, Part 2",
       "title_es": "Teorema fundamental del cálculo, parte 2",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.ftc-vector-valued",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Fundamental Theorem of Calculus for Vector-Valued Functions",
+      "title_es": "",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.fundamental-theorem-of-calculus",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "The Fundamental Theorem of Calculus",
+      "title_es": "",
       "type": "theorem"
     },
     {
@@ -7039,6 +7691,14 @@
       "type": "theorem"
     },
     {
+      "id": "theorem.indefinite-integral-differentiability",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Continuity and Differentiability of the Indefinite Integral",
+      "title_es": "",
+      "type": "theorem"
+    },
+    {
       "id": "theorem.infinite-subset-compact-limit-point",
       "kind": "statement",
       "status": "draft",
@@ -7063,6 +7723,14 @@
       "type": "theorem"
     },
     {
+      "id": "theorem.integral-triangle-inequality-vector",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Triangle Inequality for Vector-Valued Integrals",
+      "title_es": "",
+      "type": "theorem"
+    },
+    {
       "id": "theorem.integration-by-parts",
       "kind": "statement",
       "status": "draft",
@@ -7076,6 +7744,30 @@
       "status": "draft",
       "title_en": "Integration by Parts for Definite Integrals",
       "title_es": "Integración por partes para integrales definidas",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.integration-by-parts-riemann",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Integration by Parts (Riemann Integral)",
+      "title_es": "",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.integration-step-function",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Integration with Respect to a Step Function",
+      "title_es": "",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.integration-step-series",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Integration with Respect to a Series of Step Functions",
+      "title_es": "",
       "type": "theorem"
     },
     {
@@ -7167,6 +7859,14 @@
       "type": "theorem"
     },
     {
+      "id": "theorem.lower-leq-upper-integral",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Lower Integral is at Most Upper Integral",
+      "title_es": "",
+      "type": "theorem"
+    },
+    {
       "id": "theorem.lub-implies-glb",
       "kind": "statement",
       "status": "draft",
@@ -7219,6 +7919,14 @@
       "kind": "statement",
       "status": "draft",
       "title_en": "One-Sided Limits of Monotone Functions",
+      "title_es": "",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.monotonic-integrable-stieltjes",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Monotonic Functions with Continuous Integrator are Integrable",
       "title_es": "",
       "type": "theorem"
     },
@@ -7303,6 +8011,14 @@
       "type": "theorem"
     },
     {
+      "id": "theorem.product-absolute-value-integrable",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Products and Absolute Values of Integrable Functions",
+      "title_es": "",
+      "type": "theorem"
+    },
+    {
       "id": "theorem.product-rule",
       "kind": "statement",
       "status": "draft",
@@ -7335,10 +8051,34 @@
       "type": "theorem"
     },
     {
+      "id": "theorem.refinement-upper-lower-sums",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Refinement Monotonicity of Upper and Lower Sums",
+      "title_es": "",
+      "type": "theorem"
+    },
+    {
       "id": "theorem.riemann-rearrangement",
       "kind": "statement",
       "status": "draft",
       "title_en": "Riemann Rearrangement Theorem",
+      "title_es": "",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.riemann-stieltjes-integrability-criterion",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Integrability Criterion for the Riemann-Stieltjes Integral",
+      "title_es": "",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.riemann-stieltjes-integral-properties",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Properties of the Riemann-Stieltjes Integral",
       "title_es": "",
       "type": "theorem"
     },
@@ -7380,6 +8120,14 @@
       "status": "draft",
       "title_en": "Squeeze theorem",
       "title_es": "Teorema del encaje (sandwich)",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.stieltjes-riemann-reduction",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Reduction of Stieltjes Integral to Riemann Integral",
+      "title_es": "",
       "type": "theorem"
     },
     {

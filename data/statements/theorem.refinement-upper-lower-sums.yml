@@ -1,0 +1,29 @@
+id: theorem.refinement-upper-lower-sums
+type: theorem
+status: draft
+
+title:
+  en: Refinement Monotonicity of Upper and Lower Sums
+
+statement:
+  natural:
+    en: >
+      If P* is a refinement of P, then
+      L(P, f, alpha) <= L(P*, f, alpha) and
+      U(P*, f, alpha) <= U(P, f, alpha).
+  latex: |
+    P^* \supseteq P \implies
+    L(P,f,\alpha) \le L(P^*,f,\alpha) \;\text{and}\;
+    U(P^*,f,\alpha) \le U(P,f,\alpha)
+
+proved_by:
+  - proof.refinement-upper-lower-sums.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "6"
+    section: "6.4"
+
+confidence: high

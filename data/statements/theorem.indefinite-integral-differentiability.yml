@@ -1,0 +1,33 @@
+id: theorem.indefinite-integral-differentiability
+type: theorem
+status: draft
+
+title:
+  en: Continuity and Differentiability of the Indefinite Integral
+
+statement:
+  natural:
+    en: >
+      Let f in R on [a, b]. For a <= x <= b, put F(x) = integral_a^x f(t) dt.
+      Then F is continuous on [a, b]; furthermore, if f is continuous at
+      a point x_0 of [a, b], then F is differentiable at x_0 and F'(x_0) = f(x_0).
+  latex: |
+    F(x) = \int_a^x f(t)\,dt \implies F \in C[a,b]; \quad
+    f \text{ continuous at } x_0 \implies F'(x_0) = f(x_0)
+
+proved_by:
+  - proof.indefinite-integral-differentiability.rudin
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "6"
+    section: "6.20"
+
+confidence: high
+notes: >
+  Strictly more general than Stewart's FTC Part 1 (theorem.ftc-part1):
+  Rudin only requires f in R (not necessarily continuous everywhere),
+  proves F continuous always, and F'(x_0) = f(x_0) only at continuity
+  points of f. Stewart requires f continuous on all of [a,b].

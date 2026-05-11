@@ -1,0 +1,24 @@
+id: proof.refinement-upper-lower-sums.rudin
+type: proof
+status: draft
+
+proves: theorem.refinement-upper-lower-sums
+
+uses:
+  - definition.partition
+  - definition.riemann-stieltjes-integral
+  - definition.refinement-partition
+
+style: direct
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "6"
+    section: "6.4"
+
+confidence: high
+notes: >
+  Proves by induction on the number of extra points. Adding one point
+  x* to [x_{i-1}, x_i] splits the infimum into two parts, each >= m_i,
+  so L increases. Analogous for U.

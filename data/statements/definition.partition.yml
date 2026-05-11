@@ -1,0 +1,29 @@
+id: definition.partition
+type: definition
+status: draft
+
+title:
+  en: Partition of an Interval
+
+statement:
+  natural:
+    en: >
+      Let [a, b] be a given interval. By a partition P of [a, b] we mean
+      a finite set of points x_0, x_1, ..., x_n where
+      a = x_0 <= x_1 <= ... <= x_{n-1} <= x_n = b.
+      We write Delta x_i = x_i - x_{i-1} for i = 1, ..., n.
+  latex: |
+    P = \{x_0, x_1, \ldots, x_n\}, \quad
+    a = x_0 \le x_1 \le \cdots \le x_n = b, \quad
+    \Delta x_i = x_i - x_{i-1}
+
+proved_by: []
+
+sources:
+  - work: Principles of Mathematical Analysis
+    author: Walter Rudin
+    edition: "3"
+    chapter: "6"
+    section: "6.1"
+
+confidence: high
