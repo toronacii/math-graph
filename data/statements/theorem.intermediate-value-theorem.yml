@@ -1,0 +1,37 @@
+id: theorem.intermediate-value-theorem
+type: theorem
+status: draft
+
+title:
+  en: Intermediate Value Theorem
+  es: Teorema del valor intermedio
+
+statement:
+  natural:
+    es: >
+      Suponga que f es continua en el intervalo cerrado [a, b] y sea N
+      cualquier número entre f(a) y f(b), donde f(a) ≠ f(b). Entonces
+      existe un número c en (a, b) tal que f(c) = N.
+    en: >
+      Suppose that f is continuous on the closed interval [a, b] and let
+      N be any number between f(a) and f(b), where f(a) ≠ f(b). Then
+      there exists a number c in (a, b) such that f(c) = N.
+  latex: |
+    f \text{ continua en } [a,b], \; N \text{ entre } f(a) \text{ y } f(b) \implies \exists\, c \in (a,b) : f(c) = N
+
+proved_by:
+  - proof.intermediate-value-theorem.stewart
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.5"
+
+confidence: medium
+notes: >
+  Stewart states the IVT without proof in section 2.5, noting that
+  a proof based on the completeness axiom of the real numbers can
+  be found in Appendix F. It is used extensively for existence proofs
+  (e.g., showing a root exists in an interval).

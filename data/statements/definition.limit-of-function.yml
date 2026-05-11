@@ -1,0 +1,34 @@
+id: definition.limit-of-function
+type: definition
+status: draft
+
+title:
+  en: Limit of a function
+  es: Límite de una función
+
+statement:
+  natural:
+    es: >
+      Se escribe lim(x→a) f(x) = L y se dice que el límite de f(x),
+      cuando x tiende a a, es igual a L si es posible hacer que los valores
+      de f(x) estén arbitrariamente cerca de L con sólo tomar x
+      suficientemente cerca de a, pero no igual a a.
+    en: >
+      We write lim(x→a) f(x) = L and say that the limit of f(x), as x
+      approaches a, equals L if we can make the values of f(x)
+      arbitrarily close to L by taking x to be sufficiently close to a,
+      but not equal to a.
+  latex: |
+    \lim_{x \to a} f(x) = L
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.2"
+
+confidence: medium
+notes: >
+  This is the intuitive definition of limit. The precise
+  epsilon-delta definition appears in section 2.4.

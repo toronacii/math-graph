@@ -1,0 +1,31 @@
+id: definition.rate-of-change
+type: definition
+status: draft
+
+title:
+  en: Instantaneous rate of change
+  es: Razón de cambio instantánea
+
+statement:
+  natural:
+    es: >
+      La razón de cambio instantánea de y = f(x) respecto a x cuando
+      x = a es la derivada f'(a) = lim(Δx→0) Δy/Δx =
+      lim(Δx→0) (f(a + Δx) - f(a)) / Δx.
+    en: >
+      The instantaneous rate of change of y = f(x) with respect to x
+      when x = a is the derivative f'(a) = lim(Δx→0) Δy/Δx =
+      lim(Δx→0) (f(a + Δx) - f(a)) / Δx.
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.7"
+
+confidence: medium
+notes: >
+  Stewart emphasizes that the derivative has two interpretations:
+  geometric (slope of tangent line) and physical (instantaneous
+  rate of change).

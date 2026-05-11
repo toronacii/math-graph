@@ -1,0 +1,36 @@
+id: definition.polynomial
+type: definition
+status: draft
+
+title:
+  en: Polynomial
+  es: Polinomio
+
+statement:
+  natural:
+    es: >
+      Una función P es un polinomio si tiene la forma
+      P(x) = aₙxⁿ + aₙ₋₁xⁿ⁻¹ + ... + a₂x² + a₁x + a₀,
+      donde n es un entero no negativo y los números a₀, a₁, ..., aₙ son
+      constantes llamadas coeficientes del polinomio. El grado del polinomio
+      es n si aₙ ≠ 0.
+    en: >
+      A function P is a polynomial if it has the form
+      P(x) = aₙxⁿ + aₙ₋₁xⁿ⁻¹ + ... + a₂x² + a₁x + a₀,
+      where n is a nonnegative integer and the numbers a₀, a₁, ..., aₙ are
+      constants called the coefficients of the polynomial. The degree of the
+      polynomial is n when aₙ ≠ 0.
+  latex: |
+    P(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_2 x^2 + a_1 x + a_0
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.2"
+
+confidence: medium
+notes: >
+  Stewart presents polynomials as one of the essential function families
+  in section 1.2, noting that linear and quadratic functions are special cases.

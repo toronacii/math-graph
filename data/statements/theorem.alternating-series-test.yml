@@ -1,0 +1,34 @@
+id: theorem.alternating-series-test
+type: theorem
+status: draft
+
+title:
+  en: Alternating Series Test (Leibniz)
+  es: Prueba de series alternantes (Leibniz)
+
+statement:
+  natural:
+    es: >
+      Si la serie alternante ∑_{n=1}^∞ (-1)ⁿ⁻¹ bₙ (con bₙ > 0)
+      satisface (i) bₙ₊₁ ≤ bₙ para todo n y (ii) lim(n→∞) bₙ = 0,
+      entonces la serie converge.
+    en: >
+      If the alternating series ∑_{n=1}^∞ (-1)ⁿ⁻¹ bₙ (with bₙ > 0)
+      satisfies (i) bₙ₊₁ ≤ bₙ for all n and (ii) lim(n→∞) bₙ = 0,
+      then the series converges.
+  latex: |
+    b_{n+1} \le b_n \text{ and } \lim_{n\to\infty} b_n = 0
+    \;\Longrightarrow\;
+    \sum_{n=1}^{\infty} (-1)^{n-1} b_n \text{ converges}
+
+proved_by:
+  - proof.alternating-series-test.stewart
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "11"
+    section: "11.5"
+
+confidence: high

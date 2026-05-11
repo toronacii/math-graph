@@ -1,0 +1,80 @@
+chapter: "9"
+chapter_title: Differential Equations
+source:
+  work: "Calculo de una variable — Trascendentes tempranas"
+  author: James Stewart
+  edition: "7"
+  language: es
+  sections_processed:
+    - "9.3"
+    - "9.5"
+
+extraction_date: "2026-05-10"
+validation_status: pass
+
+cumulative_statistics:
+  total_nodes: 226
+  total_edges: 248
+
+  nodes_by_type:
+    definition: 84
+    proposition: 18
+    theorem: 48
+    corollary: 5
+    lemma: 0
+    axiom: 0
+    conjecture: 0
+    proof: 71
+
+  nodes_by_kind:
+    statement: 155
+    proof: 71
+
+  edges_by_relation:
+    uses: 177
+    proves: 71
+
+  proofs_by_style:
+    direct: 61
+    epsilon-delta: 4
+    assumed: 4
+    algebraic: 1
+    geometric: 1
+
+  proofs_by_confidence:
+    high: 47
+    medium: 19
+    low: 5
+
+  root_nodes: 84
+  isolated_nodes: 44
+  connected_components: 46
+  connected_component_sizes:
+    - 180
+    - 3
+    - 1
+    - 1
+    - 1
+
+  graph_density: 0.0049
+  average_degree: 2.19
+
+chapter_delta:
+  new_nodes: 4
+  new_edges: 5
+  new_definitions: 2
+  new_propositions: 1
+  new_theorems: 0
+  new_corollaries: 0
+  new_proofs: 1
+  reclassifications: 0
+
+sections_skipped:
+  - section: "9.1"
+    reason: "Modeling with DEs — overview, no new entities"
+  - section: "9.2"
+    reason: "Direction fields and Euler's method — numerical methods"
+  - section: "9.4"
+    reason: "Population growth models — applications"
+  - section: "9.6"
+    reason: "Predator-prey systems — applications"

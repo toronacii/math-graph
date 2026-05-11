@@ -1,0 +1,32 @@
+id: definition.average-velocity
+type: definition
+status: draft
+
+title:
+  en: Average velocity
+  es: Velocidad media
+
+statement:
+  natural:
+    es: >
+      La velocidad media de un objeto con función de posición s = f(t)
+      en el intervalo de tiempo de t = a a t = a + h es el cociente
+      (f(a + h) - f(a)) / h.
+    en: >
+      The average velocity of an object with position function s = f(t)
+      over the time interval from t = a to t = a + h is the quotient
+      (f(a + h) - f(a)) / h.
+  latex: |
+    v_{\text{avg}} = \frac{f(a + h) - f(a)}{h}
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.1"
+
+confidence: medium
+notes: >
+  Stewart introduces average velocity in section 2.1 before taking the
+  limit to define instantaneous velocity.

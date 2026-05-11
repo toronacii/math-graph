@@ -1,0 +1,190 @@
+chapter: "1"
+chapter_title: Functions and Models
+source:
+  work: "Calculo de una variable — Trascendentes tempranas"
+  author: James Stewart
+  edition: "7"
+  language: es
+  sections_processed:
+    - "1.1"
+    - "1.2"
+    - "1.3"
+    - "1.4"
+    - "1.5"
+
+extraction_date: "2026-05-10"
+validation_status: pass
+
+statistics:
+  total_nodes: 46
+  total_edges: 21
+
+  nodes_by_type:
+    definition: 32
+    proposition: 7
+    theorem: 0
+    lemma: 0
+    corollary: 0
+    axiom: 0
+    conjecture: 0
+    proof: 7
+
+  nodes_by_section:
+    "1.1": 14
+    "1.2": 8
+    "1.3": 6
+    "1.4": 3
+    "1.5": 8
+
+  proofs_by_style:
+    direct: 6
+    assumed: 1
+
+  proofs_by_confidence:
+    medium: 6
+    low: 1
+
+  edges_by_relation:
+    uses: 14
+    proves: 7
+
+  root_nodes: 32
+  root_node_ids:
+    - definition.absolute-value
+    - definition.algebraic-function
+    - definition.composition-of-functions
+    - definition.decreasing-function
+    - definition.dependent-variable
+    - definition.domain
+    - definition.even-function
+    - definition.exponential-function
+    - definition.function
+    - definition.graph-of-function
+    - definition.horizontal-shift
+    - definition.horizontal-stretch-compression
+    - definition.increasing-function
+    - definition.independent-variable
+    - definition.inverse-function
+    - definition.linear-function
+    - definition.logarithmic-function
+    - definition.mathematical-model
+    - definition.natural-exponential-function
+    - definition.natural-logarithm
+    - definition.odd-function
+    - definition.one-to-one-function
+    - definition.piecewise-function
+    - definition.polynomial
+    - definition.power-function
+    - definition.range
+    - definition.rational-function
+    - definition.reflection
+    - definition.transcendental-function
+    - definition.trigonometric-function
+    - definition.vertical-shift
+    - definition.vertical-stretch-compression
+
+  leaf_nodes: 30
+  leaf_node_ids:
+    - definition.absolute-value
+    - definition.algebraic-function
+    - definition.composition-of-functions
+    - definition.decreasing-function
+    - definition.dependent-variable
+    - definition.domain
+    - definition.even-function
+    - definition.horizontal-shift
+    - definition.horizontal-stretch-compression
+    - definition.increasing-function
+    - definition.independent-variable
+    - definition.linear-function
+    - definition.mathematical-model
+    - definition.natural-exponential-function
+    - definition.odd-function
+    - definition.piecewise-function
+    - definition.polynomial
+    - definition.power-function
+    - definition.range
+    - definition.rational-function
+    - definition.reflection
+    - definition.transcendental-function
+    - definition.trigonometric-function
+    - definition.vertical-shift
+    - definition.vertical-stretch-compression
+    - proposition.cancellation-equations
+    - proposition.change-of-base-formula
+    - proposition.horizontal-line-test
+    - proposition.inverse-graph-reflection
+    - proposition.vertical-line-test
+
+  isolated_nodes: 25
+  isolated_node_ids:
+    - definition.absolute-value
+    - definition.algebraic-function
+    - definition.composition-of-functions
+    - definition.decreasing-function
+    - definition.dependent-variable
+    - definition.domain
+    - definition.even-function
+    - definition.horizontal-shift
+    - definition.horizontal-stretch-compression
+    - definition.increasing-function
+    - definition.independent-variable
+    - definition.linear-function
+    - definition.mathematical-model
+    - definition.natural-exponential-function
+    - definition.odd-function
+    - definition.piecewise-function
+    - definition.polynomial
+    - definition.power-function
+    - definition.range
+    - definition.rational-function
+    - definition.reflection
+    - definition.transcendental-function
+    - definition.trigonometric-function
+    - definition.vertical-shift
+    - definition.vertical-stretch-compression
+
+  connected_components: 27
+  connected_component_sizes:
+    - 12
+    - 9
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+
+  longest_dependency_chain:
+    depth: 7
+    statement_depth: 3
+    path:
+      - definition.exponential-function
+      - proof.laws-of-exponents.stewart
+      - proposition.laws-of-exponents
+      - proof.laws-of-logarithms.stewart
+      - proposition.laws-of-logarithms
+      - proof.change-of-base-formula.stewart
+      - proposition.change-of-base-formula
+
+  graph_density: 0.0101
+  average_degree: 0.913

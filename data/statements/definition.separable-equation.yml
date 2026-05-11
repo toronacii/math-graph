@@ -1,0 +1,39 @@
+id: definition.separable-equation
+type: definition
+status: draft
+
+title:
+  en: Separable equation
+  es: Ecuación separable
+
+statement:
+  natural:
+    es: >
+      Una ecuación diferencial separable es una ecuación diferencial
+      de primer orden en la que la expresión para dy/dx se puede
+      factorizar como una función de x multiplicada por una función
+      de y: dy/dx = g(x)f(y). Se resuelve escribiendo
+      dy/f(y) = g(x) dx e integrando ambos lados.
+    en: >
+      A separable differential equation is a first-order differential
+      equation in which the expression for dy/dx can be factored as
+      a function of x times a function of y: dy/dx = g(x)f(y).
+      It is solved by writing dy/f(y) = g(x) dx and integrating
+      both sides.
+  latex: |
+    \frac{dy}{dx} = g(x)\,f(y)
+    \quad\Longrightarrow\quad
+    \int \frac{dy}{f(y)} = \int g(x)\,dx
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "9"
+    section: "9.3"
+
+confidence: high
+notes: >
+  The separation of variables technique is justified by the chain
+  rule and the substitution rule. Stewart presents it as a method
+  for solving first-order ODEs where variables can be separated.

@@ -1,0 +1,23 @@
+id: proof.cancellation-equations.stewart
+type: proof
+status: draft
+
+proves: proposition.cancellation-equations
+
+uses:
+  - definition.inverse-function
+  - definition.one-to-one-function
+
+style: direct
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.5"
+
+confidence: medium
+notes: >
+  Follows directly from the definition of inverse function.
+  If f⁻¹(y) = x iff f(x) = y, then substituting y = f(x) gives
+  f⁻¹(f(x)) = x, and substituting x = f⁻¹(y) gives f(f⁻¹(y)) = y.

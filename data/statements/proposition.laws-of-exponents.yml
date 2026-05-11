@@ -1,0 +1,36 @@
+id: proposition.laws-of-exponents
+type: proposition
+status: draft
+
+title:
+  en: Laws of exponents
+  es: Leyes de los exponentes
+
+statement:
+  natural:
+    es: >
+      Si a y b son números positivos y x, y son números reales cualesquiera,
+      entonces se cumplen las siguientes leyes: (1) aˣ⁺ʸ = aˣaʸ,
+      (2) aˣ⁻ʸ = aˣ/aʸ, (3) (aˣ)ʸ = aˣʸ, (4) (ab)ˣ = aˣbˣ.
+    en: >
+      If a and b are positive numbers and x, y are any real numbers, then
+      the following laws hold: (1) aˣ⁺ʸ = aˣaʸ, (2) aˣ⁻ʸ = aˣ/aʸ,
+      (3) (aˣ)ʸ = aˣʸ, (4) (ab)ˣ = aˣbˣ.
+  latex: |
+    a^{x+y} = a^x a^y, \quad a^{x-y} = \frac{a^x}{a^y}, \quad (a^x)^y = a^{xy}, \quad (ab)^x = a^x b^x
+
+proved_by:
+  - proof.laws-of-exponents.stewart
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.4"
+
+confidence: medium
+notes: >
+  Stewart states the laws of exponents in section 1.4 without proof,
+  treating them as known results from precalculus extended to real
+  exponents.

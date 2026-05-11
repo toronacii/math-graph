@@ -1,0 +1,42 @@
+id: theorem.mean-value-theorem
+type: theorem
+status: draft
+
+title:
+  en: The Mean Value Theorem
+  es: Teorema del valor medio
+
+statement:
+  natural:
+    es: >
+      Sea f una función que satisface las dos hipótesis siguientes:
+      1. f es continua en el intervalo cerrado [a, b].
+      2. f es derivable en el intervalo abierto (a, b).
+      Entonces existe un número c en (a, b) tal que
+      f'(c) = (f(b) - f(a)) / (b - a), o equivalentemente,
+      f(b) - f(a) = f'(c)(b - a).
+    en: >
+      Let f be a function that satisfies the following hypotheses:
+      1. f is continuous on the closed interval [a, b].
+      2. f is differentiable on the open interval (a, b).
+      Then there is a number c in (a, b) such that
+      f'(c) = (f(b) - f(a)) / (b - a), or equivalently,
+      f(b) - f(a) = f'(c)(b - a).
+  latex: |
+    \exists\, c \in (a,b) : f'(c) = \frac{f(b) - f(a)}{b - a}
+
+proved_by:
+  - proof.mean-value-theorem.stewart
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "4"
+    section: "4.2"
+
+confidence: high
+notes: >
+  One of the most important theorems in calculus. Stewart proves
+  it by applying Rolle's theorem to the auxiliary function
+  h(x) = f(x) - [f(a) + ((f(b)-f(a))/(b-a))(x-a)].

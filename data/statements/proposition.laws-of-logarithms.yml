@@ -1,0 +1,35 @@
+id: proposition.laws-of-logarithms
+type: proposition
+status: draft
+
+title:
+  en: Laws of logarithms
+  es: Leyes de los logaritmos
+
+statement:
+  natural:
+    es: >
+      Si x > 0 e y > 0, entonces: (1) logₐ(xy) = logₐx + logₐy,
+      (2) logₐ(x/y) = logₐx - logₐy, (3) logₐ(xʳ) = r logₐx para
+      todo número real r.
+    en: >
+      If x > 0 and y > 0, then: (1) logₐ(xy) = logₐx + logₐy,
+      (2) logₐ(x/y) = logₐx - logₐy, (3) logₐ(xʳ) = r logₐx for
+      any real number r.
+  latex: |
+    \log_a(xy) = \log_a x + \log_a y, \quad \log_a\!\left(\frac{x}{y}\right) = \log_a x - \log_a y, \quad \log_a(x^r) = r \log_a x
+
+proved_by:
+  - proof.laws-of-logarithms.stewart
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.5"
+
+confidence: medium
+notes: >
+  Stewart derives the laws of logarithms in section 1.5 from the
+  corresponding laws of exponents.

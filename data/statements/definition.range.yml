@@ -1,0 +1,25 @@
+id: definition.range
+type: definition
+status: draft
+
+title:
+  en: Range of a function
+  es: Rango de una función
+
+statement:
+  natural:
+    es: >
+      El rango de una función f es el conjunto de todos los valores posibles
+      f(x) cuando x recorre todo el dominio.
+    en: >
+      The range of a function f is the set of all possible values f(x) as x
+      varies throughout the domain.
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.1"
+
+confidence: medium

@@ -1,0 +1,30 @@
+id: definition.dependent-variable
+type: definition
+status: draft
+
+title:
+  en: Dependent variable
+  es: Variable dependiente
+
+statement:
+  natural:
+    es: >
+      La variable dependiente de una función f es el símbolo y que
+      representa el valor f(x). Se dice dependiente porque su valor
+      queda determinado por la elección de x.
+    en: >
+      The dependent variable of a function f is the symbol y
+      representing the value f(x). It is called dependent because its
+      value is determined by the choice of x.
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.1"
+
+confidence: medium
+notes: >
+  Stewart introduces independent and dependent variables together
+  when defining functions in section 1.1.

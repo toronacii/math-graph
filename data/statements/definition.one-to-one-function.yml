@@ -1,0 +1,30 @@
+id: definition.one-to-one-function
+type: definition
+status: draft
+
+title:
+  en: One-to-one function
+  es: Función inyectiva (uno a uno)
+
+statement:
+  natural:
+    es: >
+      Una función f es inyectiva (uno a uno) si nunca toma el mismo valor
+      dos veces; es decir, si x₁ ≠ x₂ entonces f(x₁) ≠ f(x₂).
+    en: >
+      A function f is one-to-one if it never takes the same value twice;
+      that is, if x₁ ≠ x₂ then f(x₁) ≠ f(x₂).
+  latex: |
+    x_1 \neq x_2 \implies f(x_1) \neq f(x_2)
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.5"
+
+confidence: medium
+notes: >
+  Stewart defines one-to-one functions at the beginning of section 1.5
+  as a prerequisite for defining inverse functions.

@@ -1,0 +1,24 @@
+id: proof.vertical-line-test.stewart
+type: proof
+status: draft
+
+proves: proposition.vertical-line-test
+
+uses:
+  - definition.function
+  - definition.graph-of-function
+
+style: direct
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.1"
+
+confidence: medium
+notes: >
+  Stewart argues directly from the definition of function: if a
+  vertical line x = a intersects the curve at two points, then the
+  curve assigns two values to a, contradicting the definition of
+  function.

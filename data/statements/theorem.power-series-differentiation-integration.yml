@@ -1,0 +1,45 @@
+id: theorem.power-series-differentiation-integration
+type: theorem
+status: draft
+
+title:
+  en: Differentiation and integration of power series
+  es: Derivación e integración de series de potencias
+
+statement:
+  natural:
+    es: >
+      Si la serie de potencias ∑ cₙ(x-a)ⁿ tiene radio de convergencia
+      R > 0, entonces la función f(x) = ∑_{n=0}^∞ cₙ(x-a)ⁿ es
+      diferenciable (e integrable) en (a-R, a+R) y
+      (i) f'(x) = ∑_{n=1}^∞ n·cₙ(x-a)ⁿ⁻¹,
+      (ii) ∫ f(x) dx = C + ∑_{n=0}^∞ cₙ(x-a)ⁿ⁺¹/(n+1).
+      Los radios de convergencia de ambas series son R.
+    en: >
+      If the power series ∑ cₙ(x-a)ⁿ has radius of convergence
+      R > 0, then the function f(x) = ∑_{n=0}^∞ cₙ(x-a)ⁿ is
+      differentiable (and integrable) on (a-R, a+R) and
+      (i) f'(x) = ∑_{n=1}^∞ n·cₙ(x-a)ⁿ⁻¹,
+      (ii) ∫ f(x) dx = C + ∑_{n=0}^∞ cₙ(x-a)ⁿ⁺¹/(n+1).
+      The radii of convergence of both series are R.
+  latex: |
+    f'(x) = \sum_{n=1}^{\infty} n\,c_n(x-a)^{n-1}
+    \qquad
+    \int f(x)\,dx = C + \sum_{n=0}^{\infty} \frac{c_n(x-a)^{n+1}}{n+1}
+
+proved_by:
+  - proof.power-series-differentiation-integration.stewart
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "11"
+    section: "11.9"
+
+confidence: high
+notes: >
+  Stewart states this theorem and uses it extensively but defers
+  the full proof to more advanced courses. The key result is that
+  term-by-term differentiation and integration are valid within
+  the interval of convergence.

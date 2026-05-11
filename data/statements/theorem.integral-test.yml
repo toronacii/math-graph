@@ -1,0 +1,35 @@
+id: theorem.integral-test
+type: theorem
+status: draft
+
+title:
+  en: The Integral Test
+  es: Prueba de la integral
+
+statement:
+  natural:
+    es: >
+      Suponga que f es una función continua, positiva y decreciente
+      en [1, ∞) y sea aₙ = f(n). Entonces la serie ∑_{n=1}^∞ aₙ
+      converge si y sólo si la integral impropia ∫_1^∞ f(x) dx converge.
+    en: >
+      Suppose f is a continuous, positive, decreasing function on
+      [1, ∞) and let aₙ = f(n). Then the series ∑_{n=1}^∞ aₙ
+      converges if and only if the improper integral ∫_1^∞ f(x) dx
+      converges.
+  latex: |
+    \sum_{n=1}^{\infty} a_n \text{ converges}
+    \iff
+    \int_1^{\infty} f(x)\,dx \text{ converges}
+
+proved_by:
+  - proof.integral-test.stewart
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "11"
+    section: "11.3"
+
+confidence: high

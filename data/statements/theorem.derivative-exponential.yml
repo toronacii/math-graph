@@ -1,0 +1,33 @@
+id: theorem.derivative-exponential
+type: theorem
+status: draft
+
+title:
+  en: Derivative of the exponential function
+  es: Derivada de la función exponencial
+
+statement:
+  natural:
+    es: >
+      d/dx(e^x) = e^x. La función exponencial natural es su propia
+      derivada.
+    en: >
+      d/dx(e^x) = e^x. The natural exponential function is its own
+      derivative.
+  latex: |
+    \frac{d}{dx}\left(e^x\right) = e^x
+
+proved_by:
+  - proof.derivative-exponential.stewart
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.1"
+
+confidence: high
+notes: >
+  Follows from the definition of e as the base for which
+  lim(h→0)(e^h - 1)/h = 1 and the definition of the derivative.

@@ -1,0 +1,35 @@
+id: theorem.quotient-rule
+type: theorem
+status: draft
+
+title:
+  en: The Quotient Rule
+  es: Regla del cociente
+
+statement:
+  natural:
+    es: >
+      Si f y g son funciones diferenciables, entonces
+      d/dx[f(x)/g(x)] = [g(x)f'(x) - f(x)g'(x)] / [g(x)]^2.
+    en: >
+      If f and g are differentiable functions, then
+      d/dx[f(x)/g(x)] = [g(x)f'(x) - f(x)g'(x)] / [g(x)]^2.
+  latex: |
+    \frac{d}{dx}\left[\frac{f(x)}{g(x)}\right]
+    = \frac{g(x)\,f'(x) - f(x)\,g'(x)}{\bigl[g(x)\bigr]^2}
+
+proved_by:
+  - proof.quotient-rule.stewart
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.2"
+
+confidence: high
+notes: >
+  Stewart derives the quotient rule using a similar technique to
+  the product rule, adding and subtracting f(x)g(x) in the
+  numerator of the difference quotient.

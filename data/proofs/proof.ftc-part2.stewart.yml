@@ -1,0 +1,25 @@
+id: proof.ftc-part2.stewart
+type: proof
+status: draft
+
+proves: theorem.ftc-part2
+
+uses:
+  - theorem.ftc-part1
+  - definition.antiderivative
+  - corollary.equal-derivatives-differ-by-constant
+
+style: direct
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "5"
+    section: "5.3"
+
+confidence: high
+notes: >
+  Let g(x) = ∫_a^x f(t)dt. By FTC Part 1, g'(x) = f(x), so g is
+  an antiderivative of f. If F is any other antiderivative, then
+  F(x) = g(x) + C. So F(b) - F(a) = [g(b)+C] - [g(a)+C]
+  = g(b) - g(a) = ∫_a^b f(t)dt - 0 = ∫_a^b f(t)dt.

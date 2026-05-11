@@ -1,0 +1,33 @@
+id: definition.indefinite-integral
+type: definition
+status: draft
+
+title:
+  en: Indefinite integral
+  es: Integral indefinida
+
+statement:
+  natural:
+    es: >
+      La integral indefinida ∫ f(x) dx es la familia de todas las
+      antiderivadas de f. Se escribe ∫ f(x) dx = F(x) + C, donde
+      F' = f y C es una constante arbitraria.
+    en: >
+      The indefinite integral ∫ f(x) dx is the family of all
+      antiderivatives of f. We write ∫ f(x) dx = F(x) + C, where
+      F' = f and C is an arbitrary constant.
+  latex: |
+    \int f(x)\,dx = F(x) + C \quad\text{where}\quad F' = f
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "5"
+    section: "5.4"
+
+confidence: high
+notes: >
+  The indefinite integral is a notation for the general antiderivative.
+  Stewart emphasizes the distinction between the definite integral
+  (a number) and the indefinite integral (a family of functions).

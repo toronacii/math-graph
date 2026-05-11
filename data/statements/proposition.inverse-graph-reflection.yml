@@ -1,0 +1,31 @@
+id: proposition.inverse-graph-reflection
+type: proposition
+status: draft
+
+title:
+  en: Graph of inverse as reflection
+  es: Gráfica de la inversa como reflexión
+
+statement:
+  natural:
+    es: >
+      Si f es una función inyectiva, entonces la gráfica de f⁻¹ se
+      obtiene reflejando la gráfica de f respecto a la recta y = x.
+    en: >
+      If f is a one-to-one function, then the graph of f⁻¹ is obtained
+      by reflecting the graph of f about the line y = x.
+
+proved_by:
+  - proof.inverse-graph-reflection.stewart
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.5"
+
+confidence: medium
+notes: >
+  Stewart derives this geometric property from the fact that (a,b) is
+  on the graph of f if and only if (b,a) is on the graph of f⁻¹.

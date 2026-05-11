@@ -1,0 +1,45 @@
+id: theorem.power-series-convergence
+type: theorem
+status: draft
+
+title:
+  en: Convergence of power series
+  es: Convergencia de series de potencias
+
+statement:
+  natural:
+    es: >
+      Para una serie de potencias ∑ cₙ(x-a)ⁿ, sólo se da una de
+      tres posibilidades:
+      (i) La serie converge sólo cuando x = a.
+      (ii) La serie converge para todo x.
+      (iii) Existe un número positivo R tal que la serie converge si
+      |x-a| < R y diverge si |x-a| > R. R se llama radio de
+      convergencia.
+    en: >
+      For a power series ∑ cₙ(x-a)ⁿ, there are only three
+      possibilities:
+      (i) The series converges only when x = a.
+      (ii) The series converges for all x.
+      (iii) There is a positive number R such that the series
+      converges if |x-a| < R and diverges if |x-a| > R. R is called
+      the radius of convergence.
+  latex: |
+    \exists\,R \in [0, \infty]:
+    \sum c_n(x-a)^n
+    \begin{cases}
+    \text{converges} & |x-a| < R\\
+    \text{diverges} & |x-a| > R
+    \end{cases}
+
+proved_by:
+  - proof.power-series-convergence.stewart
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "11"
+    section: "11.8"
+
+confidence: high

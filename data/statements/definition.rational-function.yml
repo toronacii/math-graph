@@ -1,0 +1,32 @@
+id: definition.rational-function
+type: definition
+status: draft
+
+title:
+  en: Rational function
+  es: Función racional
+
+statement:
+  natural:
+    es: >
+      Una función racional f es un cociente de dos polinomios, es decir,
+      f(x) = P(x)/Q(x), donde P y Q son polinomios. El dominio consiste
+      en todos los valores de x tales que Q(x) ≠ 0.
+    en: >
+      A rational function f is a ratio of two polynomials, that is,
+      f(x) = P(x)/Q(x), where P and Q are polynomials. The domain consists
+      of all values of x such that Q(x) ≠ 0.
+  latex: |
+    f(x) = \frac{P(x)}{Q(x)}
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.2"
+
+confidence: medium
+notes: >
+  Stewart defines rational functions in section 1.2 as quotients of
+  polynomials.

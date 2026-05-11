@@ -1,0 +1,32 @@
+id: definition.power-function
+type: definition
+status: draft
+
+title:
+  en: Power function
+  es: Función potencia
+
+statement:
+  natural:
+    es: >
+      Una función potencia es una función de la forma f(x) = xᵃ, donde
+      a es una constante. Los casos particulares importantes incluyen
+      a = n (entero positivo), a = 1/n (raíces) y a = -1.
+    en: >
+      A power function is a function of the form f(x) = xᵃ, where a is a
+      constant. Important special cases include a = n (positive integer),
+      a = 1/n (roots), and a = -1.
+  latex: |
+    f(x) = x^a
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.2"
+
+confidence: medium
+notes: >
+  Stewart discusses three families of power functions in section 1.2:
+  positive integer powers, root functions, and the reciprocal function.

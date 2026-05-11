@@ -1,0 +1,23 @@
+id: proof.first-derivative-test.stewart
+type: proof
+status: draft
+
+proves: proposition.first-derivative-test
+
+uses:
+  - proposition.increasing-decreasing-test
+  - definition.critical-number
+
+style: direct
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "4"
+    section: "4.3"
+
+confidence: high
+notes: >
+  If f' > 0 on (c-δ, c) and f' < 0 on (c, c+δ), then f is
+  increasing before c and decreasing after, so f(c) is a local max.
+  Analogous for local min.

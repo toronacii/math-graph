@@ -1,0 +1,32 @@
+id: definition.reflection
+type: definition
+status: draft
+
+title:
+  en: Reflections of graphs
+  es: Reflexiones de gráficas
+
+statement:
+  natural:
+    es: >
+      La gráfica de y = -f(x) es la reflexión de la gráfica de y = f(x)
+      respecto al eje x. La gráfica de y = f(-x) es la reflexión de la
+      gráfica de y = f(x) respecto al eje y.
+    en: >
+      The graph of y = -f(x) is the reflection of the graph of y = f(x)
+      about the x-axis. The graph of y = f(-x) is the reflection of the
+      graph of y = f(x) about the y-axis.
+  latex: |
+    y = -f(x) \quad \text{(reflexión eje } x\text{)}, \quad y = f(-x) \quad \text{(reflexión eje } y\text{)}
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.3"
+
+confidence: medium
+notes: >
+  Stewart presents reflections as part of the transformations catalog
+  in section 1.3.

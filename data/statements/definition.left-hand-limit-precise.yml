@@ -1,0 +1,27 @@
+id: definition.left-hand-limit-precise
+type: definition
+status: draft
+
+title:
+  en: Precise definition of left-hand limit
+  es: Definición precisa del límite lateral izquierdo
+
+statement:
+  natural:
+    es: >
+      lim(x→a⁻) f(x) = L si para todo ε > 0 existe un δ > 0 tal que
+      si a - δ < x < a entonces |f(x) - L| < ε.
+    en: >
+      lim(x→a⁻) f(x) = L if for every ε > 0 there exists a δ > 0 such
+      that if a - δ < x < a then |f(x) - L| < ε.
+  latex: |
+    \forall \varepsilon > 0, \; \exists \delta > 0 : a - \delta < x < a \implies |f(x) - L| < \varepsilon
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.4"
+
+confidence: high

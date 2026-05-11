@@ -1,0 +1,23 @@
+id: proof.horizontal-line-test.stewart
+type: proof
+status: draft
+
+proves: proposition.horizontal-line-test
+
+uses:
+  - definition.one-to-one-function
+  - definition.graph-of-function
+
+style: direct
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.5"
+
+confidence: medium
+notes: >
+  Analogous to the vertical line test. If a horizontal line y = b
+  intersects the graph at two points (x₁, b) and (x₂, b) with
+  x₁ ≠ x₂, then f(x₁) = f(x₂) = b, contradicting injectivity.

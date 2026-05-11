@@ -1,0 +1,23 @@
+id: proof.derivative-ln.stewart
+type: proof
+status: draft
+
+proves: theorem.derivative-ln
+
+uses:
+  - definition.inverse-function
+  - theorem.derivative-exponential
+  - theorem.chain-rule
+
+style: direct
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.6"
+
+confidence: high
+notes: >
+  Let y = ln x, so e^y = x. Differentiate implicitly:
+  e^y · dy/dx = 1, so dy/dx = 1/e^y = 1/x.

@@ -1,0 +1,23 @@
+id: proof.derivative-e-formula.stewart
+type: proof
+status: draft
+
+proves: theorem.derivative-e-formula
+
+uses:
+  - theorem.derivative-ln
+  - definition.number-e
+
+style: direct
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.6"
+
+confidence: high
+notes: >
+  Since d/dx(ln x)|_{x=1} = 1, we have
+  lim(h→0) [ln(1+h) - ln 1]/h = 1, i.e., lim(h→0) ln(1+h)/h = 1.
+  So lim(h→0) ln(1+h)^{1/h} = 1, which gives (1+h)^{1/h} → e^1 = e.

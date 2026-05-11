@@ -1,0 +1,35 @@
+id: definition.polar-coordinates
+type: definition
+status: draft
+
+title:
+  en: Polar coordinates
+  es: Coordenadas polares
+
+statement:
+  natural:
+    es: >
+      El sistema de coordenadas polares representa cada punto del
+      plano mediante un par ordenado (r, θ), donde r es la distancia
+      del punto al origen (polo) y θ es el ángulo medido desde el
+      eje polar positivo. Las relaciones con las coordenadas
+      cartesianas son x = r cos θ, y = r sin θ.
+    en: >
+      The polar coordinate system represents each point in the plane
+      by an ordered pair (r, θ), where r is the distance from the
+      point to the origin (pole) and θ is the angle measured from the
+      positive polar axis. The relations to Cartesian coordinates are
+      x = r cos θ, y = r sin θ.
+  latex: |
+    x = r\cos\theta,\quad y = r\sin\theta
+    \qquad
+    r^2 = x^2 + y^2,\quad \tan\theta = \frac{y}{x}
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "10"
+    section: "10.3"
+
+confidence: high

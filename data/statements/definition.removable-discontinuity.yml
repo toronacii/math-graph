@@ -1,0 +1,29 @@
+id: definition.removable-discontinuity
+type: definition
+status: draft
+
+title:
+  en: Removable discontinuity
+  es: Discontinuidad evitable
+
+statement:
+  natural:
+    es: >
+      Una función f tiene una discontinuidad evitable en a si
+      lim(x→a) f(x) existe pero es diferente de f(a), o f(a) no está
+      definida. La discontinuidad puede eliminarse redefiniendo f(a)
+      como el valor del límite.
+    en: >
+      A function f has a removable discontinuity at a if lim(x→a) f(x)
+      exists but is not equal to f(a), or f(a) is not defined. The
+      discontinuity can be removed by redefining f(a) to equal the
+      limit value.
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.5"
+
+confidence: medium

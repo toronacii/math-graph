@@ -1,0 +1,32 @@
+id: definition.ellipse
+type: definition
+status: draft
+
+title:
+  en: Ellipse
+  es: Elipse
+
+statement:
+  natural:
+    es: >
+      Una elipse es el conjunto de puntos en un plano cuya suma de
+      distancias a dos puntos fijos F₁ y F₂ (los focos) es una
+      constante 2a. La ecuación estándar con centro en el origen y
+      focos en (±c, 0) es x²/a² + y²/b² = 1, donde b² = a² - c².
+    en: >
+      An ellipse is the set of points in a plane the sum of whose
+      distances from two fixed points F₁ and F₂ (the foci) is a
+      constant 2a. The standard equation with center at the origin
+      and foci at (±c, 0) is x²/a² + y²/b² = 1, where b² = a² - c².
+  latex: |
+    \frac{x^2}{a^2} + \frac{y^2}{b^2} = 1
+    \qquad (b^2 = a^2 - c^2)
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "10"
+    section: "10.5"
+
+confidence: high

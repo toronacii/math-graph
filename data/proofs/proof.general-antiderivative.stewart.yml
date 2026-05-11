@@ -1,0 +1,23 @@
+id: proof.general-antiderivative.stewart
+type: proof
+status: draft
+
+proves: theorem.general-antiderivative
+
+uses:
+  - definition.antiderivative
+  - corollary.equal-derivatives-differ-by-constant
+
+style: direct
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "4"
+    section: "4.9"
+
+confidence: high
+notes: >
+  If F and G are both antiderivatives of f, then F' = G' = f.
+  By the corollary, G(x) = F(x) + C for some constant C.
+  Therefore every antiderivative has the form F(x) + C.

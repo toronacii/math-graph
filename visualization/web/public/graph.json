@@ -1,0 +1,3517 @@
+{
+  "directed": true,
+  "links": [
+    {
+      "relation": "uses",
+      "source": "corollary.difference-rule",
+      "target": "proof.equal-derivatives-differ-by-constant.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "corollary.equal-derivatives-differ-by-constant",
+      "target": "proof.ftc-part2.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "corollary.equal-derivatives-differ-by-constant",
+      "target": "proof.general-antiderivative.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "corollary.limit-cosx-minus-1-over-x",
+      "target": "proof.derivative-cos.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "corollary.limit-cosx-minus-1-over-x",
+      "target": "proof.derivative-sin.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "corollary.zero-derivative-constant",
+      "target": "proof.equal-derivatives-differ-by-constant.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.absolute-convergence",
+      "target": "proof.absolute-convergence-implies-convergence.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.absolute-convergence",
+      "target": "proof.ratio-test.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.absolute-convergence",
+      "target": "proof.root-test.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.absolute-value",
+      "target": "proof.derivative-ln-abs.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.antiderivative",
+      "target": "proof.ftc-part2.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.antiderivative",
+      "target": "proof.general-antiderivative.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.antiderivative",
+      "target": "proof.integration-by-parts.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.antiderivative",
+      "target": "proof.substitution-rule.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.average-value-of-function",
+      "target": "proof.mean-value-theorem-integrals.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.composition-of-functions",
+      "target": "proof.continuity-of-composition.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.concave-downward",
+      "target": "proof.concavity-test.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.concave-upward",
+      "target": "proof.concavity-test.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.continuity-at-point",
+      "target": "proof.continuity-of-combinations.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.continuity-at-point",
+      "target": "proof.continuity-of-composition.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.continuity-at-point",
+      "target": "proof.differentiable-implies-continuous.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.continuity-at-point",
+      "target": "proof.ftc-part1.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.continuity-on-interval",
+      "target": "proof.extreme-value-theorem.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.continuity-on-interval",
+      "target": "proof.integrability-of-continuous-functions.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.continuity-on-interval",
+      "target": "proof.intermediate-value-theorem.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.continuity-on-interval",
+      "target": "proof.mean-value-theorem-integrals.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.continuity-on-interval",
+      "target": "proof.mean-value-theorem.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.continuity-on-interval",
+      "target": "proof.rolles-theorem.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.critical-number",
+      "target": "proof.first-derivative-test.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.critical-number",
+      "target": "proof.local-extremum-at-critical.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.decreasing-function",
+      "target": "proof.increasing-decreasing-test.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.definite-integral",
+      "target": "proof.ftc-part1.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.definite-integral",
+      "target": "proof.integrability-of-continuous-functions.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.definite-integral",
+      "target": "proof.integral-comparison.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.definite-integral",
+      "target": "proof.integral-properties.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.definite-integral",
+      "target": "proof.mean-value-theorem-integrals.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.derivative-at-point",
+      "target": "proof.differentiable-implies-continuous.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.derivative-at-point",
+      "target": "proof.fermat-theorem.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.derivative-at-point",
+      "target": "proof.ftc-part1.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.derivative-function",
+      "target": "proof.chain-rule.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.derivative-function",
+      "target": "proof.constant-multiple-rule.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.derivative-function",
+      "target": "proof.derivative-constant.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.derivative-function",
+      "target": "proof.derivative-cos.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.derivative-function",
+      "target": "proof.derivative-exponential.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.derivative-function",
+      "target": "proof.derivative-sin.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.derivative-function",
+      "target": "proof.power-rule.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.derivative-function",
+      "target": "proof.product-rule.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.derivative-function",
+      "target": "proof.quotient-rule.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.derivative-function",
+      "target": "proof.sum-rule.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.differentiable",
+      "target": "proof.mean-value-theorem.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.differentiable",
+      "target": "proof.rolles-theorem.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.epsilon-delta-limit",
+      "target": "proof.continuity-of-composition.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.epsilon-delta-limit",
+      "target": "proof.limit-laws.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.epsilon-delta-limit",
+      "target": "proof.limit-root-law.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.epsilon-delta-limit",
+      "target": "proof.squeeze-theorem.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.even-function",
+      "target": "proof.integrals-symmetric-functions.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.exponential-function",
+      "target": "proof.laws-of-exponents.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.first-order-linear-equation",
+      "target": "proof.integrating-factor-method.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.function",
+      "target": "proof.vertical-line-test.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.graph-of-function",
+      "target": "proof.horizontal-line-test.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.graph-of-function",
+      "target": "proof.inverse-graph-reflection.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.graph-of-function",
+      "target": "proof.vertical-line-test.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.improper-integral-type1",
+      "target": "proof.comparison-theorem-integrals.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.improper-integral-type1",
+      "target": "proof.integral-test.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.increasing-function",
+      "target": "proof.increasing-decreasing-test.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.indefinite-integral",
+      "target": "proof.integration-by-parts.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.indeterminate-form",
+      "target": "proof.lhopitals-rule.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.infinite-series",
+      "target": "proof.absolute-convergence-implies-convergence.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.infinite-series",
+      "target": "proof.alternating-series-test.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.infinite-series",
+      "target": "proof.comparison-test-series.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.infinite-series",
+      "target": "proof.divergence-test.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.infinite-series",
+      "target": "proof.geometric-series.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.infinite-series",
+      "target": "proof.integral-test.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.inverse-function",
+      "target": "proof.cancellation-equations.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.inverse-function",
+      "target": "proof.derivative-arccos.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.inverse-function",
+      "target": "proof.derivative-arcsin.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.inverse-function",
+      "target": "proof.derivative-arctan.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.inverse-function",
+      "target": "proof.derivative-ln.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.inverse-function",
+      "target": "proof.inverse-graph-reflection.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.left-hand-limit",
+      "target": "proof.fermat-theorem.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.left-hand-limit",
+      "target": "proof.limit-exists-iff-one-sided-limits.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.limit-at-infinity",
+      "target": "proof.limit-one-over-x-at-infinity.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.limit-of-function",
+      "target": "proof.limit-exists-iff-one-sided-limits.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.local-maximum",
+      "target": "proof.fermat-theorem.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.logarithmic-function",
+      "target": "proof.change-of-base-formula.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.logarithmic-function",
+      "target": "proof.laws-of-logarithms.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.natural-exponential-function",
+      "target": "proof.derivative-exponential.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.natural-logarithm",
+      "target": "proof.change-of-base-formula.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.natural-logarithm",
+      "target": "proof.derivative-general-exponential.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.number-e",
+      "target": "proof.derivative-e-formula.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.number-e",
+      "target": "proof.derivative-exponential.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.odd-function",
+      "target": "proof.integrals-symmetric-functions.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.one-to-one-function",
+      "target": "proof.cancellation-equations.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.one-to-one-function",
+      "target": "proof.horizontal-line-test.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.polynomial",
+      "target": "proof.direct-substitution-property.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.power-series",
+      "target": "proof.power-series-convergence.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.power-series",
+      "target": "proof.power-series-differentiation-integration.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.rational-function",
+      "target": "proof.direct-substitution-property.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.right-hand-limit",
+      "target": "proof.fermat-theorem.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.right-hand-limit",
+      "target": "proof.limit-exists-iff-one-sided-limits.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.second-derivative",
+      "target": "proof.concavity-test.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.sequence",
+      "target": "proof.alternating-series-test.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.sequence",
+      "target": "proof.divergence-test.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.sequence",
+      "target": "proof.geometric-series.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.sequence",
+      "target": "proof.limit-comparison-test.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.sequence",
+      "target": "proof.monotonic-sequence-theorem.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.taylor-series",
+      "target": "proof.taylor-convergence.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "definition.trigonometric-function",
+      "target": "proof.limit-sinx-over-x.stewart"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.absolute-convergence-implies-convergence.stewart",
+      "target": "theorem.absolute-convergence-implies-convergence"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.alternating-series-test.stewart",
+      "target": "theorem.alternating-series-test"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.cancellation-equations.stewart",
+      "target": "proposition.cancellation-equations"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.chain-rule.stewart",
+      "target": "theorem.chain-rule"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.change-of-base-formula.stewart",
+      "target": "proposition.change-of-base-formula"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.comparison-test-series.stewart",
+      "target": "theorem.comparison-test-series"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.comparison-theorem-integrals.stewart",
+      "target": "theorem.comparison-theorem-integrals"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.concavity-test.stewart",
+      "target": "proposition.concavity-test"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.constant-multiple-rule.stewart",
+      "target": "theorem.constant-multiple-rule"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.continuity-of-combinations.stewart",
+      "target": "theorem.continuity-of-combinations"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.continuity-of-composition.stewart",
+      "target": "theorem.continuity-of-composition"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.derivative-arccos.stewart",
+      "target": "theorem.derivative-arccos"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.derivative-arcsin.stewart",
+      "target": "theorem.derivative-arcsin"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.derivative-arctan.stewart",
+      "target": "theorem.derivative-arctan"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.derivative-constant.stewart",
+      "target": "theorem.derivative-constant"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.derivative-cos.stewart",
+      "target": "theorem.derivative-cos"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.derivative-cot.stewart",
+      "target": "theorem.derivative-cot"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.derivative-csc.stewart",
+      "target": "theorem.derivative-csc"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.derivative-e-formula.stewart",
+      "target": "theorem.derivative-e-formula"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.derivative-exponential.stewart",
+      "target": "theorem.derivative-exponential"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.derivative-general-exponential.stewart",
+      "target": "theorem.derivative-general-exponential"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.derivative-ln-abs.stewart",
+      "target": "theorem.derivative-ln-abs"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.derivative-ln.stewart",
+      "target": "theorem.derivative-ln"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.derivative-log-base-a.stewart",
+      "target": "theorem.derivative-log-base-a"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.derivative-sec.stewart",
+      "target": "theorem.derivative-sec"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.derivative-sin.stewart",
+      "target": "theorem.derivative-sin"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.derivative-tan.stewart",
+      "target": "theorem.derivative-tan"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.difference-rule.stewart",
+      "target": "corollary.difference-rule"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.differentiable-implies-continuous.stewart",
+      "target": "theorem.differentiable-implies-continuous"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.direct-substitution-property.stewart",
+      "target": "proposition.direct-substitution-property"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.divergence-test.stewart",
+      "target": "theorem.divergence-test"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.equal-derivatives-differ-by-constant.stewart",
+      "target": "corollary.equal-derivatives-differ-by-constant"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.extreme-value-theorem.stewart",
+      "target": "theorem.extreme-value-theorem"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.fermat-theorem.stewart",
+      "target": "theorem.fermat-theorem"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.first-derivative-test.stewart",
+      "target": "proposition.first-derivative-test"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.ftc-part1.stewart",
+      "target": "theorem.ftc-part1"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.ftc-part2.stewart",
+      "target": "theorem.ftc-part2"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.general-antiderivative.stewart",
+      "target": "theorem.general-antiderivative"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.geometric-series.stewart",
+      "target": "theorem.geometric-series"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.horizontal-line-test.stewart",
+      "target": "proposition.horizontal-line-test"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.increasing-decreasing-test.stewart",
+      "target": "proposition.increasing-decreasing-test"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.integrability-of-continuous-functions.stewart",
+      "target": "theorem.integrability-of-continuous-functions"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.integral-comparison.stewart",
+      "target": "proposition.integral-comparison"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.integral-properties.stewart",
+      "target": "proposition.integral-properties"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.integral-test.stewart",
+      "target": "theorem.integral-test"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.integrals-symmetric-functions.stewart",
+      "target": "proposition.integrals-symmetric-functions"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.integrating-factor-method.stewart",
+      "target": "proposition.integrating-factor-method"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.integration-by-parts-definite.stewart",
+      "target": "theorem.integration-by-parts-definite"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.integration-by-parts.stewart",
+      "target": "theorem.integration-by-parts"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.intermediate-value-theorem.stewart",
+      "target": "theorem.intermediate-value-theorem"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.inverse-graph-reflection.stewart",
+      "target": "proposition.inverse-graph-reflection"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.laws-of-exponents.stewart",
+      "target": "proposition.laws-of-exponents"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.laws-of-logarithms.stewart",
+      "target": "proposition.laws-of-logarithms"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.lhopitals-rule.stewart",
+      "target": "theorem.lhopitals-rule"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.limit-comparison-test.stewart",
+      "target": "theorem.limit-comparison-test"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.limit-cosx-minus-1-over-x.stewart",
+      "target": "corollary.limit-cosx-minus-1-over-x"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.limit-exists-iff-one-sided-limits.stewart",
+      "target": "proposition.limit-exists-iff-one-sided-limits"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.limit-laws.stewart",
+      "target": "theorem.limit-laws"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.limit-one-over-x-at-infinity.stewart",
+      "target": "theorem.limit-one-over-x-at-infinity"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.limit-power-law.stewart",
+      "target": "theorem.limit-power-law"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.limit-root-law.stewart",
+      "target": "theorem.limit-root-law"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.limit-sinx-over-x.stewart",
+      "target": "theorem.limit-sinx-over-x"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.local-extremum-at-critical.stewart",
+      "target": "proposition.local-extremum-at-critical"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.mean-value-theorem-integrals.stewart",
+      "target": "theorem.mean-value-theorem-integrals"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.mean-value-theorem.stewart",
+      "target": "theorem.mean-value-theorem"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.monotonic-sequence-theorem.stewart",
+      "target": "theorem.monotonic-sequence-theorem"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.net-change-theorem.stewart",
+      "target": "theorem.net-change-theorem"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.power-rule-combined-chain.stewart",
+      "target": "corollary.power-rule-combined-chain"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.power-rule.stewart",
+      "target": "theorem.power-rule"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.power-series-convergence.stewart",
+      "target": "theorem.power-series-convergence"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.power-series-differentiation-integration.stewart",
+      "target": "theorem.power-series-differentiation-integration"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.product-rule.stewart",
+      "target": "theorem.product-rule"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.quotient-rule.stewart",
+      "target": "theorem.quotient-rule"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.ratio-test.stewart",
+      "target": "theorem.ratio-test"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.rolles-theorem.stewart",
+      "target": "theorem.rolles-theorem"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.root-test.stewart",
+      "target": "theorem.root-test"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.second-derivative-test.stewart",
+      "target": "proposition.second-derivative-test"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.squeeze-theorem.stewart",
+      "target": "theorem.squeeze-theorem"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.substitution-rule-definite.stewart",
+      "target": "theorem.substitution-rule-definite"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.substitution-rule.stewart",
+      "target": "theorem.substitution-rule"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.sum-rule.stewart",
+      "target": "theorem.sum-rule"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.taylor-convergence.stewart",
+      "target": "theorem.taylor-convergence"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.vertical-line-test.stewart",
+      "target": "proposition.vertical-line-test"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.zero-derivative-constant.stewart",
+      "target": "corollary.zero-derivative-constant"
+    },
+    {
+      "relation": "uses",
+      "source": "proposition.change-of-base-formula",
+      "target": "proof.derivative-log-base-a.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "proposition.concavity-test",
+      "target": "proof.second-derivative-test.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "proposition.first-derivative-test",
+      "target": "proof.second-derivative-test.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "proposition.increasing-decreasing-test",
+      "target": "proof.concavity-test.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "proposition.increasing-decreasing-test",
+      "target": "proof.first-derivative-test.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "proposition.integral-comparison",
+      "target": "proof.comparison-theorem-integrals.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "proposition.integral-comparison",
+      "target": "proof.ftc-part1.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "proposition.integral-comparison",
+      "target": "proof.integral-test.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "proposition.integral-comparison",
+      "target": "proof.mean-value-theorem-integrals.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "proposition.integral-properties",
+      "target": "proof.integrals-symmetric-functions.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "proposition.laws-of-exponents",
+      "target": "proof.laws-of-logarithms.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "proposition.laws-of-logarithms",
+      "target": "proof.change-of-base-formula.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.chain-rule",
+      "target": "proof.derivative-arccos.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.chain-rule",
+      "target": "proof.derivative-arcsin.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.chain-rule",
+      "target": "proof.derivative-arctan.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.chain-rule",
+      "target": "proof.derivative-general-exponential.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.chain-rule",
+      "target": "proof.derivative-ln-abs.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.chain-rule",
+      "target": "proof.derivative-ln.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.chain-rule",
+      "target": "proof.integrating-factor-method.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.chain-rule",
+      "target": "proof.power-rule-combined-chain.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.chain-rule",
+      "target": "proof.substitution-rule.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.comparison-test-series",
+      "target": "proof.absolute-convergence-implies-convergence.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.comparison-test-series",
+      "target": "proof.limit-comparison-test.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.comparison-test-series",
+      "target": "proof.power-series-convergence.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.comparison-test-series",
+      "target": "proof.ratio-test.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.comparison-test-series",
+      "target": "proof.root-test.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.constant-multiple-rule",
+      "target": "proof.derivative-log-base-a.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.constant-multiple-rule",
+      "target": "proof.difference-rule.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.constant-multiple-rule",
+      "target": "proof.mean-value-theorem.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.derivative-cos",
+      "target": "proof.derivative-arccos.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.derivative-cos",
+      "target": "proof.derivative-cot.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.derivative-cos",
+      "target": "proof.derivative-sec.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.derivative-cos",
+      "target": "proof.derivative-tan.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.derivative-exponential",
+      "target": "proof.derivative-general-exponential.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.derivative-exponential",
+      "target": "proof.derivative-ln.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.derivative-ln",
+      "target": "proof.derivative-e-formula.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.derivative-ln",
+      "target": "proof.derivative-ln-abs.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.derivative-ln",
+      "target": "proof.derivative-log-base-a.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.derivative-sin",
+      "target": "proof.derivative-arcsin.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.derivative-sin",
+      "target": "proof.derivative-cot.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.derivative-sin",
+      "target": "proof.derivative-csc.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.derivative-sin",
+      "target": "proof.derivative-tan.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.derivative-tan",
+      "target": "proof.derivative-arctan.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.differentiable-implies-continuous",
+      "target": "proof.chain-rule.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.differentiable-implies-continuous",
+      "target": "proof.product-rule.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.differentiable-implies-continuous",
+      "target": "proof.quotient-rule.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.extreme-value-theorem",
+      "target": "proof.mean-value-theorem-integrals.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.extreme-value-theorem",
+      "target": "proof.rolles-theorem.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.fermat-theorem",
+      "target": "proof.local-extremum-at-critical.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.fermat-theorem",
+      "target": "proof.rolles-theorem.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.ftc-part1",
+      "target": "proof.ftc-part2.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.ftc-part2",
+      "target": "proof.integrating-factor-method.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.ftc-part2",
+      "target": "proof.integration-by-parts-definite.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.ftc-part2",
+      "target": "proof.net-change-theorem.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.ftc-part2",
+      "target": "proof.substitution-rule-definite.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.geometric-series",
+      "target": "proof.power-series-convergence.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.geometric-series",
+      "target": "proof.ratio-test.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.geometric-series",
+      "target": "proof.root-test.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.integration-by-parts",
+      "target": "proof.integration-by-parts-definite.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.intermediate-value-theorem",
+      "target": "proof.mean-value-theorem-integrals.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.limit-laws",
+      "target": "proof.chain-rule.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.limit-laws",
+      "target": "proof.constant-multiple-rule.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.limit-laws",
+      "target": "proof.continuity-of-combinations.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.limit-laws",
+      "target": "proof.derivative-cos.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.limit-laws",
+      "target": "proof.derivative-sin.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.limit-laws",
+      "target": "proof.differentiable-implies-continuous.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.limit-laws",
+      "target": "proof.direct-substitution-property.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.limit-laws",
+      "target": "proof.integral-comparison.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.limit-laws",
+      "target": "proof.integral-properties.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.limit-laws",
+      "target": "proof.lhopitals-rule.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.limit-laws",
+      "target": "proof.limit-cosx-minus-1-over-x.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.limit-laws",
+      "target": "proof.limit-power-law.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.limit-laws",
+      "target": "proof.power-rule.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.limit-laws",
+      "target": "proof.product-rule.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.limit-laws",
+      "target": "proof.quotient-rule.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.limit-laws",
+      "target": "proof.sum-rule.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.limit-sinx-over-x",
+      "target": "proof.derivative-cos.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.limit-sinx-over-x",
+      "target": "proof.derivative-sin.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.limit-sinx-over-x",
+      "target": "proof.limit-cosx-minus-1-over-x.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.mean-value-theorem",
+      "target": "proof.increasing-decreasing-test.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.mean-value-theorem",
+      "target": "proof.lhopitals-rule.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.mean-value-theorem",
+      "target": "proof.taylor-convergence.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.mean-value-theorem",
+      "target": "proof.zero-derivative-constant.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.monotonic-sequence-theorem",
+      "target": "proof.alternating-series-test.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.monotonic-sequence-theorem",
+      "target": "proof.comparison-test-series.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.power-rule",
+      "target": "proof.power-rule-combined-chain.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.power-series-convergence",
+      "target": "proof.power-series-differentiation-integration.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.product-rule",
+      "target": "proof.integrating-factor-method.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.product-rule",
+      "target": "proof.integration-by-parts.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.quotient-rule",
+      "target": "proof.derivative-cot.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.quotient-rule",
+      "target": "proof.derivative-csc.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.quotient-rule",
+      "target": "proof.derivative-sec.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.quotient-rule",
+      "target": "proof.derivative-tan.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.rolles-theorem",
+      "target": "proof.mean-value-theorem.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.squeeze-theorem",
+      "target": "proof.ftc-part1.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.squeeze-theorem",
+      "target": "proof.limit-sinx-over-x.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.squeeze-theorem",
+      "target": "proof.taylor-convergence.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.substitution-rule",
+      "target": "proof.substitution-rule-definite.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.substitution-rule-definite",
+      "target": "proof.integrals-symmetric-functions.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.sum-rule",
+      "target": "proof.difference-rule.stewart"
+    },
+    {
+      "relation": "uses",
+      "source": "theorem.sum-rule",
+      "target": "proof.mean-value-theorem.stewart"
+    }
+  ],
+  "multigraph": true,
+  "nodes": [
+    {
+      "id": "corollary.difference-rule",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "The Difference Rule",
+      "title_es": "Regla de la diferencia",
+      "type": "corollary"
+    },
+    {
+      "id": "corollary.equal-derivatives-differ-by-constant",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Equal derivatives differ by a constant",
+      "title_es": "Derivadas iguales difieren en una constante",
+      "type": "corollary"
+    },
+    {
+      "id": "corollary.limit-cosx-minus-1-over-x",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Limit of (cos(x) - 1)/x as x approaches 0",
+      "title_es": "Límite de (cos(x) - 1)/x cuando x tiende a 0",
+      "type": "corollary"
+    },
+    {
+      "id": "corollary.power-rule-combined-chain",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "The Power Rule combined with the Chain Rule",
+      "title_es": "Regla de la potencia combinada con la regla de la cadena",
+      "type": "corollary"
+    },
+    {
+      "id": "corollary.zero-derivative-constant",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Zero derivative implies constant function",
+      "title_es": "Derivada cero implica función constante",
+      "type": "corollary"
+    },
+    {
+      "id": "definition.absolute-convergence",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Absolute convergence",
+      "title_es": "Convergencia absoluta",
+      "type": "definition"
+    },
+    {
+      "id": "definition.absolute-maximum",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Absolute maximum",
+      "title_es": "Máximo absoluto",
+      "type": "definition"
+    },
+    {
+      "id": "definition.absolute-minimum",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Absolute minimum",
+      "title_es": "Mínimo absoluto",
+      "type": "definition"
+    },
+    {
+      "id": "definition.absolute-value",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Absolute value",
+      "title_es": "Valor absoluto",
+      "type": "definition"
+    },
+    {
+      "id": "definition.algebraic-function",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Algebraic function",
+      "title_es": "Función algebraica",
+      "type": "definition"
+    },
+    {
+      "id": "definition.antiderivative",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Antiderivative",
+      "title_es": "Antiderivada",
+      "type": "definition"
+    },
+    {
+      "id": "definition.arc-length",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Arc length",
+      "title_es": "Longitud de arco",
+      "type": "definition"
+    },
+    {
+      "id": "definition.arc-length-parametric",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Arc length of a parametric curve",
+      "title_es": "Longitud de arco de una curva paramétrica",
+      "type": "definition"
+    },
+    {
+      "id": "definition.arc-length-polar",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Arc length in polar coordinates",
+      "title_es": "Longitud de arco en coordenadas polares",
+      "type": "definition"
+    },
+    {
+      "id": "definition.area-between-curves",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Area between curves",
+      "title_es": "Área entre curvas",
+      "type": "definition"
+    },
+    {
+      "id": "definition.area-in-polar-coordinates",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Area in polar coordinates",
+      "title_es": "Área en coordenadas polares",
+      "type": "definition"
+    },
+    {
+      "id": "definition.area-under-curve",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Area under a curve",
+      "title_es": "Área bajo una curva",
+      "type": "definition"
+    },
+    {
+      "id": "definition.average-value-of-function",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Average value of a function",
+      "title_es": "Valor promedio de una función",
+      "type": "definition"
+    },
+    {
+      "id": "definition.average-velocity",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Average velocity",
+      "title_es": "Velocidad media",
+      "type": "definition"
+    },
+    {
+      "id": "definition.closed-interval-method",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "The Closed Interval Method",
+      "title_es": "Método del intervalo cerrado",
+      "type": "definition"
+    },
+    {
+      "id": "definition.composition-of-functions",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Composition of functions",
+      "title_es": "Composición de funciones",
+      "type": "definition"
+    },
+    {
+      "id": "definition.concave-downward",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Concave downward",
+      "title_es": "Cóncava hacia abajo",
+      "type": "definition"
+    },
+    {
+      "id": "definition.concave-upward",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Concave upward",
+      "title_es": "Cóncava hacia arriba",
+      "type": "definition"
+    },
+    {
+      "id": "definition.continuity-at-point",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Continuity at a point",
+      "title_es": "Continuidad en un punto",
+      "type": "definition"
+    },
+    {
+      "id": "definition.continuity-on-interval",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Continuity on an interval",
+      "title_es": "Continuidad en un intervalo",
+      "type": "definition"
+    },
+    {
+      "id": "definition.critical-number",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Critical number",
+      "title_es": "Número crítico",
+      "type": "definition"
+    },
+    {
+      "id": "definition.decreasing-function",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Decreasing function",
+      "title_es": "Función decreciente",
+      "type": "definition"
+    },
+    {
+      "id": "definition.definite-integral",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Definite integral",
+      "title_es": "Integral definida",
+      "type": "definition"
+    },
+    {
+      "id": "definition.dependent-variable",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Dependent variable",
+      "title_es": "Variable dependiente",
+      "type": "definition"
+    },
+    {
+      "id": "definition.derivative-at-point",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Derivative of a function at a point",
+      "title_es": "Derivada de una función en un punto",
+      "type": "definition"
+    },
+    {
+      "id": "definition.derivative-function",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Derivative as a function",
+      "title_es": "La derivada como función",
+      "type": "definition"
+    },
+    {
+      "id": "definition.differentiable",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Differentiability",
+      "title_es": "Diferenciabilidad",
+      "type": "definition"
+    },
+    {
+      "id": "definition.domain",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Domain of a function",
+      "title_es": "Dominio de una función",
+      "type": "definition"
+    },
+    {
+      "id": "definition.ellipse",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Ellipse",
+      "title_es": "Elipse",
+      "type": "definition"
+    },
+    {
+      "id": "definition.epsilon-delta-limit",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Precise definition of a limit (epsilon-delta)",
+      "title_es": "Definición precisa de un límite (épsilon-delta)",
+      "type": "definition"
+    },
+    {
+      "id": "definition.even-function",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Even function",
+      "title_es": "Función par",
+      "type": "definition"
+    },
+    {
+      "id": "definition.exponential-function",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Exponential function",
+      "title_es": "Función exponencial",
+      "type": "definition"
+    },
+    {
+      "id": "definition.first-order-linear-equation",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "First-order linear differential equation",
+      "title_es": "Ecuación diferencial lineal de primer orden",
+      "type": "definition"
+    },
+    {
+      "id": "definition.function",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Function",
+      "title_es": "Función",
+      "type": "definition"
+    },
+    {
+      "id": "definition.graph-of-function",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Graph of a function",
+      "title_es": "Gráfica de una función",
+      "type": "definition"
+    },
+    {
+      "id": "definition.horizontal-asymptote",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Horizontal asymptote",
+      "title_es": "Asíntota horizontal",
+      "type": "definition"
+    },
+    {
+      "id": "definition.horizontal-shift",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Horizontal shift",
+      "title_es": "Traslación horizontal",
+      "type": "definition"
+    },
+    {
+      "id": "definition.horizontal-stretch-compression",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Horizontal stretching and compression",
+      "title_es": "Estiramiento y compresión horizontal",
+      "type": "definition"
+    },
+    {
+      "id": "definition.hyperbola",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Hyperbola",
+      "title_es": "Hipérbola",
+      "type": "definition"
+    },
+    {
+      "id": "definition.implicit-differentiation",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Implicit differentiation",
+      "title_es": "Derivación implícita",
+      "type": "definition"
+    },
+    {
+      "id": "definition.improper-integral-type1",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Improper integral (Type 1 — infinite interval)",
+      "title_es": "Integral impropia (Tipo 1 — intervalo infinito)",
+      "type": "definition"
+    },
+    {
+      "id": "definition.improper-integral-type2",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Improper integral (Type 2 — discontinuous integrand)",
+      "title_es": "Integral impropia (Tipo 2 — integrando discontinuo)",
+      "type": "definition"
+    },
+    {
+      "id": "definition.increasing-function",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Increasing function",
+      "title_es": "Función creciente",
+      "type": "definition"
+    },
+    {
+      "id": "definition.indefinite-integral",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Indefinite integral",
+      "title_es": "Integral indefinida",
+      "type": "definition"
+    },
+    {
+      "id": "definition.independent-variable",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Independent variable",
+      "title_es": "Variable independiente",
+      "type": "definition"
+    },
+    {
+      "id": "definition.indeterminate-form",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Indeterminate form",
+      "title_es": "Forma indeterminada",
+      "type": "definition"
+    },
+    {
+      "id": "definition.infinite-limit",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Infinite limit",
+      "title_es": "Límite infinito",
+      "type": "definition"
+    },
+    {
+      "id": "definition.infinite-limit-precise",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Precise definition of infinite limit",
+      "title_es": "Definición precisa de límite infinito",
+      "type": "definition"
+    },
+    {
+      "id": "definition.infinite-series",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Infinite series",
+      "title_es": "Serie infinita",
+      "type": "definition"
+    },
+    {
+      "id": "definition.inflection-point",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Inflection point",
+      "title_es": "Punto de inflexión",
+      "type": "definition"
+    },
+    {
+      "id": "definition.instantaneous-velocity",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Instantaneous velocity",
+      "title_es": "Velocidad instantánea",
+      "type": "definition"
+    },
+    {
+      "id": "definition.inverse-function",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Inverse function",
+      "title_es": "Función inversa",
+      "type": "definition"
+    },
+    {
+      "id": "definition.jump-discontinuity",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Jump discontinuity",
+      "title_es": "Discontinuidad de salto",
+      "type": "definition"
+    },
+    {
+      "id": "definition.left-hand-limit",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Left-hand limit",
+      "title_es": "Límite lateral izquierdo",
+      "type": "definition"
+    },
+    {
+      "id": "definition.left-hand-limit-precise",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Precise definition of left-hand limit",
+      "title_es": "Definición precisa del límite lateral izquierdo",
+      "type": "definition"
+    },
+    {
+      "id": "definition.limit-at-infinity",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Limit at infinity",
+      "title_es": "Límite en el infinito",
+      "type": "definition"
+    },
+    {
+      "id": "definition.limit-of-function",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Limit of a function",
+      "title_es": "Límite de una función",
+      "type": "definition"
+    },
+    {
+      "id": "definition.linear-function",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Linear function",
+      "title_es": "Función lineal",
+      "type": "definition"
+    },
+    {
+      "id": "definition.local-maximum",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Local maximum",
+      "title_es": "Máximo local",
+      "type": "definition"
+    },
+    {
+      "id": "definition.local-minimum",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Local minimum",
+      "title_es": "Mínimo local",
+      "type": "definition"
+    },
+    {
+      "id": "definition.logarithmic-differentiation",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Logarithmic differentiation",
+      "title_es": "Derivación logarítmica",
+      "type": "definition"
+    },
+    {
+      "id": "definition.logarithmic-function",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Logarithmic function",
+      "title_es": "Función logarítmica",
+      "type": "definition"
+    },
+    {
+      "id": "definition.mathematical-model",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Mathematical model",
+      "title_es": "Modelo matemático",
+      "type": "definition"
+    },
+    {
+      "id": "definition.natural-exponential-function",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Natural exponential function",
+      "title_es": "Función exponencial natural",
+      "type": "definition"
+    },
+    {
+      "id": "definition.natural-logarithm",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Natural logarithm",
+      "title_es": "Logaritmo natural",
+      "type": "definition"
+    },
+    {
+      "id": "definition.number-e",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "The number e",
+      "title_es": "El número e",
+      "type": "definition"
+    },
+    {
+      "id": "definition.odd-function",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Odd function",
+      "title_es": "Función impar",
+      "type": "definition"
+    },
+    {
+      "id": "definition.one-to-one-function",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "One-to-one function",
+      "title_es": "Función inyectiva (uno a uno)",
+      "type": "definition"
+    },
+    {
+      "id": "definition.parabola",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Parabola",
+      "title_es": "Parábola",
+      "type": "definition"
+    },
+    {
+      "id": "definition.parametric-curve",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Parametric curve",
+      "title_es": "Curva paramétrica",
+      "type": "definition"
+    },
+    {
+      "id": "definition.piecewise-function",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Piecewise-defined function",
+      "title_es": "Función definida por partes",
+      "type": "definition"
+    },
+    {
+      "id": "definition.polar-coordinates",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Polar coordinates",
+      "title_es": "Coordenadas polares",
+      "type": "definition"
+    },
+    {
+      "id": "definition.polynomial",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Polynomial",
+      "title_es": "Polinomio",
+      "type": "definition"
+    },
+    {
+      "id": "definition.power-function",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Power function",
+      "title_es": "Función potencia",
+      "type": "definition"
+    },
+    {
+      "id": "definition.power-series",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Power series",
+      "title_es": "Serie de potencias",
+      "type": "definition"
+    },
+    {
+      "id": "definition.range",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Range of a function",
+      "title_es": "Rango de una función",
+      "type": "definition"
+    },
+    {
+      "id": "definition.rate-of-change",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Instantaneous rate of change",
+      "title_es": "Razón de cambio instantánea",
+      "type": "definition"
+    },
+    {
+      "id": "definition.rational-function",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Rational function",
+      "title_es": "Función racional",
+      "type": "definition"
+    },
+    {
+      "id": "definition.reflection",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Reflections of graphs",
+      "title_es": "Reflexiones de gráficas",
+      "type": "definition"
+    },
+    {
+      "id": "definition.removable-discontinuity",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Removable discontinuity",
+      "title_es": "Discontinuidad evitable",
+      "type": "definition"
+    },
+    {
+      "id": "definition.right-hand-limit",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Right-hand limit",
+      "title_es": "Límite lateral derecho",
+      "type": "definition"
+    },
+    {
+      "id": "definition.secant-line",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Secant line",
+      "title_es": "Recta secante",
+      "type": "definition"
+    },
+    {
+      "id": "definition.second-derivative",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Second derivative",
+      "title_es": "Segunda derivada",
+      "type": "definition"
+    },
+    {
+      "id": "definition.separable-equation",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Separable equation",
+      "title_es": "Ecuación separable",
+      "type": "definition"
+    },
+    {
+      "id": "definition.sequence",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Sequence",
+      "title_es": "Sucesión",
+      "type": "definition"
+    },
+    {
+      "id": "definition.sigma-notation",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Sigma notation",
+      "title_es": "Notación sigma",
+      "type": "definition"
+    },
+    {
+      "id": "definition.surface-area-of-revolution",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Surface area of revolution",
+      "title_es": "Área de superficie de revolución",
+      "type": "definition"
+    },
+    {
+      "id": "definition.tangent-line",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Tangent line",
+      "title_es": "Recta tangente",
+      "type": "definition"
+    },
+    {
+      "id": "definition.tangent-to-parametric-curve",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Tangent to a parametric curve",
+      "title_es": "Tangente a una curva paramétrica",
+      "type": "definition"
+    },
+    {
+      "id": "definition.taylor-series",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Taylor series",
+      "title_es": "Serie de Taylor",
+      "type": "definition"
+    },
+    {
+      "id": "definition.transcendental-function",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Transcendental function",
+      "title_es": "Función trascendente",
+      "type": "definition"
+    },
+    {
+      "id": "definition.trigonometric-function",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Trigonometric functions",
+      "title_es": "Funciones trigonométricas",
+      "type": "definition"
+    },
+    {
+      "id": "definition.vertical-asymptote",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Vertical asymptote",
+      "title_es": "Asíntota vertical",
+      "type": "definition"
+    },
+    {
+      "id": "definition.vertical-shift",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Vertical shift",
+      "title_es": "Traslación vertical",
+      "type": "definition"
+    },
+    {
+      "id": "definition.vertical-stretch-compression",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Vertical stretching and compression",
+      "title_es": "Estiramiento y compresión vertical",
+      "type": "definition"
+    },
+    {
+      "id": "definition.volume-by-cross-sections",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Volume by cross-sections",
+      "title_es": "Volumen por secciones transversales",
+      "type": "definition"
+    },
+    {
+      "id": "definition.volume-by-cylindrical-shells",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Volume by cylindrical shells",
+      "title_es": "Volumen por capas cilíndricas",
+      "type": "definition"
+    },
+    {
+      "id": "definition.volume-of-revolution",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Volume of revolution (disk/washer method)",
+      "title_es": "Volumen de revolución (método de discos/arandelas)",
+      "type": "definition"
+    },
+    {
+      "id": "proof.absolute-convergence-implies-convergence.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.alternating-series-test.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.cancellation-equations.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.chain-rule.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.change-of-base-formula.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.comparison-test-series.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.comparison-theorem-integrals.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.concavity-test.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.constant-multiple-rule.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.continuity-of-combinations.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.continuity-of-composition.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "epsilon-delta",
+      "type": "proof"
+    },
+    {
+      "id": "proof.derivative-arccos.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.derivative-arcsin.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.derivative-arctan.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.derivative-constant.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.derivative-cos.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.derivative-cot.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.derivative-csc.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.derivative-e-formula.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.derivative-exponential.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.derivative-general-exponential.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.derivative-ln-abs.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.derivative-ln.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.derivative-log-base-a.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.derivative-sec.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.derivative-sin.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.derivative-tan.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.difference-rule.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.differentiable-implies-continuous.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.direct-substitution-property.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.divergence-test.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.equal-derivatives-differ-by-constant.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.extreme-value-theorem.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "assumed",
+      "type": "proof"
+    },
+    {
+      "id": "proof.fermat-theorem.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.first-derivative-test.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.ftc-part1.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.ftc-part2.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.general-antiderivative.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.geometric-series.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "algebraic",
+      "type": "proof"
+    },
+    {
+      "id": "proof.horizontal-line-test.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.increasing-decreasing-test.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.integrability-of-continuous-functions.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "assumed",
+      "type": "proof"
+    },
+    {
+      "id": "proof.integral-comparison.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.integral-properties.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.integral-test.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.integrals-symmetric-functions.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.integrating-factor-method.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.integration-by-parts-definite.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.integration-by-parts.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.intermediate-value-theorem.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "assumed",
+      "type": "proof"
+    },
+    {
+      "id": "proof.inverse-graph-reflection.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.laws-of-exponents.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "assumed",
+      "type": "proof"
+    },
+    {
+      "id": "proof.laws-of-logarithms.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.lhopitals-rule.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.limit-comparison-test.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.limit-cosx-minus-1-over-x.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "algebraic",
+      "type": "proof"
+    },
+    {
+      "id": "proof.limit-exists-iff-one-sided-limits.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.limit-laws.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "epsilon-delta",
+      "type": "proof"
+    },
+    {
+      "id": "proof.limit-one-over-x-at-infinity.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.limit-power-law.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.limit-root-law.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "epsilon-delta",
+      "type": "proof"
+    },
+    {
+      "id": "proof.limit-sinx-over-x.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "geometric",
+      "type": "proof"
+    },
+    {
+      "id": "proof.local-extremum-at-critical.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.mean-value-theorem-integrals.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.mean-value-theorem.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.monotonic-sequence-theorem.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "assumed",
+      "type": "proof"
+    },
+    {
+      "id": "proof.net-change-theorem.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.power-rule-combined-chain.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.power-rule.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.power-series-convergence.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.power-series-differentiation-integration.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "assumed",
+      "type": "proof"
+    },
+    {
+      "id": "proof.product-rule.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.quotient-rule.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.ratio-test.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.rolles-theorem.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.root-test.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.second-derivative-test.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.squeeze-theorem.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "epsilon-delta",
+      "type": "proof"
+    },
+    {
+      "id": "proof.substitution-rule-definite.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.substitution-rule.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.sum-rule.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.taylor-convergence.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.vertical-line-test.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.zero-derivative-constant.stewart",
+      "kind": "proof",
+      "status": "draft",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proposition.cancellation-equations",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Cancellation equations",
+      "title_es": "Ecuaciones de cancelación",
+      "type": "proposition"
+    },
+    {
+      "id": "proposition.change-of-base-formula",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Change of base formula",
+      "title_es": "Fórmula de cambio de base",
+      "type": "proposition"
+    },
+    {
+      "id": "proposition.concavity-test",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Concavity Test",
+      "title_es": "Prueba de concavidad",
+      "type": "proposition"
+    },
+    {
+      "id": "proposition.direct-substitution-property",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Direct substitution property",
+      "title_es": "Propiedad de sustitución directa",
+      "type": "proposition"
+    },
+    {
+      "id": "proposition.first-derivative-test",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "The First Derivative Test",
+      "title_es": "Prueba de la primera derivada",
+      "type": "proposition"
+    },
+    {
+      "id": "proposition.horizontal-line-test",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Horizontal line test",
+      "title_es": "Prueba de la línea horizontal",
+      "type": "proposition"
+    },
+    {
+      "id": "proposition.increasing-decreasing-test",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Increasing/Decreasing Test",
+      "title_es": "Prueba creciente/decreciente",
+      "type": "proposition"
+    },
+    {
+      "id": "proposition.integral-comparison",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Comparison properties of the integral",
+      "title_es": "Propiedades de comparación de la integral",
+      "type": "proposition"
+    },
+    {
+      "id": "proposition.integral-properties",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Properties of the definite integral",
+      "title_es": "Propiedades de la integral definida",
+      "type": "proposition"
+    },
+    {
+      "id": "proposition.integrals-symmetric-functions",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Integrals of symmetric functions",
+      "title_es": "Integrales de funciones simétricas",
+      "type": "proposition"
+    },
+    {
+      "id": "proposition.integrating-factor-method",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Integrating factor method",
+      "title_es": "Método del factor integrante",
+      "type": "proposition"
+    },
+    {
+      "id": "proposition.inverse-graph-reflection",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Graph of inverse as reflection",
+      "title_es": "Gráfica de la inversa como reflexión",
+      "type": "proposition"
+    },
+    {
+      "id": "proposition.laws-of-exponents",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Laws of exponents",
+      "title_es": "Leyes de los exponentes",
+      "type": "proposition"
+    },
+    {
+      "id": "proposition.laws-of-logarithms",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Laws of logarithms",
+      "title_es": "Leyes de los logaritmos",
+      "type": "proposition"
+    },
+    {
+      "id": "proposition.limit-exists-iff-one-sided-limits",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Limit exists if and only if one-sided limits agree",
+      "title_es": "El límite existe si y sólo si los límites laterales coinciden",
+      "type": "proposition"
+    },
+    {
+      "id": "proposition.local-extremum-at-critical",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Local extrema occur at critical numbers",
+      "title_es": "Los extremos locales ocurren en números críticos",
+      "type": "proposition"
+    },
+    {
+      "id": "proposition.second-derivative-test",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "The Second Derivative Test",
+      "title_es": "Prueba de la segunda derivada",
+      "type": "proposition"
+    },
+    {
+      "id": "proposition.vertical-line-test",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Vertical line test",
+      "title_es": "Prueba de la línea vertical",
+      "type": "proposition"
+    },
+    {
+      "id": "theorem.absolute-convergence-implies-convergence",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Absolute convergence implies convergence",
+      "title_es": "La convergencia absoluta implica convergencia",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.alternating-series-test",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Alternating Series Test (Leibniz)",
+      "title_es": "Prueba de series alternantes (Leibniz)",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.chain-rule",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "The Chain Rule",
+      "title_es": "Regla de la cadena",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.comparison-test-series",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "The Comparison Test for Series",
+      "title_es": "Prueba de comparación para series",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.comparison-theorem-integrals",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Comparison Theorem for Improper Integrals",
+      "title_es": "Teorema de comparación para integrales impropias",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.constant-multiple-rule",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "The Constant Multiple Rule",
+      "title_es": "Regla del múltiplo constante",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.continuity-of-combinations",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Continuity of algebraic combinations",
+      "title_es": "Continuidad de combinaciones algebraicas",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.continuity-of-composition",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Continuity of composite functions",
+      "title_es": "Continuidad de funciones compuestas",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.derivative-arccos",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Derivative of arccosine",
+      "title_es": "Derivada del arcocoseno",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.derivative-arcsin",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Derivative of arcsine",
+      "title_es": "Derivada del arcoseno",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.derivative-arctan",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Derivative of arctangent",
+      "title_es": "Derivada del arcotangente",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.derivative-constant",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Derivative of a constant function",
+      "title_es": "Derivada de una función constante",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.derivative-cos",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Derivative of cosine",
+      "title_es": "Derivada del coseno",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.derivative-cot",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Derivative of cotangent",
+      "title_es": "Derivada de la cotangente",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.derivative-csc",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Derivative of cosecant",
+      "title_es": "Derivada de la cosecante",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.derivative-e-formula",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "The number e as a limit",
+      "title_es": "El número e como límite",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.derivative-exponential",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Derivative of the exponential function",
+      "title_es": "Derivada de la función exponencial",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.derivative-general-exponential",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Derivative of general exponential function",
+      "title_es": "Derivada de la función exponencial general",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.derivative-ln",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Derivative of the natural logarithm",
+      "title_es": "Derivada del logaritmo natural",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.derivative-ln-abs",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Derivative of ln|x|",
+      "title_es": "Derivada de ln|x|",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.derivative-log-base-a",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Derivative of logarithm base a",
+      "title_es": "Derivada del logaritmo en base a",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.derivative-sec",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Derivative of secant",
+      "title_es": "Derivada de la secante",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.derivative-sin",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Derivative of sine",
+      "title_es": "Derivada del seno",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.derivative-tan",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Derivative of tangent",
+      "title_es": "Derivada de la tangente",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.differentiable-implies-continuous",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Differentiability implies continuity",
+      "title_es": "Diferenciabilidad implica continuidad",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.divergence-test",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Test for Divergence",
+      "title_es": "Prueba de divergencia",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.extreme-value-theorem",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "The Extreme Value Theorem",
+      "title_es": "Teorema del valor extremo",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.fermat-theorem",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Fermat's Theorem",
+      "title_es": "Teorema de Fermat",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.ftc-part1",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "The Fundamental Theorem of Calculus, Part 1",
+      "title_es": "Teorema fundamental del cálculo, parte 1",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.ftc-part2",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "The Fundamental Theorem of Calculus, Part 2",
+      "title_es": "Teorema fundamental del cálculo, parte 2",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.general-antiderivative",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "General antiderivative",
+      "title_es": "Antiderivada general",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.geometric-series",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Geometric series",
+      "title_es": "Serie geométrica",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.integrability-of-continuous-functions",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Integrability of continuous functions",
+      "title_es": "Integrabilidad de funciones continuas",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.integral-test",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "The Integral Test",
+      "title_es": "Prueba de la integral",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.integration-by-parts",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Integration by Parts",
+      "title_es": "Integración por partes",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.integration-by-parts-definite",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Integration by Parts for Definite Integrals",
+      "title_es": "Integración por partes para integrales definidas",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.intermediate-value-theorem",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Intermediate Value Theorem",
+      "title_es": "Teorema del valor intermedio",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.lhopitals-rule",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "L'Hopital's Rule",
+      "title_es": "Regla de L'Hopital",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.limit-comparison-test",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "The Limit Comparison Test",
+      "title_es": "Prueba de comparación en el límite",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.limit-laws",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Limit laws",
+      "title_es": "Leyes de los límites",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.limit-one-over-x-at-infinity",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Limit of 1/x as x approaches infinity",
+      "title_es": "Límite de 1/x cuando x tiende a infinito",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.limit-power-law",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Power law for limits",
+      "title_es": "Ley de la potencia para límites",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.limit-root-law",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Root law for limits",
+      "title_es": "Ley de la raíz para límites",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.limit-sinx-over-x",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Limit of sin(x)/x as x approaches 0",
+      "title_es": "Límite de sen(x)/x cuando x tiende a 0",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.mean-value-theorem",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "The Mean Value Theorem",
+      "title_es": "Teorema del valor medio",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.mean-value-theorem-integrals",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Mean Value Theorem for Integrals",
+      "title_es": "Teorema del valor medio para integrales",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.monotonic-sequence-theorem",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Monotonic Sequence Theorem",
+      "title_es": "Teorema de la sucesión monótona",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.net-change-theorem",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "The Net Change Theorem",
+      "title_es": "Teorema del cambio neto",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.power-rule",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "The Power Rule",
+      "title_es": "Regla de la potencia",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.power-series-convergence",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Convergence of power series",
+      "title_es": "Convergencia de series de potencias",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.power-series-differentiation-integration",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Differentiation and integration of power series",
+      "title_es": "Derivación e integración de series de potencias",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.product-rule",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "The Product Rule",
+      "title_es": "Regla del producto",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.quotient-rule",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "The Quotient Rule",
+      "title_es": "Regla del cociente",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.ratio-test",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "The Ratio Test",
+      "title_es": "Prueba de la razón",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.rolles-theorem",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Rolle's Theorem",
+      "title_es": "Teorema de Rolle",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.root-test",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "The Root Test",
+      "title_es": "Prueba de la raíz",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.squeeze-theorem",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Squeeze theorem",
+      "title_es": "Teorema del encaje (sandwich)",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.substitution-rule",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "The Substitution Rule",
+      "title_es": "Regla de sustitución",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.substitution-rule-definite",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "The Substitution Rule for Definite Integrals",
+      "title_es": "Regla de sustitución para integrales definidas",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.sum-rule",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "The Sum Rule",
+      "title_es": "Regla de la suma",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.taylor-convergence",
+      "kind": "statement",
+      "status": "draft",
+      "title_en": "Taylor's theorem (remainder convergence)",
+      "title_es": "Teorema de Taylor (convergencia del residuo)",
+      "type": "theorem"
+    }
+  ]
+}

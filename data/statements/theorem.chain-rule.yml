@@ -1,0 +1,41 @@
+id: theorem.chain-rule
+type: theorem
+status: draft
+
+title:
+  en: The Chain Rule
+  es: Regla de la cadena
+
+statement:
+  natural:
+    es: >
+      Si g es diferenciable en x y f es diferenciable en g(x), entonces
+      la función compuesta F = f ∘ g definida por F(x) = f(g(x)) es
+      diferenciable en x y F' se obtiene mediante F'(x) = f'(g(x)) · g'(x).
+      En notación de Leibniz, si y = f(u) y u = g(x) son funciones
+      diferenciables, entonces dy/dx = (dy/du)(du/dx).
+    en: >
+      If g is differentiable at x and f is differentiable at g(x), then
+      the composite function F = f ∘ g defined by F(x) = f(g(x)) is
+      differentiable at x and F' is given by F'(x) = f'(g(x)) · g'(x).
+      In Leibniz notation, if y = f(u) and u = g(x) are differentiable
+      functions, then dy/dx = (dy/du)(du/dx).
+  latex: |
+    \frac{dy}{dx} = \frac{dy}{du} \cdot \frac{du}{dx}
+    \quad\text{or equivalently}\quad
+    [f(g(x))]' = f'(g(x)) \cdot g'(x)
+
+proved_by:
+  - proof.chain-rule.stewart
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.4"
+
+confidence: high
+notes: >
+  One of the most important rules in calculus. Stewart proves it
+  using an increment formulation that avoids dividing by Δu = 0.

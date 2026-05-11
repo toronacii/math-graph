@@ -1,0 +1,29 @@
+id: definition.local-minimum
+type: definition
+status: draft
+
+title:
+  en: Local minimum
+  es: Mínimo local
+
+statement:
+  natural:
+    es: >
+      Un número f(c) es un valor mínimo local de f si f(c) ≤ f(x)
+      cuando x está cerca de c (es decir, f(c) ≤ f(x) para toda x
+      en algún intervalo abierto que contenga a c).
+    en: >
+      A number f(c) is a local minimum value of f if f(c) ≤ f(x)
+      when x is near c (that is, f(c) ≤ f(x) for all x in some
+      open interval containing c).
+  latex: |
+    \exists\,\delta > 0 : f(c) \leq f(x)\;\;\forall\, x \in (c-\delta, c+\delta)
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "4"
+    section: "4.1"
+
+confidence: high

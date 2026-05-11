@@ -1,0 +1,32 @@
+id: definition.algebraic-function
+type: definition
+status: draft
+
+title:
+  en: Algebraic function
+  es: Función algebraica
+
+statement:
+  natural:
+    es: >
+      Una función es algebraica si puede construirse a partir de polinomios
+      mediante operaciones algebraicas (suma, resta, multiplicación, división
+      y extracción de raíces). Toda función racional es automáticamente
+      algebraica.
+    en: >
+      A function is algebraic if it can be constructed from polynomials
+      using algebraic operations (addition, subtraction, multiplication,
+      division, and root extraction). Every rational function is
+      automatically algebraic.
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.2"
+
+confidence: medium
+notes: >
+  Stewart defines algebraic functions in section 1.2 as those obtainable
+  from polynomials using algebraic operations.

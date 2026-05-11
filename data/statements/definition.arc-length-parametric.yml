@@ -1,0 +1,36 @@
+id: definition.arc-length-parametric
+type: definition
+status: draft
+
+title:
+  en: Arc length of a parametric curve
+  es: Longitud de arco de una curva paramétrica
+
+statement:
+  natural:
+    es: >
+      Si una curva C está descrita por las ecuaciones paramétricas
+      x = f(t), y = g(t), α ≤ t ≤ β, donde f' y g' son continuas
+      y C se recorre una sola vez cuando t va de α a β, entonces la
+      longitud de C es L = ∫_α^β √([f'(t)]² + [g'(t)]²) dt.
+    en: >
+      If a curve C is described by the parametric equations
+      x = f(t), y = g(t), α ≤ t ≤ β, where f' and g' are continuous
+      and C is traversed exactly once as t increases from α to β,
+      then the length of C is L = ∫_α^β √([f'(t)]² + [g'(t)]²) dt.
+  latex: |
+    L = \int_\alpha^\beta \sqrt{\left(\frac{dx}{dt}\right)^2
+    + \left(\frac{dy}{dt}\right)^2}\,dt
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "10"
+    section: "10.2"
+
+confidence: high
+notes: >
+  Generalizes the arc length formula from section 8.1. When the
+  curve is y = F(x), parametrize as x = t, y = F(t) to recover
+  the earlier formula.

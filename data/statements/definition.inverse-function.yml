@@ -1,0 +1,32 @@
+id: definition.inverse-function
+type: definition
+status: draft
+
+title:
+  en: Inverse function
+  es: Función inversa
+
+statement:
+  natural:
+    es: >
+      Sea f una función inyectiva con dominio A y rango B. Entonces su
+      función inversa f⁻¹ tiene dominio B y rango A y se define por
+      f⁻¹(y) = x si y sólo si f(x) = y, para toda y en B.
+    en: >
+      Let f be a one-to-one function with domain A and range B. Then its
+      inverse function f⁻¹ has domain B and range A and is defined by
+      f⁻¹(y) = x if and only if f(x) = y, for every y in B.
+  latex: |
+    f^{-1}(y) = x \iff f(x) = y
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.5"
+
+confidence: medium
+notes: >
+  Stewart defines inverse functions in section 1.5, emphasizing
+  that only one-to-one functions have inverses.

@@ -1,0 +1,24 @@
+id: proof.direct-substitution-property.stewart
+type: proof
+status: draft
+
+proves: proposition.direct-substitution-property
+
+uses:
+  - theorem.limit-laws
+  - definition.polynomial
+  - definition.rational-function
+
+style: direct
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.3"
+
+confidence: medium
+notes: >
+  For polynomials: apply the sum, constant multiple, and power laws
+  to each term. For rational functions: apply the quotient law with
+  the polynomial result.

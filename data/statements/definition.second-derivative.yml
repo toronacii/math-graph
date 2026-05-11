@@ -1,0 +1,33 @@
+id: definition.second-derivative
+type: definition
+status: draft
+
+title:
+  en: Second derivative
+  es: Segunda derivada
+
+statement:
+  natural:
+    es: >
+      Si f' es en sí misma una función diferenciable, entonces la
+      segunda derivada de f es la función f'' = (f')'. Se denota también
+      como d²y/dx².
+    en: >
+      If f' is itself a differentiable function, then the second
+      derivative of f is the function f'' = (f')'. It is also denoted
+      d²y/dx².
+  latex: |
+    f''(x) = \frac{d^2 y}{dx^2} = \frac{d}{dx}\!\left(\frac{dy}{dx}\right)
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.8"
+
+confidence: medium
+notes: >
+  Stewart introduces higher-order derivatives (f'', f''', f⁽⁴⁾, etc.)
+  in section 2.8 and interprets the second derivative as acceleration
+  in the context of motion.

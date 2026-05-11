@@ -1,0 +1,42 @@
+id: theorem.ratio-test
+type: theorem
+status: draft
+
+title:
+  en: The Ratio Test
+  es: Prueba de la razón
+
+statement:
+  natural:
+    es: >
+      (i) Si lim(n→∞) |aₙ₊₁/aₙ| = L < 1, entonces la serie ∑ aₙ
+      es absolutamente convergente.
+      (ii) Si lim(n→∞) |aₙ₊₁/aₙ| = L > 1 o lim |aₙ₊₁/aₙ| = ∞,
+      la serie diverge.
+      (iii) Si L = 1, la prueba no es concluyente.
+    en: >
+      (i) If lim(n→∞) |aₙ₊₁/aₙ| = L < 1, then the series ∑ aₙ
+      is absolutely convergent.
+      (ii) If lim(n→∞) |aₙ₊₁/aₙ| = L > 1 or lim |aₙ₊₁/aₙ| = ∞,
+      the series diverges.
+      (iii) If L = 1, the test is inconclusive.
+  latex: |
+    L = \lim_{n\to\infty}\left|\frac{a_{n+1}}{a_n}\right|
+    \implies
+    \begin{cases}
+    L < 1 \Rightarrow \text{abs. convergent}\\
+    L > 1 \Rightarrow \text{divergent}\\
+    L = 1 \Rightarrow \text{inconclusive}
+    \end{cases}
+
+proved_by:
+  - proof.ratio-test.stewart
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "11"
+    section: "11.6"
+
+confidence: high

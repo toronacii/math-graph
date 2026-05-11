@@ -1,0 +1,33 @@
+id: definition.tangent-line
+type: definition
+status: draft
+
+title:
+  en: Tangent line
+  es: Recta tangente
+
+statement:
+  natural:
+    es: >
+      La recta tangente a la curva y = f(x) en el punto P(a, f(a)) es
+      la recta que pasa por P con pendiente m = lim(x→a) (f(x) - f(a)) / (x - a),
+      siempre que este límite exista.
+    en: >
+      The tangent line to the curve y = f(x) at the point P(a, f(a)) is
+      the line through P with slope m = lim(x→a) (f(x) - f(a)) / (x - a),
+      provided this limit exists.
+  latex: |
+    m = \lim_{x \to a} \frac{f(x) - f(a)}{x - a}
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.1"
+
+confidence: medium
+notes: >
+  Stewart defines the tangent line informally in section 2.1 as the
+  limiting position of secant lines. The formal definition depends on
+  the concept of limit introduced in section 2.2.

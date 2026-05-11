@@ -1,0 +1,35 @@
+id: definition.infinite-limit
+type: definition
+status: draft
+
+title:
+  en: Infinite limit
+  es: Límite infinito
+
+statement:
+  natural:
+    es: >
+      Sea f una función definida en ambos lados de a, excepto
+      posiblemente en a misma. Se dice que lim(x→a) f(x) = ∞ si es
+      posible hacer que los valores de f(x) sean arbitrariamente grandes
+      con sólo tomar x suficientemente cerca de a, pero no igual a a.
+    en: >
+      Let f be a function defined on both sides of a, except possibly
+      at a itself. We say lim(x→a) f(x) = ∞ if we can make the values
+      of f(x) arbitrarily large by taking x sufficiently close to a,
+      but not equal to a.
+  latex: |
+    \lim_{x \to a} f(x) = \infty
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.2"
+
+confidence: medium
+notes: >
+  Stewart also defines lim f(x) = -∞ analogously. An infinite limit
+  does not mean the limit exists in the usual sense; it describes
+  a specific type of divergent behavior.

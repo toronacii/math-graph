@@ -1,0 +1,24 @@
+id: proof.derivative-cot.stewart
+type: proof
+status: draft
+
+proves: theorem.derivative-cot
+
+uses:
+  - theorem.derivative-sin
+  - theorem.derivative-cos
+  - theorem.quotient-rule
+
+style: direct
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.3"
+
+confidence: high
+notes: >
+  cot x = cos x / sin x. By the quotient rule:
+  d/dx(cot x) = [(-sin x) sin x - cos x · cos x] / sin²x
+  = -(sin²x + cos²x) / sin²x = -1/sin²x = -csc²x.

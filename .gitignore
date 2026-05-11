@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# uv
+.uv/
+
+# OS
+.DS_Store
+
+# Editor
+.idea/
+.vscode/
+
+# Generated artifacts (kept locally only; CI rebuilds them)
+generated/graph/*.json
+generated/exports/*.graphml
+!generated/graph/.gitkeep
+!generated/exports/.gitkeep
+
+# Source material (copyrighted books). Keep local only, never commit.
+sources/**/*.pdf
+sources/**/*.epub
+sources/**/*.djvu
+sources/**/*.mobi

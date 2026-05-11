@@ -1,0 +1,47 @@
+id: theorem.comparison-theorem-integrals
+type: theorem
+status: draft
+
+title:
+  en: Comparison Theorem for Improper Integrals
+  es: Teorema de comparación para integrales impropias
+
+statement:
+  natural:
+    es: >
+      Suponga que f y g son funciones continuas con f(x) ≥ g(x) ≥ 0
+      para x ≥ a.
+      (a) Si ∫_a^∞ f(x) dx es convergente, entonces ∫_a^∞ g(x) dx
+      también es convergente.
+      (b) Si ∫_a^∞ g(x) dx es divergente, entonces ∫_a^∞ f(x) dx
+      también es divergente.
+    en: >
+      Suppose f and g are continuous functions with f(x) ≥ g(x) ≥ 0
+      for x ≥ a.
+      (a) If ∫_a^∞ f(x) dx is convergent, then ∫_a^∞ g(x) dx is
+      also convergent.
+      (b) If ∫_a^∞ g(x) dx is divergent, then ∫_a^∞ f(x) dx is
+      also divergent.
+  latex: |
+    0 \le g(x) \le f(x) \implies
+    \begin{cases}
+    \int_a^\infty f\,dx \text{ conv.} \Rightarrow \int_a^\infty g\,dx \text{ conv.} \\
+    \int_a^\infty g\,dx \text{ div.} \Rightarrow \int_a^\infty f\,dx \text{ div.}
+    \end{cases}
+
+proved_by:
+  - proof.comparison-theorem-integrals.stewart
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "7"
+    section: "7.8"
+
+confidence: high
+notes: >
+  The comparison theorem is analogous to the comparison test for
+  series (Chapter 11). Stewart states it without detailed proof,
+  relying on the monotone convergence property of bounded increasing
+  sequences.

@@ -1,0 +1,27 @@
+id: definition.domain
+type: definition
+status: draft
+
+title:
+  en: Domain of a function
+  es: Dominio de una función
+
+statement:
+  natural:
+    es: >
+      El dominio de una función f es el conjunto D de todos los valores
+      admisibles de la variable independiente x para los que f(x) está definido.
+    en: >
+      The domain of a function f is the set D of all admissible values of the
+      independent variable x for which f(x) is defined.
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.1"
+
+confidence: medium
+notes: >
+  Introduced together with the definition of function in Stewart 1.1.

@@ -1,0 +1,27 @@
+id: proof.mean-value-theorem.stewart
+type: proof
+status: draft
+
+proves: theorem.mean-value-theorem
+
+uses:
+  - theorem.rolles-theorem
+  - definition.continuity-on-interval
+  - definition.differentiable
+  - theorem.sum-rule
+  - theorem.constant-multiple-rule
+
+style: direct
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "4"
+    section: "4.2"
+
+confidence: high
+notes: >
+  Define h(x) = f(x) - [f(a) + ((f(b)-f(a))/(b-a))(x - a)].
+  Then h is continuous on [a,b], differentiable on (a,b), and
+  h(a) = h(b) = 0. By Rolle's theorem, there exists c in (a,b)
+  with h'(c) = 0, which gives f'(c) = (f(b)-f(a))/(b-a).

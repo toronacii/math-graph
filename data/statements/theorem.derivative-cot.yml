@@ -1,0 +1,31 @@
+id: theorem.derivative-cot
+type: theorem
+status: draft
+
+title:
+  en: Derivative of cotangent
+  es: Derivada de la cotangente
+
+statement:
+  natural:
+    es: >
+      d/dx(cot x) = -csc²x.
+    en: >
+      d/dx(cot x) = -csc²x.
+  latex: |
+    \frac{d}{dx}(\cot x) = -\csc^2 x
+
+proved_by:
+  - proof.derivative-cot.stewart
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.3"
+
+confidence: high
+notes: >
+  cot x = cos x / sin x. Apply the quotient rule using
+  d/dx(sin x) = cos x and d/dx(cos x) = -sin x.

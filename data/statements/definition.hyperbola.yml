@@ -1,0 +1,33 @@
+id: definition.hyperbola
+type: definition
+status: draft
+
+title:
+  en: Hyperbola
+  es: Hipérbola
+
+statement:
+  natural:
+    es: >
+      Una hipérbola es el conjunto de puntos en un plano cuya
+      diferencia de distancias a dos puntos fijos F₁ y F₂ (los focos)
+      es una constante |2a|. La ecuación estándar con centro en el
+      origen y focos en (±c, 0) es x²/a² - y²/b² = 1, donde
+      c² = a² + b².
+    en: >
+      A hyperbola is the set of points in a plane the difference of
+      whose distances from two fixed points F₁ and F₂ (the foci) is
+      a constant |2a|. The standard equation with center at the origin
+      and foci at (±c, 0) is x²/a² - y²/b² = 1, where c² = a² + b².
+  latex: |
+    \frac{x^2}{a^2} - \frac{y^2}{b^2} = 1
+    \qquad (c^2 = a^2 + b^2)
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "10"
+    section: "10.5"
+
+confidence: high

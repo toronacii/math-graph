@@ -1,0 +1,31 @@
+id: theorem.derivative-arctan
+type: theorem
+status: draft
+
+title:
+  en: Derivative of arctangent
+  es: Derivada del arcotangente
+
+statement:
+  natural:
+    es: >
+      d/dx(tan⁻¹ x) = 1/(1 + x²).
+    en: >
+      d/dx(tan⁻¹ x) = 1/(1 + x²).
+  latex: |
+    \frac{d}{dx}\left(\tan^{-1} x\right) = \frac{1}{1 + x^2}
+
+proved_by:
+  - proof.derivative-arctan.stewart
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.5"
+
+confidence: high
+notes: >
+  If y = tan⁻¹ x then tan y = x, so sec²y · dy/dx = 1,
+  giving dy/dx = 1/sec²y = 1/(1 + tan²y) = 1/(1 + x²).

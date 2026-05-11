@@ -1,0 +1,33 @@
+id: theorem.geometric-series
+type: theorem
+status: draft
+
+title:
+  en: Geometric series
+  es: Serie geométrica
+
+statement:
+  natural:
+    es: >
+      La serie geométrica ∑_{n=1}^∞ arⁿ⁻¹ = a + ar + ar² + ...
+      converge si |r| < 1 y su suma es a/(1-r).
+      Si |r| ≥ 1, la serie diverge.
+    en: >
+      The geometric series ∑_{n=1}^∞ arⁿ⁻¹ = a + ar + ar² + ...
+      converges if |r| < 1 and its sum is a/(1-r).
+      If |r| ≥ 1, the series diverges.
+  latex: |
+    \sum_{n=1}^{\infty} ar^{n-1} = \frac{a}{1 - r}
+    \quad\text{if } |r| < 1
+
+proved_by:
+  - proof.geometric-series.stewart
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "11"
+    section: "11.2"
+
+confidence: high

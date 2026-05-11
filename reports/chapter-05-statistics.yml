@@ -1,0 +1,73 @@
+chapter: "5"
+chapter_title: Integrals
+source:
+  work: "Calculo de una variable — Trascendentes tempranas"
+  author: James Stewart
+  edition: "7"
+  language: es
+  sections_processed:
+    - "5.1"
+    - "5.2"
+    - "5.3"
+    - "5.4"
+    - "5.5"
+
+extraction_date: "2026-05-10"
+validation_status: pass
+
+cumulative_statistics:
+  total_nodes: 205
+  total_edges: 226
+
+  nodes_by_type:
+    definition: 73
+    proposition: 17
+    theorem: 44
+    corollary: 5
+    lemma: 0
+    axiom: 0
+    conjecture: 0
+    proof: 66
+
+  nodes_by_kind:
+    statement: 139
+    proof: 66
+
+  edges_by_relation:
+    uses: 160
+    proves: 66
+
+  proofs_by_style:
+    direct: 56
+    epsilon-delta: 4
+    assumed: 4
+    algebraic: 1
+    geometric: 1
+
+  proofs_by_confidence:
+    high: 43
+    medium: 18
+    low: 5
+
+  root_nodes: 73
+  isolated_nodes: 37
+  connected_components: 39
+  connected_component_sizes:
+    - 165
+    - 3
+    - 1
+    - 1
+    - 1
+
+  graph_density: 0.0054
+  average_degree: 2.20
+
+chapter_delta:
+  new_nodes: 22
+  new_edges: 32
+  new_definitions: 4
+  new_propositions: 3
+  new_theorems: 6
+  new_corollaries: 0
+  new_proofs: 9
+  reclassifications: 0

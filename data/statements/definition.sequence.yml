@@ -1,0 +1,37 @@
+id: definition.sequence
+type: definition
+status: draft
+
+title:
+  en: Sequence
+  es: Sucesión
+
+statement:
+  natural:
+    es: >
+      Una sucesión es una lista de números escritos en un orden
+      definido: a₁, a₂, a₃, ..., aₙ, ... . Una sucesión {aₙ} tiene
+      límite L si para todo ε > 0 existe un entero N tal que
+      |aₙ - L| < ε siempre que n > N. Se escribe lim(n→∞) aₙ = L
+      y se dice que la sucesión converge. Si no existe tal límite,
+      la sucesión diverge.
+    en: >
+      A sequence is a list of numbers written in a definite order:
+      a₁, a₂, a₃, ..., aₙ, ... . A sequence {aₙ} has limit L if
+      for every ε > 0 there is an integer N such that |aₙ - L| < ε
+      whenever n > N. We write lim(n→∞) aₙ = L and say the sequence
+      converges. If no such limit exists, the sequence diverges.
+  latex: |
+    \lim_{n \to \infty} a_n = L
+    \iff
+    \forall\,\varepsilon > 0,\;\exists\,N:\;
+    n > N \Rightarrow |a_n - L| < \varepsilon
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "11"
+    section: "11.1"
+
+confidence: high

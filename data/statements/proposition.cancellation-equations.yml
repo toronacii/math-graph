@@ -1,0 +1,35 @@
+id: proposition.cancellation-equations
+type: proposition
+status: draft
+
+title:
+  en: Cancellation equations
+  es: Ecuaciones de cancelación
+
+statement:
+  natural:
+    es: >
+      Si f es una función inyectiva con inversa f⁻¹, entonces
+      f⁻¹(f(x)) = x para todo x en el dominio de f, y
+      f(f⁻¹(x)) = x para todo x en el dominio de f⁻¹.
+    en: >
+      If f is a one-to-one function with inverse f⁻¹, then
+      f⁻¹(f(x)) = x for every x in the domain of f, and
+      f(f⁻¹(x)) = x for every x in the domain of f⁻¹.
+  latex: |
+    f^{-1}(f(x)) = x, \quad f(f^{-1}(x)) = x
+
+proved_by:
+  - proof.cancellation-equations.stewart
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.5"
+
+confidence: medium
+notes: >
+  Stewart presents the cancellation equations as direct consequences
+  of the definition of inverse function in section 1.5.

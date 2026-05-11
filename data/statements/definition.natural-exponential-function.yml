@@ -1,0 +1,34 @@
+id: definition.natural-exponential-function
+type: definition
+status: draft
+
+title:
+  en: Natural exponential function
+  es: Función exponencial natural
+
+statement:
+  natural:
+    es: >
+      La función exponencial natural es la función exponencial f(x) = eˣ,
+      donde e es el número de Euler, definido como el número tal que la
+      recta tangente a y = eˣ en el punto (0, 1) tiene pendiente
+      exactamente 1. El valor de e es aproximadamente 2.71828.
+    en: >
+      The natural exponential function is the exponential function
+      f(x) = eˣ, where e is Euler's number, defined as the number such
+      that the tangent line to y = eˣ at the point (0, 1) has slope
+      exactly 1. The value of e is approximately 2.71828.
+  latex: |
+    f(x) = e^x, \quad e \approx 2.71828
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.4"
+
+confidence: medium
+notes: >
+  Stewart introduces e in section 1.4 using the tangent line slope
+  characterization. A rigorous definition via limits appears later.

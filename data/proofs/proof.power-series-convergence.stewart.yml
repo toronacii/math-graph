@@ -1,0 +1,26 @@
+id: proof.power-series-convergence.stewart
+type: proof
+status: draft
+
+proves: theorem.power-series-convergence
+
+uses:
+  - definition.power-series
+  - theorem.comparison-test-series
+  - theorem.geometric-series
+
+style: direct
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "11"
+    section: "11.8"
+
+confidence: medium
+notes: >
+  Stewart sketches the proof: if the series converges at x = d ≠ a,
+  then cₙdⁿ is bounded, say |cₙdⁿ| ≤ M. For |x| < |d|, we have
+  |cₙxⁿ| ≤ M|x/d|ⁿ, a convergent geometric series. The radius of
+  convergence is then R = sup{|x-a| : series converges}. Full details
+  of the supremum argument are omitted.

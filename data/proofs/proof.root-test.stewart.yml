@@ -1,0 +1,24 @@
+id: proof.root-test.stewart
+type: proof
+status: draft
+
+proves: theorem.root-test
+
+uses:
+  - definition.absolute-convergence
+  - theorem.geometric-series
+  - theorem.comparison-test-series
+
+style: direct
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "11"
+    section: "11.6"
+
+confidence: high
+notes: >
+  Part (i): If L < 1, pick r with L < r < 1. For large n,
+  ⁿ√|aₙ| < r, so |aₙ| < rⁿ. By comparison with the convergent
+  geometric series ∑ rⁿ, the series ∑ |aₙ| converges.

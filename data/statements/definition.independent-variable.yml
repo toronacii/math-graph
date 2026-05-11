@@ -1,0 +1,30 @@
+id: definition.independent-variable
+type: definition
+status: draft
+
+title:
+  en: Independent variable
+  es: Variable independiente
+
+statement:
+  natural:
+    es: >
+      La variable independiente de una función f es el símbolo x que
+      representa un elemento arbitrario del dominio. Se dice independiente
+      porque puede tomar libremente cualquier valor del dominio.
+    en: >
+      The independent variable of a function f is the symbol x
+      representing an arbitrary element of the domain. It is called
+      independent because it can freely take any value in the domain.
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.1"
+
+confidence: medium
+notes: >
+  Stewart introduces independent and dependent variables together
+  when defining functions in section 1.1.

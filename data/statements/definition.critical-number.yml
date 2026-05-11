@@ -1,0 +1,28 @@
+id: definition.critical-number
+type: definition
+status: draft
+
+title:
+  en: Critical number
+  es: Número crítico
+
+statement:
+  natural:
+    es: >
+      Un número crítico de una función f es un número c en el dominio
+      de f tal que f'(c) = 0 o f'(c) no existe.
+    en: >
+      A critical number of a function f is a number c in the domain
+      of f such that either f'(c) = 0 or f'(c) does not exist.
+  latex: |
+    c \text{ is critical} \iff c \in \operatorname{dom}(f)
+    \;\wedge\; \bigl(f'(c) = 0 \;\vee\; f'(c) \text{ does not exist}\bigr)
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "4"
+    section: "4.1"
+
+confidence: high

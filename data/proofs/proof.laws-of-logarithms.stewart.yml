@@ -1,0 +1,25 @@
+id: proof.laws-of-logarithms.stewart
+type: proof
+status: draft
+
+proves: proposition.laws-of-logarithms
+
+uses:
+  - definition.logarithmic-function
+  - proposition.laws-of-exponents
+
+style: direct
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.5"
+
+confidence: medium
+notes: >
+  Stewart derives each law by applying the corresponding law of
+  exponents through the inverse relationship between logarithm and
+  exponential. For example, if logₐx = u and logₐy = v, then
+  aᵘ = x and aᵛ = y, so xy = aᵘaᵛ = aᵘ⁺ᵛ, hence
+  logₐ(xy) = u + v = logₐx + logₐy.

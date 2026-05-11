@@ -1,0 +1,35 @@
+id: definition.secant-line
+type: definition
+status: draft
+
+title:
+  en: Secant line
+  es: Recta secante
+
+statement:
+  natural:
+    es: >
+      Una recta secante a una curva es una recta que pasa por dos puntos
+      de la curva. Si la curva es la gráfica de y = f(x), la recta secante
+      por los puntos P(a, f(a)) y Q(x, f(x)) tiene pendiente
+      m = (f(x) - f(a)) / (x - a).
+    en: >
+      A secant line to a curve is a line passing through two points on
+      the curve. If the curve is the graph of y = f(x), the secant line
+      through P(a, f(a)) and Q(x, f(x)) has slope
+      m = (f(x) - f(a)) / (x - a).
+  latex: |
+    m_{\text{sec}} = \frac{f(x) - f(a)}{x - a}
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.1"
+
+confidence: medium
+notes: >
+  Stewart introduces the secant line in section 2.1 as the starting
+  point for the tangent problem. The slope of the secant line becomes
+  the derivative when the limit is taken as x -> a.

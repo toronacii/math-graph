@@ -1,0 +1,35 @@
+id: corollary.power-rule-combined-chain
+type: corollary
+status: draft
+
+title:
+  en: The Power Rule combined with the Chain Rule
+  es: Regla de la potencia combinada con la regla de la cadena
+
+statement:
+  natural:
+    es: >
+      Si n es cualquier número real y u = g(x) es diferenciable,
+      entonces d/dx[g(x)]^n = n[g(x)]^{n-1} · g'(x). En notación
+      de Leibniz, d/dx(u^n) = nu^{n-1} du/dx.
+    en: >
+      If n is any real number and u = g(x) is differentiable, then
+      d/dx[g(x)]^n = n[g(x)]^{n-1} · g'(x). In Leibniz notation,
+      d/dx(u^n) = nu^{n-1} du/dx.
+  latex: |
+    \frac{d}{dx}\bigl[g(x)\bigr]^n = n\bigl[g(x)\bigr]^{n-1} \cdot g'(x)
+
+proved_by:
+  - proof.power-rule-combined-chain.stewart
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.4"
+
+confidence: high
+notes: >
+  Direct consequence of combining the power rule with the chain rule.
+  Reclassified from theorem to corollary.

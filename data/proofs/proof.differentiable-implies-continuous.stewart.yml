@@ -1,0 +1,24 @@
+id: proof.differentiable-implies-continuous.stewart
+type: proof
+status: draft
+
+proves: theorem.differentiable-implies-continuous
+
+uses:
+  - definition.derivative-at-point
+  - definition.continuity-at-point
+  - theorem.limit-laws
+
+style: direct
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.8"
+
+confidence: high
+notes: >
+  Write f(x) - f(a) = [(f(x) - f(a))/(x - a)] · (x - a). Taking
+  the limit as x → a: lim[f(x) - f(a)] = f'(a) · 0 = 0 by the
+  product law. Therefore lim f(x) = f(a), so f is continuous at a.

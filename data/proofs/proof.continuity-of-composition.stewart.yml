@@ -1,0 +1,25 @@
+id: proof.continuity-of-composition.stewart
+type: proof
+status: draft
+
+proves: theorem.continuity-of-composition
+
+uses:
+  - definition.continuity-at-point
+  - definition.epsilon-delta-limit
+  - definition.composition-of-functions
+
+style: epsilon-delta
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.5"
+
+confidence: medium
+notes: >
+  Given epsilon > 0, continuity of f at b gives delta_1 such that
+  |y - b| < delta_1 implies |f(y) - f(b)| < epsilon. Since
+  lim g(x) = b, there exists delta such that 0 < |x - a| < delta
+  implies |g(x) - b| < delta_1. Combining gives the result.

@@ -1,0 +1,35 @@
+id: corollary.zero-derivative-constant
+type: corollary
+status: draft
+
+title:
+  en: Zero derivative implies constant function
+  es: Derivada cero implica función constante
+
+statement:
+  natural:
+    es: >
+      Si f'(x) = 0 para toda x en un intervalo (a, b), entonces f
+      es constante en (a, b).
+    en: >
+      If f'(x) = 0 for all x in an interval (a, b), then f is
+      constant on (a, b).
+  latex: |
+    f'(x) = 0 \;\forall\, x \in (a,b)
+    \;\Rightarrow\;
+    f \text{ is constant on } (a,b)
+
+proved_by:
+  - proof.zero-derivative-constant.stewart
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "4"
+    section: "4.2"
+
+confidence: high
+notes: >
+  Direct corollary of the Mean Value Theorem. For any x1, x2 in
+  (a,b), MVT gives f(x2) - f(x1) = f'(c)(x2 - x1) = 0.

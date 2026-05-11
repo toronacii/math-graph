@@ -1,0 +1,13 @@
+work: Cálculo de una variable — Trascendentes tempranas
+author: James Stewart
+edition: "7"
+language: es
+publisher: Cengage Learning
+year: 2012
+local_file: James_Steward_7ma_Edicion_Una_variable.pdf
+notes: >
+  Initial extraction target for the MKG. Chapter 1 — "Funciones y modelos"
+  is being processed first to validate the schema and extraction workflow.
+  The PDF referenced in `local_file` is copyrighted and is NOT committed
+  to the repository (see .gitignore); contributors must obtain it
+  independently.

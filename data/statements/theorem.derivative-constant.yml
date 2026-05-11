@@ -1,0 +1,33 @@
+id: theorem.derivative-constant
+type: theorem
+status: draft
+
+title:
+  en: Derivative of a constant function
+  es: Derivada de una función constante
+
+statement:
+  natural:
+    es: >
+      La derivada de una función constante es 0. Es decir,
+      d/dx(c) = 0.
+    en: >
+      The derivative of a constant function is 0. That is,
+      d/dx(c) = 0.
+  latex: |
+    \frac{d}{dx}(c) = 0
+
+proved_by:
+  - proof.derivative-constant.stewart
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.1"
+
+confidence: high
+notes: >
+  Follows directly from the definition of the derivative: the
+  difference quotient (f(x+h) - f(x))/h = (c - c)/h = 0 for all h.

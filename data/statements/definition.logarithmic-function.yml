@@ -1,0 +1,32 @@
+id: definition.logarithmic-function
+type: definition
+status: draft
+
+title:
+  en: Logarithmic function
+  es: Función logarítmica
+
+statement:
+  natural:
+    es: >
+      La función logarítmica con base a, denotada logₐ, es la función
+      inversa de la función exponencial con base a. Es decir,
+      logₐ(x) = y si y sólo si aʸ = x, donde a > 0 y a ≠ 1.
+    en: >
+      The logarithmic function with base a, denoted logₐ, is the inverse
+      function of the exponential function with base a. That is,
+      logₐ(x) = y if and only if aʸ = x, where a > 0 and a ≠ 1.
+  latex: |
+    \log_a x = y \iff a^y = x
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.5"
+
+confidence: medium
+notes: >
+  Stewart defines the logarithm as the inverse of the exponential
+  function in section 1.5.

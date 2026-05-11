@@ -1,0 +1,32 @@
+id: definition.linear-function
+type: definition
+status: draft
+
+title:
+  en: Linear function
+  es: Función lineal
+
+statement:
+  natural:
+    es: >
+      Una función lineal es una función de la forma f(x) = mx + b,
+      donde m es la pendiente y b es la ordenada al origen. Su gráfica
+      es una línea recta.
+    en: >
+      A linear function is a function of the form f(x) = mx + b,
+      where m is the slope and b is the y-intercept. Its graph is a
+      straight line.
+  latex: |
+    f(x) = mx + b
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.2"
+
+confidence: medium
+notes: >
+  Stewart reviews linear functions as the simplest mathematical model
+  in section 1.2.

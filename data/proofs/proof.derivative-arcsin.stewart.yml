@@ -1,0 +1,24 @@
+id: proof.derivative-arcsin.stewart
+type: proof
+status: draft
+
+proves: theorem.derivative-arcsin
+
+uses:
+  - definition.inverse-function
+  - theorem.derivative-sin
+  - theorem.chain-rule
+
+style: direct
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.5"
+
+confidence: high
+notes: >
+  Let y = sin⁻¹ x, so sin y = x. Differentiate implicitly:
+  cos y · dy/dx = 1, so dy/dx = 1/cos y. Since cos y ≥ 0
+  on [-π/2, π/2], cos y = √(1 - sin²y) = √(1 - x²).

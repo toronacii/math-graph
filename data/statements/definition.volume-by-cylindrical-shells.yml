@@ -1,0 +1,34 @@
+id: definition.volume-by-cylindrical-shells
+type: definition
+status: draft
+
+title:
+  en: Volume by cylindrical shells
+  es: Volumen por capas cilíndricas
+
+statement:
+  natural:
+    es: >
+      Si la región bajo la curva y = f(x) desde a hasta b (con
+      0 ≤ a < b) se hace girar alrededor del eje y, el volumen del
+      sólido de revolución resultante es V = ∫_a^b 2πx f(x) dx.
+    en: >
+      If the region under the curve y = f(x) from a to b (with
+      0 ≤ a < b) is rotated about the y-axis, the volume of the
+      resulting solid of revolution is V = ∫_a^b 2πx f(x) dx.
+  latex: |
+    V = \int_a^b 2\pi x\,f(x)\,dx
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "6"
+    section: "6.3"
+
+confidence: high
+notes: >
+  The shell method provides an alternative to the disk/washer method
+  when rotation is about an axis parallel to the slicing variable.
+  Each cylindrical shell has radius x, height f(x), and thickness dx,
+  giving a shell volume of 2πx f(x) dx.

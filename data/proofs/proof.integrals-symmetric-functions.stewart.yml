@@ -1,0 +1,27 @@
+id: proof.integrals-symmetric-functions.stewart
+type: proof
+status: draft
+
+proves: proposition.integrals-symmetric-functions
+
+uses:
+  - theorem.substitution-rule-definite
+  - definition.even-function
+  - definition.odd-function
+  - proposition.integral-properties
+
+style: direct
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "5"
+    section: "5.5"
+
+confidence: high
+notes: >
+  Split ∫_{-a}^a = ∫_{-a}^0 + ∫_0^a. In the first integral,
+  substitute u = -x: ∫_{-a}^0 f(x)dx = ∫_a^0 f(-u)(-du)
+  = ∫_0^a f(-u)du. If f is even, this equals ∫_0^a f(u)du,
+  giving 2∫_0^a. If f is odd, this equals -∫_0^a f(u)du,
+  giving 0.

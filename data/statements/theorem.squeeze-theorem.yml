@@ -1,0 +1,34 @@
+id: theorem.squeeze-theorem
+type: theorem
+status: draft
+
+title:
+  en: Squeeze theorem
+  es: Teorema del encaje (sandwich)
+
+statement:
+  natural:
+    es: >
+      Si f(x) ≤ g(x) ≤ h(x) cuando x está cerca de a (excepto
+      posiblemente en a) y lim(x→a) f(x) = lim(x→a) h(x) = L,
+      entonces lim(x→a) g(x) = L.
+    en: >
+      If f(x) ≤ g(x) ≤ h(x) when x is near a (except possibly at a)
+      and lim(x→a) f(x) = lim(x→a) h(x) = L, then lim(x→a) g(x) = L.
+  latex: |
+    f(x) \leq g(x) \leq h(x) \;\text{ and }\; \lim_{x \to a} f(x) = \lim_{x \to a} h(x) = L \implies \lim_{x \to a} g(x) = L
+
+proved_by:
+  - proof.squeeze-theorem.stewart
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.3"
+
+confidence: medium
+notes: >
+  Also known as the sandwich theorem or pinching theorem. Stewart
+  uses it to prove lim(x→0) sin(x)/x = 1.
