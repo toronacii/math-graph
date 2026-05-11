@@ -476,15 +476,87 @@ def _populate(con: sqlite3.Connection, ds: Dataset) -> None:
     con.commit()
 
 
+# Confidence ordering used to compute a single `quality_overall` summary
+# field for graph nodes. Lower-confidence axes dominate (worst-axis wins),
+# so a node with one `low` axis is reported as `low`. None values ignored.
+_CONFIDENCE_RANK = {"high": 2, "medium": 1, "low": 0}
+
+
+def _worst_confidence(values: Iterable[str | None]) -> str | None:
+    present = [v for v in values if v]
+    if not present:
+        return None
+    return min(present, key=lambda v: _CONFIDENCE_RANK.get(v, 99))
+
+
+def _node_summaries(con: sqlite3.Connection) -> dict[str, dict[str, Any]]:
+    """Pre-compute per-node summary fields embedded in the graph payload.
+
+    Filters in the visualization layer use these without a join to
+    node-details. Keep payload small: scalars and short string lists only.
+    Statements get primary_domain/semantic_kinds/latex_status/quality_overall;
+    proofs get quality_overall.
+    """
+    summaries: dict[str, dict[str, Any]] = {}
+    cur = con.cursor()
+
+    # Statements: primary_domain (first primary domain alphabetically),
+    # semantic_kinds, latex_status.
+    for sid, latex_status in cur.execute(
+        "SELECT id, latex_status FROM statements"
+    ):
+        summaries[sid] = {"latex_status": latex_status}
+    for sid, name in cur.execute(
+        "SELECT statement_id, name FROM statement_domains "
+        "WHERE kind='primary' ORDER BY statement_id, name"
+    ):
+        summaries[sid].setdefault("primary_domain", name)
+    kinds: dict[str, list[str]] = {}
+    for sid, k in cur.execute(
+        "SELECT statement_id, semantic_kind FROM statement_ontology "
+        "WHERE semantic_kind != '' ORDER BY statement_id, semantic_kind"
+    ):
+        kinds.setdefault(sid, []).append(k)
+    for sid, ks in kinds.items():
+        summaries[sid]["semantic_kinds"] = ks
+
+    # Statement quality_overall.
+    for sid, *axes in cur.execute(
+        "SELECT statement_id, extraction, dependency, semantic, "
+        "translation, latex_conf, source_align FROM statement_quality"
+    ):
+        worst = _worst_confidence(axes)
+        if worst:
+            summaries.setdefault(sid, {})["quality_overall"] = worst
+
+    # Proofs: only quality_overall is summarized at the graph level.
+    for pid, *axes in cur.execute(
+        "SELECT proof_id, extraction, dependency, semantic, "
+        "translation, latex_conf, source_align FROM proof_quality"
+    ):
+        worst = _worst_confidence(axes)
+        if worst:
+            summaries.setdefault(pid, {})["quality_overall"] = worst
+
+    return summaries
+
+
 def _build_graph(con: sqlite3.Connection) -> nx.MultiDiGraph:
     g: nx.MultiDiGraph = nx.MultiDiGraph()
     cur = con.cursor()
+    summaries = _node_summaries(con)
+
     for sid, stype, status in cur.execute("SELECT id, type, status FROM statements"):
-        g.add_node(sid, kind="statement", type=stype, status=status)
+        attrs = {"kind": "statement", "type": stype, "status": status}
+        attrs.update(summaries.get(sid, {}))
+        g.add_node(sid, **attrs)
     for pid, proves, status, style in cur.execute(
         "SELECT id, proves, status, style FROM proofs"
     ):
-        g.add_node(pid, kind="proof", type="proof", status=status, style=style or "")
+        attrs = {"kind": "proof", "type": "proof", "status": status,
+                 "style": style or ""}
+        attrs.update(summaries.get(pid, {}))
+        g.add_node(pid, **attrs)
         g.add_edge(pid, proves, relation="proves")
     for pid, sid, role, conf, implicit in cur.execute(
         "SELECT proof_id, statement_id, role, confidence, implicit FROM proof_uses"
@@ -510,40 +582,284 @@ def _to_node_link(g: nx.MultiDiGraph) -> dict:
             "nodes": nodes, "links": links}
 
 
+def _quality_dict(row: tuple) -> dict[str, str] | None:
+    """Convert a quality row (extraction, dependency, semantic, translation,
+    latex_conf, source_align) into a dict, dropping None axes. Returns
+    None if every axis is None.
+    """
+    keys = ("extraction", "dependency", "semantic", "translation",
+            "latex", "source_alignment")
+    out = {k: v for k, v in zip(keys, row) if v is not None}
+    return out or None
+
+
+def _provenance_dict(row: tuple) -> dict[str, Any] | None:
+    """schema_version, rerun_id, extracted_by, extracted_at, redirected_to."""
+    keys = ("schema_version", "rerun_id", "extracted_by",
+            "extracted_at", "redirected_to")
+    out = {k: v for k, v in zip(keys, row) if v is not None}
+    return out or None
+
+
+_SOURCE_KEYS = (
+    "work", "author", "edition", "year", "chapter", "section",
+    "theorem_label", "page", "locator", "url", "source_language",
+)
+
+
+def _source_rows(sub: sqlite3.Cursor, entity_id: str, entity_kind: str) -> list[dict]:
+    out: list[dict] = []
+    for row in sub.execute(
+        "SELECT work, author, edition, year, chapter, section, theorem_label, "
+        "page, locator, url, source_language FROM sources "
+        "WHERE entity_id=? AND entity_kind=? ORDER BY work, chapter, section, "
+        "theorem_label, page",
+        (entity_id, entity_kind),
+    ):
+        entry = {k: v for k, v in zip(_SOURCE_KEYS, row) if v is not None}
+        out.append(entry)
+    return out
+
+
 def _node_details(con: sqlite3.Connection) -> dict[str, dict[str, Any]]:
     cur = con.cursor()
     sub = con.cursor()
     out: dict[str, dict] = {}
-    for row in cur.execute("SELECT id, type, status FROM statements").fetchall():
-        sid = row[0]
-        entry: dict[str, Any] = {"id": sid, "kind": "statement", "type": row[1], "status": row[2]}
+
+    # ---- statements -------------------------------------------------------
+    stmt_rows = cur.execute(
+        "SELECT id, type, status, original_lang, latex_body, latex_status, "
+        "latex_review, notes FROM statements"
+    ).fetchall()
+    for (sid, stype, status, original_lang, latex_body, latex_status,
+         latex_review, notes) in stmt_rows:
+        entry: dict[str, Any] = {
+            "id": sid, "kind": "statement", "type": stype, "status": status,
+            "original_language": original_lang,
+        }
+        if notes:
+            entry["notes"] = notes
+
+        # i18n title
         titles = {}
-        for lang, text, is_orig in sub.execute(
-            "SELECT lang, text, is_original FROM statement_titles WHERE statement_id=?", (sid,)
+        for lang, text, is_orig, origin, review in sub.execute(
+            "SELECT lang, text, is_original, origin, review_status "
+            "FROM statement_titles WHERE statement_id=?", (sid,),
         ):
-            titles[lang] = {"text": text, "is_original": bool(is_orig)}
+            titles[lang] = {
+                "text": text, "is_original": bool(is_orig),
+                "origin": origin, "review_status": review,
+            }
         if titles:
             entry["title"] = titles
+
+        # i18n natural
         natural = {}
-        for lang, text, is_orig in sub.execute(
-            "SELECT lang, text, is_original FROM statement_natural WHERE statement_id=?", (sid,)
+        for lang, text, is_orig, origin, review in sub.execute(
+            "SELECT lang, text, is_original, origin, review_status "
+            "FROM statement_natural WHERE statement_id=?", (sid,),
         ):
-            natural[lang] = {"text": text, "is_original": bool(is_orig)}
+            natural[lang] = {
+                "text": text, "is_original": bool(is_orig),
+                "origin": origin, "review_status": review,
+            }
         if natural:
             entry["natural"] = natural
+
+        # latex
+        if latex_body is not None or latex_status not in (None, "not_applicable"):
+            entry["latex"] = {
+                "body": latex_body,
+                "status": latex_status,
+                "review_status": latex_review,
+            }
+
+        # domains
+        domains: dict[str, list[str]] = {"primary": [], "secondary": []}
+        for kind, name in sub.execute(
+            "SELECT kind, name FROM statement_domains WHERE statement_id=? "
+            "ORDER BY kind, name", (sid,),
+        ):
+            domains[kind].append(name)
+        if domains["primary"] or domains["secondary"]:
+            entry["domains"] = {k: v for k, v in domains.items() if v}
+
+        # ambient
+        ambient = [
+            r[0] for r in sub.execute(
+                "SELECT structure FROM statement_ambient "
+                "WHERE statement_id=? ORDER BY structure", (sid,),
+            )
+        ]
+        if ambient:
+            entry["ambient_structures"] = ambient
+
+        # ontology — split into semantic_kind list and keywords list.
+        semantic_kinds: list[str] = []
+        keywords: list[str] = []
+        for sk, kw in sub.execute(
+            "SELECT semantic_kind, keyword FROM statement_ontology "
+            "WHERE statement_id=? ORDER BY semantic_kind, keyword", (sid,),
+        ):
+            if sk:
+                semantic_kinds.append(sk)
+            if kw:
+                keywords.append(kw)
+        if semantic_kinds or keywords:
+            ontology: dict[str, list[str]] = {}
+            if semantic_kinds:
+                ontology["semantic_kind"] = semantic_kinds
+            if keywords:
+                ontology["keywords"] = keywords
+            entry["ontology"] = ontology
+
+        # quality
+        q_row = sub.execute(
+            "SELECT extraction, dependency, semantic, translation, "
+            "latex_conf, source_align FROM statement_quality WHERE statement_id=?",
+            (sid,),
+        ).fetchone()
+        if q_row:
+            quality = _quality_dict(q_row)
+            if quality:
+                entry["quality"] = quality
+
+        # provenance
+        p_row = sub.execute(
+            "SELECT schema_version, rerun_id, extracted_by, extracted_at, "
+            "redirected_to FROM statement_provenance WHERE statement_id=?",
+            (sid,),
+        ).fetchone()
+        if p_row:
+            prov = _provenance_dict(p_row)
+            if prov:
+                entry["provenance"] = prov
+
+        # derived_from
+        derived = [
+            r[0] for r in sub.execute(
+                "SELECT prior_id FROM statement_derived_from "
+                "WHERE statement_id=? ORDER BY prior_id", (sid,),
+            )
+        ]
+        if derived:
+            entry["derived_from"] = derived
+
+        # proved_by
+        proved_by = [
+            r[0] for r in sub.execute(
+                "SELECT proof_id FROM statement_proved_by "
+                "WHERE statement_id=? ORDER BY proof_id", (sid,),
+            )
+        ]
+        if proved_by:
+            entry["proved_by"] = proved_by
+
+        # depends_on
+        depends_on = []
+        for tid, role, conf, dnotes in sub.execute(
+            "SELECT target_id, role, confidence, notes FROM statement_depends_on "
+            "WHERE statement_id=? ORDER BY target_id, role", (sid,),
+        ):
+            d = {"id": tid, "role": role}
+            if conf is not None:
+                d["confidence"] = conf
+            if dnotes is not None:
+                d["notes"] = dnotes
+            depends_on.append(d)
+        if depends_on:
+            entry["depends_on"] = depends_on
+
+        # generality
+        generality = [
+            {"target": tid, "relation": rel}
+            for tid, rel in sub.execute(
+                "SELECT target_id, relation FROM statement_generality "
+                "WHERE statement_id=? ORDER BY relation, target_id", (sid,),
+            )
+        ]
+        if generality:
+            entry["generality"] = generality
+
+        # sources
+        sources = _source_rows(sub, sid, "statement")
+        if sources:
+            entry["sources"] = sources
+
         out[sid] = entry
-    for row in cur.execute("SELECT id, proves, status, style FROM proofs").fetchall():
-        pid = row[0]
-        entry = {"id": pid, "kind": "proof", "type": "proof", "status": row[2],
-                 "proves": row[1], "style": row[3] or ""}
-        deps = []
-        for did, role, conf in sub.execute(
-            "SELECT statement_id, role, confidence FROM proof_uses WHERE proof_id=? ORDER BY statement_id",
+
+    # ---- proofs -----------------------------------------------------------
+    proof_rows = cur.execute(
+        "SELECT id, proves, status, style, notes FROM proofs"
+    ).fetchall()
+    for pid, proves, status, style, notes in proof_rows:
+        entry = {
+            "id": pid, "kind": "proof", "type": "proof", "status": status,
+            "proves": proves, "style": style or "",
+        }
+        if notes:
+            entry["notes"] = notes
+
+        # uses (proof_uses) — full role/confidence/implicit/locality
+        uses = []
+        for did, role, conf, implicit, locality, unotes in sub.execute(
+            "SELECT statement_id, role, confidence, implicit, locality, notes "
+            "FROM proof_uses WHERE proof_id=? "
+            "ORDER BY statement_id, role, locality",
             (pid,),
         ):
-            deps.append({"id": did, "role": role, "confidence": conf})
-        if deps:
-            entry["uses"] = deps
+            u: dict[str, Any] = {
+                "id": did, "role": role, "confidence": conf,
+                "implicit": bool(implicit),
+            }
+            if locality:
+                u["locality"] = locality
+            if unotes:
+                u["notes"] = unotes
+            uses.append(u)
+        if uses:
+            entry["uses"] = uses
+
+        # parts
+        parts = []
+        for name, kind, description in sub.execute(
+            "SELECT name, kind, description FROM proof_parts "
+            "WHERE proof_id=? ORDER BY name", (pid,),
+        ):
+            part: dict[str, Any] = {"name": name, "kind": kind}
+            if description:
+                part["description"] = description
+            parts.append(part)
+        if parts:
+            entry["parts"] = parts
+
+        # quality
+        q_row = sub.execute(
+            "SELECT extraction, dependency, semantic, translation, "
+            "latex_conf, source_align FROM proof_quality WHERE proof_id=?",
+            (pid,),
+        ).fetchone()
+        if q_row:
+            quality = _quality_dict(q_row)
+            if quality:
+                entry["quality"] = quality
+
+        # provenance
+        p_row = sub.execute(
+            "SELECT schema_version, rerun_id, extracted_by, extracted_at, "
+            "redirected_to FROM proof_provenance WHERE proof_id=?",
+            (pid,),
+        ).fetchone()
+        if p_row:
+            prov = _provenance_dict(p_row)
+            if prov:
+                entry["provenance"] = prov
+
+        # sources
+        sources = _source_rows(sub, pid, "proof")
+        if sources:
+            entry["sources"] = sources
+
         out[pid] = entry
     return out
 
@@ -560,6 +876,20 @@ def build_db(ds: Dataset | None = None) -> sqlite3.Connection:
     return con
 
 
+def _graphml_safe(g: nx.MultiDiGraph) -> nx.MultiDiGraph:
+    """Return a copy with list-valued node attributes coerced to comma-
+    separated strings. GraphML does not support list types; we only need
+    these summaries for visualization/JSON consumers, so flatten for the
+    GraphML export instead of dropping data.
+    """
+    out = g.copy()
+    for _, attrs in out.nodes(data=True):
+        for k, v in list(attrs.items()):
+            if isinstance(v, list):
+                attrs[k] = ",".join(v)
+    return out
+
+
 def _write_outputs(con: sqlite3.Connection) -> tuple[int, int]:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     g = _build_graph(con)
@@ -571,7 +901,7 @@ def _write_outputs(con: sqlite3.Connection) -> tuple[int, int]:
         json.dumps(_node_details(con), indent=2, ensure_ascii=False, sort_keys=True) + "\n",
         encoding="utf-8",
     )
-    nx.write_graphml(g, EXPORT_DIR / "graph.graphml")
+    nx.write_graphml(_graphml_safe(g), EXPORT_DIR / "graph.graphml")
     return g.number_of_nodes(), g.number_of_edges()
 
 
