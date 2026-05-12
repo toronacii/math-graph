@@ -110,6 +110,8 @@ export default function SearchBox({ details }: Props) {
                 onMouseDown={(e) => {
                   e.preventDefault();
                   select(r.id);
+                  setDraft("");
+                  setSearch("");
                   setOpen(false);
                 }}
                 className="flex w-full items-start gap-2 px-3 py-2 text-left hover:bg-slate-50"

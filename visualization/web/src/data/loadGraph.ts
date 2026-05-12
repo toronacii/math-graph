@@ -60,9 +60,10 @@ export async function loadGraph(): Promise<LoadedGraph> {
       ...(n as Partial<GraphNode>),
       label: labelOf(n.id, details),
       color,
-      // proofs render smaller and as squares; statements as circles.
+      // Proofs render smaller; all nodes use "circle" (Sigma 3 default program).
+      // Visual distinction between proof and statement is via color + size.
       size: isProof ? 4 : 6,
-      type: isProof ? "square" : "circle",
+      type: "circle",
       // duplicate v0.3 entity type under a different key so it isn't
       // shadowed by Sigma's node-program "type" attribute.
       entity_type: n.type,

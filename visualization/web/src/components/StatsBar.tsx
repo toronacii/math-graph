@@ -1,6 +1,3 @@
-// Top-bar stats. Total nodes/edges, breakdown by entity type and
-// edge relation, and selection size when a node is active.
-
 import { useMemo } from "react";
 import { useExplorer } from "../state/store";
 import type { GraphPayload } from "../data/types";
@@ -12,6 +9,7 @@ interface Props {
 
 export default function StatsBar({ payload }: Props) {
   const selectedId = useExplorer((s) => s.selectedId);
+  const visibleCount = useExplorer((s) => s.visibleCount);
 
   const summary = useMemo(() => {
     const byType: Record<string, number> = {};
@@ -30,6 +28,13 @@ export default function StatsBar({ payload }: Props) {
         <span className="mx-2 text-slate-300">·</span>
         <span className="font-semibold">{payload.links.length}</span>
         <span className="ml-1 text-slate-500">edges</span>
+        {visibleCount > 0 && visibleCount < payload.nodes.length && (
+          <>
+            <span className="mx-2 text-slate-300">·</span>
+            <span className="font-semibold text-blue-600">{visibleCount}</span>
+            <span className="ml-1 text-slate-500">visible</span>
+          </>
+        )}
         <span className="mx-2 text-slate-300">·</span>
         <span className="text-[11px] uppercase tracking-wider text-slate-500">
           v{payload.schema_version}

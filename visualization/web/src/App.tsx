@@ -4,6 +4,7 @@
 //  │ Left          │   Sigma canvas      │ Right                  │
 //  │ Search +      │                     │ DetailsPanel           │
 //  │ FilterPanel   │                     │                        │
+//  │ ExplorationPanel (when selected)    │                        │
 //  └───────────────┴─────────────────────┴────────────────────────┘
 
 import { useEffect, useState } from "react";
@@ -11,6 +12,7 @@ import { loadGraph, type LoadedGraph } from "./data/loadGraph";
 import GraphCanvas from "./components/GraphCanvas";
 import DetailsPanel from "./components/DetailsPanel";
 import FilterPanel from "./components/FilterPanel";
+import ExplorationPanel from "./components/ExplorationPanel";
 import SearchBox from "./components/SearchBox";
 import StatsBar from "./components/StatsBar";
 import { useExplorer } from "./state/store";
@@ -77,11 +79,10 @@ export default function App() {
       </header>
 
       <main className="flex flex-1 min-h-0">
-        <aside className="w-72 flex-shrink-0 overflow-y-auto border-r border-slate-200 bg-white p-4">
-          <div className="mb-4">
-            <SearchBox details={loaded.details} />
-          </div>
-          <FilterPanel payload={loaded.payload} />
+        <aside className="w-72 flex-shrink-0 overflow-y-auto border-r border-slate-200 bg-white p-4 space-y-4">
+          <SearchBox details={loaded.details} />
+          <FilterPanel payload={loaded.payload} details={loaded.details} />
+          <ExplorationPanel details={loaded.details} />
         </aside>
 
         <section className="relative flex-1 min-w-0">

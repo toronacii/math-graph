@@ -1,10 +1,3 @@
-// Zustand store for explorer UI state.
-//
-// The graph itself (graphology instance + node-details map) lives in
-// React state inside <App />; this store carries the lightweight
-// interaction state shared across components (selection, filters,
-// search, hover).
-
 import { create } from "zustand";
 import type { EdgeRelation, EntityType } from "../data/types";
 
@@ -15,12 +8,23 @@ export interface Filters {
   status: Set<string>;
 }
 
+export type ExplorationMode =
+  | "full"
+  | "neighborhood"
+  | "ancestors"
+  | "descendants"
+  | "proof-neighborhood"
+  | "conceptual-neighborhood";
+
 interface ExplorerState {
   selectedId: string | null;
   hoveredId: string | null;
   searchQuery: string;
   filters: Filters;
   layoutTick: number;
+  explorationMode: ExplorationMode;
+  pathPinnedId: string | null;
+  visibleCount: number;
 
   select: (id: string | null) => void;
   hover: (id: string | null) => void;
@@ -31,6 +35,9 @@ interface ExplorerState {
   toggleStatus: (s: string) => void;
   resetFilters: () => void;
   bumpLayout: () => void;
+  setExplorationMode: (mode: ExplorationMode) => void;
+  pinPath: (id: string | null) => void;
+  setVisibleCount: (n: number) => void;
 }
 
 const ALL_TYPES: EntityType[] = [
@@ -66,7 +73,10 @@ export const useExplorer = create<ExplorerState>((set) => ({
   searchQuery: "",
   filters: initialFilters(),
   layoutTick: 0,
-  select: (id) => set({ selectedId: id }),
+  explorationMode: "full",
+  pathPinnedId: null,
+  visibleCount: 0,
+  select: (id) => set({ selectedId: id, explorationMode: "full" }),
   hover: (id) => set({ hoveredId: id }),
   setSearch: (q) => set({ searchQuery: q }),
   toggleType: (t) =>
@@ -83,4 +93,7 @@ export const useExplorer = create<ExplorerState>((set) => ({
     })),
   resetFilters: () => set({ filters: initialFilters() }),
   bumpLayout: () => set((s) => ({ layoutTick: s.layoutTick + 1 })),
+  setExplorationMode: (mode) => set({ explorationMode: mode }),
+  pinPath: (id) => set({ pathPinnedId: id }),
+  setVisibleCount: (n) => set({ visibleCount: n }),
 }));
