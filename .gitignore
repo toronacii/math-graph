@@ -24,6 +24,10 @@ generated/exports/*.graphml
 !generated/graph/.gitkeep
 !generated/exports/.gitkeep
 
+# Web visualization artifacts (copied from generated/v0.3/ via pipeline)
+visualization/web/public/graph.json
+visualization/web/public/node-details.json
+
 # Source material (copyrighted books). Keep local only, never commit.
 sources/**/*.pdf
 sources/**/*.epub
