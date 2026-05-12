@@ -24,6 +24,7 @@ mkg-build    = "scripts.v03.build_db:main"
 mkg-snapshot = "scripts.snapshot:main"
 mkg-diff     = "scripts.diff_graphs:main"
 mkg-migrate  = "scripts.migrate_v02_to_v03:main"
+mkg-context-pack  = "scripts.v03.make_context_pack:main"
 mkg-export-schema = "scripts.export_schema:main"
 
 [tool.ruff]

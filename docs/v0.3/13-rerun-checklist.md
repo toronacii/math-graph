@@ -64,9 +64,15 @@ For each (source, chapter) in the plan:
       - `docs/v0.3/policies/07-semantic-freeze.md`
 - [ ] Generate the context pack for the chapter:
       ```bash
-      uv run python -m scripts.v03.make_context_pack --source <source-key> --chapter <N>
+      uv run mkg-context-pack --source <source-key> --chapter <N>
       ```
       Output: `generated/v0.3/context-packs/<source>-chapter-<NN>.md`
+- [ ] **Load the context pack into your working context** (read the
+      generated `.md` file). This replaces loading raw YAML files —
+      the context pack is a compact summary of the entire graph state
+      relevant to this chapter. Do NOT skip this step; extracting
+      without the context pack leads to duplicate IDs, missed
+      dependencies, and inconsistent domain/ontology tags.
 
 ### Produce YAML
 

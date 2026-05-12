@@ -28,7 +28,33 @@
 
 ---
 
-## 0. Core invariants
+## 0. Context pack — MANDATORY pre-extraction step
+
+Before extracting ANY chapter, you MUST:
+
+1. Generate the context pack:
+   ```bash
+   uv run mkg-context-pack --source <source-key> --chapter <N>
+   ```
+2. Read the output file:
+   `generated/v0.3/context-packs/<source>-chapter-<NN>.md`
+
+The context pack is a compact summary of the entire graph state
+(built from the SQLite DB) relevant to the chapter you are about to
+extract. It contains: prior-chapter frontier nodes, source locator
+map, domain-relevant neighborhood, multi-source collision candidates,
+quality backlog, naming conventions, and canonical template pointers.
+
+**Do NOT extract without loading the context pack.** Extracting
+without it leads to:
+- duplicate node IDs (re-introducing an existing statement),
+- missed `depends_on` / `uses` edges to prior chapters,
+- inconsistent domain/ambient/ontology tags,
+- naming convention drift.
+
+---
+
+## 1. Core invariants
 
 1. Every file MUST set `schema_version: "0.3.1"` (the loader still accepts `"0.3.0"` for legacy pilot files; new extractions use `"0.3.1"`).
 2. Every file's `id` MUST match its file name AND obey
@@ -44,7 +70,7 @@
 
 ---
 
-## 1. i18n rules
+## 2. i18n rules
 
 The source material's language is the **original**. Translations get
 explicit provenance.
@@ -71,7 +97,7 @@ See `docs/v0.3/02-i18n.md` for edge cases.
 
 ---
 
-## 2. LaTeX lifecycle
+## 3. LaTeX lifecycle
 
 `statement.latex.status` is the lifecycle marker:
 
@@ -100,7 +126,7 @@ See `docs/v0.3/03-latex-lifecycle.md`.
 
 ---
 
-## 3. Structured `uses` edges (proofs)
+## 4. Structured `uses` edges (proofs)
 
 `Proof.uses` is a list of structured objects, NOT strings. The v0.2 flat
 list is gone.
@@ -179,7 +205,7 @@ See `docs/v0.3/04-dependency-edges.md`.
 
 ---
 
-## 4. `Statement.depends_on` — the concept layer
+## 5. `Statement.depends_on` — the concept layer
 
 `Statement.depends_on` is the second graph layer. It records that a
 statement CONCEPTUALLY refers to another statement, without claiming a
@@ -238,7 +264,7 @@ See `docs/v0.3/04-dependency-edges.md`.
 
 ---
 
-## 5. Domains, ambient, ontology
+## 6. Domains, ambient, ontology
 
 These three blocks are free-form retrieval metadata. They are NOT
 enforced as enums — consistency matters more than completeness.
@@ -304,7 +330,7 @@ See `docs/v0.3/06-domains-ambient.md` and `docs/v0.3/07-ontology-tags.md`.
 
 ---
 
-## 6. Quality — six independent axes
+## 7. Quality — six independent axes
 
 `QualityBlock` decomposes the v0.2 single `confidence` field. Each axis is
 `low | medium | high | null`. `null` means **unassessed**; do not default
@@ -332,7 +358,7 @@ See `docs/v0.3/05-quality-metadata.md`.
 
 ---
 
-## 7. Status / review lifecycle
+## 8. Status / review lifecycle
 
 Two distinct concepts:
 
@@ -352,7 +378,7 @@ See `docs/v0.3/08-status-lifecycle.md`.
 
 ---
 
-## 8. Source locator requirements
+## 9. Source locator requirements
 
 Every `Source` entry SHOULD pin the result with maximum precision available:
 
@@ -379,7 +405,7 @@ See `docs/v0.3/01-schema.md §Source`.
 
 ---
 
-## 9. Multi-source / reconciliation rules
+## 10. Multi-source / reconciliation rules
 
 Reconciliation decisions happen at extraction time, NOT at audit time.
 
@@ -431,7 +457,7 @@ Guide" in `AGENTS.md` (the disambiguation logic carries over verbatim).
 
 ---
 
-## 10. Output discipline
+## 11. Output discipline
 
 When you produce v0.3 YAML:
 
@@ -451,7 +477,7 @@ the validator. The schema's strictness is intentional.
 
 ---
 
-## 11. Reference index
+## 12. Reference index
 
 | Topic                       | Spec / docs                                            |
 |-----------------------------|--------------------------------------------------------|
