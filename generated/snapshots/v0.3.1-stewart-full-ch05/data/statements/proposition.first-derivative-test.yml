@@ -1,0 +1,124 @@
+schema_version: "0.3.1"
+id: proposition.first-derivative-test
+type: proposition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Prueba de la primera derivada
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: First Derivative Test
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Supongamos que c es un número crítico de una función continua
+        f. a) Si f' cambia de positiva a negativa en c, entonces f
+        tiene un máximo local en c. b) Si f' cambia de negativa a
+        positiva en c, entonces f tiene un mínimo local en c. c) Si
+        f' no cambia de signo en c (positiva por ambos lados o
+        negativa por ambos lados), entonces f no tiene máximo ni
+        mínimo local en c.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        Suppose that c is a critical number of a continuous function
+        f. (a) If f' changes from positive to negative at c, then f
+        has a local maximum at c. (b) If f' changes from negative to
+        positive at c, then f has a local minimum at c. (c) If f'
+        does not change sign at c (positive on both sides or negative
+        on both sides), then f has neither a local maximum nor a
+        local minimum at c.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      c \text{ critical, } f \text{ continuous near } c:\quad
+      \text{sign change }(+\to-) \Rightarrow \text{local max};\;
+      (-\to+) \Rightarrow \text{local min};\;
+      \text{no sign change} \Rightarrow \text{no local extremum}
+    status: informal
+    review_status: unreviewed
+
+proved_by:
+  - proof.first-derivative-test.from-id-test
+
+depends_on:
+  - id: definition.critical-number
+    role: uses_concept
+    confidence: high
+  - id: definition.continuity-at-point
+    role: uses_concept
+    confidence: high
+  - id: definition.local-maximum
+    role: uses_concept
+    confidence: high
+  - id: definition.local-minimum
+    role: uses_concept
+    confidence: high
+  - id: definition.derivative-function
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "4"
+    section: "4.3"
+    theorem_label: "Prueba de la primera derivada"
+    page: "291"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [analysis, optimization]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [criterion, principle]
+  keywords: [first-derivative-test, sign-change, local-extremum, monotonicity-criterion]
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: medium
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart §4.3 page 291. "Cambia de signo en c" is informal; the
+  intended meaning is: there exists δ > 0 such that f' has constant
+  sign on (c−δ, c) and constant (opposite, or same in case c) sign
+  on (c, c+δ). Stewart's exercise 87 exhibits a function whose
+  derivative changes sign infinitely often near the critical
+  point — outside the scope of this test. The continuity hypothesis
+  on f handles the case where c is in the domain but f' may not
+  exist at c. LaTeX status informal because the sign-change clause
+  is not given in symbolic form by Stewart.

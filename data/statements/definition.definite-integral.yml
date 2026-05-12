@@ -1,0 +1,127 @@
+schema_version: "0.3.1"
+id: definition.definite-integral
+type: definition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Integral definida
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Definite integral
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-sonnet-4-6"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Si f es una función continua definida para a ≤ x ≤ b, se divide
+        el intervalo [a, b] en n subintervalos de igual ancho
+        Δx = (b − a)/n. Sean x₀(= a), x₁, x₂, …, xₙ(= b) los puntos
+        extremos de estos subintervalos y sean x₁*, x₂*, …, xₙ* los
+        puntos muestra en estos subintervalos, de modo que xᵢ* se
+        encuentre en el i-ésimo subintervalo [xᵢ₋₁, xᵢ]. Entonces la
+        integral definida de f, desde a hasta b, es
+        ∫_a^b f(x) dx = lím_{n→∞} Σᵢ₌₁ⁿ f(xᵢ*)Δx
+        siempre que este límite exista y dé el mismo valor para todos los
+        posibles elecciones de los puntos muestra. Si existe, decimos que
+        f es integrable sobre [a, b].
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        If f is a continuous function defined for a ≤ x ≤ b, divide [a, b]
+        into n subintervals of equal width Δx = (b − a)/n with endpoints
+        x₀(= a), x₁, …, xₙ(= b), and choose sample points x₁*, …, xₙ*
+        with xᵢ* in the i-th subinterval. Then the definite integral of
+        f from a to b is
+        ∫_a^b f(x) dx = lim_{n→∞} Σᵢ₌₁ⁿ f(xᵢ*)Δx,
+        provided this limit exists and has the same value for all choices
+        of sample points. If it exists, f is called integrable on [a, b].
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-sonnet-4-6"
+      review_status: unreviewed
+  latex:
+    body: |
+      \int_a^b f(x)\,dx
+        = \lim_{n \to \infty} \sum_{i=1}^{n} f(x_i^*)\,\Delta x,
+      \quad \Delta x = \frac{b-a}{n}
+    status: present
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: definition.riemann-sum
+    role: uses_concept
+    confidence: high
+  - id: definition.limit-of-function
+    role: uses_concept
+    confidence: high
+  - id: definition.function
+    role: uses_concept
+    confidence: high
+  - id: definition.continuity-on-interval
+    role: uses_concept
+    confidence: high
+    notes: Stewart's definition assumes continuity; integrability for general
+      bounded functions is covered in more advanced courses.
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "5"
+    section: "5.2"
+    theorem_label: "Definición 2 — integral definida"
+    page: "372"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [real-analysis]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [object, construction]
+  keywords: [definite-integral, riemann-integral, area, net-area, integrability]
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-sonnet-4-6"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart's definition is restricted to equal-width partitions, which suffices
+  because he proves in the text that the limit is the same when using arbitrary
+  partitions (via Theorem 3 on integrability of continuous functions and the
+  note about max Δxᵢ → 0). Leibniz introduced the ∫ symbol (elongated S for
+  "summa"). The notation ∫_a^b f(x) dx treats the expression as a limit where
+  Σ → ∫, xᵢ* → x, and Δx → dx.
+  Multi-source note: Rudin Ch6 defines the Riemann-Stieltjes integral
+  ∫f dα, which strictly generalises Stewart's Riemann integral (α = identity).
+  These are SEPARATE nodes; Rudin's version will occupy a different id when
+  Rudin Ch6 is ported to v0.3.

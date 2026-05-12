@@ -710,6 +710,122 @@
     },
     "type": "definition"
   },
+  "definition.area-under-curve": {
+    "ambient_structures": [
+      "real-line"
+    ],
+    "depends_on": [
+      {
+        "confidence": "high",
+        "id": "definition.continuity-on-interval",
+        "role": "uses_concept"
+      },
+      {
+        "confidence": "high",
+        "id": "definition.function",
+        "role": "uses_concept"
+      },
+      {
+        "confidence": "high",
+        "id": "definition.limit-of-function",
+        "notes": "the area is defined as a limit — the limit concept is essential",
+        "role": "uses_concept"
+      }
+    ],
+    "domains": {
+      "primary": [
+        "calculus"
+      ],
+      "secondary": [
+        "real-analysis"
+      ]
+    },
+    "generality": [
+      {
+        "relation": "special_case_of",
+        "target": "definition.definite-integral"
+      }
+    ],
+    "id": "definition.area-under-curve",
+    "kind": "statement",
+    "latex": {
+      "body": "A = \\lim_{n \\to \\infty} R_n\n  = \\lim_{n \\to \\infty} \\sum_{i=1}^{n} f(x_i)\\,\\Delta x,\n\\quad \\Delta x = \\frac{b-a}{n},\\quad x_i = a + i\\,\\Delta x\n",
+      "review_status": "unreviewed",
+      "status": "present"
+    },
+    "natural": {
+      "en": {
+        "is_original": false,
+        "origin": "llm",
+        "review_status": "unreviewed",
+        "text": "The area A of the region S lying under the graph of a continuous function f (with f(x) ≥ 0) is the limit of the sum of the areas of the approximating rectangles: A = lim_{n→∞} R_n = lim_{n→∞} [f(x₁)Δx + f(x₂)Δx + ··· + f(xₙ)Δx] where Δx = (b − a)/n and xᵢ = a + i·Δx are the right endpoints of the subintervals."
+      },
+      "es": {
+        "is_original": true,
+        "origin": "original",
+        "review_status": "unreviewed",
+        "text": "El área A de la región S que se encuentra bajo la gráfica de la función continua f (donde f(x) ≥ 0) es el límite de la suma de las áreas de los rectángulos de aproximación: A = lím_{n→∞} R_n = lím_{n→∞} [f(x₁)Δx + f(x₂)Δx + ··· + f(xₙ)Δx] donde Δx = (b − a)/n y xᵢ = a + i·Δx son los puntos extremos derechos de los subintervalos."
+      }
+    },
+    "notes": "Preliminary/pedagogical definition introduced in §5.1 before the formal definition of the definite integral in §5.2. Restricted to continuous f(x) ≥ 0. Stewart shows (via examples) that both left-endpoint and right-endpoint sums converge to the same limit, motivating the general definition. This node captures the area interpretation; the full generality (net area for sign-changing f) lives in definition.definite-integral.\n",
+    "ontology": {
+      "keywords": [
+        "approximation",
+        "area",
+        "curve",
+        "limit",
+        "rectangle",
+        "riemann-sum"
+      ],
+      "semantic_kind": [
+        "construction",
+        "object"
+      ]
+    },
+    "original_language": "es",
+    "provenance": {
+      "extracted_at": "2026-05-11",
+      "extracted_by": "llm:claude-sonnet-4-6",
+      "rerun_id": "v0.3.1-stewart-full",
+      "schema_version": "0.3.1"
+    },
+    "quality": {
+      "dependency": "high",
+      "extraction": "high",
+      "latex": "high",
+      "semantic": "high",
+      "source_alignment": "high",
+      "translation": "high"
+    },
+    "sources": [
+      {
+        "author": "James Stewart",
+        "chapter": "5",
+        "edition": "7",
+        "page": "365",
+        "section": "5.1",
+        "source_language": "es",
+        "theorem_label": "Definición 2",
+        "work": "Cálculo de una variable — Trascendentes tempranas"
+      }
+    ],
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "origin": "llm",
+        "review_status": "unreviewed",
+        "text": "Area under a curve"
+      },
+      "es": {
+        "is_original": true,
+        "origin": "original",
+        "review_status": "unreviewed",
+        "text": "Área bajo una curva"
+      }
+    },
+    "type": "definition"
+  },
   "definition.arithmetic-of-functions": {
     "ambient_structures": [
       "real-line"
@@ -1732,6 +1848,120 @@
         "origin": "original",
         "review_status": "unreviewed",
         "text": "Función decreciente"
+      }
+    },
+    "type": "definition"
+  },
+  "definition.definite-integral": {
+    "ambient_structures": [
+      "real-line"
+    ],
+    "depends_on": [
+      {
+        "confidence": "high",
+        "id": "definition.continuity-on-interval",
+        "notes": "Stewart's definition assumes continuity; integrability for general bounded functions is covered in more advanced courses.",
+        "role": "uses_concept"
+      },
+      {
+        "confidence": "high",
+        "id": "definition.function",
+        "role": "uses_concept"
+      },
+      {
+        "confidence": "high",
+        "id": "definition.limit-of-function",
+        "role": "uses_concept"
+      },
+      {
+        "confidence": "high",
+        "id": "definition.riemann-sum",
+        "role": "uses_concept"
+      }
+    ],
+    "domains": {
+      "primary": [
+        "calculus"
+      ],
+      "secondary": [
+        "real-analysis"
+      ]
+    },
+    "id": "definition.definite-integral",
+    "kind": "statement",
+    "latex": {
+      "body": "\\int_a^b f(x)\\,dx\n  = \\lim_{n \\to \\infty} \\sum_{i=1}^{n} f(x_i^*)\\,\\Delta x,\n\\quad \\Delta x = \\frac{b-a}{n}\n",
+      "review_status": "unreviewed",
+      "status": "present"
+    },
+    "natural": {
+      "en": {
+        "is_original": false,
+        "origin": "llm",
+        "review_status": "unreviewed",
+        "text": "If f is a continuous function defined for a ≤ x ≤ b, divide [a, b] into n subintervals of equal width Δx = (b − a)/n with endpoints x₀(= a), x₁, …, xₙ(= b), and choose sample points x₁*, …, xₙ* with xᵢ* in the i-th subinterval. Then the definite integral of f from a to b is ∫_a^b f(x) dx = lim_{n→∞} Σᵢ₌₁ⁿ f(xᵢ*)Δx, provided this limit exists and has the same value for all choices of sample points. If it exists, f is called integrable on [a, b]."
+      },
+      "es": {
+        "is_original": true,
+        "origin": "original",
+        "review_status": "unreviewed",
+        "text": "Si f es una función continua definida para a ≤ x ≤ b, se divide el intervalo [a, b] en n subintervalos de igual ancho Δx = (b − a)/n. Sean x₀(= a), x₁, x₂, …, xₙ(= b) los puntos extremos de estos subintervalos y sean x₁*, x₂*, …, xₙ* los puntos muestra en estos subintervalos, de modo que xᵢ* se encuentre en el i-ésimo subintervalo [xᵢ₋₁, xᵢ]. Entonces la integral definida de f, desde a hasta b, es ∫_a^b f(x) dx = lím_{n→∞} Σᵢ₌₁ⁿ f(xᵢ*)Δx siempre que este límite exista y dé el mismo valor para todos los posibles elecciones de los puntos muestra. Si existe, decimos que f es integrable sobre [a, b]."
+      }
+    },
+    "notes": "Stewart's definition is restricted to equal-width partitions, which suffices because he proves in the text that the limit is the same when using arbitrary partitions (via Theorem 3 on integrability of continuous functions and the note about max Δxᵢ → 0). Leibniz introduced the ∫ symbol (elongated S for \"summa\"). The notation ∫_a^b f(x) dx treats the expression as a limit where Σ → ∫, xᵢ* → x, and Δx → dx. Multi-source note: Rudin Ch6 defines the Riemann-Stieltjes integral ∫f dα, which strictly generalises Stewart's Riemann integral (α = identity). These are SEPARATE nodes; Rudin's version will occupy a different id when Rudin Ch6 is ported to v0.3.\n",
+    "ontology": {
+      "keywords": [
+        "area",
+        "definite-integral",
+        "integrability",
+        "net-area",
+        "riemann-integral"
+      ],
+      "semantic_kind": [
+        "construction",
+        "object"
+      ]
+    },
+    "original_language": "es",
+    "provenance": {
+      "extracted_at": "2026-05-11",
+      "extracted_by": "llm:claude-sonnet-4-6",
+      "rerun_id": "v0.3.1-stewart-full",
+      "schema_version": "0.3.1"
+    },
+    "quality": {
+      "dependency": "high",
+      "extraction": "high",
+      "latex": "high",
+      "semantic": "high",
+      "source_alignment": "high",
+      "translation": "high"
+    },
+    "sources": [
+      {
+        "author": "James Stewart",
+        "chapter": "5",
+        "edition": "7",
+        "page": "372",
+        "section": "5.2",
+        "source_language": "es",
+        "theorem_label": "Definición 2 — integral definida",
+        "work": "Cálculo de una variable — Trascendentes tempranas"
+      }
+    ],
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "origin": "llm",
+        "review_status": "unreviewed",
+        "text": "Definite integral"
+      },
+      "es": {
+        "is_original": true,
+        "origin": "original",
+        "review_status": "unreviewed",
+        "text": "Integral definida"
       }
     },
     "type": "definition"
@@ -3768,6 +3998,107 @@
         "origin": "original",
         "review_status": "unreviewed",
         "text": "Función creciente"
+      }
+    },
+    "type": "definition"
+  },
+  "definition.indefinite-integral": {
+    "ambient_structures": [
+      "real-line"
+    ],
+    "depends_on": [
+      {
+        "confidence": "high",
+        "id": "definition.antiderivative",
+        "notes": "The indefinite integral is the same mathematical concept as the antiderivative (§4.9), re-expressed with integral notation and emphasising the family-of-functions aspect. The two definitions are logically equivalent; the notation ∫ f dx = F + C is introduced here to connect antiderivatives to the definite integral via TFC2.\n",
+        "role": "extends"
+      },
+      {
+        "confidence": "high",
+        "id": "theorem.general-antiderivative",
+        "notes": "Justifies the \"+ C\" in ∫ f dx = F + C: any two antiderivatives of f differ by a constant on an interval.\n",
+        "role": "uses_concept"
+      }
+    ],
+    "domains": {
+      "primary": [
+        "calculus"
+      ]
+    },
+    "id": "definition.indefinite-integral",
+    "kind": "statement",
+    "latex": {
+      "body": "\\int f(x)\\,dx = F(x) + C\n\\quad\\text{means}\\quad F'(x) = f(x)\n",
+      "review_status": "unreviewed",
+      "status": "present"
+    },
+    "natural": {
+      "en": {
+        "is_original": false,
+        "origin": "llm",
+        "review_status": "unreviewed",
+        "text": "The notation ∫ f(x) dx = F(x) means F'(x) = f(x), i.e., F is an antiderivative of f. An indefinite integral represents a family of functions (one antiderivative for each value of the constant C). By convention, every formula for a general indefinite integral is valid only on an interval."
+      },
+      "es": {
+        "is_original": true,
+        "origin": "original",
+        "review_status": "unreviewed",
+        "text": "La notación ∫ f(x) dx = F(x) significa que F'(x) = f(x), es decir, F es una antiderivada de f. Una integral indefinida representa una familia de funciones (una antiderivada para cada valor de la constante C). Por convención, toda fórmula para una integral indefinida general es válida sólo sobre un intervalo."
+      }
+    },
+    "notes": "Atomic decision: definition.antiderivative (§4.9) and definition.indefinite-integral (§5.4) are kept as SEPARATE nodes because they differ in framing and context: antiderivative is introduced as a function F with F' = f in the context of reverse differentiation, while indefinite integral introduces Leibniz notation ∫ f dx and explicitly ties antiderivatives to TFC2. The mathematical content is the same; the depends_on edge (extends) records this relationship. Stewart's key warning (highlighted in the book): a definite integral ∫_a^b f dx is a NUMBER, whereas an indefinite integral ∫ f dx is a FUNCTION (or family).\n",
+    "ontology": {
+      "keywords": [
+        "antiderivative",
+        "family-of-functions",
+        "indefinite-integral",
+        "notation"
+      ],
+      "semantic_kind": [
+        "notation",
+        "object"
+      ]
+    },
+    "original_language": "es",
+    "provenance": {
+      "extracted_at": "2026-05-11",
+      "extracted_by": "llm:claude-sonnet-4-6",
+      "rerun_id": "v0.3.1-stewart-full",
+      "schema_version": "0.3.1"
+    },
+    "quality": {
+      "dependency": "high",
+      "extraction": "high",
+      "latex": "high",
+      "semantic": "high",
+      "source_alignment": "high",
+      "translation": "high"
+    },
+    "sources": [
+      {
+        "author": "James Stewart",
+        "chapter": "5",
+        "edition": "7",
+        "page": "397",
+        "section": "5.4",
+        "source_language": "es",
+        "theorem_label": "Integrales indefinidas",
+        "work": "Cálculo de una variable — Trascendentes tempranas"
+      }
+    ],
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "origin": "llm",
+        "review_status": "unreviewed",
+        "text": "Indefinite integral"
+      },
+      "es": {
+        "is_original": true,
+        "origin": "original",
+        "review_status": "unreviewed",
+        "text": "Integral indefinida"
       }
     },
     "type": "definition"
@@ -7666,6 +7997,108 @@
     },
     "type": "definition"
   },
+  "definition.riemann-sum": {
+    "ambient_structures": [
+      "real-line"
+    ],
+    "depends_on": [
+      {
+        "confidence": "high",
+        "id": "definition.domain",
+        "role": "uses_concept"
+      },
+      {
+        "confidence": "high",
+        "id": "definition.function",
+        "role": "uses_concept"
+      }
+    ],
+    "domains": {
+      "primary": [
+        "calculus"
+      ],
+      "secondary": [
+        "real-analysis"
+      ]
+    },
+    "id": "definition.riemann-sum",
+    "kind": "statement",
+    "latex": {
+      "body": "\\sum_{i=1}^{n} f(x_i^*)\\,\\Delta x_i,\n\\quad x_i^* \\in [x_{i-1}, x_i]\n",
+      "review_status": "unreviewed",
+      "status": "present"
+    },
+    "natural": {
+      "en": {
+        "is_original": false,
+        "origin": "llm",
+        "review_status": "unreviewed",
+        "text": "Let f be a function defined on [a, b]. Partition [a, b] into n subintervals of widths Δxᵢ and choose a sample point xᵢ* in the i-th subinterval [xᵢ₋₁, xᵢ]. The Riemann sum of f for this partition and choice of sample points is Σᵢ₌₁ⁿ f(xᵢ*)Δxᵢ. For equal-width subintervals Δx = (b − a)/n the sum is written Σᵢ₌₁ⁿ f(xᵢ*)Δx."
+      },
+      "es": {
+        "is_original": true,
+        "origin": "original",
+        "review_status": "unreviewed",
+        "text": "Sea f una función definida sobre [a, b]. Se divide [a, b] en n subintervalos de anchos Δxᵢ y se elige un punto muestra xᵢ* en el i-ésimo subintervalo [xᵢ₋₁, xᵢ]. La suma de Riemann de f correspondiente a esta partición y elección de puntos muestra es Σᵢ₌₁ⁿ f(xᵢ*)Δxᵢ. Para subintervalos de igual ancho Δx = (b − a)/n, la suma se escribe Σᵢ₌₁ⁿ f(xᵢ*)Δx."
+      }
+    },
+    "notes": "Named after Bernhard Riemann (1826–1866). Stewart introduces this in §5.2 and credits Riemann. The definite integral (definition.definite-integral) is defined as the limit of Riemann sums as n → ∞ (max Δxᵢ → 0). Rudin Ch6 develops the Riemann-Stieltjes integral, which strictly generalises this.\n",
+    "ontology": {
+      "keywords": [
+        "approximation",
+        "partition",
+        "riemann-sum",
+        "sample-point"
+      ],
+      "semantic_kind": [
+        "construction",
+        "notation"
+      ]
+    },
+    "original_language": "es",
+    "provenance": {
+      "extracted_at": "2026-05-11",
+      "extracted_by": "llm:claude-sonnet-4-6",
+      "rerun_id": "v0.3.1-stewart-full",
+      "schema_version": "0.3.1"
+    },
+    "quality": {
+      "dependency": "high",
+      "extraction": "high",
+      "latex": "high",
+      "semantic": "high",
+      "source_alignment": "high",
+      "translation": "high"
+    },
+    "sources": [
+      {
+        "author": "James Stewart",
+        "chapter": "5",
+        "edition": "7",
+        "page": "372",
+        "section": "5.2",
+        "source_language": "es",
+        "theorem_label": "Nota 3 — suma de Riemann",
+        "work": "Cálculo de una variable — Trascendentes tempranas"
+      }
+    ],
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "origin": "llm",
+        "review_status": "unreviewed",
+        "text": "Riemann sum"
+      },
+      "es": {
+        "is_original": true,
+        "origin": "original",
+        "review_status": "unreviewed",
+        "text": "Suma de Riemann"
+      }
+    },
+    "type": "definition"
+  },
   "definition.right-continuity": {
     "ambient_structures": [
       "real-line"
@@ -9219,6 +9652,53 @@
         "id": "theorem.continuity-arithmetic",
         "implicit": false,
         "notes": "Constant-multiple (inciso 3) builds c x^m from x^m; sum (inciso 1) assembles the polynomial; quotient (inciso 5) handles the rational case where the denominator is non-zero.\n",
+        "role": "essential"
+      }
+    ]
+  },
+  "proof.definite-integral-bound.from-linearity": {
+    "id": "proof.definite-integral-bound.from-linearity",
+    "kind": "proof",
+    "provenance": {
+      "extracted_at": "2026-05-11",
+      "extracted_by": "llm:claude-sonnet-4-6",
+      "rerun_id": "v0.3.1-stewart-full",
+      "schema_version": "0.3.1"
+    },
+    "proves": "proposition.definite-integral-bound",
+    "quality": {
+      "dependency": "high",
+      "extraction": "high",
+      "semantic": "high",
+      "source_alignment": "high"
+    },
+    "sources": [
+      {
+        "author": "James Stewart",
+        "chapter": "5",
+        "edition": "7",
+        "page": "381",
+        "section": "5.2",
+        "source_language": "es",
+        "work": "Cálculo de una variable — Trascendentes tempranas"
+      }
+    ],
+    "status": "extracted",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      {
+        "confidence": "high",
+        "id": "definition.definite-integral",
+        "implicit": false,
+        "notes": "Non-negativity (Property 6) appeals to the Riemann sum definition: each term f(xᵢ*)Δx ≥ 0 passes to the limit.\n",
+        "role": "definition"
+      },
+      {
+        "confidence": "high",
+        "id": "proposition.definite-integral-properties",
+        "implicit": false,
+        "notes": "Linearity (Properties 1–5) is used to reduce f ≥ g to f−g ≥ 0 and to handle the constant-function bounds.\n",
         "role": "essential"
       }
     ]
@@ -10849,6 +11329,139 @@
       }
     ]
   },
+  "proof.ftc-part-1.stewart": {
+    "id": "proof.ftc-part-1.stewart",
+    "kind": "proof",
+    "provenance": {
+      "extracted_at": "2026-05-11",
+      "extracted_by": "llm:claude-sonnet-4-6",
+      "rerun_id": "v0.3.1-stewart-full",
+      "schema_version": "0.3.1"
+    },
+    "proves": "theorem.ftc-part-1",
+    "quality": {
+      "dependency": "high",
+      "extraction": "high",
+      "semantic": "high",
+      "source_alignment": "high"
+    },
+    "sources": [
+      {
+        "author": "James Stewart",
+        "chapter": "5",
+        "edition": "7",
+        "page": "388",
+        "section": "5.3",
+        "source_language": "es",
+        "work": "Cálculo de una variable — Trascendentes tempranas"
+      }
+    ],
+    "status": "extracted",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      {
+        "confidence": "high",
+        "id": "definition.continuity-at-point",
+        "implicit": false,
+        "notes": "Continuity of f is actively used: as h→0 the min m and max M on [x, x+h] both converge to f(x), which is the step that closes the squeeze argument. Without continuity the limit is not determined.\n",
+        "role": "essential"
+      },
+      {
+        "confidence": "high",
+        "id": "definition.definite-integral",
+        "implicit": false,
+        "role": "definition"
+      },
+      {
+        "confidence": "high",
+        "id": "definition.derivative-at-point",
+        "implicit": false,
+        "notes": "The proof expands g'(x) using the limit definition of the derivative.\n",
+        "role": "definition"
+      },
+      {
+        "confidence": "high",
+        "id": "proposition.definite-integral-bound",
+        "implicit": false,
+        "notes": "Comparison property (Property 8) bounds ∫_x^{x+h} f(t) dt between m·h and M·h.\n",
+        "role": "essential"
+      },
+      {
+        "confidence": "high",
+        "id": "theorem.extreme-value-theorem",
+        "implicit": false,
+        "notes": "Guarantees f attains min m and max M on [x, x+h], giving the bound m·h ≤ g(x+h)−g(x) ≤ M·h.\n",
+        "role": "essential"
+      },
+      {
+        "confidence": "high",
+        "id": "theorem.squeeze-theorem",
+        "implicit": false,
+        "notes": "As h→0, continuity of f forces m→f(x) and M→f(x), so the squeeze closes the limit to g'(x) = f(x).\n",
+        "role": "essential"
+      }
+    ]
+  },
+  "proof.ftc-part-2.from-ftc1": {
+    "id": "proof.ftc-part-2.from-ftc1",
+    "kind": "proof",
+    "provenance": {
+      "extracted_at": "2026-05-11",
+      "extracted_by": "llm:claude-sonnet-4-6",
+      "rerun_id": "v0.3.1-stewart-full",
+      "schema_version": "0.3.1"
+    },
+    "proves": "theorem.ftc-part-2",
+    "quality": {
+      "dependency": "high",
+      "extraction": "high",
+      "semantic": "high",
+      "source_alignment": "high"
+    },
+    "sources": [
+      {
+        "author": "James Stewart",
+        "chapter": "5",
+        "edition": "7",
+        "page": "391",
+        "section": "5.3",
+        "source_language": "es",
+        "work": "Cálculo de una variable — Trascendentes tempranas"
+      }
+    ],
+    "status": "extracted",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      {
+        "confidence": "high",
+        "id": "corollary.derivatives-equal-implies-differ-by-constant",
+        "implicit": false,
+        "notes": "Since F' = g' = f, the corollary gives F(x) = g(x) + C for some constant C.\n",
+        "role": "essential"
+      },
+      {
+        "confidence": "high",
+        "id": "definition.antiderivative",
+        "implicit": false,
+        "role": "definition"
+      },
+      {
+        "confidence": "high",
+        "id": "definition.definite-integral",
+        "implicit": false,
+        "role": "definition"
+      },
+      {
+        "confidence": "high",
+        "id": "theorem.ftc-part-1",
+        "implicit": false,
+        "notes": "TFC1 establishes that g(x) = ∫_a^x f(t) dt satisfies g'(x) = f(x), making it an antiderivative — the key bridge to TFC2.\n",
+        "role": "essential"
+      }
+    ]
+  },
   "proof.general-antiderivative.from-corollary": {
     "id": "proof.general-antiderivative.from-corollary",
     "kind": "proof",
@@ -11137,6 +11750,59 @@
         "id": "theorem.mean-value-theorem",
         "implicit": false,
         "locality": "case-positive-derivative",
+        "role": "essential"
+      }
+    ]
+  },
+  "proof.integrals-of-symmetric-functions.from-substitution": {
+    "id": "proof.integrals-of-symmetric-functions.from-substitution",
+    "kind": "proof",
+    "provenance": {
+      "extracted_at": "2026-05-11",
+      "extracted_by": "llm:claude-sonnet-4-6",
+      "rerun_id": "v0.3.1-stewart-full",
+      "schema_version": "0.3.1"
+    },
+    "proves": "proposition.integrals-of-symmetric-functions",
+    "quality": {
+      "dependency": "high",
+      "extraction": "high",
+      "semantic": "high",
+      "source_alignment": "high"
+    },
+    "sources": [
+      {
+        "author": "James Stewart",
+        "chapter": "5",
+        "edition": "7",
+        "page": "412",
+        "section": "5.5",
+        "source_language": "es",
+        "work": "Cálculo de una variable — Trascendentes tempranas"
+      }
+    ],
+    "status": "extracted",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      {
+        "confidence": "high",
+        "id": "definition.definite-integral",
+        "implicit": false,
+        "role": "definition"
+      },
+      {
+        "confidence": "high",
+        "id": "proposition.definite-integral-properties",
+        "implicit": false,
+        "notes": "Interval-additivity (Property 5) splits ∫_{-a}^a into ∫_{-a}^0 + ∫_0^a.\n",
+        "role": "essential"
+      },
+      {
+        "confidence": "high",
+        "id": "theorem.substitution-rule-definite",
+        "implicit": false,
+        "notes": "The substitution t = −x on the [−a, 0] piece transforms it to ∫_0^a f(−t) dt; limits change from [−a, 0] to [a, 0] and the −dt flips them to [0, a].\n",
         "role": "essential"
       }
     ]
@@ -12412,6 +13078,127 @@
       }
     ]
   },
+  "proof.substitution-rule-definite.from-ftc2": {
+    "id": "proof.substitution-rule-definite.from-ftc2",
+    "kind": "proof",
+    "provenance": {
+      "extracted_at": "2026-05-11",
+      "extracted_by": "llm:claude-sonnet-4-6",
+      "rerun_id": "v0.3.1-stewart-full",
+      "schema_version": "0.3.1"
+    },
+    "proves": "theorem.substitution-rule-definite",
+    "quality": {
+      "dependency": "high",
+      "extraction": "high",
+      "semantic": "high",
+      "source_alignment": "high"
+    },
+    "sources": [
+      {
+        "author": "James Stewart",
+        "chapter": "5",
+        "edition": "7",
+        "page": "411",
+        "section": "5.5",
+        "source_language": "es",
+        "work": "Cálculo de una variable — Trascendentes tempranas"
+      }
+    ],
+    "status": "extracted",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      {
+        "confidence": "high",
+        "id": "definition.antiderivative",
+        "implicit": false,
+        "notes": "Definitional unfolding: F is an antiderivative means F' = f. Existence of F is guaranteed by TFC1 (implicit, via TFC2's hypotheses).\n",
+        "role": "definition"
+      },
+      {
+        "confidence": "high",
+        "id": "definition.continuity-on-interval",
+        "implicit": false,
+        "notes": "Continuity conditions ensure TFC2 is applicable on both intervals.\n",
+        "role": "background"
+      },
+      {
+        "confidence": "high",
+        "id": "theorem.chain-rule",
+        "implicit": false,
+        "notes": "Shows that F(g(x)) is an antiderivative of f(g(x))·g'(x), enabling TFC2 on the left-hand integral.\n",
+        "role": "essential"
+      },
+      {
+        "confidence": "high",
+        "id": "theorem.ftc-part-2",
+        "implicit": false,
+        "notes": "Applied twice: to evaluate ∫_a^b f(g(x))g'(x)dx via F(g(b))−F(g(a)), and to evaluate ∫_{g(a)}^{g(b)} f(u)du by the same expression.\n",
+        "role": "essential"
+      }
+    ]
+  },
+  "proof.substitution-rule.from-chain-rule": {
+    "id": "proof.substitution-rule.from-chain-rule",
+    "kind": "proof",
+    "provenance": {
+      "extracted_at": "2026-05-11",
+      "extracted_by": "llm:claude-sonnet-4-6",
+      "rerun_id": "v0.3.1-stewart-full",
+      "schema_version": "0.3.1"
+    },
+    "proves": "theorem.substitution-rule",
+    "quality": {
+      "dependency": "high",
+      "extraction": "high",
+      "semantic": "high",
+      "source_alignment": "high"
+    },
+    "sources": [
+      {
+        "author": "James Stewart",
+        "chapter": "5",
+        "edition": "7",
+        "page": "408",
+        "section": "5.5",
+        "source_language": "es",
+        "work": "Cálculo de una variable — Trascendentes tempranas"
+      }
+    ],
+    "status": "extracted",
+    "style": "direct",
+    "type": "proof",
+    "uses": [
+      {
+        "confidence": "high",
+        "id": "definition.antiderivative",
+        "implicit": false,
+        "notes": "Definitional unfolding: F is an antiderivative means F' = f.\n",
+        "role": "definition"
+      },
+      {
+        "confidence": "high",
+        "id": "definition.indefinite-integral",
+        "implicit": false,
+        "role": "definition"
+      },
+      {
+        "confidence": "high",
+        "id": "theorem.chain-rule",
+        "implicit": false,
+        "notes": "The proof recognises f(g(x))·g'(x) as the chain-rule derivative of F(g(x)), so integrating both sides gives F(g(x))+C.\n",
+        "role": "essential"
+      },
+      {
+        "confidence": "high",
+        "id": "theorem.ftc-part-1",
+        "implicit": true,
+        "notes": "Stewart invokes implicitly: F exists because f is continuous on I, which is guaranteed by TFC1. The proof assumes F without citing the existence source.\n",
+        "role": "existence"
+      }
+    ]
+  },
   "proof.sum-rule-derivative.stewart": {
     "id": "proof.sum-rule-derivative.stewart",
     "kind": "proof",
@@ -13087,6 +13874,215 @@
         "origin": "original",
         "review_status": "unreviewed",
         "text": "Prueba de concavidad"
+      }
+    },
+    "type": "proposition"
+  },
+  "proposition.definite-integral-bound": {
+    "ambient_structures": [
+      "real-line"
+    ],
+    "depends_on": [
+      {
+        "confidence": "high",
+        "id": "definition.definite-integral",
+        "role": "uses_concept"
+      },
+      {
+        "confidence": "high",
+        "id": "proposition.definite-integral-properties",
+        "notes": "Property 7 follows from applying Property 6 to f − g; Property 8 uses Properties 1 and 3 together with Property 7.",
+        "role": "uses_concept"
+      }
+    ],
+    "domains": {
+      "primary": [
+        "calculus"
+      ],
+      "secondary": [
+        "real-analysis"
+      ]
+    },
+    "id": "proposition.definite-integral-bound",
+    "kind": "statement",
+    "latex": {
+      "body": "f(x) \\ge 0 \\;\\Rightarrow\\; \\int_a^b f\\,dx \\ge 0;\\qquad\nf \\ge g \\;\\Rightarrow\\; \\int_a^b f\\,dx \\ge \\int_a^b g\\,dx;\\\\\nm \\le f(x) \\le M \\;\\Rightarrow\\;\n  m(b-a) \\;\\le\\; \\int_a^b f(x)\\,dx \\;\\le\\; M(b-a)\n",
+      "review_status": "unreviewed",
+      "status": "present"
+    },
+    "natural": {
+      "en": {
+        "is_original": false,
+        "origin": "llm",
+        "review_status": "unreviewed",
+        "text": "For a ≤ b the following comparison properties hold: 6. If f(x) ≥ 0 for a ≤ x ≤ b, then ∫_a^b f(x) dx ≥ 0. 7. If f(x) ≥ g(x) for a ≤ x ≤ b, then\n   ∫_a^b f(x) dx ≥ ∫_a^b g(x) dx.\n8. If m ≤ f(x) ≤ M for a ≤ x ≤ b, then\n   m(b − a) ≤ ∫_a^b f(x) dx ≤ M(b − a)."
+      },
+      "es": {
+        "is_original": true,
+        "origin": "original",
+        "review_status": "unreviewed",
+        "text": "Para a ≤ b se tienen las siguientes propiedades de comparación: 6. Si f(x) ≥ 0 para a ≤ x ≤ b, entonces ∫_a^b f(x) dx ≥ 0. 7. Si f(x) ≥ g(x) para a ≤ x ≤ b, entonces\n   ∫_a^b f(x) dx ≥ ∫_a^b g(x) dx.\n8. Si m ≤ f(x) ≤ M para a ≤ x ≤ b, entonces\n   m(b − a) ≤ ∫_a^b f(x) dx ≤ M(b − a)."
+      }
+    },
+    "notes": "Property 8 is used as the key squeeze in the proof of TFC Part 1 (proof.ftc-part-1.stewart): it bounds the increment (g(x+h)−g(x))/h between the min and max of f on [x, x+h]. Stewart gives a brief explicit proof of Property 8 in the text; Properties 6–7 are stated without separate proofs since they follow immediately from 8 and 1.\n",
+    "ontology": {
+      "keywords": [
+        "comparison",
+        "estimation",
+        "integral-bound",
+        "monotonicity"
+      ],
+      "semantic_kind": [
+        "criterion",
+        "principle"
+      ]
+    },
+    "original_language": "es",
+    "proved_by": [
+      "proof.definite-integral-bound.from-linearity"
+    ],
+    "provenance": {
+      "extracted_at": "2026-05-11",
+      "extracted_by": "llm:claude-sonnet-4-6",
+      "rerun_id": "v0.3.1-stewart-full",
+      "schema_version": "0.3.1"
+    },
+    "quality": {
+      "dependency": "high",
+      "extraction": "high",
+      "latex": "high",
+      "semantic": "high",
+      "source_alignment": "high",
+      "translation": "high"
+    },
+    "sources": [
+      {
+        "author": "James Stewart",
+        "chapter": "5",
+        "edition": "7",
+        "page": "381",
+        "section": "5.2",
+        "source_language": "es",
+        "theorem_label": "Propiedades de comparación de la integral (6–8)",
+        "work": "Cálculo de una variable — Trascendentes tempranas"
+      }
+    ],
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "origin": "llm",
+        "review_status": "unreviewed",
+        "text": "Comparison properties of the definite integral"
+      },
+      "es": {
+        "is_original": true,
+        "origin": "original",
+        "review_status": "unreviewed",
+        "text": "Propiedades de comparación de la integral definida"
+      }
+    },
+    "type": "proposition"
+  },
+  "proposition.definite-integral-properties": {
+    "ambient_structures": [
+      "real-line"
+    ],
+    "depends_on": [
+      {
+        "confidence": "high",
+        "id": "definition.definite-integral",
+        "role": "uses_concept"
+      },
+      {
+        "confidence": "high",
+        "id": "proposition.limit-laws",
+        "notes": "Properties 2-4 follow from the linearity of limits; Property 5 follows from additivity of finite sums.\n",
+        "role": "uses_concept"
+      }
+    ],
+    "domains": {
+      "primary": [
+        "calculus"
+      ],
+      "secondary": [
+        "real-analysis"
+      ]
+    },
+    "id": "proposition.definite-integral-properties",
+    "kind": "statement",
+    "latex": {
+      "body": "\\int_a^b c\\,dx = c(b-a);\\quad\n\\int_a^b [f+g]\\,dx = \\int_a^b f\\,dx + \\int_a^b g\\,dx;\\quad\n\\int_a^b cf\\,dx = c\\int_a^b f\\,dx;\\\\\n\\int_a^c f\\,dx + \\int_c^b f\\,dx = \\int_a^b f\\,dx;\\quad\n\\int_b^a f\\,dx = -\\int_a^b f\\,dx;\\quad\n\\int_a^a f\\,dx = 0\n",
+      "review_status": "unreviewed",
+      "status": "present"
+    },
+    "natural": {
+      "en": {
+        "is_original": false,
+        "origin": "llm",
+        "review_status": "unreviewed",
+        "text": "Assuming f and g are continuous functions, the definite integral satisfies: 1. ∫_a^b c dx = c(b − a) for any constant c. 2. ∫_a^b [f(x) + g(x)] dx = ∫_a^b f(x) dx + ∫_a^b g(x) dx. 3. ∫_a^b c·f(x) dx = c·∫_a^b f(x) dx for any constant c. 4. ∫_a^b [f(x) − g(x)] dx = ∫_a^b f(x) dx − ∫_a^b g(x) dx. 5. ∫_a^c f(x) dx + ∫_c^b f(x) dx = ∫_a^b f(x) dx. Also: ∫_b^a f(x) dx = −∫_a^b f(x) dx and ∫_a^a f(x) dx = 0."
+      },
+      "es": {
+        "is_original": true,
+        "origin": "original",
+        "review_status": "unreviewed",
+        "text": "Suponiendo que f y g son funciones continuas, se tienen las siguientes propiedades de la integral definida: 1. ∫_a^b c dx = c(b − a), donde c es cualquier constante. 2. ∫_a^b [f(x) + g(x)] dx = ∫_a^b f(x) dx + ∫_a^b g(x) dx. 3. ∫_a^b c·f(x) dx = c·∫_a^b f(x) dx, donde c es cualquier constante. 4. ∫_a^b [f(x) − g(x)] dx = ∫_a^b f(x) dx − ∫_a^b g(x) dx. 5. ∫_a^c f(x) dx + ∫_c^b f(x) dx = ∫_a^b f(x) dx. Además: ∫_b^a f(x) dx = −∫_a^b f(x) dx y ∫_a^a f(x) dx = 0."
+      }
+    },
+    "notes": "Type-B bundle: Stewart presents Properties 1–5 as a named group. They are closely related linearity/additivity rules that are always used together. Splitting further (one node per property) would produce five near-identical nodes with no clear analytic gain. Accepted as deliberate bundle debt. Property 2 has a brief inline derivation using the limit-of-a-sum; the others are analogous. No separate proof node created. Properties 6–8 (comparison properties) are in a separate node proposition.definite-integral-bound, where Property 8 has an explicit proof.\n",
+    "ontology": {
+      "keywords": [
+        "additivity",
+        "integral-properties",
+        "linearity",
+        "superposition"
+      ],
+      "semantic_kind": [
+        "criterion",
+        "principle"
+      ]
+    },
+    "original_language": "es",
+    "provenance": {
+      "extracted_at": "2026-05-11",
+      "extracted_by": "llm:claude-sonnet-4-6",
+      "rerun_id": "v0.3.1-stewart-full",
+      "schema_version": "0.3.1"
+    },
+    "quality": {
+      "dependency": "medium",
+      "extraction": "high",
+      "latex": "high",
+      "semantic": "high",
+      "source_alignment": "high",
+      "translation": "high"
+    },
+    "sources": [
+      {
+        "author": "James Stewart",
+        "chapter": "5",
+        "edition": "7",
+        "page": "379",
+        "section": "5.2",
+        "source_language": "es",
+        "theorem_label": "Propiedades de la integral (1–5)",
+        "work": "Cálculo de una variable — Trascendentes tempranas"
+      }
+    ],
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "origin": "llm",
+        "review_status": "unreviewed",
+        "text": "Properties of the definite integral"
+      },
+      "es": {
+        "is_original": true,
+        "origin": "original",
+        "review_status": "unreviewed",
+        "text": "Propiedades de la integral definida"
       }
     },
     "type": "proposition"
@@ -13963,6 +14959,319 @@
         "origin": "original",
         "review_status": "unreviewed",
         "text": "Prueba creciente/decreciente"
+      }
+    },
+    "type": "proposition"
+  },
+  "proposition.indefinite-integral-table": {
+    "ambient_structures": [
+      "real-line"
+    ],
+    "depends_on": [
+      {
+        "confidence": "high",
+        "id": "definition.indefinite-integral",
+        "role": "uses_concept"
+      },
+      {
+        "confidence": "high",
+        "id": "proposition.antiderivative-formulas-table",
+        "notes": "§5.4 Table 1 re-presents the §4.9 antiderivative table in integral notation, adding inverse-trig rows (tan⁻¹, sin⁻¹) and hyperbolic rows (sinh, cosh) not in the §4.9 table.\n",
+        "role": "extends"
+      }
+    ],
+    "domains": {
+      "primary": [
+        "calculus"
+      ]
+    },
+    "id": "proposition.indefinite-integral-table",
+    "kind": "statement",
+    "latex": {
+      "body": "\\int x^n\\,dx = \\frac{x^{n+1}}{n+1}+C\\;(n\\neq-1);\\quad\n\\int \\frac{1}{x}\\,dx = \\ln|x|+C;\\quad\n\\int e^x\\,dx = e^x+C;\\quad\n\\int \\sin x\\,dx = -\\cos x+C;\\quad\n\\int \\cos x\\,dx = \\sin x+C;\\\\\n\\int \\sec^2 x\\,dx = \\tan x+C;\\quad\n\\int \\frac{1}{x^2+1}\\,dx = \\tan^{-1}x+C;\\quad\n\\int \\frac{1}{\\sqrt{1-x^2}}\\,dx = \\sin^{-1}x+C\n",
+      "review_status": "unreviewed",
+      "status": "informal"
+    },
+    "natural": {
+      "en": {
+        "is_original": false,
+        "origin": "llm",
+        "review_status": "unreviewed",
+        "text": "The following are basic formulas for indefinite integrals (each can be verified by differentiating the right-hand side): ∫ c·f dx = c·∫ f dx; ∫[f+g] dx = ∫f dx + ∫g dx; ∫ k dx = kx + C; ∫ xⁿ dx = xⁿ⁺¹/(n+1) + C (n ≠ −1); ∫(1/x) dx = ln|x| + C; ∫ eˣ dx = eˣ + C; ∫ aˣ dx = aˣ/ln a + C; ∫ sin x dx = −cos x + C; ∫ cos x dx = sin x + C; ∫ sec²x dx = tan x + C; ∫ csc²x dx = −cot x + C; ∫ sec x tan x dx = sec x + C; ∫ csc x cot x dx = −csc x + C; ∫ 1/(x²+1) dx = tan⁻¹x + C; ∫ 1/√(1−x²) dx = sin⁻¹x + C; ∫ sinh x dx = cosh x + C; ∫ cosh x dx = sinh x + C."
+      },
+      "es": {
+        "is_original": true,
+        "origin": "original",
+        "review_status": "unreviewed",
+        "text": "Las siguientes son fórmulas básicas para integrales indefinidas (cada una puede verificarse derivando el lado derecho): ∫ c·f(x) dx = c·∫ f(x) dx; ∫ [f(x)+g(x)] dx = ∫f dx + ∫g dx; ∫ k dx = kx + C; ∫ xⁿ dx = xⁿ⁺¹/(n+1) + C  (n ≠ −1); ∫ (1/x) dx = ln|x| + C; ∫ eˣ dx = eˣ + C; ∫ aˣ dx = aˣ/ln a + C; ∫ sin x dx = −cos x + C; ∫ cos x dx = sin x + C; ∫ sec²x dx = tan x + C; ∫ csc²x dx = −cot x + C; ∫ sec x tan x dx = sec x + C; ∫ csc x cot x dx = −csc x + C; ∫ 1/(x²+1) dx = tan⁻¹x + C; ∫ 1/√(1−x²) dx = sin⁻¹x + C; ∫ sinh x dx = cosh x + C; ∫ cosh x dx = sinh x + C."
+      }
+    },
+    "notes": "Type-A bundle: 17+ formulas in one node, mirroring the §4.9 bundle (proposition.antiderivative-formulas-table). Accepted as explicit debt. Domain-of-validity gaps carried forward from §4.9:\n  - ∫(1/x)dx = ln|x|+C: disconnected-domain caveat (the general antiderivative\n    on ℝ\\{0} needs two constants C₁ on (−∞,0) and C₂ on (0,∞)).\n  - ∫xⁿdx = xⁿ⁺¹/(n+1)+C: n real requires the generalised power rule\n    (§3.6 logarithmic differentiation); the elementary form covers n integer.\nThe latex body is marked `informal` because listing all 17 rows as LaTeX would be unwieldy; a summary of the key forms is given instead.\n",
+    "ontology": {
+      "keywords": [
+        "antiderivative",
+        "hyperbolic",
+        "integral-table",
+        "inverse-trig",
+        "standard-forms"
+      ],
+      "semantic_kind": [
+        "notation",
+        "schema"
+      ]
+    },
+    "original_language": "es",
+    "provenance": {
+      "extracted_at": "2026-05-11",
+      "extracted_by": "llm:claude-sonnet-4-6",
+      "rerun_id": "v0.3.1-stewart-full",
+      "schema_version": "0.3.1"
+    },
+    "quality": {
+      "dependency": "medium",
+      "extraction": "high",
+      "latex": "low",
+      "semantic": "high",
+      "source_alignment": "high",
+      "translation": "high"
+    },
+    "sources": [
+      {
+        "author": "James Stewart",
+        "chapter": "5",
+        "edition": "7",
+        "page": "398",
+        "section": "5.4",
+        "source_language": "es",
+        "theorem_label": "Tabla 1 — tabla de integrales indefinidas",
+        "work": "Cálculo de una variable — Trascendentes tempranas"
+      }
+    ],
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "origin": "llm",
+        "review_status": "unreviewed",
+        "text": "Table of indefinite integrals"
+      },
+      "es": {
+        "is_original": true,
+        "origin": "original",
+        "review_status": "unreviewed",
+        "text": "Tabla de integrales indefinidas"
+      }
+    },
+    "type": "proposition"
+  },
+  "proposition.integral-evaluation-formula": {
+    "ambient_structures": [
+      "real-line"
+    ],
+    "depends_on": [
+      {
+        "confidence": "high",
+        "id": "definition.definite-integral",
+        "role": "uses_concept"
+      },
+      {
+        "confidence": "high",
+        "id": "theorem.integrability-of-continuous",
+        "notes": "Integrability guarantees the limit is independent of sample-point choice, so the right-endpoint specialisation is valid.\n",
+        "role": "uses_concept"
+      }
+    ],
+    "domains": {
+      "primary": [
+        "calculus"
+      ],
+      "secondary": [
+        "real-analysis"
+      ]
+    },
+    "id": "proposition.integral-evaluation-formula",
+    "kind": "statement",
+    "latex": {
+      "body": "\\int_a^b f(x)\\,dx\n  = \\lim_{n \\to \\infty} \\sum_{i=1}^{n} f(x_i)\\,\\Delta x,\n\\quad \\Delta x = \\frac{b-a}{n},\\quad x_i = a + i\\,\\Delta x\n",
+      "review_status": "unreviewed",
+      "status": "present"
+    },
+    "natural": {
+      "en": {
+        "is_original": false,
+        "origin": "llm",
+        "review_status": "unreviewed",
+        "text": "If f is integrable on [a, b], then ∫_a^b f(x) dx = lim_{n→∞} Σᵢ₌₁ⁿ f(xᵢ)Δx where Δx = (b − a)/n and xᵢ = a + i·Δx are the right endpoints of equal subintervals."
+      },
+      "es": {
+        "is_original": true,
+        "origin": "original",
+        "review_status": "unreviewed",
+        "text": "Si f es integrable sobre [a, b], entonces ∫_a^b f(x) dx = lím_{n→∞} Σᵢ₌₁ⁿ f(xᵢ)Δx donde Δx = (b − a)/n y xᵢ = a + i·Δx son los puntos extremos derechos de los subintervalos iguales."
+      }
+    },
+    "notes": "Stewart uses this proposition heavily in the worked examples of §5.2 to compute integrals from the definition (before the FTC is available). The theorem follows immediately from the definition: when f is integrable, all sample-point choices yield the same limit, so the convenient right-endpoint choice is valid.\n",
+    "ontology": {
+      "keywords": [
+        "definite-integral",
+        "evaluation",
+        "riemann-sum",
+        "right-endpoint"
+      ],
+      "semantic_kind": [
+        "criterion",
+        "principle"
+      ]
+    },
+    "original_language": "es",
+    "provenance": {
+      "extracted_at": "2026-05-11",
+      "extracted_by": "llm:claude-sonnet-4-6",
+      "rerun_id": "v0.3.1-stewart-full",
+      "schema_version": "0.3.1"
+    },
+    "quality": {
+      "dependency": "high",
+      "extraction": "high",
+      "latex": "high",
+      "semantic": "high",
+      "source_alignment": "high",
+      "translation": "high"
+    },
+    "sources": [
+      {
+        "author": "James Stewart",
+        "chapter": "5",
+        "edition": "7",
+        "page": "374",
+        "section": "5.2",
+        "source_language": "es",
+        "theorem_label": "Teorema 4",
+        "work": "Cálculo de una variable — Trascendentes tempranas"
+      }
+    ],
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "origin": "llm",
+        "review_status": "unreviewed",
+        "text": "Integral evaluation formula (right endpoints)"
+      },
+      "es": {
+        "is_original": true,
+        "origin": "original",
+        "review_status": "unreviewed",
+        "text": "Fórmula de evaluación de la integral (puntos extremos derechos)"
+      }
+    },
+    "type": "proposition"
+  },
+  "proposition.integrals-of-symmetric-functions": {
+    "ambient_structures": [
+      "real-line"
+    ],
+    "depends_on": [
+      {
+        "confidence": "high",
+        "id": "definition.definite-integral",
+        "role": "uses_concept"
+      },
+      {
+        "confidence": "high",
+        "id": "proposition.definite-integral-properties",
+        "notes": "Uses the interval-additivity property to split ∫_{-a}^a into ∫_{-a}^0 + ∫_0^a.\n",
+        "role": "uses_concept"
+      },
+      {
+        "confidence": "high",
+        "id": "theorem.substitution-rule-definite",
+        "notes": "The proof uses the substitution u = −x (du = −dx) on the [−a, 0] piece to transform it into an integral on [0, a], then applies even/odd symmetry.\n",
+        "role": "uses_concept"
+      }
+    ],
+    "domains": {
+      "primary": [
+        "calculus"
+      ]
+    },
+    "id": "proposition.integrals-of-symmetric-functions",
+    "kind": "statement",
+    "latex": {
+      "body": "f \\in C([-a,a]):\\quad\nf(-x)=f(x)\\;\\Rightarrow\\;\\int_{-a}^{a}f(x)\\,dx = 2\\int_0^a f(x)\\,dx;\\\\\nf(-x)=-f(x)\\;\\Rightarrow\\;\\int_{-a}^{a}f(x)\\,dx = 0\n",
+      "review_status": "unreviewed",
+      "status": "present"
+    },
+    "natural": {
+      "en": {
+        "is_original": false,
+        "origin": "llm",
+        "review_status": "unreviewed",
+        "text": "Suppose f is continuous on [−a, a]. (a) If f is even [f(−x) = f(x)], then\n    ∫_{-a}^a f(x) dx = 2 ∫_0^a f(x) dx.\n(b) If f is odd [f(−x) = −f(x)], then\n    ∫_{-a}^a f(x) dx = 0."
+      },
+      "es": {
+        "is_original": true,
+        "origin": "original",
+        "review_status": "unreviewed",
+        "text": "Suponga que f es continua sobre [−a, a]. (a) Si f es par [f(−x) = f(x)], entonces\n    ∫_{-a}^a f(x) dx = 2 ∫_0^a f(x) dx.\n(b) Si f es impar [f(−x) = −f(x)], entonces\n    ∫_{-a}^a f(x) dx = 0."
+      }
+    },
+    "notes": "A practical computational shortcut: symmetric limits [−a, a] combined with even or odd symmetry halves (or eliminates) the integration work. The two parts are bundled in one node following Stewart's box; splitting would be possible but adds no analytical value since they share proof structure and context.\n",
+    "ontology": {
+      "keywords": [
+        "definite-integral",
+        "even-function",
+        "odd-function",
+        "simplification",
+        "symmetry"
+      ],
+      "semantic_kind": [
+        "criterion"
+      ]
+    },
+    "original_language": "es",
+    "proved_by": [
+      "proof.integrals-of-symmetric-functions.from-substitution"
+    ],
+    "provenance": {
+      "extracted_at": "2026-05-11",
+      "extracted_by": "llm:claude-sonnet-4-6",
+      "rerun_id": "v0.3.1-stewart-full",
+      "schema_version": "0.3.1"
+    },
+    "quality": {
+      "dependency": "high",
+      "extraction": "high",
+      "latex": "high",
+      "semantic": "high",
+      "source_alignment": "high",
+      "translation": "high"
+    },
+    "sources": [
+      {
+        "author": "James Stewart",
+        "chapter": "5",
+        "edition": "7",
+        "page": "412",
+        "section": "5.5",
+        "source_language": "es",
+        "theorem_label": "Integrales de funciones simétricas (7)",
+        "work": "Cálculo de una variable — Trascendentes tempranas"
+      }
+    ],
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "origin": "llm",
+        "review_status": "unreviewed",
+        "text": "Integrals of symmetric functions"
+      },
+      "es": {
+        "is_original": true,
+        "origin": "original",
+        "review_status": "unreviewed",
+        "text": "Integrales de funciones simétricas"
       }
     },
     "type": "proposition"
@@ -15615,6 +16924,107 @@
         "origin": "original",
         "review_status": "unreviewed",
         "text": "Derivación logarítmica"
+      }
+    },
+    "type": "proposition"
+  },
+  "proposition.midpoint-rule": {
+    "ambient_structures": [
+      "real-line"
+    ],
+    "depends_on": [
+      {
+        "confidence": "high",
+        "id": "definition.definite-integral",
+        "role": "uses_concept"
+      },
+      {
+        "confidence": "high",
+        "id": "definition.riemann-sum",
+        "notes": "the Midpoint Rule is a Riemann sum with the midpoints as sample points",
+        "role": "uses_concept"
+      }
+    ],
+    "domains": {
+      "primary": [
+        "calculus",
+        "numerical-analysis"
+      ]
+    },
+    "id": "proposition.midpoint-rule",
+    "kind": "statement",
+    "latex": {
+      "body": "\\int_a^b f(x)\\,dx\n  \\;\\approx\\; \\sum_{i=1}^{n} f(\\bar{x}_i)\\,\\Delta x\n  = \\Delta x\\bigl[f(\\bar{x}_1)+\\cdots+f(\\bar{x}_n)\\bigr],\n\\quad \\bar{x}_i = \\tfrac{1}{2}(x_{i-1}+x_i)\n",
+      "review_status": "unreviewed",
+      "status": "present"
+    },
+    "natural": {
+      "en": {
+        "is_original": false,
+        "origin": "llm",
+        "review_status": "unreviewed",
+        "text": "∫_a^b f(x) dx ≈ Σᵢ₌₁ⁿ f(x̄ᵢ)Δx = Δx[f(x̄₁) + ··· + f(x̄ₙ)] where Δx = (b − a)/n and x̄ᵢ = (xᵢ₋₁ + xᵢ)/2 is the midpoint of the i-th subinterval [xᵢ₋₁, xᵢ]."
+      },
+      "es": {
+        "is_original": true,
+        "origin": "original",
+        "review_status": "unreviewed",
+        "text": "∫_a^b f(x) dx ≈ Σᵢ₌₁ⁿ f(x̄ᵢ)Δx = Δx[f(x̄₁) + ··· + f(x̄ₙ)] donde Δx = (b − a)/n y x̄ᵢ = (xᵢ₋₁ + xᵢ)/2 es el punto medio del i-ésimo subintervalo [xᵢ₋₁, xᵢ]."
+      }
+    },
+    "notes": "Numerical approximation schema. In practice the Midpoint Rule gives a better approximation than either the left- or right-endpoint Riemann sums for a given n (the error is O(1/n²) for smooth f vs O(1/n) for endpoint sums). Error analysis appears in Stewart §7.7 (Simpson's Rule, Trapezoidal Rule, Midpoint Rule error bounds). No formal proof obligation; correctness follows from the definition of the integral.\n",
+    "ontology": {
+      "keywords": [
+        "approximation",
+        "midpoint-rule",
+        "numerical-integration",
+        "quadrature"
+      ],
+      "semantic_kind": [
+        "criterion",
+        "schema"
+      ]
+    },
+    "original_language": "es",
+    "provenance": {
+      "extracted_at": "2026-05-11",
+      "extracted_by": "llm:claude-sonnet-4-6",
+      "rerun_id": "v0.3.1-stewart-full",
+      "schema_version": "0.3.1"
+    },
+    "quality": {
+      "dependency": "high",
+      "extraction": "high",
+      "latex": "high",
+      "semantic": "high",
+      "source_alignment": "high",
+      "translation": "high"
+    },
+    "sources": [
+      {
+        "author": "James Stewart",
+        "chapter": "5",
+        "edition": "7",
+        "page": "378",
+        "section": "5.2",
+        "source_language": "es",
+        "theorem_label": "Regla del punto medio",
+        "work": "Cálculo de una variable — Trascendentes tempranas"
+      }
+    ],
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "origin": "llm",
+        "review_status": "unreviewed",
+        "text": "Midpoint Rule"
+      },
+      "es": {
+        "is_original": true,
+        "origin": "original",
+        "review_status": "unreviewed",
+        "text": "Regla del punto medio"
       }
     },
     "type": "proposition"
@@ -18522,6 +19932,227 @@
     },
     "type": "theorem"
   },
+  "theorem.ftc-part-1": {
+    "ambient_structures": [
+      "real-line"
+    ],
+    "depends_on": [
+      {
+        "confidence": "high",
+        "id": "definition.continuity-on-interval",
+        "role": "uses_concept"
+      },
+      {
+        "confidence": "high",
+        "id": "definition.definite-integral",
+        "role": "uses_concept"
+      },
+      {
+        "confidence": "high",
+        "id": "definition.derivative-at-point",
+        "role": "uses_concept"
+      }
+    ],
+    "domains": {
+      "primary": [
+        "calculus"
+      ],
+      "secondary": [
+        "real-analysis"
+      ]
+    },
+    "id": "theorem.ftc-part-1",
+    "kind": "statement",
+    "latex": {
+      "body": "g(x) = \\int_a^x f(t)\\,dt \\;\\;\\Rightarrow\\;\\;\ng'(x) = \\frac{d}{dx}\\int_a^x f(t)\\,dt = f(x),\n\\quad f \\in C([a,b]),\\; a \\le x \\le b\n",
+      "review_status": "unreviewed",
+      "status": "present"
+    },
+    "natural": {
+      "en": {
+        "is_original": false,
+        "origin": "llm",
+        "review_status": "unreviewed",
+        "text": "If f is continuous on [a, b], then the function g defined by g(x) = ∫_a^x f(t) dt,   a ≤ x ≤ b, is continuous on [a, b] and differentiable on (a, b), and g'(x) = f(x)."
+      },
+      "es": {
+        "is_original": true,
+        "origin": "original",
+        "review_status": "unreviewed",
+        "text": "Si f es continua sobre [a, b], entonces la función g definida por g(x) = ∫_a^x f(t) dt,   a ≤ x ≤ b, es continua sobre [a, b] y derivable sobre (a, b), y g'(x) = f(x)."
+      }
+    },
+    "notes": "Abbreviated TFC1. Discovered by Isaac Barrow (Newton's teacher, ~1670). States that integration and differentiation are inverse operations in one direction: differentiating an area-accumulation function recovers the integrand. The companion TFC2 (theorem.ftc-part-2) handles the other direction: evaluating a definite integral via antiderivatives. Multi-source note: Rudin Thm 6.20 (Principles of Mathematical Analysis, Ch6) proves this for Riemann-Stieltjes integrals; the statement coincides with Stewart's when α(x) = x. Future Rudin Ch6 extraction will create a separate node or add a second source here after disambiguation.\n",
+    "ontology": {
+      "keywords": [
+        "area-function",
+        "differentiation",
+        "fundamental-theorem",
+        "integration",
+        "inverse-operations"
+      ],
+      "semantic_kind": [
+        "principle"
+      ]
+    },
+    "original_language": "es",
+    "proved_by": [
+      "proof.ftc-part-1.stewart"
+    ],
+    "provenance": {
+      "extracted_at": "2026-05-11",
+      "extracted_by": "llm:claude-sonnet-4-6",
+      "rerun_id": "v0.3.1-stewart-full",
+      "schema_version": "0.3.1"
+    },
+    "quality": {
+      "dependency": "high",
+      "extraction": "high",
+      "latex": "high",
+      "semantic": "high",
+      "source_alignment": "high",
+      "translation": "high"
+    },
+    "sources": [
+      {
+        "author": "James Stewart",
+        "chapter": "5",
+        "edition": "7",
+        "page": "388",
+        "section": "5.3",
+        "source_language": "es",
+        "theorem_label": "Teorema fundamental del cálculo, parte 1",
+        "work": "Cálculo de una variable — Trascendentes tempranas"
+      }
+    ],
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "origin": "llm",
+        "review_status": "unreviewed",
+        "text": "Fundamental Theorem of Calculus, Part 1"
+      },
+      "es": {
+        "is_original": true,
+        "origin": "original",
+        "review_status": "unreviewed",
+        "text": "Teorema fundamental del cálculo, parte 1"
+      }
+    },
+    "type": "theorem"
+  },
+  "theorem.ftc-part-2": {
+    "ambient_structures": [
+      "real-line"
+    ],
+    "depends_on": [
+      {
+        "confidence": "high",
+        "id": "definition.antiderivative",
+        "role": "uses_concept"
+      },
+      {
+        "confidence": "high",
+        "id": "definition.continuity-on-interval",
+        "role": "uses_concept"
+      },
+      {
+        "confidence": "high",
+        "id": "definition.definite-integral",
+        "role": "uses_concept"
+      }
+    ],
+    "domains": {
+      "primary": [
+        "calculus"
+      ],
+      "secondary": [
+        "real-analysis"
+      ]
+    },
+    "id": "theorem.ftc-part-2",
+    "kind": "statement",
+    "latex": {
+      "body": "f \\in C([a,b]),\\; F' = f\n\\;\\;\\Rightarrow\\;\\;\n\\int_a^b f(x)\\,dx = F(b) - F(a) = \\Bigl[F(x)\\Bigr]_a^b\n",
+      "review_status": "unreviewed",
+      "status": "present"
+    },
+    "natural": {
+      "en": {
+        "is_original": false,
+        "origin": "llm",
+        "review_status": "unreviewed",
+        "text": "If f is continuous on [a, b], then ∫_a^b f(x) dx = F(b) − F(a) where F is any antiderivative of f; that is, F' = f."
+      },
+      "es": {
+        "is_original": true,
+        "origin": "original",
+        "review_status": "unreviewed",
+        "text": "Si f es continua sobre [a, b], entonces ∫_a^b f(x) dx = F(b) − F(a) donde F es cualquier antiderivada de f; es decir, F' = f."
+      }
+    },
+    "notes": "Abbreviated TFC2. The central computational theorem of integral calculus: it reduces the hard problem of computing a definite integral (an infinite limit) to the easy problem of finding any antiderivative and evaluating at endpoints. Stewart uses the bracket notation [F(x)]_a^b = F(b) − F(a). Historical note: Isaac Barrow (1670), then Newton and Leibniz independently discovered and exploited this relationship. Multi-source note: Rudin Thm 6.21 states the same result for the Riemann-Stieltjes integral with α(x) = x. Future Rudin Ch6 extraction will extend this node or create a companion. theorem.net-change-theorem is an equivalent restatement emphasising the \"integral of a rate = net change\" interpretation.\n",
+    "ontology": {
+      "keywords": [
+        "antiderivative",
+        "barrow",
+        "evaluation",
+        "fundamental-theorem",
+        "leibniz",
+        "newton"
+      ],
+      "semantic_kind": [
+        "principle"
+      ]
+    },
+    "original_language": "es",
+    "proved_by": [
+      "proof.ftc-part-2.from-ftc1"
+    ],
+    "provenance": {
+      "extracted_at": "2026-05-11",
+      "extracted_by": "llm:claude-sonnet-4-6",
+      "rerun_id": "v0.3.1-stewart-full",
+      "schema_version": "0.3.1"
+    },
+    "quality": {
+      "dependency": "high",
+      "extraction": "high",
+      "latex": "high",
+      "semantic": "high",
+      "source_alignment": "high",
+      "translation": "high"
+    },
+    "sources": [
+      {
+        "author": "James Stewart",
+        "chapter": "5",
+        "edition": "7",
+        "page": "391",
+        "section": "5.3",
+        "source_language": "es",
+        "theorem_label": "Teorema fundamental del cálculo, parte 2",
+        "work": "Cálculo de una variable — Trascendentes tempranas"
+      }
+    ],
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "origin": "llm",
+        "review_status": "unreviewed",
+        "text": "Fundamental Theorem of Calculus, Part 2"
+      },
+      "es": {
+        "is_original": true,
+        "origin": "original",
+        "review_status": "unreviewed",
+        "text": "Teorema fundamental del cálculo, parte 2"
+      }
+    },
+    "type": "theorem"
+  },
   "theorem.general-antiderivative": {
     "ambient_structures": [
       "real-line"
@@ -18624,6 +20255,108 @@
         "origin": "original",
         "review_status": "unreviewed",
         "text": "Antiderivada general (F + C)"
+      }
+    },
+    "type": "theorem"
+  },
+  "theorem.integrability-of-continuous": {
+    "ambient_structures": [
+      "real-line"
+    ],
+    "depends_on": [
+      {
+        "confidence": "high",
+        "id": "definition.continuity-on-interval",
+        "role": "uses_concept"
+      },
+      {
+        "confidence": "high",
+        "id": "definition.definite-integral",
+        "role": "uses_concept"
+      }
+    ],
+    "domains": {
+      "primary": [
+        "calculus"
+      ],
+      "secondary": [
+        "real-analysis"
+      ]
+    },
+    "id": "theorem.integrability-of-continuous",
+    "kind": "statement",
+    "latex": {
+      "body": "f \\in C([a,b]) \\;\\text{or } f \\text{ has finitely many jump discontinuities}\n\\;\\implies\\; \\int_a^b f(x)\\,dx \\text{ exists}\n",
+      "review_status": "unreviewed",
+      "status": "present"
+    },
+    "natural": {
+      "en": {
+        "is_original": false,
+        "origin": "llm",
+        "review_status": "unreviewed",
+        "text": "If f is continuous on [a, b], or if f has only a finite number of jump discontinuities, then f is integrable on [a, b]; that is, the definite integral ∫_a^b f(x) dx exists."
+      },
+      "es": {
+        "is_original": true,
+        "origin": "original",
+        "review_status": "unreviewed",
+        "text": "Si f es continua sobre [a, b], o si f tiene sólo un número finito de discontinuidades de salto, entonces f es integrable sobre [a, b]; es decir, la integral definida ∫_a^b f(x) dx existe."
+      }
+    },
+    "notes": "Stewart states this without proof: \"Se demuestra en cursos más avanzados.\" The proof requires uniform continuity (which itself follows from continuity on a compact interval) and the completeness of ℝ. Both of these appear in Rudin Ch4-6. No proof node is created here; deferred indefinitely. The extension to finitely many jump discontinuities follows because removing finitely many points from a partition does not change the limit.\n",
+    "ontology": {
+      "keywords": [
+        "continuous-function",
+        "integrability",
+        "jump-discontinuity",
+        "riemann-integral"
+      ],
+      "semantic_kind": [
+        "criterion",
+        "principle"
+      ]
+    },
+    "original_language": "es",
+    "provenance": {
+      "extracted_at": "2026-05-11",
+      "extracted_by": "llm:claude-sonnet-4-6",
+      "rerun_id": "v0.3.1-stewart-full",
+      "schema_version": "0.3.1"
+    },
+    "quality": {
+      "dependency": "high",
+      "extraction": "high",
+      "latex": "high",
+      "semantic": "high",
+      "source_alignment": "high",
+      "translation": "high"
+    },
+    "sources": [
+      {
+        "author": "James Stewart",
+        "chapter": "5",
+        "edition": "7",
+        "page": "373",
+        "section": "5.2",
+        "source_language": "es",
+        "theorem_label": "Teorema 3",
+        "work": "Cálculo de una variable — Trascendentes tempranas"
+      }
+    ],
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "origin": "llm",
+        "review_status": "unreviewed",
+        "text": "Integrability of continuous functions"
+      },
+      "es": {
+        "is_original": true,
+        "origin": "original",
+        "review_status": "unreviewed",
+        "text": "Integrabilidad de funciones continuas"
       }
     },
     "type": "theorem"
@@ -19258,6 +20991,115 @@
         "origin": "original",
         "review_status": "unreviewed",
         "text": "Teorema del valor medio"
+      }
+    },
+    "type": "theorem"
+  },
+  "theorem.net-change-theorem": {
+    "ambient_structures": [
+      "real-line"
+    ],
+    "depends_on": [
+      {
+        "confidence": "high",
+        "id": "definition.definite-integral",
+        "role": "uses_concept"
+      },
+      {
+        "confidence": "high",
+        "id": "theorem.ftc-part-2",
+        "notes": "The Net Change Theorem IS TFC2 restated: letting f = F' and F be any antiderivative recovers TFC2 exactly. The conceptual framing differs: TFC2 says \"compute ∫f by finding an antiderivative F\"; NCT says \"interpret ∫F' as the total accumulated change in F\".\n",
+        "role": "uses_concept"
+      }
+    ],
+    "domains": {
+      "primary": [
+        "calculus"
+      ],
+      "secondary": [
+        "applied-mathematics"
+      ]
+    },
+    "generality": [
+      {
+        "relation": "equivalent",
+        "target": "theorem.ftc-part-2"
+      }
+    ],
+    "id": "theorem.net-change-theorem",
+    "kind": "statement",
+    "latex": {
+      "body": "\\int_a^b F'(x)\\,dx = F(b) - F(a)\n",
+      "review_status": "unreviewed",
+      "status": "present"
+    },
+    "natural": {
+      "en": {
+        "is_original": false,
+        "origin": "llm",
+        "review_status": "unreviewed",
+        "text": "The integral of a rate of change is the net change: ∫_a^b F'(x) dx = F(b) − F(a)."
+      },
+      "es": {
+        "is_original": true,
+        "origin": "original",
+        "review_status": "unreviewed",
+        "text": "La integral de una razón de cambio es el cambio neto: ∫_a^b F'(x) dx = F(b) − F(a)."
+      }
+    },
+    "notes": "Atomic decision: kept separate from theorem.ftc-part-2 because Stewart gives it an explicit named box and the semantic framing (rate → net change) is educationally and physically distinct from the \"antiderivative evaluation\" framing of TFC2. Examples in §5.4: water flow, population growth, cost marginal, displacement of a particle. The generality edge (equivalent) records the mathematical identity without collapsing the two nodes.\n",
+    "ontology": {
+      "keywords": [
+        "accumulation",
+        "displacement",
+        "ftc",
+        "net-change",
+        "rate-of-change"
+      ],
+      "semantic_kind": [
+        "principle"
+      ]
+    },
+    "original_language": "es",
+    "provenance": {
+      "extracted_at": "2026-05-11",
+      "extracted_by": "llm:claude-sonnet-4-6",
+      "rerun_id": "v0.3.1-stewart-full",
+      "schema_version": "0.3.1"
+    },
+    "quality": {
+      "dependency": "high",
+      "extraction": "high",
+      "latex": "high",
+      "semantic": "high",
+      "source_alignment": "high",
+      "translation": "high"
+    },
+    "sources": [
+      {
+        "author": "James Stewart",
+        "chapter": "5",
+        "edition": "7",
+        "page": "401",
+        "section": "5.4",
+        "source_language": "es",
+        "theorem_label": "Teorema del cambio neto",
+        "work": "Cálculo de una variable — Trascendentes tempranas"
+      }
+    ],
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "origin": "llm",
+        "review_status": "unreviewed",
+        "text": "Net Change Theorem"
+      },
+      "es": {
+        "is_original": true,
+        "origin": "original",
+        "review_status": "unreviewed",
+        "text": "Teorema del cambio neto"
       }
     },
     "type": "theorem"
@@ -20101,6 +21943,224 @@
         "origin": "original",
         "review_status": "unreviewed",
         "text": "Teorema de la compresión (sándwich)"
+      }
+    },
+    "type": "theorem"
+  },
+  "theorem.substitution-rule": {
+    "ambient_structures": [
+      "real-line"
+    ],
+    "depends_on": [
+      {
+        "confidence": "high",
+        "id": "definition.continuity-on-interval",
+        "role": "uses_concept"
+      },
+      {
+        "confidence": "high",
+        "id": "definition.differentiable-on-interval",
+        "role": "uses_concept"
+      },
+      {
+        "confidence": "high",
+        "id": "definition.indefinite-integral",
+        "role": "uses_concept"
+      }
+    ],
+    "domains": {
+      "primary": [
+        "calculus"
+      ]
+    },
+    "id": "theorem.substitution-rule",
+    "kind": "statement",
+    "latex": {
+      "body": "\\int f(g(x))\\,g'(x)\\,dx = \\int f(u)\\,du,\n\\quad u = g(x)\n",
+      "review_status": "unreviewed",
+      "status": "present"
+    },
+    "natural": {
+      "en": {
+        "is_original": false,
+        "origin": "llm",
+        "review_status": "unreviewed",
+        "text": "If u = g(x) is a differentiable function whose range is an interval I and f is continuous on I, then ∫ f(g(x))·g'(x) dx = ∫ f(u) du."
+      },
+      "es": {
+        "is_original": true,
+        "origin": "original",
+        "review_status": "unreviewed",
+        "text": "Si u = g(x) es una función derivable cuyo rango es un intervalo I y f es continua sobre I, entonces ∫ f(g(x))·g'(x) dx = ∫ f(u) du."
+      }
+    },
+    "notes": "The substitution rule is the integration analogue of the chain rule for differentiation: it converts ∫f(g(x))g'(x)dx into the simpler ∫f(u)du by the substitution u = g(x), du = g'(x)dx. The definite-integral version (with transformed limits) is theorem.substitution-rule-definite.\n",
+    "ontology": {
+      "keywords": [
+        "chain-rule",
+        "change-of-variable",
+        "integration-technique",
+        "substitution",
+        "u-substitution"
+      ],
+      "semantic_kind": [
+        "criterion",
+        "principle"
+      ]
+    },
+    "original_language": "es",
+    "proved_by": [
+      "proof.substitution-rule.from-chain-rule"
+    ],
+    "provenance": {
+      "extracted_at": "2026-05-11",
+      "extracted_by": "llm:claude-sonnet-4-6",
+      "rerun_id": "v0.3.1-stewart-full",
+      "schema_version": "0.3.1"
+    },
+    "quality": {
+      "dependency": "high",
+      "extraction": "high",
+      "latex": "high",
+      "semantic": "high",
+      "source_alignment": "high",
+      "translation": "high"
+    },
+    "sources": [
+      {
+        "author": "James Stewart",
+        "chapter": "5",
+        "edition": "7",
+        "page": "408",
+        "section": "5.5",
+        "source_language": "es",
+        "theorem_label": "Regla de sustitución (4)",
+        "work": "Cálculo de una variable — Trascendentes tempranas"
+      }
+    ],
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "origin": "llm",
+        "review_status": "unreviewed",
+        "text": "Substitution Rule (u-substitution)"
+      },
+      "es": {
+        "is_original": true,
+        "origin": "original",
+        "review_status": "unreviewed",
+        "text": "Regla de sustitución"
+      }
+    },
+    "type": "theorem"
+  },
+  "theorem.substitution-rule-definite": {
+    "ambient_structures": [
+      "real-line"
+    ],
+    "depends_on": [
+      {
+        "confidence": "high",
+        "id": "definition.continuity-on-interval",
+        "role": "uses_concept"
+      },
+      {
+        "confidence": "high",
+        "id": "theorem.ftc-part-2",
+        "notes": "The proof uses TFC2 to evaluate both sides after applying the chain rule antiderivative relationship.\n",
+        "role": "uses_concept"
+      },
+      {
+        "confidence": "high",
+        "id": "theorem.substitution-rule",
+        "notes": "The definite-integral version applies the indefinite substitution rule and transforms the limits of integration accordingly: x=a gives u=g(a) and x=b gives u=g(b). Role is uses_concept (not specializes) because this is a consequence/application, not a strict specialization — it adds limit transformation rather than restricting hypotheses.\n",
+        "role": "uses_concept"
+      }
+    ],
+    "domains": {
+      "primary": [
+        "calculus"
+      ]
+    },
+    "id": "theorem.substitution-rule-definite",
+    "kind": "statement",
+    "latex": {
+      "body": "g' \\in C([a,b]),\\; f \\in C(\\operatorname{range}(g))\n\\;\\;\\Rightarrow\\;\\;\n\\int_a^b f(g(x))\\,g'(x)\\,dx = \\int_{g(a)}^{g(b)} f(u)\\,du\n",
+      "review_status": "unreviewed",
+      "status": "present"
+    },
+    "natural": {
+      "en": {
+        "is_original": false,
+        "origin": "llm",
+        "review_status": "unreviewed",
+        "text": "If g' is continuous on [a, b] and f is continuous on the range of u = g(x), then ∫_a^b f(g(x))·g'(x) dx = ∫_{g(a)}^{g(b)} f(u) du."
+      },
+      "es": {
+        "is_original": true,
+        "origin": "original",
+        "review_status": "unreviewed",
+        "text": "Si g' es continua sobre [a, b] y f es continua sobre el rango de u = g(x), entonces ∫_a^b f(g(x))·g'(x) dx = ∫_{g(a)}^{g(b)} f(u) du."
+      }
+    },
+    "notes": "The key practical difference from the indefinite version (theorem.substitution-rule) is the transformation of the integration limits: instead of back-substituting u = g(x) at the end, the limits are changed from a,b to g(a),g(b) directly. This avoids re-expressing the antiderivative in terms of x.\n",
+    "ontology": {
+      "keywords": [
+        "change-of-variable",
+        "definite-integral",
+        "limits-of-integration",
+        "substitution",
+        "u-substitution"
+      ],
+      "semantic_kind": [
+        "criterion",
+        "principle"
+      ]
+    },
+    "original_language": "es",
+    "proved_by": [
+      "proof.substitution-rule-definite.from-ftc2"
+    ],
+    "provenance": {
+      "extracted_at": "2026-05-11",
+      "extracted_by": "llm:claude-sonnet-4-6",
+      "rerun_id": "v0.3.1-stewart-full",
+      "schema_version": "0.3.1"
+    },
+    "quality": {
+      "dependency": "high",
+      "extraction": "high",
+      "latex": "high",
+      "semantic": "high",
+      "source_alignment": "high",
+      "translation": "high"
+    },
+    "sources": [
+      {
+        "author": "James Stewart",
+        "chapter": "5",
+        "edition": "7",
+        "page": "411",
+        "section": "5.5",
+        "source_language": "es",
+        "theorem_label": "Regla de sustitución para integrales definidas (6)",
+        "work": "Cálculo de una variable — Trascendentes tempranas"
+      }
+    ],
+    "status": "extracted",
+    "title": {
+      "en": {
+        "is_original": false,
+        "origin": "llm",
+        "review_status": "unreviewed",
+        "text": "Substitution Rule for Definite Integrals"
+      },
+      "es": {
+        "is_original": true,
+        "origin": "original",
+        "review_status": "unreviewed",
+        "text": "Regla de sustitución para integrales definidas"
       }
     },
     "type": "theorem"

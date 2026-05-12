@@ -1,0 +1,108 @@
+schema_version: "0.3.1"
+id: proof.derivatives-of-hyperbolic-functions.from-exponential-definition
+type: proof
+status: extracted
+
+proves: theorem.derivatives-of-hyperbolic-functions
+style: direct-differentiation
+
+uses: []
+
+parts:
+  - name: derivative-of-sinh
+    kind: subclaim
+    description: >
+      (d/dx) senh x = (d/dx)((eˣ − e⁻ˣ)/2) = (eˣ + e⁻ˣ)/2 = cosh x,
+      using linearity of differentiation and the derivative of
+      e^(±x). Stewart §3.11 page 259.
+    uses:
+      - id: definition.hyperbolic-function
+        role: definition
+        confidence: high
+      - id: theorem.derivative-of-natural-exponential
+        role: essential
+        confidence: high
+      - id: theorem.chain-rule
+        role: essential
+        confidence: high
+        notes: applied to e^{-x} = e^{u(x)} with u(x) = -x
+
+  - name: derivative-of-cosh
+    kind: subclaim
+    description: >
+      (d/dx) cosh x = (d/dx)((eˣ + e⁻ˣ)/2) = (eˣ − e⁻ˣ)/2 = senh x,
+      analogous to the senh case. Stewart Ex 24a.
+    uses:
+      - id: definition.hyperbolic-function
+        role: definition
+        confidence: high
+      - id: theorem.derivative-of-natural-exponential
+        role: essential
+        confidence: high
+      - id: theorem.chain-rule
+        role: essential
+        confidence: high
+
+  - name: derivatives-of-tanh-csch-sech-coth
+    kind: subclaim
+    description: >
+      (d/dx) tanh x = sech²x and the four reciprocal/quotient
+      formulas follow from the senh and cosh derivatives by the
+      quotient rule, combined with the Pythagorean identity
+      cosh²x − senh²x = 1 to simplify. Stewart Ex 24b–e.
+    uses:
+      - id: definition.hyperbolic-function
+        role: definition
+        confidence: high
+      - id: theorem.quotient-rule
+        role: essential
+        confidence: high
+      - id: proposition.hyperbolic-identities
+        role: essential
+        confidence: high
+        notes: cosh²x − senh²x = 1 used to simplify (d/dx) tanh x and (d/dx) coth x
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.11"
+    locator: "Derivación inline (senh, p. 259) + ejercicio 24"
+    page: "259"
+    source_language: es
+
+sketch:
+  es:
+    text: >
+      Bundle. senh: (d/dx)((eˣ − e⁻ˣ)/2) = (eˣ + e⁻ˣ)/2 = cosh x.
+      cosh: análogo. tanh: por cociente,
+      (d/dx)(senh/cosh) = (cosh·cosh − senh·senh)/cosh² =
+      (cosh² − senh²)/cosh² = 1/cosh² = sech². csch:
+      (d/dx)(1/senh) = −cosh/senh² = −csch·coth. sech:
+      (d/dx)(1/cosh) = −senh/cosh² = −sech·tanh. coth: análogo
+      a tanh con signo opuesto, dando −csch².
+    is_original: true
+    origin: original
+    review_status: unreviewed
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: medium
+  semantic_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Bundled proof. Only senh derivative is shown inline; the
+  remaining five are Exercise 24. dependency_confidence:medium
+  reflects partial textual coverage. The proof depends on
+  proposition.hyperbolic-identities (Pythagorean) for the
+  simplifications in tanh/coth — this is a real semantic
+  dependency, not just notation.

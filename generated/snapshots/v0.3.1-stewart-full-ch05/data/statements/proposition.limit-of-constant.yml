@@ -1,0 +1,95 @@
+schema_version: "0.3.1"
+id: proposition.limit-of-constant
+type: proposition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Límite de una función constante
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Limit of a constant function
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Si c es una constante, entonces lím_{x→a} c = c para todo
+        número real a.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        If c is a constant, then lim_{x→a} c = c for every real
+        number a.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      \lim_{x \to a} c = c
+    status: present
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: definition.limit-of-function
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.3"
+    theorem_label: "Ley 7"
+    page: "100"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [real-analysis]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [property]
+  keywords: [limit, constant, basic-law]
+
+generality: []
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart Law 7. Stewart calls it "obvious from intuition" and
+  defers the proof to §2.4 exercises (uses epsilon-delta directly
+  with δ = anything). No proof node here; will be authored when
+  §2.4 lands.

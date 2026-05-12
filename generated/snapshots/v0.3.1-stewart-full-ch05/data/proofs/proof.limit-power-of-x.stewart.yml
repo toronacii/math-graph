@@ -1,0 +1,55 @@
+schema_version: "0.3.1"
+id: proof.limit-power-of-x.stewart
+type: proof
+status: extracted
+
+proves: proposition.limit-power-of-x
+style: direct
+
+uses:
+  - id: proposition.limit-power-law
+    role: essential
+    confidence: high
+    implicit: false
+    notes: applied to f(x) = x
+  - id: proposition.limit-of-identity
+    role: essential
+    confidence: high
+    implicit: false
+    notes: lim_{x→a} x = a is plugged into the power law
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.3"
+    locator: "Derivación de Ley 9 (sección 2.3)"
+    page: "100"
+    source_language: es
+
+sketch:
+  es:
+    text: >
+      Si hacemos f(x) = x en la Ley 6 (potencia) y utilizamos la
+      Ley 8 (lím_{x→a} x = a), obtenemos lím_{x→a} xⁿ
+      = (lím_{x→a} x)ⁿ = aⁿ.
+    is_original: true
+    origin: original
+    review_status: unreviewed
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Two-step compositional derivation explicitly given by Stewart.

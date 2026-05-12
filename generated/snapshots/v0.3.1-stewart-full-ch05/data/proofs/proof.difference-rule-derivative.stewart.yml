@@ -1,0 +1,57 @@
+schema_version: "0.3.1"
+id: proof.difference-rule-derivative.stewart
+type: proof
+status: extracted
+
+proves: theorem.difference-rule-derivative
+style: direct
+
+uses:
+  - id: theorem.sum-rule-derivative
+    role: essential
+    confidence: high
+    notes: applied to f and (−1)g
+  - id: theorem.constant-multiple-rule-derivative
+    role: essential
+    confidence: high
+    notes: applied with c = −1 to evaluate (d/dx)(−g) = −g'
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.1"
+    locator: "Demostración inline (página 178)"
+    page: "178"
+    source_language: es
+
+sketch:
+  es:
+    text: >
+      Escribe f(x) − g(x) = f(x) + (−1)·g(x). Por la regla de
+      la suma, (d/dx)[f(x) + (−1)g(x)] =
+      (d/dx) f(x) + (d/dx)[(−1)g(x)]. Por la regla del múltiplo
+      constante con c = −1, (d/dx)[(−1)g(x)] = (−1)·g'(x) =
+      −g'(x). Combinando:
+      (d/dx)[f(x) − g(x)] = f'(x) − g'(x).
+    is_original: true
+    origin: original
+    review_status: unreviewed
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  One-line corollary derivation from sum + constant-multiple
+  rules. No new analytic content.

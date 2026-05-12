@@ -140,6 +140,24 @@ or theorem cited as a key derivation step uses `essential`.
 `lemma_local` is reserved for internal sub-arguments that are NOT
 their own statement node.
 
+**Common mistake:** `role: existence` on a **definition** node. A
+definition introduces meaning — it does NOT supply existence. When a
+proof assumes an object exists (e.g., "let F be an antiderivative of
+f"), ask: *what guarantees F exists?* The definition of antiderivative
+tells you what F *is*; a theorem (e.g., FTC1, completeness) tells you
+F *exists*. Use `role: definition` on the definition node, and add a
+separate `uses` edge with `role: existence` to the theorem that
+guarantees existence. If the author does not cite the existence source,
+mark that edge `implicit: true` with a note explaining the inference.
+
+**Common mistake:** `role: background` on a hypothesis that the proof
+**actively uses** in a derivation step. `background` means the proof
+could be reframed without this dependency. If removing the statement
+would break the argument (e.g., continuity used to take a limit,
+compactness used to extract a convergent subsequence), the role is
+`essential`, not `background`. Reserve `background` for "see also"
+references and framing context.
+
 `role: implicit` is the **mathematical role**.
 `implicit: true` is the **provenance flag** (we inferred this edge; the
 author did not cite it). They are orthogonal.
@@ -191,6 +209,18 @@ specializes | uses_concept | extends | instance_of | ambient
 | `ambient`       | operates inside the referenced ambient structure            |
 
 **Common mistake:** there is no `uses` role. Use `uses_concept`.
+
+**Common mistake:** `role: specializes` when the relationship is
+actually a **consequence or application**, not a specialization. The
+`specializes` role means "this statement IS a special case of the
+referenced statement" — i.e., the referenced statement is strictly
+more general, and this one restricts the hypotheses. If statement A
+is *derived from* or *applies* statement B (e.g., a definite-integral
+version of a substitution rule that adds limit transformation rather
+than restricting hypotheses), the correct role is `uses_concept`. Use
+`specializes` only when A's hypotheses are a strict superset of B's
+(more restrictive) and A's conclusion is a strict subset of B's
+(narrower).
 
 Use cases:
 

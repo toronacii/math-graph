@@ -1,0 +1,95 @@
+schema_version: "0.3.1"
+id: theorem.derivative-of-natural-logarithm
+type: theorem
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Derivada del logaritmo natural
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Derivative of the natural logarithm
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        La derivada del logaritmo natural es (d/dx) ln x = 1/x,
+        para x > 0.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        The derivative of the natural logarithm is
+        (d/dx) ln x = 1/x, for x > 0.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      \frac{d}{dx}\,\ln x \;=\; \frac{1}{x}\qquad (x>0)
+    status: present
+    review_status: unreviewed
+
+proved_by:
+  - proof.derivative-of-natural-logarithm.from-general
+
+depends_on:
+  - id: definition.natural-logarithm
+    role: uses_concept
+    confidence: high
+  - id: definition.derivative-function
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.6"
+    theorem_label: "Ecuación 2"
+    page: "218"
+    source_language: es
+
+domains:
+  primary: [calculus]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [principle]
+  keywords: [natural-logarithm, derivative, ln]
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart's Eq 2 of §3.6. Obtained from Eq 1 by setting a = e
+  (so ln a = ln e = 1). This identity is the principal reason
+  the natural logarithm is preferred in calculus.

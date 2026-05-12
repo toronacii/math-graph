@@ -1,0 +1,68 @@
+schema_version: "0.3.1"
+id: proof.substitution-rule-definite.from-ftc2
+type: proof
+status: extracted
+
+proves: theorem.substitution-rule-definite
+style: direct
+
+uses:
+  - id: theorem.ftc-part-2
+    role: essential
+    confidence: high
+    notes: >
+      Applied twice: to evaluate ∫_a^b f(g(x))g'(x)dx via F(g(b))−F(g(a)),
+      and to evaluate ∫_{g(a)}^{g(b)} f(u)du by the same expression.
+  - id: theorem.chain-rule
+    role: essential
+    confidence: high
+    notes: >
+      Shows that F(g(x)) is an antiderivative of f(g(x))·g'(x),
+      enabling TFC2 on the left-hand integral.
+  - id: definition.antiderivative
+    role: definition
+    confidence: high
+    notes: >
+      Definitional unfolding: F is an antiderivative means F' = f.
+      Existence of F is guaranteed by TFC1 (implicit, via TFC2's hypotheses).
+  - id: definition.continuity-on-interval
+    role: background
+    confidence: high
+    notes: >
+      Continuity conditions ensure TFC2 is applicable on both intervals.
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "5"
+    section: "5.5"
+    page: "411"
+    source_language: es
+
+sketch:
+  es:
+    text: >
+      Sea F una antiderivada de f. Por la regla de la cadena,
+      d/dx[F(g(x))] = f(g(x))·g'(x), así que F∘g es antiderivada del
+      integrando izquierdo. Por TFC2:
+      ∫_a^b f(g(x))·g'(x) dx = F(g(b)) − F(g(a)).
+      Por otro lado, F es antiderivada de f, así que por TFC2:
+      ∫_{g(a)}^{g(b)} f(u) du = F(g(b)) − F(g(a)).
+      Ambos lados son iguales.
+    is_original: true
+    origin: original
+    review_status: unreviewed
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-sonnet-4-6"
+  extracted_at: "2026-05-11"
+  derived_from: []

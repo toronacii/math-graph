@@ -1,0 +1,115 @@
+schema_version: "0.3.1"
+id: proof.mean-value-theorem.from-rolle
+type: proof
+status: extracted
+
+proves: theorem.mean-value-theorem
+style: auxiliary-function
+
+uses: []
+
+parts:
+  - name: define-auxiliary-function
+    kind: subclaim
+    description: >
+      Define h on [a, b] by h(x) = f(x) − f(a) − ((f(b) − f(a))/(b − a))(x − a).
+      Geometrically h(x) measures the vertical gap between the graph
+      of f and the secant line through (a, f(a)) and (b, f(b)).
+    uses:
+      - id: definition.secant-line
+        role: definition
+        confidence: high
+
+  - name: verify-rolle-hypotheses
+    kind: subclaim
+    description: >
+      h is continuous on [a, b] (sum of f and a first-degree
+      polynomial, both continuous) and differentiable on (a, b)
+      (same reason). Direct calculation gives
+      h(a) = f(a) − f(a) − 0 = 0 and h(b) = f(b) − f(a) −
+      ((f(b) − f(a))/(b − a))(b − a) = 0, so h(a) = h(b).
+    uses:
+      - id: definition.polynomial
+        role: background
+        confidence: high
+      - id: theorem.continuity-of-polynomials-and-rationals
+        role: essential
+        confidence: high
+        notes: gives continuity of the linear secant-line term
+      - id: theorem.sum-rule-derivative
+        role: essential
+        confidence: high
+        notes: closure under sum gives differentiability of h from differentiability of f
+      - id: theorem.difference-rule-derivative
+        role: essential
+        confidence: high
+
+  - name: apply-rolle
+    kind: subclaim
+    description: >
+      h satisfies the three hypotheses of Rolle's Theorem on [a, b],
+      so there is a number c in (a, b) with h'(c) = 0.
+    uses:
+      - id: theorem.rolle
+        role: essential
+        confidence: high
+
+  - name: extract-conclusion
+    kind: subclaim
+    description: >
+      Differentiating h yields h'(x) = f'(x) − (f(b) − f(a))/(b − a)
+      (the second term being a constant). Setting h'(c) = 0 gives
+      f'(c) = (f(b) − f(a))/(b − a), the desired conclusion.
+    uses:
+      - id: theorem.derivative-of-constant
+        role: essential
+        confidence: high
+        notes: the secant-slope term is constant, so it vanishes upon differentiation
+      - id: theorem.power-rule-positive-integer
+        role: essential
+        confidence: high
+        notes: differentiation of the linear factor (x − a)
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "4"
+    section: "4.2"
+    locator: "Demostración del Teorema del valor medio (pp. 286)"
+    page: "286"
+    source_language: es
+
+sketch:
+  es:
+    text: >
+      Se construye la función auxiliar h(x) = f(x) − f(a) −
+      ((f(b) − f(a))/(b − a))(x − a), que mide la distancia vertical
+      entre la gráfica de f y la recta secante. Se verifica que h
+      cumple las hipótesis del teorema de Rolle (continuidad sobre
+      [a, b], derivabilidad sobre (a, b), h(a) = h(b) = 0). Por
+      Rolle existe c en (a, b) con h'(c) = 0. Como
+      h'(x) = f'(x) − (f(b) − f(a))/(b − a), se concluye
+      f'(c) = (f(b) − f(a))/(b − a).
+    is_original: true
+    origin: original
+    review_status: unreviewed
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Standard auxiliary-function proof reducing MVT to Rolle. The trick
+  is to subtract the secant line from f to enforce equal endpoint
+  values. All transitive epistemic debt of Rolle (EVT, Fermat) is
+  inherited.

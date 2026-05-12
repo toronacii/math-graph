@@ -1,0 +1,103 @@
+schema_version: "0.3.1"
+id: theorem.substitution-rule
+type: theorem
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Regla de sustitución
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Substitution Rule (u-substitution)
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-sonnet-4-6"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Si u = g(x) es una función derivable cuyo rango es un intervalo I
+        y f es continua sobre I, entonces
+        ∫ f(g(x))·g'(x) dx = ∫ f(u) du.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        If u = g(x) is a differentiable function whose range is an
+        interval I and f is continuous on I, then
+        ∫ f(g(x))·g'(x) dx = ∫ f(u) du.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-sonnet-4-6"
+      review_status: unreviewed
+  latex:
+    body: |
+      \int f(g(x))\,g'(x)\,dx = \int f(u)\,du,
+      \quad u = g(x)
+    status: present
+    review_status: unreviewed
+
+proved_by:
+  - proof.substitution-rule.from-chain-rule
+
+depends_on:
+  - id: definition.indefinite-integral
+    role: uses_concept
+    confidence: high
+  - id: definition.differentiable-on-interval
+    role: uses_concept
+    confidence: high
+  - id: definition.continuity-on-interval
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "5"
+    section: "5.5"
+    theorem_label: "Regla de sustitución (4)"
+    page: "408"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: []
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [principle, criterion]
+  keywords: [substitution, u-substitution, change-of-variable, chain-rule, integration-technique]
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-sonnet-4-6"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  The substitution rule is the integration analogue of the chain rule for
+  differentiation: it converts ∫f(g(x))g'(x)dx into the simpler ∫f(u)du by
+  the substitution u = g(x), du = g'(x)dx. The definite-integral version
+  (with transformed limits) is theorem.substitution-rule-definite.

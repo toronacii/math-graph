@@ -1,0 +1,115 @@
+schema_version: "0.3.1"
+id: proposition.integrals-of-symmetric-functions
+type: proposition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Integrales de funciones simétricas
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Integrals of symmetric functions
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-sonnet-4-6"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Suponga que f es continua sobre [−a, a].
+        (a) Si f es par [f(−x) = f(x)], entonces
+            ∫_{-a}^a f(x) dx = 2 ∫_0^a f(x) dx.
+        (b) Si f es impar [f(−x) = −f(x)], entonces
+            ∫_{-a}^a f(x) dx = 0.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        Suppose f is continuous on [−a, a].
+        (a) If f is even [f(−x) = f(x)], then
+            ∫_{-a}^a f(x) dx = 2 ∫_0^a f(x) dx.
+        (b) If f is odd [f(−x) = −f(x)], then
+            ∫_{-a}^a f(x) dx = 0.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-sonnet-4-6"
+      review_status: unreviewed
+  latex:
+    body: |
+      f \in C([-a,a]):\quad
+      f(-x)=f(x)\;\Rightarrow\;\int_{-a}^{a}f(x)\,dx = 2\int_0^a f(x)\,dx;\\
+      f(-x)=-f(x)\;\Rightarrow\;\int_{-a}^{a}f(x)\,dx = 0
+    status: present
+    review_status: unreviewed
+
+proved_by:
+  - proof.integrals-of-symmetric-functions.from-substitution
+
+depends_on:
+  - id: theorem.substitution-rule-definite
+    role: uses_concept
+    confidence: high
+    notes: >
+      The proof uses the substitution u = −x (du = −dx) on the [−a, 0] piece
+      to transform it into an integral on [0, a], then applies even/odd symmetry.
+  - id: proposition.definite-integral-properties
+    role: uses_concept
+    confidence: high
+    notes: >
+      Uses the interval-additivity property to split ∫_{-a}^a into
+      ∫_{-a}^0 + ∫_0^a.
+  - id: definition.definite-integral
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "5"
+    section: "5.5"
+    theorem_label: "Integrales de funciones simétricas (7)"
+    page: "412"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: []
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [criterion]
+  keywords: [even-function, odd-function, symmetry, definite-integral, simplification]
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-sonnet-4-6"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  A practical computational shortcut: symmetric limits [−a, a] combined with
+  even or odd symmetry halves (or eliminates) the integration work. The two
+  parts are bundled in one node following Stewart's box; splitting would be
+  possible but adds no analytical value since they share proof structure and
+  context.

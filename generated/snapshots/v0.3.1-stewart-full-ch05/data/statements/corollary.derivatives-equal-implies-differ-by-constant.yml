@@ -1,0 +1,103 @@
+schema_version: "0.3.1"
+id: corollary.derivatives-equal-implies-differ-by-constant
+type: corollary
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Corolario — derivadas iguales implican diferencia constante
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Corollary — Equal Derivatives Imply Constant Difference
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Si f'(x) = g'(x) para toda x en un intervalo (a, b), entonces
+        f − g es constante sobre (a, b); esto es, f(x) = g(x) + c
+        donde c es una constante.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        If f'(x) = g'(x) for all x in an interval (a, b), then f − g
+        is constant on (a, b); that is, f(x) = g(x) + c where c is a
+        constant.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      \bigl(\forall x \in (a,b):\; f'(x) = g'(x)\bigr) \;\implies\;
+      \exists c \in \mathbb{R}:\; \forall x \in (a,b),\; f(x) = g(x) + c
+    status: present
+    review_status: unreviewed
+
+proved_by:
+  - proof.derivatives-equal-implies-differ-by-constant.from-zero
+
+depends_on:
+  - id: definition.derivative-function
+    role: uses_concept
+    confidence: high
+  - id: theorem.derivative-zero-implies-constant
+    role: specializes
+    confidence: high
+    notes: >
+      Direct corollary obtained by applying Theorem 5 to F = f − g.
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "4"
+    section: "4.2"
+    theorem_label: "Corolario 7"
+    page: "288"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [analysis]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [principle, criterion]
+  keywords: [equal-derivatives, antiderivative-up-to-constant, integration-constant]
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart Corolario 7 §4.2 page 288. This is the formal justification
+  for the "+ C" appearing in every general antiderivative (§4.9) and
+  every indefinite integral (Ch5). Stewart's Example 6 uses it to
+  prove the identity arctan(x) + arccot(x) = π/2 by showing both
+  sides have zero derivative and matching at x = 1.

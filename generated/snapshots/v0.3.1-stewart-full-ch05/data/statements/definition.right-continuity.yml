@@ -1,0 +1,101 @@
+schema_version: "0.3.1"
+id: definition.right-continuity
+type: definition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Continuidad por la derecha
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Right-continuity
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Una función f es continua por la derecha de un número x = a
+        si lím_{x→a⁺} f(x) = f(a).
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        A function f is right-continuous at a number x = a if
+        lim_{x→a⁺} f(x) = f(a).
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      f \text{ right-continuous at } a
+      \iff \lim_{x \to a^{+}} f(x) = f(a)
+    status: present
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: definition.function
+    role: uses_concept
+    confidence: high
+  - id: definition.right-hand-limit
+    role: uses_concept
+    confidence: high
+  - id: definition.continuity-at-point
+    role: specializes
+    confidence: high
+    notes: one-sided variant restricted to the right-hand limit
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.5"
+    theorem_label: "Definición 2 (parte derecha)"
+    page: "120"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [real-analysis]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [criterion, property]
+  keywords: [continuity, one-sided, right-continuous]
+
+generality: []
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart §2.5 Definición 2 (primera parte). Sibling edge owned by
+  left-continuity (alphabetically earlier id).

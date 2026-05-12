@@ -1,0 +1,125 @@
+schema_version: "0.3.1"
+id: proof.rolle.stewart
+type: proof
+status: extracted
+
+proves: theorem.rolle
+style: case-analysis
+
+uses: []
+
+parts:
+  - name: case-i-constant
+    kind: subclaim
+    description: >
+      Case I: f(x) = k, a constant on [a, b]. Then f'(x) = 0
+      everywhere on (a, b), so c may be any number in (a, b).
+    uses:
+      - id: theorem.derivative-of-constant
+        role: essential
+        confidence: high
+
+  - name: case-ii-max-strictly-above-endpoints
+    kind: subclaim
+    description: >
+      Case II: there exists x in (a, b) with f(x) > f(a). By the
+      Extreme Value Theorem (applicable since f is continuous on
+      [a, b] by hypothesis 1), f attains an absolute maximum on
+      [a, b]. Since f(a) = f(b) and the maximum exceeds f(a), the
+      maximum cannot be attained at the endpoints, so it occurs at
+      some c in the open interval (a, b). Then c is a local maximum
+      and, by hypothesis 2, f is differentiable at c. Fermat's
+      Theorem yields f'(c) = 0.
+    uses:
+      - id: theorem.extreme-value-theorem
+        role: essential
+        confidence: high
+        notes: provides existence of the absolute maximum on [a, b]
+      - id: theorem.fermat
+        role: essential
+        confidence: high
+        notes: forces f'(c) = 0 at the interior local extremum
+      - id: definition.local-maximum
+        role: definition
+        confidence: high
+      - id: definition.absolute-maximum
+        role: definition
+        confidence: high
+
+  - name: case-iii-min-strictly-below-endpoints
+    kind: subclaim
+    description: >
+      Case III: there exists x in (a, b) with f(x) < f(a). Symmetric
+      to Case II using the absolute minimum: by EVT f attains an
+      absolute minimum on [a, b], it cannot occur at an endpoint
+      since f(a) = f(b) exceeds the interior value, hence the
+      minimum is at some c in (a, b), c is a local minimum, and
+      Fermat's Theorem yields f'(c) = 0.
+    uses:
+      - id: theorem.extreme-value-theorem
+        role: essential
+        confidence: high
+      - id: theorem.fermat
+        role: essential
+        confidence: high
+      - id: definition.local-minimum
+        role: definition
+        confidence: high
+      - id: definition.absolute-minimum
+        role: definition
+        confidence: high
+
+  - name: exhaustiveness
+    kind: subclaim
+    description: >
+      The three cases are exhaustive: either f is constant on [a, b]
+      (Case I), or there is some interior x with f(x) > f(a) (Case II),
+      or there is some interior x with f(x) < f(a) (Case III). The
+      hypothesis f(a) = f(b) is used in Cases II–III to push the
+      extremum into the open interval.
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "4"
+    section: "4.2"
+    locator: "Demostración del Teorema de Rolle (p. 284)"
+    page: "284"
+    source_language: es
+
+sketch:
+  es:
+    text: >
+      Tres casos. (I) Si f es constante en [a, b], f'(x) = 0 en todo
+      (a, b) y c puede ser cualquiera. (II) Si f(x) > f(a) para algún
+      x en (a, b): por el TVE f alcanza un máximo absoluto en [a, b];
+      como f(a) = f(b) y el máximo supera a f(a), debe alcanzarse en
+      algún c en (a, b). c es máximo local, f es derivable en c por
+      la hipótesis 2, así que por Fermat f'(c) = 0. (III) Si
+      f(x) < f(a) para algún x en (a, b): análogo aplicando el TVE
+      al mínimo y luego Fermat.
+    is_original: true
+    origin: original
+    review_status: unreviewed
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart's full proof. The proof depends critically on EVT
+  (existence of extremum on a compact interval) and Fermat
+  (vanishing derivative at interior extremum) — making Rolle the
+  bridge between Ch2 continuity / Ch4 §4.1 results and the Mean
+  Value Theorem. EVT is itself unproved in Stewart (deferred to
+  Apéndice F), so this proof carries the same epistemic debt.

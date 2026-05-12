@@ -1,0 +1,137 @@
+schema_version: "0.3.1"
+id: proposition.indefinite-integral-table
+type: proposition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Tabla de integrales indefinidas
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Table of indefinite integrals
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-sonnet-4-6"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Las siguientes son fórmulas básicas para integrales indefinidas
+        (cada una puede verificarse derivando el lado derecho):
+        ∫ c·f(x) dx = c·∫ f(x) dx;
+        ∫ [f(x)+g(x)] dx = ∫f dx + ∫g dx;
+        ∫ k dx = kx + C;
+        ∫ xⁿ dx = xⁿ⁺¹/(n+1) + C  (n ≠ −1);
+        ∫ (1/x) dx = ln|x| + C;
+        ∫ eˣ dx = eˣ + C;
+        ∫ aˣ dx = aˣ/ln a + C;
+        ∫ sin x dx = −cos x + C;
+        ∫ cos x dx = sin x + C;
+        ∫ sec²x dx = tan x + C;
+        ∫ csc²x dx = −cot x + C;
+        ∫ sec x tan x dx = sec x + C;
+        ∫ csc x cot x dx = −csc x + C;
+        ∫ 1/(x²+1) dx = tan⁻¹x + C;
+        ∫ 1/√(1−x²) dx = sin⁻¹x + C;
+        ∫ sinh x dx = cosh x + C;
+        ∫ cosh x dx = sinh x + C.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        The following are basic formulas for indefinite integrals (each
+        can be verified by differentiating the right-hand side):
+        ∫ c·f dx = c·∫ f dx; ∫[f+g] dx = ∫f dx + ∫g dx;
+        ∫ k dx = kx + C; ∫ xⁿ dx = xⁿ⁺¹/(n+1) + C (n ≠ −1);
+        ∫(1/x) dx = ln|x| + C; ∫ eˣ dx = eˣ + C; ∫ aˣ dx = aˣ/ln a + C;
+        ∫ sin x dx = −cos x + C; ∫ cos x dx = sin x + C;
+        ∫ sec²x dx = tan x + C; ∫ csc²x dx = −cot x + C;
+        ∫ sec x tan x dx = sec x + C; ∫ csc x cot x dx = −csc x + C;
+        ∫ 1/(x²+1) dx = tan⁻¹x + C; ∫ 1/√(1−x²) dx = sin⁻¹x + C;
+        ∫ sinh x dx = cosh x + C; ∫ cosh x dx = sinh x + C.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-sonnet-4-6"
+      review_status: unreviewed
+  latex:
+    body: |
+      \int x^n\,dx = \frac{x^{n+1}}{n+1}+C\;(n\neq-1);\quad
+      \int \frac{1}{x}\,dx = \ln|x|+C;\quad
+      \int e^x\,dx = e^x+C;\quad
+      \int \sin x\,dx = -\cos x+C;\quad
+      \int \cos x\,dx = \sin x+C;\\
+      \int \sec^2 x\,dx = \tan x+C;\quad
+      \int \frac{1}{x^2+1}\,dx = \tan^{-1}x+C;\quad
+      \int \frac{1}{\sqrt{1-x^2}}\,dx = \sin^{-1}x+C
+    status: informal
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: definition.indefinite-integral
+    role: uses_concept
+    confidence: high
+  - id: proposition.antiderivative-formulas-table
+    role: extends
+    confidence: high
+    notes: >
+      §5.4 Table 1 re-presents the §4.9 antiderivative table in integral
+      notation, adding inverse-trig rows (tan⁻¹, sin⁻¹) and hyperbolic
+      rows (sinh, cosh) not in the §4.9 table.
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "5"
+    section: "5.4"
+    theorem_label: "Tabla 1 — tabla de integrales indefinidas"
+    page: "398"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: []
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [schema, notation]
+  keywords: [integral-table, antiderivative, standard-forms, inverse-trig, hyperbolic]
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: medium
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: low
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-sonnet-4-6"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Type-A bundle: 17+ formulas in one node, mirroring the §4.9 bundle
+  (proposition.antiderivative-formulas-table). Accepted as explicit debt.
+  Domain-of-validity gaps carried forward from §4.9:
+    - ∫(1/x)dx = ln|x|+C: disconnected-domain caveat (the general antiderivative
+      on ℝ\{0} needs two constants C₁ on (−∞,0) and C₂ on (0,∞)).
+    - ∫xⁿdx = xⁿ⁺¹/(n+1)+C: n real requires the generalised power rule
+      (§3.6 logarithmic differentiation); the elementary form covers n integer.
+  The latex body is marked `informal` because listing all 17 rows as LaTeX
+  would be unwieldy; a summary of the key forms is given instead.

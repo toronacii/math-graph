@@ -1,0 +1,120 @@
+schema_version: "0.3.1"
+id: definition.hyperbolic-function
+type: definition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Funciones hiperbólicas (paquete bundled)
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Hyperbolic functions (bundled)
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Las seis funciones hiperbólicas se definen para todo
+        x ∈ ℝ (con las restricciones de dominio indicadas) por:
+        senh x = (e^x − e^{−x})/2;
+        cosh x = (e^x + e^{−x})/2;
+        tanh x = senh(x)/cosh(x);
+        csch x = 1/senh(x) (x ≠ 0);
+        sech x = 1/cosh(x);
+        coth x = cosh(x)/senh(x) (x ≠ 0).
+        Domain/range: senh : ℝ → ℝ; cosh : ℝ → [1, ∞);
+        tanh : ℝ → (−1, 1).
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        The six hyperbolic functions are defined for all x ∈ ℝ
+        (with the domain restrictions indicated) by:
+        sinh x = (e^x − e^{−x})/2;
+        cosh x = (e^x + e^{−x})/2;
+        tanh x = sinh(x)/cosh(x);
+        csch x = 1/sinh(x) (x ≠ 0);
+        sech x = 1/cosh(x);
+        coth x = cosh(x)/sinh(x) (x ≠ 0).
+        Domain/range: sinh : ℝ → ℝ; cosh : ℝ → [1, ∞);
+        tanh : ℝ → (−1, 1).
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      \sinh x = \frac{e^{x} - e^{-x}}{2},\quad
+      \cosh x = \frac{e^{x} + e^{-x}}{2},\quad
+      \tanh x = \frac{\sinh x}{\cosh x},\\
+      \operatorname{csch} x = \frac{1}{\sinh x}\;(x\neq 0),\quad
+      \operatorname{sech} x = \frac{1}{\cosh x},\quad
+      \coth x = \frac{\cosh x}{\sinh x}\;(x\neq 0)
+    status: present
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: definition.exponential-function
+    role: uses_concept
+    confidence: high
+  - id: definition.natural-exponential-function
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.11"
+    theorem_label: "Definición de las funciones hiperbólicas (cuadro)"
+    page: "257"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [analysis]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [object, construction]
+  keywords: [hyperbolic-functions, sinh, cosh, tanh, csch, sech, coth, exponential-combinations]
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  BUNDLED per the trig-bundle policy established in Ch1 (six
+  trigonometric functions) and §3.3 / §3.5 (trig derivatives,
+  inverse-trig derivatives). Follows precedent so that hyperbolic
+  identities, derivative tables, and inverse forms can be modeled
+  symmetrically. Splitting into six atomic definitions is left as
+  optional epistemic refinement and tracked in the chapter
+  weak-dependencies report.

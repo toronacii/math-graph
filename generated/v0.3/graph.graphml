@@ -76,6 +76,15 @@
       <data key="d5">object,relation</data>
       <data key="d6">high</data>
     </node>
+    <node id="definition.area-under-curve">
+      <data key="d0">statement</data>
+      <data key="d1">definition</data>
+      <data key="d2">extracted</data>
+      <data key="d3">present</data>
+      <data key="d4">calculus</data>
+      <data key="d5">construction,object</data>
+      <data key="d6">high</data>
+    </node>
     <node id="definition.arithmetic-of-functions">
       <data key="d0">statement</data>
       <data key="d1">definition</data>
@@ -165,6 +174,15 @@
       <data key="d4">calculus</data>
       <data key="d5">property</data>
       <data key="d6">medium</data>
+    </node>
+    <node id="definition.definite-integral">
+      <data key="d0">statement</data>
+      <data key="d1">definition</data>
+      <data key="d2">extracted</data>
+      <data key="d3">present</data>
+      <data key="d4">calculus</data>
+      <data key="d5">construction,object</data>
+      <data key="d6">high</data>
     </node>
     <node id="definition.dependent-variable">
       <data key="d0">statement</data>
@@ -345,6 +363,15 @@
       <data key="d4">calculus</data>
       <data key="d5">property</data>
       <data key="d6">medium</data>
+    </node>
+    <node id="definition.indefinite-integral">
+      <data key="d0">statement</data>
+      <data key="d1">definition</data>
+      <data key="d2">extracted</data>
+      <data key="d3">present</data>
+      <data key="d4">calculus</data>
+      <data key="d5">notation,object</data>
+      <data key="d6">high</data>
     </node>
     <node id="definition.independent-variable">
       <data key="d0">statement</data>
@@ -688,6 +715,15 @@
       <data key="d5">construction,operator</data>
       <data key="d6">medium</data>
     </node>
+    <node id="definition.riemann-sum">
+      <data key="d0">statement</data>
+      <data key="d1">definition</data>
+      <data key="d2">extracted</data>
+      <data key="d3">present</data>
+      <data key="d4">calculus</data>
+      <data key="d5">construction,notation</data>
+      <data key="d6">high</data>
+    </node>
     <node id="definition.right-continuity">
       <data key="d0">statement</data>
       <data key="d1">definition</data>
@@ -832,6 +868,24 @@
       <data key="d5">criterion,principle</data>
       <data key="d6">high</data>
     </node>
+    <node id="proposition.definite-integral-bound">
+      <data key="d0">statement</data>
+      <data key="d1">proposition</data>
+      <data key="d2">extracted</data>
+      <data key="d3">present</data>
+      <data key="d4">calculus</data>
+      <data key="d5">criterion,principle</data>
+      <data key="d6">high</data>
+    </node>
+    <node id="proposition.definite-integral-properties">
+      <data key="d0">statement</data>
+      <data key="d1">proposition</data>
+      <data key="d2">extracted</data>
+      <data key="d3">present</data>
+      <data key="d4">calculus</data>
+      <data key="d5">criterion,principle</data>
+      <data key="d6">medium</data>
+    </node>
     <node id="proposition.derivative-as-tangent-slope">
       <data key="d0">statement</data>
       <data key="d1">proposition</data>
@@ -902,6 +956,33 @@
       <data key="d3">present</data>
       <data key="d4">calculus</data>
       <data key="d5">criterion,principle</data>
+      <data key="d6">high</data>
+    </node>
+    <node id="proposition.indefinite-integral-table">
+      <data key="d0">statement</data>
+      <data key="d1">proposition</data>
+      <data key="d2">extracted</data>
+      <data key="d3">informal</data>
+      <data key="d4">calculus</data>
+      <data key="d5">notation,schema</data>
+      <data key="d6">low</data>
+    </node>
+    <node id="proposition.integral-evaluation-formula">
+      <data key="d0">statement</data>
+      <data key="d1">proposition</data>
+      <data key="d2">extracted</data>
+      <data key="d3">present</data>
+      <data key="d4">calculus</data>
+      <data key="d5">criterion,principle</data>
+      <data key="d6">high</data>
+    </node>
+    <node id="proposition.integrals-of-symmetric-functions">
+      <data key="d0">statement</data>
+      <data key="d1">proposition</data>
+      <data key="d2">extracted</data>
+      <data key="d3">present</data>
+      <data key="d4">calculus</data>
+      <data key="d5">criterion</data>
       <data key="d6">high</data>
     </node>
     <node id="proposition.laws-of-exponents">
@@ -1046,6 +1127,15 @@
       <data key="d3">present</data>
       <data key="d4">calculus</data>
       <data key="d5">principle,schema</data>
+      <data key="d6">high</data>
+    </node>
+    <node id="proposition.midpoint-rule">
+      <data key="d0">statement</data>
+      <data key="d1">proposition</data>
+      <data key="d2">extracted</data>
+      <data key="d3">present</data>
+      <data key="d4">calculus</data>
+      <data key="d5">criterion,schema</data>
       <data key="d6">high</data>
     </node>
     <node id="proposition.non-differentiability-cases">
@@ -1291,7 +1381,34 @@
       <data key="d5">criterion,principle</data>
       <data key="d6">high</data>
     </node>
+    <node id="theorem.ftc-part-1">
+      <data key="d0">statement</data>
+      <data key="d1">theorem</data>
+      <data key="d2">extracted</data>
+      <data key="d3">present</data>
+      <data key="d4">calculus</data>
+      <data key="d5">principle</data>
+      <data key="d6">high</data>
+    </node>
+    <node id="theorem.ftc-part-2">
+      <data key="d0">statement</data>
+      <data key="d1">theorem</data>
+      <data key="d2">extracted</data>
+      <data key="d3">present</data>
+      <data key="d4">calculus</data>
+      <data key="d5">principle</data>
+      <data key="d6">high</data>
+    </node>
     <node id="theorem.general-antiderivative">
+      <data key="d0">statement</data>
+      <data key="d1">theorem</data>
+      <data key="d2">extracted</data>
+      <data key="d3">present</data>
+      <data key="d4">calculus</data>
+      <data key="d5">criterion,principle</data>
+      <data key="d6">high</data>
+    </node>
+    <node id="theorem.integrability-of-continuous">
       <data key="d0">statement</data>
       <data key="d1">theorem</data>
       <data key="d2">extracted</data>
@@ -1352,6 +1469,15 @@
       <data key="d3">present</data>
       <data key="d4">calculus</data>
       <data key="d5">criterion,principle</data>
+      <data key="d6">high</data>
+    </node>
+    <node id="theorem.net-change-theorem">
+      <data key="d0">statement</data>
+      <data key="d1">theorem</data>
+      <data key="d2">extracted</data>
+      <data key="d3">present</data>
+      <data key="d4">calculus</data>
+      <data key="d5">principle</data>
       <data key="d6">high</data>
     </node>
     <node id="theorem.number-e-as-limit">
@@ -1426,6 +1552,24 @@
       <data key="d5">criterion,principle</data>
       <data key="d6">high</data>
     </node>
+    <node id="theorem.substitution-rule-definite">
+      <data key="d0">statement</data>
+      <data key="d1">theorem</data>
+      <data key="d2">extracted</data>
+      <data key="d3">present</data>
+      <data key="d4">calculus</data>
+      <data key="d5">criterion,principle</data>
+      <data key="d6">high</data>
+    </node>
+    <node id="theorem.substitution-rule">
+      <data key="d0">statement</data>
+      <data key="d1">theorem</data>
+      <data key="d2">extracted</data>
+      <data key="d3">present</data>
+      <data key="d4">calculus</data>
+      <data key="d5">criterion,principle</data>
+      <data key="d6">high</data>
+    </node>
     <node id="theorem.sum-rule-derivative">
       <data key="d0">statement</data>
       <data key="d1">theorem</data>
@@ -1478,6 +1622,13 @@
       <data key="d6">high</data>
     </node>
     <node id="proof.continuity-of-polynomials-and-rationals.stewart">
+      <data key="d0">proof</data>
+      <data key="d1">proof</data>
+      <data key="d2">extracted</data>
+      <data key="d7">direct</data>
+      <data key="d6">high</data>
+    </node>
+    <node id="proof.definite-integral-bound.from-linearity">
       <data key="d0">proof</data>
       <data key="d1">proof</data>
       <data key="d2">extracted</data>
@@ -1624,6 +1775,20 @@
       <data key="d7">informal</data>
       <data key="d6">medium</data>
     </node>
+    <node id="proof.ftc-part-1.stewart">
+      <data key="d0">proof</data>
+      <data key="d1">proof</data>
+      <data key="d2">extracted</data>
+      <data key="d7">direct</data>
+      <data key="d6">high</data>
+    </node>
+    <node id="proof.ftc-part-2.from-ftc1">
+      <data key="d0">proof</data>
+      <data key="d1">proof</data>
+      <data key="d2">extracted</data>
+      <data key="d7">direct</data>
+      <data key="d6">high</data>
+    </node>
     <node id="proof.general-antiderivative.from-corollary">
       <data key="d0">proof</data>
       <data key="d1">proof</data>
@@ -1650,6 +1815,13 @@
       <data key="d1">proof</data>
       <data key="d2">extracted</data>
       <data key="d7">direct-from-mvt</data>
+      <data key="d6">high</data>
+    </node>
+    <node id="proof.integrals-of-symmetric-functions.from-substitution">
+      <data key="d0">proof</data>
+      <data key="d1">proof</data>
+      <data key="d2">extracted</data>
+      <data key="d7">direct</data>
       <data key="d6">high</data>
     </node>
     <node id="proof.inverse-hyperbolic-as-logarithm.quadratic-in-exp">
@@ -1778,6 +1950,20 @@
       <data key="d7">informal</data>
       <data key="d6">medium</data>
     </node>
+    <node id="proof.substitution-rule-definite.from-ftc2">
+      <data key="d0">proof</data>
+      <data key="d1">proof</data>
+      <data key="d2">extracted</data>
+      <data key="d7">direct</data>
+      <data key="d6">high</data>
+    </node>
+    <node id="proof.substitution-rule.from-chain-rule">
+      <data key="d0">proof</data>
+      <data key="d1">proof</data>
+      <data key="d2">extracted</data>
+      <data key="d7">direct</data>
+      <data key="d6">high</data>
+    </node>
     <node id="proof.sum-rule-derivative.stewart">
       <data key="d0">proof</data>
       <data key="d1">proof</data>
@@ -1792,6 +1978,12 @@
       <data key="d7">direct</data>
       <data key="d6">high</data>
     </node>
+    <edge source="corollary.derivatives-equal-implies-differ-by-constant" target="proof.ftc-part-2.from-ftc1" id="0">
+      <data key="d8">uses</data>
+      <data key="d9">essential</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
+    </edge>
     <edge source="corollary.derivatives-equal-implies-differ-by-constant" target="proof.general-antiderivative.from-corollary" id="0">
       <data key="d8">uses</data>
       <data key="d9">essential</data>
@@ -1866,13 +2058,43 @@
       <data key="d8">depends_on</data>
       <data key="d9">uses_concept</data>
     </edge>
+    <edge source="definition.antiderivative" target="proof.ftc-part-2.from-ftc1" id="0">
+      <data key="d8">uses</data>
+      <data key="d9">definition</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
+    </edge>
     <edge source="definition.antiderivative" target="proof.general-antiderivative.from-corollary" id="0">
       <data key="d8">uses</data>
       <data key="d9">definition</data>
       <data key="d10">high</data>
       <data key="d11">False</data>
     </edge>
+    <edge source="definition.antiderivative" target="proof.substitution-rule-definite.from-ftc2" id="0">
+      <data key="d8">uses</data>
+      <data key="d9">definition</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
+    </edge>
+    <edge source="definition.antiderivative" target="proof.substitution-rule.from-chain-rule" id="0">
+      <data key="d8">uses</data>
+      <data key="d9">definition</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
+    </edge>
     <edge source="definition.antiderivative" target="definition.derivative-function" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="definition.area-under-curve" target="definition.continuity-on-interval" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="definition.area-under-curve" target="definition.function" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="definition.area-under-curve" target="definition.limit-of-function" id="0">
       <data key="d8">depends_on</data>
       <data key="d9">uses_concept</data>
     </edge>
@@ -1992,6 +2214,12 @@
       <data key="d10">high</data>
       <data key="d11">False</data>
     </edge>
+    <edge source="definition.continuity-at-point" target="proof.ftc-part-1.stewart" id="0">
+      <data key="d8">uses</data>
+      <data key="d9">essential</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
+    </edge>
     <edge source="definition.continuity-at-point" target="proof.second-derivative-test.from-concavity" id="0">
       <data key="d8">uses</data>
       <data key="d9">essential</data>
@@ -2009,6 +2237,12 @@
     <edge source="definition.continuity-at-point" target="definition.limit-of-function" id="0">
       <data key="d8">depends_on</data>
       <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="definition.continuity-on-interval" target="proof.substitution-rule-definite.from-ftc2" id="0">
+      <data key="d8">uses</data>
+      <data key="d9">background</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
     </edge>
     <edge source="definition.continuity-on-interval" target="definition.continuity-at-point" id="0">
       <data key="d8">depends_on</data>
@@ -2041,6 +2275,46 @@
       <data key="d11">False</data>
     </edge>
     <edge source="definition.decreasing-function" target="definition.function" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="definition.definite-integral" target="proof.definite-integral-bound.from-linearity" id="0">
+      <data key="d8">uses</data>
+      <data key="d9">definition</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
+    </edge>
+    <edge source="definition.definite-integral" target="proof.ftc-part-1.stewart" id="0">
+      <data key="d8">uses</data>
+      <data key="d9">definition</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
+    </edge>
+    <edge source="definition.definite-integral" target="proof.ftc-part-2.from-ftc1" id="0">
+      <data key="d8">uses</data>
+      <data key="d9">definition</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
+    </edge>
+    <edge source="definition.definite-integral" target="proof.integrals-of-symmetric-functions.from-substitution" id="0">
+      <data key="d8">uses</data>
+      <data key="d9">definition</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
+    </edge>
+    <edge source="definition.definite-integral" target="definition.continuity-on-interval" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="definition.definite-integral" target="definition.function" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="definition.definite-integral" target="definition.limit-of-function" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="definition.definite-integral" target="definition.riemann-sum" id="0">
       <data key="d8">depends_on</data>
       <data key="d9">uses_concept</data>
     </edge>
@@ -2081,6 +2355,12 @@
       <data key="d11">False</data>
     </edge>
     <edge source="definition.derivative-at-point" target="proof.fermat.stewart" id="1">
+      <data key="d8">uses</data>
+      <data key="d9">definition</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
+    </edge>
+    <edge source="definition.derivative-at-point" target="proof.ftc-part-1.stewart" id="0">
       <data key="d8">uses</data>
       <data key="d9">definition</data>
       <data key="d10">high</data>
@@ -2423,6 +2703,20 @@
       <data key="d11">False</data>
     </edge>
     <edge source="definition.increasing-function" target="definition.function" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="definition.indefinite-integral" target="proof.substitution-rule.from-chain-rule" id="0">
+      <data key="d8">uses</data>
+      <data key="d9">definition</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
+    </edge>
+    <edge source="definition.indefinite-integral" target="definition.antiderivative" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">extends</data>
+    </edge>
+    <edge source="definition.indefinite-integral" target="theorem.general-antiderivative" id="0">
       <data key="d8">depends_on</data>
       <data key="d9">uses_concept</data>
     </edge>
@@ -2962,6 +3256,14 @@
       <data key="d8">depends_on</data>
       <data key="d9">uses_concept</data>
     </edge>
+    <edge source="definition.riemann-sum" target="definition.domain" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="definition.riemann-sum" target="definition.function" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
     <edge source="definition.right-continuity" target="definition.continuity-at-point" id="0">
       <data key="d8">depends_on</data>
       <data key="d9">specializes</data>
@@ -3224,6 +3526,40 @@
       <data key="d8">depends_on</data>
       <data key="d9">uses_concept</data>
     </edge>
+    <edge source="proposition.definite-integral-bound" target="proof.ftc-part-1.stewart" id="0">
+      <data key="d8">uses</data>
+      <data key="d9">essential</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
+    </edge>
+    <edge source="proposition.definite-integral-bound" target="definition.definite-integral" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="proposition.definite-integral-bound" target="proposition.definite-integral-properties" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="proposition.definite-integral-properties" target="proof.definite-integral-bound.from-linearity" id="0">
+      <data key="d8">uses</data>
+      <data key="d9">essential</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
+    </edge>
+    <edge source="proposition.definite-integral-properties" target="proof.integrals-of-symmetric-functions.from-substitution" id="0">
+      <data key="d8">uses</data>
+      <data key="d9">essential</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
+    </edge>
+    <edge source="proposition.definite-integral-properties" target="definition.definite-integral" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="proposition.definite-integral-properties" target="proposition.limit-laws" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
     <edge source="proposition.derivative-as-tangent-slope" target="definition.derivative-at-point" id="0">
       <data key="d8">depends_on</data>
       <data key="d9">uses_concept</data>
@@ -3407,6 +3743,34 @@
       <data key="d9">uses_concept</data>
     </edge>
     <edge source="proposition.increasing-decreasing-test" target="definition.increasing-function" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="proposition.indefinite-integral-table" target="definition.indefinite-integral" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="proposition.indefinite-integral-table" target="proposition.antiderivative-formulas-table" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">extends</data>
+    </edge>
+    <edge source="proposition.integral-evaluation-formula" target="definition.definite-integral" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="proposition.integral-evaluation-formula" target="theorem.integrability-of-continuous" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="proposition.integrals-of-symmetric-functions" target="definition.definite-integral" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="proposition.integrals-of-symmetric-functions" target="proposition.definite-integral-properties" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="proposition.integrals-of-symmetric-functions" target="theorem.substitution-rule-definite" id="0">
       <data key="d8">depends_on</data>
       <data key="d9">uses_concept</data>
     </edge>
@@ -3736,6 +4100,14 @@
       <data key="d8">depends_on</data>
       <data key="d9">uses_concept</data>
     </edge>
+    <edge source="proposition.midpoint-rule" target="definition.definite-integral" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="proposition.midpoint-rule" target="definition.riemann-sum" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
     <edge source="proposition.non-differentiability-cases" target="definition.differentiable-at-point" id="0">
       <data key="d8">depends_on</data>
       <data key="d9">uses_concept</data>
@@ -3863,6 +4235,18 @@
       <data key="d11">False</data>
     </edge>
     <edge source="theorem.chain-rule" target="proof.power-rule-general.logarithmic-differentiation" id="0">
+      <data key="d8">uses</data>
+      <data key="d9">essential</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
+    </edge>
+    <edge source="theorem.chain-rule" target="proof.substitution-rule-definite.from-ftc2" id="0">
+      <data key="d8">uses</data>
+      <data key="d9">essential</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
+    </edge>
+    <edge source="theorem.chain-rule" target="proof.substitution-rule.from-chain-rule" id="0">
       <data key="d8">uses</data>
       <data key="d9">essential</data>
       <data key="d10">high</data>
@@ -4302,6 +4686,12 @@
       <data key="d8">depends_on</data>
       <data key="d9">uses_concept</data>
     </edge>
+    <edge source="theorem.extreme-value-theorem" target="proof.ftc-part-1.stewart" id="0">
+      <data key="d8">uses</data>
+      <data key="d9">essential</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
+    </edge>
     <edge source="theorem.extreme-value-theorem" target="proof.rolle.stewart" id="0">
       <data key="d8">uses</data>
       <data key="d9">essential</data>
@@ -4350,11 +4740,61 @@
       <data key="d8">depends_on</data>
       <data key="d9">uses_concept</data>
     </edge>
+    <edge source="theorem.ftc-part-1" target="proof.ftc-part-2.from-ftc1" id="0">
+      <data key="d8">uses</data>
+      <data key="d9">essential</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
+    </edge>
+    <edge source="theorem.ftc-part-1" target="proof.substitution-rule.from-chain-rule" id="0">
+      <data key="d8">uses</data>
+      <data key="d9">existence</data>
+      <data key="d10">high</data>
+      <data key="d11">True</data>
+    </edge>
+    <edge source="theorem.ftc-part-1" target="definition.continuity-on-interval" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="theorem.ftc-part-1" target="definition.definite-integral" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="theorem.ftc-part-1" target="definition.derivative-at-point" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="theorem.ftc-part-2" target="proof.substitution-rule-definite.from-ftc2" id="0">
+      <data key="d8">uses</data>
+      <data key="d9">essential</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
+    </edge>
+    <edge source="theorem.ftc-part-2" target="definition.antiderivative" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="theorem.ftc-part-2" target="definition.continuity-on-interval" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="theorem.ftc-part-2" target="definition.definite-integral" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
     <edge source="theorem.general-antiderivative" target="definition.antiderivative" id="0">
       <data key="d8">depends_on</data>
       <data key="d9">uses_concept</data>
     </edge>
     <edge source="theorem.general-antiderivative" target="definition.derivative-function" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="theorem.integrability-of-continuous" target="definition.continuity-on-interval" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="theorem.integrability-of-continuous" target="definition.definite-integral" id="0">
       <data key="d8">depends_on</data>
       <data key="d9">uses_concept</data>
     </edge>
@@ -4449,6 +4889,14 @@
       <data key="d9">uses_concept</data>
     </edge>
     <edge source="theorem.mean-value-theorem" target="definition.secant-line" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="theorem.net-change-theorem" target="definition.definite-integral" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="theorem.net-change-theorem" target="theorem.ftc-part-2" id="0">
       <data key="d8">depends_on</data>
       <data key="d9">uses_concept</data>
     </edge>
@@ -4548,6 +4996,12 @@
       <data key="d8">depends_on</data>
       <data key="d9">uses_concept</data>
     </edge>
+    <edge source="theorem.squeeze-theorem" target="proof.ftc-part-1.stewart" id="0">
+      <data key="d8">uses</data>
+      <data key="d9">essential</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
+    </edge>
     <edge source="theorem.squeeze-theorem" target="proof.limit-sin-over-x.squeeze" id="0">
       <data key="d8">uses</data>
       <data key="d9">essential</data>
@@ -4559,6 +5013,36 @@
       <data key="d9">uses_concept</data>
     </edge>
     <edge source="theorem.squeeze-theorem" target="proposition.limit-monotonicity" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="theorem.substitution-rule-definite" target="proof.integrals-of-symmetric-functions.from-substitution" id="0">
+      <data key="d8">uses</data>
+      <data key="d9">essential</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
+    </edge>
+    <edge source="theorem.substitution-rule-definite" target="definition.continuity-on-interval" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="theorem.substitution-rule-definite" target="theorem.ftc-part-2" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="theorem.substitution-rule-definite" target="theorem.substitution-rule" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="theorem.substitution-rule" target="definition.continuity-on-interval" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="theorem.substitution-rule" target="definition.differentiable-on-interval" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="theorem.substitution-rule" target="definition.indefinite-integral" id="0">
       <data key="d8">depends_on</data>
       <data key="d9">uses_concept</data>
     </edge>
@@ -4601,6 +5085,9 @@
       <data key="d8">proves</data>
     </edge>
     <edge source="proof.continuity-of-polynomials-and-rationals.stewart" target="theorem.continuity-of-polynomials-and-rationals" id="0">
+      <data key="d8">proves</data>
+    </edge>
+    <edge source="proof.definite-integral-bound.from-linearity" target="proposition.definite-integral-bound" id="0">
       <data key="d8">proves</data>
     </edge>
     <edge source="proof.derivative-as-tangent-slope.stewart" target="proposition.derivative-as-tangent-slope" id="0">
@@ -4663,6 +5150,12 @@
     <edge source="proof.first-derivative-test.from-id-test" target="proposition.first-derivative-test" id="0">
       <data key="d8">proves</data>
     </edge>
+    <edge source="proof.ftc-part-1.stewart" target="theorem.ftc-part-1" id="0">
+      <data key="d8">proves</data>
+    </edge>
+    <edge source="proof.ftc-part-2.from-ftc1" target="theorem.ftc-part-2" id="0">
+      <data key="d8">proves</data>
+    </edge>
     <edge source="proof.general-antiderivative.from-corollary" target="theorem.general-antiderivative" id="0">
       <data key="d8">proves</data>
     </edge>
@@ -4673,6 +5166,9 @@
       <data key="d8">proves</data>
     </edge>
     <edge source="proof.increasing-decreasing-test.from-mvt" target="proposition.increasing-decreasing-test" id="0">
+      <data key="d8">proves</data>
+    </edge>
+    <edge source="proof.integrals-of-symmetric-functions.from-substitution" target="proposition.integrals-of-symmetric-functions" id="0">
       <data key="d8">proves</data>
     </edge>
     <edge source="proof.inverse-hyperbolic-as-logarithm.quadratic-in-exp" target="theorem.inverse-hyperbolic-as-logarithm" id="0">
@@ -4727,6 +5223,12 @@
       <data key="d8">proves</data>
     </edge>
     <edge source="proof.second-derivative-test.from-concavity" target="proposition.second-derivative-test" id="0">
+      <data key="d8">proves</data>
+    </edge>
+    <edge source="proof.substitution-rule-definite.from-ftc2" target="theorem.substitution-rule-definite" id="0">
+      <data key="d8">proves</data>
+    </edge>
+    <edge source="proof.substitution-rule.from-chain-rule" target="theorem.substitution-rule" id="0">
       <data key="d8">proves</data>
     </edge>
     <edge source="proof.sum-rule-derivative.stewart" target="theorem.sum-rule-derivative" id="0">

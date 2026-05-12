@@ -1,0 +1,86 @@
+schema_version: "0.3.1"
+id: proof.increasing-decreasing-test.from-mvt
+type: proof
+status: extracted
+
+proves: proposition.increasing-decreasing-test
+style: direct-from-mvt
+
+uses: []
+
+parts:
+  - name: case-positive-derivative
+    kind: subclaim
+    description: >
+      Suppose f'(x) > 0 on the interval I. Take any x₁, x₂ in I with
+      x₁ < x₂. By the definition of increasing function, we must
+      show f(x₁) < f(x₂). Since f is differentiable on I (a
+      requirement of f'(x) > 0 making sense), it is differentiable
+      on (x₁, x₂) and continuous on [x₁, x₂] (differentiable implies
+      continuous). The Mean Value Theorem yields a c with
+      x₁ < c < x₂ such that f(x₂) − f(x₁) = f'(c)(x₂ − x₁). The
+      hypothesis gives f'(c) > 0, and x₂ − x₁ > 0, so the right side
+      is positive: f(x₂) − f(x₁) > 0, i.e. f(x₁) < f(x₂). Hence f is
+      increasing on I.
+    uses:
+      - id: theorem.mean-value-theorem
+        role: essential
+        confidence: high
+      - id: theorem.differentiable-implies-continuous
+        role: essential
+        confidence: high
+      - id: definition.increasing-function
+        role: definition
+        confidence: high
+
+  - name: case-negative-derivative
+    kind: subclaim
+    description: >
+      The case f'(x) < 0 is symmetric: same argument with the
+      inequality reversed gives f(x₂) − f(x₁) < 0, hence f is
+      decreasing on I. (Equivalently, apply part (a) to −f.)
+    uses:
+      - id: theorem.mean-value-theorem
+        role: essential
+        confidence: high
+      - id: definition.decreasing-function
+        role: definition
+        confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "4"
+    section: "4.3"
+    locator: "Demostración de la Prueba C/D (p. 290)"
+    page: "290"
+    source_language: es
+
+sketch:
+  es:
+    text: >
+      Sean x₁ < x₂ en I. Por el TVM existe c entre x₁ y x₂ con
+      f(x₂) − f(x₁) = f'(c)(x₂ − x₁). Si f'(c) > 0 y x₂ − x₁ > 0,
+      el lado derecho es positivo, así que f(x₁) < f(x₂); f es
+      creciente. El caso f' < 0 es análogo.
+    is_original: true
+    origin: original
+    review_status: unreviewed
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart writes part (a) explicitly and says part (b) is similar.
+  The proof is a direct one-line corollary of MVT.

@@ -1,0 +1,73 @@
+schema_version: "0.3.1"
+id: proof.continuity-arithmetic.stewart
+type: proof
+status: extracted
+
+proves: theorem.continuity-arithmetic
+style: direct
+
+uses: []
+
+parts:
+  - name: sum
+    kind: subclaim
+    description: >
+      Proof of inciso 1 (sum) — the only case Stewart writes out
+      explicitly. The other four follow by the same template using
+      the corresponding limit law from proposition.limit-laws.
+    uses:
+      - id: definition.continuity-at-point
+        role: essential
+        confidence: high
+        notes: >
+          Both hypotheses (f, g continuous at a) and the conclusion
+          (f+g continuous at a) are unfolded as lim = value-at-a.
+      - id: proposition.limit-laws
+        role: essential
+        confidence: high
+        notes: applies the sum law (Ley 1) to lim_{x→a}(f(x)+g(x))
+      - id: definition.arithmetic-of-functions
+        role: definition
+        confidence: high
+        notes: pointwise sum (f + g)(x) = f(x) + g(x)
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.5"
+    locator: "Demostración del Teorema 4 (inciso 1)"
+    page: "121"
+    source_language: es
+
+sketch:
+  es:
+    text: >
+      Por continuidad de f y g en a, lím_{x→a} f(x) = f(a) y
+      lím_{x→a} g(x) = g(a). Por la ley 1 de los límites,
+      lím_{x→a} [f(x) + g(x)] = lím f(x) + lím g(x) = f(a) + g(a) =
+      (f + g)(a). Esto prueba que f + g es continua en a.
+    is_original: true
+    origin: original
+    review_status: unreviewed
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: medium
+  semantic_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  parts[]-only proof: only the sum case is explicit. dependency_
+  confidence: medium reflects that the bundle theorem.continuity-
+  arithmetic is established here ONLY for the sum case; the other
+  four require parallel applications of Laws 2–5 from proposition.
+  limit-laws (epistemic debt aligned with proof.limit-laws.stewart).

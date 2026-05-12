@@ -1,0 +1,116 @@
+schema_version: "0.3.1"
+id: proof.derivatives-of-inverse-hyperbolic-functions.implicit
+type: proof
+status: extracted
+
+proves: theorem.derivatives-of-inverse-hyperbolic-functions
+style: implicit-differentiation
+
+uses: []
+
+parts:
+  - name: derivative-of-arcsinh
+    kind: subclaim
+    description: >
+      (d/dx) senh⁻¹ x = 1/√(1 + x²). Let y = senh⁻¹ x, so
+      senh y = x. Differentiating implicitly: cosh y · (dy/dx) = 1,
+      so dy/dx = 1/cosh y. Since cosh²y − senh²y = 1 and cosh y > 0,
+      cosh y = √(1 + senh²y) = √(1 + x²). Stewart Example 4
+      (Solution 1), page 261. An alternative proof differentiates
+      the log form senh⁻¹ x = ln(x + √(x² + 1)) directly
+      (Solution 2).
+    uses:
+      - id: proposition.implicit-differentiation
+        role: essential
+        confidence: high
+      - id: theorem.chain-rule
+        role: essential
+        confidence: high
+      - id: definition.inverse-hyperbolic-function
+        role: definition
+        confidence: high
+      - id: theorem.derivatives-of-hyperbolic-functions
+        role: essential
+        confidence: high
+        notes: (d/dy) senh y = cosh y
+      - id: proposition.hyperbolic-identities
+        role: essential
+        confidence: high
+        notes: cosh y = √(1 + senh²y) used to convert cosh y to a function of x
+
+  - name: derivatives-of-arccosh-arctanh-arccsch-arcsech-arccoth
+    kind: subclaim
+    description: >
+      The remaining five derivatives in Table 6 are derived
+      analogously by implicit differentiation (or by differentiating
+      the corresponding log forms from Equations 3–5 and Exercise 28).
+      Stewart Ex 29. The tanh⁻¹ and coth⁻¹ formulas are
+      algebraically identical (both 1/(1 − x²)) but apply on
+      disjoint domains |x| < 1 and |x| > 1 respectively.
+    uses:
+      - id: proposition.implicit-differentiation
+        role: essential
+        confidence: medium
+      - id: theorem.chain-rule
+        role: essential
+        confidence: medium
+      - id: definition.inverse-hyperbolic-function
+        role: definition
+        confidence: high
+      - id: theorem.derivatives-of-hyperbolic-functions
+        role: essential
+        confidence: medium
+      - id: proposition.hyperbolic-identities
+        role: essential
+        confidence: medium
+        notes: identities used to rewrite cosh y, sech²y, etc. in terms of x
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.11"
+    locator: "Ejemplo 4 (pp. 261–262, soluciones 1 y 2) + ejercicio 29"
+    page: "261"
+    source_language: es
+
+sketch:
+  es:
+    text: >
+      Bundle. arcsinh: sea y = senh⁻¹ x; entonces senh y = x.
+      Derivando implícitamente, cosh y · (dy/dx) = 1, así
+      dy/dx = 1/cosh y. Como cosh²y − senh²y = 1 y cosh y ≥ 0,
+      cosh y = √(1 + senh²y) = √(1 + x²), de donde
+      (d/dx) senh⁻¹ x = 1/√(1 + x²). Casos restantes (arccosh,
+      arctanh, arccsch, arcsech, arccoth): técnica análoga,
+      usando las identidades hiperbólicas para convertir
+      cosh y, sech²y, etc. en expresiones de x. Las fórmulas de
+      tanh⁻¹ y coth⁻¹ coinciden algebraicamente pero sus
+      dominios son disjuntos.
+    is_original: true
+    origin: original
+    review_status: unreviewed
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: medium
+  semantic_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Bundled proof. arcsinh is fully written out in Example 4
+  (two methods); the other five are deferred to Exercise 29.
+  dependency_confidence:medium reflects the partial textual
+  coverage AND Stewart's informal assertion that the inverse of
+  a differentiable bijection is differentiable. The dependency
+  on proposition.hyperbolic-identities is essential — without
+  the Pythagorean identity, cosh y cannot be re-expressed as a
+  function of x = senh y.

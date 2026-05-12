@@ -1,0 +1,111 @@
+schema_version: "0.3.1"
+id: theorem.substitution-rule-definite
+type: theorem
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Regla de sustitución para integrales definidas
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Substitution Rule for Definite Integrals
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-sonnet-4-6"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Si g' es continua sobre [a, b] y f es continua sobre el rango de
+        u = g(x), entonces
+        ∫_a^b f(g(x))·g'(x) dx = ∫_{g(a)}^{g(b)} f(u) du.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        If g' is continuous on [a, b] and f is continuous on the range of
+        u = g(x), then
+        ∫_a^b f(g(x))·g'(x) dx = ∫_{g(a)}^{g(b)} f(u) du.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-sonnet-4-6"
+      review_status: unreviewed
+  latex:
+    body: |
+      g' \in C([a,b]),\; f \in C(\operatorname{range}(g))
+      \;\;\Rightarrow\;\;
+      \int_a^b f(g(x))\,g'(x)\,dx = \int_{g(a)}^{g(b)} f(u)\,du
+    status: present
+    review_status: unreviewed
+
+proved_by:
+  - proof.substitution-rule-definite.from-ftc2
+
+depends_on:
+  - id: theorem.substitution-rule
+    role: specializes
+    confidence: high
+    notes: >
+      The definite-integral version applies the indefinite substitution rule
+      and transforms the limits of integration accordingly: x=a gives u=g(a)
+      and x=b gives u=g(b).
+  - id: theorem.ftc-part-2
+    role: uses_concept
+    confidence: high
+    notes: >
+      The proof uses TFC2 to evaluate both sides after applying the chain rule
+      antiderivative relationship.
+  - id: definition.continuity-on-interval
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "5"
+    section: "5.5"
+    theorem_label: "Regla de sustitución para integrales definidas (6)"
+    page: "411"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: []
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [principle, criterion]
+  keywords: [substitution, u-substitution, change-of-variable, definite-integral, limits-of-integration]
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-sonnet-4-6"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  The key practical difference from the indefinite version (theorem.substitution-rule)
+  is the transformation of the integration limits: instead of back-substituting
+  u = g(x) at the end, the limits are changed from a,b to g(a),g(b) directly.
+  This avoids re-expressing the antiderivative in terms of x.

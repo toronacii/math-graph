@@ -1,0 +1,110 @@
+schema_version: "0.3.1"
+id: proposition.derivative-as-tangent-slope
+type: proposition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: La derivada como pendiente de la recta tangente
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: The derivative as the slope of the tangent line
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        La recta tangente a y = f(x) en (a, f(a)) es la recta que
+        pasa por (a, f(a)) cuya pendiente es igual a f'(a), la
+        derivada de f en x = a. En consecuencia, la ecuación
+        punto-pendiente de la recta tangente puede escribirse como
+        y − f(a) = f'(a)·(x − a).
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        The tangent line to y = f(x) at (a, f(a)) is the line
+        through (a, f(a)) whose slope equals f'(a), the derivative
+        of f at x = a. Consequently, the point-slope equation of
+        the tangent line can be written as
+        y − f(a) = f'(a)·(x − a).
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      m_{\text{tan}} \;=\; f'(a),
+        \qquad y - f(a) \;=\; f'(a)\,(x - a)
+    status: present
+    review_status: unreviewed
+
+proved_by:
+  - proof.derivative-as-tangent-slope.stewart
+
+depends_on:
+  - id: definition.tangent-line
+    role: uses_concept
+    confidence: high
+  - id: definition.derivative-at-point
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.7"
+    locator: "Recuadro p.147 («La recta tangente a y = f(x) ...»)"
+    page: "147"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [analytic-geometry]
+
+ambient:
+  structures: [real-line, euclidean-plane]
+
+ontology:
+  semantic_kind: [principle, relation]
+  keywords: [tangent-slope, derivative-interpretation, point-slope]
+
+generality: []
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart presents this as a boxed reinterpretation rather than a
+  numbered theorem, but it is a substantive proposition: it asserts
+  that two independently introduced limits — the tangent slope of
+  Def 1 (§2.7) and the derivative of Def 4 (§2.7) — are the same
+  number. The proof is purely definitional (both unfold to the same
+  difference-quotient limit), but the identification deserves an
+  explicit graph node because all subsequent geometric interpretations
+  of the derivative depend on it.

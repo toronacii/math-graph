@@ -1,0 +1,104 @@
+schema_version: "0.3.1"
+id: definition.number-e
+type: definition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Definición del número e
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Definition of the number e
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        e es el número tal que lím_{h→0} (e^h − 1)/h = 1.
+        Geométricamente, es la base a > 0 para la cual la recta
+        tangente a y = a^x en (0, 1) tiene pendiente exactamente 1.
+        Aproximadamente e ≈ 2.71828.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        e is the number such that lim_{h→0} (e^h − 1)/h = 1.
+        Geometrically, e is the base a > 0 for which the tangent
+        line to y = a^x at (0, 1) has slope exactly 1.
+        Approximately e ≈ 2.71828.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      \lim_{h \to 0} \frac{e^{h} - 1}{h} \;=\; 1
+    status: present
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: definition.exponential-function
+    role: uses_concept
+    confidence: high
+  - id: definition.limit-of-function
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.1"
+    theorem_label: "Definición del número e"
+    page: "180"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [analysis]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [object]
+  keywords: [e, euler-number, exponential, base, natural-base]
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: medium
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart had introduced e informally in §1.5 and now provides
+  the operational definition via the limit. Existence/uniqueness
+  of such an a between 2 and 3 is asserted but not rigorously
+  proved (relies on intuitive monotonic dependence of f'(0) on
+  the base a). This is open epistemic debt — flagged as
+  dependency_confidence:medium. A rigorous derivation requires
+  the exponential function as a power series or the inverse of
+  the natural log; both are outside Stewart's scope.

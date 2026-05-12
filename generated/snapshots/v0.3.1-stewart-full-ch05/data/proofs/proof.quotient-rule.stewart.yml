@@ -1,0 +1,68 @@
+schema_version: "0.3.1"
+id: proof.quotient-rule.stewart
+type: proof
+status: extracted
+
+proves: theorem.quotient-rule
+style: direct
+
+uses:
+  - id: definition.derivative-function
+    role: definition
+    confidence: high
+    notes: unfolds (d/dx)(u/v) as the (Δx → 0) limit of Δ(u/v)/Δx
+  - id: proposition.limit-laws
+    role: essential
+    confidence: high
+    notes: applies sum, product, and quotient laws to the split expression
+  - id: theorem.differentiable-implies-continuous
+    role: essential
+    confidence: high
+    notes: ensures Δv → 0 as Δx → 0 so v(x+Δx) → v(x), keeping the denominator v² in the limit
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.2"
+    locator: "Derivación inline (páginas 187)"
+    page: "187"
+    source_language: es
+
+sketch:
+  es:
+    text: >
+      Sean u = f(x), v = g(x), v ≠ 0. El cambio en el cociente
+      al pasar x → x + Δx es
+      Δ(u/v) = (u+Δu)/(v+Δv) − u/v
+             = ((u+Δu)v − u(v+Δv)) / (v(v+Δv))
+             = (vΔu − uΔv) / (v(v+Δv)).
+      Dividiendo entre Δx:
+      Δ(u/v)/Δx = (v·(Δu/Δx) − u·(Δv/Δx)) / (v(v+Δv)).
+      Como g es derivable, también es continua, así que Δv → 0
+      cuando Δx → 0, lo cual implica v + Δv → v. Aplicando las
+      leyes de los límites,
+      (d/dx)(u/v) = (v·(du/dx) − u·(dv/dx)) / v².
+    is_original: true
+    origin: original
+    review_status: unreviewed
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Closes the QUOTIENT case of the limit-laws bundled debt
+  (the limit law for quotients is invoked when passing v(v+Δv) → v²
+  through the limit). The hypothesis v ≠ 0 in a neighborhood is
+  used implicitly via continuity of g.

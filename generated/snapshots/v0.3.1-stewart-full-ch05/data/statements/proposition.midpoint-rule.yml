@@ -1,0 +1,104 @@
+schema_version: "0.3.1"
+id: proposition.midpoint-rule
+type: proposition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Regla del punto medio
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Midpoint Rule
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-sonnet-4-6"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        ∫_a^b f(x) dx ≈ Σᵢ₌₁ⁿ f(x̄ᵢ)Δx = Δx[f(x̄₁) + ··· + f(x̄ₙ)]
+        donde Δx = (b − a)/n y x̄ᵢ = (xᵢ₋₁ + xᵢ)/2 es el punto medio
+        del i-ésimo subintervalo [xᵢ₋₁, xᵢ].
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        ∫_a^b f(x) dx ≈ Σᵢ₌₁ⁿ f(x̄ᵢ)Δx = Δx[f(x̄₁) + ··· + f(x̄ₙ)]
+        where Δx = (b − a)/n and x̄ᵢ = (xᵢ₋₁ + xᵢ)/2 is the midpoint
+        of the i-th subinterval [xᵢ₋₁, xᵢ].
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-sonnet-4-6"
+      review_status: unreviewed
+  latex:
+    body: |
+      \int_a^b f(x)\,dx
+        \;\approx\; \sum_{i=1}^{n} f(\bar{x}_i)\,\Delta x
+        = \Delta x\bigl[f(\bar{x}_1)+\cdots+f(\bar{x}_n)\bigr],
+      \quad \bar{x}_i = \tfrac{1}{2}(x_{i-1}+x_i)
+    status: present
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: definition.definite-integral
+    role: uses_concept
+    confidence: high
+  - id: definition.riemann-sum
+    role: uses_concept
+    confidence: high
+    notes: the Midpoint Rule is a Riemann sum with the midpoints as sample points
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "5"
+    section: "5.2"
+    theorem_label: "Regla del punto medio"
+    page: "378"
+    source_language: es
+
+domains:
+  primary: [calculus, numerical-analysis]
+  secondary: []
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [schema, criterion]
+  keywords: [midpoint-rule, numerical-integration, approximation, quadrature]
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-sonnet-4-6"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Numerical approximation schema. In practice the Midpoint Rule gives a
+  better approximation than either the left- or right-endpoint Riemann sums
+  for a given n (the error is O(1/n²) for smooth f vs O(1/n) for endpoint
+  sums). Error analysis appears in Stewart §7.7 (Simpson's Rule, Trapezoidal
+  Rule, Midpoint Rule error bounds). No formal proof obligation; correctness
+  follows from the definition of the integral.

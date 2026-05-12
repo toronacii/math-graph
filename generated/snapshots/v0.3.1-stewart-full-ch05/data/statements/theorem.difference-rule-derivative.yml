@@ -1,0 +1,97 @@
+schema_version: "0.3.1"
+id: theorem.difference-rule-derivative
+type: theorem
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Regla de la diferencia (derivada)
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Difference rule (derivative)
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Si f y g son derivables, entonces
+        (d/dx)[f(x) − g(x)] = (d/dx) f(x) − (d/dx) g(x).
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        If f and g are differentiable, then
+        (d/dx)[f(x) − g(x)] = (d/dx) f(x) − (d/dx) g(x).
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      \frac{d}{dx}\bigl[f(x) - g(x)\bigr] \;=\;
+        \frac{d}{dx}f(x) - \frac{d}{dx}g(x)
+    status: present
+    review_status: unreviewed
+
+proved_by:
+  - proof.difference-rule-derivative.stewart
+
+depends_on:
+  - id: definition.derivative-function
+    role: uses_concept
+    confidence: high
+  - id: definition.differentiable-at-point
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.1"
+    theorem_label: "Regla de la diferencia"
+    page: "178"
+    source_language: es
+
+domains:
+  primary: [calculus]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [principle]
+  keywords: [derivative, linearity, difference, differentiation-rule]
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Immediate corollary of sum + constant-multiple rules
+  (write f − g as f + (−1)g). Could equivalently be
+  classified as corollary; kept as theorem to mirror Stewart's
+  presentation as a named, parallel rule.

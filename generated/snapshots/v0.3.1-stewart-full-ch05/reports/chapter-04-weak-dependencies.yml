@@ -1,0 +1,151 @@
+weak_dependencies:
+
+  # Inherited from Chapter 1
+  - proof: proof.laws-of-exponents.stewart
+    proves: proposition.laws-of-exponents
+    issue: assumed-foundational-algebra
+    confidence: low
+    style: assumed
+    chapter: "1"
+    propagates_to:
+      - proof.laws-of-logarithms.stewart
+      - proof.change-of-base-formula.stewart
+      - proof.derivative-log-base-a.stewart
+    notes: Unchanged from Chapter 3.
+
+  # Inherited from Chapter 2
+  - proof: proof.intermediate-value-theorem.stewart
+    proves: theorem.intermediate-value-theorem
+    issue: assumed-completeness-axiom
+    confidence: low
+    style: assumed
+    chapter: "2"
+    propagates_to: []
+    notes: >
+      Unchanged. IVT still not directly used by Chapter 4 proofs,
+      but the Extreme Value Theorem (also assumed) depends on
+      the same completeness machinery.
+
+  - proof: proof.limit-root-law.stewart
+    proves: theorem.limit-root-law
+    issue: incomplete-proof
+    confidence: low
+    style: epsilon-delta
+    chapter: "2"
+    propagates_to: []
+    notes: Unchanged from Chapter 3.
+
+  # New in Chapter 4
+  - proof: proof.extreme-value-theorem.stewart
+    proves: theorem.extreme-value-theorem
+    issue: assumed-completeness-axiom
+    confidence: low
+    style: assumed
+    chapter: "4"
+    propagates_to:
+      - proof.rolles-theorem.stewart
+      - proof.mean-value-theorem.stewart
+      - proof.zero-derivative-constant.stewart
+      - proof.equal-derivatives-differ-by-constant.stewart
+      - proof.increasing-decreasing-test.stewart
+      - proof.first-derivative-test.stewart
+      - proof.concavity-test.stewart
+      - proof.second-derivative-test.stewart
+      - proof.lhopitals-rule.stewart
+      - proof.general-antiderivative.stewart
+    notes: >
+      Stewart states the EVT without proof. Like the IVT, it requires
+      the completeness of the real numbers. This is the highest-impact
+      weak dependency in the graph: via Rolle's → MVT, it propagates
+      to virtually all Chapter 4 results and will affect Chapter 5
+      (Fundamental Theorem of Calculus).
+    resolution_path: >
+      Add the Completeness Axiom (or Bolzano-Weierstrass theorem) as
+      an axiom node, then provide a rigorous proof of EVT.
+
+  - proof: proof.lhopitals-rule.stewart
+    proves: theorem.lhopitals-rule
+    issue: partial-proof
+    confidence: medium
+    style: direct
+    chapter: "4"
+    propagates_to: []
+    notes: >
+      Stewart proves only the 0/0 case. The ∞/∞ case is stated
+      without complete justification. Also uses the Cauchy Mean Value
+      Theorem which is a generalization of MVT not explicitly proved.
+
+implicit_algebraic_imports:
+
+  # Inherited
+  - concept: Real number field axioms
+    used_by:
+      - definition.function
+      - definition.domain
+      - definition.range
+      - definition.epsilon-delta-limit
+      - definition.continuity-at-point
+    chapter: "1-2"
+    notes: Unchanged.
+
+  - concept: Precalculus trigonometry
+    used_by:
+      - definition.trigonometric-function
+      - theorem.limit-sinx-over-x
+      - proof.derivative-sin.stewart
+      - proof.derivative-cos.stewart
+    chapter: "1-3"
+    notes: Unchanged.
+
+  - concept: Triangle inequality
+    used_by:
+      - proof.limit-laws.stewart
+    chapter: "2"
+    notes: Unchanged.
+
+  - concept: Archimedean property
+    used_by:
+      - proof.limit-one-over-x-at-infinity.stewart
+    chapter: "2"
+    notes: Unchanged.
+
+  - concept: Binomial theorem
+    used_by:
+      - proof.power-rule.stewart
+    chapter: "3"
+    notes: Unchanged.
+
+  - concept: Pythagorean identity
+    used_by:
+      - proof.derivative-tan.stewart
+      - proof.derivative-cot.stewart
+      - proof.derivative-arcsin.stewart
+      - proof.derivative-arccos.stewart
+    chapter: "3"
+    notes: Unchanged.
+
+  # New in Chapter 4
+  - concept: Cauchy Mean Value Theorem
+    used_by:
+      - proof.lhopitals-rule.stewart
+    chapter: "4"
+    notes: >
+      The proof of L'Hopital's rule uses the Cauchy MVT (generalized
+      MVT). Stewart does not prove this generalization explicitly;
+      it is used as an intermediate tool.
+
+epistemic_debt_summary:
+  total_weak_proofs: 4
+  total_partial_proofs: 2
+  total_inherited_weak: 3
+  total_implicit_imports: 7
+  affected_chain_depth: 8
+  new_weak_since_chapter_3: 1
+  new_partial_since_chapter_3: 1
+  new_implicit_since_chapter_3: 1
+  critical_debt: >
+    The EVT is now the highest-impact weak dependency. Via the chain
+    EVT → Rolle's → MVT, its assumed status propagates to 10+ downstream
+    proofs including L'Hopital's rule and the general antiderivative
+    theorem. Resolving the completeness axiom would resolve both
+    EVT and IVT simultaneously.

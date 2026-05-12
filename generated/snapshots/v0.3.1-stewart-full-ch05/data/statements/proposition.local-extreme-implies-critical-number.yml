@@ -1,0 +1,120 @@
+schema_version: "0.3.1"
+id: proposition.local-extreme-implies-critical-number
+type: proposition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Todo extremo local ocurre en un número crítico
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Every local extremum occurs at a critical number
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Si f tiene un máximo o un mínimo local en c, entonces c es
+        un número crítico de f. (Reformulación del teorema de
+        Fermat en términos de números críticos: incluye el caso
+        f'(c) = 0 — Fermat directo — y el caso f'(c) no existe —
+        el extremo aún ocurre en un punto del dominio que satisface
+        la definición de número crítico.)
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        If f has a local maximum or local minimum at c, then c is
+        a critical number of f. (Reformulation of Fermat's theorem
+        in terms of critical numbers: covers both the case
+        f'(c) = 0 — direct Fermat — and the case where f'(c) fails
+        to exist — the extremum still occurs at a point of the
+        domain satisfying the critical-number definition.)
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      f \text{ has local extremum at } c \implies c \text{ is a critical number of } f
+    status: present
+    review_status: unreviewed
+
+generality:
+  - relation: equivalent
+    target: theorem.fermat
+    notes: >
+      Logically equivalent reformulation under definition.critical-
+      number: Fermat states f'(c) = 0 (assuming f'(c) exists);
+      this proposition combines the two failure modes of the
+      converse (cf. Examples 5–6) into the single notion of critical
+      number, so the implication holds without the differentiability
+      hypothesis. Stewart §4.1 page 278 writes "compare la
+      definición 6 con el teorema 4" to justify the restatement.
+
+proved_by: []
+
+depends_on:
+  - id: definition.local-maximum
+    role: uses_concept
+    confidence: high
+  - id: definition.local-minimum
+    role: uses_concept
+    confidence: high
+  - id: definition.critical-number
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "4"
+    section: "4.1"
+    theorem_label: "Reformulación 7 (compare Def 6 con Teorema 4)"
+    page: "278"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [optimization]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [principle, criterion]
+  keywords: [fermat-restatement, critical-number, necessary-condition]
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  No separate proof — equivalence with theorem.fermat is captured
+  in generality. The proof obligation reduces to: if f has local
+  extremum at c then either f'(c) exists (apply Fermat to get
+  f'(c) = 0, hence c is critical) or f'(c) does not exist (then
+  c is critical by definition).

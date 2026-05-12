@@ -1,0 +1,111 @@
+schema_version: "0.3.1"
+id: proposition.second-derivative-test
+type: proposition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Prueba de la segunda derivada
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Second Derivative Test
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Supongamos que f'' es continua cerca de c. a) Si f'(c) = 0
+        y f''(c) > 0, entonces f tiene un mínimo local en c. b) Si
+        f'(c) = 0 y f''(c) < 0, entonces f tiene un máximo local en
+        c.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        Suppose f'' is continuous near c. (a) If f'(c) = 0 and
+        f''(c) > 0, then f has a local minimum at c. (b) If f'(c) = 0
+        and f''(c) < 0, then f has a local maximum at c.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      f'' \text{ continuous near } c,\ f'(c) = 0:\quad
+      f''(c) > 0 \Rightarrow \text{local min at } c;\quad
+      f''(c) < 0 \Rightarrow \text{local max at } c
+    status: present
+    review_status: unreviewed
+
+proved_by:
+  - proof.second-derivative-test.from-concavity
+
+depends_on:
+  - id: definition.continuity-at-point
+    role: uses_concept
+    confidence: high
+  - id: definition.derivative-function
+    role: uses_concept
+    confidence: high
+  - id: definition.local-maximum
+    role: uses_concept
+    confidence: high
+  - id: definition.local-minimum
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "4"
+    section: "4.3"
+    theorem_label: "Prueba de la segunda derivada"
+    page: "295"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [analysis, optimization]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [criterion, principle]
+  keywords: [second-derivative-test, local-extremum, concavity, sufficient-condition]
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart §4.3 page 295. Stewart explicitly notes the test is
+  inconclusive when f''(c) = 0 (Example 6: x⁴ − 4x³ at x = 0 is not
+  an extremum despite f''(0) = 0; for x⁴ at 0 it IS an extremum but
+  f''(0) = 0 — so neither outcome can be deduced) and also fails
+  when f''(c) does not exist; in those cases the First Derivative
+  Test is the fallback. Critical numbers where f'(c) does not exist
+  are likewise outside the scope of this test.

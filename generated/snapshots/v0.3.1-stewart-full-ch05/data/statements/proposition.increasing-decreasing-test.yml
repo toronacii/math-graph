@@ -1,0 +1,105 @@
+schema_version: "0.3.1"
+id: proposition.increasing-decreasing-test
+type: proposition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Prueba creciente/decreciente
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Increasing / Decreasing Test
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        a) Si f'(x) > 0 sobre un intervalo, entonces f es creciente
+        sobre ese intervalo. b) Si f'(x) < 0 sobre un intervalo,
+        entonces f es decreciente sobre ese intervalo.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        (a) If f'(x) > 0 on an interval, then f is increasing on that
+        interval. (b) If f'(x) < 0 on an interval, then f is
+        decreasing on that interval.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      \bigl(\forall x \in I:\ f'(x) > 0\bigr) \implies f \text{ increasing on } I
+      \quad\wedge\quad
+      \bigl(\forall x \in I:\ f'(x) < 0\bigr) \implies f \text{ decreasing on } I
+    status: present
+    review_status: unreviewed
+
+proved_by:
+  - proof.increasing-decreasing-test.from-mvt
+
+depends_on:
+  - id: definition.derivative-function
+    role: uses_concept
+    confidence: high
+  - id: definition.increasing-function
+    role: uses_concept
+    confidence: high
+  - id: definition.decreasing-function
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "4"
+    section: "4.3"
+    theorem_label: "Prueba creciente/decreciente (Prueba C/D)"
+    page: "290"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [analysis, optimization]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [criterion, principle]
+  keywords: [monotonicity, increasing-decreasing-test, sign-of-derivative, mvt-application]
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart §4.3 page 290 ("Prueba C/D"). Direct corollary of the Mean
+  Value Theorem. The converse fails in general: f increasing does
+  not imply f'(x) > 0 (e.g., f(x) = x³ is strictly increasing on R
+  but f'(0) = 0). Exercise 85 generalizes the test to allow f' = 0
+  at a single point in I.

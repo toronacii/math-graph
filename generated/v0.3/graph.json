@@ -13,6 +13,14 @@
       "relation": "uses",
       "role": "essential",
       "source": "corollary.derivatives-equal-implies-differ-by-constant",
+      "target": "proof.ftc-part-2.from-ftc1"
+    },
+    {
+      "confidence": "high",
+      "implicit": false,
+      "relation": "uses",
+      "role": "essential",
+      "source": "corollary.derivatives-equal-implies-differ-by-constant",
       "target": "proof.general-antiderivative.from-corollary"
     },
     {
@@ -119,7 +127,49 @@
       "relation": "uses",
       "role": "definition",
       "source": "definition.antiderivative",
+      "target": "proof.ftc-part-2.from-ftc1"
+    },
+    {
+      "confidence": "high",
+      "implicit": false,
+      "relation": "uses",
+      "role": "definition",
+      "source": "definition.antiderivative",
       "target": "proof.general-antiderivative.from-corollary"
+    },
+    {
+      "confidence": "high",
+      "implicit": false,
+      "relation": "uses",
+      "role": "definition",
+      "source": "definition.antiderivative",
+      "target": "proof.substitution-rule-definite.from-ftc2"
+    },
+    {
+      "confidence": "high",
+      "implicit": false,
+      "relation": "uses",
+      "role": "definition",
+      "source": "definition.antiderivative",
+      "target": "proof.substitution-rule.from-chain-rule"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.area-under-curve",
+      "target": "definition.continuity-on-interval"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.area-under-curve",
+      "target": "definition.function"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.area-under-curve",
+      "target": "definition.limit-of-function"
     },
     {
       "relation": "depends_on",
@@ -307,6 +357,14 @@
       "relation": "uses",
       "role": "essential",
       "source": "definition.continuity-at-point",
+      "target": "proof.ftc-part-1.stewart"
+    },
+    {
+      "confidence": "high",
+      "implicit": false,
+      "relation": "uses",
+      "role": "essential",
+      "source": "definition.continuity-at-point",
       "target": "proof.second-derivative-test.from-concavity"
     },
     {
@@ -326,6 +384,14 @@
       "role": "uses_concept",
       "source": "definition.continuity-on-interval",
       "target": "definition.right-continuity"
+    },
+    {
+      "confidence": "high",
+      "implicit": false,
+      "relation": "uses",
+      "role": "background",
+      "source": "definition.continuity-on-interval",
+      "target": "proof.substitution-rule-definite.from-ftc2"
     },
     {
       "relation": "depends_on",
@@ -358,6 +424,62 @@
       "role": "definition",
       "source": "definition.decreasing-function",
       "target": "proof.increasing-decreasing-test.from-mvt"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.definite-integral",
+      "target": "definition.continuity-on-interval"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.definite-integral",
+      "target": "definition.function"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.definite-integral",
+      "target": "definition.limit-of-function"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.definite-integral",
+      "target": "definition.riemann-sum"
+    },
+    {
+      "confidence": "high",
+      "implicit": false,
+      "relation": "uses",
+      "role": "definition",
+      "source": "definition.definite-integral",
+      "target": "proof.definite-integral-bound.from-linearity"
+    },
+    {
+      "confidence": "high",
+      "implicit": false,
+      "relation": "uses",
+      "role": "definition",
+      "source": "definition.definite-integral",
+      "target": "proof.ftc-part-1.stewart"
+    },
+    {
+      "confidence": "high",
+      "implicit": false,
+      "relation": "uses",
+      "role": "definition",
+      "source": "definition.definite-integral",
+      "target": "proof.ftc-part-2.from-ftc1"
+    },
+    {
+      "confidence": "high",
+      "implicit": false,
+      "relation": "uses",
+      "role": "definition",
+      "source": "definition.definite-integral",
+      "target": "proof.integrals-of-symmetric-functions.from-substitution"
     },
     {
       "relation": "depends_on",
@@ -428,6 +550,14 @@
       "role": "definition",
       "source": "definition.derivative-at-point",
       "target": "proof.fermat.stewart"
+    },
+    {
+      "confidence": "high",
+      "implicit": false,
+      "relation": "uses",
+      "role": "definition",
+      "source": "definition.derivative-at-point",
+      "target": "proof.ftc-part-1.stewart"
     },
     {
       "confidence": "high",
@@ -892,6 +1022,26 @@
       "role": "definition",
       "source": "definition.increasing-function",
       "target": "proof.increasing-decreasing-test.from-mvt"
+    },
+    {
+      "relation": "depends_on",
+      "role": "extends",
+      "source": "definition.indefinite-integral",
+      "target": "definition.antiderivative"
+    },
+    {
+      "confidence": "high",
+      "implicit": false,
+      "relation": "uses",
+      "role": "definition",
+      "source": "definition.indefinite-integral",
+      "target": "proof.substitution-rule.from-chain-rule"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.indefinite-integral",
+      "target": "theorem.general-antiderivative"
     },
     {
       "relation": "depends_on",
@@ -1663,6 +1813,18 @@
     },
     {
       "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.riemann-sum",
+      "target": "definition.domain"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "definition.riemann-sum",
+      "target": "definition.function"
+    },
+    {
+      "relation": "depends_on",
       "role": "specializes",
       "source": "definition.right-continuity",
       "target": "definition.continuity-at-point"
@@ -1914,6 +2076,11 @@
     },
     {
       "relation": "proves",
+      "source": "proof.definite-integral-bound.from-linearity",
+      "target": "proposition.definite-integral-bound"
+    },
+    {
+      "relation": "proves",
       "source": "proof.derivative-as-tangent-slope.stewart",
       "target": "proposition.derivative-as-tangent-slope"
     },
@@ -2014,6 +2181,16 @@
     },
     {
       "relation": "proves",
+      "source": "proof.ftc-part-1.stewart",
+      "target": "theorem.ftc-part-1"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.ftc-part-2.from-ftc1",
+      "target": "theorem.ftc-part-2"
+    },
+    {
+      "relation": "proves",
       "source": "proof.general-antiderivative.from-corollary",
       "target": "theorem.general-antiderivative"
     },
@@ -2031,6 +2208,11 @@
       "relation": "proves",
       "source": "proof.increasing-decreasing-test.from-mvt",
       "target": "proposition.increasing-decreasing-test"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.integrals-of-symmetric-functions.from-substitution",
+      "target": "proposition.integrals-of-symmetric-functions"
     },
     {
       "relation": "proves",
@@ -2121,6 +2303,16 @@
       "relation": "proves",
       "source": "proof.second-derivative-test.from-concavity",
       "target": "proposition.second-derivative-test"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.substitution-rule-definite.from-ftc2",
+      "target": "theorem.substitution-rule-definite"
+    },
+    {
+      "relation": "proves",
+      "source": "proof.substitution-rule.from-chain-rule",
+      "target": "theorem.substitution-rule"
     },
     {
       "relation": "proves",
@@ -2295,6 +2487,54 @@
       "role": "essential",
       "source": "proposition.concavity-test",
       "target": "proof.second-derivative-test.from-concavity"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "proposition.definite-integral-bound",
+      "target": "definition.definite-integral"
+    },
+    {
+      "confidence": "high",
+      "implicit": false,
+      "relation": "uses",
+      "role": "essential",
+      "source": "proposition.definite-integral-bound",
+      "target": "proof.ftc-part-1.stewart"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "proposition.definite-integral-bound",
+      "target": "proposition.definite-integral-properties"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "proposition.definite-integral-properties",
+      "target": "definition.definite-integral"
+    },
+    {
+      "confidence": "high",
+      "implicit": false,
+      "relation": "uses",
+      "role": "essential",
+      "source": "proposition.definite-integral-properties",
+      "target": "proof.definite-integral-bound.from-linearity"
+    },
+    {
+      "confidence": "high",
+      "implicit": false,
+      "relation": "uses",
+      "role": "essential",
+      "source": "proposition.definite-integral-properties",
+      "target": "proof.integrals-of-symmetric-functions.from-substitution"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "proposition.definite-integral-properties",
+      "target": "proposition.limit-laws"
     },
     {
       "relation": "depends_on",
@@ -2559,6 +2799,48 @@
       "role": "essential",
       "source": "proposition.increasing-decreasing-test",
       "target": "proof.first-derivative-test.from-id-test"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "proposition.indefinite-integral-table",
+      "target": "definition.indefinite-integral"
+    },
+    {
+      "relation": "depends_on",
+      "role": "extends",
+      "source": "proposition.indefinite-integral-table",
+      "target": "proposition.antiderivative-formulas-table"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "proposition.integral-evaluation-formula",
+      "target": "definition.definite-integral"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "proposition.integral-evaluation-formula",
+      "target": "theorem.integrability-of-continuous"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "proposition.integrals-of-symmetric-functions",
+      "target": "definition.definite-integral"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "proposition.integrals-of-symmetric-functions",
+      "target": "proposition.definite-integral-properties"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "proposition.integrals-of-symmetric-functions",
+      "target": "theorem.substitution-rule-definite"
     },
     {
       "relation": "depends_on",
@@ -3019,6 +3301,18 @@
     {
       "relation": "depends_on",
       "role": "uses_concept",
+      "source": "proposition.midpoint-rule",
+      "target": "definition.definite-integral"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "proposition.midpoint-rule",
+      "target": "definition.riemann-sum"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
       "source": "proposition.non-differentiability-cases",
       "target": "definition.differentiable-at-point"
     },
@@ -3217,6 +3511,22 @@
       "role": "essential",
       "source": "theorem.chain-rule",
       "target": "proof.power-rule-general.logarithmic-differentiation"
+    },
+    {
+      "confidence": "high",
+      "implicit": false,
+      "relation": "uses",
+      "role": "essential",
+      "source": "theorem.chain-rule",
+      "target": "proof.substitution-rule-definite.from-ftc2"
+    },
+    {
+      "confidence": "high",
+      "implicit": false,
+      "relation": "uses",
+      "role": "essential",
+      "source": "theorem.chain-rule",
+      "target": "proof.substitution-rule.from-chain-rule"
     },
     {
       "relation": "depends_on",
@@ -3838,6 +4148,14 @@
       "relation": "uses",
       "role": "essential",
       "source": "theorem.extreme-value-theorem",
+      "target": "proof.ftc-part-1.stewart"
+    },
+    {
+      "confidence": "high",
+      "implicit": false,
+      "relation": "uses",
+      "role": "essential",
+      "source": "theorem.extreme-value-theorem",
       "target": "proof.rolle.stewart"
     },
     {
@@ -3885,6 +4203,66 @@
     {
       "relation": "depends_on",
       "role": "uses_concept",
+      "source": "theorem.ftc-part-1",
+      "target": "definition.continuity-on-interval"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "theorem.ftc-part-1",
+      "target": "definition.definite-integral"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "theorem.ftc-part-1",
+      "target": "definition.derivative-at-point"
+    },
+    {
+      "confidence": "high",
+      "implicit": false,
+      "relation": "uses",
+      "role": "essential",
+      "source": "theorem.ftc-part-1",
+      "target": "proof.ftc-part-2.from-ftc1"
+    },
+    {
+      "confidence": "high",
+      "implicit": true,
+      "relation": "uses",
+      "role": "existence",
+      "source": "theorem.ftc-part-1",
+      "target": "proof.substitution-rule.from-chain-rule"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "theorem.ftc-part-2",
+      "target": "definition.antiderivative"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "theorem.ftc-part-2",
+      "target": "definition.continuity-on-interval"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "theorem.ftc-part-2",
+      "target": "definition.definite-integral"
+    },
+    {
+      "confidence": "high",
+      "implicit": false,
+      "relation": "uses",
+      "role": "essential",
+      "source": "theorem.ftc-part-2",
+      "target": "proof.substitution-rule-definite.from-ftc2"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
       "source": "theorem.general-antiderivative",
       "target": "definition.antiderivative"
     },
@@ -3893,6 +4271,18 @@
       "role": "uses_concept",
       "source": "theorem.general-antiderivative",
       "target": "definition.derivative-function"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "theorem.integrability-of-continuous",
+      "target": "definition.continuity-on-interval"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "theorem.integrability-of-continuous",
+      "target": "definition.definite-integral"
     },
     {
       "relation": "depends_on",
@@ -4029,6 +4419,18 @@
       "role": "essential",
       "source": "theorem.mean-value-theorem",
       "target": "proof.increasing-decreasing-test.from-mvt"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "theorem.net-change-theorem",
+      "target": "definition.definite-integral"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "theorem.net-change-theorem",
+      "target": "theorem.ftc-part-2"
     },
     {
       "relation": "depends_on",
@@ -4180,6 +4582,14 @@
       "relation": "uses",
       "role": "essential",
       "source": "theorem.squeeze-theorem",
+      "target": "proof.ftc-part-1.stewart"
+    },
+    {
+      "confidence": "high",
+      "implicit": false,
+      "relation": "uses",
+      "role": "essential",
+      "source": "theorem.squeeze-theorem",
       "target": "proof.limit-sin-over-x.squeeze"
     },
     {
@@ -4187,6 +4597,50 @@
       "role": "uses_concept",
       "source": "theorem.squeeze-theorem",
       "target": "proposition.limit-monotonicity"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "theorem.substitution-rule",
+      "target": "definition.continuity-on-interval"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "theorem.substitution-rule",
+      "target": "definition.differentiable-on-interval"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "theorem.substitution-rule",
+      "target": "definition.indefinite-integral"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "theorem.substitution-rule-definite",
+      "target": "definition.continuity-on-interval"
+    },
+    {
+      "confidence": "high",
+      "implicit": false,
+      "relation": "uses",
+      "role": "essential",
+      "source": "theorem.substitution-rule-definite",
+      "target": "proof.integrals-of-symmetric-functions.from-substitution"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "theorem.substitution-rule-definite",
+      "target": "theorem.ftc-part-2"
+    },
+    {
+      "relation": "depends_on",
+      "role": "uses_concept",
+      "source": "theorem.substitution-rule-definite",
+      "target": "theorem.substitution-rule"
     },
     {
       "relation": "depends_on",
@@ -4304,6 +4758,19 @@
       "semantic_kinds": [
         "object",
         "relation"
+      ],
+      "status": "extracted",
+      "type": "definition"
+    },
+    {
+      "id": "definition.area-under-curve",
+      "kind": "statement",
+      "latex_status": "present",
+      "primary_domain": "calculus",
+      "quality_overall": "high",
+      "semantic_kinds": [
+        "construction",
+        "object"
       ],
       "status": "extracted",
       "type": "definition"
@@ -4432,6 +4899,19 @@
       "quality_overall": "medium",
       "semantic_kinds": [
         "property"
+      ],
+      "status": "extracted",
+      "type": "definition"
+    },
+    {
+      "id": "definition.definite-integral",
+      "kind": "statement",
+      "latex_status": "present",
+      "primary_domain": "calculus",
+      "quality_overall": "high",
+      "semantic_kinds": [
+        "construction",
+        "object"
       ],
       "status": "extracted",
       "type": "definition"
@@ -4688,6 +5168,19 @@
       "quality_overall": "medium",
       "semantic_kinds": [
         "property"
+      ],
+      "status": "extracted",
+      "type": "definition"
+    },
+    {
+      "id": "definition.indefinite-integral",
+      "kind": "statement",
+      "latex_status": "present",
+      "primary_domain": "calculus",
+      "quality_overall": "high",
+      "semantic_kinds": [
+        "notation",
+        "object"
       ],
       "status": "extracted",
       "type": "definition"
@@ -5178,6 +5671,19 @@
       "type": "definition"
     },
     {
+      "id": "definition.riemann-sum",
+      "kind": "statement",
+      "latex_status": "present",
+      "primary_domain": "calculus",
+      "quality_overall": "high",
+      "semantic_kinds": [
+        "construction",
+        "notation"
+      ],
+      "status": "extracted",
+      "type": "definition"
+    },
+    {
       "id": "definition.right-continuity",
       "kind": "statement",
       "latex_status": "present",
@@ -5376,6 +5882,14 @@
       "type": "proof"
     },
     {
+      "id": "proof.definite-integral-bound.from-linearity",
+      "kind": "proof",
+      "quality_overall": "high",
+      "status": "extracted",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
       "id": "proof.derivative-as-tangent-slope.stewart",
       "kind": "proof",
       "quality_overall": "high",
@@ -5536,6 +6050,22 @@
       "type": "proof"
     },
     {
+      "id": "proof.ftc-part-1.stewart",
+      "kind": "proof",
+      "quality_overall": "high",
+      "status": "extracted",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.ftc-part-2.from-ftc1",
+      "kind": "proof",
+      "quality_overall": "high",
+      "status": "extracted",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
       "id": "proof.general-antiderivative.from-corollary",
       "kind": "proof",
       "quality_overall": "high",
@@ -5565,6 +6095,14 @@
       "quality_overall": "high",
       "status": "extracted",
       "style": "direct-from-mvt",
+      "type": "proof"
+    },
+    {
+      "id": "proof.integrals-of-symmetric-functions.from-substitution",
+      "kind": "proof",
+      "quality_overall": "high",
+      "status": "extracted",
+      "style": "direct",
       "type": "proof"
     },
     {
@@ -5712,6 +6250,22 @@
       "type": "proof"
     },
     {
+      "id": "proof.substitution-rule-definite.from-ftc2",
+      "kind": "proof",
+      "quality_overall": "high",
+      "status": "extracted",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
+      "id": "proof.substitution-rule.from-chain-rule",
+      "kind": "proof",
+      "quality_overall": "high",
+      "status": "extracted",
+      "style": "direct",
+      "type": "proof"
+    },
+    {
       "id": "proof.sum-rule-derivative.stewart",
       "kind": "proof",
       "quality_overall": "high",
@@ -5784,6 +6338,32 @@
       "latex_status": "present",
       "primary_domain": "calculus",
       "quality_overall": "high",
+      "semantic_kinds": [
+        "criterion",
+        "principle"
+      ],
+      "status": "extracted",
+      "type": "proposition"
+    },
+    {
+      "id": "proposition.definite-integral-bound",
+      "kind": "statement",
+      "latex_status": "present",
+      "primary_domain": "calculus",
+      "quality_overall": "high",
+      "semantic_kinds": [
+        "criterion",
+        "principle"
+      ],
+      "status": "extracted",
+      "type": "proposition"
+    },
+    {
+      "id": "proposition.definite-integral-properties",
+      "kind": "statement",
+      "latex_status": "present",
+      "primary_domain": "calculus",
+      "quality_overall": "medium",
       "semantic_kinds": [
         "criterion",
         "principle"
@@ -5889,6 +6469,44 @@
       "semantic_kinds": [
         "criterion",
         "principle"
+      ],
+      "status": "extracted",
+      "type": "proposition"
+    },
+    {
+      "id": "proposition.indefinite-integral-table",
+      "kind": "statement",
+      "latex_status": "informal",
+      "primary_domain": "calculus",
+      "quality_overall": "low",
+      "semantic_kinds": [
+        "notation",
+        "schema"
+      ],
+      "status": "extracted",
+      "type": "proposition"
+    },
+    {
+      "id": "proposition.integral-evaluation-formula",
+      "kind": "statement",
+      "latex_status": "present",
+      "primary_domain": "calculus",
+      "quality_overall": "high",
+      "semantic_kinds": [
+        "criterion",
+        "principle"
+      ],
+      "status": "extracted",
+      "type": "proposition"
+    },
+    {
+      "id": "proposition.integrals-of-symmetric-functions",
+      "kind": "statement",
+      "latex_status": "present",
+      "primary_domain": "calculus",
+      "quality_overall": "high",
+      "semantic_kinds": [
+        "criterion"
       ],
       "status": "extracted",
       "type": "proposition"
@@ -6087,6 +6705,19 @@
       "quality_overall": "high",
       "semantic_kinds": [
         "principle",
+        "schema"
+      ],
+      "status": "extracted",
+      "type": "proposition"
+    },
+    {
+      "id": "proposition.midpoint-rule",
+      "kind": "statement",
+      "latex_status": "present",
+      "primary_domain": "calculus",
+      "quality_overall": "high",
+      "semantic_kinds": [
+        "criterion",
         "schema"
       ],
       "status": "extracted",
@@ -6427,7 +7058,44 @@
       "type": "theorem"
     },
     {
+      "id": "theorem.ftc-part-1",
+      "kind": "statement",
+      "latex_status": "present",
+      "primary_domain": "calculus",
+      "quality_overall": "high",
+      "semantic_kinds": [
+        "principle"
+      ],
+      "status": "extracted",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.ftc-part-2",
+      "kind": "statement",
+      "latex_status": "present",
+      "primary_domain": "calculus",
+      "quality_overall": "high",
+      "semantic_kinds": [
+        "principle"
+      ],
+      "status": "extracted",
+      "type": "theorem"
+    },
+    {
       "id": "theorem.general-antiderivative",
+      "kind": "statement",
+      "latex_status": "present",
+      "primary_domain": "calculus",
+      "quality_overall": "high",
+      "semantic_kinds": [
+        "criterion",
+        "principle"
+      ],
+      "status": "extracted",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.integrability-of-continuous",
       "kind": "statement",
       "latex_status": "present",
       "primary_domain": "calculus",
@@ -6509,6 +7177,18 @@
       "quality_overall": "high",
       "semantic_kinds": [
         "criterion",
+        "principle"
+      ],
+      "status": "extracted",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.net-change-theorem",
+      "kind": "statement",
+      "latex_status": "present",
+      "primary_domain": "calculus",
+      "quality_overall": "high",
+      "semantic_kinds": [
         "principle"
       ],
       "status": "extracted",
@@ -6601,6 +7281,32 @@
     },
     {
       "id": "theorem.squeeze-theorem",
+      "kind": "statement",
+      "latex_status": "present",
+      "primary_domain": "calculus",
+      "quality_overall": "high",
+      "semantic_kinds": [
+        "criterion",
+        "principle"
+      ],
+      "status": "extracted",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.substitution-rule",
+      "kind": "statement",
+      "latex_status": "present",
+      "primary_domain": "calculus",
+      "quality_overall": "high",
+      "semantic_kinds": [
+        "criterion",
+        "principle"
+      ],
+      "status": "extracted",
+      "type": "theorem"
+    },
+    {
+      "id": "theorem.substitution-rule-definite",
       "kind": "statement",
       "latex_status": "present",
       "primary_domain": "calculus",

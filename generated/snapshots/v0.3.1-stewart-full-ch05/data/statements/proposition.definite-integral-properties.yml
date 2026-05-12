@@ -1,0 +1,120 @@
+schema_version: "0.3.1"
+id: proposition.definite-integral-properties
+type: proposition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Propiedades de la integral definida
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Properties of the definite integral
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-sonnet-4-6"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Suponiendo que f y g son funciones continuas, se tienen las
+        siguientes propiedades de la integral definida:
+        1. ∫_a^b c dx = c(b − a), donde c es cualquier constante.
+        2. ∫_a^b [f(x) + g(x)] dx = ∫_a^b f(x) dx + ∫_a^b g(x) dx.
+        3. ∫_a^b c·f(x) dx = c·∫_a^b f(x) dx, donde c es cualquier constante.
+        4. ∫_a^b [f(x) − g(x)] dx = ∫_a^b f(x) dx − ∫_a^b g(x) dx.
+        5. ∫_a^c f(x) dx + ∫_c^b f(x) dx = ∫_a^b f(x) dx.
+        Además: ∫_b^a f(x) dx = −∫_a^b f(x) dx y ∫_a^a f(x) dx = 0.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        Assuming f and g are continuous functions, the definite integral
+        satisfies:
+        1. ∫_a^b c dx = c(b − a) for any constant c.
+        2. ∫_a^b [f(x) + g(x)] dx = ∫_a^b f(x) dx + ∫_a^b g(x) dx.
+        3. ∫_a^b c·f(x) dx = c·∫_a^b f(x) dx for any constant c.
+        4. ∫_a^b [f(x) − g(x)] dx = ∫_a^b f(x) dx − ∫_a^b g(x) dx.
+        5. ∫_a^c f(x) dx + ∫_c^b f(x) dx = ∫_a^b f(x) dx.
+        Also: ∫_b^a f(x) dx = −∫_a^b f(x) dx and ∫_a^a f(x) dx = 0.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-sonnet-4-6"
+      review_status: unreviewed
+  latex:
+    body: |
+      \int_a^b c\,dx = c(b-a);\quad
+      \int_a^b [f+g]\,dx = \int_a^b f\,dx + \int_a^b g\,dx;\quad
+      \int_a^b cf\,dx = c\int_a^b f\,dx;\\
+      \int_a^c f\,dx + \int_c^b f\,dx = \int_a^b f\,dx;\quad
+      \int_b^a f\,dx = -\int_a^b f\,dx;\quad
+      \int_a^a f\,dx = 0
+    status: present
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: definition.definite-integral
+    role: uses_concept
+    confidence: high
+  - id: proposition.limit-laws
+    role: uses_concept
+    confidence: high
+    notes: >
+      Properties 2-4 follow from the linearity of limits; Property 5 follows
+      from additivity of finite sums.
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "5"
+    section: "5.2"
+    theorem_label: "Propiedades de la integral (1–5)"
+    page: "379"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [real-analysis]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [principle, criterion]
+  keywords: [linearity, additivity, integral-properties, superposition]
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: medium
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-sonnet-4-6"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Type-B bundle: Stewart presents Properties 1–5 as a named group. They are
+  closely related linearity/additivity rules that are always used together.
+  Splitting further (one node per property) would produce five near-identical
+  nodes with no clear analytic gain. Accepted as deliberate bundle debt.
+  Property 2 has a brief inline derivation using the limit-of-a-sum; the
+  others are analogous. No separate proof node created.
+  Properties 6–8 (comparison properties) are in a separate node
+  proposition.definite-integral-bound, where Property 8 has an explicit proof.

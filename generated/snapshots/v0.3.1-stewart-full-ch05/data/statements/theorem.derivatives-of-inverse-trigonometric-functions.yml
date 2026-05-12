@@ -1,0 +1,121 @@
+schema_version: "0.3.1"
+id: theorem.derivatives-of-inverse-trigonometric-functions
+type: theorem
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Derivadas de las funciones trigonométricas inversas
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Derivatives of the inverse trigonometric functions
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Las derivadas de las seis funciones trigonométricas inversas
+        son: (d/dx) sin⁻¹ x = 1/√(1 − x²);
+        (d/dx) cos⁻¹ x = − 1/√(1 − x²);
+        (d/dx) tan⁻¹ x = 1/(1 + x²);
+        (d/dx) cot⁻¹ x = − 1/(1 + x²);
+        (d/dx) sec⁻¹ x = 1/(x √(x² − 1));
+        (d/dx) csc⁻¹ x = − 1/(x √(x² − 1)).
+        Cada una vale en el dominio donde la función inversa
+        correspondiente es derivable.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        The derivatives of the six inverse trigonometric functions
+        are: (d/dx) sin⁻¹ x = 1/√(1 − x²);
+        (d/dx) cos⁻¹ x = −1/√(1 − x²);
+        (d/dx) tan⁻¹ x = 1/(1 + x²);
+        (d/dx) cot⁻¹ x = −1/(1 + x²);
+        (d/dx) sec⁻¹ x = 1/(x √(x² − 1));
+        (d/dx) csc⁻¹ x = −1/(x √(x² − 1)).
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      \begin{aligned}
+        \frac{d}{dx}\sin^{-1}x &= \frac{1}{\sqrt{1-x^{2}}}, &
+        \frac{d}{dx}\cos^{-1}x &= -\frac{1}{\sqrt{1-x^{2}}},\\[4pt]
+        \frac{d}{dx}\tan^{-1}x &= \frac{1}{1+x^{2}}, &
+        \frac{d}{dx}\cot^{-1}x &= -\frac{1}{1+x^{2}},\\[4pt]
+        \frac{d}{dx}\sec^{-1}x &= \frac{1}{x\sqrt{x^{2}-1}}, &
+        \frac{d}{dx}\csc^{-1}x &= -\frac{1}{x\sqrt{x^{2}-1}}.
+      \end{aligned}
+    status: present
+    review_status: unreviewed
+
+proved_by:
+  - proof.derivatives-of-inverse-trigonometric-functions.implicit
+
+depends_on:
+  - id: definition.inverse-trigonometric-function
+    role: uses_concept
+    confidence: high
+  - id: definition.derivative-function
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.5"
+    theorem_label: "Tabla — Derivadas de las funciones trigonométricas inversas"
+    page: "214"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [trigonometry]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [principle]
+  keywords: [inverse-trigonometric-derivative, arcsine, arctangent, implicit]
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: medium
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Bundled node consistent with the inverse-trig bundle policy
+  (carried from Ch1/Ch2 epistemic debt). Stewart proves arcsin
+  and arctan inline by implicit differentiation; the other four
+  are exercises 64 and follow the same technique. Stewart also
+  notes a hidden hypothesis: that the inverse function of a
+  one-to-one differentiable function is itself differentiable
+  (except where the tangent is vertical) — recorded as
+  dependency_confidence:medium. The csc⁻¹ and sec⁻¹ formulas
+  depend on the chosen branch convention.

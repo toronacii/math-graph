@@ -1,0 +1,107 @@
+schema_version: "0.3.1"
+id: definition.riemann-sum
+type: definition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Suma de Riemann
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Riemann sum
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-sonnet-4-6"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Sea f una función definida sobre [a, b]. Se divide [a, b] en n
+        subintervalos de anchos Δxᵢ y se elige un punto muestra xᵢ* en
+        el i-ésimo subintervalo [xᵢ₋₁, xᵢ]. La suma de Riemann de f
+        correspondiente a esta partición y elección de puntos muestra es
+        Σᵢ₌₁ⁿ f(xᵢ*)Δxᵢ.
+        Para subintervalos de igual ancho Δx = (b − a)/n, la suma se
+        escribe Σᵢ₌₁ⁿ f(xᵢ*)Δx.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        Let f be a function defined on [a, b]. Partition [a, b] into n
+        subintervals of widths Δxᵢ and choose a sample point xᵢ* in the
+        i-th subinterval [xᵢ₋₁, xᵢ]. The Riemann sum of f for this
+        partition and choice of sample points is
+        Σᵢ₌₁ⁿ f(xᵢ*)Δxᵢ.
+        For equal-width subintervals Δx = (b − a)/n the sum is written
+        Σᵢ₌₁ⁿ f(xᵢ*)Δx.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-sonnet-4-6"
+      review_status: unreviewed
+  latex:
+    body: |
+      \sum_{i=1}^{n} f(x_i^*)\,\Delta x_i,
+      \quad x_i^* \in [x_{i-1}, x_i]
+    status: present
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: definition.function
+    role: uses_concept
+    confidence: high
+  - id: definition.domain
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "5"
+    section: "5.2"
+    theorem_label: "Nota 3 — suma de Riemann"
+    page: "372"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [real-analysis]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [construction, notation]
+  keywords: [riemann-sum, partition, sample-point, approximation]
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-sonnet-4-6"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Named after Bernhard Riemann (1826–1866). Stewart introduces this in §5.2
+  and credits Riemann. The definite integral (definition.definite-integral) is
+  defined as the limit of Riemann sums as n → ∞ (max Δxᵢ → 0). Rudin Ch6
+  develops the Riemann-Stieltjes integral, which strictly generalises this.

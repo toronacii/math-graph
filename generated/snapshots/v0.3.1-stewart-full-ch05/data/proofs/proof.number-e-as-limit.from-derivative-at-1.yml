@@ -1,0 +1,80 @@
+schema_version: "0.3.1"
+id: proof.number-e-as-limit.from-derivative-at-1
+type: proof
+status: extracted
+
+proves: theorem.number-e-as-limit
+style: limit-evaluation
+
+uses:
+  - id: theorem.derivative-of-natural-logarithm
+    role: essential
+    confidence: high
+    notes: f(x) = ln x has f'(1) = 1/1 = 1; this is the pivot
+  - id: definition.derivative-function
+    role: definition
+    confidence: high
+    notes: f'(1) = lim_{x→0} (f(1+x) − f(1))/x
+  - id: proposition.laws-of-logarithms
+    role: essential
+    confidence: high
+    notes: (1/x) · ln(1 + x) = ln (1 + x)^{1/x}
+  - id: theorem.continuity-of-composition
+    role: essential
+    confidence: medium
+    notes: >
+      Stewart cites "Theorem 2.5.8 and continuity of the
+      exponential function" to interchange exp with the limit:
+      exp(lim ln(1+x)^{1/x}) = lim exp(ln (1+x)^{1/x}) = lim (1+x)^{1/x}.
+      Modeled as theorem.continuity-of-composition (if present in
+      graph; otherwise treat as low-confidence implicit).
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.6"
+    locator: "Derivación de la Ecuación 5 (y 6 por sustitución n = 1/x), p. 222"
+    page: "222"
+    source_language: es
+
+sketch:
+  es:
+    text: >
+      Sea f(x) = ln x. Por Eq 2, f'(x) = 1/x, luego f'(1) = 1.
+      Pero por la definición de derivada,
+      f'(1) = lím_{x→0} (ln(1 + x) − ln 1)/x = lím_{x→0} (1/x) ln(1 + x)
+            = lím_{x→0} ln (1 + x)^{1/x}.
+      Como f'(1) = 1, se tiene lím_{x→0} ln (1 + x)^{1/x} = 1.
+      Aplicando la exponencial (continua) a ambos lados e
+      intercambiándola con el límite (Teorema 2.5.8):
+      e = e^1 = exp(lím ln(1+x)^{1/x}) = lím exp(ln(1+x)^{1/x})
+        = lím (1+x)^{1/x}. La forma alternativa Eq 6 sigue al
+      sustituir n = 1/x (entonces n → ∞ cuando x → 0⁺).
+    is_original: true
+    origin: original
+    review_status: unreviewed
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: medium
+  semantic_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  dependency_confidence: medium because the interchange of
+  limit and continuous function depends on theorem
+  2.5.8 (continuity-of-composition). If that node is not yet in
+  the graph, this proof carries implicit dependency debt. The
+  bundling of Eqs 5 and 6 (continuous x → 0 vs integer n → ∞)
+  treats the n = 1/x substitution as a one-step argument; a
+  fully rigorous treatment of the integer-index limit would
+  require a sequential-vs-functional limit lemma.

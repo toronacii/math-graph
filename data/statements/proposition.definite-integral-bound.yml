@@ -1,0 +1,111 @@
+schema_version: "0.3.1"
+id: proposition.definite-integral-bound
+type: proposition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Propiedades de comparación de la integral definida
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Comparison properties of the definite integral
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-sonnet-4-6"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Para a ≤ b se tienen las siguientes propiedades de comparación:
+        6. Si f(x) ≥ 0 para a ≤ x ≤ b, entonces ∫_a^b f(x) dx ≥ 0.
+        7. Si f(x) ≥ g(x) para a ≤ x ≤ b, entonces
+           ∫_a^b f(x) dx ≥ ∫_a^b g(x) dx.
+        8. Si m ≤ f(x) ≤ M para a ≤ x ≤ b, entonces
+           m(b − a) ≤ ∫_a^b f(x) dx ≤ M(b − a).
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        For a ≤ b the following comparison properties hold:
+        6. If f(x) ≥ 0 for a ≤ x ≤ b, then ∫_a^b f(x) dx ≥ 0.
+        7. If f(x) ≥ g(x) for a ≤ x ≤ b, then
+           ∫_a^b f(x) dx ≥ ∫_a^b g(x) dx.
+        8. If m ≤ f(x) ≤ M for a ≤ x ≤ b, then
+           m(b − a) ≤ ∫_a^b f(x) dx ≤ M(b − a).
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-sonnet-4-6"
+      review_status: unreviewed
+  latex:
+    body: |
+      f(x) \ge 0 \;\Rightarrow\; \int_a^b f\,dx \ge 0;\qquad
+      f \ge g \;\Rightarrow\; \int_a^b f\,dx \ge \int_a^b g\,dx;\\
+      m \le f(x) \le M \;\Rightarrow\;
+        m(b-a) \;\le\; \int_a^b f(x)\,dx \;\le\; M(b-a)
+    status: present
+    review_status: unreviewed
+
+proved_by:
+  - proof.definite-integral-bound.from-linearity
+
+depends_on:
+  - id: definition.definite-integral
+    role: uses_concept
+    confidence: high
+  - id: proposition.definite-integral-properties
+    role: uses_concept
+    confidence: high
+    notes: Property 7 follows from applying Property 6 to f − g; Property 8
+      uses Properties 1 and 3 together with Property 7.
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "5"
+    section: "5.2"
+    theorem_label: "Propiedades de comparación de la integral (6–8)"
+    page: "381"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [real-analysis]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [criterion, principle]
+  keywords: [integral-bound, comparison, monotonicity, estimation]
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-sonnet-4-6"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Property 8 is used as the key squeeze in the proof of TFC Part 1
+  (proof.ftc-part-1.stewart): it bounds the increment (g(x+h)−g(x))/h
+  between the min and max of f on [x, x+h]. Stewart gives a brief explicit
+  proof of Property 8 in the text; Properties 6–7 are stated without separate
+  proofs since they follow immediately from 8 and 1.

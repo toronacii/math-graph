@@ -1,0 +1,118 @@
+schema_version: "0.3.1"
+id: theorem.mean-value-theorem
+type: theorem
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Teorema del valor medio
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Mean Value Theorem
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Si f es una función que satisface las hipótesis: (1) f es
+        continua sobre el intervalo cerrado [a, b]; (2) f es
+        derivable sobre el intervalo abierto (a, b); entonces existe
+        un número c en (a, b) tal que f'(c) = (f(b) − f(a)) / (b − a),
+        o, equivalentemente, f(b) − f(a) = f'(c) (b − a).
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        Let f be a function satisfying: (1) f is continuous on the
+        closed interval [a, b]; (2) f is differentiable on the open
+        interval (a, b). Then there exists a number c in (a, b) such
+        that f'(c) = (f(b) − f(a)) / (b − a), equivalently
+        f(b) − f(a) = f'(c) (b − a).
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      f \in C([a,b]) \;\wedge\; f \in D((a,b)) \;\implies\;
+      \exists c \in (a,b):\; f'(c) = \frac{f(b) - f(a)}{b - a}
+    status: present
+    review_status: unreviewed
+
+proved_by:
+  - proof.mean-value-theorem.from-rolle
+
+depends_on:
+  - id: definition.continuity-on-interval
+    role: uses_concept
+    confidence: high
+  - id: definition.differentiable-on-interval
+    role: uses_concept
+    confidence: high
+  - id: definition.derivative-at-point
+    role: uses_concept
+    confidence: high
+  - id: definition.secant-line
+    role: uses_concept
+    confidence: medium
+    notes: >
+      The geometric interpretation of (f(b) − f(a))/(b − a) as the
+      secant slope is part of the standard reading of MVT, though
+      the formal statement does not require it.
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "4"
+    section: "4.2"
+    theorem_label: "Teorema del valor medio"
+    page: "285"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [analysis]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [principle, criterion]
+  keywords: [mean-value-theorem, MVT, lagrange, average-rate-of-change, existence]
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart §4.2 page 285, attributed to Joseph Louis Lagrange.
+  Geometric interpretation: at some interior point c the tangent
+  line is parallel to the secant line through (a, f(a)), (b, f(b)).
+  Kinematic reading: instantaneous velocity equals average velocity
+  at some moment in the interval. This theorem is the central
+  workhorse of Ch4 — it powers theorem.derivative-zero-implies-
+  constant, the increasing/decreasing tests of §4.3, and the
+  evaluation theorem of Ch5.

@@ -1,0 +1,106 @@
+schema_version: "0.3.1"
+id: proposition.integral-evaluation-formula
+type: proposition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Fórmula de evaluación de la integral (puntos extremos derechos)
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Integral evaluation formula (right endpoints)
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-sonnet-4-6"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Si f es integrable sobre [a, b], entonces
+        ∫_a^b f(x) dx = lím_{n→∞} Σᵢ₌₁ⁿ f(xᵢ)Δx
+        donde Δx = (b − a)/n y xᵢ = a + i·Δx son los puntos extremos
+        derechos de los subintervalos iguales.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        If f is integrable on [a, b], then
+        ∫_a^b f(x) dx = lim_{n→∞} Σᵢ₌₁ⁿ f(xᵢ)Δx
+        where Δx = (b − a)/n and xᵢ = a + i·Δx are the right endpoints
+        of equal subintervals.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-sonnet-4-6"
+      review_status: unreviewed
+  latex:
+    body: |
+      \int_a^b f(x)\,dx
+        = \lim_{n \to \infty} \sum_{i=1}^{n} f(x_i)\,\Delta x,
+      \quad \Delta x = \frac{b-a}{n},\quad x_i = a + i\,\Delta x
+    status: present
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: definition.definite-integral
+    role: uses_concept
+    confidence: high
+  - id: theorem.integrability-of-continuous
+    role: uses_concept
+    confidence: high
+    notes: >
+      Integrability guarantees the limit is independent of sample-point choice,
+      so the right-endpoint specialisation is valid.
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "5"
+    section: "5.2"
+    theorem_label: "Teorema 4"
+    page: "374"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [real-analysis]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [criterion, principle]
+  keywords: [definite-integral, right-endpoint, riemann-sum, evaluation]
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-sonnet-4-6"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart uses this proposition heavily in the worked examples of §5.2 to
+  compute integrals from the definition (before the FTC is available).
+  The theorem follows immediately from the definition: when f is integrable,
+  all sample-point choices yield the same limit, so the convenient right-endpoint
+  choice is valid.

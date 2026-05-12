@@ -1,0 +1,67 @@
+schema_version: "0.3.1"
+id: proof.substitution-rule.from-chain-rule
+type: proof
+status: extracted
+
+proves: theorem.substitution-rule
+style: direct
+
+uses:
+  - id: theorem.chain-rule
+    role: essential
+    confidence: high
+    notes: >
+      The proof recognises f(g(x))·g'(x) as the chain-rule derivative of F(g(x)),
+      so integrating both sides gives F(g(x))+C.
+  - id: definition.indefinite-integral
+    role: definition
+    confidence: high
+  - id: definition.antiderivative
+    role: definition
+    confidence: high
+    notes: >
+      Definitional unfolding: F is an antiderivative means F' = f.
+  - id: theorem.ftc-part-1
+    role: existence
+    confidence: high
+    implicit: true
+    notes: >
+      Stewart invokes implicitly: F exists because f is continuous on I,
+      which is guaranteed by TFC1. The proof assumes F without citing
+      the existence source.
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "5"
+    section: "5.5"
+    page: "408"
+    source_language: es
+
+sketch:
+  es:
+    text: >
+      Sea F una antiderivada de f (F' = f). Por la regla de la cadena,
+      d/dx[F(g(x))] = F'(g(x))·g'(x) = f(g(x))·g'(x).
+      Integrando ambos lados respecto a x:
+      ∫ f(g(x))·g'(x) dx = F(g(x)) + C.
+      Con la sustitución u = g(x), du = g'(x) dx, el lado derecho es
+      ∫ f(u) du = F(u) + C = F(g(x)) + C.
+      Por tanto ∫ f(g(x))·g'(x) dx = ∫ f(u) du.
+    is_original: true
+    origin: original
+    review_status: unreviewed
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-sonnet-4-6"
+  extracted_at: "2026-05-11"
+  derived_from: []

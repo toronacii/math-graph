@@ -1,0 +1,61 @@
+schema_version: "0.3.1"
+id: proof.ftc-part-2.from-ftc1
+type: proof
+status: extracted
+
+proves: theorem.ftc-part-2
+style: direct
+
+uses:
+  - id: theorem.ftc-part-1
+    role: essential
+    confidence: high
+    notes: >
+      TFC1 establishes that g(x) = ∫_a^x f(t) dt satisfies g'(x) = f(x),
+      making it an antiderivative — the key bridge to TFC2.
+  - id: corollary.derivatives-equal-implies-differ-by-constant
+    role: essential
+    confidence: high
+    notes: >
+      Since F' = g' = f, the corollary gives F(x) = g(x) + C for some constant C.
+  - id: definition.antiderivative
+    role: definition
+    confidence: high
+  - id: definition.definite-integral
+    role: definition
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "5"
+    section: "5.3"
+    page: "391"
+    source_language: es
+
+sketch:
+  es:
+    text: >
+      Sea g(x) = ∫_a^x f(t) dt. Por TFC1, g'(x) = f(x), así que g es
+      una antiderivada de f. Si F es cualquier antiderivada de f, entonces
+      F' = g' = f, luego por el corolario F(x) = g(x) + C para alguna
+      constante C.
+      Por tanto F(b) − F(a) = [g(b) + C] − [g(a) + C] = g(b) − g(a)
+      = ∫_a^b f(t) dt − 0 = ∫_a^b f(x) dx.
+    is_original: true
+    origin: original
+    review_status: unreviewed
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-sonnet-4-6"
+  extracted_at: "2026-05-11"
+  derived_from: []

@@ -1,0 +1,102 @@
+schema_version: "0.3.1"
+id: definition.differentiable-at-point
+type: definition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Función derivable en un punto
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Function differentiable at a point
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Una función f es derivable (diferenciable) en x = a si la
+        derivada f'(a) existe; es decir, si el límite del cociente
+        de diferencias lím_{h→0} (f(a + h) − f(a))/h existe y es
+        finito.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        A function f is differentiable at x = a if the derivative
+        f'(a) exists; that is, if the limit of the difference
+        quotient lim_{h→0} (f(a + h) − f(a))/h exists and is
+        finite.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      f \text{ is differentiable at } a
+        \;\Longleftrightarrow\;
+      \lim_{h \to 0} \frac{f(a + h) - f(a)}{h} \text{ exists}
+    status: present
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: definition.derivative-at-point
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.8"
+    theorem_label: "Definición 3 (primera parte)"
+    page: "157"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [analysis]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [property, criterion]
+  keywords: [differentiability, pointwise]
+
+generality: []
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart bundles "differentiable at a" and "differentiable on an
+  open interval" inside one Definición 3 (p.157). They are split
+  here into two nodes to keep each definition atomic, per the
+  2026-05-11 audit recommendation. The interval version is at
+  definition.differentiable-on-interval.

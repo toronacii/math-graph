@@ -1,0 +1,119 @@
+rerun_id: v0.3.1-stewart-full
+chapter: "5"
+snapshot_label: v0.3.1-stewart-full-ch05
+generated_at: "2026-05-11"
+
+low_confidence_proof_uses_introduced_in_ch5: []
+# All Ch5 proof_uses edges are confidence: high.
+
+low_confidence_statement_depends_on_introduced_in_ch5:
+  - statement: proposition.indefinite-integral-table
+    target: proposition.antiderivative-formulas-table
+    role: extends
+    confidence: high
+    section: "5.4"
+    notes: >
+      Classified high despite being a bundle-extends-bundle relationship
+      because the extension is clean: §5.4 Table 1 literally re-presents
+      the §4.9 table in integral notation plus adds three new formula groups
+      (inverse-trig rows tan⁻¹/sin⁻¹, hyperbolic rows sinh/cosh). The
+      domain-of-validity gaps are inherited, but the dependency itself
+      is clear.
+  - statement: proposition.definite-integral-properties
+    target: definition.definite-integral
+    role: uses_concept
+    confidence: medium
+    section: "5.2"
+    notes: >
+      Bundled proposition (Type-B): Properties 1–5 each individually
+      depend on the definite integral definition, but the bundle also
+      carries implicit integrability hypotheses (f and g integrable on [a,b])
+      that are not encoded per-property. Confidence lowered to medium to
+      flag the granularity gap. Resolving requires splitting into five
+      atomic proposition nodes.
+  - statement: proposition.definite-integral-bound
+    target: proposition.definite-integral-properties
+    role: uses_concept
+    confidence: medium
+    section: "5.2"
+    notes: >
+      Bundled proposition (Type-B): the bound-proof uses linearity but
+      the exact subset of Properties 1–5 needed differs by bound.
+      Property 6 (non-negativity) needs only the Riemann sum definition;
+      Property 7 needs linearity; Property 8 needs both. Confidence
+      lowered to medium for the same granularity reason as above.
+
+deferred_proofs_introduced_in_ch5:
+  - statement: theorem.integrability-of-continuous
+    section: "5.2"
+    reason: >
+      Stewart §5.2 Theorem 3 states that continuous functions (and functions
+      with finitely many jump discontinuities) are integrable, but explicitly
+      notes that "the proof is beyond the scope of this book." The full proof
+      requires uniform continuity (Rudin Theorem 4.19) and the completeness
+      of ℝ. For this rerun the theorem is treated as axiom-like within Ch5.
+    target_chapter: Rudin Ch6 Theorem 6.8 (future merge)
+
+  - statement: proposition.integral-evaluation-formula
+    section: "5.2"
+    reason: >
+      Theorem 4 in §5.2 (∫_a^b f(x)dx = lim Σf(xᵢ)Δx using right endpoints
+      for integrable f) follows constructively from the definite-integral
+      definition by restricting to regular partitions. No proof node was
+      produced; the relationship is captured in the depends_on edge to
+      definition.definite-integral.
+
+  - statement: proposition.midpoint-rule
+    section: "5.2"
+    reason: >
+      The midpoint-rule approximation is a practical numerical schema.
+      Its correctness as an approximation method follows from the definition
+      of the Riemann sum; rigorous error bounds (O(h²)) require the Taylor
+      remainder theorem (§11.10 Theorem 9). No proof node was produced.
+
+  - statement: proposition.indefinite-integral-table
+    section: "5.4"
+    reason: >
+      Each of the 17+ rows can be verified by differentiating the right-hand
+      side (one-line check). Stewart presents them as a reference table without
+      individual proofs. No monolithic proof node produced (same design pattern
+      as proposition.antiderivative-formulas-table from §4.9).
+
+  - statement: theorem.net-change-theorem
+    section: "5.4"
+    reason: >
+      Mathematically equivalent to theorem.ftc-part-2 (recorded via
+      generality: equivalent edge). The "proof" is just a restatement of
+      TFC2 with F' = f substituted; no separate proof node is warranted.
+
+assumed_existing_dependencies_verified:
+  - id: theorem.squeeze-theorem
+    used_by: proof.ftc-part-1.stewart
+    status: confirmed_present
+    notes: >
+      Introduced in Ch2 (§2.3). The use in proof.ftc-part-1.stewart reactivates
+      this node after it appeared dormant in Ch3–Ch4.
+  - id: theorem.extreme-value-theorem
+    used_by: proof.ftc-part-1.stewart
+    status: confirmed_present
+    notes: >
+      Introduced in Ch4 §4.1. First proof-level use is in proof.ftc-part-1.stewart.
+  - id: corollary.derivatives-equal-implies-differ-by-constant
+    used_by: proof.ftc-part-2.from-ftc1
+    status: confirmed_present
+    notes: >
+      Introduced in Ch4 §4.2. This corollary was the end of a 4-step chain
+      (Fermat → Rolle → MVT → zero-derivative → corollary); its first
+      downstream use as a proof dependency is proof.ftc-part-2.from-ftc1.
+  - id: theorem.chain-rule
+    used_by: [proof.substitution-rule.from-chain-rule, proof.substitution-rule-definite.from-ftc2]
+    status: confirmed_present
+    notes: >
+      Introduced in Ch3 §3.4. Both Ch5 substitution proofs depend on it
+      as their essential step.
+  - id: definition.antiderivative
+    used_by: [proof.ftc-part-2.from-ftc1, proof.substitution-rule.from-chain-rule, proof.substitution-rule-definite.from-ftc2]
+    status: confirmed_present
+    notes: >
+      Introduced in Ch4 §4.9. Three Ch5 proofs cite it; its in-degree
+      grows significantly with this chapter.

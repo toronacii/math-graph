@@ -1,0 +1,83 @@
+schema_version: "0.3.1"
+id: proof.general-antiderivative.from-corollary
+type: proof
+status: extracted
+
+proves: theorem.general-antiderivative
+style: direct-corollary
+
+uses: []
+
+parts:
+  - name: setup
+    kind: subclaim
+    description: >
+      Let F be an antiderivada of f on the interval I, so F'(x) = f(x)
+      for every x in I. Let G be any other antiderivative of f on I,
+      so G'(x) = f(x) for every x in I.
+
+  - name: equal-derivatives
+    kind: subclaim
+    description: >
+      Then F'(x) = f(x) = G'(x) for every x in I, so F and G have
+      equal derivatives throughout the interval I.
+
+  - name: apply-corollary
+    kind: subclaim
+    description: >
+      By Corollary 4.2.7 (equal derivatives on an interval imply the
+      functions differ by a constant), there exists a constant C with
+      G(x) − F(x) = C, i.e. G(x) = F(x) + C, for every x in I.
+      Conversely, for any constant C the function F(x) + C has
+      derivative f(x), hence is an antiderivative of f. Therefore the
+      family F(x) + C, C ∈ R, is exactly the set of antiderivatives of
+      f on I.
+    uses:
+      - id: corollary.derivatives-equal-implies-differ-by-constant
+        role: essential
+        confidence: high
+      - id: definition.antiderivative
+        role: definition
+        confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "4"
+    section: "4.9"
+    locator: "Discusión que precede al Teorema 1 (p. 344)"
+    page: "344"
+    source_language: es
+
+sketch:
+  es:
+    text: >
+      Si F y G son antiderivadas de f sobre I, entonces F'(x) = f(x)
+      = G'(x) para toda x en I. Por el Corolario 4.2.7 existe una
+      constante C con G(x) − F(x) = C, es decir G(x) = F(x) + C.
+      Recíprocamente, F(x) + C es antiderivada de f para todo C.
+    is_original: true
+    origin: original
+    review_status: unreviewed
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart's discussion preceding Teorema 1 page 344 is itself the
+  proof — he derives F + C as the general antiderivative by direct
+  appeal to Corolario 4.2.7. The converse direction (every F + C is
+  an antiderivative) Stewart leaves implicit; we make it explicit
+  here for completeness, since it follows trivially from the
+  constant-rule and sum-rule for derivatives.

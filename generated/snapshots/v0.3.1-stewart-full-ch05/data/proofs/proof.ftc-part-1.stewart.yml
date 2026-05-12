@@ -1,0 +1,74 @@
+schema_version: "0.3.1"
+id: proof.ftc-part-1.stewart
+type: proof
+status: extracted
+
+proves: theorem.ftc-part-1
+style: direct
+
+uses:
+  - id: definition.definite-integral
+    role: definition
+    confidence: high
+  - id: definition.derivative-at-point
+    role: definition
+    confidence: high
+    notes: >
+      The proof expands g'(x) using the limit definition of the derivative.
+  - id: theorem.extreme-value-theorem
+    role: essential
+    confidence: high
+    notes: >
+      Guarantees f attains min m and max M on [x, x+h], giving the bound
+      m·h ≤ g(x+h)−g(x) ≤ M·h.
+  - id: proposition.definite-integral-bound
+    role: essential
+    confidence: high
+    notes: >
+      Comparison property (Property 8) bounds ∫_x^{x+h} f(t) dt between m·h and M·h.
+  - id: theorem.squeeze-theorem
+    role: essential
+    confidence: high
+    notes: >
+      As h→0, continuity of f forces m→f(x) and M→f(x), so the squeeze closes
+      the limit to g'(x) = f(x).
+  - id: definition.continuity-at-point
+    role: background
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "5"
+    section: "5.3"
+    page: "388"
+    source_language: es
+
+sketch:
+  es:
+    text: >
+      Sea g(x) = ∫_a^x f(t) dt. Para mostrar g'(x) = f(x) se usa la
+      definición de derivada: g'(x) = lím_{h→0} [g(x+h)−g(x)]/h.
+      La diferencia g(x+h)−g(x) = ∫_x^{x+h} f(t) dt. Si f tiene mínimo m
+      y máximo M sobre [x, x+h] (por el TVM), la propiedad de acotación
+      (Propiedad 8) da m·h ≤ ∫_x^{x+h} f(t) dt ≤ M·h, luego
+      m ≤ [g(x+h)−g(x)]/h ≤ M.
+      Por continuidad de f, m → f(x) y M → f(x) cuando h → 0, así que
+      por el teorema del emparedado g'(x) = f(x).
+    is_original: true
+    origin: original
+    review_status: unreviewed
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-sonnet-4-6"
+  extracted_at: "2026-05-11"
+  derived_from: []

@@ -1,0 +1,84 @@
+schema_version: "0.3.1"
+id: proof.derivative-zero-implies-constant.mvt
+type: proof
+status: extracted
+
+proves: theorem.derivative-zero-implies-constant
+style: direct-from-mvt
+
+uses: []
+
+parts:
+  - name: pick-two-points
+    kind: subclaim
+    description: >
+      Let x₁ and x₂ be any two numbers in (a, b) with x₁ < x₂. Since
+      f is differentiable on (a, b) it is differentiable on (x₁, x₂)
+      (subinterval) and continuous on [x₁, x₂] (differentiability
+      implies continuity).
+    uses:
+      - id: theorem.differentiable-implies-continuous
+        role: essential
+        confidence: high
+        notes: needed to upgrade differentiability on (a,b) to continuity on the closed subinterval [x₁, x₂]
+
+  - name: apply-mvt
+    kind: subclaim
+    description: >
+      By the Mean Value Theorem applied to f on [x₁, x₂], there
+      exists c with x₁ < c < x₂ such that
+      f(x₂) − f(x₁) = f'(c)(x₂ − x₁).
+    uses:
+      - id: theorem.mean-value-theorem
+        role: essential
+        confidence: high
+
+  - name: use-zero-derivative
+    kind: subclaim
+    description: >
+      By hypothesis f'(c) = 0 for every c in (a, b), so the equation
+      reduces to f(x₂) − f(x₁) = 0, i.e. f(x₁) = f(x₂). Since x₁ and
+      x₂ were arbitrary in (a, b), f takes the same value everywhere
+      on (a, b), hence f is constant on (a, b).
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "4"
+    section: "4.2"
+    locator: "Demostración del Teorema 5 (pp. 287–288)"
+    page: "287"
+    source_language: es
+
+sketch:
+  es:
+    text: >
+      Sean x₁ < x₂ en (a, b). f es derivable en (x₁, x₂) y continua
+      en [x₁, x₂] (derivable ⇒ continua). Por el TVM existe c en
+      (x₁, x₂) con f(x₂) − f(x₁) = f'(c)(x₂ − x₁). Como f'(c) = 0,
+      se sigue f(x₁) = f(x₂). Como x₁, x₂ son arbitrarios, f es
+      constante en (a, b).
+    is_original: true
+    origin: original
+    review_status: unreviewed
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart's direct application of MVT to two arbitrary interior
+  points. The interval hypothesis is essential — Stewart's NOTA
+  explicitly warns the result fails on disconnected domains
+  (counterexample x/|x| on R \ {0}). This proof inherits the
+  epistemic chain MVT → Rolle → EVT + Fermat.

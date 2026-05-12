@@ -1,0 +1,109 @@
+schema_version: "0.3.1"
+id: theorem.derivative-of-general-exponential
+type: theorem
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Derivada de la función exponencial general
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Derivative of the general exponential function
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Para cualquier base a > 0, la derivada de la función
+        exponencial a^x es (d/dx) a^x = a^x · ln a.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        For any base a > 0, the derivative of the exponential
+        function a^x is (d/dx) a^x = a^x · ln a.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      \frac{d}{dx}\,a^{x} \;=\; a^{x}\,\ln a \qquad (a > 0)
+    status: present
+    review_status: unreviewed
+
+proved_by:
+  - proof.derivative-of-general-exponential.chain-rule
+
+depends_on:
+  - id: definition.exponential-function
+    role: uses_concept
+    confidence: high
+  - id: definition.logarithmic-function
+    role: uses_concept
+    confidence: high
+  - id: definition.derivative-function
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.4"
+    theorem_label: "Ecuación 5"
+    page: "203"
+    source_language: es
+
+domains:
+  primary: [calculus]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [principle]
+  keywords: [exponential-function, derivative, general-base, natural-log]
+
+generality:
+  - target: theorem.derivative-of-natural-exponential
+    relation: stronger_than
+    notes: >
+      Special case a = e gives ln a = 1, recovering
+      (d/dx) e^x = e^x. Edge owned here per policy 04
+      (alphabetical: "general-exponential" precedes
+      "natural-exponential").
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart's Eq 5. Closes (modulo the natural-log derivative debt
+  to §3.6) the f'(0) computation that was open in
+  theorem.exponential-derivative-proportional: f'(0) = ln a.
+  Stewart explicitly cautions not to confuse this with the power
+  rule (here x is the exponent, not the base).

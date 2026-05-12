@@ -1,0 +1,109 @@
+schema_version: "0.3.1"
+id: theorem.rolle
+type: theorem
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Teorema de Rolle
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Rolle's Theorem
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Si f es una función que satisface las siguientes tres
+        hipótesis: (1) f es continua sobre el intervalo cerrado
+        [a, b]; (2) f es derivable sobre el intervalo abierto
+        (a, b); (3) f(a) = f(b); entonces hay un número c en
+        (a, b) tal que f'(c) = 0.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        Let f be a function satisfying the three hypotheses:
+        (1) f is continuous on the closed interval [a, b];
+        (2) f is differentiable on the open interval (a, b);
+        (3) f(a) = f(b). Then there is a number c in (a, b)
+        such that f'(c) = 0.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      f \in C([a,b]) \;\wedge\; f \in D((a,b)) \;\wedge\; f(a) = f(b)
+      \;\implies\; \exists c \in (a,b):\; f'(c) = 0
+    status: present
+    review_status: unreviewed
+
+proved_by:
+  - proof.rolle.stewart
+
+depends_on:
+  - id: definition.continuity-on-interval
+    role: uses_concept
+    confidence: high
+  - id: definition.differentiable-on-interval
+    role: uses_concept
+    confidence: high
+  - id: definition.derivative-at-point
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "4"
+    section: "4.2"
+    theorem_label: "Teorema de Rolle"
+    page: "284"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [analysis]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [principle, criterion]
+  keywords: [rolle, mean-value, vanishing-derivative, existence]
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart §4.2 page 284. Historical note: published 1691 by Michel
+  Rolle. Stewart presents Rolle as the technical lemma underlying
+  the Mean Value Theorem. Proof structure has three cases keyed on
+  whether f is constant, attains a value above f(a), or attains a
+  value below f(a) — the last two cases route through the Extreme
+  Value Theorem and Fermat's Theorem.

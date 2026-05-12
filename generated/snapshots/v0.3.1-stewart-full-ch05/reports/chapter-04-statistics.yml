@@ -1,0 +1,83 @@
+chapter: "4"
+chapter_title: Applications of Differentiation
+source:
+  work: "Calculo de una variable — Trascendentes tempranas"
+  author: James Stewart
+  edition: "7"
+  language: es
+  sections_processed:
+    - "4.1"
+    - "4.2"
+    - "4.3"
+    - "4.4"
+    - "4.9"
+
+extraction_date: "2026-05-10"
+validation_status: pass
+
+cumulative_statistics:
+  total_nodes: 183
+  total_edges: 194
+
+  nodes_by_type:
+    definition: 69
+    proposition: 14
+    theorem: 38
+    corollary: 5
+    lemma: 0
+    axiom: 0
+    conjecture: 0
+    proof: 57
+
+  nodes_by_kind:
+    statement: 126
+    proof: 57
+
+  edges_by_relation:
+    uses: 137
+    proves: 57
+
+  proofs_by_style:
+    direct: 48
+    epsilon-delta: 4
+    assumed: 3
+    algebraic: 1
+    geometric: 1
+
+  proofs_by_confidence:
+    high: 35
+    medium: 18
+    low: 4
+
+  root_nodes: 69
+  isolated_nodes: 36
+  connected_components: 38
+  connected_component_sizes:
+    - 144
+    - 3
+    - 1
+    - 1
+    - 1
+
+  graph_density: 0.0058
+  average_degree: 2.12
+
+chapter_delta:
+  new_nodes: 37
+  new_edges: 48
+  new_definitions: 11
+  new_propositions: 5
+  new_theorems: 6
+  new_corollaries: 2
+  new_proofs: 13
+  reclassifications: 0
+
+sections_skipped:
+  - section: "4.5"
+    reason: "Curve sketching methodology — no new theorems or definitions"
+  - section: "4.6"
+    reason: "Graphing with calculators — no new theorems or definitions"
+  - section: "4.7"
+    reason: "Optimization applications — applies existing tools, no new entities"
+  - section: "4.8"
+    reason: "Newton's method — numerical technique, no new graph entities"

@@ -1,0 +1,96 @@
+schema_version: "0.3.1"
+id: definition.absolute-minimum
+type: definition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Valor mínimo absoluto
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Absolute minimum value
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Sea c un número en el dominio D de una función f. Entonces
+        f(c) es el valor mínimo absoluto (o mínimo global) de f
+        sobre D si f(c) ≤ f(x) para toda x ∈ D.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        Let c be a number in the domain D of a function f. Then
+        f(c) is the absolute minimum value (or global minimum) of
+        f on D if f(c) ≤ f(x) for every x ∈ D.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      f(c) = \min_{x \in D} f(x) \iff \forall x \in D,\; f(c) \le f(x)
+    status: present
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: definition.function
+    role: uses_concept
+    confidence: high
+  - id: definition.domain
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "4"
+    section: "4.1"
+    theorem_label: "Definición 1 (parte mínima)"
+    page: "274"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [analysis, optimization]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [object, property]
+  keywords: [minimum, absolute-extremum, global-minimum, optimization]
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Sibling of definition.absolute-maximum. See that file for the
+  splitting rationale (Ch2 left/right-hand-limit precedent).

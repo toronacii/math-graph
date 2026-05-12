@@ -1,0 +1,114 @@
+schema_version: "0.3.1"
+id: proposition.implicit-differentiation
+type: proposition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Método de derivación implícita
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Method of implicit differentiation
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Si una ecuación F(x, y) = 0 define implícitamente a y como
+        función derivable de x en una región, la derivada dy/dx
+        puede obtenerse derivando ambos miembros de la ecuación
+        respecto a x (tratando y como función de x y aplicando la
+        regla de la cadena al diferenciar términos en y) y
+        despejando dy/dx en la ecuación resultante.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        If an equation F(x, y) = 0 implicitly defines y as a
+        differentiable function of x in some region, then dy/dx
+        can be found by differentiating both sides of the equation
+        with respect to x (treating y as a function of x and
+        applying the chain rule to terms involving y) and solving
+        the resulting equation for dy/dx.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      F(x,y) = 0,\ y = y(x)\text{ derivable}
+        \;\Longrightarrow\;
+        \frac{dy}{dx}
+          = -\,\frac{\partial F/\partial x}{\partial F/\partial y}
+        \quad\text{(via chain rule on each term in }y\text{)}
+    status: present
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: theorem.chain-rule
+    role: uses_concept
+    confidence: high
+  - id: definition.differentiable-at-point
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.5"
+    theorem_label: "Método de derivación implícita"
+    page: "210"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [algebraic-geometry]
+
+ambient:
+  structures: [real-line, plane]
+
+ontology:
+  semantic_kind: [schema, principle]
+  keywords: [implicit-differentiation, chain-rule, implicit-function, technique]
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: medium
+  semantic_confidence: medium
+  translation_confidence: high
+  latex_confidence: medium
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart presents this as a METHOD, not a theorem with proof —
+  it relies on the (assumed) hypothesis "the equation determines
+  y implicitly as a differentiable function of x". The rigorous
+  hypothesis (Implicit Function Theorem of multivariable calculus)
+  is well outside the scope of single-variable Stewart. Classified
+  as proposition with semantic_kind=[schema,principle] to flag its
+  methodological nature. semantic_confidence:medium because the
+  existence/differentiability hypothesis is left informal.
+  proved_by:[] reflects no proof in §3.5; the technique is
+  justified case-by-case by chain-rule application.

@@ -1,0 +1,117 @@
+schema_version: "0.3.1"
+id: definition.indefinite-integral
+type: definition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Integral indefinida
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Indefinite integral
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-sonnet-4-6"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        La notación ∫ f(x) dx = F(x) significa que F'(x) = f(x), es
+        decir, F es una antiderivada de f. Una integral indefinida
+        representa una familia de funciones (una antiderivada para cada
+        valor de la constante C). Por convención, toda fórmula para una
+        integral indefinida general es válida sólo sobre un intervalo.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        The notation ∫ f(x) dx = F(x) means F'(x) = f(x), i.e., F is an
+        antiderivative of f. An indefinite integral represents a family of
+        functions (one antiderivative for each value of the constant C).
+        By convention, every formula for a general indefinite integral is
+        valid only on an interval.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-sonnet-4-6"
+      review_status: unreviewed
+  latex:
+    body: |
+      \int f(x)\,dx = F(x) + C
+      \quad\text{means}\quad F'(x) = f(x)
+    status: present
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: definition.antiderivative
+    role: extends
+    confidence: high
+    notes: >
+      The indefinite integral is the same mathematical concept as the
+      antiderivative (§4.9), re-expressed with integral notation and
+      emphasising the family-of-functions aspect. The two definitions are
+      logically equivalent; the notation ∫ f dx = F + C is introduced here
+      to connect antiderivatives to the definite integral via TFC2.
+  - id: theorem.general-antiderivative
+    role: uses_concept
+    confidence: high
+    notes: >
+      Justifies the "+ C" in ∫ f dx = F + C: any two antiderivatives of f
+      differ by a constant on an interval.
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "5"
+    section: "5.4"
+    theorem_label: "Integrales indefinidas"
+    page: "397"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: []
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [notation, object]
+  keywords: [indefinite-integral, antiderivative, notation, family-of-functions]
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-sonnet-4-6"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Atomic decision: definition.antiderivative (§4.9) and
+  definition.indefinite-integral (§5.4) are kept as SEPARATE nodes because
+  they differ in framing and context: antiderivative is introduced as a
+  function F with F' = f in the context of reverse differentiation, while
+  indefinite integral introduces Leibniz notation ∫ f dx and explicitly ties
+  antiderivatives to TFC2. The mathematical content is the same; the depends_on
+  edge (extends) records this relationship.
+  Stewart's key warning (highlighted in the book): a definite integral ∫_a^b f dx
+  is a NUMBER, whereas an indefinite integral ∫ f dx is a FUNCTION (or family).

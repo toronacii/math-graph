@@ -1,0 +1,60 @@
+schema_version: "0.3.1"
+id: proof.continuity-of-composition.stewart
+type: proof
+status: extracted
+
+proves: theorem.continuity-of-composition
+style: direct
+
+uses:
+  - id: definition.continuity-at-point
+    role: essential
+    confidence: high
+    notes: unfolds both hypotheses and conclusion as lim = value-at-point
+  - id: theorem.limit-through-continuous-function
+    role: essential
+    confidence: high
+    notes: >
+      With b = g(a), substitution into Theorem 8 yields
+      lim_{x→a} f(g(x)) = f(g(a)) = (f ∘ g)(a).
+  - id: definition.composition-of-functions
+    role: definition
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.5"
+    locator: "Demostración del Teorema 9"
+    page: "125"
+    source_language: es
+
+sketch:
+  es:
+    text: >
+      Como g es continua en a, lím_{x→a} g(x) = g(a). Como f es
+      continua en b = g(a), por el Teorema 8 lím_{x→a} f(g(x)) =
+      f(g(a)) = (f ∘ g)(a). Esto muestra que f ∘ g es continua en a.
+    is_original: true
+    origin: original
+    review_status: unreviewed
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart §2.5 explicit proof. Note the chain: this proof depends
+  essentially on theorem.limit-through-continuous-function, whose
+  own proof Stewart defers to Apéndice F.

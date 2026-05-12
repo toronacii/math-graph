@@ -1,0 +1,235 @@
+rerun_id: v0.3.1-stewart-full
+chapter: "5"
+chapter_title:
+  es: Integrales
+  en: Integrals
+sections_covered:
+  - "5.1"   # Áreas y distancias
+  - "5.2"   # La integral definida
+  - "5.3"   # El teorema fundamental del cálculo
+  - "5.4"   # Integrales indefinidas y el teorema del cambio neto
+  - "5.5"   # La regla de sustitución
+sections_pending: []
+partial: false
+snapshot_label: v0.3.1-stewart-full-ch05
+generated_at: "2026-05-11"
+
+counts:
+  total_nodes: 231
+  statements: 174
+  proofs: 57
+  by_type:
+    definition: 89
+    proposition: 39
+    theorem: 45
+    corollary: 1
+    proof: 57
+  ch5_only:
+    statements_first_introduced: 16
+    proofs_first_introduced: 6
+  by_section_statements_ch5:
+    "5.1": 2   # area-under-curve, riemann-sum
+    "5.2": 5   # definite-integral, integrability-of-continuous, integral-evaluation-formula, definite-integral-properties, definite-integral-bound
+    "5.2_midpoint": 1   # midpoint-rule (numerical approximation aside)
+    "5.3": 2   # ftc-part-1, ftc-part-2
+    "5.4": 3   # indefinite-integral, indefinite-integral-table, net-change-theorem
+    "5.5": 3   # substitution-rule, substitution-rule-definite, integrals-of-symmetric-functions
+  by_section_proofs_ch5:
+    "5.2": 1   # definite-integral-bound.from-linearity
+    "5.3": 2   # ftc-part-1.stewart, ftc-part-2.from-ftc1
+    "5.4": 0
+    "5.5": 3   # substitution-rule.from-chain-rule, substitution-rule-definite.from-ftc2, integrals-of-symmetric-functions.from-substitution
+
+  total_edges: 704
+  edges_by_relation:
+    proves: 57          # proof → statement
+    depends_on: 400     # statement depends_on (includes generality edges encoded in graph)
+    uses: 247           # proof uses edges
+  ch5_new_edges: 68
+
+graph_density:
+  nodes: 231
+  edges: 704
+  density: 0.0133
+  components: 1
+
+hubs_post_chapter_5:
+  most_referenced_by_in_degree:
+    - id: definition.function
+      score: 63
+      role: universal hub
+    - id: definition.derivative-function
+      score: 34
+      role: Ch3 super-hub
+    - id: definition.limit-of-function
+      score: 26
+      role: Ch2 foundational hub
+    - id: definition.domain
+      score: 20
+    - id: definition.differentiable-at-point
+      score: 13
+    - id: definition.continuity-at-point
+      score: 12
+    - id: definition.continuity-on-interval
+      score: 11
+      role: Ch5 escalation — now feeds TFC1, integrability, substitution rule
+    - id: definition.derivative-at-point
+      score: 11
+    - id: definition.definite-integral
+      score: 9
+      role: NEW Ch5 super-hub — feeds TFC1, TFC2, NCT, evaluation formula,
+            integral-bound, and midpoint-rule proofs
+    - id: definition.exponential-function
+      score: 10
+    - id: theorem.ftc-part-2
+      score: 3
+      role: NEW Ch5 hub — feeds NCT, substitution-rule-definite proof
+
+  ch5_introduced_hubs:
+    - id: definition.definite-integral
+      inbound_total: 9
+      role: central concept of Ch5; referenced by all §5.2+ entities
+    - id: theorem.ftc-part-2
+      inbound_total: 3
+      role: used by NCT (equivalent restatement) and by two substitution proofs
+    - id: theorem.substitution-rule-definite
+      inbound_total: 2
+      role: used by proof.integrals-of-symmetric-functions
+    - id: definition.indefinite-integral
+      inbound_total: 2
+      role: referenced by substitution-rule and indefinite-integral-table
+    - id: theorem.substitution-rule
+      inbound_total: 2
+      role: referenced by substitution-rule-definite (specializes) and symmetric-functions
+    - id: proposition.definite-integral-properties
+      inbound_total: 2
+      role: used in bound proof and symmetric-functions proof
+    - id: definition.riemann-sum
+      inbound_total: 2
+      role: used by definite-integral and integral-evaluation-formula
+
+orphan_count: 0
+leaf_statement_count_ch5:
+  - definition.area-under-curve
+    reason: pedagogical introduction to §5.1; superseded by definition.definite-integral
+  - proposition.integral-evaluation-formula
+    reason: auxiliary formula (right-endpoint specialization of definite integral definition)
+  - proposition.midpoint-rule
+    reason: numerical approximation schema; no downstream theorems in Ch5
+  - proposition.indefinite-integral-table
+    reason: Type-A bundle by design; formulas used in examples but no theorem depends on it
+  - theorem.net-change-theorem
+    reason: equivalent to TFC2 by design (different framing, not a dependency anchor)
+
+quality_summary:
+  status_distribution:
+    extracted: 231
+  dependency_confidence_set: 231
+  semantic_confidence_set: 231
+  latex_present: 148    # 134 from Ch1-Ch4 + 14 new Ch5 statements with latex
+  latex_informal: 12    # 11 from Ch1-Ch4 + proposition.indefinite-integral-table
+  latex_not_applicable: 13
+  latex_missing: 0
+  semantic_dependency_audit_status: pending
+
+provenance_audit:
+  schema_version_check:
+    "0.3.1": 231
+  rerun_id_check:
+    v0.3.1-stewart-full: 231
+  language_original_check:
+    es: 231
+  is_original_uniqueness: pass
+  source_locator_integrity: pass
+  page_locators_present_ch5: 22   # all 16 stmts + 6 proofs introduced in Ch5
+
+architectural_audit_ch5:
+  bundled_definition_splits:
+    applied:
+      - definition.area-under-curve and definition.definite-integral kept
+        separate: §5.1 area is pedagogical/restricted (f≥0, right endpoints),
+        §5.2 definite integral is formal and general. Linked via
+        generality: special_case_of.
+      - definition.indefinite-integral and definition.antiderivative kept
+        separate: same mathematical content, different framing and notation.
+        Linked via depends_on: extends.
+      - theorem.net-change-theorem and theorem.ftc-part-2 kept separate:
+        mathematically equivalent but NCT frames ∫F'=net-change while TFC2
+        frames ∫f=F(b)−F(a). Linked via generality: equivalent.
+    accepted_as_explicit_debt:
+      - proposition.definite-integral-properties (Type-B bundle — Properties 1–5,
+        linearity/additivity; mirrors Ch4 antiderivative table precedent)
+      - proposition.definite-integral-bound (Type-B bundle — Comparison
+        Properties 6–8; structural siblings, shared proof logic)
+      - proposition.indefinite-integral-table (Type-A bundle — 17+ integral
+        formulas extending proposition.antiderivative-formulas-table;
+        adds inverse-trig and hyperbolic rows)
+  proof_uses_role_precision: ok
+  honest_dependency_confidence: ok
+  generality_edge_ownership:
+    rule_followed_by_default: yes
+    deliberate_exceptions:
+      - theorem.net-change-theorem owns generality equivalent →
+        theorem.ftc-part-2 (NCT is the "newer" restatement node)
+      - definition.area-under-curve owns generality special_case_of →
+        definition.definite-integral
+
+semantic_debt_register_after_ch5:
+  type_A_bundles_open:
+    - proposition.indefinite-integral-table (NEW §5.4 — 17 rows)
+    - proposition.antiderivative-formulas-table (carried §4.9 — 13 rows)
+    - proposition.definite-integral-properties (NEW §5.2 — Properties 1–5)
+    - proposition.definite-integral-bound (NEW §5.2 — Properties 6–8)
+    - theorem.l-hospital-rule (carried §4.4)
+    - (carried from Ch3) trig/inv-trig/hyperbolic derivative bundles
+  type_B_schemas_open:
+    - proposition.midpoint-rule (NEW §5.2 — numerical approximation schema)
+    - proposition.closed-interval-method (carried §4.1)
+    - (carried) related-rates-strategy, linear-approximation
+  domain_of_validity_gaps:
+    - proposition.indefinite-integral-table: inherits §4.9 gaps:
+        disconnected-domain caveat on ∫(1/x)dx = ln|x|+C; general-real-n
+        caveat on ∫xⁿdx
+    - proposition.definite-integral-properties: bundle carries implicit
+        integrability hypotheses not stated per formula
+
+deferred_proof_nodes:
+  - proves: theorem.integrability-of-continuous
+    section: "5.2"
+    reason: >
+      Stewart §5.2 explicitly defers the proof to more advanced courses.
+      Requires uniform continuity and completeness of ℝ (Rudin-level
+      real analysis).
+    target_chapter: Rudin Ch6 (future merge)
+  - proves: proposition.integral-evaluation-formula
+    section: "5.2"
+    reason: >
+      Follows directly from the definition of the definite integral by
+      specializing to regular partitions with right endpoints; no
+      separate proof node warranted.
+  - proves: proposition.midpoint-rule
+    section: "5.2"
+    reason: Numerical approximation schema; correctness follows from
+      definition but error bounds require Taylor remainder (§11.10).
+  - proves: proposition.indefinite-integral-table
+    section: "5.4"
+    reason: Each row is verified by differentiating the right-hand side;
+      no monolithic proof node produced (same pattern as §4.9 table).
+  - proves: theorem.net-change-theorem
+    section: "5.4"
+    reason: Mathematically equivalent to TFC2 (generality edge records
+      this); no separate proof needed.
+
+closed_in_ch5:
+  - proposition.definite-integral-bound
+    (proof.definite-integral-bound.from-linearity §5.2)
+  - theorem.ftc-part-1
+    (proof.ftc-part-1.stewart §5.3)
+  - theorem.ftc-part-2
+    (proof.ftc-part-2.from-ftc1 §5.3)
+  - theorem.substitution-rule
+    (proof.substitution-rule.from-chain-rule §5.5)
+  - theorem.substitution-rule-definite
+    (proof.substitution-rule-definite.from-ftc2 §5.5)
+  - proposition.integrals-of-symmetric-functions
+    (proof.integrals-of-symmetric-functions.from-substitution §5.5)

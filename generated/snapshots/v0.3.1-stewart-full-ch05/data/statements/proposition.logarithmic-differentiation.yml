@@ -1,0 +1,116 @@
+schema_version: "0.3.1"
+id: proposition.logarithmic-differentiation
+type: proposition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Derivación logarítmica
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Logarithmic differentiation
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Para hallar la derivada de una función y = f(x) que
+        comprende productos, cocientes o potencias, se puede
+        proceder así: (1) tomar logaritmos naturales de ambos
+        lados de la ecuación y aplicar las leyes de los logaritmos
+        para simplificar; (2) derivar implícitamente respecto a x;
+        (3) resolver la ecuación resultante para y'. Si f(x) puede
+        ser negativa, se trabaja con ln|y| = ln|f(x)|.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        To find the derivative of a function y = f(x) involving
+        products, quotients, or powers one may proceed as follows:
+        (1) take natural logarithms of both sides and apply the
+        laws of logarithms to simplify; (2) differentiate
+        implicitly with respect to x; (3) solve the resulting
+        equation for y'. If f(x) can be negative, work instead
+        with ln|y| = ln|f(x)|.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      \text{(1) } \ln|y| = \ln|f(x)| \quad\Longrightarrow\quad
+      \text{(2) } \frac{y'}{y} = \frac{d}{dx}\,\ln|f(x)| \quad\Longrightarrow\quad
+      \text{(3) } y' = y\cdot\frac{d}{dx}\,\ln|f(x)|
+    status: present
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: proposition.implicit-differentiation
+    role: uses_concept
+    confidence: high
+  - id: proposition.laws-of-logarithms
+    role: uses_concept
+    confidence: high
+  - id: theorem.derivative-of-natural-log-absolute-value
+    role: uses_concept
+    confidence: high
+  - id: theorem.chain-rule
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.6"
+    theorem_label: "Pasos en la derivación logarítmica"
+    page: "221"
+    source_language: es
+
+domains:
+  primary: [calculus]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [schema, principle]
+  keywords: [logarithmic-differentiation, method, technique, products, quotients, powers]
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Methodological proposition (semantic_kind: schema + principle),
+  not a theorem with a self-contained truth content. proved_by: []
+  because Stewart presents this as a procedural recipe; its
+  correctness is justified by the validity of each constituent
+  step (laws of logarithms, implicit differentiation, chain rule,
+  d/dx ln|y|). Used in proof.power-rule-general.logarithmic-differentiation
+  to retire the §3.1 power-rule debt.

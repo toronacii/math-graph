@@ -1,0 +1,123 @@
+schema_version: "0.3.1"
+id: definition.vertical-asymptote
+type: definition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Asíntota vertical
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Vertical asymptote
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        La recta x = a se llama asíntota vertical de la curva
+        y = f(x) si al menos una de las siguientes afirmaciones es
+        verdadera:
+        lím_{x→a} f(x) = ∞,
+        lím_{x→a⁻} f(x) = ∞,
+        lím_{x→a⁺} f(x) = ∞,
+        lím_{x→a} f(x) = −∞,
+        lím_{x→a⁻} f(x) = −∞,
+        lím_{x→a⁺} f(x) = −∞.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        The line x = a is called a vertical asymptote of the curve
+        y = f(x) if at least one of the following is true:
+        lim_{x→a} f(x) = ∞,
+        lim_{x→a⁻} f(x) = ∞,
+        lim_{x→a⁺} f(x) = ∞,
+        lim_{x→a} f(x) = −∞,
+        lim_{x→a⁻} f(x) = −∞,
+        lim_{x→a⁺} f(x) = −∞.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    status: not_applicable
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: definition.graph-of-function
+    role: uses_concept
+    confidence: high
+  - id: definition.infinite-limit
+    role: uses_concept
+    confidence: high
+  - id: definition.negative-infinite-limit
+    role: uses_concept
+    confidence: high
+  - id: definition.left-hand-limit
+    role: uses_concept
+    confidence: high
+    notes: needed for the one-sided ±∞ cases
+  - id: definition.right-hand-limit
+    role: uses_concept
+    confidence: high
+    notes: needed for the one-sided ±∞ cases
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.2"
+    theorem_label: "Definición 6"
+    page: "94"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [real-analysis]
+
+ambient:
+  structures: [euclidean-plane]
+
+ontology:
+  semantic_kind: [object, criterion]
+  keywords: [asymptote, vertical, divergence]
+
+generality: []
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: medium
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Type-A bundle of six divergence conditions (six possible blow-up
+  modes of f near a). Bundling acceptable per policy 06: shared
+  conclusion (x=a is a vertical asymptote), parallel structure.
+  dependency_confidence: medium because the four one-sided
+  infinite-limit variants are referenced via two-sided infinite
+  limits + one-sided limits, not as separate atoms — adequate for
+  pedagogy at this level but noted as debt.

@@ -1,0 +1,127 @@
+schema_version: "0.3.1"
+id: proposition.closed-interval-method
+type: proposition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Método del intervalo cerrado
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Closed-interval method
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Para hallar los valores máximo y mínimo absolutos de una
+        función continua f sobre un intervalo cerrado [a, b]:
+        (1) hallar los valores de f en los números críticos de f
+        en (a, b);
+        (2) hallar los valores de f en los puntos extremos del
+        intervalo, f(a) y f(b);
+        (3) el más grande de los valores obtenidos en los pasos
+        1 y 2 es el máximo absoluto; el más pequeño, el mínimo
+        absoluto.
+        Este procedimiento es válido porque el teorema del valor
+        extremo garantiza la existencia de máximo y mínimo
+        absolutos, y todo extremo local en (a, b) ocurre en un
+        número crítico (Fermat reformulado).
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        To find the absolute maximum and minimum values of a
+        continuous function f on a closed interval [a, b]:
+        (1) compute f at the critical numbers of f in (a, b);
+        (2) compute f at the endpoints, f(a) and f(b);
+        (3) the largest of the values from steps 1 and 2 is the
+        absolute maximum; the smallest is the absolute minimum.
+        This procedure is valid because the extreme value theorem
+        guarantees existence of absolute max and min, and every
+        interior local extremum occurs at a critical number
+        (Fermat reformulated).
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      \max_{[a,b]} f, \;\min_{[a,b]} f \;\in\;
+      \bigl\{ f(c) : c \text{ critical in } (a,b) \bigr\} \;\cup\; \{ f(a), f(b) \}
+    status: present
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: theorem.extreme-value-theorem
+    role: uses_concept
+    confidence: high
+  - id: proposition.local-extreme-implies-critical-number
+    role: uses_concept
+    confidence: high
+  - id: definition.critical-number
+    role: uses_concept
+    confidence: high
+  - id: definition.absolute-maximum
+    role: uses_concept
+    confidence: high
+  - id: definition.absolute-minimum
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "4"
+    section: "4.1"
+    theorem_label: "Método del intervalo cerrado"
+    page: "278"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [optimization]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [schema, criterion, pedagogical]
+  keywords: [closed-interval-method, optimization, algorithm, EVT, fermat]
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Type-B schema (algorithmic method, not a stand-alone theorem),
+  but unlike the related-rates strategy this one HAS formal
+  content: its correctness reduces to EVT (existence) plus the
+  Fermat-restatement (every interior extremum is critical), so
+  it is essentially a constructive corollary. No separate proof
+  node — the justification is the conjunction of its dependencies.

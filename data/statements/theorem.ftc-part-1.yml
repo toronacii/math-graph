@@ -1,0 +1,109 @@
+schema_version: "0.3.1"
+id: theorem.ftc-part-1
+type: theorem
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Teorema fundamental del cálculo, parte 1
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Fundamental Theorem of Calculus, Part 1
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-sonnet-4-6"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Si f es continua sobre [a, b], entonces la función g definida por
+        g(x) = ∫_a^x f(t) dt,   a ≤ x ≤ b,
+        es continua sobre [a, b] y derivable sobre (a, b), y g'(x) = f(x).
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        If f is continuous on [a, b], then the function g defined by
+        g(x) = ∫_a^x f(t) dt,   a ≤ x ≤ b,
+        is continuous on [a, b] and differentiable on (a, b), and g'(x) = f(x).
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-sonnet-4-6"
+      review_status: unreviewed
+  latex:
+    body: |
+      g(x) = \int_a^x f(t)\,dt \;\;\Rightarrow\;\;
+      g'(x) = \frac{d}{dx}\int_a^x f(t)\,dt = f(x),
+      \quad f \in C([a,b]),\; a \le x \le b
+    status: present
+    review_status: unreviewed
+
+proved_by:
+  - proof.ftc-part-1.stewart
+
+depends_on:
+  - id: definition.definite-integral
+    role: uses_concept
+    confidence: high
+  - id: definition.continuity-on-interval
+    role: uses_concept
+    confidence: high
+  - id: definition.derivative-at-point
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "5"
+    section: "5.3"
+    theorem_label: "Teorema fundamental del cálculo, parte 1"
+    page: "388"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [real-analysis]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [principle]
+  keywords: [fundamental-theorem, differentiation, integration, inverse-operations, area-function]
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-sonnet-4-6"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Abbreviated TFC1. Discovered by Isaac Barrow (Newton's teacher, ~1670).
+  States that integration and differentiation are inverse operations in one
+  direction: differentiating an area-accumulation function recovers the
+  integrand. The companion TFC2 (theorem.ftc-part-2) handles the other
+  direction: evaluating a definite integral via antiderivatives.
+  Multi-source note: Rudin Thm 6.20 (Principles of Mathematical Analysis, Ch6)
+  proves this for Riemann-Stieltjes integrals; the statement coincides with
+  Stewart's when α(x) = x. Future Rudin Ch6 extraction will create a separate
+  node or add a second source here after disambiguation.

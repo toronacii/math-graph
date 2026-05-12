@@ -1,0 +1,57 @@
+schema_version: "0.3.1"
+id: proof.definite-integral-bound.from-linearity
+type: proof
+status: extracted
+
+proves: proposition.definite-integral-bound
+style: direct
+
+uses:
+  - id: definition.definite-integral
+    role: definition
+    confidence: high
+    notes: >
+      Non-negativity (Property 6) appeals to the Riemann sum definition:
+      each term f(xᵢ*)Δx ≥ 0 passes to the limit.
+  - id: proposition.definite-integral-properties
+    role: essential
+    confidence: high
+    notes: >
+      Linearity (Properties 1–5) is used to reduce f ≥ g to f−g ≥ 0
+      and to handle the constant-function bounds.
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "5"
+    section: "5.2"
+    page: "381"
+    source_language: es
+
+sketch:
+  es:
+    text: >
+      Las tres propiedades de comparación se derivan de la no-negatividad
+      (Propiedad 6): si f(x) ≥ 0 en [a, b], entonces cada término
+      f(xᵢ*)Δx ≥ 0, luego la integral (límite de tales sumas) es ≥ 0.
+      Propiedad 7 (f ≥ g ⟹ ∫f ≥ ∫g): aplicar Propiedad 6 a f−g ≥ 0
+      y usar linealidad (∫f − ∫g = ∫(f−g) ≥ 0).
+      Propiedad 8 (m(b−a) ≤ ∫f ≤ M(b−a)): aplicar Propiedad 7 a las
+      funciones constantes m ≤ f ≤ M e integrar; ∫m dx = m(b−a).
+    is_original: true
+    origin: original
+    review_status: unreviewed
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-sonnet-4-6"
+  extracted_at: "2026-05-11"
+  derived_from: []

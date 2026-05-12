@@ -1,0 +1,104 @@
+schema_version: "0.3.1"
+id: theorem.fermat
+type: theorem
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Teorema de Fermat
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Fermat's Theorem
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Si f tiene un máximo o un mínimo local en c, y si f'(c)
+        existe, entonces f'(c) = 0.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        If f has a local maximum or local minimum at c, and if
+        f'(c) exists, then f'(c) = 0.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      \bigl(f \text{ has local extremum at } c\bigr) \;\wedge\; \bigl(f'(c) \text{ exists}\bigr) \;\implies\; f'(c) = 0
+    status: present
+    review_status: unreviewed
+
+proved_by:
+  - proof.fermat.stewart
+
+depends_on:
+  - id: definition.local-maximum
+    role: uses_concept
+    confidence: high
+  - id: definition.local-minimum
+    role: uses_concept
+    confidence: high
+  - id: definition.derivative-at-point
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "4"
+    section: "4.1"
+    theorem_label: "Teorema 4 — Teorema de Fermat"
+    page: "276"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [analysis, optimization]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [principle, criterion]
+  keywords: [fermat, local-extremum, necessary-condition, vanishing-derivative]
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart Theorem 4 §4.1 page 276. Stewart explicitly warns
+  (Examples 5, 6) that the converse is false — f'(c) = 0 does NOT
+  imply local extremum (e.g., x³ at 0), and a local extremum can
+  occur where f'(c) does not exist (e.g., |x| at 0). These two
+  failures motivate definition.critical-number, which encompasses
+  both possibilities and is the proper search space for extrema.
+  Equivalent reformulation as proposition.local-extreme-implies-
+  critical-number tracked separately.
