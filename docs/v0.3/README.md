@@ -16,11 +16,11 @@ live pipeline.
 7. [`06-domains-ambient.md`](06-domains-ambient.md) — domains + ambient context.
 8. [`07-ontology-tags.md`](07-ontology-tags.md) — semantic kinds & keywords.
 9. [`08-status-lifecycle.md`](08-status-lifecycle.md) — promotion lifecycle.
-10. [`09-rerun-architecture.md`](09-rerun-architecture.md) — how a rerun runs.
+10. [`09-rerun-architecture.md`](09-rerun-architecture.md) — extraction run architecture (phases, validation layers, templates).
 11. [`10-migration-strategy.md`](10-migration-strategy.md) — v0.2 → v0.3 path.
 12. [`11-archival-strategy.md`](11-archival-strategy.md) — snapshots & redirects.
 13. [`12-roadmap.md`](12-roadmap.md) — what to do, in what order.
-14. [`13-rerun-checklist.md`](13-rerun-checklist.md) — operational checklist.
+14. [`13-rerun-checklist.md`](13-rerun-checklist.md) — step-by-step operational checklist with exact commands and file locations.
 
 ## Policies (semantic freeze — READ BEFORE EXTRACTING)
 

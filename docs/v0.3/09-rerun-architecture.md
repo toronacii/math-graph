@@ -1,59 +1,167 @@
-# 09 — Rerun Architecture
+# 09 — Extraction Run Architecture
 
-A *rerun* is a deterministic re-extraction of MKG against a chosen set
-of sources, using a chosen schema version, producing a new snapshot.
+An *extraction run* is a structured extraction (or re-extraction) of MKG
+against a chosen set of sources, using a chosen schema version, producing
+a new snapshot.
 
-v0.3 makes reruns a first-class operation rather than an ad-hoc event.
+v0.3 makes extraction runs a first-class operation rather than an ad-hoc
+event.
 
-## Rerun identity
+## Terminology
 
-Every rerun has a `rerun_id` (e.g. `v0.3-2026-06-01`). Every entity
-produced by a rerun records that id in `provenance.rerun_id`. A rerun
+- **Extraction run** (or simply **run**): the general concept — a
+  structured pass that produces YAML entities under `data/`, validates
+  them, builds the graph, and snapshots the result.
+- **Rerun**: a specific kind of extraction run where the content was
+  previously extracted under an older schema or configuration. A rerun
+  has a meaningful baseline to diff against via `provenance.derived_from`.
+- **First run**: an extraction run against content that has never been
+  in the graph before (e.g., a new textbook or new chapters). There is
+  no prior baseline to compare against, but the mechanics are identical.
+- **Extension**: adding new chapters or sources to an existing graph
+  without re-extracting what is already present. The `clear` phase is
+  skipped; new entities accumulate alongside existing ones.
+
+All four use the same phases (0–9), the same templates, and produce
+snapshots. The difference is operational: a rerun diffs against a
+baseline; a first run does not; an extension preserves existing `data/`.
+
+## Run identity
+
+Every run has a `run_id` (e.g. `v0.3.1-stewart-full`). Every entity
+produced by a run records that id in `provenance.rerun_id`. A run
 also produces:
 
-- a frozen snapshot under `generated/snapshots/<rerun_id>/`
-- a migration / diff report relative to the previous snapshot
+- a frozen snapshot under `generated/snapshots/<run_id>/`
+- a migration / diff report relative to the previous snapshot (when
+  a baseline exists)
 - per-chapter reports
-- the live `data/` tree is overwritten only if the rerun is accepted
+- the live `data/` tree is overwritten only if the run is accepted
 
-## Rerun phases
+## Run phases
 
 ```
 0. plan         choose sources, chapters, scope, schema version
 1. archive      snapshot the current generated/* and data/*
-2. clear        wipe data/ (or branch) and prepare workspace
-3. extract      run extractors per source / chapter
-4. validate     scripts/v03/validate must pass with no errors
-5. report       generate per-chapter reports and audits
-6. compare      scripts/diff_graphs against previous snapshot
-7. review       human review of the diff and reports
-8. snapshot     scripts/snapshot --label <rerun_id>
-9. publish      promote selected entities to higher statuses
+2. clear        wipe data/ (or branch) — SKIP for extensions
+3. extract      produce YAML per source / chapter
+4. validate     structural + semantic validation must pass
+5. build        generate SQLite + graph outputs
+6. report       generate per-chapter reports and audits
+7. compare      diff against previous snapshot (when baseline exists)
+8. review       human review of the diff and reports
+9. snapshot     freeze the result
+10. publish     promote entities + sync visualization
 ```
 
 Each phase has explicit inputs/outputs:
 
 | Phase    | Inputs                          | Outputs                                  |
 |----------|---------------------------------|------------------------------------------|
-| plan     | scope notes                     | `docs/v0.3/reruns/<rerun_id>.plan.md`    |
+| plan     | scope notes                     | `docs/v0.3/reruns/<run_id>.plan.md`      |
 | archive  | current `generated/`, `data/`   | `generated/snapshots/<prev>/...`         |
-| clear    | confirmation                    | empty `data/`                            |
-| extract  | sources, context packs          | YAML files in `data/`                    |
+| clear    | confirmation                    | empty `data/` (skip for extensions)      |
+| extract  | source PDFs, context packs, templates | YAML files in `data/`              |
 | validate | `data/`                         | exit code 0; warnings file               |
-| report   | SQLite + YAML                   | `reports/<rerun_id>/...`                 |
+| build    | validated `data/`               | `generated/v0.3/{math_graph.db, graph.json, node-details.json, graph.graphml}` |
+| report   | SQLite + YAML                   | `reports/<run_id>/...`                   |
 | compare  | prev + new snapshots            | `reports/migration-<prev>-to-<new>.md`   |
 | review   | reports                         | review notes; possibly more extraction   |
-| snapshot | `data/`, `generated/`           | `generated/snapshots/<rerun_id>/`        |
-| publish  | review approval                 | status promotions in YAML                |
+| snapshot | `data/`, `generated/`           | `generated/snapshots/<run_id>/`          |
+| publish  | review approval                 | status promotions in YAML; visualization sync |
+
+## Extract phase — specifics
+
+Extraction is **not automated**. It is performed by a human or LLM agent
+that follows the extraction prompt and uses the canonical templates.
+
+### Required inputs
+
+| Input | Location | Purpose |
+|-------|----------|---------|
+| **Extraction prompt** | `schema/v03/templates/EXTRACTION_PROMPT.md` | System-level instructions for the extractor (rules, role taxonomy, quality axes, etc.) |
+| **Statement template** | `schema/v03/templates/statement.template.yml` | Canonical YAML skeleton for all statement types (axiom, definition, lemma, proposition, theorem, corollary, conjecture) |
+| **Proof template** | `schema/v03/templates/proof.template.yml` | Canonical YAML skeleton for proof entities |
+| **Policies** | `docs/v0.3/policies/01..08` | Frozen semantic policies (domain vocabulary, edge-role taxonomy, ID equivalence, granularity, etc.) |
+| **Context pack** | Generated by `uv run python -m scripts.v03.make_context_pack` | Per-chapter Markdown summarizing what is already in the graph — existing nodes, edges, domains, locator map |
+| **Source PDF** | `sources/<work>/chapters/chapter-NN.pdf` | The actual textbook chapter to extract from |
+
+### Extraction procedure
+
+1. Load the extraction prompt (`EXTRACTION_PROMPT.md`) as system context.
+2. Load the relevant policies (minimum reading order listed in the prompt header).
+3. Generate a context pack for the chapter being extracted:
+   ```bash
+   uv run python -m scripts.v03.make_context_pack --source stewart --chapter N
+   ```
+4. Process the chapter section by section:
+   - Identify every statement (definition, proposition, theorem, lemma, corollary, axiom, conjecture).
+   - Create one YAML file per statement in `data/statements/`, using the statement template as skeleton.
+   - Identify proof dependencies and create proof nodes in `data/proofs/`, using the proof template.
+   - Wire `proved_by` links from statements to their proofs.
+5. Every emitted YAML file **MUST**:
+   - Set `schema_version: "0.3.1"`.
+   - Set `provenance.rerun_id` to the run id.
+   - Set `language.original` to the source language.
+   - Mark exactly one entry per multilingual block as `is_original: true`.
+   - Include at least one `sources[]` entry with `work`, `chapter`, and a locator (`theorem_label`, `page`, `section`, or `locator`).
+6. Reclassify entity types per `AGENTS.md` "Entity Classification Guide".
+
+### Output location
+
+- Statements: `data/statements/<id>.yml` (filename must match `id`)
+- Proofs: `data/proofs/<id>.yml` (filename must match `id`)
+
+## Validate phase — what is checked
+
+Validation runs in layered passes. Each layer must pass before the next
+is attempted.
+
+| Layer | Name | What it checks | Enforced by |
+|-------|------|----------------|-------------|
+| **L1** | Schema | Pydantic model validation: all required fields present, correct types, enum values valid, `extra="forbid"` rejects unknown keys, ID pattern matches `<type>.<normalized-name>`, LaTeX consistency (present requires body, not_applicable forbids body), i18n rules (exactly one `is_original: true` per multilingual block, original language present in title and natural), proof IDs start with `proof.` | `schema/v03.py` via `loader.py` |
+| **L2** | References | All `proved_by`, `depends_on[].id`, `generality[].target`, `proves`, `uses[].id` reference existing entities | `validate.py` |
+| **L3** | Symmetry | `proved_by` and `proves` are consistent bidirectionally | `validate.py` |
+| **L4** | Acyclicity | The derivation graph (statement -> proof -> statement) is a DAG | `validate.py` |
+| **L5** | Lifecycle | Status promotion gates: `validated` requires sources + latex != missing; `audited` requires `semantic_confidence` set; proof `audited` requires `dependency_confidence` set | `validate.py` |
+| **L6** | Completeness | Non-fatal warnings: empty proof dependencies, missing source locators, unregistered source works, missing LaTeX for non-definitions | `validate.py` |
+
+### Running validation
+
+```bash
+uv run mkg-validate
+# or equivalently:
+uv run python -m scripts.v03.validate
+```
+
+Exit code 0 = pass (warnings may still be emitted to stderr).
+Exit code 1 = errors found; must be fixed before proceeding.
+
+## Build phase — what is produced
+
+```bash
+uv run mkg-build
+# or equivalently:
+uv run python -m scripts.v03.build_db
+```
+
+Outputs under `generated/v0.3/`:
+
+| File | Content |
+|------|---------|
+| `math_graph.db` | SQLite database with full relational schema (CHECK constraints derived from `schema/v03.py` enums) |
+| `graph.json` | Node-link JSON for the visualization layer |
+| `node-details.json` | Per-node detail blob for the detail panel |
+| `graph.graphml` | GraphML export for external tools |
 
 ## ID stability policy
 
-When the same mathematical content reappears in v0.3:
+When the same mathematical content reappears in a new run:
 
-- If the content is identical and the v0.2 ID is well-named, **keep
+- If the content is identical and the previous ID is well-named, **keep
   the ID**.
 - If the content has been split into multiple atomic concepts (e.g.
-  bundled definitions), **assign new IDs** and record the v0.2 ID in
+  bundled definitions), **assign new IDs** and record the prior ID in
   `provenance.derived_from` of every new entity that arose from the
   split.
 - If the content has been merged, **choose one canonical ID** and
@@ -65,13 +173,13 @@ When the same mathematical content reappears in v0.3:
 
 ## Determinism
 
-A rerun is deterministic with respect to:
+A run is deterministic with respect to:
 
 - the set of source files (verified via SHA-256 in
   `sources/<work>/metadata.yml`);
 - the schema version;
 - the extraction prompt templates;
-- the rerun configuration file.
+- the run configuration file.
 
 LLM nondeterminism is acknowledged but not eliminated. Two runs of the
 same plan may produce different YAML; both must validate, and the diff
@@ -87,6 +195,6 @@ report makes the divergences explicit.
 
 ## Live-vs-archived
 
-Only the most recent accepted rerun's `generated/v0.3/` is the *live*
+Only the most recent accepted run's `generated/v0.3/` is the *live*
 graph used by the visualizer and downstream tooling. All previous
 snapshots are read-only.
