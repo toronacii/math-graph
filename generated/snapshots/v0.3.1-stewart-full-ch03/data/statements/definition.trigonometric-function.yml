@@ -1,0 +1,104 @@
+schema_version: "0.3.1"
+id: definition.trigonometric-function
+type: definition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Función trigonométrica
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Trigonometric function
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Las funciones trigonométricas son las funciones reales seno
+        (sin), coseno (cos), tangente (tan), cotangente (cot),
+        secante (sec) y cosecante (csc), definidas a partir de
+        relaciones angulares. En cálculo se utiliza la medida en
+        radianes; sin y cos tienen dominio R y rango [-1, 1].
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        The trigonometric functions are the real-valued functions
+        sine (sin), cosine (cos), tangent (tan), cotangent (cot),
+        secant (sec), and cosecant (csc), defined via angular
+        relations. In calculus, radian measure is used; sin and cos
+        have domain R and range [-1, 1].
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    status: not_applicable
+    review_status: unreviewed
+
+proved_by: []
+depends_on:
+  - id: definition.function
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.2"
+    locator: "Funciones trigonométricas (sección 1.2)"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [trigonometry]
+
+ambient:
+  structures: [real-line]
+  notes: >
+    Radian measure is assumed. Stewart introduces the six functions as
+    a family without rigorously defining sin/cos from first principles
+    — the rigorous power-series / unit-circle definition is deferred.
+
+ontology:
+  semantic_kind: [object]
+  keywords: [trigonometric, sine, cosine, periodic, radian]
+
+generality: []
+
+quality:
+  extraction_confidence: medium
+  dependency_confidence: medium
+  semantic_confidence: medium
+  translation_confidence: medium
+  latex_confidence: null
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Bundle node — Stewart introduces all six trig functions in one
+  paragraph. Per granularity policy this would ideally be split into
+  six atoms (definition.sine, definition.cosine, ...). Marking
+  `dependency_confidence: medium` to flag this as semantic debt; an
+  explicit split is queued for the §1.2 audit pass. Stewart does not
+  rigorously define sin/cos from first principles — that is reserved
+  for a later analytic node (power series or unit-circle integral).

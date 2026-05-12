@@ -1,0 +1,102 @@
+schema_version: "0.3.1"
+id: definition.horizontal-asymptote
+type: definition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Asíntota horizontal
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Horizontal asymptote
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        La recta y = L se llama asíntota horizontal de la curva
+        y = f(x) si lím_{x→∞} f(x) = L o lím_{x→−∞} f(x) = L.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        The line y = L is called a horizontal asymptote of the
+        curve y = f(x) if lim_{x→∞} f(x) = L or lim_{x→−∞} f(x) = L.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      y = L \text{ is a horizontal asymptote of } y = f(x)
+      \iff \lim_{x \to \infty} f(x) = L \;\vee\; \lim_{x \to -\infty} f(x) = L
+    status: present
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: definition.function
+    role: uses_concept
+    confidence: high
+  - id: definition.limit-at-infinity
+    role: uses_concept
+    confidence: high
+  - id: definition.negative-limit-at-infinity
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.6"
+    theorem_label: "Definición 3"
+    page: "131"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [real-analysis]
+
+ambient:
+  structures: [extended-real-line]
+
+ontology:
+  semantic_kind: [object, criterion]
+  keywords: [asymptote, horizontal, limit-at-infinity]
+
+generality: []
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart §2.6 Definición 3. Conceptual sibling of definition.
+  vertical-asymptote (§2.2). NOT bundled — horizontal and vertical
+  asymptotes have different LaTeX shapes (y = const vs x = const)
+  and different limit conditions.

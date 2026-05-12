@@ -1,0 +1,61 @@
+schema_version: "0.3.1"
+id: proof.derivative-of-constant.stewart
+type: proof
+status: extracted
+
+proves: theorem.derivative-of-constant
+style: direct
+
+uses:
+  - id: definition.derivative-function
+    role: definition
+    confidence: high
+    notes: unfolds f'(x) as the limit of (f(x+h) − f(x))/h
+  - id: definition.limit-of-function
+    role: background
+    confidence: high
+  - id: proposition.limit-of-constant
+    role: essential
+    confidence: high
+    notes: lim of the zero (constant) function is 0
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.1"
+    locator: "Demostración inline (página 174)"
+    page: "174"
+    source_language: es
+
+sketch:
+  es:
+    text: >
+      Sea f(x) = c. Por la definición de derivada,
+      f'(x) = lím_{h→0} (f(x+h) − f(x))/h
+            = lím_{h→0} (c − c)/h
+            = lím_{h→0} 0
+            = 0.
+      Por lo tanto (d/dx) c = 0.
+    is_original: true
+    origin: original
+    review_status: unreviewed
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Trivial limit-definition argument. No nontrivial dependencies
+  on prior limit theorems beyond knowing that the limit of the
+  zero function is zero.

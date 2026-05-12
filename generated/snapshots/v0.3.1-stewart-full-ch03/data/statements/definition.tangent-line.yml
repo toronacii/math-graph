@@ -1,0 +1,112 @@
+schema_version: "0.3.1"
+id: definition.tangent-line
+type: definition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Recta tangente a una curva
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Tangent line to a curve
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        La recta tangente a la curva y = f(x) en el punto P(a, f(a))
+        es la recta que pasa por P con pendiente
+        m = lím_{x→a} (f(x) − f(a))/(x − a), siempre que este límite
+        exista. Equivalentemente, escribiendo h = x − a, la
+        pendiente puede expresarse como
+        m = lím_{h→0} (f(a + h) − f(a))/h.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        The tangent line to the curve y = f(x) at the point
+        P(a, f(a)) is the line through P with slope
+        m = lim_{x→a} (f(x) − f(a))/(x − a), provided this limit
+        exists. Equivalently, with h = x − a, the slope can be
+        written m = lim_{h→0} (f(a + h) − f(a))/h.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      m = \lim_{x \to a} \frac{f(x) - f(a)}{x - a}
+        = \lim_{h \to 0} \frac{f(a + h) - f(a)}{h}
+    status: present
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: definition.function
+    role: uses_concept
+    confidence: high
+  - id: definition.secant-line
+    role: uses_concept
+    confidence: high
+    notes: tangent line defined as the limiting position of secant lines
+  - id: definition.limit-of-function
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.7"
+    theorem_label: "Definición 1"
+    page: "143"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [analytic-geometry]
+
+ambient:
+  structures: [real-line, euclidean-plane]
+
+ontology:
+  semantic_kind: [object, construction]
+  keywords: [tangent-line, slope, geometric-derivative]
+
+generality: []
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Closes the §2.1 deferred entry for tangent-line (the §2.1 motivating
+  setup defined only the secant-line; Stewart deferred the formal
+  definition of tangent to §2.7 Def 1). Both equivalent slope forms
+  (Eq 1 and Eq 2 in Stewart) are recorded in the LaTeX body. The
+  identification slope-of-tangent = derivative is captured by
+  proposition.derivative-as-tangent-slope.

@@ -1,0 +1,120 @@
+schema_version: "0.3.1"
+id: theorem.derivatives-of-trigonometric-functions
+type: theorem
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Derivadas de las funciones trigonométricas
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Derivatives of the trigonometric functions
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Con x medido en radianes, las derivadas de las seis
+        funciones trigonométricas están dadas por:
+        (d/dx) sen x = cos x;
+        (d/dx) cos x = − sen x;
+        (d/dx) tan x = sec² x;
+        (d/dx) csc x = − csc x · cot x;
+        (d/dx) sec x = sec x · tan x;
+        (d/dx) cot x = − csc² x.
+        Los signos negativos van con las derivadas de las
+        cofunciones (coseno, cosecante y cotangente).
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        With x in radians, the derivatives of the six trig
+        functions are: (d/dx) sin x = cos x; (d/dx) cos x = −sin x;
+        (d/dx) tan x = sec² x; (d/dx) csc x = −csc x cot x;
+        (d/dx) sec x = sec x tan x; (d/dx) cot x = −csc² x.
+        The minus signs accompany derivatives of the cofunctions.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      \begin{aligned}
+        \frac{d}{dx}\sin x &= \cos x, &
+        \frac{d}{dx}\cos x &= -\sin x, &
+        \frac{d}{dx}\tan x &= \sec^{2} x,\\[4pt]
+        \frac{d}{dx}\csc x &= -\csc x \cot x, &
+        \frac{d}{dx}\sec x &= \sec x \tan x, &
+        \frac{d}{dx}\cot x &= -\csc^{2} x.
+      \end{aligned}
+    status: present
+    review_status: unreviewed
+
+proved_by:
+  - proof.derivatives-of-trigonometric-functions.stewart
+
+depends_on:
+  - id: definition.trigonometric-function
+    role: uses_concept
+    confidence: high
+  - id: definition.derivative-function
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.3"
+    theorem_label: "Tabla — Derivadas de las funciones trigonométricas"
+    page: "194"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [trigonometry]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [principle]
+  keywords: [trigonometric-derivative, sine, cosine, tangent, cosecant, secant, cotangent]
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: medium
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  BUNDLED node — six derivative formulas grouped together,
+  consistent with the trig-bundle policy carried from Ch1/Ch2
+  (epistemic debt). The sin and cos cases are the foundational
+  proofs (sin via limit definition + foundational trig limits;
+  cos analogously, deferred to Exercise 20). The remaining four
+  (tan, csc, sec, cot) follow by quotient rule from sin and cos
+  (Stewart proves tan inline; csc, sec, cot are exercises 17–19).
+  dependency_confidence:medium reflects the partial-proof bundle.
+  Validity REQUIRES radian measure — recorded in the statement.

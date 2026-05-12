@@ -1,0 +1,110 @@
+schema_version: "0.3.1"
+id: theorem.inverse-hyperbolic-as-logarithm
+type: theorem
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Funciones hiperbólicas inversas como logaritmos
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Inverse hyperbolic functions as logarithms
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Las funciones hiperbólicas inversas admiten formas
+        logarítmicas explícitas:
+        senh⁻¹ x = ln(x + √(x² + 1)) para todo x ∈ ℝ;
+        cosh⁻¹ x = ln(x + √(x² − 1)) para x ≥ 1;
+        tanh⁻¹ x = ½ ln((1 + x)/(1 − x)) para −1 < x < 1.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        The inverse hyperbolic functions admit explicit logarithmic
+        forms:
+        sinh⁻¹ x = ln(x + √(x² + 1)) for all x ∈ ℝ;
+        cosh⁻¹ x = ln(x + √(x² − 1)) for x ≥ 1;
+        tanh⁻¹ x = ½ ln((1 + x)/(1 − x)) for −1 < x < 1.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      \begin{aligned}
+        \sinh^{-1} x &= \ln\!\bigl(x + \sqrt{x^{2} + 1}\bigr), & x &\in \mathbb{R},\\
+        \cosh^{-1} x &= \ln\!\bigl(x + \sqrt{x^{2} - 1}\bigr), & x &\ge 1,\\
+        \tanh^{-1} x &= \tfrac{1}{2}\ln\!\frac{1 + x}{1 - x}, & -1 &< x < 1.
+      \end{aligned}
+    status: present
+    review_status: unreviewed
+
+proved_by:
+  - proof.inverse-hyperbolic-as-logarithm.quadratic-in-exp
+
+depends_on:
+  - id: definition.inverse-hyperbolic-function
+    role: uses_concept
+    confidence: high
+  - id: definition.natural-logarithm
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.11"
+    theorem_label: "Ecuaciones 3, 4, 5 + Ejemplo 3"
+    page: "260"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [analysis]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [relation, principle]
+  keywords: [inverse-hyperbolic, logarithm, closed-form]
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Bundled per the trig-bundle policy. Stewart proves senh⁻¹ in
+  Example 3 by solving a quadratic in eʸ; cosh⁻¹ (Eq 4) and
+  tanh⁻¹ (Eq 5) are deferred to Exercises 26 and 27 with the
+  same technique. Analogous log forms exist for csch⁻¹, sech⁻¹,
+  coth⁻¹ (Ex 28); not modeled here. The natural-logarithm
+  dependency reflects use of ln, but the proof uses only the
+  inverse relation between exp and ln (no calculus of ln).

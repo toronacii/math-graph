@@ -1,0 +1,147 @@
+weak_dependencies:
+
+  # Inherited
+  - proof: proof.laws-of-exponents.stewart
+    proves: proposition.laws-of-exponents
+    issue: assumed-foundational-algebra
+    confidence: low
+    chapter: "1"
+    notes: Unchanged.
+
+  - proof: proof.intermediate-value-theorem.stewart
+    proves: theorem.intermediate-value-theorem
+    issue: assumed-completeness-axiom
+    confidence: low
+    chapter: "2"
+    notes: Unchanged.
+
+  - proof: proof.limit-root-law.stewart
+    proves: theorem.limit-root-law
+    issue: incomplete-proof
+    confidence: low
+    chapter: "2"
+    notes: Unchanged.
+
+  - proof: proof.extreme-value-theorem.stewart
+    proves: theorem.extreme-value-theorem
+    issue: assumed-completeness-axiom
+    confidence: low
+    chapter: "4"
+    propagates_to:
+      - proof.rolles-theorem.stewart
+      - proof.mean-value-theorem.stewart
+      - proof.zero-derivative-constant.stewart
+      - proof.equal-derivatives-differ-by-constant.stewart
+      - proof.increasing-decreasing-test.stewart
+      - proof.first-derivative-test.stewart
+      - proof.concavity-test.stewart
+      - proof.second-derivative-test.stewart
+      - proof.lhopitals-rule.stewart
+      - proof.general-antiderivative.stewart
+      - proof.ftc-part2.stewart
+      - proof.net-change-theorem.stewart
+      - proof.substitution-rule-definite.stewart
+      - proof.integrals-symmetric-functions.stewart
+      - proof.mean-value-theorem-integrals.stewart
+      - proof.integration-by-parts-definite.stewart
+      - proof.taylor-convergence.stewart
+    notes: >
+      EVT propagation now reaches 17 downstream proofs. Taylor's
+      theorem convergence proof uses the MVT, which depends on EVT.
+      This is the deepest reach of the EVT's epistemic debt.
+
+  - proof: proof.lhopitals-rule.stewart
+    proves: theorem.lhopitals-rule
+    issue: partial-proof
+    confidence: medium
+    chapter: "4"
+    notes: Unchanged.
+
+  - proof: proof.integrability-of-continuous-functions.stewart
+    proves: theorem.integrability-of-continuous-functions
+    issue: assumed-uniform-continuity
+    confidence: low
+    chapter: "5"
+    notes: Unchanged.
+
+  - proof: proof.comparison-theorem-integrals.stewart
+    proves: theorem.comparison-theorem-integrals
+    issue: relies-on-monotone-convergence
+    confidence: medium
+    chapter: "7"
+    notes: Unchanged.
+
+  # New in Chapter 11
+  - proof: proof.monotonic-sequence-theorem.stewart
+    proves: theorem.monotonic-sequence-theorem
+    issue: assumed-completeness-axiom
+    confidence: low
+    style: assumed
+    chapter: "11"
+    propagates_to:
+      - proof.comparison-test-series.stewart
+      - proof.alternating-series-test.stewart
+      - proof.limit-comparison-test.stewart
+      - proof.absolute-convergence-implies-convergence.stewart
+      - proof.ratio-test.stewart
+      - proof.root-test.stewart
+    notes: >
+      The Monotonic Sequence Theorem is the completeness-based
+      foundation for all series convergence tests. Its assumed status
+      propagates to 6 downstream proofs. Like the EVT and IVT, it
+      requires the Completeness Axiom. Resolving completeness would
+      resolve this, EVT, and IVT simultaneously.
+
+  - proof: proof.power-series-differentiation-integration.stewart
+    proves: theorem.power-series-differentiation-integration
+    issue: assumed-uniform-convergence
+    confidence: low
+    style: assumed
+    chapter: "11"
+    propagates_to: []
+    notes: >
+      Stewart states term-by-term differentiation/integration of
+      power series without proof, noting it requires uniform
+      convergence theory. This is a standard analysis result
+      (Weierstrass M-test + uniform convergence).
+
+  - proof: proof.power-series-convergence.stewart
+    proves: theorem.power-series-convergence
+    issue: partial-proof
+    confidence: medium
+    chapter: "11"
+    propagates_to:
+      - proof.power-series-differentiation-integration.stewart
+    notes: >
+      Stewart sketches the proof but omits the full supremum argument
+      for the radius of convergence.
+
+implicit_algebraic_imports:
+  # All inherited, plus:
+  - concept: Completeness Axiom (least upper bound property)
+    used_by:
+      - proof.monotonic-sequence-theorem.stewart
+      - proof.extreme-value-theorem.stewart
+      - proof.intermediate-value-theorem.stewart
+    chapter: "2-11"
+    notes: >
+      The completeness axiom is the single most impactful implicit
+      import in the graph. It underpins the MST (Ch11), EVT (Ch4),
+      and IVT (Ch2), which together propagate to 23+ downstream proofs.
+
+epistemic_debt_summary:
+  total_weak_proofs: 7
+  total_partial_proofs: 4
+  total_inherited_weak: 5
+  total_implicit_imports: 10
+  affected_chain_depth: 12
+  new_weak_since_chapter_10: 2
+  new_partial_since_chapter_10: 1
+  new_implicit_since_chapter_10: 1
+  critical_debt: >
+    The completeness axiom is the single most impactful gap in the
+    graph. Three theorems (EVT, IVT, MST) are assumed without proof
+    and collectively propagate to 23+ downstream proofs spanning
+    Chapters 4-11. Adding a single axiom.completeness node and
+    providing rigorous proofs of EVT, IVT, and MST would resolve
+    the majority of epistemic debt in the graph.

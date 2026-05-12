@@ -1,0 +1,106 @@
+schema_version: "0.3.1"
+id: definition.second-derivative
+type: definition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Segunda derivada
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Second derivative
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Si f es una función derivable, entonces su derivada f'
+        también es una función y puede tener a su vez una
+        derivada, denotada f'' = (f')'. Esta función f'' se
+        denomina segunda derivada de f. En notación de Leibniz,
+        para y = f(x), se escribe d²y/dx² = (d/dx)(dy/dx).
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        If f is a differentiable function, then its derivative f'
+        is also a function and may itself have a derivative,
+        denoted f'' = (f')'. The function f'' is called the
+        second derivative of f. In Leibniz notation, for y = f(x),
+        one writes d²y/dx² = (d/dx)(dy/dx).
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      f''(x) \;=\; (f')'(x),
+        \qquad \frac{d^{2}y}{dx^{2}}
+        \;=\; \frac{d}{dx}\!\left(\frac{dy}{dx}\right)
+    status: present
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: definition.derivative-function
+    role: uses_concept
+    confidence: high
+    notes: f'' is defined by applying the derivative-function operation to f'
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.8"
+    locator: "Subsección «Derivadas superiores»"
+    page: "160"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [analysis]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [object, operator, notation]
+  keywords: [second-derivative, higher-order, leibniz-notation]
+
+generality: []
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart introduces the second derivative as a concrete instance
+  before the n-th derivative; both nodes are kept separate so that
+  the n-th-derivative recursion (definition.nth-derivative) can
+  cleanly cite the second derivative as its base case. The
+  acceleration interpretation (a = s'') is captured by
+  definition.acceleration via a generality edge.

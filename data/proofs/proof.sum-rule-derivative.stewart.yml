@@ -1,0 +1,61 @@
+schema_version: "0.3.1"
+id: proof.sum-rule-derivative.stewart
+type: proof
+status: extracted
+
+proves: theorem.sum-rule-derivative
+style: direct
+
+uses:
+  - id: definition.derivative-function
+    role: definition
+    confidence: high
+    notes: unfolds F'(x), f'(x), g'(x) as (h → 0) limits
+  - id: proposition.limit-laws
+    role: essential
+    confidence: high
+    notes: uses the sum law for limits (Limit Law 1) — Stewart cites it explicitly
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.1"
+    locator: "Demostración inline (página 178)"
+    page: "178"
+    source_language: es
+
+sketch:
+  es:
+    text: >
+      Sea F(x) = f(x) + g(x). Por la definición de derivada,
+      F'(x) = lím_{h→0} (F(x+h) − F(x))/h
+            = lím_{h→0} ([f(x+h) + g(x+h)] − [f(x) + g(x)])/h
+            = lím_{h→0} [(f(x+h) − f(x))/h + (g(x+h) − g(x))/h].
+      Por la ley de la suma de los límites (ley 1),
+      F'(x) = lím_{h→0} (f(x+h) − f(x))/h + lím_{h→0} (g(x+h) − g(x))/h
+            = f'(x) + g'(x).
+      Aplicación iterada extiende el resultado a sumas finitas
+      arbitrarias.
+    is_original: true
+    origin: original
+    review_status: unreviewed
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Direct argument from the limit definition + Limit Law 1 (sum).
+  This is the case of proposition.limit-laws that has already
+  been closed (sum-law parts) in Ch2 of the v0.3.1 rerun.

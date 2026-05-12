@@ -1,0 +1,60 @@
+schema_version: "0.3.1"
+id: proof.constant-multiple-rule-derivative.stewart
+type: proof
+status: extracted
+
+proves: theorem.constant-multiple-rule-derivative
+style: direct
+
+uses:
+  - id: definition.derivative-function
+    role: definition
+    confidence: high
+    notes: unfolds both g'(x) and f'(x) as (h → 0) limits
+  - id: proposition.limit-laws
+    role: essential
+    confidence: high
+    notes: uses the constant-multiple law for limits (Limit Law 3) — Stewart cites it explicitly
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.1"
+    locator: "Demostración inline (página 177)"
+    page: "177"
+    source_language: es
+
+sketch:
+  es:
+    text: >
+      Sea g(x) = c·f(x). Por la definición de derivada,
+      g'(x) = lím_{h→0} (g(x+h) − g(x))/h
+            = lím_{h→0} (c·f(x+h) − c·f(x))/h
+            = lím_{h→0} c·(f(x+h) − f(x))/h.
+      Por la ley del múltiplo constante de los límites
+      (ley 3 de los límites), se puede sacar c del límite:
+      g'(x) = c·lím_{h→0} (f(x+h) − f(x))/h = c·f'(x).
+    is_original: true
+    origin: original
+    review_status: unreviewed
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Direct application of the constant-multiple law for limits.
+  proposition.limit-laws is invoked at the constant-multiple case
+  (Law 3) — that case is part of the bundled limit-laws debt
+  documented in v0.3.1-stewart-full Ch2 reports.

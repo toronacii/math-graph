@@ -1,0 +1,123 @@
+schema_version: "0.3.1"
+id: proposition.related-rates-strategy
+type: proposition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Estrategia de razones relacionadas
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Related rates strategy
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Para hallar la razón de cambio de una cantidad en términos
+        de la razón de cambio (medible) de otra: (1) leer
+        cuidadosamente el problema; (2) hacer un diagrama si es
+        posible; (3) introducir notación, asignando símbolos a
+        todas las cantidades que dependen del tiempo; (4) expresar
+        la información dada y la incógnita en términos de
+        derivadas (dx/dt, etc.); (5) escribir una ecuación que
+        relacione las cantidades, eliminando variables auxiliares
+        si es necesario mediante propiedades geométricas;
+        (6) derivar implícitamente respecto a t aplicando la regla
+        de la cadena; (7) sustituir los valores instantáneos
+        conocidos en la ecuación derivada y resolver para la razón
+        desconocida. ADVERTENCIA: nunca sustituir valores numéricos
+        de cantidades variables ANTES de derivar.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        To find the rate of change of one quantity in terms of the
+        (measurable) rate of change of another: (1) read the
+        problem carefully; (2) draw a diagram if possible;
+        (3) introduce notation, assigning symbols to all
+        time-dependent quantities; (4) express the given
+        information and the unknown in terms of derivatives;
+        (5) write an equation relating the quantities, eliminating
+        auxiliary variables via geometric properties if needed;
+        (6) differentiate implicitly with respect to t applying
+        the chain rule; (7) substitute known instantaneous values
+        into the differentiated equation and solve for the unknown
+        rate. WARNING: never substitute numerical values of
+        time-varying quantities BEFORE differentiating.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      F(x_1(t),\ldots,x_n(t)) = 0 \;\xrightarrow{\,d/dt\,}\;
+      \sum_{i=1}^{n}\frac{\partial F}{\partial x_i}\,\frac{dx_i}{dt} = 0
+      \;\Longrightarrow\; \frac{dx_k}{dt} = -\frac{1}{\partial F/\partial x_k}\sum_{i\neq k}\frac{\partial F}{\partial x_i}\,\frac{dx_i}{dt}
+    status: present
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: theorem.chain-rule
+    role: uses_concept
+    confidence: high
+  - id: proposition.implicit-differentiation
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.9"
+    theorem_label: "Estrategia de resolución de problemas"
+    page: "246"
+    source_language: es
+
+domains:
+  primary: [calculus]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [schema, principle, pedagogical]
+  keywords: [related-rates, problem-solving, chain-rule, implicit-differentiation, modeling]
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: medium
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Methodological proposition (semantic_kind: schema + principle +
+  pedagogical), no proof obligation — its correctness reduces to
+  the chain rule and implicit differentiation. The LaTeX schematic
+  is editorial (Stewart presents only verbal steps + worked
+  examples); marked latex_confidence:medium accordingly. §3.9 has
+  no other extractable mathematical content; all examples are
+  applications of this strategy.

@@ -1,0 +1,113 @@
+schema_version: "0.3.1"
+id: proposition.limit-exists-iff-one-sided-limits
+type: proposition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: El límite existe si y sólo si ambos límites laterales coinciden
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: A limit exists iff both one-sided limits exist and agree
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        lím_{x→a} f(x) = L si y sólo si lím_{x→a⁻} f(x) = L y
+        lím_{x→a⁺} f(x) = L.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        lim_{x→a} f(x) = L if and only if lim_{x→a⁻} f(x) = L and
+        lim_{x→a⁺} f(x) = L.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      \lim_{x \to a} f(x) = L \iff
+      \lim_{x \to a^{-}} f(x) = L \;\;\text{y}\;\;
+      \lim_{x \to a^{+}} f(x) = L
+    status: present
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: definition.limit-of-function
+    role: uses_concept
+    confidence: high
+  - id: definition.left-hand-limit
+    role: uses_concept
+    confidence: high
+  - id: definition.right-hand-limit
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.2"
+    theorem_label: "Ecuación 3"
+    page: "92"
+    source_language: es
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.3"
+    theorem_label: "Teorema 1"
+    page: "103"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [real-analysis]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [criterion, relation]
+  keywords: [limit, one-sided, two-sided, equivalence]
+
+generality: []
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stated twice in the chapter — as Equation 3 in §2.2 (without
+  proof, since it follows from comparing the three intuitive
+  definitions) and again as Theorem 1 in §2.3 (also without proof).
+  No proof node authored at this stage: the rigorous proof
+  requires definition.epsilon-delta-limit (§2.4). Both source
+  locators retained.

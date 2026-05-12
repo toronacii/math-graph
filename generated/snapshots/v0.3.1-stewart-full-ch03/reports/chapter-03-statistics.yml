@@ -1,0 +1,96 @@
+chapter: "3"
+chapter_title: Differentiation Rules
+source:
+  work: "Calculo de una variable — Trascendentes tempranas"
+  author: James Stewart
+  edition: "7"
+  language: es
+  sections_processed:
+    - "3.1"
+    - "3.2"
+    - "3.3"
+    - "3.4"
+    - "3.5"
+    - "3.6"
+
+extraction_date: "2026-05-10"
+validation_status: pass
+
+cumulative_statistics:
+  total_nodes: 146
+  total_edges: 146
+
+  nodes_by_type:
+    definition: 58
+    proposition: 9
+    theorem: 32
+    corollary: 3
+    lemma: 0
+    axiom: 0
+    conjecture: 0
+    proof: 44
+
+  nodes_by_kind:
+    statement: 102
+    proof: 44
+
+  edges_by_relation:
+    uses: 102
+    proves: 44
+
+  proofs_by_style:
+    direct: 36
+    epsilon-delta: 4
+    assumed: 2
+    algebraic: 1
+    geometric: 1
+
+  proofs_by_confidence:
+    high: 24
+    medium: 17
+    low: 3
+
+  root_nodes: 58
+  leaf_nodes: 51
+  isolated_nodes: 35
+  connected_components: 39
+  connected_component_sizes:
+    - 100
+    - 3
+    - 3
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+
+  longest_dependency_chain:
+    depth: 11
+    statement_depth: 5
+    path:
+      - definition.epsilon-delta-limit
+      - proof.squeeze-theorem.stewart
+      - theorem.squeeze-theorem
+      - proof.limit-sinx-over-x.stewart
+      - theorem.limit-sinx-over-x
+      - proof.derivative-sin.stewart
+      - theorem.derivative-sin
+      - proof.derivative-tan.stewart
+      - theorem.derivative-tan
+      - proof.derivative-arctan.stewart
+      - theorem.derivative-arctan
+
+  graph_density: 0.0069
+  average_degree: 2.0
+
+chapter_delta:
+  new_nodes: 51
+  new_edges: 88
+  new_definitions: 3
+  new_propositions: 0
+  new_theorems: 22
+  new_corollaries: 2
+  new_proofs: 24
+  reclassifications: 2

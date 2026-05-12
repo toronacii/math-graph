@@ -1,0 +1,58 @@
+schema_version: "0.3.1"
+id: proof.derivative-of-natural-exponential.stewart
+type: proof
+status: extracted
+
+proves: theorem.derivative-of-natural-exponential
+style: corollary
+
+uses:
+  - id: theorem.exponential-derivative-proportional
+    role: essential
+    confidence: high
+    notes: instantiate Eq 4 with a = e
+  - id: definition.number-e
+    role: definition
+    confidence: high
+    notes: by definition of e, lim_{h→0} (e^h − 1)/h = 1, i.e. f'(0) = 1 when f(x) = e^x
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.1"
+    locator: "Derivación inline (página 180)"
+    page: "180"
+    source_language: es
+
+sketch:
+  es:
+    text: >
+      Por theorem.exponential-derivative-proportional aplicado a
+      a = e, si e^x es derivable en 0 entonces
+      (d/dx) e^x = f'(0)·e^x. Por definition.number-e,
+      f'(0) = lím_{h→0} (e^h − 1)/h = 1. Por lo tanto
+      (d/dx) e^x = 1·e^x = e^x.
+    is_original: true
+    origin: original
+    review_status: unreviewed
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Three-line corollary. Inherits the existence-of-f'(0) debt from
+  the parent theorem; here f'(0) = 1 is taken as the defining
+  property of e, so the existence question is folded into
+  definition.number-e itself.

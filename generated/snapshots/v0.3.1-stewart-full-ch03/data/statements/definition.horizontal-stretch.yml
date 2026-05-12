@@ -1,0 +1,101 @@
+schema_version: "0.3.1"
+id: definition.horizontal-stretch
+type: definition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Alargamiento o compresión horizontal
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Horizontal stretch or compression
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Sea c > 0. La gráfica de y = f(c·x) se obtiene de la de
+        y = f(x) comprimiéndola horizontalmente por un factor c si
+        c > 1, o alargándola horizontalmente por el factor 1/c si
+        0 < c < 1.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        Let c > 0. The graph of y = f(c·x) is obtained from the
+        graph of y = f(x) by compressing horizontally by a factor of
+        c if c > 1, or stretching horizontally by a factor of 1/c if
+        0 < c < 1.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      g(x) = f(c \cdot x), \qquad c > 0
+    status: present
+    review_status: unreviewed
+
+proved_by: []
+depends_on:
+  - id: definition.function
+    role: uses_concept
+    confidence: high
+  - id: definition.graph-of-function
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.3"
+    locator: "Transformaciones de funciones — alargamientos (sección 1.3)"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [geometry]
+
+ambient:
+  structures: [real-line, cartesian-plane]
+
+ontology:
+  semantic_kind: [operator, construction]
+  keywords: [stretch, compression, horizontal, transformation, scaling]
+
+generality:
+  - target: definition.vertical-stretch
+    relation: sibling
+    notes: Owner of sibling edge per policy 04 (alphabetically earlier).
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: medium
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Owns the sibling edge to definition.vertical-stretch per
+  policies/04-edge-role-taxonomy.md (alphabetically-earlier owner).

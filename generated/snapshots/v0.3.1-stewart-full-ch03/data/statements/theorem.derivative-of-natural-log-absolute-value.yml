@@ -1,0 +1,101 @@
+schema_version: "0.3.1"
+id: theorem.derivative-of-natural-log-absolute-value
+type: theorem
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Derivada del logaritmo natural del valor absoluto
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Derivative of the natural logarithm of an absolute value
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Para todo x ≠ 0, (d/dx) ln|x| = 1/x.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        For every x ≠ 0, (d/dx) ln|x| = 1/x.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      \frac{d}{dx}\,\ln|x| \;=\; \frac{1}{x}\qquad (x\neq 0)
+    status: present
+    review_status: unreviewed
+
+proved_by:
+  - proof.derivative-of-natural-log-absolute-value.cases
+
+depends_on:
+  - id: definition.natural-logarithm
+    role: uses_concept
+    confidence: high
+  - id: definition.derivative-function
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.6"
+    theorem_label: "Ecuación 4 (Ejemplo 6)"
+    page: "220"
+    source_language: es
+
+domains:
+  primary: [calculus]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [principle]
+  keywords: [natural-logarithm, absolute-value, derivative, extension]
+
+generality:
+  - target: theorem.derivative-of-natural-logarithm
+    relation: stronger_than
+    notes: >
+      Strict extension: same conclusion 1/x, hypothesis weakened
+      from x > 0 to x ≠ 0. Edge owned here per policy 04
+      (alphabetical: "natural-log-absolute-value" < "natural-logarithm").
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart's Eq 4 of §3.6, derived in Example 6 by case-splitting
+  on the sign of x. Important because it removes the x > 0
+  restriction of Eq 2, enabling antiderivative ∫(1/x)dx = ln|x| + C.

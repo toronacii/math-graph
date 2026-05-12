@@ -1,0 +1,100 @@
+rerun_id: v0.3.1-stewart-full
+chapter: "1"
+partial: true
+snapshot_label: v0.3.1-stewart-full-ch1-partial
+generated_at: "2026-05-11"
+
+# Per the 2026-05-11 audit, weak_dependencies is reported SEPARATELY
+# from semantic_dependency_audit_status — empty `weak_dependencies`
+# does NOT imply audited.
+
+weak_dependencies: []
+
+semantic_dependency_audit_status: pending
+
+low_confidence_proofs: []
+
+implicit_imports: []
+
+epistemic_debt:
+  - id: definition.trigonometric-function
+    kind: bundled_definition
+    severity: medium
+    description: >
+      Stewart introduces sin, cos, tan, cot, sec, csc as a single
+      paragraph; node currently bundles all six. Per granularity
+      policy this should be split into six atomic definitions
+      (definition.sine, definition.cosine, …) before promotion to
+      `validated`. Tracked via `dependency_confidence: medium` on
+      the bundle node.
+    remediation: split during the §1.2 audit pass before Ch11
+    blocks_status_promotion: true
+
+  - id: definition.algebraic-function
+    kind: informal_definition
+    severity: low
+    description: >
+      Stewart's definition is closure-style ("built from polynomials
+      by +, −, ×, ÷, roots") and not formalizable as a clean LaTeX
+      object. The rigorous algebraic-function notion (zeros of
+      polynomial in y over R(x)) is a distinct future node.
+      `latex_confidence: low` declared.
+    remediation: add rigorous companion node at first use in later chapters
+    blocks_status_promotion: false
+
+  - id: definition.linear-function
+    kind: terminology_collision
+    severity: low
+    description: >
+      Stewart's "linear function" is an affine real function; the
+      linear-algebra notion (additive, no constant term) is a
+      different object. Future `definition.linear-map` will require
+      a generality edge to disambiguate.
+    remediation: add definition.linear-map node when linear algebra appears
+    blocks_status_promotion: false
+
+  - id: definition.power-function
+    kind: schematic_domain
+    severity: low
+    description: >
+      Domain depends on the exponent a (e.g., x^{1/2} requires
+      x ≥ 0). Stewart enumerates cases; node keeps the definition
+      schematic without conditioning on a. Acceptable at calculus
+      pedagogy level.
+    remediation: revisit if formalization later requires the cases
+    blocks_status_promotion: false
+
+deferred_extraction:
+  - section: "1.3"
+    title: Nuevas funciones a partir de funciones conocidas
+    expected_atoms:
+      - definition.vertical-translation
+      - definition.horizontal-translation
+      - definition.vertical-stretch
+      - definition.horizontal-stretch
+      - definition.reflection-x-axis
+      - definition.reflection-y-axis
+      - definition.composition-of-functions
+      - definition.sum-of-functions
+      - definition.product-of-functions
+      - definition.quotient-of-functions
+  - section: "1.5"
+    title: Funciones exponenciales
+    expected_atoms:
+      - definition.exponential-function
+      - definition.natural-exponential-function
+      - definition.exponential-laws
+  - section: "1.6"
+    title: Funciones inversas y logaritmos
+    expected_atoms:
+      - definition.one-to-one-function
+      - proposition.horizontal-line-test
+      - definition.inverse-function
+      - definition.cancellation-equations
+      - definition.logarithmic-function
+      - definition.natural-logarithm
+      - definition.laws-of-logarithms
+      - proposition.change-of-base-formula
+      - definition.inverse-trigonometric-function
+
+cross_source_merge_queue: []

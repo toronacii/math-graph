@@ -1,0 +1,77 @@
+schema_version: "0.3.1"
+id: proof.chain-rule.stewart
+type: proof
+status: extracted
+
+proves: theorem.chain-rule
+style: direct
+
+uses:
+  - id: proposition.differentiable-increment-formula
+    role: essential
+    confidence: high
+    notes: applied to both g (giving Δu = [g'(a) + ε₁]Δx) and f (giving Δy = [f'(b) + ε₂]Δu)
+  - id: definition.derivative-function
+    role: definition
+    confidence: high
+    notes: F'(a) computed as lim Δy/Δx
+  - id: definition.composition-of-functions
+    role: definition
+    confidence: high
+  - id: proposition.limit-laws
+    role: essential
+    confidence: high
+    notes: sum and product laws applied to lim [f'(b) + ε₂][g'(a) + ε₁] as Δx → 0
+  - id: theorem.differentiable-implies-continuous
+    role: essential
+    confidence: high
+    notes: g differentiable ⇒ Δu → 0 as Δx → 0; needed so ε₂ → 0
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.4"
+    locator: "Demostración rigurosa (páginas 204–205)"
+    page: "204"
+    source_language: es
+
+sketch:
+  es:
+    text: >
+      Sea u = g(x) derivable en a y y = f(u) derivable en b = g(a).
+      Por proposition.differentiable-increment-formula aplicada a g:
+      Δu = [g'(a) + ε₁]·Δx, con ε₁ → 0 cuando Δx → 0.
+      Aplicada a f: Δy = [f'(b) + ε₂]·Δu, con ε₂ → 0 cuando
+      Δu → 0. Sustituyendo,
+      Δy = [f'(b) + ε₂]·[g'(a) + ε₁]·Δx,
+      por lo que Δy/Δx = [f'(b) + ε₂]·[g'(a) + ε₁].
+      Como g es derivable, también es continua, luego Δu → 0
+      cuando Δx → 0, y por tanto ε₂ → 0 cuando Δx → 0. Tomando
+      el límite Δx → 0:
+      F'(a) = lím Δy/Δx = f'(b)·g'(a) = f'(g(a))·g'(a).
+      Esta demostración evita el defecto del argumento intuitivo
+      (división entre Δu = 0).
+    is_original: true
+    origin: original
+    review_status: unreviewed
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart's rigorous proof using the increment characterization
+  (Eq 7) — clean and avoids the Δu = 0 pathology of the naive
+  approach. Stewart presents an intuitive sketch first (cancel
+  Δu) and then this rigorous version.

@@ -1,0 +1,118 @@
+schema_version: "0.3.1"
+id: definition.derivative-at-point
+type: definition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Derivada de una función en un número
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Derivative of a function at a number
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        La derivada de una función f en un número x = a, denotada
+        por f'(a), se define como el límite del cociente de
+        diferencias f'(a) = lím_{h→0} (f(a + h) − f(a))/h, si este
+        límite existe. Equivalentemente, escribiendo x = a + h se
+        obtiene la forma f'(a) = lím_{x→a} (f(x) − f(a))/(x − a).
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        The derivative of a function f at a number x = a, denoted
+        f'(a), is defined as the limit of the difference quotient
+        f'(a) = lim_{h→0} (f(a + h) − f(a))/h, if this limit exists.
+        Equivalently, writing x = a + h gives the form
+        f'(a) = lim_{x→a} (f(x) − f(a))/(x − a).
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      f'(a) \;=\; \lim_{h \to 0} \frac{f(a + h) - f(a)}{h}
+                \;=\; \lim_{x \to a} \frac{f(x) - f(a)}{x - a}
+    status: present
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: definition.function
+    role: uses_concept
+    confidence: high
+  - id: definition.limit-of-function
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.7"
+    theorem_label: "Definición 4 (Ecuaciones 4 y 5)"
+    page: "146"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [analysis]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [object, operator]
+  keywords: [derivative, difference-quotient, pointwise-derivative]
+
+generality:
+  - target: definition.instantaneous-rate-of-change
+    relation: equivalent
+    notes: >
+      Stewart explicitly identifies the instantaneous-rate-of-change
+      limit (Eq 6, p.148) with f'(x₁): same difference-quotient
+      limit, different interpretive label. Edge owned here per
+      policy 04 (alphabetical: "derivative-at-point" precedes
+      "instantaneous-rate-of-change").
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart presents two equivalent forms (Eq 4 with h → 0 and Eq 5
+  with x → a). The substitution x = a + h trivially equates them,
+  so they are recorded inside one node rather than as two separate
+  nodes. The link "f'(a) = slope of tangent" is captured by
+  proposition.derivative-as-tangent-slope; the link
+  "f'(a) = instantaneous velocity when f is position" is
+  recorded informally inside definition.instantaneous-velocity
+  rather than as a separate proposition (Stewart presents it as a
+  reinterpretation, not a derived theorem).

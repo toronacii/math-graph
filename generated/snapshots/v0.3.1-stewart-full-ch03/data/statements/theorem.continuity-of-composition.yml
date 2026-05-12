@@ -1,0 +1,103 @@
+schema_version: "0.3.1"
+id: theorem.continuity-of-composition
+type: theorem
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Continuidad de la composición de funciones
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Continuity of function composition
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Si g es continua en x = a y f es continua en g(a), entonces
+        la función compuesta f ∘ g dada por (f ∘ g)(x) = f(g(x)) es
+        continua en x = a.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        If g is continuous at x = a and f is continuous at g(a),
+        then the composite function f ∘ g defined by
+        (f ∘ g)(x) = f(g(x)) is continuous at x = a.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      g \text{ continuous at } a \;\wedge\;
+      f \text{ continuous at } g(a)
+      \implies
+      f \circ g \text{ continuous at } a
+    status: present
+    review_status: unreviewed
+
+proved_by:
+  - proof.continuity-of-composition.stewart
+
+depends_on:
+  - id: definition.continuity-at-point
+    role: uses_concept
+    confidence: high
+  - id: definition.composition-of-functions
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.5"
+    theorem_label: "Teorema 9"
+    page: "125"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [real-analysis]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [property]
+  keywords: [continuity, composition]
+
+generality: []
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart §2.5 Teorema 9 — "una función continua de una función
+  continua es una función continua." Direct corollary of Thm 8
+  (proof node attached).

@@ -1,0 +1,73 @@
+schema_version: "0.3.1"
+id: proof.exponential-derivative-proportional.stewart
+type: proof
+status: extracted
+
+proves: theorem.exponential-derivative-proportional
+style: direct
+
+uses:
+  - id: definition.derivative-function
+    role: definition
+    confidence: high
+    notes: unfolds f'(x) as the (h → 0) limit of (a^{x+h} − a^x)/h
+  - id: definition.exponential-function
+    role: definition
+    confidence: high
+    notes: uses the law a^{x+h} = a^x · a^h
+  - id: proposition.limit-laws
+    role: essential
+    confidence: high
+    notes: factor a^x out of the limit (constant-multiple law) since a^x is independent of h
+  - id: definition.differentiable-at-point
+    role: existence
+    confidence: medium
+    notes: hypothesis "a^x differentiable at 0" — Stewart only gives numerical evidence for a = 2, 3
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.1"
+    locator: "Demostración inline (página 179)"
+    page: "179"
+    source_language: es
+
+sketch:
+  es:
+    text: >
+      Sea f(x) = a^x. Por la definición de derivada,
+      f'(x) = lím_{h→0} (a^{x+h} − a^x)/h
+            = lím_{h→0} (a^x·a^h − a^x)/h
+            = lím_{h→0} a^x·(a^h − 1)/h.
+      Como a^x no depende de h, por la ley del múltiplo constante:
+      f'(x) = a^x · lím_{h→0} (a^h − 1)/h.
+      El límite restante es precisamente el valor f'(0). Por lo
+      tanto, si f'(0) existe, entonces f'(x) = f'(0)·a^x para
+      todo x.
+    is_original: true
+    origin: original
+    review_status: unreviewed
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: medium
+  semantic_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Conditional theorem: the derivation is rigorous given f'(0) exists.
+  Existence of f'(0) is NOT proved by Stewart — only supported by
+  a numerical table for a = 2 and a = 3. Marked as open epistemic
+  debt; dependency_confidence:medium reflects the existence
+  hypothesis. Rigorous treatment requires either a power-series
+  definition of a^x or its construction as the inverse of the
+  natural log.

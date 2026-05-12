@@ -1,0 +1,72 @@
+schema_version: "0.3.1"
+id: proof.limit-root-law.stewart
+type: proof
+status: extracted
+
+proves: proposition.limit-root-law
+style: direct
+
+uses:
+  - id: theorem.limit-through-continuous-function
+    role: essential
+    confidence: high
+    notes: >
+      Apply with f(x) = ⁿ√x and the n-th root function continuous on
+      its domain (asserted in §2.5 as part of theorem.continuity-
+      of-elementary-functions for root functions). The substitution
+      gives lim ⁿ√(g(x)) = ⁿ√(lim g(x)).
+  - id: theorem.continuity-of-elementary-functions
+    role: essential
+    confidence: high
+    notes: supplies continuity of the n-th root function ⁿ√x
+  - id: definition.power-function
+    role: notation
+    confidence: high
+    notes: ⁿ√x = x^{1/n} as a power function
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.5"
+    locator: >
+      Texto posterior al Teorema 8 ("Aplicamos el teorema 8 en el
+      caso especial donde f(x) = ⁿ√x … con lo que queda demostrada
+      la ley 11 de los límites.")
+    page: "124"
+    source_language: es
+
+sketch:
+  es:
+    text: >
+      Sea f(x) = ⁿ√x con n entero positivo. Por el Teorema 7, f es
+      continua sobre su dominio. Por el Teorema 8, lím_{x→a} ⁿ√(g(x))
+      = ⁿ√(lím_{x→a} g(x)), suponiendo que las raíces existen.
+      Aplicando esto con g(x) = x se obtiene la ley 11 / ley de la
+      raíz: lím_{x→a} ⁿ√x = ⁿ√a (caso n par requiere a > 0).
+    is_original: true
+    origin: original
+    review_status: unreviewed
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: medium
+  semantic_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Closes the §2.3 deferred-proof entry for proposition.limit-root-
+  law (one of the 8 deferred items recorded after the §2.3 partial
+  milestone). dependency_confidence: medium because the upstream
+  ingredient (continuity of ⁿ√x) is asserted by the bundle theorem.
+  continuity-of-elementary-functions without a proof node — the
+  rigorous justification (continuous bijection ⇒ continuous inverse,
+  applied to x ↦ xⁿ) lives in Apéndice F and is not yet in graph.

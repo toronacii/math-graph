@@ -1,0 +1,252 @@
+rerun_id: v0.3.1-stewart-full
+chapter: "3"
+chapter_title:
+  es: Reglas de derivación
+  en: Differentiation Rules
+sections_covered:
+  - "3.1"   # Derivadas de polinomios y funciones exponenciales
+  - "3.2"   # Reglas del producto y del cociente
+  - "3.3"   # Derivadas de las funciones trigonométricas
+  - "3.4"   # Regla de la cadena
+  - "3.5"   # Derivación implícita
+  - "3.6"   # Derivadas de las funciones logarítmicas
+  - "3.7"   # Razones de cambio en ciencias naturales y sociales (sin entidades matemáticas)
+  - "3.8"   # Crecimiento y decaimiento exponenciales
+  - "3.9"   # Razones afines (related rates)
+  - "3.10"  # Aproximación lineal y diferenciales
+  - "3.11"  # Funciones hiperbólicas
+sections_pending: []
+partial: false
+snapshot_label: v0.3.1-stewart-full-ch03
+generated_at: "2026-05-11"
+
+counts:
+  total_nodes: 173
+  statements: 131
+  proofs: 42
+  by_type:
+    definition: 73
+    proposition: 26
+    theorem: 32
+    proof: 42
+  ch3_only:
+    statements_first_introduced: 37
+    proofs_first_introduced: 28
+  by_section_statements_ch3:
+    "3.1": 10   # power, constant-mul, sum, diff, deriv-of-constant, exp-deriv, e-as-limit, natural-exp, deriv-of-natural-exp, exp-function-existence
+    "3.2": 2    # product-rule, quotient-rule
+    "3.3": 3    # sin-derivative-limit, derivatives-of-trig-functions, trig-function (carry-over deepening; counted if first introduced in §3.3)
+    "3.4": 4    # chain-rule, composition-derivative, general-power-rule (refinement), inverse-derivative
+    "3.5": 2    # implicit-differentiation, derivatives-of-inverse-trig-functions
+    "3.6": 5    # deriv-of-general-log, deriv-of-natural-log, deriv-of-natural-log-abs-value, number-e-as-limit, logarithmic-differentiation
+    "3.7": 0    # applied interpretations only — no math entities introduced
+    "3.8": 1    # exponential-growth-decay-solution
+    "3.9": 1    # related-rates-strategy
+    "3.10": 3   # linearization, differential, linear-approximation
+    "3.11": 6   # hyperbolic-function, hyperbolic-identities, derivatives-of-hyperbolic, inverse-hyperbolic, inverse-hyperbolic-as-log, derivatives-of-inverse-hyperbolic
+  by_section_proofs_ch3:
+    "3.1": 8
+    "3.2": 2
+    "3.3": 3
+    "3.4": 4
+    "3.5": 1
+    "3.6": 5
+    "3.7": 0
+    "3.8": 1
+    "3.9": 0
+    "3.10": 0
+    "3.11": 4
+
+  total_edges: 495
+  edges_by_relation:
+    statement_proves: 42        # proof → statement (proves)
+    statement_depends_on: 281
+    proof_uses: 172
+  depends_on_role_distribution:
+    uses_concept: 266
+    extends: 6
+    specializes: 6
+    instance_of: 3
+  proof_uses_role_distribution:
+    essential: 99
+    definition: 64
+    notation: 6
+    background: 2
+    existence: 1
+
+graph_density:
+  nodes: 173
+  edges: 495
+  density: 0.0166
+  components: 1
+
+hubs_post_chapter_3:
+  most_referenced_combined:
+    # in-degree across depends_on + uses (both directions where a statement is the dependency target)
+    - id: definition.function
+      score: 53
+      role: universal hub (every statement uses "function")
+    - id: definition.derivative-function
+      score: 38
+      role: NEW Ch3 super-hub — central object of every §3.x derivation rule
+    - id: definition.limit-of-function
+      score: 26
+      role: foundational hub from Ch2
+    - id: theorem.chain-rule
+      score: 17
+      role: NEW Ch3 hub (§3.4) — used by §3.5 implicit, §3.6 logarithmic, §3.11 hyperbolic
+    - id: definition.domain
+      score: 16
+    - id: proposition.limit-laws
+      score: 16
+      role: Ch2 hub now feeding Ch3 derivative-from-definition proofs
+    - id: definition.differentiable-at-point
+      score: 15
+    - id: definition.continuity-at-point
+      score: 13
+    - id: definition.exponential-function
+      score: 13
+    - id: definition.hyperbolic-function
+      score: 13
+      role: NEW §3.11 bundled hub feeding identities, derivatives, and inverses
+    - id: definition.natural-logarithm
+      score: 11
+    - id: definition.graph-of-function
+      score: 10
+    - id: definition.trigonometric-function
+      score: 10
+    - id: definition.logarithmic-function
+      score: 10
+
+orphan_count: 0
+leaf_statement_count: 33
+leaf_explanation: >
+  No strict graph orphans (every node connects to at least one
+  other). 33 statements are leaves in the depended-on/used-by sense,
+  grouped by reason:
+  (a) Ch1 holdovers awaiting downstream use (parity, transformations,
+  abs-value) — most will gain edges in Ch4 (curve sketching) and
+  Ch5–6 (integration);
+  (b) Ch2 entry-points for later chapters (epsilon-N machinery,
+  vertical/horizontal asymptotes, infinite-limit-at-infinity,
+  intermediate-value-theorem, limit-of-reciprocal-power) — used in
+  applied examples not encoded;
+  (c) Ch3 leaves: definition.acceleration (Ch4 motion), definition.
+  differentiable-on-interval (Ch4 hub), definition.normal-line
+  (Ch3 examples only), definition.nth-derivative (Ch4 +
+  Ch11 Taylor), proposition.related-rates-strategy (§3.9 — schema-
+  level; intentionally has no formal proof), proposition.linear-
+  approximation (§3.10 — feeds Taylor §11.10), proposition.non-
+  differentiability-cases (pedagogical, criterion-only).
+
+quality_summary:
+  status_distribution:
+    extracted: 173
+  dependency_confidence_set: 173
+  semantic_confidence_set: 173
+  latex_present: ~118
+  latex_informal: 11      # Ch2 informal limit cluster carried over; no new informal stmts in Ch3
+  latex_missing: 0
+  semantic_dependency_audit_status: pending
+
+provenance_audit:
+  schema_version_check:
+    "0.3.1": 173
+  rerun_id_check:
+    v0.3.1-stewart-full: 173
+  language_original_check:
+    es: 173
+  is_original_uniqueness: pass
+  source_locator_integrity: pass
+  page_locators_present_ch3: 65    # all 37 stmts + 28 proofs introduced in Ch3
+
+architectural_audit_application:
+  bundled_definition_splits:
+    applied:
+      - power-rule split into theorem.power-rule (positive integer)
+        and theorem.power-rule-general (real exponent) with stronger_than
+        edge — retains Stewart's pedagogical sequencing
+      - sum-rule and difference-rule kept as siblings (NOT merged into
+        a single linearity proposition) — matches Stewart's separate
+        Theorems 3 and 4
+      - constant-multiple-rule and derivative-of-a-constant kept as
+        separate atomic statements
+      - product-rule and quotient-rule kept as separate atomic
+        theorems (Stewart §3.2)
+      - implicit-differentiation modeled as proposition (technique),
+        NOT as principle — validator forbids `principle.*` ID prefix
+      - linearization vs differential kept as separate definitions
+        with proposition.linear-approximation as the bridging claim
+    accepted_as_explicit_debt:
+      - theorem.derivatives-of-trigonometric-functions (Type-A bundle of 6 derivatives)
+      - theorem.derivatives-of-inverse-trigonometric-functions (Type-A bundle of 6 derivatives)
+      - theorem.derivatives-of-hyperbolic-functions (Type-A bundle of 6 derivatives)
+      - theorem.derivatives-of-inverse-hyperbolic-functions (Type-A bundle of 6 derivatives)
+      - definition.hyperbolic-function (Type-A bundle of 6 functions)
+      - definition.inverse-hyperbolic-function (Type-A bundle of 6 inverses)
+      - proposition.hyperbolic-identities (Type-A bundle of 5+ identities)
+      - theorem.inverse-hyperbolic-as-logarithm (Type-A bundle of 3 log forms)
+      - proposition.related-rates-strategy (Type-B schema — no formal content)
+  proof_uses_role_precision: ok
+  honest_dependency_confidence: ok    # 12 entities at medium reflecting bundled debt
+  generality_edge_ownership:
+    rule_followed_by_default: yes
+    deliberate_exceptions:
+      - theorem.power-rule-general owns stronger_than edge to theorem.power-rule (alphabetical owner)
+      - theorem.derivative-of-natural-log-absolute-value < theorem.derivative-of-natural-logarithm by ASCII (45 < 97), owner is the abs-value variant
+      - theorem.derivative-of-natural-exponential owns equivalent edge to theorem.exponential-derivative (legacy alias retained for cross-source disambiguation)
+
+semantic_debt_register_after_ch3:
+  type_A_bundles_open:
+    - theorem.derivatives-of-trigonometric-functions (cos via Ex 20; csc/sec/cot via Ex 17–19)
+    - theorem.derivatives-of-inverse-trigonometric-functions (arccos/arccot/arcsec/arccsc via Ex 64)
+    - theorem.derivatives-of-hyperbolic-functions (5 of 6 deferred to Ex 24)
+    - theorem.derivatives-of-inverse-hyperbolic-functions (5 of 6 deferred to Ex 29)
+    - definition.hyperbolic-function (6 functions in one node)
+    - definition.inverse-hyperbolic-function (csch⁻¹, sech⁻¹, coth⁻¹ via Ex 28)
+    - proposition.hyperbolic-identities (parity + addition formulas via Ex 7–12)
+    - theorem.inverse-hyperbolic-as-logarithm (cosh⁻¹/tanh⁻¹ via Ex 26–27)
+  type_B_schemas_open:
+    - proposition.related-rates-strategy (§3.9 — pedagogical schema; no formal proof)
+    - proposition.linear-approximation (§3.10 — bridge to Taylor §11.10)
+  uniqueness_debts:
+    - theorem.exponential-growth-decay-solution: existence proven, uniqueness deferred to §9.4 (separable ODEs)
+  open_terminology_warning:
+    - "linear-function" terminology overload: §3.10 linearization is
+      the local affine approximation L(x) = f(a) + f'(a)(x − a), NOT
+      a function whose graph is a line through the origin. Carried
+      from Ch1 epistemic debt; Stewart conflates the two terms in
+      §3.10 introduction.
+
+deferred_proof_nodes:
+  - proves: proposition.related-rates-strategy
+    reason: pedagogical schema (no formal content to prove)
+  - proves: proposition.linear-approximation
+    reason: §3.10 — proven informally; full treatment in Taylor's theorem §11.10
+  - proves: definition.linearization
+    reason: definitional (no proof obligation; consistency with linear-approximation noted)
+  - proves: definition.differential
+    reason: definitional
+  - proves: definition.inverse-hyperbolic-function
+    reason: definitional (well-definedness implicit in invertibility on chosen subdomain)
+  - proves: theorem.exp-function-existence
+    reason: deferred to Ch7/Apéndice (constructive definition via series or via inverse of ln)
+
+closed_in_ch3:
+  - theorem.power-rule (proof.power-rule.binomial-expansion §3.1)
+  - theorem.power-rule-general (proof.power-rule-general.logarithmic-differentiation §3.6)
+  - theorem.derivative-of-natural-exponential (proof.derivative-of-natural-exponential.from-derivative-at-zero §3.1)
+  - theorem.product-rule (proof.product-rule.stewart §3.2)
+  - theorem.quotient-rule (proof.quotient-rule.stewart §3.2)
+  - theorem.chain-rule (proof.chain-rule.stewart §3.4)
+  - theorem.derivatives-of-trigonometric-functions (proof.derivatives-of-trigonometric-functions.stewart §3.3 — bundled)
+  - theorem.derivatives-of-inverse-trigonometric-functions (proof.derivatives-of-inverse-trigonometric-functions.implicit §3.5 — bundled)
+  - theorem.derivative-of-general-logarithm (proof.derivative-of-general-logarithm.implicit §3.6)
+  - theorem.derivative-of-natural-logarithm (proof.derivative-of-natural-logarithm.from-general §3.6)
+  - theorem.derivative-of-natural-log-absolute-value (proof.derivative-of-natural-log-absolute-value.cases §3.6)
+  - theorem.number-e-as-limit (proof.number-e-as-limit.from-derivative-at-1 §3.6)
+  - theorem.exponential-growth-decay-solution (proof.exponential-growth-decay-solution.verification §3.8 — existence only)
+  - proposition.hyperbolic-identities (proof.hyperbolic-identities.from-exponential-definition §3.11 — bundled)
+  - theorem.derivatives-of-hyperbolic-functions (proof.derivatives-of-hyperbolic-functions.from-exponential-definition §3.11 — bundled)
+  - theorem.inverse-hyperbolic-as-logarithm (proof.inverse-hyperbolic-as-logarithm.quadratic-in-exp §3.11 — bundled)
+  - theorem.derivatives-of-inverse-hyperbolic-functions (proof.derivatives-of-inverse-hyperbolic-functions.implicit §3.11 — bundled)

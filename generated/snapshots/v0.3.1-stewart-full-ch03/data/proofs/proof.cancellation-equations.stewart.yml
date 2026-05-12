@@ -1,0 +1,69 @@
+schema_version: "0.3.1"
+id: proof.cancellation-equations.stewart
+type: proof
+status: extracted
+
+proves: proposition.cancellation-equations
+style: direct
+
+uses:
+  - id: definition.inverse-function
+    role: definition
+    confidence: high
+    implicit: false
+    notes: Both equations follow by unfolding the iff in the inverse definition.
+  - id: definition.composition-of-functions
+    role: definition
+    confidence: high
+    implicit: false
+
+parts:
+  - name: left-cancellation
+    kind: direction
+    description: >
+      Fix x ∈ A and let y = f(x). Then by definition of f⁻¹,
+      f⁻¹(y) = x, i.e., f⁻¹(f(x)) = x.
+    uses: []
+  - name: right-cancellation
+    kind: direction
+    description: >
+      Fix y ∈ B and let x = f⁻¹(y). Then by definition of f⁻¹,
+      f(x) = y, i.e., f(f⁻¹(y)) = y.
+    uses: []
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.6"
+    locator: "Argumento informal de las ecuaciones de cancelación (sección 1.6)"
+    source_language: es
+
+sketch:
+  es:
+    text: >
+      Ambas igualdades se obtienen aplicando directamente la
+      definición de f⁻¹ (el “si y sólo si” f⁻¹(y) = x ⇔ f(x) = y).
+    is_original: true
+    origin: human
+    review_status: unreviewed
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  source_alignment_confidence: high
+  translation_confidence: null
+  latex_confidence: null
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Both directions unfold the inverse-function biconditional. Per-part
+  uses empty (shared dependencies).

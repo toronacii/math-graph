@@ -1,0 +1,183 @@
+weak_dependencies:
+
+  # Inherited from Chapter 1
+  - proof: proof.laws-of-exponents.stewart
+    proves: proposition.laws-of-exponents
+    issue: assumed-foundational-algebra
+    confidence: low
+    style: assumed
+    chapter: "1"
+    propagates_to:
+      - proof.laws-of-logarithms.stewart
+      - proof.change-of-base-formula.stewart
+      - proof.derivative-log-base-a.stewart
+    notes: Unchanged from Chapter 4.
+
+  # Inherited from Chapter 2
+  - proof: proof.intermediate-value-theorem.stewart
+    proves: theorem.intermediate-value-theorem
+    issue: assumed-completeness-axiom
+    confidence: low
+    style: assumed
+    chapter: "2"
+    propagates_to: []
+    notes: >
+      Unchanged. IVT still not directly used by Chapter 5 proofs.
+
+  - proof: proof.limit-root-law.stewart
+    proves: theorem.limit-root-law
+    issue: incomplete-proof
+    confidence: low
+    style: epsilon-delta
+    chapter: "2"
+    propagates_to: []
+    notes: Unchanged from Chapter 4.
+
+  # Inherited from Chapter 4
+  - proof: proof.extreme-value-theorem.stewart
+    proves: theorem.extreme-value-theorem
+    issue: assumed-completeness-axiom
+    confidence: low
+    style: assumed
+    chapter: "4"
+    propagates_to:
+      - proof.rolles-theorem.stewart
+      - proof.mean-value-theorem.stewart
+      - proof.zero-derivative-constant.stewart
+      - proof.equal-derivatives-differ-by-constant.stewart
+      - proof.increasing-decreasing-test.stewart
+      - proof.first-derivative-test.stewart
+      - proof.concavity-test.stewart
+      - proof.second-derivative-test.stewart
+      - proof.lhopitals-rule.stewart
+      - proof.general-antiderivative.stewart
+      - proof.ftc-part2.stewart
+      - proof.net-change-theorem.stewart
+      - proof.substitution-rule-definite.stewart
+      - proof.integrals-symmetric-functions.stewart
+    notes: >
+      EVT propagation extended. Via Rolle's → MVT → zero-derivative
+      → equal-derivatives → FTC2, the EVT now affects 14 downstream
+      proofs (up from 10 in Chapter 4). FTC2 is the critical new
+      link: net-change-theorem, substitution-rule-definite, and
+      integrals-symmetric-functions all depend on FTC2.
+    resolution_path: >
+      Add the Completeness Axiom (or Bolzano-Weierstrass theorem) as
+      an axiom node, then provide a rigorous proof of EVT.
+
+  - proof: proof.lhopitals-rule.stewart
+    proves: theorem.lhopitals-rule
+    issue: partial-proof
+    confidence: medium
+    style: direct
+    chapter: "4"
+    propagates_to: []
+    notes: Unchanged from Chapter 4.
+
+  # New in Chapter 5
+  - proof: proof.integrability-of-continuous-functions.stewart
+    proves: theorem.integrability-of-continuous-functions
+    issue: assumed-uniform-continuity
+    confidence: low
+    style: assumed
+    chapter: "5"
+    propagates_to:
+      - proof.integral-properties.stewart
+      - proof.integral-comparison.stewart
+      - proof.ftc-part1.stewart
+    notes: >
+      Stewart states that continuous functions are integrable without
+      proof. The rigorous proof requires uniform continuity on closed
+      intervals (Heine-Cantor theorem), which is not covered in this
+      textbook. While the integrability theorem is not directly used
+      as a proof dependency, it provides the foundational guarantee
+      that the definite integral exists for continuous functions —
+      a premise implicitly used by all integration results.
+    resolution_path: >
+      Add the Heine-Cantor theorem (continuous on closed interval
+      implies uniformly continuous) and use it to prove integrability
+      via epsilon-delta argument on Riemann sums.
+
+implicit_algebraic_imports:
+
+  # Inherited
+  - concept: Real number field axioms
+    used_by:
+      - definition.function
+      - definition.domain
+      - definition.range
+      - definition.epsilon-delta-limit
+      - definition.continuity-at-point
+    chapter: "1-2"
+    notes: Unchanged.
+
+  - concept: Precalculus trigonometry
+    used_by:
+      - definition.trigonometric-function
+      - theorem.limit-sinx-over-x
+      - proof.derivative-sin.stewart
+      - proof.derivative-cos.stewart
+    chapter: "1-3"
+    notes: Unchanged.
+
+  - concept: Triangle inequality
+    used_by:
+      - proof.limit-laws.stewart
+    chapter: "2"
+    notes: Unchanged.
+
+  - concept: Archimedean property
+    used_by:
+      - proof.limit-one-over-x-at-infinity.stewart
+    chapter: "2"
+    notes: Unchanged.
+
+  - concept: Binomial theorem
+    used_by:
+      - proof.power-rule.stewart
+    chapter: "3"
+    notes: Unchanged.
+
+  - concept: Pythagorean identity
+    used_by:
+      - proof.derivative-tan.stewart
+      - proof.derivative-cot.stewart
+      - proof.derivative-arcsin.stewart
+      - proof.derivative-arccos.stewart
+    chapter: "3"
+    notes: Unchanged.
+
+  - concept: Cauchy Mean Value Theorem
+    used_by:
+      - proof.lhopitals-rule.stewart
+    chapter: "4"
+    notes: Unchanged.
+
+  # New in Chapter 5
+  - concept: Summation identities and properties
+    used_by:
+      - definition.area-under-curve
+      - definition.definite-integral
+    chapter: "5"
+    notes: >
+      The definitions of area under a curve and the definite integral
+      use sigma notation and summation properties (linearity,
+      telescoping) that are introduced but not formally proved.
+
+epistemic_debt_summary:
+  total_weak_proofs: 5
+  total_partial_proofs: 2
+  total_inherited_weak: 4
+  total_implicit_imports: 8
+  affected_chain_depth: 10
+  new_weak_since_chapter_4: 1
+  new_partial_since_chapter_4: 0
+  new_implicit_since_chapter_4: 1
+  critical_debt: >
+    The EVT remains the highest-impact weak dependency, now propagating
+    to 14 downstream proofs (up from 10). The new integrability-of-
+    continuous-functions assumed proof is a secondary concern: it does
+    not directly break the proof chain but represents an implicit
+    foundational gap. The combined EVT + integrability debt means the
+    entire integration framework rests on two unproved results that
+    require completeness/compactness arguments beyond Stewart's scope.

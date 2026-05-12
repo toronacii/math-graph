@@ -1,0 +1,71 @@
+schema_version: "0.3.1"
+id: proof.power-rule-positive-integer.factoring
+type: proof
+status: extracted
+
+proves: theorem.power-rule-positive-integer
+style: algebraic-factoring
+
+uses:
+  - id: definition.derivative-at-point
+    role: definition
+    confidence: high
+    notes: uses the (x → a) form f'(a) = lim (f(x) − f(a))/(x − a) (Stewart Eq 2.7.5)
+  - id: definition.derivative-function
+    role: notation
+    confidence: high
+  - id: proposition.limit-laws
+    role: essential
+    confidence: high
+    notes: applies sum law (n terms) and limit-of-power case to evaluate each x^k a^{n-1-k} as a → x
+  - id: proposition.direct-substitution-property
+    role: essential
+    confidence: medium
+    notes: each polynomial term in the limit is evaluated by direct substitution
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.1"
+    locator: "Primera demostración"
+    page: "175"
+    source_language: es
+
+sketch:
+  es:
+    text: >
+      Sea f(x) = x^n. Por la identidad algebraica
+      x^n − a^n = (x − a)(x^{n−1} + x^{n−2}a + ··· + xa^{n−2} + a^{n−1})
+      (verificable por multiplicación directa o como suma
+      geométrica), se tiene
+      f'(a) = lím_{x→a} (x^n − a^n)/(x − a)
+            = lím_{x→a} (x^{n−1} + x^{n−2}a + ··· + a^{n−1}).
+      El límite contiene n términos, cada uno con valor a^{n−1}
+      por sustitución directa. Por la ley de la suma,
+      f'(a) = n·a^{n−1}. Renombrando a → x da
+      (d/dx) x^n = n x^{n−1}.
+    is_original: true
+    origin: original
+    review_status: unreviewed
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: medium
+  semantic_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart's "Primera demostración". Uses the limit's (x → a)
+  formulation. dependency_confidence:medium because the algebraic
+  factoring identity is invoked without proof (Stewart says
+  "verificable por multiplicación directa") — it is a standard
+  result not yet a node in the graph.

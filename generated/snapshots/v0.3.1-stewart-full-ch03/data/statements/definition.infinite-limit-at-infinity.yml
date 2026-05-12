@@ -1,0 +1,112 @@
+schema_version: "0.3.1"
+id: definition.infinite-limit-at-infinity
+type: definition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Límites infinitos en el infinito
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Infinite limits at infinity
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        La notación lím_{x→∞} f(x) = ∞ se utiliza para indicar que
+        los valores de f(x) se hacen más grandes cuando x se hace
+        muy grande. Un significado similar está asociado con los
+        siguientes símbolos: lím_{x→−∞} f(x) = ∞,
+        lím_{x→∞} f(x) = −∞ y lím_{x→−∞} f(x) = −∞.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        The notation lim_{x→∞} f(x) = ∞ is used to indicate that
+        f(x) grows large as x grows large. Similar meanings attach
+        to the symbols lim_{x→−∞} f(x) = ∞, lim_{x→∞} f(x) = −∞,
+        and lim_{x→−∞} f(x) = −∞.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      \lim_{x \to \infty} f(x) = \infty,\quad
+      \lim_{x \to -\infty} f(x) = \infty,\quad
+      \lim_{x \to \infty} f(x) = -\infty,\quad
+      \lim_{x \to -\infty} f(x) = -\infty
+    status: informal
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: definition.function
+    role: uses_concept
+    confidence: high
+  - id: definition.limit-at-infinity
+    role: extends
+    confidence: high
+    notes: extends asymptotic limit notation to divergent regimes
+  - id: definition.infinite-limit
+    role: extends
+    confidence: high
+    notes: extends ∞-valued limit notation from x→a to x→±∞
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.6"
+    locator: "Subsección 'Límites infinitos en el infinito'"
+    page: "136"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [real-analysis]
+
+ambient:
+  structures: [extended-real-line]
+
+ontology:
+  semantic_kind: [object, relation]
+  keywords: [limit, infinity, divergence, asymptotic-divergence]
+
+generality: []
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: medium
+  semantic_confidence: medium
+  translation_confidence: high
+  latex_confidence: medium
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Type-A bundle of four divergent-at-infinity notations. Stewart
+  introduces them informally in a single paragraph, without numbered
+  definitions or precise formulations. semantic_confidence: medium /
+  latex.status: informal — no quantifier structure given. A precise
+  ε–N-style formulation would split this into four atoms; deferred.

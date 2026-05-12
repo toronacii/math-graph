@@ -1,0 +1,31 @@
+weak_dependencies:
+  # All inherited from Chapter 8 — no changes
+  # (Omitting full list for brevity; see chapter-08-weak-dependencies.yml)
+
+  - proof: proof.laws-of-exponents.stewart
+    notes: Unchanged.
+  - proof: proof.intermediate-value-theorem.stewart
+    notes: Unchanged.
+  - proof: proof.limit-root-law.stewart
+    notes: Unchanged.
+  - proof: proof.extreme-value-theorem.stewart
+    notes: >
+      EVT propagation unchanged at 16 downstream proofs.
+  - proof: proof.lhopitals-rule.stewart
+    notes: Unchanged.
+  - proof: proof.integrability-of-continuous-functions.stewart
+    notes: Unchanged.
+  - proof: proof.comparison-theorem-integrals.stewart
+    notes: Unchanged.
+
+epistemic_debt_summary:
+  total_weak_proofs: 5
+  total_partial_proofs: 3
+  total_inherited_weak: 5
+  total_implicit_imports: 9
+  affected_chain_depth: 10
+  new_weak_since_chapter_8: 0
+  new_partial_since_chapter_8: 0
+  new_implicit_since_chapter_8: 0
+  critical_debt: >
+    No new epistemic debt. Chapter 9 added only 1 proof (high confidence).

@@ -1,0 +1,100 @@
+schema_version: "0.3.1"
+id: definition.linearization
+type: definition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Linealización de una función en un punto
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Linearization of a function at a point
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Sea f una función derivable en a. La linealización de f
+        en a es la función lineal L(x) = f(a) + f'(a)(x − a).
+        Su gráfica es la recta tangente a y = f(x) en el punto
+        (a, f(a)).
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        Let f be differentiable at a. The linearization of f at a
+        is the linear function L(x) = f(a) + f'(a)(x − a). Its
+        graph is the tangent line to y = f(x) at (a, f(a)).
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      L(x) \;=\; f(a) + f'(a)(x - a)
+    status: present
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: definition.derivative-function
+    role: uses_concept
+    confidence: high
+  - id: definition.tangent-line
+    role: uses_concept
+    confidence: high
+  - id: definition.linear-function
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.10"
+    theorem_label: "Ecuación 2"
+    page: "251"
+    source_language: es
+
+domains:
+  primary: [calculus]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [object, construction]
+  keywords: [linearization, tangent-line, linear-approximation, first-order]
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart's Eq 2, §3.10. The first-order Taylor polynomial of f
+  about a (Stewart's §3.10 lab project introduces higher-order
+  Taylor polynomials but defers the full theory to §11.10).

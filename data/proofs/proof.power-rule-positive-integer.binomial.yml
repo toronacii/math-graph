@@ -1,0 +1,65 @@
+schema_version: "0.3.1"
+id: proof.power-rule-positive-integer.binomial
+type: proof
+status: extracted
+
+proves: theorem.power-rule-positive-integer
+style: binomial-expansion
+
+uses:
+  - id: definition.derivative-function
+    role: definition
+    confidence: high
+    notes: uses the (h → 0) form f'(x) = lim (f(x+h) − f(x))/h
+  - id: proposition.limit-laws
+    role: essential
+    confidence: high
+    notes: applies sum/constant laws after binomial expansion; all terms with positive power of h vanish
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.1"
+    locator: "Segunda demostración"
+    page: "175"
+    source_language: es
+
+sketch:
+  es:
+    text: >
+      Sea f(x) = x^n. Por el teorema del binomio,
+      (x + h)^n = x^n + n x^{n−1} h + C(n,2) x^{n−2} h^2
+                + ··· + n x h^{n−1} + h^n.
+      Entonces
+      f(x+h) − f(x) = n x^{n−1} h + C(n,2) x^{n−2} h^2
+                    + ··· + n x h^{n−1} + h^n,
+      y dividiendo entre h:
+      (f(x+h) − f(x))/h = n x^{n−1} + C(n,2) x^{n−2} h
+                        + ··· + n x h^{n−2} + h^{n−1}.
+      Tomando h → 0, todos los términos excepto el primero tienen
+      h como factor y tienden a 0. Por lo tanto
+      f'(x) = n x^{n−1}.
+    is_original: true
+    origin: original
+    review_status: unreviewed
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: medium
+  semantic_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart's "Segunda demostración". Uses the (h → 0) limit form
+  and the binomial theorem (referenced but not proved in the text;
+  Stewart points to reference page 1). dependency_confidence:medium
+  reflects the unstated binomial theorem.

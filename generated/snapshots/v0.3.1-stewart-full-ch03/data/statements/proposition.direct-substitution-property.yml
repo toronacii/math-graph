@@ -1,0 +1,116 @@
+schema_version: "0.3.1"
+id: proposition.direct-substitution-property
+type: proposition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Propiedad de sustitución directa
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Direct substitution property
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Si f es una función polinomial o una función racional y a
+        está en el dominio de f, entonces lím_{x→a} f(x) = f(a).
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        If f is a polynomial or a rational function and a is in the
+        domain of f, then lim_{x→a} f(x) = f(a).
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      \lim_{x \to a} f(x) = f(a)
+      \qquad (f \text{ polinomial o racional}, \; a \in \mathrm{dom}(f))
+    status: present
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: definition.polynomial
+    role: uses_concept
+    confidence: high
+  - id: definition.rational-function
+    role: uses_concept
+    confidence: high
+  - id: definition.limit-of-function
+    role: uses_concept
+    confidence: high
+  - id: definition.domain
+    role: uses_concept
+    confidence: high
+  - id: proposition.limit-laws
+    role: uses_concept
+    confidence: high
+    notes: derives from repeated application of sum/product/quotient laws
+  - id: proposition.limit-power-of-x
+    role: uses_concept
+    confidence: high
+  - id: proposition.limit-of-constant
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.3"
+    theorem_label: "Propiedad de sustitución directa"
+    page: "101"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [real-analysis]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [property, criterion]
+  keywords: [limit, polynomial, rational-function, continuity-precursor]
+
+generality: []
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart says functions with this property are exactly the
+  continuous functions (developed in §2.5). Proof deferred to §2.3
+  Exercises 55 & 56; no proof node authored. Will eventually be
+  generality-related to definition.continuity-at-point as a
+  special case for polynomial/rational f.

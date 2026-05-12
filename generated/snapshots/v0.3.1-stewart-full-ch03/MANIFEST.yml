@@ -1,0 +1,7 @@
+snapshot:
+  label: v0.3.1-stewart-full-ch03
+  created: '2026-05-12T00:05:52.604552+00:00'
+  status: frozen
+  policy: read-only-historical-archive
+file_count: 281
+hash_index: hashes.txt

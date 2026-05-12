@@ -1,0 +1,95 @@
+schema_version: "0.3.1"
+id: theorem.constant-multiple-rule-derivative
+type: theorem
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Regla del múltiplo constante (derivada)
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Constant multiple rule (derivative)
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Si c es una constante y f es una función derivable,
+        entonces (d/dx)[c f(x)] = c (d/dx) f(x).
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        If c is a constant and f is a differentiable function,
+        then (d/dx)[c f(x)] = c (d/dx) f(x).
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      \frac{d}{dx}\bigl[c\,f(x)\bigr] \;=\; c\,\frac{d}{dx}f(x)
+    status: present
+    review_status: unreviewed
+
+proved_by:
+  - proof.constant-multiple-rule-derivative.stewart
+
+depends_on:
+  - id: definition.derivative-function
+    role: uses_concept
+    confidence: high
+  - id: definition.differentiable-at-point
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.1"
+    theorem_label: "Regla del múltiplo constante"
+    page: "177"
+    source_language: es
+
+domains:
+  primary: [calculus]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [principle]
+  keywords: [derivative, linearity, scalar-multiple, differentiation-rule]
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Together with the sum rule, encodes linearity of differentiation.
+  Stewart proves it directly from the limit definition and the
+  constant-multiple law for limits (Limit Law 3).

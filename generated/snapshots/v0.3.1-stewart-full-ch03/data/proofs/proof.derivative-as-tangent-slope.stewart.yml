@@ -1,0 +1,79 @@
+schema_version: "0.3.1"
+id: proof.derivative-as-tangent-slope.stewart
+type: proof
+status: extracted
+
+proves: proposition.derivative-as-tangent-slope
+style: by-definition
+
+uses:
+  - id: definition.tangent-line
+    role: definition
+    confidence: high
+    notes: provides the limit defining the tangent slope (Eqs 1 and 2)
+  - id: definition.derivative-at-point
+    role: definition
+    confidence: high
+    notes: provides the same difference-quotient limit (Eq 4)
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.7"
+    locator: "Texto que precede al recuadro de la p.147"
+    page: "147"
+    source_language: es
+
+sketch:
+  es:
+    text: >
+      Por la Definición 1 (§2.7), la pendiente m de la recta
+      tangente a y = f(x) en P(a, f(a)) es
+      m = lím_{x→a} (f(x) − f(a))/(x − a). Equivalentemente, por la
+      sustitución h = x − a, m = lím_{h→0} (f(a + h) − f(a))/h
+      (Ecuación 2). Por la Definición 4 (§2.7), la derivada f'(a)
+      es exactamente f'(a) = lím_{h→0} (f(a + h) − f(a))/h. Las
+      dos expresiones son literalmente el mismo límite, por lo
+      tanto m = f'(a). La forma punto-pendiente de la recta que
+      pasa por (a, f(a)) con pendiente f'(a) es
+      y − f(a) = f'(a)·(x − a).
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: >
+      By Definition 1 (§2.7), the slope m of the tangent line to
+      y = f(x) at P(a, f(a)) is
+      m = lim_{x→a} (f(x) − f(a))/(x − a). Equivalently, with the
+      substitution h = x − a, m = lim_{h→0} (f(a + h) − f(a))/h
+      (Eq. 2). By Definition 4 (§2.7), the derivative f'(a) is
+      exactly f'(a) = lim_{h→0} (f(a + h) − f(a))/h. The two
+      expressions are literally the same limit, hence m = f'(a).
+      The point-slope form of the line through (a, f(a)) with
+      slope f'(a) is y − f(a) = f'(a)·(x − a).
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Definitional unfolding: the tangent slope and the derivative are
+  defined by the same limit expression, so the identification is
+  immediate. Stewart presents this in a single sentence on p.147
+  ("Ya que, por la definición 4, ésta es la misma que la derivada
+  f'(a)..."). No additional machinery is required.

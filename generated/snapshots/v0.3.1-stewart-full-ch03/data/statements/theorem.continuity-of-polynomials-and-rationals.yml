@@ -1,0 +1,115 @@
+schema_version: "0.3.1"
+id: theorem.continuity-of-polynomials-and-rationals
+type: theorem
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Continuidad de funciones polinomiales y racionales
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Continuity of polynomial and rational functions
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        (a) Cualquier función polinomial es continua en todo su
+        dominio; es decir, es continua sobre (−∞, ∞).
+        (b) Cualquier función racional es continua siempre que esté
+        definida; esto es, es continua en su dominio.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        (a) Every polynomial function is continuous on its entire
+        domain, i.e. on (−∞, ∞).
+        (b) Every rational function is continuous wherever it is
+        defined, i.e. on its domain.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      \begin{aligned}
+      &P \text{ polynomial} \implies P \text{ continuous on } \mathbb{R}, \\
+      &f = P/Q \text{ rational} \implies f \text{ continuous on its domain}.
+      \end{aligned}
+    status: present
+    review_status: unreviewed
+
+proved_by:
+  - proof.continuity-of-polynomials-and-rationals.stewart
+
+depends_on:
+  - id: definition.continuity-at-point
+    role: uses_concept
+    confidence: high
+  - id: definition.polynomial
+    role: uses_concept
+    confidence: high
+  - id: definition.rational-function
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.5"
+    theorem_label: "Teorema 5"
+    page: "122"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [real-analysis]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [property]
+  keywords: [continuity, polynomial, rational]
+
+generality:
+  - target: proposition.direct-substitution-property
+    relation: equivalent
+    notes: >
+      Stewart §2.5 explicitly identifies Thm 5 as the §2.3
+      direct-substitution property recast in continuity language.
+      Owned here per policy 04 (alphabetically earlier id:
+      'continuity-of-...' < 'direct-substitution-property').
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart's text on p.122: "El siguiente teorema se estableció en
+  la sección 2.3 como la propiedad de sustitución directa." Hence
+  the equivalent edge to proposition.direct-substitution-property.

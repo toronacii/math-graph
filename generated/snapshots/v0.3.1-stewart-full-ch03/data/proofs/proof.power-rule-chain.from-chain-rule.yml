@@ -1,0 +1,56 @@
+schema_version: "0.3.1"
+id: proof.power-rule-chain.from-chain-rule
+type: proof
+status: extracted
+
+proves: theorem.power-rule-chain
+style: corollary
+
+uses:
+  - id: theorem.chain-rule
+    role: essential
+    confidence: high
+    notes: composite y = f(u) = u^n with u = g(x)
+  - id: theorem.power-rule-general
+    role: essential
+    confidence: medium
+    notes: provides f'(u) = n u^{n−1}; inherits Stewart's open debt for non-rational n until §3.6
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.4"
+    locator: "Derivación inline (página 201)"
+    page: "201"
+    source_language: es
+
+sketch:
+  es:
+    text: >
+      Sea y = [g(x)]^n. Escriba y = f(u) con f(u) = u^n y
+      u = g(x). Por theorem.power-rule-general, f'(u) = n u^{n−1}.
+      Por theorem.chain-rule,
+      dy/dx = (dy/du)·(du/dx) = n u^{n−1} · g'(x)
+            = n [g(x)]^{n−1} · g'(x).
+    is_original: true
+    origin: original
+    review_status: unreviewed
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: medium
+  semantic_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  One-line corollary. Inherits power-rule-general debt
+  (full real-exponent justification deferred to §3.6).

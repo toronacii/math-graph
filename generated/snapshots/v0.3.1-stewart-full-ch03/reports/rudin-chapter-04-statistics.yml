@@ -1,0 +1,42 @@
+cumulative:
+  nodes: 506
+  edges: 645
+  statements: 320
+  proofs: 186
+  definitions: 143
+  propositions: 43
+  theorems: 117
+  lemmas: 2
+  corollaries: 15
+
+chapter_4:
+  new_statements: 28
+  new_proofs: 21
+  total_entities: 49
+  breakdown:
+    definitions: 8
+    propositions: 1
+    theorems: 16
+    corollaries: 3
+    proofs: 21
+
+  reclassifications:
+    theorem_to_proposition: 1
+    details:
+      - continuity-limit-point-equivalence
+
+  cross_chapter_dependencies: 14
+  top_dependencies:
+    - definition.continuity-metric (x7)
+    - definition.compact-set (x5)
+    - definition.limit-of-function-metric (x4)
+    - definition.neighborhood-limit-point-open-closed (x3)
+    - theorem.continuity-open-preimage (x3)
+    - proposition.convergent-sequence-properties (x2)
+    - theorem.continuous-image-compact (x3)
+    - definition.separated-connected (x1)
+    - theorem.connected-subsets-of-r (x1)
+
+  shared_with_stewart: 1
+  shared_theorems:
+    - theorem.intermediate-value-theorem

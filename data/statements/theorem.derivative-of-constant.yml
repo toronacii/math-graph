@@ -1,0 +1,93 @@
+schema_version: "0.3.1"
+id: theorem.derivative-of-constant
+type: theorem
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Derivada de una función constante
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Derivative of a constant function
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        La derivada de cualquier función constante es cero. Es
+        decir, si c es un número real, entonces (d/dx)(c) = 0.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        The derivative of any constant function is zero. That is,
+        if c is a real number, then (d/dx)(c) = 0.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      \frac{d}{dx}\,c \;=\; 0
+    status: present
+    review_status: unreviewed
+
+proved_by:
+  - proof.derivative-of-constant.stewart
+
+depends_on:
+  - id: definition.derivative-function
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.1"
+    theorem_label: "Derivada de una función constante"
+    page: "174"
+    source_language: es
+
+domains:
+  primary: [calculus]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [principle]
+  keywords: [derivative, constant-function, differentiation-rule]
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart presents this as a named rule with a one-line limit-
+  definition derivation. Classified as theorem (named, reusable,
+  proved). The graphical motivation (horizontal line of slope 0)
+  is pedagogical scaffolding, not part of the proof.

@@ -1,0 +1,245 @@
+rerun_id: v0.3.1-stewart-full
+chapter: "2"
+partial: true
+snapshot_label: v0.3.1-stewart-full-ch2-partial
+generated_at: "2026-05-11"
+
+# Per the 2026-05-11 audit, weak_dependencies is reported SEPARATELY
+# from semantic_dependency_audit_status — empty `weak_dependencies`
+# does NOT imply audited.
+
+weak_dependencies: []
+
+semantic_dependency_audit_status: pending
+
+low_confidence_proofs: []
+
+implicit_imports:
+  - in: theorem.squeeze-theorem
+    via: depends_on
+    cites: proposition.limit-monotonicity
+    role: uses_concept
+    confidence: medium
+    note: >
+      Squeeze conceptually subsumes monotonicity; Stewart does not
+      cite the latter explicitly. We mark the conceptual link as
+      uses_concept at medium confidence rather than asserting
+      Stewart "uses" it in the proof (which is deferred anyway).
+
+epistemic_debt:
+  # New in Ch2-partial
+  - id: definition.limit-of-function
+    kind: informal_definition
+    severity: medium
+    description: >
+      Stewart's "intuitive" Definición 1: "arbitrarily close" /
+      "sufficiently close" without quantifiers. Rigorous ε-δ
+      sibling (definition.epsilon-delta-limit) lands in §2.4.
+    remediation: author rigorous sibling node in §2.4; do NOT merge
+    blocks_status_promotion: false
+
+  - id: definition.left-hand-limit
+    kind: informal_definition
+    severity: medium
+    description: >
+      Stewart Def 2 — informal one-sided variant. Rigorous sibling
+      definition.left-hand-limit-precise will land in §2.4
+      Exercise 25.
+    remediation: author rigorous sibling in §2.4
+    blocks_status_promotion: false
+
+  - id: definition.right-hand-limit
+    kind: informal_definition
+    severity: medium
+    description: >
+      Symmetric to left-hand-limit; same remediation path.
+    remediation: author rigorous sibling in §2.4
+    blocks_status_promotion: false
+
+  - id: definition.infinite-limit
+    kind: informal_definition
+    severity: medium
+    description: >
+      Stewart Def 4: divergence to +∞. Symbol ∞ explicitly NOT a
+      number. Rigorous sibling lands in §2.4.
+    remediation: author rigorous sibling in §2.4
+    blocks_status_promotion: false
+
+  - id: definition.negative-infinite-limit
+    kind: informal_definition
+    severity: medium
+    description: >
+      Stewart Def 5: divergence to −∞. Symmetric to infinite-limit.
+    remediation: author rigorous sibling in §2.4
+    blocks_status_promotion: false
+
+  - id: definition.vertical-asymptote
+    kind: bundled_definition
+    severity: low
+    description: >
+      Type-A bundle of 6 divergence conditions (combinations of
+      ±∞ × {two-sided, left, right}). Acceptable bundling per
+      policy 06; Stewart presents them as a single boxed list.
+    remediation: split if downstream proofs cite individual cases
+    blocks_status_promotion: false
+
+  - id: proposition.limit-laws
+    kind: bundled_proposition
+    severity: medium
+    description: >
+      Type-A bundle of Laws 1–5 (sum, diff, const-mult, prod, quot)
+      sharing structural form and hypotheses. Stewart's main proof
+      sketch in §2.4 covers Law 1 only; the rest are in Apéndice F.
+    remediation: >
+      Split into proposition.limit-{sum,difference,constant-multiple,
+      product,quotient}-law if downstream proofs cite individual
+      laws. Currently aggregated.
+    blocks_status_promotion: false
+
+  - id: proposition.limit-root-law
+    kind: bundled_proposition
+    severity: low
+    description: >
+      Bundles Stewart Laws 10 (root of x) and 11 (root of f).
+      Law 11 generalizes Law 10. dependency_confidence: medium
+      because root function inherits real-exponent informality from
+      definition.power-function.
+    remediation: split into proposition.limit-{nth-root-of-x,
+      nth-root-of-f}-law if needed; tighten when rigorous nth-root
+      construction enters the graph
+    blocks_status_promotion: false
+
+  - id: proposition.direct-substitution-property
+    kind: forward_reference_no_proof
+    severity: low
+    description: >
+      Stewart asserts that polynomial / rational functions satisfy
+      lim_{x→a} f(x) = f(a) for a ∈ dom(f), but defers the proof to
+      §2.3 Exercises 55–56. Becomes a corollary of continuity in
+      §2.5.
+    remediation: author proof node citing limit-laws + limit-power-of-x;
+      add generality edge to definition.continuity-at-point in §2.5
+    blocks_status_promotion: false
+
+  - id: proposition.limit-monotonicity
+    kind: deferred_proof
+    severity: low
+    description: >
+      Stewart Teorema 2 of §2.3 — proof in Apéndice F. Requires
+      definition.epsilon-delta-limit.
+    remediation: author proof node when §2.4 lands
+    blocks_status_promotion: false
+
+  - id: theorem.squeeze-theorem
+    kind: deferred_proof
+    severity: low
+    description: >
+      Stewart Teorema 3 of §2.3 — proof in Apéndice F. Requires
+      definition.epsilon-delta-limit and an interval-shrinking
+      argument.
+    remediation: author proof node when §2.4 lands
+    blocks_status_promotion: false
+
+  - id: proposition.limit-exists-iff-one-sided-limits
+    kind: deferred_proof
+    severity: low
+    description: >
+      Stated as Eq 3 in §2.2 and Theorem 1 in §2.3 — both without
+      proof. Rigorous proof requires definition.epsilon-delta-limit.
+    remediation: author proof node when §2.4 lands
+    blocks_status_promotion: false
+
+  # Carried forward from Ch1 (still open)
+  - id: definition.trigonometric-function
+    kind: bundled_definition
+    severity: medium
+    description: Six trig functions in one paragraph. Carried per user directive.
+    remediation: defer split
+    blocks_status_promotion: true
+
+  - id: definition.inverse-trigonometric-function
+    kind: bundled_definition
+    severity: medium
+    description: Six inverse-trig functions in one paragraph.
+    remediation: defer split
+    blocks_status_promotion: true
+
+  - id: definition.exponential-function
+    kind: informal_construction
+    severity: medium
+    description: Real-exponent extension informal.
+    remediation: rigorous companion when Ch3 derivatives land or Rudin merge
+    blocks_status_promotion: false
+
+  - id: definition.natural-exponential-function
+    kind: forward_reference
+    severity: medium
+    description: e defined via tangent slope (Ch3 forward reference).
+    remediation: add limit-based equivalent in Ch3
+    blocks_status_promotion: false
+
+  - id: definition.logarithmic-function
+    kind: inherited_informality
+    severity: medium
+    remediation: tracked alongside definition.exponential-function
+    blocks_status_promotion: false
+
+  - id: definition.linear-function
+    kind: terminology_collision
+    severity: low
+    description: Affine ≠ linear-algebra "linear".
+    remediation: add definition.linear-map node in linear algebra chapter
+    blocks_status_promotion: false
+
+  - id: definition.algebraic-function
+    kind: informal_definition
+    severity: low
+    remediation: add rigorous companion at first use
+    blocks_status_promotion: false
+
+  - id: definition.power-function
+    kind: schematic_domain
+    severity: low
+    remediation: revisit when later formalization needs case split
+    blocks_status_promotion: false
+
+  - id: definition.arithmetic-of-functions
+    kind: bundled_construction
+    severity: low
+    remediation: split if per-operation downstream demand
+    blocks_status_promotion: false
+
+  - id: proposition.laws-of-exponents
+    kind: bundled_proposition
+    severity: low
+    remediation: split when individual laws cited; add proof when real-exponent rigorous
+    blocks_status_promotion: false
+
+  - id: proposition.laws-of-logarithms
+    kind: bundled_proposition
+    severity: low
+    remediation: split per-law if downstream cites individually
+    blocks_status_promotion: false
+
+deferred_extraction:
+  - section: "2.2"
+    item: "Cuatro casos de límites laterales infinitos (lim_{a±} f = ±∞)"
+    note: >
+      Stewart defines them collectively in a paragraph after Def 5
+      without numbering. Currently consumed by definition.vertical-
+      asymptote via the two-sided infinite-limit nodes. If §2.6 or
+      Ch4 (curve sketching) needs them as atoms, split out then.
+
+cross_source_merge_queue:
+  - id: definition.limit-of-function
+    pending_source: rudin
+    note: >
+      Rudin §4.1 defines limits in metric spaces. Will become a
+      generality edge: Stewart's pedagogical version is the
+      real-line special case of the metric-space rigorous version.
+  - id: theorem.squeeze-theorem
+    pending_source: rudin
+    note: Rudin Theorem 3.19 (sequential version) and 4.6 corollary.
+  - id: proposition.limit-laws
+    pending_source: rudin
+    note: Rudin Theorem 4.4 (algebraic limit theorem for functions).

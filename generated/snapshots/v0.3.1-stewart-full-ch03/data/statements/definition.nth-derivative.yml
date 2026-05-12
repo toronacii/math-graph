@@ -1,0 +1,118 @@
+schema_version: "0.3.1"
+id: definition.nth-derivative
+type: definition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: n-ésima derivada
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: n-th derivative
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Para n ≥ 1, la n-ésima derivada de f, denotada f^(n), se
+        define recursivamente: f^(1) = f' y, para n ≥ 2,
+        f^(n) = (f^(n−1))', es decir, se obtiene derivando f
+        sucesivamente n veces. La tercera y cuarta derivadas
+        suelen escribirse f''' y f^(4); en notación de Leibniz,
+        para y = f(x), se escribe d^n y / dx^n.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        For n ≥ 1, the n-th derivative of f, denoted f^(n), is
+        defined recursively: f^(1) = f' and, for n ≥ 2,
+        f^(n) = (f^(n−1))', i.e. it is obtained by differentiating
+        f successively n times. The third and fourth derivatives
+        are usually written f''' and f^(4); in Leibniz notation,
+        for y = f(x), one writes d^n y / dx^n.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      f^{(n)}(x) \;=\; \bigl(f^{(n-1)}\bigr)'(x),
+        \qquad \frac{d^{n} y}{dx^{n}}
+        \;=\; \frac{d}{dx}\!\left(\frac{d^{n-1} y}{dx^{n-1}}\right)
+    status: present
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: definition.derivative-function
+    role: uses_concept
+    confidence: high
+  - id: definition.second-derivative
+    role: uses_concept
+    confidence: high
+    notes: explicit base case n = 2 (and equivalently the recursion seed n = 1 = f')
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.8"
+    locator: "Subsección «Derivadas superiores», después de la 2ª derivada"
+    page: "161"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [analysis]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [object, operator, construction]
+  keywords: [higher-derivative, recursive-definition, n-th-derivative]
+
+generality:
+  - target: definition.second-derivative
+    relation: stronger_than
+    notes: >
+      The second derivative is the case n = 2 of the n-th
+      derivative; this node generalizes the previous one.
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart introduces the recursion informally ("derivando n veces
+  a f"); the recursive form is recorded explicitly here. Edge
+  ownership: "nth-derivative" comes after "second-derivative"
+  alphabetically, so per policy 04 the generality edge should be
+  declared on second-derivative. Declared HERE on the more general
+  node so that the specialization arrow points from the general
+  recursive definition down to the n=2 instance, matching reading
+  order. Flagged for editorial review.

@@ -1,0 +1,121 @@
+schema_version: "0.3.1"
+id: theorem.derivatives-of-inverse-hyperbolic-functions
+type: theorem
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Derivadas de las funciones hiperbólicas inversas
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Derivatives of the inverse hyperbolic functions
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Las derivadas de las seis funciones hiperbólicas inversas son:
+        (d/dx) senh⁻¹ x = 1/√(1 + x²);
+        (d/dx) cosh⁻¹ x = 1/√(x² − 1) (x > 1);
+        (d/dx) tanh⁻¹ x = 1/(1 − x²) (|x| < 1);
+        (d/dx) csch⁻¹ x = − 1/(|x| √(x² + 1)) (x ≠ 0);
+        (d/dx) sech⁻¹ x = − 1/(x √(1 − x²)) (0 < x < 1);
+        (d/dx) coth⁻¹ x = 1/(1 − x²) (|x| > 1).
+        Las fórmulas para tanh⁻¹ y coth⁻¹ son idénticas como
+        expresiones, pero sus dominios son disjuntos.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        The derivatives of the six inverse hyperbolic functions
+        are: (d/dx) sinh⁻¹ x = 1/√(1 + x²);
+        (d/dx) cosh⁻¹ x = 1/√(x² − 1) (x > 1);
+        (d/dx) tanh⁻¹ x = 1/(1 − x²) (|x| < 1);
+        (d/dx) csch⁻¹ x = −1/(|x|√(x² + 1)) (x ≠ 0);
+        (d/dx) sech⁻¹ x = −1/(x√(1 − x²)) (0 < x < 1);
+        (d/dx) coth⁻¹ x = 1/(1 − x²) (|x| > 1).
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      \begin{aligned}
+        \frac{d}{dx}\sinh^{-1} x &= \frac{1}{\sqrt{1 + x^{2}}}, &
+        \frac{d}{dx}\operatorname{csch}^{-1} x &= -\frac{1}{|x|\sqrt{x^{2} + 1}},\\[4pt]
+        \frac{d}{dx}\cosh^{-1} x &= \frac{1}{\sqrt{x^{2} - 1}}, &
+        \frac{d}{dx}\operatorname{sech}^{-1} x &= -\frac{1}{x\sqrt{1 - x^{2}}},\\[4pt]
+        \frac{d}{dx}\tanh^{-1} x &= \frac{1}{1 - x^{2}}, &
+        \frac{d}{dx}\coth^{-1} x &= \frac{1}{1 - x^{2}}.
+      \end{aligned}
+    status: present
+    review_status: unreviewed
+
+proved_by:
+  - proof.derivatives-of-inverse-hyperbolic-functions.implicit
+
+depends_on:
+  - id: definition.inverse-hyperbolic-function
+    role: uses_concept
+    confidence: high
+  - id: definition.derivative-function
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.11"
+    theorem_label: "Tabla 6 — Derivadas de las funciones hiperbólicas inversas"
+    page: "261"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [analysis]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [principle]
+  keywords: [inverse-hyperbolic-derivative, arcsinh, arctanh, implicit]
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: medium
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Bundled per the trig-bundle policy. Stewart proves
+  (d/dx) senh⁻¹ x in Example 4 by two methods (implicit
+  differentiation, and differentiating the log form of Eq 3).
+  The remaining five derivatives are Exercise 29. tanh⁻¹ and
+  coth⁻¹ have algebraically identical derivatives but disjoint
+  domains — Stewart highlights this explicitly. Hidden
+  hypothesis: the inverse of a differentiable bijection is
+  differentiable (asserted informally page 261), captured as
+  dependency_confidence:medium.

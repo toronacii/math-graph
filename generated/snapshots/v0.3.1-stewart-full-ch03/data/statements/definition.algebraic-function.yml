@@ -1,0 +1,109 @@
+schema_version: "0.3.1"
+id: definition.algebraic-function
+type: definition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Función algebraica
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Algebraic function
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Una función f se llama algebraica si puede construirse a
+        partir de polinomios mediante operaciones algebraicas (suma,
+        resta, multiplicación, división y extracción de raíces).
+        Toda función racional es automáticamente algebraica.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        A function f is called algebraic if it can be built from
+        polynomials by algebraic operations (addition, subtraction,
+        multiplication, division, and taking roots). Every rational
+        function is automatically algebraic.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    status: informal
+    body: |
+      f \in \langle \text{polynomials}, +, -, \times, /, \sqrt[n]{\cdot} \rangle
+    review_status: unreviewed
+
+proved_by: []
+depends_on:
+  - id: definition.polynomial
+    role: uses_concept
+    confidence: high
+  - id: definition.rational-function
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.2"
+    locator: "Funciones algebraicas (sección 1.2)"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [algebra]
+
+ambient:
+  structures: [real-line]
+  notes: >
+    Stewart's "algebraic" is informal — built by finitely many
+    algebraic operations. The rigorous algebraic-function notion (root
+    of a polynomial equation in two variables) is a separate, more
+    technical concept reserved for a later node.
+
+ontology:
+  semantic_kind: [object]
+  keywords: [algebraic, radical, polynomial-closure]
+
+generality:
+  - target: definition.rational-function
+    relation: stronger_than
+    notes: Algebraic functions properly contain rational functions.
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: medium
+  semantic_confidence: medium
+  translation_confidence: medium
+  latex_confidence: low
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart's definition is closure-style and informal; the rigorous
+  algebraic-function definition (zeros of a polynomial in y with
+  coefficients in R(x)) is a distinct, more technical node not
+  introduced here. `latex_confidence: low` reflects the informal
+  closure notation.

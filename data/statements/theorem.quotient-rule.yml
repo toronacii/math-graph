@@ -1,0 +1,104 @@
+schema_version: "0.3.1"
+id: theorem.quotient-rule
+type: theorem
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Regla del cociente
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Quotient rule
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Si f y g son derivables y g(x) ≠ 0, entonces el cociente
+        f/g es derivable y
+        (d/dx)[f(x)/g(x)] = (g(x) (d/dx) f(x) − f(x) (d/dx) g(x))
+                          / g(x)^2.
+        En palabras: la derivada de un cociente es el denominador
+        por la derivada del numerador, menos el numerador por la
+        derivada del denominador, todo dividido entre el cuadrado
+        del denominador.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        If f and g are differentiable and g(x) ≠ 0, then f/g is
+        differentiable and (d/dx)[f(x)/g(x)] =
+        (g(x) f'(x) − f(x) g'(x)) / g(x)^2.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      \frac{d}{dx}\!\left[\frac{f(x)}{g(x)}\right] \;=\;
+        \frac{g(x)\,\dfrac{d}{dx}f(x) \;-\; f(x)\,\dfrac{d}{dx}g(x)}
+             {\bigl[g(x)\bigr]^{2}}
+    status: present
+    review_status: unreviewed
+
+proved_by:
+  - proof.quotient-rule.stewart
+
+depends_on:
+  - id: definition.derivative-function
+    role: uses_concept
+    confidence: high
+  - id: definition.differentiable-at-point
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.2"
+    theorem_label: "Regla del cociente"
+    page: "187"
+    source_language: es
+
+domains:
+  primary: [calculus]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [principle]
+  keywords: [quotient-rule, derivative, differentiation-rule, rational]
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart's exhortation: "do not use the quotient rule every time
+  you see a quotient" — sometimes algebraic simplification first
+  is easier (e.g., F(x) = (3x² + 2√x)/x → 3x + 2x^{−1/2}).

@@ -1,0 +1,100 @@
+schema_version: "0.3.1"
+id: theorem.sum-rule-derivative
+type: theorem
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Regla de la suma (derivada)
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Sum rule (derivative)
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Si f y g son derivables, entonces
+        (d/dx)[f(x) + g(x)] = (d/dx) f(x) + (d/dx) g(x). La regla
+        se extiende a cualquier número finito de sumandos por
+        aplicación iterada.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        If f and g are differentiable, then
+        (d/dx)[f(x) + g(x)] = (d/dx) f(x) + (d/dx) g(x). The rule
+        extends to any finite sum by iterated application.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      \frac{d}{dx}\bigl[f(x) + g(x)\bigr] \;=\;
+        \frac{d}{dx}f(x) + \frac{d}{dx}g(x)
+    status: present
+    review_status: unreviewed
+
+proved_by:
+  - proof.sum-rule-derivative.stewart
+
+depends_on:
+  - id: definition.derivative-function
+    role: uses_concept
+    confidence: high
+  - id: definition.differentiable-at-point
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.1"
+    theorem_label: "Regla de la suma"
+    page: "177"
+    source_language: es
+
+domains:
+  primary: [calculus]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [principle]
+  keywords: [derivative, linearity, sum, differentiation-rule]
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart proves it directly via Limit Law 1 (sum law). The
+  iterated-extension claim is justified inline; formally it is an
+  induction omitted by Stewart and we record it under the same
+  node.

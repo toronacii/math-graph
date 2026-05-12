@@ -1,0 +1,106 @@
+schema_version: "0.3.1"
+id: theorem.intermediate-value-theorem
+type: theorem
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Teorema del valor intermedio
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Intermediate value theorem
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Suponga que f es continua sobre el intervalo cerrado [a, b]
+        y sea N cualquier número entre f(a) y f(b), donde
+        f(a) ≠ f(b). Entonces existe un número c en (a, b) tal que
+        f(c) = N.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        Suppose f is continuous on the closed interval [a, b] and
+        let N be any number between f(a) and f(b), where
+        f(a) ≠ f(b). Then there exists a number c in (a, b) such
+        that f(c) = N.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      f \in C[a,b],\ N \text{ between } f(a) \text{ and } f(b),\
+      f(a) \neq f(b)
+      \implies
+      \exists c \in (a,b) :\ f(c) = N
+    status: present
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: definition.continuity-on-interval
+    role: uses_concept
+    confidence: high
+  - id: definition.function
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.5"
+    theorem_label: "Teorema 10"
+    page: "125"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [real-analysis]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [property]
+  keywords: [continuity, intermediate-value, existence]
+
+generality: []
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart §2.5 Teorema 10. The proof "se encuentra en libros más
+  avanzados de cálculo" (deferred to real-analysis treatment, e.g.
+  Rudin via connectedness). No proof node authored. Open epistemic
+  debt: rigorously this requires the completeness of ℝ (least-
+  upper-bound property), which is NOT yet in the graph.

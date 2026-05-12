@@ -1,0 +1,208 @@
+rerun_id: v0.3.1-stewart-full
+chapter: "2"
+chapter_title:
+  es: Límites y derivadas
+  en: Limits and Derivatives
+sections_covered:
+  - "2.1"   # Tangentes / velocidades (motivación)
+  - "2.2"   # Límite informal + laterales + infinitos + asíntotas verticales
+  - "2.3"   # Leyes de límites
+  - "2.4"   # Definición precisa (epsilon-delta)
+  - "2.5"   # Continuidad
+  - "2.6"   # Límites al infinito; asíntotas horizontales
+  - "2.7"   # Derivadas y razones de cambio
+  - "2.8"   # La derivada como una función
+sections_pending: []
+partial: false
+snapshot_label: v0.3.1-stewart-full-ch02
+generated_at: "2026-05-11"
+
+counts:
+  total_nodes: 108
+  statements: 94
+  proofs: 14
+  by_type:
+    definition: 67
+    proposition: 18
+    theorem: 9
+    proof: 14
+  ch2_only:
+    statements_first_introduced: 55
+    proofs_first_introduced: 9
+  by_section_statements_ch2:
+    "2.1": 2     # secant-line, average-velocity
+    "2.2": 7     # limit (informal), L/R one-sided, iff, infinite, neg-infinite, vertical-asymptote
+    "2.3": 10    # limit-laws + power-law + of-constant + of-identity + power-of-x + root-law +
+                 # direct-substitution + equality-near-point + monotonicity + squeeze
+    "2.4": 5     # epsilon-delta + L/R precise + infinite-precise + neg-infinite-precise
+    "2.5": 10    # continuity-at-point + L/R + on-interval + arithmetic + poly/rational +
+                 # elementary + limit-through-continuous + composition + IVT
+    "2.6": 7     # limit-at-inf + neg + horizontal-asymptote + epsilon-N + neg-epsilon-N +
+                 # infinite-limit-at-inf + reciprocal-power
+    "2.7": 6     # tangent-line + instant-velocity + derivative-at-point + average-rate +
+                 # instantaneous-rate + derivative-as-tangent-slope
+    "2.8": 8     # derivative-function + diff-at-point + diff-on-interval + diff-implies-cont +
+                 # second-derivative + nth-derivative + acceleration + non-diff-cases
+
+  total_edges: 284
+  edges_by_kind:
+    statement_proved_by: 14
+    statement_depends_on: 202
+    statement_generality: 29
+    proof_uses: 39
+  proof_edge_role_distribution:
+    essential: 24
+    definition: 12
+    notation: 1
+    background: 2
+
+graph_density:
+  nodes: 108
+  edges: 284
+  density: 0.0246
+  components: 1
+
+hubs_post_chapter_2:
+  most_referenced:
+    - id: definition.function
+      in_degree: 53
+      role: universal hub (Ch1 + Ch2 every statement uses "function")
+    - id: definition.limit-of-function
+      in_degree: 22
+      role: foundational hub for §2.2–§2.7
+    - id: definition.domain
+      in_degree: 16
+    - id: definition.continuity-at-point
+      in_degree: 12
+      role: hub for §2.5 + §2.8 differentiability/continuity bridge
+    - id: definition.graph-of-function
+      in_degree: 10
+    - id: definition.absolute-value
+      in_degree: 8
+    - id: definition.logarithmic-function
+      in_degree: 7
+    - id: definition.polynomial
+      in_degree: 6
+    - id: definition.rational-function
+      in_degree: 6
+    - id: definition.derivative-at-point
+      in_degree: 5
+      role: NEW Ch2 hub (entry point for §2.7–§2.8 + all of Ch3)
+    - id: definition.power-function
+      in_degree: 5
+    - id: definition.epsilon-delta-limit
+      in_degree: 5
+
+orphan_count: 27
+orphan_explanation: >
+  16 carried over from Ch1 (transformations, parity, abs-value as
+  function, model, inverse-trig — leaves expected to gain edges in
+  Ch3, Ch5–7) plus 11 Ch2 leaves grouped by reason:
+  (a) ENTRY POINTS for later chapters: definition.derivative-as-
+  tangent-slope acts on tangent-line which IS used; definition.
+  acceleration, definition.nth-derivative, definition.differentiable-
+  on-interval, definition.horizontal-asymptote, definition.infinite-
+  limit-at-infinity, definition.epsilon-n-limit-at-infinity,
+  theorem.limit-of-reciprocal-power are hub-prep nodes that gain
+  citations in Ch3+ but currently terminate the dependency chain;
+  (b) EXAMPLE-LEVEL terminals: proposition.{limit-equality-near-
+  point, limit-exists-iff-one-sided-limits, limit-root-law,
+  non-differentiability-cases}, theorem.{squeeze-theorem,
+  intermediate-value-theorem, continuity-of-composition},
+  definition.vertical-asymptote — used in worked examples that the
+  graph does not encode but no other STATEMENT in the corpus depends
+  on them yet. Ch3 rules of differentiation will reduce both buckets
+  significantly.
+
+quality_summary:
+  status_distribution:
+    extracted: 108
+  dependency_confidence_set: 108
+  semantic_confidence_set: 108
+  latex_present: ~62
+  latex_informal: 11      # the §2.2 informal limit cluster + §2.6 informal infinite-limit cluster
+  latex_missing: 0
+  semantic_dependency_audit_status: pending
+
+provenance_audit:
+  schema_version_check:
+    "0.3.1": 108
+  rerun_id_check:
+    v0.3.1-stewart-full: 108
+  language_original_check:
+    es: 108
+  is_original_uniqueness: pass
+  source_locator_integrity: pass
+  page_locators_present_ch2: 64    # all 55 stmts + 9 proofs introduced in Ch2
+
+architectural_audit_application:
+  bundled_definition_splits:
+    applied:
+      - left/right-hand-limit kept as siblings (NOT merged into one one-sided-limit node)
+      - infinite-limit and negative-infinite-limit kept as siblings
+      - left/right-continuous kept as siblings of continuity-at-point
+      - epsilon-delta + L/R-precise + infinite-precise + neg-infinite-precise (§2.4) kept atomic
+      - epsilon-N + neg-epsilon-N (§2.6) kept atomic
+      - tangent-line vs derivative-at-point kept separate (line-vs-number distinction)
+      - derivative-at-point vs derivative-function kept separate (number-vs-function)
+      - second-derivative + nth-derivative kept as separate nodes with stronger_than edge
+      - differentiable-at-point vs differentiable-on-interval split (Stewart's Def 3 had both)
+    accepted_as_explicit_debt:
+      - proposition.limit-laws (Type-A bundle of 5 laws — sum proven, others deferred)
+      - proposition.limit-root-law (Type-A bundle of Stewart Laws 10+11)
+      - definition.vertical-asymptote (Type-A bundle of 6 divergence conditions)
+      - definition.infinite-limit-at-infinity (Type-A bundle of 4 cases)
+      - theorem.continuity-arithmetic (Type-A bundle of 5 closure laws — sum proven, others deferred)
+  proof_uses_role_precision: ok
+  honest_dependency_confidence: ok    # 8 entities at medium reflecting genuine debt
+  generality_edge_ownership:
+    rule_followed_by_default: yes
+    deliberate_exceptions:
+      - definition.derivative-at-point owns the equivalent edge to definition.instantaneous-rate-of-change (alphabetical earlier owner; matches Stewart's directional framing)
+      - definition.nth-derivative owns the stronger_than edge to definition.second-derivative (later alphabet but more general; flagged for editorial review)
+
+semantic_debt_register_after_ch2:
+  type_A_bundles_open:
+    - proposition.limit-laws (4 of 5 laws still informal-only at proof level)
+    - proposition.limit-root-law (Laws 10+11 proven jointly, no decomposition)
+    - theorem.continuity-arithmetic (4 of 5 closure laws not proven explicitly)
+    - definition.vertical-asymptote (6 divergence conditions in one node)
+    - definition.infinite-limit-at-infinity (4 cases bundled)
+  informal_versions_paired_with_rigorous:
+    - definition.limit-of-function ⇄ definition.epsilon-delta-limit
+    - definition.left-hand-limit ⇄ definition.left-hand-limit-precise
+    - definition.right-hand-limit ⇄ definition.right-hand-limit-precise
+    - definition.infinite-limit ⇄ definition.infinite-limit-precise
+    - definition.negative-infinite-limit ⇄ definition.negative-infinite-limit-precise
+    - definition.limit-at-infinity ⇄ definition.epsilon-n-limit-at-infinity
+    - definition.negative-limit-at-infinity ⇄ definition.epsilon-n-negative-limit-at-infinity
+  pedagogical_propositions:
+    - proposition.non-differentiability-cases (3 typical cases — non-exhaustive; flagged via semantic_kind:[criterion,pedagogical])
+
+deferred_proof_nodes:
+  - proves: proposition.limit-laws
+    reason: Stewart proves Law 1 (sum); Laws 2–5 deferred to Apéndice F
+  - proves: proposition.limit-of-constant
+    reason: deferred to §2.4 exercises (epsilon-delta with arbitrary δ)
+  - proves: proposition.limit-of-identity
+    reason: deferred to §2.4 exercises (epsilon-delta with δ = ε)
+  - proves: proposition.limit-monotonicity
+    reason: Stewart defers to Apéndice F
+  - proves: theorem.squeeze-theorem
+    reason: Stewart defers to Apéndice F
+  - proves: proposition.limit-exists-iff-one-sided-limits
+    reason: stated as proposition (Theorem 1 §2.3) without proof in main text
+  - proves: theorem.limit-of-reciprocal-power
+    reason: §2.6 Theorem 5; Stewart provides no proof (consequence of epsilon-N machinery)
+  - proves: theorem.intermediate-value-theorem
+    reason: Stewart defers to Apéndice F (Thm 10 §2.5)
+  - proves: theorem.continuity-arithmetic
+    reason: only sum case (Law 1) proved; Laws 2–5 inherit deferred status from limit-laws
+  - proves: theorem.continuity-of-elementary-functions
+    reason: stated as Theorem 7 §2.5; Stewart gives no proof in the main text
+
+closed_in_ch2:
+  - proposition.limit-root-law (proof.limit-root-law.stewart added §2.5)
+  - proposition.direct-substitution-property (linked via §2.5 Thm 5 equivalent edge)
+  - proposition.derivative-as-tangent-slope (proof.derivative-as-tangent-slope.stewart §2.7)
+  - theorem.differentiable-implies-continuous (proof.differentiable-implies-continuous.stewart §2.8)

@@ -1,0 +1,63 @@
+schema_version: "0.3.1"
+id: proof.limit-cos-minus-1-over-x.algebraic
+type: proof
+status: extracted
+
+proves: proposition.limit-cos-minus-1-over-x
+style: algebraic-manipulation
+
+uses:
+  - id: proposition.limit-sin-over-x
+    role: essential
+    confidence: high
+    notes: factored expression contains lim (sin θ)/θ = 1
+  - id: proposition.limit-laws
+    role: essential
+    confidence: high
+    notes: product law and sum law
+  - id: theorem.continuity-of-elementary-functions
+    role: essential
+    confidence: medium
+    notes: lim_{θ→0} sin θ / (cos θ + 1) = 0/2 = 0 by continuity of sine and cosine
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.3"
+    locator: "Derivación inline (página 193)"
+    page: "193"
+    source_language: es
+
+sketch:
+  es:
+    text: >
+      Multiplíquese numerador y denominador por (cos θ + 1):
+      (cos θ − 1)/θ
+        = (cos θ − 1)(cos θ + 1) / (θ (cos θ + 1))
+        = (cos² θ − 1) / (θ (cos θ + 1))
+        = − sen² θ / (θ (cos θ + 1))     (identidad pitagórica)
+        = − (sen θ / θ) · (sen θ / (cos θ + 1)).
+      Tomando θ → 0, por la ley del producto y proposition.limit-sin-over-x,
+      lím_{θ→0} (cos θ − 1)/θ = − 1 · (0 / (1 + 1)) = 0.
+    is_original: true
+    origin: original
+    review_status: unreviewed
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Standard algebraic-conjugate trick reducing the limit to the
+  fundamental sin-over-x limit plus continuity of trig functions.
