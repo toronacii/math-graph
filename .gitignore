@@ -28,6 +28,9 @@ generated/exports/*.graphml
 visualization/web/public/graph.json
 visualization/web/public/node-details.json
 
+# Agent memory / scratchpad
+memory/
+
 # Source material (copyrighted books). Keep local only, never commit.
 sources/**/*.pdf
 sources/**/*.epub
