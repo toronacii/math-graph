@@ -1,0 +1,165 @@
+schema_version: "0.3.1"
+id: proof.derivatives-of-trigonometric-functions.stewart
+type: proof
+status: extracted
+
+proves: theorem.derivatives-of-trigonometric-functions
+style: direct
+
+uses: []
+
+parts:
+  - name: derivative-of-sine
+    kind: subclaim
+    description: >
+      Proof of (d/dx) sin x = cos x from the limit definition,
+      the angle-addition formula sin(x+h) = sin x cos h + cos x sin h,
+      and the two foundational trig limits (Eq 2 and Eq 3).
+      Stewart §3.3, page 192–193 (full inline derivation).
+    uses:
+      - id: definition.derivative-function
+        role: essential
+        confidence: high
+        notes: unfolds f'(x) as the (h → 0) limit of (sin(x+h) − sin x)/h
+      - id: proposition.limit-sin-over-x
+        role: essential
+        confidence: high
+        notes: lim (sin h)/h = 1
+      - id: proposition.limit-cos-minus-1-over-x
+        role: essential
+        confidence: high
+        notes: lim (cos h − 1)/h = 0
+      - id: proposition.limit-laws
+        role: essential
+        confidence: high
+        notes: sum law and product law to split the four-term limit
+      - id: definition.trigonometric-function
+        role: definition
+        confidence: high
+        notes: angle-addition identity for sine
+
+  - name: derivative-of-cosine
+    kind: subclaim
+    description: >
+      Proof of (d/dx) cos x = − sin x. Stewart defers to Exercise 20
+      ("by the same methods used in the proof of formula 4"). The
+      argument mirrors the sine derivation using the cosine
+      angle-addition formula. Recorded here as essential structural
+      dependency; full text not in §3.3 body.
+    uses:
+      - id: definition.derivative-function
+        role: essential
+        confidence: high
+      - id: proposition.limit-sin-over-x
+        role: essential
+        confidence: high
+      - id: proposition.limit-cos-minus-1-over-x
+        role: essential
+        confidence: high
+      - id: proposition.limit-laws
+        role: essential
+        confidence: high
+      - id: definition.trigonometric-function
+        role: definition
+        confidence: high
+        notes: angle-addition identity for cosine
+
+  - name: derivative-of-tangent
+    kind: subclaim
+    description: >
+      (d/dx) tan x = sec² x derived inline via the quotient rule
+      applied to tan x = sin x / cos x, using the two preceding
+      derivatives and the Pythagorean identity sin² + cos² = 1.
+      Stewart §3.3 page 194.
+    uses:
+      - id: theorem.quotient-rule
+        role: essential
+        confidence: high
+      - id: theorem.derivatives-of-trigonometric-functions
+        role: essential
+        confidence: high
+        notes: uses the sine and cosine derivatives proved above (self-reference within the bundle)
+      - id: definition.trigonometric-function
+        role: definition
+        confidence: high
+        notes: tan = sin/cos; sec = 1/cos; Pythagorean identity
+
+  - name: derivative-of-cosecant-secant-cotangent
+    kind: subclaim
+    description: >
+      (d/dx) csc x = −csc x cot x; (d/dx) sec x = sec x tan x;
+      (d/dx) cot x = −csc² x. Stewart relegates to exercises 17–19
+      using the same quotient-rule approach: csc = 1/sin, sec = 1/cos,
+      cot = cos/sin. Recorded as bundled dependency.
+    uses:
+      - id: theorem.quotient-rule
+        role: essential
+        confidence: high
+      - id: theorem.derivatives-of-trigonometric-functions
+        role: essential
+        confidence: high
+        notes: uses sine and cosine derivatives (self-reference within the bundle)
+      - id: definition.trigonometric-function
+        role: definition
+        confidence: high
+        notes: csc, sec, cot defined as reciprocals/quotient of sin and cos
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.3"
+    locator: "Derivación inline (sin, tan) + ejercicios 17–20 (cos, csc, sec, cot)"
+    page: "192"
+    source_language: es
+
+sketch:
+  es:
+    text: >
+      Bundle de pruebas. Sólo (d/dx) sen x = cos x se demuestra
+      por completo en el cuerpo del texto (§3.3 pp. 192–193),
+      a partir de la definición de derivada y las identidades
+      de adición sen(x+h) = sen x cos h + cos x sen h:
+      (sen(x+h) − sen x)/h = sen x · (cos h − 1)/h
+                            + cos x · sen h / h.
+      Tomando h → 0 y usando proposition.limit-sin-over-x
+      (límite = 1) y proposition.limit-cos-minus-1-over-x
+      (límite = 0):
+      f'(x) = sen x · 0 + cos x · 1 = cos x.
+      La derivada de cos x se obtiene análogamente (ejercicio 20)
+      usando cos(x+h) = cos x cos h − sen x sen h. La derivada de
+      tan x se calcula directamente: aplicar la regla del cociente
+      a sen x / cos x, simplificar usando cos² + sen² = 1, y
+      reescribir 1/cos² x como sec² x. Las derivadas de csc, sec
+      y cot se obtienen por la misma técnica (ejercicios 17–19).
+    is_original: true
+    origin: original
+    review_status: unreviewed
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: medium
+  semantic_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Bundled proof matching the bundled theorem
+  theorem.derivatives-of-trigonometric-functions. Sin and tan
+  are proved fully in the body. Cos, csc, sec, cot are deferred
+  to exercises but follow standard derivations recorded in the
+  parts[]. dependency_confidence:medium reflects (a) the cos
+  derivation is referenced not transcribed, (b) the csc/sec/cot
+  derivations are exercises, and (c) self-reference within the
+  bundle (the tan/csc/sec/cot derivations rely on the sine and
+  cosine derivatives that are part of the SAME bundled theorem).
+  This self-reference is acceptable because the proof has internal
+  ordering: sine first, cosine next, then the four others by
+  quotient rule.

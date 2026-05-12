@@ -1,0 +1,100 @@
+schema_version: "0.3.1"
+id: proof.hyperbolic-identities.from-exponential-definition
+type: proof
+status: extracted
+
+proves: proposition.hyperbolic-identities
+style: algebraic-from-definition
+
+uses: []
+
+parts:
+  - name: parity
+    kind: subclaim
+    description: >
+      senh(−x) = −senh x and cosh(−x) = cosh x by direct
+      substitution into the exponential definition. Stewart Ex 7–8.
+    uses:
+      - id: definition.hyperbolic-function
+        role: definition
+        confidence: high
+
+  - name: pythagorean
+    kind: subclaim
+    description: >
+      cosh²x − senh²x = 1 by expanding the squares of (eˣ + e⁻ˣ)/2
+      and (eˣ − e⁻ˣ)/2: (e²ˣ + 2 + e⁻²ˣ)/4 − (e²ˣ − 2 + e⁻²ˣ)/4 =
+      4/4 = 1. Stewart Example 1a, page 258.
+    uses:
+      - id: definition.hyperbolic-function
+        role: definition
+        confidence: high
+
+  - name: derived-pythagorean
+    kind: subclaim
+    description: >
+      1 − tanh²x = sech²x by dividing cosh²x − senh²x = 1 by
+      cosh²x. Stewart Example 1b, page 258.
+    uses:
+      - id: definition.hyperbolic-function
+        role: definition
+        confidence: high
+        notes: needed for the reciprocal/quotient definitions of sech and tanh
+
+  - name: addition-formulas
+    kind: subclaim
+    description: >
+      senh(x+y) and cosh(x+y) addition formulas by expanding the
+      definitions and matching exponential terms eˣ⁺ʸ, e⁻⁽ˣ⁺ʸ⁾,
+      eˣ⁻ʸ, e⁻ˣ⁺ʸ on both sides. Stewart Ex 11–12.
+    uses:
+      - id: definition.hyperbolic-function
+        role: definition
+        confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.11"
+    locator: "Ejemplo 1 (pp. 258) + ejercicios 7, 8, 11, 12"
+    page: "258"
+    source_language: es
+
+sketch:
+  es:
+    text: >
+      Bundle. Pitagórica:
+      cosh²x − senh²x = ((eˣ + e⁻ˣ)/2)² − ((eˣ − e⁻ˣ)/2)²
+      = (e²ˣ + 2 + e⁻²ˣ)/4 − (e²ˣ − 2 + e⁻²ˣ)/4 = 4/4 = 1.
+      Forma derivada: dividir por cosh²x, obteniendo
+      1 − tanh²x = sech²x. Paridad: e⁻⁽⁻ˣ⁾ = eˣ permuta los
+      términos en el numerador, dando senh(−x) = −senh x y
+      cosh(−x) = cosh x. Sumas: expandir productos como
+      senh x cosh y = ((eˣ−e⁻ˣ)/2)((eʸ+e⁻ʸ)/2) y combinar con
+      cosh x senh y; los términos e⁻⁽ˣ⁺ʸ⁾ se cancelan dando
+      senh(x+y) = (eˣ⁺ʸ − e⁻⁽ˣ⁺ʸ⁾)/2.
+    is_original: true
+    origin: original
+    review_status: unreviewed
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Bundled proof. All identities reduce mechanically to algebra
+  on the exponential definition; no further machinery is required.
+  Stewart proves only the Pythagorean and derived-Pythagorean
+  cases inline; parity and addition formulas are exercises but
+  follow the same pattern.

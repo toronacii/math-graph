@@ -1,0 +1,165 @@
+schema_version: "0.3.1"
+id: proposition.antiderivative-formulas-table
+type: proposition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Tabla de fórmulas de antiderivación (Tabla 2)
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Table of antiderivative formulas (Table 2)
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Cada fórmula de derivación, leída de derecha a izquierda, da
+        lugar a una fórmula de antiderivación particular. En particular
+        son antiderivadas particulares (sobre un intervalo apropiado):
+        de cf(x), cF(x); de f(x) + g(x), F(x) + G(x); de x^n con n ≠
+        −1, x^{n+1}/(n+1); de 1/x, ln|x|; de e^x, e^x; de cos x, sen x;
+        de sen x, −cos x; de sec²x, tan x; de sec x · tan x, sec x; de
+        1/√(1 − x²), arcsen x; de 1/(1 + x²), arctan x; de cosh x,
+        senh x; de senh x, cosh x. La antiderivada más general se
+        obtiene sumando una constante arbitraria.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        Every differentiation formula, read right to left, yields a
+        particular antiderivative formula. In particular (on a suitable
+        interval) the following are particular antiderivatives: of
+        cf(x), cF(x); of f(x) + g(x), F(x) + G(x); of x^n with n ≠ −1,
+        x^{n+1}/(n+1); of 1/x, ln|x|; of e^x, e^x; of cos x, sin x; of
+        sin x, −cos x; of sec²x, tan x; of sec x · tan x, sec x; of
+        1/√(1 − x²), arcsin x; of 1/(1 + x²), arctan x; of cosh x,
+        sinh x; of sinh x, cosh x. The most general antiderivative is
+        obtained by adding an arbitrary constant.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      \begin{array}{ll}
+      \text{Función} & \text{Antiderivada particular} \\
+      cf(x) & cF(x) \\
+      f(x) + g(x) & F(x) + G(x) \\
+      x^n\;(n \neq -1) & \dfrac{x^{n+1}}{n+1} \\
+      \dfrac{1}{x} & \ln|x| \\
+      e^x & e^x \\
+      \cos x & \sin x \\
+      \sin x & -\cos x \\
+      \sec^2 x & \tan x \\
+      \sec x\,\tan x & \sec x \\
+      \dfrac{1}{\sqrt{1-x^2}} & \arcsin x \\
+      \dfrac{1}{1+x^2} & \arctan x \\
+      \cosh x & \sinh x \\
+      \sinh x & \cosh x
+      \end{array}
+    status: present
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: definition.antiderivative
+    role: uses_concept
+    confidence: high
+  - id: theorem.general-antiderivative
+    role: uses_concept
+    confidence: high
+  - id: theorem.constant-multiple-rule-derivative
+    role: uses_concept
+    confidence: high
+  - id: theorem.sum-rule-derivative
+    role: uses_concept
+    confidence: high
+  - id: theorem.power-rule-positive-integer
+    role: uses_concept
+    confidence: medium
+    notes: >
+      Power rule extension to general real n is invoked but Stewart
+      only proves the positive-integer case in §3.1; the n ≠ −1 row
+      depends on results developed in Ch3 (general power rule via
+      logarithmic differentiation) — partial epistemic debt.
+  - id: theorem.derivative-of-natural-exponential
+    role: uses_concept
+    confidence: high
+  - id: theorem.derivatives-of-trigonometric-functions
+    role: uses_concept
+    confidence: high
+  - id: theorem.derivatives-of-inverse-trigonometric-functions
+    role: uses_concept
+    confidence: high
+  - id: theorem.derivatives-of-hyperbolic-functions
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "4"
+    section: "4.9"
+    theorem_label: "Tabla 2"
+    page: "345"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [analysis, integration]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [criterion, schema]
+  keywords: [antiderivative-table, integration-formulas, basic-antiderivatives, inverse-derivative-rules]
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: medium
+  semantic_confidence: medium
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart §4.9 Tabla 2 page 345. EPISTEMIC DEBT — bundled node:
+  this proposition collapses 13 inverse-derivative formulas into a
+  single statement, mirroring the precedent set for the trig /
+  inv-trig / hyperbolic derivative bundles in Ch3. Each row is
+  individually verifiable by differentiating the right column and
+  matching the left, citing the corresponding derivative theorem
+  already in the graph. Two specific weaknesses to flag for future
+  refinement: (i) the row "1/x → ln|x|" is valid only on intervals
+  not containing 0 (Stewart explicitly notes the disconnected-domain
+  caveat — see ln|x| discussion p. 344), and the bundle does not
+  capture this restriction; (ii) the n ≠ −1 row uses the general
+  real power rule, which Stewart only proves rigorously for positive
+  integer n in §3.1 — full justification depends on the logarithmic
+  differentiation argument in §3.6. Reasonable future refactor:
+  split into one proposition per row, each with an explicit
+  domain-of-validity field. semantic_confidence and
+  dependency_confidence intentionally medium for this reason. No
+  proof node is created; each row is a one-line verification.

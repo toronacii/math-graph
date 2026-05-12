@@ -1,0 +1,44 @@
+title: Rudin Chapter 6 — Statistics
+generated: 2026-05-11
+
+graph:
+  total_nodes: 573
+  total_edges: 767
+  statements: 352
+  proofs: 221
+  uses_edges: 546
+  proved_by_edges: 221
+
+chapter_contribution:
+  new_definitions: 6
+  new_theorems: 19
+  new_propositions: 1
+  new_proofs: 20
+  total_new_entities: 46
+
+reclassifications:
+  - from: theorem.integrability-criterion-consequences
+    to: proposition.integrability-criterion-consequences
+    reason: toolkit lemma, reusable property — not a major result
+
+multi_source_reconciliation:
+  merges: 0
+  separate_due_to_generality: 4
+  notes: >
+    All Rudin Ch6 theorems are formulated for the Riemann-Stieltjes integral,
+    making them strictly more general than Stewart's Riemann-only versions.
+    Key separations: continuous-integrable (6.8 vs Stewart), FTC1 (6.20 vs
+    theorem.ftc-part1), FTC2 (6.21 vs theorem.ftc-part2), integration by
+    parts (6.22 vs theorem.integration-by-parts-definite).
+
+growth:
+  previous_nodes: 527
+  previous_edges: 687
+  delta_nodes: +46
+  delta_edges: +80
+  growth_rate_nodes: 8.7%
+  growth_rate_edges: 11.6%
+
+density:
+  edges_per_node: 1.34
+  avg_proof_uses: 2.73

@@ -1,0 +1,105 @@
+schema_version: "0.3.1"
+id: theorem.number-e-as-limit
+type: theorem
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: El número e como un límite
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: The number e as a limit
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        El número e admite la representación como límite
+        e = lím_{x→0} (1 + x)^{1/x}, equivalentemente
+        e = lím_{n→∞} (1 + 1/n)^n.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        The number e admits the limit representations
+        e = lim_{x→0} (1 + x)^{1/x}, equivalently
+        e = lim_{n→∞} (1 + 1/n)^n.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      e \;=\; \lim_{x\to 0}\,(1+x)^{1/x} \;=\; \lim_{n\to\infty}\,\left(1+\tfrac{1}{n}\right)^{n}
+    status: present
+    review_status: unreviewed
+
+proved_by:
+  - proof.number-e-as-limit.from-derivative-at-1
+
+depends_on:
+  - id: definition.number-e
+    role: uses_concept
+    confidence: high
+  - id: definition.natural-logarithm
+    role: uses_concept
+    confidence: high
+  - id: definition.limit-of-function
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.6"
+    theorem_label: "Ecuaciones 5 y 6"
+    page: "222"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [analysis]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [principle]
+  keywords: [e, euler-number, limit, characterization, compound-interest]
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart's Eqs 5 and 6 of §3.6. The proof uses the identity
+  (ln x)' = 1/x evaluated at x = 1 (so f'(1) = 1) together with
+  continuity of the exponential function (Theorem 2.5.8). The
+  alternate form e = lim (1 + 1/n)^n follows by substitution
+  n = 1/x. Bundled because both forms are mathematically the
+  same characterization (one for continuous variable, one for
+  integer index).

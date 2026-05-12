@@ -1,0 +1,111 @@
+schema_version: "0.3.1"
+id: definition.derivative-function
+type: definition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Derivada como función
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Derivative as a function
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Sea f una función. La función derivada de f, denotada f',
+        se define haciendo variar el punto base de la derivada
+        puntual: para cada x donde el límite existe,
+        f'(x) = lím_{h→0} (f(x + h) − f(x))/h. El dominio de f' es
+        el conjunto {x : f'(x) existe} y puede ser estrictamente
+        menor que el dominio de f. En notación de Leibniz se
+        escribe dy/dx, df/dx, (d/dx)f(x), Df(x) o D_x f(x).
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        Let f be a function. The derivative function of f, denoted
+        f', is obtained by letting the base point of the pointwise
+        derivative vary: for each x where the limit exists,
+        f'(x) = lim_{h→0} (f(x + h) − f(x))/h. The domain of f' is
+        {x : f'(x) exists} and may be strictly smaller than the
+        domain of f. In Leibniz notation it is written dy/dx,
+        df/dx, (d/dx)f(x), Df(x) or D_x f(x).
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      f'(x) \;=\; \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}
+    status: present
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: definition.derivative-at-point
+    role: uses_concept
+    confidence: high
+    notes: f' is the function-valued version of the pointwise derivative
+  - id: definition.function
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.8"
+    theorem_label: "Ecuación 2"
+    page: "154"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [analysis]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [object, operator, notation]
+  keywords: [derivative-function, leibniz-notation, differentiation-operator]
+
+generality: []
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Distinct node from definition.derivative-at-point: the pointwise
+  derivative is a number, the derivative function is a function.
+  The domain shrinkage (e.g., f(x) = √x has domain [0,∞) but f'
+  has domain (0,∞)) is a consequence of this distinction and
+  motivates definition.differentiable-on-interval. Includes the
+  Leibniz notation cluster as semantic_kind: notation.

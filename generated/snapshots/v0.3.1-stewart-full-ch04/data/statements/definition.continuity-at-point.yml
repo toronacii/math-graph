@@ -1,0 +1,108 @@
+schema_version: "0.3.1"
+id: definition.continuity-at-point
+type: definition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Continuidad en un punto
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Continuity at a point
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Una función f es continua en un número x = a si
+        lím_{x→a} f(x) = f(a). Esto requiere implícitamente tres
+        cosas: (1) f(a) está definida (a está en el dominio de f);
+        (2) lím_{x→a} f(x) existe; (3) lím_{x→a} f(x) = f(a).
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        A function f is continuous at a number x = a if
+        lim_{x→a} f(x) = f(a). This implicitly requires three
+        things: (1) f(a) is defined (a is in the domain of f);
+        (2) lim_{x→a} f(x) exists; (3) lim_{x→a} f(x) = f(a).
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      f \text{ continuous at } a \iff \lim_{x \to a} f(x) = f(a)
+    status: present
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: definition.function
+    role: uses_concept
+    confidence: high
+  - id: definition.domain
+    role: uses_concept
+    confidence: high
+  - id: definition.limit-of-function
+    role: uses_concept
+    confidence: high
+    notes: >
+      Stewart's §2.5 statement is anchored on the §2.2 informal
+      limit; the equivalent ε–δ formulation lifts via
+      generality:equivalent on definition.epsilon-delta-limit.
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.5"
+    theorem_label: "Definición 1"
+    page: "118"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [real-analysis]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [criterion, property]
+  keywords: [continuity, point-continuity]
+
+generality: []
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart §2.5 Definición 1. The three implicit conditions are kept
+  in the natural-language body but NOT split into separate atoms —
+  they are unfolding hints, not independent claims.

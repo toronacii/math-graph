@@ -1,0 +1,105 @@
+schema_version: "0.3.1"
+id: definition.concave-up
+type: definition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Cóncava hacia arriba
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Concave up
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Si la gráfica de f queda por arriba de todas sus rectas
+        tangentes sobre un intervalo I, entonces se dice que f es
+        cóncava hacia arriba sobre I.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        If the graph of f lies above all of its tangent lines on an
+        interval I, then f is said to be concave upward on I.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      f \text{ concave up on } I \iff
+      \forall x_0 \in I,\ \forall x \in I:\ f(x) \ge f(x_0) + f'(x_0)(x - x_0)
+    status: present
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: definition.tangent-line
+    role: uses_concept
+    confidence: high
+  - id: definition.function
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "4"
+    section: "4.3"
+    theorem_label: "Definición (parte cóncava hacia arriba)"
+    page: "293"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [analysis, convex-analysis]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [object, property]
+  keywords: [concavity, concave-up, convex, tangent-line]
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart §4.3 page 293 bundles concave-up and concave-down in a
+  single Definition box; split into sibling atomic nodes per the
+  §4.1 precedent. Stewart's geometric definition (graph above
+  tangents) presupposes f is differentiable on I; the formal LaTeX
+  rendering above makes this explicit. The equivalence with f'' ≥ 0
+  is established separately via the Concavity Test
+  (proposition.concavity-test). Multi-source disambiguation note:
+  Rudin's standard "convex" definition uses chord-above-graph; the
+  two coincide for differentiable functions but not for
+  non-differentiable ones, so any future Rudin merge must keep them
+  separate or formalize the equivalence.

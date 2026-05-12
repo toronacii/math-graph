@@ -1,0 +1,109 @@
+schema_version: "0.3.1"
+id: definition.inflection-point
+type: definition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Punto de inflexión
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Inflection point
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Un punto P sobre una curva y = f(x) se llama punto de
+        inflexión si f es allí continua y la curva cambia de cóncava
+        hacia arriba a cóncava hacia abajo o de cóncava hacia abajo
+        a cóncava hacia arriba en P.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        A point P on a curve y = f(x) is called an inflection point
+        if f is continuous there and the curve changes from concave
+        upward to concave downward, or from concave downward to
+        concave upward, at P.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      P = (c, f(c)) \text{ inflection point} \iff
+      f \text{ continuous at } c \;\wedge\;
+      \text{concavity of } f \text{ changes sign at } c
+    status: informal
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: definition.continuity-at-point
+    role: uses_concept
+    confidence: high
+  - id: definition.concave-up
+    role: uses_concept
+    confidence: high
+  - id: definition.concave-down
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "4"
+    section: "4.3"
+    theorem_label: "Definición (punto de inflexión)"
+    page: "294"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [analysis, geometry]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [object, property]
+  keywords: [inflection-point, concavity-change, curve-geometry]
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: medium
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart §4.3 page 294. The phrase "the concavity of f changes
+  sign at c" is informal — operationalized as: there exist intervals
+  (c−δ, c) and (c, c+δ) on which f has opposite concavity. LaTeX
+  status flagged informal because Stewart does not give a fully
+  symbolic formulation. Stewart immediately notes (§4.3) that an
+  inflection point need not coincide with a zero of f'' (e.g., where
+  f'' does not exist), and exercise 82 (f(x) = x^4) shows f''(c) = 0
+  does not imply (c, f(c)) is an inflection point.

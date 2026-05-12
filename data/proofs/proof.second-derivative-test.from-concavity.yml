@@ -1,0 +1,101 @@
+schema_version: "0.3.1"
+id: proof.second-derivative-test.from-concavity
+type: proof
+status: extracted
+
+proves: proposition.second-derivative-test
+style: informal
+
+uses: []
+
+parts:
+  - name: case-min-positive-second-derivative
+    kind: subclaim
+    description: >
+      Suppose f'(c) = 0 and f''(c) > 0. By continuity of f'' near c,
+      there exists δ > 0 with f''(x) > 0 on (c−δ, c+δ). By the
+      Concavity Test, f is concave up on (c−δ, c+δ); the graph of f
+      lies above its tangent line at c. Since f'(c) = 0, that
+      tangent is horizontal at height f(c), so f(x) ≥ f(c) on a
+      neighborhood of c, i.e. c is a local minimum.
+    uses:
+      - id: proposition.concavity-test
+        role: essential
+        confidence: high
+      - id: definition.continuity-at-point
+        role: essential
+        confidence: high
+        notes: continuity of f'' at c is used to extend f''(c) > 0 to a neighborhood
+      - id: definition.tangent-line
+        role: essential
+        confidence: high
+      - id: definition.local-minimum
+        role: definition
+        confidence: high
+      - id: definition.concave-up
+        role: definition
+        confidence: high
+
+  - name: case-max-negative-second-derivative
+    kind: subclaim
+    description: >
+      Symmetric: if f'(c) = 0 and f''(c) < 0, then f is concave down
+      near c, the horizontal tangent at c lies above the graph, so
+      f(x) ≤ f(c) on a neighborhood of c, hence c is a local
+      maximum.
+    uses:
+      - id: proposition.concavity-test
+        role: essential
+        confidence: high
+      - id: definition.local-maximum
+        role: definition
+        confidence: high
+      - id: definition.concave-down
+        role: definition
+        confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "4"
+    section: "4.3"
+    locator: "Justificación de la Prueba de la segunda derivada (p. 295)"
+    page: "295"
+    source_language: es
+
+sketch:
+  es:
+    text: >
+      Caso a). f'(c) = 0 y f''(c) > 0. Por continuidad de f'' cerca
+      de c, f''(x) > 0 en una vecindad, así que por la Prueba de
+      concavidad f es cóncava hacia arriba ahí; la gráfica está
+      sobre su recta tangente horizontal en c, luego f(x) ≥ f(c) en
+      una vecindad: mínimo local. Caso b) análogo.
+    is_original: true
+    origin: original
+    review_status: unreviewed
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: medium
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart's justification (p. 295): "el inciso a) es cierto porque
+  f''(x) > 0 cerca de x = c y, por tanto, f es cóncava hacia arriba
+  cerca de c. Esto significa que la gráfica está sobre su recta
+  tangente horizontal en c y, por tanto, f tiene un mínimo local en
+  x = c." Style flagged informal because the appeal to "the graph
+  is above its tangent line ⇒ local min" is geometric. The proof
+  inherits epistemic debt from proposition.concavity-test (proof
+  deferred to Apéndice F). Semantic confidence medium for that
+  reason.

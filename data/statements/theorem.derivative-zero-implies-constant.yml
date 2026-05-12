@@ -1,0 +1,101 @@
+schema_version: "0.3.1"
+id: theorem.derivative-zero-implies-constant
+type: theorem
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Teorema — derivada cero implica constante
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Theorem — Zero Derivative Implies Constant
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Si f'(x) = 0 para toda x en un intervalo (a, b), entonces f
+        es constante en (a, b).
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        If f'(x) = 0 for all x in an interval (a, b), then f is
+        constant on (a, b).
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      \bigl(\forall x \in (a,b):\; f'(x) = 0\bigr) \;\implies\;
+      f \text{ is constant on } (a,b)
+    status: present
+    review_status: unreviewed
+
+proved_by:
+  - proof.derivative-zero-implies-constant.mvt
+
+depends_on:
+  - id: definition.derivative-function
+    role: uses_concept
+    confidence: high
+  - id: definition.differentiable-on-interval
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "4"
+    section: "4.2"
+    theorem_label: "Teorema 5"
+    page: "287"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [analysis]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [principle, criterion]
+  keywords: [zero-derivative, constant-function, antiderivative-uniqueness]
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart Theorem 5 §4.2 page 287. The interval hypothesis is
+  essential: Stewart immediately follows the theorem with a NOTA
+  cautioning that the result fails on disconnected domains
+  (counterexample f(x) = x/|x| on R \ {0} has f' ≡ 0 but is not
+  constant). This theorem is the foundation of antiderivative
+  uniqueness (general antiderivative = F(x) + C, §4.9) and underlies
+  the Fundamental Theorem of Calculus in Ch5.

@@ -1,0 +1,113 @@
+schema_version: "0.3.1"
+id: definition.limit-of-function
+type: definition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Límite de una función
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Limit of a function
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Supongamos que f(x) está definida cuando x está cerca del
+        número a (es decir, en algún intervalo abierto que contiene
+        a a, excepto posiblemente en a misma). Entonces escribimos
+        lím_{x→a} f(x) = L y decimos "el límite de f(x) cuando x
+        tiende a a es igual a L" si podemos hacer que los valores
+        de f(x) estén arbitrariamente cercanos a L (tan cercanos a L
+        como queramos), tomando valores de x suficientemente cerca
+        de a (por ambos lados de a), pero no iguales a a.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        Suppose f(x) is defined when x is near the number a (i.e.,
+        on some open interval containing a, except possibly at a
+        itself). Then we write lim_{x→a} f(x) = L, and say "the
+        limit of f(x) as x approaches a equals L", if we can make
+        the values of f(x) arbitrarily close to L (as close to L as
+        we like) by taking x sufficiently close to a (on either
+        side of a), but not equal to a.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      \lim_{x \to a} f(x) = L
+    status: informal
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: definition.function
+    role: uses_concept
+    confidence: high
+  - id: definition.domain
+    role: uses_concept
+    confidence: high
+    notes: f need not be defined at a; defined on a punctured neighborhood of a
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.2"
+    theorem_label: "Definición 1"
+    page: "87"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [real-analysis]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [object, relation]
+  keywords: [limit, two-sided-limit, neighborhood, punctured]
+
+generality: []
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: medium
+  translation_confidence: high
+  latex_confidence: medium
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart's pedagogical "intuitive" definition (§2.2 Def 1). The
+  rigorous epsilon-delta version arrives in §2.4 as a separate
+  node (definition.epsilon-delta-limit) — DO NOT merge. semantic_
+  confidence: medium reflects the informal "arbitrarily close" /
+  "sufficiently close" language. The latex body is `informal`
+  because the symbolic equation does NOT capture the universal /
+  existential structure.

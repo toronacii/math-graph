@@ -1,0 +1,117 @@
+schema_version: "0.3.1"
+id: theorem.derivatives-of-hyperbolic-functions
+type: theorem
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Derivadas de las funciones hiperbólicas
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Derivatives of the hyperbolic functions
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Las derivadas de las seis funciones hiperbólicas son:
+        (d/dx) senh x = cosh x;
+        (d/dx) cosh x = senh x;
+        (d/dx) tanh x = sech²x;
+        (d/dx) csch x = − csch x coth x;
+        (d/dx) sech x = − sech x tanh x;
+        (d/dx) coth x = − csch²x.
+        Cada una vale en el dominio de la función correspondiente.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        The derivatives of the six hyperbolic functions are:
+        (d/dx) sinh x = cosh x;
+        (d/dx) cosh x = sinh x;
+        (d/dx) tanh x = sech²x;
+        (d/dx) csch x = −csch x coth x;
+        (d/dx) sech x = −sech x tanh x;
+        (d/dx) coth x = −csch²x.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      \begin{aligned}
+        \frac{d}{dx}\sinh x &= \cosh x, &
+        \frac{d}{dx}\operatorname{csch} x &= -\operatorname{csch} x\,\coth x,\\[4pt]
+        \frac{d}{dx}\cosh x &= \sinh x, &
+        \frac{d}{dx}\operatorname{sech} x &= -\operatorname{sech} x\,\tanh x,\\[4pt]
+        \frac{d}{dx}\tanh x &= \operatorname{sech}^{2} x, &
+        \frac{d}{dx}\coth x &= -\operatorname{csch}^{2} x.
+      \end{aligned}
+    status: present
+    review_status: unreviewed
+
+proved_by:
+  - proof.derivatives-of-hyperbolic-functions.from-exponential-definition
+
+depends_on:
+  - id: definition.hyperbolic-function
+    role: uses_concept
+    confidence: high
+  - id: definition.derivative-function
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.11"
+    theorem_label: "Tabla 1 — Derivadas de las funciones hiperbólicas"
+    page: "259"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [analysis]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [principle]
+  keywords: [hyperbolic-derivative, sinh, cosh, tanh, csch, sech, coth]
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: medium
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Bundled per the trig-bundle policy. Stewart derives (d/dx) senh x
+  = cosh x inline (page 259) and lists Table 1; the remaining five
+  formulas are deferred to Exercise 24. dependency_confidence:
+  medium reflects that only the senh case is fully written out in
+  the text. The proofs all reduce to differentiating the
+  exponential combinations from the definition.

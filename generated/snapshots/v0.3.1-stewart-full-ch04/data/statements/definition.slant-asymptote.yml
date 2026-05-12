@@ -1,0 +1,117 @@
+schema_version: "0.3.1"
+id: definition.slant-asymptote
+type: definition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Asíntota inclinada
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Slant asymptote
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Si lím_{x→∞} [f(x) − (mx + b)] = 0, entonces la recta
+        y = mx + b se llama asíntota inclinada (u oblicua) de la
+        curva y = f(x), porque la distancia vertical entre la curva
+        y la recta tiende a cero. (Una situación análoga ocurre
+        cuando x → −∞.)
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        If lim_{x→∞} [f(x) − (mx + b)] = 0, then the line
+        y = mx + b is called a slant (or oblique) asymptote of the
+        curve y = f(x), since the vertical distance between the
+        curve and the line tends to zero. (An analogous situation
+        holds for x → −∞.)
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      y = mx + b \text{ is a slant asymptote of } y = f(x) \iff
+      \lim_{x \to \pm\infty} \bigl[f(x) - (mx + b)\bigr] = 0
+      \quad (m \neq 0)
+    status: present
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: definition.linear-function
+    role: uses_concept
+    confidence: high
+    notes: >
+      The line y = mx + b is a linear function. Per the standing
+      Ch1 epistemic-debt note, "linear function" in Stewart includes
+      m = 0 (constant case); slant asymptotes specifically require
+      m ≠ 0 to distinguish from horizontal asymptotes.
+  - id: definition.function
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "4"
+    section: "4.5"
+    theorem_label: "Definición (asíntota inclinada)"
+    page: "315"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [analysis]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [object, property]
+  keywords: [slant-asymptote, oblique-asymptote, asymptotic-line, end-behavior]
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart §4.5 page 315. The slant case requires m ≠ 0 — when m = 0
+  the limit condition reduces to lim f(x) = b, the horizontal-
+  asymptote definition (Ch2 §2.6). For rational functions, slant
+  asymptotes occur precisely when deg(num) = deg(denom) + 1, and
+  the line is found by polynomial long division. The §4.5 curve-
+  sketching guide (steps A–H) and §4.6 (graphing with technology)
+  introduce no further entities — they are pedagogical schemas
+  that compose previously-defined criteria (continuity, asymptotes,
+  monotonicity, concavity, extrema, inflection points). Per the
+  policy on Type-B/schema entities, those guides are intentionally
+  not modeled as nodes; this slant-asymptote definition is the
+  only formal new content of §4.5.

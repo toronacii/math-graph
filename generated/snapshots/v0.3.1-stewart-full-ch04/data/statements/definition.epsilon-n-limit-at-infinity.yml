@@ -1,0 +1,112 @@
+schema_version: "0.3.1"
+id: definition.epsilon-n-limit-at-infinity
+type: definition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Definición precisa de límite al infinito (ε–N)
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Precise (epsilon–N) definition of limit at infinity
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Sea f una función definida sobre algún intervalo (a, ∞).
+        Entonces lím_{x→∞} f(x) = L significa que para toda ε > 0
+        existe un correspondiente número N tal que si x > N entonces
+        |f(x) − L| < ε.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        Let f be a function defined on some interval (a, ∞). Then
+        lim_{x→∞} f(x) = L means that for every ε > 0 there is a
+        corresponding number N such that if x > N then
+        |f(x) − L| < ε.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      \lim_{x \to \infty} f(x) = L
+      \iff
+      \forall \varepsilon > 0,\ \exists N:\
+      x > N \implies |f(x) - L| < \varepsilon
+    status: present
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: definition.function
+    role: uses_concept
+    confidence: high
+  - id: definition.absolute-value
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.6"
+    theorem_label: "Definición 7"
+    page: "137"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [real-analysis]
+
+ambient:
+  structures: [extended-real-line]
+
+ontology:
+  semantic_kind: [criterion, relation]
+  keywords: [limit-at-infinity, epsilon-N, rigorous]
+
+generality:
+  - target: definition.limit-at-infinity
+    relation: equivalent
+    notes: >
+      Rigorous reformulation of §2.6 Definición 1. Owned here per
+      policy 04 (alphabetically earlier id: 'epsilon-N-...' <
+      'limit-...'). DO NOT merge.
+  - target: definition.epsilon-n-negative-limit-at-infinity
+    relation: sibling
+    notes: >
+      Symmetric x → −∞ rigorous variant. Owned here per policy 04.
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart §2.6 Definición 7 (precise positive-infinity limit).

@@ -1,0 +1,104 @@
+schema_version: "0.3.1"
+id: definition.natural-exponential-function
+type: definition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Función exponencial natural
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Natural exponential function
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        La función exponencial natural es la función exponencial
+        f(x) = eˣ, donde e ≈ 2.71828 es el número irracional
+        caracterizado por que la pendiente de la tangente a la
+        gráfica de y = eˣ en x = 0 es igual a 1.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        The natural exponential function is the exponential function
+        f(x) = eˣ, where e ≈ 2.71828 is the irrational number
+        characterized by the property that the slope of the tangent
+        line to y = eˣ at x = 0 equals 1.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      f(x) = e^{x}, \qquad e \approx 2.71828
+    status: present
+    review_status: unreviewed
+
+proved_by: []
+depends_on:
+  - id: definition.exponential-function
+    role: instance_of
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.5"
+    locator: "El número e y la función exponencial natural (sección 1.5)"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [real-analysis]
+
+ambient:
+  structures: [real-line]
+  notes: >
+    Stewart's defining property of e (tangent slope at 0 equals 1)
+    is informal — it presumes the limit / derivative concept not yet
+    introduced. A rigorous definition awaits Ch3 (derivatives) or
+    Ch5/Ch11 (integral / series). Honest dependency_confidence:
+    medium reflects this forward reference.
+
+ontology:
+  semantic_kind: [object]
+  keywords: [natural-exponential, e, euler-number]
+
+generality:
+  - target: definition.exponential-function
+    relation: special_case_of
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: medium
+  semantic_confidence: medium
+  translation_confidence: medium
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  e is introduced informally; the rigorous definition (limit,
+  series, or integral) is deferred to Ch3+. Forward-reference debt
+  flagged via dependency_confidence: medium.

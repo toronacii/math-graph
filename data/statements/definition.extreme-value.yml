@@ -1,0 +1,107 @@
+schema_version: "0.3.1"
+id: definition.extreme-value
+type: definition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Valor extremo
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Extreme value
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Un valor extremo de una función f es cualquiera de sus
+        valores máximo o mínimo (locales o absolutos). El término
+        agrupa los cuatro casos: máximo absoluto, mínimo absoluto,
+        máximo local, mínimo local. (Stewart §4.1 página 274:
+        "Los valores máximo y mínimo de f se llaman valores
+        extremos de f".)
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        An extreme value of a function f is any of its maximum or
+        minimum values (local or absolute). The term covers the
+        four cases: absolute maximum, absolute minimum, local
+        maximum, local minimum.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    status: not_applicable
+    review_status: unreviewed
+    notes: covering terminological definition; no formula
+
+proved_by: []
+
+depends_on:
+  - id: definition.absolute-maximum
+    role: uses_concept
+    confidence: high
+  - id: definition.absolute-minimum
+    role: uses_concept
+    confidence: high
+  - id: definition.local-maximum
+    role: uses_concept
+    confidence: high
+  - id: definition.local-minimum
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "4"
+    section: "4.1"
+    theorem_label: "Terminología — valores extremos"
+    page: "274"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [analysis, optimization]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [object, notation]
+  keywords: [extremum, max-or-min, terminology]
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Pure covering terminology; modeled as a separate node so that
+  later statements ("the extreme value theorem", §4.7 optimization)
+  can cite a single concept rather than enumerating four. No LaTeX
+  body — terminological aggregation only.

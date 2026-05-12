@@ -1,0 +1,79 @@
+schema_version: "0.3.1"
+id: proof.derivatives-equal-implies-differ-by-constant.from-zero
+type: proof
+status: extracted
+
+proves: corollary.derivatives-equal-implies-differ-by-constant
+style: direct-corollary
+
+uses: []
+
+parts:
+  - name: define-difference
+    kind: subclaim
+    description: >
+      Let F(x) = f(x) − g(x) for x in (a, b). Then F is differentiable
+      on (a, b) (difference of two differentiable functions) and
+      F'(x) = f'(x) − g'(x).
+    uses:
+      - id: theorem.difference-rule-derivative
+        role: essential
+        confidence: high
+
+  - name: derivative-vanishes
+    kind: subclaim
+    description: >
+      By hypothesis f'(x) = g'(x) for every x in (a, b), so
+      F'(x) = f'(x) − g'(x) = 0 for every x in (a, b).
+
+  - name: apply-zero-derivative-theorem
+    kind: subclaim
+    description: >
+      Apply Theorem 5 (zero derivative implies constant) to F on
+      (a, b): F is constant on (a, b), i.e. there exists a constant
+      c with F(x) = c for all x in (a, b). Equivalently
+      f(x) − g(x) = c, that is f(x) = g(x) + c.
+    uses:
+      - id: theorem.derivative-zero-implies-constant
+        role: essential
+        confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "4"
+    section: "4.2"
+    locator: "Demostración del Corolario 7 (p. 288)"
+    page: "288"
+    source_language: es
+
+sketch:
+  es:
+    text: >
+      Sea F(x) = f(x) − g(x). Entonces F'(x) = f'(x) − g'(x) = 0
+      para toda x en (a, b). Por el Teorema 5, F es constante en
+      (a, b), así que f − g es constante; equivalentemente
+      f(x) = g(x) + c.
+    is_original: true
+    origin: original
+    review_status: unreviewed
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  One-line corollary: apply Theorem 5 to f − g. This is the formal
+  basis for the "+ C" of every antiderivative and every indefinite
+  integral. Stewart's Example 6 uses it to prove
+  arctan(x) + arccot(x) = π/2 by zero-derivative + endpoint matching.

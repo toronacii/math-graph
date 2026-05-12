@@ -1,0 +1,94 @@
+schema_version: "0.3.1"
+id: theorem.power-rule-positive-integer
+type: theorem
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Regla de la potencia (exponente entero positivo)
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Power rule (positive-integer exponent)
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Si n es un entero positivo, entonces (d/dx)(x^n) = n x^{n−1}.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        If n is a positive integer, then (d/dx)(x^n) = n x^{n−1}.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      \frac{d}{dx}\,x^{n} \;=\; n\,x^{n-1}\qquad (n \in \mathbb{Z}_{>0})
+    status: present
+    review_status: unreviewed
+
+proved_by:
+  - proof.power-rule-positive-integer.factoring
+  - proof.power-rule-positive-integer.binomial
+
+depends_on:
+  - id: definition.derivative-function
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.1"
+    theorem_label: "Regla de la potencia"
+    page: "175"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [algebra]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [principle]
+  keywords: [power-rule, derivative, polynomial, positive-integer-exponent]
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart gives two distinct proofs (factoring identity x^n − a^n
+  and binomial expansion of (x+h)^n). Both kept as separate proof
+  nodes per multi-proof policy. Generality edge to the general
+  real-exponent power rule lives in theorem.power-rule-general
+  (alphabetical owner).

@@ -1,0 +1,106 @@
+schema_version: "0.3.1"
+id: theorem.limit-through-continuous-function
+type: theorem
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Conmutatividad del límite con una función continua
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Limit commutes through a continuous function
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Si f es continua en b y lím_{x→a} g(x) = b, entonces
+        lím_{x→a} f(g(x)) = f(b). En otras palabras,
+        lím_{x→a} f(g(x)) = f(lím_{x→a} g(x)).
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        If f is continuous at b and lim_{x→a} g(x) = b, then
+        lim_{x→a} f(g(x)) = f(b). In other words,
+        lim_{x→a} f(g(x)) = f(lim_{x→a} g(x)).
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      f \text{ continuous at } b \;\wedge\;
+      \lim_{x \to a} g(x) = b
+      \implies
+      \lim_{x \to a} f(g(x)) = f\!\left(\lim_{x \to a} g(x)\right)
+    status: present
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: definition.continuity-at-point
+    role: uses_concept
+    confidence: high
+  - id: definition.limit-of-function
+    role: uses_concept
+    confidence: high
+  - id: definition.composition-of-functions
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.5"
+    theorem_label: "Teorema 8"
+    page: "124"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [real-analysis]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [property]
+  keywords: [continuity, composition, limit-commutation]
+
+generality: []
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart §2.5 Teorema 8. Proof deferred to Apéndice F (no proof
+  node authored). This theorem is the substantive ingredient that
+  closes the §2.3 limit-root-law proof and powers theorem.
+  continuity-of-composition (Thm 9).

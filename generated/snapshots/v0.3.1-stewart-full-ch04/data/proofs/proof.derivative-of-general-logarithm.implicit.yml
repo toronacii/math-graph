@@ -1,0 +1,65 @@
+schema_version: "0.3.1"
+id: proof.derivative-of-general-logarithm.implicit
+type: proof
+status: extracted
+
+proves: theorem.derivative-of-general-logarithm
+style: implicit-differentiation
+
+uses:
+  - id: proposition.implicit-differentiation
+    role: essential
+    confidence: high
+  - id: theorem.derivative-of-general-exponential
+    role: essential
+    confidence: high
+    notes: (d/dx) a^y = a^y · ln a · (dy/dx) when y is a function of x (chain rule applied to §3.4 Eq 5)
+  - id: theorem.chain-rule
+    role: essential
+    confidence: high
+  - id: definition.logarithmic-function
+    role: definition
+    confidence: high
+    notes: y = log_a x ⇔ a^y = x for x > 0
+  - id: definition.natural-logarithm
+    role: notation
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.6"
+    locator: "Demostración de la Ecuación 1, p. 218"
+    page: "218"
+    source_language: es
+
+sketch:
+  es:
+    text: >
+      Sea y = log_a x. Por definición de logaritmo, a^y = x.
+      Derivando implícitamente respecto a x usando la fórmula
+      §3.4 Eq 5 ((d/dx) a^x = a^x ln a) combinada con la regla
+      de la cadena: a^y · ln a · (dy/dx) = 1. Despejando,
+      dy/dx = 1/(a^y · ln a) = 1/(x · ln a).
+    is_original: true
+    origin: original
+    review_status: unreviewed
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart's proof of Eq 1, §3.6. Pure implicit differentiation
+  combined with the general-exponential derivative.

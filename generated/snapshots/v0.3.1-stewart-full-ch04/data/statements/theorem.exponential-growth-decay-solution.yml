@@ -1,0 +1,108 @@
+schema_version: "0.3.1"
+id: theorem.exponential-growth-decay-solution
+type: theorem
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Soluciones de la ecuación diferencial de crecimiento/decaimiento
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Solutions of the natural growth/decay differential equation
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Las únicas soluciones de la ecuación diferencial dy/dt =
+        k y son las funciones exponenciales y(t) = y(0) e^{k t},
+        donde y(0) es el valor inicial y k es la constante de
+        proporcionalidad (k > 0 → crecimiento; k < 0 → decaimiento).
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        The only solutions of the differential equation dy/dt = k y
+        are the exponential functions y(t) = y(0) e^{k t}, where
+        y(0) is the initial value and k is the proportionality
+        constant (k > 0 → growth; k < 0 → decay).
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      \frac{dy}{dt} = k\,y \quad\Longleftrightarrow\quad y(t) = y(0)\,e^{k t}
+    status: present
+    review_status: unreviewed
+
+proved_by:
+  - proof.exponential-growth-decay-solution.verification
+
+depends_on:
+  - id: definition.exponential-function
+    role: uses_concept
+    confidence: high
+  - id: definition.derivative-function
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.8"
+    theorem_label: "Teorema 2"
+    page: "237"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [differential-equations, modeling]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [principle]
+  keywords: [exponential-growth, exponential-decay, differential-equation, natural-growth-law, ode]
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: medium
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart's Theorem 2, §3.8 p. 237. Stewart proves only the
+  forward direction (verification that Ce^{kt} satisfies the
+  ODE) inline; the converse (uniqueness — that EVERY solution
+  has this form) is asserted but its proof is deferred to §9.4.
+  Hence dependency_confidence:medium and an open uniqueness
+  debt for the §9.4 milestone. Newton's law of cooling
+  (dT/dt = k(T − T_s)) and the continuous compound interest
+  formula A(t) = A_0 e^{rt} are derived from this theorem in
+  §3.8 by change of variable / limit; they are pedagogical
+  applications, not new mathematical content, and are not
+  modeled as separate theorem nodes.

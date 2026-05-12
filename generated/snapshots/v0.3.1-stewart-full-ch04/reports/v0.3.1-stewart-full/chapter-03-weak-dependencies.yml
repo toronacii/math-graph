@@ -1,0 +1,220 @@
+rerun_id: v0.3.1-stewart-full
+chapter: "3"
+generated_at: "2026-05-11"
+snapshot_label: v0.3.1-stewart-full-ch03
+
+# Weak dependencies, epistemic debt, and known gaps after Ch3.
+# Categories follow the v0.3 audit framework (docs/v0.3/06-quality-axes.md).
+
+# ---------------------------------------------------------------------------
+# A. Type-A Bundles (single nodes carrying multiple atomic claims)
+# ---------------------------------------------------------------------------
+
+type_A_bundles:
+  carried_from_earlier_chapters:
+    - id: definition.trigonometric-function
+      first_seen: "Ch1 §1.2"
+      payload: 6 functions (sin, cos, tan, csc, sec, cot)
+      split_estimate: 6 atomic definitions, ~10 new edges
+      decision: bundled — Stewart never separates them
+    - id: theorem.derivatives-of-trigonometric-functions
+      first_seen: "Ch3 §3.3"
+      payload: 6 derivative formulas
+      split_estimate: 6 atomic theorems + 6 atomic proofs
+      decision: bundled — only sin and tan derivations shown explicitly; cos via Ex 20, csc/sec/cot via Ex 17–19
+
+  introduced_in_ch3:
+    - id: theorem.derivatives-of-inverse-trigonometric-functions
+      section: "3.5"
+      payload: 6 derivative formulas (arcsin, arccos, arctan, arccot, arcsec, arccsc)
+      proof_coverage: arcsin and arctan derived inline; remaining 4 deferred to Ex 64
+      split_estimate: 6 atomic theorems + 6 atomic proofs (~20 edges)
+      decision: bundled — branch-convention dependence (especially arcsec/arccsc) makes splitting non-mechanical
+      dependency_confidence: medium
+
+    - id: definition.hyperbolic-function
+      section: "3.11"
+      payload: 6 functions (sinh, cosh, tanh, csch, sech, coth)
+      split_estimate: 6 atomic definitions
+      decision: bundled per trig-bundle policy precedent
+
+    - id: proposition.hyperbolic-identities
+      section: "3.11"
+      payload: parity (×2), Pythagorean, derived-Pythagorean, addition formulas (×2), plus implicit subtraction/double-angle/quotient (Ex 13–19)
+      proof_coverage: only Pythagorean and derived-Pythagorean shown in Example 1; rest deferred to exercises
+      decision: bundled
+      dependency_confidence: high
+
+    - id: theorem.derivatives-of-hyperbolic-functions
+      section: "3.11"
+      payload: 6 derivative formulas (Table 1)
+      proof_coverage: only sinh derivative shown inline page 259; remaining 5 in Exercise 24
+      decision: bundled
+      dependency_confidence: medium
+
+    - id: definition.inverse-hyperbolic-function
+      section: "3.11"
+      payload: 6 inverse functions (sinh⁻¹, cosh⁻¹, tanh⁻¹, csch⁻¹, sech⁻¹, coth⁻¹)
+      proof_coverage: sinh⁻¹/cosh⁻¹/tanh⁻¹ defined explicitly (Cuadro 2); csch⁻¹/sech⁻¹/coth⁻¹ via Exercise 28
+      decision: bundled
+      dependency_confidence: high
+
+    - id: theorem.inverse-hyperbolic-as-logarithm
+      section: "3.11"
+      payload: 3 explicit log forms (sinh⁻¹, cosh⁻¹, tanh⁻¹ via Eqs 3–5)
+      proof_coverage: sinh⁻¹ proven in Example 3; cosh⁻¹ via Ex 26; tanh⁻¹ via Ex 27
+      decision: bundled
+      dependency_confidence: high
+
+    - id: theorem.derivatives-of-inverse-hyperbolic-functions
+      section: "3.11"
+      payload: 6 derivative formulas (Table 6)
+      proof_coverage: sinh⁻¹ proven in Example 4 (two methods); remaining 5 via Exercise 29
+      decision: bundled
+      dependency_confidence: medium
+
+# ---------------------------------------------------------------------------
+# B. Type-B Schemas (pedagogical structures, not formal claims)
+# ---------------------------------------------------------------------------
+
+type_B_schemas:
+  - id: proposition.related-rates-strategy
+    section: "3.9"
+    nature: 5-step problem-solving template, not a mathematical theorem
+    proof_status: no formal proof (Type-B has no proof obligation)
+    semantic_kind: [pedagogical, schema]
+    rationale: >
+      Stewart §3.9 presents an explicit numbered strategy for related-
+      rates problems. We model it as a node so downstream Ch4 examples
+      (e.g., motion problems) can cite it; classifying it as a
+      proposition with semantic_kind:[pedagogical] preserves the
+      epistemic distinction from formal results.
+
+  - id: proposition.non-differentiability-cases
+    section: "Ch2 §2.8 (carryover)"
+    nature: enumeration of three typical non-differentiability cases (corner, vertical tangent, discontinuity)
+    proof_status: non-exhaustive enumeration; no proof
+    semantic_kind: [criterion, pedagogical]
+
+# ---------------------------------------------------------------------------
+# C. Implicit / Informal Dependencies
+# ---------------------------------------------------------------------------
+
+implicit_dependencies:
+  - location: proof.derivatives-of-inverse-trigonometric-functions.implicit (§3.5)
+    issue: >
+      Stewart asserts informally (page 213) that "the inverse function
+      of a one-to-one differentiable function is itself differentiable
+      except where the tangent line is vertical." This is a non-trivial
+      analytic theorem (inverse function theorem on R) treated as
+      background. Encoded as dependency_confidence:medium on the proof.
+
+  - location: proof.derivatives-of-inverse-hyperbolic-functions.implicit (§3.11)
+    issue: >
+      Same handwave repeated for hyperbolic case (page 261). Same
+      treatment.
+
+  - location: proof.exponential-growth-decay-solution.verification (§3.8)
+    issue: >
+      Stewart proves only existence (verifies that y(t) = y₀ e^(kt)
+      satisfies y' = ky). Uniqueness — every solution to y' = ky
+      with y(0) = y₀ has this form — is implicit. Full uniqueness
+      proof requires §9.4 separable equations or Picard-Lindelöf.
+      Encoded as a `notes:` field on the theorem; flagged here as
+      uniqueness debt.
+
+  - location: theorem.exp-function-existence (carryover, §3.1 first cited)
+    issue: >
+      Stewart presupposes the existence of a function f satisfying
+      f(0)=1 and f' = f without constructing it. The constructive
+      definition (via series, or as inverse of ln) is deferred to
+      Ch7/Apéndice. Recorded as deferred proof.
+
+  - location: theorem.special-trig-limit (carryover from §2.3, used in §3.3)
+    issue: >
+      lim_{x→0} sin(x)/x = 1. Stewart's geometric proof (§2.3
+      Example 8) uses the squeeze theorem and an inequality on
+      arc length and tangent length that is itself unproven (it
+      tacitly uses the definition of radian measure and arc length,
+      which are not formalized in Stewart Ch1–3). Carried as
+      dependency_confidence:medium.
+
+# ---------------------------------------------------------------------------
+# D. Deferred Proofs (explicitly known to be missing)
+# ---------------------------------------------------------------------------
+
+deferred_proofs:
+  carried_from_ch2:
+    - proposition.limit-laws (Laws 2–5 — Apéndice F)
+    - proposition.limit-of-constant
+    - proposition.limit-of-identity
+    - proposition.limit-monotonicity
+    - theorem.squeeze-theorem
+    - proposition.limit-exists-iff-one-sided-limits
+    - theorem.limit-of-reciprocal-power
+    - theorem.intermediate-value-theorem
+    - theorem.continuity-arithmetic (Laws 2–5)
+    - theorem.continuity-of-elementary-functions
+  introduced_in_ch3:
+    - proposition.related-rates-strategy (Type-B — no proof obligation)
+    - proposition.linear-approximation (informal in §3.10; rigorous in §11.10)
+    - definition.linearization (definitional — no proof obligation)
+    - definition.differential (definitional — no proof obligation)
+    - definition.inverse-hyperbolic-function (definitional)
+    - theorem.exp-function-existence (deferred to Ch7/Apéndice)
+
+# ---------------------------------------------------------------------------
+# E. Open Terminology / Naming Concerns
+# ---------------------------------------------------------------------------
+
+terminology_warnings:
+  - issue: linear-function vs linear-approximation
+    detail: >
+      Stewart §3.10 introduces "linearization" L(x) = f(a) + f'(a)(x − a)
+      and uses the phrase "approximation by a linear function" — but
+      L is affine, not linear in the algebraic sense. Carried from Ch1
+      epistemic debt; flagged in title field of definition.linearization.
+
+  - issue: differential dy notation overload
+    detail: >
+      Stewart §3.10 defines dy = f'(x) dx with dx as an independent
+      variable — a notational convention that conflicts with the
+      Ch4–Ch5 use of dx as integration variable and the Leibniz
+      dy/dx as quotient. Modeled atomically (definition.differential)
+      but the relationship to the Leibniz convention is not yet
+      formalized. Will be revisited when integration is introduced
+      in Ch5.
+
+  - issue: number-e definition recursion
+    detail: >
+      §3.1 introduces e as "the unique number such that
+      lim_{h→0} (e^h − 1)/h = 1" (operational definition).
+      §3.6 derives e = lim_{n→∞} (1 + 1/n)^n (Equation 5)
+      from the derivative of the natural logarithm. The two
+      characterizations are mathematically equivalent but appear
+      in different sections; modeled as
+      theorem.number-e-as-limit with proof.number-e-as-limit.from-derivative-at-1
+      to make the derivation chain explicit. No circularity in the
+      graph, but Stewart's narrative is not strictly bottom-up.
+
+# ---------------------------------------------------------------------------
+# F. Confidence Distribution
+# ---------------------------------------------------------------------------
+
+confidence_distribution:
+  high: 161
+  medium: 12
+  low: 0
+  medium_node_breakdown:
+    - theorem.derivatives-of-trigonometric-functions (bundle)
+    - theorem.derivatives-of-inverse-trigonometric-functions (bundle)
+    - theorem.derivatives-of-hyperbolic-functions (bundle)
+    - theorem.derivatives-of-inverse-hyperbolic-functions (bundle)
+    - proof.derivatives-of-inverse-trigonometric-functions.implicit (inverse-function-differentiability handwave)
+    - proof.derivatives-of-hyperbolic-functions.from-exponential-definition (5/6 cases deferred)
+    - proof.derivatives-of-inverse-hyperbolic-functions.implicit (inverse-function-differentiability handwave + 5/6 deferred)
+    - theorem.special-trig-limit (carryover; arc-length tacit in geometric proof)
+    - proposition.implicit-differentiation (Stewart's informal justification only)
+    - proposition.linear-approximation (informal in §3.10; rigorous in Ch11)
+    - theorem.exponential-growth-decay-solution (existence only; uniqueness deferred)
+    - proof.power-rule-general.logarithmic-differentiation (depends on log-derivative which depends on power-rule for integers; non-circular but requires careful ordering)

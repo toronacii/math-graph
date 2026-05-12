@@ -1,0 +1,107 @@
+schema_version: "0.3.1"
+id: proof.first-derivative-test.from-id-test
+type: proof
+status: extracted
+
+proves: proposition.first-derivative-test
+style: informal
+
+uses: []
+
+parts:
+  - name: case-max-sign-change-plus-to-minus
+    kind: subclaim
+    description: >
+      Suppose f' changes from positive to negative at c, i.e. there
+      exists δ > 0 such that f'(x) > 0 on (c−δ, c) and f'(x) < 0 on
+      (c, c+δ). By the Increasing/Decreasing Test, f is increasing
+      on (c−δ, c) and decreasing on (c, c+δ). Since f is continuous
+      at c, f(x) ≤ f(c) for x in (c−δ, c+δ), so f has a local
+      maximum at c.
+    uses:
+      - id: proposition.increasing-decreasing-test
+        role: essential
+        confidence: high
+      - id: definition.continuity-at-point
+        role: essential
+        confidence: high
+        notes: continuity at c lifts the strict monotonicity on each side to f(x) ≤ f(c) at the boundary
+      - id: definition.local-maximum
+        role: definition
+        confidence: high
+
+  - name: case-min-sign-change-minus-to-plus
+    kind: subclaim
+    description: >
+      Symmetric: if f' changes from negative to positive at c, then
+      f is decreasing on (c−δ, c) and increasing on (c, c+δ), so
+      f(c) ≤ f(x) on a neighborhood, hence f has a local minimum
+      at c.
+    uses:
+      - id: proposition.increasing-decreasing-test
+        role: essential
+        confidence: high
+      - id: definition.local-minimum
+        role: definition
+        confidence: high
+
+  - name: case-no-sign-change
+    kind: subclaim
+    description: >
+      If f' has constant sign on both sides of c (both positive or
+      both negative), then by the Increasing/Decreasing Test f is
+      strictly monotone on (c−δ, c+δ), so f(c) is neither a local
+      max nor a local min.
+    uses:
+      - id: proposition.increasing-decreasing-test
+        role: essential
+        confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "4"
+    section: "4.3"
+    locator: "Justificación de la Prueba de la primera derivada (p. 291)"
+    page: "291"
+    source_language: es
+
+sketch:
+  es:
+    text: >
+      Caso a). Si f' cambia de + a − en c, por la Prueba C/D f es
+      creciente justo a la izquierda y decreciente justo a la
+      derecha; usando la continuidad de f en c, f(c) ≥ f(x) en una
+      vecindad, por tanto máximo local. Casos b) y c) análogos. La
+      hipótesis "cambia de signo" se interpreta como existencia de
+      δ > 0 con f' de signo constante en (c−δ, c) y en (c, c+δ).
+    is_original: true
+    origin: original
+    review_status: unreviewed
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: medium
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart's argument is informal: "La prueba de la primera derivada
+  es una consecuencia de la prueba C/D. En el inciso a), por
+  ejemplo, puesto que el signo de f'(x) cambia de positivo a
+  negativo en c, f es creciente por la izquierda de c y decreciente
+  por la derecha de c. Se deduce entonces que f tiene un máximo
+  local en c." Style flagged informal because Stewart does not
+  rigorously handle the boundary value f(c) — this requires
+  continuity of f at c (given as hypothesis). Semantic confidence
+  medium because the formalization of "sign change" relies on
+  Stewart's informal phrasing, with a known counterexample for
+  derivatives that oscillate (Stewart Ex 87).

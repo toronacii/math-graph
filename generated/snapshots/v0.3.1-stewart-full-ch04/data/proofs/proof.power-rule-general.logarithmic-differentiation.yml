@@ -1,0 +1,74 @@
+schema_version: "0.3.1"
+id: proof.power-rule-general.logarithmic-differentiation
+type: proof
+status: extracted
+
+proves: theorem.power-rule-general
+style: logarithmic-differentiation
+
+uses:
+  - id: proposition.logarithmic-differentiation
+    role: essential
+    confidence: high
+  - id: theorem.derivative-of-natural-log-absolute-value
+    role: essential
+    confidence: high
+    notes: needed to handle x < 0 by working with ln|y| = n·ln|x|
+  - id: proposition.laws-of-logarithms
+    role: essential
+    confidence: high
+    notes: ln|x|^n = n · ln|x|
+  - id: proposition.implicit-differentiation
+    role: essential
+    confidence: high
+  - id: theorem.chain-rule
+    role: essential
+    confidence: high
+  - id: definition.exponential-function
+    role: definition
+    confidence: high
+    notes: x^n for non-rational n is defined as exp(n · ln x)
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.6"
+    locator: "Demostración de la Regla de la potencia (versión general), p. 221"
+    page: "221"
+    source_language: es
+
+sketch:
+  es:
+    text: >
+      Sea y = x^n con x ≠ 0. Tomando ln|·| de ambos lados y
+      aplicando las leyes de los logaritmos: ln|y| = ln|x|^n =
+      n · ln|x|. Derivando implícitamente respecto a x usando
+      (d/dx) ln|y| = y'/y y (d/dx) ln|x| = 1/x: y'/y = n/x.
+      Despejando y' = n · y/x = n · x^n / x = n · x^{n−1}. El
+      caso x = 0 con n ≥ 1 se demuestra directamente desde la
+      definición de derivada (Stewart lo nota al margen).
+    is_original: true
+    origin: original
+    review_status: unreviewed
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Closes the §3.1 epistemic debt for theorem.power-rule-general:
+  Stewart's promised proof for arbitrary real n via logarithmic
+  differentiation. Note: x = 0 boundary case for n ≥ 1 is handled
+  separately from the definition of derivative (Stewart's marginal
+  remark, p. 221) and is not modeled as a separate proof here.

@@ -1,0 +1,111 @@
+schema_version: "0.3.1"
+id: definition.inverse-trigonometric-function
+type: definition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Función trigonométrica inversa
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Inverse trigonometric function
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Las funciones trigonométricas inversas son las inversas
+        sin⁻¹ (arcsin), cos⁻¹ (arccos), tan⁻¹ (arctan), cot⁻¹, sec⁻¹
+        y csc⁻¹, definidas restringiendo cada función trigonométrica
+        a un intervalo donde sea uno a uno. Por ejemplo, sin⁻¹ tiene
+        dominio [−1, 1] y rango [−π/2, π/2], y cos⁻¹ tiene dominio
+        [−1, 1] y rango [0, π].
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        The inverse trigonometric functions are the inverses sin⁻¹
+        (arcsin), cos⁻¹ (arccos), tan⁻¹ (arctan), cot⁻¹, sec⁻¹, and
+        csc⁻¹, defined by restricting each trigonometric function to
+        an interval on which it is one-to-one. For instance, sin⁻¹
+        has domain [−1, 1] and range [−π/2, π/2], and cos⁻¹ has
+        domain [−1, 1] and range [0, π].
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    status: not_applicable
+    review_status: unreviewed
+
+proved_by: []
+depends_on:
+  - id: definition.trigonometric-function
+    role: uses_concept
+    confidence: high
+  - id: definition.inverse-function
+    role: uses_concept
+    confidence: high
+  - id: definition.one-to-one-function
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.6"
+    locator: "Funciones trigonométricas inversas (sección 1.6)"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [trigonometry]
+
+ambient:
+  structures: [real-line]
+  notes: >
+    Each inverse depends on a chosen domain restriction; Stewart
+    fixes the conventional principal-value branches without
+    rigorous justification (which would require an existence
+    argument from continuity / monotonicity).
+
+ontology:
+  semantic_kind: [object]
+  keywords: [inverse-trig, arcsin, arccos, arctan, principal-value]
+
+generality: []
+
+quality:
+  extraction_confidence: medium
+  dependency_confidence: medium
+  semantic_confidence: medium
+  translation_confidence: medium
+  latex_confidence: null
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Bundle node mirroring the policy choice for definition.trigono-
+  metric-function — six inverses bundled in one paragraph, kept as
+  explicit epistemic debt (not split per user directive). The
+  principal-branch choices are conventional; rigorous existence
+  awaits continuity + monotonicity from Ch2/Ch3.

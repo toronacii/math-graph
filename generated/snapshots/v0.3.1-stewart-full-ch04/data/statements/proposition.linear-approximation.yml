@@ -1,0 +1,111 @@
+schema_version: "0.3.1"
+id: proposition.linear-approximation
+type: proposition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Aproximación lineal (de la recta tangente)
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Linear (tangent-line) approximation
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Si f es derivable en a, entonces para x cercano a a se
+        tiene la aproximación f(x) ≈ f(a) + f'(a)(x − a) = L(x).
+        En notación de diferenciales, con dx = Δx pequeño,
+        Δy = f(a + dx) − f(a) ≈ dy = f'(a) dx, equivalentemente
+        f(a + dx) ≈ f(a) + dy. La precisión de la aproximación
+        mejora cuando |x − a| → 0.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        If f is differentiable at a, then for x near a one has
+        the approximation f(x) ≈ f(a) + f'(a)(x − a) = L(x). In
+        differential notation, with dx = Δx small,
+        Δy = f(a + dx) − f(a) ≈ dy = f'(a) dx, equivalently
+        f(a + dx) ≈ f(a) + dy. Accuracy improves as |x − a| → 0.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      f(x) \;\approx\; f(a) + f'(a)(x-a) \qquad (x \text{ near } a)
+    status: present
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: definition.linearization
+    role: uses_concept
+    confidence: high
+  - id: definition.differential
+    role: uses_concept
+    confidence: high
+  - id: definition.derivative-function
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.10"
+    theorem_label: "Ecuación 1"
+    page: "251"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [numerical-analysis]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [principle, schema]
+  keywords: [linear-approximation, tangent-line-approximation, first-order-approximation, differential-approximation]
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart's Eq 1, §3.10 — named "aproximación lineal" /
+  "aproximación de la recta tangente". Methodological proposition
+  (semantic_kind: principle + schema): proved_by: [] because the
+  approximation symbol ≈ is informal; the rigorous statement is
+  Taylor's theorem with remainder (§11.10). When §11 is extracted,
+  add a generality edge from this proposition to
+  theorem.taylors-theorem (relation: weaker_than, n = 1 case;
+  alphabetical ownership: "linear-approximation" <
+  "taylors-theorem", so edge to be owned here).

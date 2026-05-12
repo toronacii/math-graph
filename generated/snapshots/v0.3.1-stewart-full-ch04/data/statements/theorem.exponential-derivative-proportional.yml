@@ -1,0 +1,111 @@
+schema_version: "0.3.1"
+id: theorem.exponential-derivative-proportional
+type: theorem
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: La derivada de una función exponencial es proporcional a la función
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: The derivative of an exponential function is proportional to the function
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Si la función exponencial f(x) = a^x (con a > 0) es
+        derivable en 0, entonces es derivable para todo x y
+        f'(x) = f'(0) · a^x. En consecuencia, la razón de cambio
+        de cualquier función exponencial es proporcional a la
+        función misma.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        If the exponential function f(x) = a^x (with a > 0) is
+        differentiable at 0, then it is differentiable everywhere
+        and f'(x) = f'(0) · a^x. Hence the rate of change of any
+        exponential function is proportional to the function
+        itself.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      f(x) = a^{x},\ a>0,\ f'(0)\text{ exists}
+        \;\Longrightarrow\; f'(x) \;=\; f'(0)\cdot a^{x}
+    status: present
+    review_status: unreviewed
+
+proved_by:
+  - proof.exponential-derivative-proportional.stewart
+
+depends_on:
+  - id: definition.derivative-function
+    role: uses_concept
+    confidence: high
+  - id: definition.exponential-function
+    role: uses_concept
+    confidence: high
+  - id: definition.differentiable-at-point
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.1"
+    theorem_label: "Ecuación 4"
+    page: "179"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [analysis]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [principle]
+  keywords: [exponential-function, derivative, proportionality, differentiation-rule]
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  This is Stewart's Eq 4 (page 179). It is a conditional theorem:
+  the conclusion holds IF f'(0) exists. Stewart only provides
+  numerical evidence (table of values) for the existence of
+  f'(0) when a = 2 and a = 3 — he does not prove it. The
+  existence of f'(0) for general a is open debt; flagged in
+  proof.exponential-derivative-proportional.stewart with
+  dependency_confidence:medium. The key consequence
+  d/dx(e^x) = e^x is captured as a separate corollary node.

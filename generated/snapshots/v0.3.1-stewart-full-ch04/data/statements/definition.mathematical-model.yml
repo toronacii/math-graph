@@ -1,0 +1,97 @@
+schema_version: "0.3.1"
+id: definition.mathematical-model
+type: definition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Modelo matemático
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Mathematical model
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Un modelo matemático es una descripción matemática (a menudo
+        mediante una función o ecuación) de un fenómeno del mundo
+        real, como el tamaño de una población, la demanda de un
+        producto o la concentración de un contaminante en el aire,
+        cuyo propósito es entender el fenómeno y hacer predicciones
+        acerca de su comportamiento futuro.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        A mathematical model is a mathematical description (often via
+        a function or equation) of a real-world phenomenon — such as
+        a population size, product demand, or pollutant concentration
+        — whose purpose is to understand the phenomenon and predict
+        its future behavior.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    status: not_applicable
+    review_status: unreviewed
+
+proved_by: []
+depends_on:
+  - id: definition.function
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.2"
+    locator: "Sección 1.2 — Modelos matemáticos: un catálogo de funciones esenciales"
+    source_language: es
+
+domains:
+  primary: [applied-mathematics]
+  secondary: [calculus]
+
+ambient:
+  structures: []
+
+ontology:
+  semantic_kind: [pedagogical, principle]
+  keywords: [modeling, application, prediction]
+
+generality: []
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: medium
+  translation_confidence: medium
+  latex_confidence: null
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Pedagogical/applied node — Stewart introduces the concept informally
+  and it has no precise mathematical content. Tagged `pedagogical` so
+  retrieval/proof traversal can de-prioritize it.

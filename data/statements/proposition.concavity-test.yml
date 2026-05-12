@@ -1,0 +1,108 @@
+schema_version: "0.3.1"
+id: proposition.concavity-test
+type: proposition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Prueba de concavidad
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Concavity Test
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        a) Si f''(x) > 0 para toda x en I, entonces la gráfica de f
+        es cóncava hacia arriba sobre I. b) Si f''(x) < 0 para toda
+        x en I, entonces la gráfica de f es cóncava hacia abajo
+        sobre I.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        (a) If f''(x) > 0 for all x in I, then the graph of f is
+        concave upward on I. (b) If f''(x) < 0 for all x in I, then
+        the graph of f is concave downward on I.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      \bigl(\forall x \in I:\ f''(x) > 0\bigr) \Rightarrow f \text{ concave up on } I
+      \quad\wedge\quad
+      \bigl(\forall x \in I:\ f''(x) < 0\bigr) \Rightarrow f \text{ concave down on } I
+    status: present
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: definition.derivative-function
+    role: uses_concept
+    confidence: high
+  - id: definition.concave-up
+    role: uses_concept
+    confidence: high
+  - id: definition.concave-down
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "4"
+    section: "4.3"
+    theorem_label: "Prueba de concavidad"
+    page: "293"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [analysis, convex-analysis]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [criterion, principle]
+  keywords: [concavity-test, second-derivative, mvt-application]
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart §4.3 page 293. Stewart explicitly defers the proof to
+  Apéndice F ("En el apéndice F se da una demostración con la ayuda
+  del teorema del valor medio"); proved_by is empty here, marking
+  this as epistemic debt — to be supplied if Apéndice F is ever
+  extracted. The converse fails in general: f concave up does not
+  imply f''(x) > 0 (e.g., f(x) = x⁴ is concave up at 0 but
+  f''(0) = 0). The test as stated (strict inequality) is sufficient
+  but not necessary.

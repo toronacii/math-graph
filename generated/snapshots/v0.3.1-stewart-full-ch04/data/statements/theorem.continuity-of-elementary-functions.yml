@@ -1,0 +1,134 @@
+schema_version: "0.3.1"
+id: theorem.continuity-of-elementary-functions
+type: theorem
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Continuidad de funciones elementales
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Continuity of elementary functions
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Los siguientes tipos de funciones son continuas en todo
+        número de sus dominios: funciones polinomiales, funciones
+        racionales, funciones raíz, funciones trigonométricas,
+        funciones trigonométricas inversas, funciones exponenciales,
+        funciones logarítmicas.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        The following types of functions are continuous at every
+        number in their domains: polynomial, rational, root,
+        trigonometric, inverse trigonometric, exponential, and
+        logarithmic functions.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      \text{polynomial, rational, root, trig, inv-trig, exp, log}
+      \text{ functions are continuous on their domains}
+    status: present
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: definition.continuity-at-point
+    role: uses_concept
+    confidence: high
+  - id: definition.polynomial
+    role: uses_concept
+    confidence: high
+  - id: definition.rational-function
+    role: uses_concept
+    confidence: high
+  - id: definition.power-function
+    role: uses_concept
+    confidence: medium
+    notes: covers root functions x^{1/n} as a special case
+  - id: definition.trigonometric-function
+    role: uses_concept
+    confidence: high
+  - id: definition.inverse-trigonometric-function
+    role: uses_concept
+    confidence: high
+  - id: definition.exponential-function
+    role: uses_concept
+    confidence: high
+  - id: definition.logarithmic-function
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.5"
+    theorem_label: "Teorema 7"
+    page: "123"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [real-analysis]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [property, schema]
+  keywords: [continuity, elementary-functions, polynomial, trigonometric, exponential, logarithmic]
+
+generality:
+  - target: theorem.continuity-of-polynomials-and-rationals
+    relation: stronger_than
+    notes: >
+      Strict superset: Thm 7 includes polynomials and rationals plus
+      five additional families. Owned here per policy 04
+      (alphabetically earlier id).
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: medium
+  semantic_confidence: medium
+  translation_confidence: high
+  latex_confidence: medium
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Type-A bundle. Stewart asserts the theorem without unified proof:
+  trig continuity is sketched (§2.5 eq. 6 + addition formulas, with
+  full proof deferred to §3.3 squeeze-theorem application);
+  inv-trig continuity is asserted via Apéndice F (continuous bijection
+  ⇒ continuous inverse); exp continuity via §1.5 construction;
+  log continuity via inverse-of-continuous-bijection.
+  semantic_confidence: medium tracks this inhomogeneous justification
+  shape. No proof node authored — would require Apéndice F machinery
+  not yet in graph.

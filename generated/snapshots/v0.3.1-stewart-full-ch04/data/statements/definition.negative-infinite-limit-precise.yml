@@ -1,0 +1,111 @@
+schema_version: "0.3.1"
+id: definition.negative-infinite-limit-precise
+type: definition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Definición precisa de límite infinito negativo
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Precise definition of negative infinite limit
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Sea f una función definida sobre algún intervalo abierto que
+        contiene al número a, excepto posiblemente en a misma.
+        Entonces lím_{x→a} f(x) = −∞ significa que para todo número
+        negativo N existe un número positivo δ tal que si
+        0 < |x − a| < δ entonces f(x) < N.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        Let f be a function defined on some open interval that
+        contains the number a, except possibly at a itself. Then
+        lim_{x→a} f(x) = −∞ means that for every negative number N
+        there is a positive number δ such that if 0 < |x − a| < δ
+        then f(x) < N.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      \lim_{x \to a} f(x) = -\infty
+      \iff
+      \forall N < 0,\ \exists \delta > 0:\
+      0 < |x - a| < \delta \implies f(x) < N
+    status: present
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: definition.function
+    role: uses_concept
+    confidence: high
+  - id: definition.absolute-value
+    role: uses_concept
+    confidence: high
+  - id: definition.epsilon-delta-limit
+    role: extends
+    confidence: high
+    notes: extends the precise scheme to the negative-divergent regime
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.4"
+    theorem_label: "Definición 7"
+    page: "116"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [real-analysis]
+
+ambient:
+  structures: [extended-real-line]
+
+ontology:
+  semantic_kind: [criterion, relation]
+  keywords: [limit, infinity, negative-divergence, rigorous]
+
+generality: []
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart §2.4 Definición 7. Sibling edge to infinite-limit-precise
+  is owned by infinite-limit-precise (alphabetically earlier).
+  Equivalence with the informal §2.2 sibling definition.negative-
+  infinite-limit is recorded on the informal node.

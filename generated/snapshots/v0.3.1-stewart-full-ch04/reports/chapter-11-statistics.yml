@@ -1,0 +1,83 @@
+chapter: "11"
+chapter_title: Infinite Sequences and Series
+source:
+  work: "Calculo de una variable — Trascendentes tempranas"
+  author: James Stewart
+  edition: "7"
+  language: es
+  sections_processed:
+    - "11.1"
+    - "11.2"
+    - "11.3"
+    - "11.4"
+    - "11.5"
+    - "11.6"
+    - "11.8"
+    - "11.9"
+    - "11.10"
+
+extraction_date: "2026-05-10"
+validation_status: pass
+
+cumulative_statistics:
+  total_nodes: 266
+  total_edges: 293
+
+  nodes_by_type:
+    definition: 98
+    proposition: 18
+    theorem: 61
+    corollary: 5
+    lemma: 0
+    axiom: 0
+    conjecture: 0
+    proof: 84
+
+  nodes_by_kind:
+    statement: 182
+    proof: 84
+
+  edges_by_relation:
+    uses: 209
+    proves: 84
+
+  proofs_by_style:
+    direct: 71
+    assumed: 6
+    epsilon-delta: 4
+    algebraic: 2
+    geometric: 1
+
+  proofs_by_confidence:
+    high: 56
+    medium: 21
+    low: 7
+
+  root_nodes: 98
+  isolated_nodes: 53
+  connected_components: 55
+  connected_component_sizes:
+    - 210
+    - 3
+    - 1
+    - 1
+    - 1
+
+  graph_density: 0.0042
+  average_degree: 2.20
+
+chapter_delta:
+  new_nodes: 31
+  new_edges: 45
+  new_definitions: 5
+  new_propositions: 0
+  new_theorems: 13
+  new_corollaries: 0
+  new_proofs: 13
+  reclassifications: 0
+
+sections_skipped:
+  - section: "11.7"
+    reason: "Strategy for testing series — methodology overview"
+  - section: "11.11"
+    reason: "Applications of Taylor polynomials — applications, no new entities"

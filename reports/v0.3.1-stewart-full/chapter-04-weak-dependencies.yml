@@ -1,0 +1,212 @@
+rerun_id: v0.3.1-stewart-full
+chapter: "4"
+snapshot_label: v0.3.1-stewart-full-ch04
+generated_at: "2026-05-11"
+
+low_confidence_proof_uses_introduced_in_ch4: []
+# All Ch4 proof_uses edges are confidence: high.
+# Carried-forward low-confidence proof_uses (Ch2/Ch3) are tracked in
+# the chapter-02 and chapter-03 weak-dependency reports.
+
+low_confidence_statement_depends_on_introduced_in_ch4:
+  - statement: proposition.antiderivative-formulas-table
+    target: theorem.power-rule-positive-integer
+    role: uses_concept
+    confidence: medium
+    section: "4.9"
+    reason: >
+      The "x^n / (n+1)" row of the antiderivative table is valid for
+      general real n ≠ −1. Stewart's elementary power rule (§3.1)
+      only covers positive integer n; the general case requires
+      theorem.power-rule-general (§3.6 logarithmic differentiation).
+      The bundled table node references the elementary power rule as
+      its nominal anchor but the full-real-n claim depends on the
+      general version. This is partial epistemic debt that would be
+      resolved by splitting the table into one proposition per row.
+
+deferred_proofs_introduced_in_ch4:
+  - statement: theorem.extreme-value-theorem
+    section: "4.1"
+    reason: >
+      Stewart §4.1 states EVT without proof and explicitly defers
+      the proof to Apéndice F. The full proof requires sequential
+      compactness on closed bounded intervals, machinery developed
+      in real analysis courses (Rudin Theorem 4.16). For this rerun
+      EVT is treated as axiom-like within Ch4.
+    target_chapter: Apéndice F (also Rudin Ch4 in any future merge)
+
+  - statement: proposition.concavity-test
+    section: "4.3"
+    reason: >
+      Stewart §4.3 derives the concavity test geometrically (tangent
+      lines lying below the curve) without a rigorous argument. A
+      formal proof requires either MVT applied twice or the second-
+      order Taylor remainder. Stewart defers to Apéndice F.
+    target_chapter: Apéndice F (or §11.10 Taylor)
+
+  - statement: theorem.l-hospital-rule
+    section: "4.4"
+    reason: >
+      Stewart §4.4 gives only an informal motivation for the
+      simplest case (0/0 with f(a) = g(a) = 0 and f', g' continuous,
+      g'(a) ≠ 0) and defers the general proof. The full statement —
+      covering both 0/0 and ∞/∞ on one-sided, two-sided, finite and
+      infinite limits — requires the Cauchy mean value theorem.
+      Bundled into one node per Stewart's presentation; would be
+      split if a multi-source Rudin merge happens.
+    target_chapter: Apéndice F
+
+  - statement: definition.newton-iteration
+    section: "4.8"
+    reason: >
+      No proof obligation (definition / constructive scheme). A
+      convergence theorem is intentionally NOT extracted: Stewart
+      defers it to §11.11 Exercise 39 (Taylor remainder argument)
+      and gives §4.8 examples of failure modes (bad x₁, x_n leaving
+      the domain, oscillation). Rudin Theorem 5.18 gives a
+      quadratic-convergence statement on a neighborhood of a simple
+      root with f'' continuous — would be a separate node in a
+      future merge.
+    target_chapter: §11.11 (Stewart) / Rudin Ch5 (future merge)
+
+  - statement: proposition.closed-interval-method
+    section: "4.1"
+    reason: >
+      Pedagogical procedure. Correctness follows immediately from
+      EVT (existence of extrema) + Fermat (interior extrema are
+      critical numbers). No separate formal proof obligation.
+    target_chapter: implicit corollary, no separate proof intended
+
+  - statement: definition.slant-asymptote
+    section: "4.5"
+    reason: definitional (no proof obligation).
+    target_chapter: n/a
+
+  - statement: definition.antiderivative
+    section: "4.9"
+    reason: definitional (no proof obligation).
+    target_chapter: n/a
+
+  - statement: proposition.antiderivative-formulas-table
+    section: "4.9"
+    reason: >
+      Bundled inverse-derivative table. Each row is a one-line
+      verification (differentiate the right column, match the left,
+      cite the corresponding derivative theorem). No monolithic
+      proof produced; debt closed only if the table is split into
+      per-row propositions.
+    target_chapter: deferred — closed only on table split
+
+bundled_nodes_introduced_in_ch4:
+  - id: proposition.antiderivative-formulas-table
+    section: "4.9"
+    bundle_type: type-A (formula table)
+    rows_collapsed: 13
+    debt_kind: same-shape entries collapsed into one node, mirroring
+      Ch3 trig-bundle precedent
+    suggested_split:
+      - one proposition per row, each with explicit
+        domain-of-validity field (especially row 4 "1/x → ln|x|"
+        on disconnected domains)
+
+  - id: theorem.l-hospital-rule
+    section: "4.4"
+    bundle_type: type-A (case bundle)
+    cases_collapsed: 2 (0/0 and ∞/∞)
+    debt_kind: Stewart presents as one rule; logically two separate
+      theorems with overlapping but distinct hypotheses
+    suggested_split:
+      - theorem.l-hospital-zero-over-zero
+      - theorem.l-hospital-infinity-over-infinity
+      - linked by a sibling generality edge
+
+informal_proofs_introduced_in_ch4:
+  - proof: proof.first-derivative-test.from-id-test
+    statement: proposition.first-derivative-test
+    section: "4.3"
+    style: informal
+    semantic_confidence: medium
+    reason: >
+      Stewart's argument is geometric (sign of f' on either side of
+      a critical number determines local extremum). A rigorous proof
+      requires a one-sided uniform-monotonicity argument from the
+      increasing-decreasing test. Marked informal so future
+      formalization is visible.
+
+  - proof: proof.second-derivative-test.from-concavity
+    statement: proposition.second-derivative-test
+    section: "4.3"
+    style: informal
+    semantic_confidence: medium
+    reason: >
+      Stewart derives the second-derivative test from concavity
+      (which itself has a deferred proof). The derivation is a
+      sketch; rigorous version requires either MVT applied twice or
+      Taylor remainder.
+
+domain_of_validity_gaps_introduced_in_ch4:
+  - id: proposition.antiderivative-formulas-table
+    row: "1/x → ln|x|"
+    gap: >
+      Valid only on intervals not containing 0. Stewart's text
+      explicitly notes the disconnected-domain caveat (p. 344,
+      ln|x| + C₁ for x > 0; ln|x| + C₂ for x < 0) but the bundled
+      node does not encode it.
+    suggested_fix: split into per-row propositions with explicit
+      domain field; or add a domain field to the table proposition.
+
+  - id: definition.slant-asymptote
+    gap: >
+      Requires m ≠ 0 (otherwise the asymptote is horizontal, not
+      slant). The "linear function" terminology is also overloaded
+      (carries the y = mx + b vs y = mx ambiguity from Ch1).
+    suggested_fix: add explicit hypothesis m ≠ 0; resolve linear-
+      function terminology in a Ch1 cleanup pass.
+
+implicit_imports_introduced_in_ch4: []
+# No new implicit imports beyond what Ch2/Ch3 already declared.
+# The §4.9 antiderivative table implicitly assumes the chain rule for
+# the arcsin and arctan rows (since those derivatives were obtained
+# via implicit differentiation in §3.5), but this is captured via the
+# explicit dependency on theorem.derivatives-of-inverse-trigonometric-
+# functions, not a new implicit import.
+
+uniqueness_debts_carried_forward:
+  - theorem.exponential-growth-decay-solution: existence proven in
+    §3.8; uniqueness deferred to §9.4 (separable ODEs)
+  - definition.exponential-function existence: carried from Ch3 (→
+    Apéndice / Ch7)
+
+terminology_warnings_carried_forward:
+  - "linear-function" overload (Ch1, Ch3 §3.10, now Ch4 §4.5):
+    "linear function" is used by Stewart for both y = mx + b and
+    y = mx (the latter only in some contexts). The §4.5 slant-
+    asymptote definition inherits this ambiguity. Open from Ch1
+    cleanup.
+
+multi_source_disambiguation_notes:
+  - id: theorem.extreme-value-theorem
+    note: >
+      Rudin Theorem 4.16 ("continuous image of a compact set is
+      compact") strictly subsumes Stewart's EVT. In a future Rudin
+      merge: separate nodes; Stewart's EVT becomes a corollary via
+      Heine-Borel.
+
+  - id: theorem.mean-value-theorem
+    note: >
+      Rudin Theorem 5.10 (Cauchy MVT — generalized form for two
+      functions) strictly subsumes Stewart's MVT. In a future Rudin
+      merge: separate nodes; Stewart's MVT specializes to g(x) = x.
+
+  - id: definition.newton-iteration
+    note: >
+      Rudin Theorem 5.18 gives a quadratic-convergence theorem on a
+      neighborhood of a simple root with f'' continuous — different
+      mathematical content from Stewart's pure iteration scheme;
+      separate node in any future merge.
+
+  - id: definition.antiderivative
+    note: >
+      Rudin / standard analysis uses the term "primitive". Same
+      mathematical content (F'(x) = f(x) on an interval). Future
+      merge: same node, with "primitive" as title alias.

@@ -1,0 +1,130 @@
+schema_version: "0.3.1"
+id: proof.fermat.stewart
+type: proof
+status: extracted
+
+proves: theorem.fermat
+style: one-sided-limits
+
+uses: []
+
+parts:
+  - name: max-case-right-limit
+    kind: subclaim
+    description: >
+      Suppose f has a local maximum at c, so f(c) ≥ f(c + h) for
+      all sufficiently small h. Hence f(c + h) − f(c) ≤ 0. For
+      h > 0 small, dividing by h preserves the inequality:
+      (f(c + h) − f(c))/h ≤ 0. Taking the right-hand limit (using
+      the limit-monotonicity property §2.3.2): f'(c) =
+      lim_{h→0⁺} (f(c + h) − f(c))/h ≤ 0.
+    uses:
+      - id: definition.local-maximum
+        role: definition
+        confidence: high
+      - id: definition.derivative-at-point
+        role: definition
+        confidence: high
+      - id: proposition.limit-monotonicity
+        role: essential
+        confidence: high
+        notes: Stewart cites Theorem 2.3.2 explicitly to pass the inequality through the limit
+      - id: definition.right-hand-limit
+        role: definition
+        confidence: high
+
+  - name: max-case-left-limit
+    kind: subclaim
+    description: >
+      For h < 0 small, dividing by h reverses the inequality:
+      (f(c + h) − f(c))/h ≥ 0. Taking the left-hand limit:
+      f'(c) = lim_{h→0⁻} (f(c + h) − f(c))/h ≥ 0.
+    uses:
+      - id: definition.local-maximum
+        role: definition
+        confidence: high
+      - id: definition.derivative-at-point
+        role: definition
+        confidence: high
+      - id: proposition.limit-monotonicity
+        role: essential
+        confidence: high
+      - id: definition.left-hand-limit
+        role: definition
+        confidence: high
+
+  - name: combine
+    kind: subclaim
+    description: >
+      Since f'(c) exists by hypothesis, both one-sided limits
+      equal f'(c). The two inequalities f'(c) ≤ 0 and f'(c) ≥ 0
+      force f'(c) = 0.
+    uses:
+      - id: proposition.limit-exists-iff-one-sided-limits
+        role: essential
+        confidence: high
+        notes: existence of f'(c) requires equality of left and right limits
+
+  - name: min-case
+    kind: subclaim
+    description: >
+      The minimum case is symmetric: replace ≤ by ≥ throughout, or
+      apply the maximum case to −f (Stewart Exercise 76 → 77).
+    uses:
+      - id: definition.local-minimum
+        role: definition
+        confidence: high
+      - id: theorem.constant-multiple-rule-derivative
+        role: notation
+        confidence: high
+        notes: (-f)'(c) = -f'(c) used to reduce the min case to the max case via Ex 76
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "4"
+    section: "4.1"
+    locator: "Demostración del Teorema 4 (pp. 276–277)"
+    page: "276"
+    source_language: es
+
+sketch:
+  es:
+    text: >
+      Caso máximo. Como f(c) ≥ f(x) para x cerca de c, en
+      particular f(c) ≥ f(c + h) para |h| pequeño, así
+      f(c + h) − f(c) ≤ 0. Si h > 0 entonces (f(c+h) − f(c))/h ≤ 0;
+      tomando límite por derecha y usando monotonía del límite
+      (Teorema 2.3.2 de Stewart), f'(c) = lím_{h→0⁺} ≤ 0. Si
+      h < 0 entonces (f(c+h) − f(c))/h ≥ 0; el límite por
+      izquierda da f'(c) ≥ 0. Como f'(c) existe, los dos límites
+      laterales coinciden con f'(c), y la doble desigualdad fuerza
+      f'(c) = 0. Caso mínimo: análogo (o aplicar caso máximo a −f
+      vía Ej 76).
+    is_original: true
+    origin: original
+    review_status: unreviewed
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart's proof is fully written for the maximum case; minimum
+  case is delegated to Exercises 76–77 with the explicit reduction
+  via −f. The proof reactivates proposition.limit-monotonicity
+  (Ch2 §2.3 Theorem 2) and proposition.limit-exists-iff-one-sided-
+  limits (Ch2 §2.3 Theorem 1), both of which were stated without
+  proof in Ch2 (deferred to Apéndice F). This proof is one of the
+  earliest in Ch4 to cite Ch2 limit-foundations directly rather
+  than going through the derivative-rules abstractions of Ch3.

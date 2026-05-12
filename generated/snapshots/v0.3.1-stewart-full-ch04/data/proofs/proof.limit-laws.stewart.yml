@@ -1,0 +1,83 @@
+schema_version: "0.3.1"
+id: proof.limit-laws.stewart
+type: proof
+status: extracted
+
+proves: proposition.limit-laws
+style: direct
+
+uses: []
+
+parts:
+  - name: sum-law
+    kind: subclaim
+    description: >
+      Proof of Law 1 (sum law) from the precise definition of limit
+      and the triangle inequality. Stewart §2.4 (pp. 114–115).
+    uses:
+      - id: definition.epsilon-delta-limit
+        role: essential
+        confidence: high
+        implicit: false
+        notes: >
+          Both hypotheses (lim f = L, lim g = M) and the conclusion
+          (lim (f+g) = L+M) are unfolded via Definición 2.
+      - id: definition.absolute-value
+        role: notation
+        confidence: high
+        implicit: false
+        notes: triangle inequality |a + b| ≤ |a| + |b|
+      - id: definition.arithmetic-of-functions
+        role: definition
+        confidence: high
+        implicit: false
+        notes: pointwise sum (f + g)(x) = f(x) + g(x)
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.4"
+    locator: "Demostración de la ley de la suma"
+    page: "114"
+    source_language: es
+
+sketch:
+  es:
+    text: >
+      Sea ε > 0. Como lím_{x→a} f(x) = L existe δ₁ > 0 tal que
+      0 < |x − a| < δ₁ ⇒ |f(x) − L| < ε/2. Análogamente existe
+      δ₂ > 0 tal que 0 < |x − a| < δ₂ ⇒ |g(x) − M| < ε/2.
+      Tomando δ = mín{δ₁, δ₂}, si 0 < |x − a| < δ entonces, por la
+      desigualdad del triángulo, |(f(x) + g(x)) − (L + M)| ≤
+      |f(x) − L| + |g(x) − M| < ε/2 + ε/2 = ε. Por tanto
+      lím_{x→a} (f + g)(x) = L + M.
+    is_original: true
+    origin: original
+    review_status: unreviewed
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: medium
+  semantic_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart proves ONLY Law 1 (sum) explicitly in §2.4; Laws 2–5 are
+  deferred to Apéndice F and to exercises. This proof node therefore
+  uses parts[] with a single 'sum-law' part, scoped to the sum law
+  only. dependency_confidence: medium reflects that this proof
+  establishes the bundled proposition.limit-laws ONLY in part — the
+  bundle remains epistemic debt until either (a) Apéndice F is
+  extracted with proofs of the remaining laws, or (b) the bundle is
+  split into proposition.limit-{sum,difference,constant-multiple,
+  product,quotient}-law atoms. Top-level uses[] is empty per
+  template guidance: all dependencies live inside parts[].

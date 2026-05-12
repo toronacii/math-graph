@@ -1,0 +1,110 @@
+schema_version: "0.3.1"
+id: theorem.chain-rule
+type: theorem
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Regla de la cadena
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Chain rule
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Si g es derivable en x y f es derivable en g(x), entonces
+        la función compuesta F = f ∘ g definida por F(x) = f(g(x))
+        es derivable en x y F'(x) = f'(g(x)) · g'(x). En notación
+        de Leibniz, si y = f(u) y u = g(x) son derivables, entonces
+        dy/dx = (dy/du)(du/dx).
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        If g is differentiable at x and f is differentiable at
+        g(x), then the composite function F = f ∘ g defined by
+        F(x) = f(g(x)) is differentiable at x and
+        F'(x) = f'(g(x)) · g'(x). In Leibniz notation,
+        dy/dx = (dy/du)(du/dx).
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      F(x) = f\bigl(g(x)\bigr)
+        \;\Longrightarrow\;
+        F'(x) \;=\; f'\bigl(g(x)\bigr)\cdot g'(x)
+        \quad\text{i.e.}\quad
+        \frac{dy}{dx} \;=\; \frac{dy}{du}\,\frac{du}{dx}
+    status: present
+    review_status: unreviewed
+
+proved_by:
+  - proof.chain-rule.stewart
+
+depends_on:
+  - id: definition.composition-of-functions
+    role: uses_concept
+    confidence: high
+  - id: definition.derivative-function
+    role: uses_concept
+    confidence: high
+  - id: definition.differentiable-at-point
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.4"
+    theorem_label: "Regla de la cadena"
+    page: "199"
+    source_language: es
+
+domains:
+  primary: [calculus]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [principle]
+  keywords: [chain-rule, composition, derivative, differentiation-rule]
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart attributes the chain rule historically to James Gregory
+  (1638–1675). The intuitive proof sketch (Δy/Δx = (Δy/Δu)(Δu/Δx))
+  fails when Δu = 0 even with Δx ≠ 0; Stewart provides the rigorous
+  proof at the end of the section using the increment-form
+  characterization of differentiability.

@@ -13,6 +13,33 @@
   <key id="d1" for="node" attr.name="type" attr.type="string" />
   <key id="d0" for="node" attr.name="kind" attr.type="string" />
   <graph edgedefault="directed">
+    <node id="corollary.derivatives-equal-implies-differ-by-constant">
+      <data key="d0">statement</data>
+      <data key="d1">corollary</data>
+      <data key="d2">extracted</data>
+      <data key="d3">present</data>
+      <data key="d4">calculus</data>
+      <data key="d5">criterion,principle</data>
+      <data key="d6">high</data>
+    </node>
+    <node id="definition.absolute-maximum">
+      <data key="d0">statement</data>
+      <data key="d1">definition</data>
+      <data key="d2">extracted</data>
+      <data key="d3">present</data>
+      <data key="d4">calculus</data>
+      <data key="d5">object,property</data>
+      <data key="d6">high</data>
+    </node>
+    <node id="definition.absolute-minimum">
+      <data key="d0">statement</data>
+      <data key="d1">definition</data>
+      <data key="d2">extracted</data>
+      <data key="d3">present</data>
+      <data key="d4">calculus</data>
+      <data key="d5">object,property</data>
+      <data key="d6">high</data>
+    </node>
     <node id="definition.absolute-value">
       <data key="d0">statement</data>
       <data key="d1">definition</data>
@@ -39,6 +66,15 @@
       <data key="d4">calculus</data>
       <data key="d5">object</data>
       <data key="d6">low</data>
+    </node>
+    <node id="definition.antiderivative">
+      <data key="d0">statement</data>
+      <data key="d1">definition</data>
+      <data key="d2">extracted</data>
+      <data key="d3">present</data>
+      <data key="d4">calculus</data>
+      <data key="d5">object,relation</data>
+      <data key="d6">high</data>
     </node>
     <node id="definition.arithmetic-of-functions">
       <data key="d0">statement</data>
@@ -76,6 +112,24 @@
       <data key="d5">operator</data>
       <data key="d6">medium</data>
     </node>
+    <node id="definition.concave-down">
+      <data key="d0">statement</data>
+      <data key="d1">definition</data>
+      <data key="d2">extracted</data>
+      <data key="d3">present</data>
+      <data key="d4">calculus</data>
+      <data key="d5">object,property</data>
+      <data key="d6">high</data>
+    </node>
+    <node id="definition.concave-up">
+      <data key="d0">statement</data>
+      <data key="d1">definition</data>
+      <data key="d2">extracted</data>
+      <data key="d3">present</data>
+      <data key="d4">calculus</data>
+      <data key="d5">object,property</data>
+      <data key="d6">high</data>
+    </node>
     <node id="definition.continuity-at-point">
       <data key="d0">statement</data>
       <data key="d1">definition</data>
@@ -92,6 +146,15 @@
       <data key="d3">present</data>
       <data key="d4">calculus</data>
       <data key="d5">criterion,property</data>
+      <data key="d6">high</data>
+    </node>
+    <node id="definition.critical-number">
+      <data key="d0">statement</data>
+      <data key="d1">definition</data>
+      <data key="d2">extracted</data>
+      <data key="d3">present</data>
+      <data key="d4">calculus</data>
+      <data key="d5">criterion,object</data>
       <data key="d6">high</data>
     </node>
     <node id="definition.decreasing-function">
@@ -211,6 +274,15 @@
       <data key="d5">object</data>
       <data key="d6">medium</data>
     </node>
+    <node id="definition.extreme-value">
+      <data key="d0">statement</data>
+      <data key="d1">definition</data>
+      <data key="d2">extracted</data>
+      <data key="d3">not_applicable</data>
+      <data key="d4">calculus</data>
+      <data key="d5">notation,object</data>
+      <data key="d6">high</data>
+    </node>
     <node id="definition.function">
       <data key="d0">statement</data>
       <data key="d1">definition</data>
@@ -308,6 +380,15 @@
       <data key="d3">informal</data>
       <data key="d4">calculus</data>
       <data key="d5">object,relation</data>
+      <data key="d6">medium</data>
+    </node>
+    <node id="definition.inflection-point">
+      <data key="d0">statement</data>
+      <data key="d1">definition</data>
+      <data key="d2">extracted</data>
+      <data key="d3">informal</data>
+      <data key="d4">calculus</data>
+      <data key="d5">object,property</data>
       <data key="d6">medium</data>
     </node>
     <node id="definition.instantaneous-rate-of-change">
@@ -418,6 +499,24 @@
       <data key="d5">construction,object</data>
       <data key="d6">high</data>
     </node>
+    <node id="definition.local-maximum">
+      <data key="d0">statement</data>
+      <data key="d1">definition</data>
+      <data key="d2">extracted</data>
+      <data key="d3">present</data>
+      <data key="d4">calculus</data>
+      <data key="d5">object,property</data>
+      <data key="d6">high</data>
+    </node>
+    <node id="definition.local-minimum">
+      <data key="d0">statement</data>
+      <data key="d1">definition</data>
+      <data key="d2">extracted</data>
+      <data key="d3">present</data>
+      <data key="d4">calculus</data>
+      <data key="d5">object,property</data>
+      <data key="d6">high</data>
+    </node>
     <node id="definition.logarithmic-function">
       <data key="d0">statement</data>
       <data key="d1">definition</data>
@@ -480,6 +579,15 @@
       <data key="d4">calculus</data>
       <data key="d5">object,relation</data>
       <data key="d6">medium</data>
+    </node>
+    <node id="definition.newton-iteration">
+      <data key="d0">statement</data>
+      <data key="d1">definition</data>
+      <data key="d2">extracted</data>
+      <data key="d3">present</data>
+      <data key="d4">calculus</data>
+      <data key="d5">construction,operator,schema</data>
+      <data key="d6">high</data>
     </node>
     <node id="definition.normal-line">
       <data key="d0">statement</data>
@@ -625,6 +733,15 @@
       <data key="d5">notation,object,operator</data>
       <data key="d6">high</data>
     </node>
+    <node id="definition.slant-asymptote">
+      <data key="d0">statement</data>
+      <data key="d1">definition</data>
+      <data key="d2">extracted</data>
+      <data key="d3">present</data>
+      <data key="d4">calculus</data>
+      <data key="d5">object,property</data>
+      <data key="d6">high</data>
+    </node>
     <node id="definition.tangent-line">
       <data key="d0">statement</data>
       <data key="d1">definition</data>
@@ -670,6 +787,15 @@
       <data key="d5">construction,operator</data>
       <data key="d6">medium</data>
     </node>
+    <node id="proposition.antiderivative-formulas-table">
+      <data key="d0">statement</data>
+      <data key="d1">proposition</data>
+      <data key="d2">extracted</data>
+      <data key="d3">present</data>
+      <data key="d4">calculus</data>
+      <data key="d5">criterion,schema</data>
+      <data key="d6">medium</data>
+    </node>
     <node id="proposition.cancellation-equations">
       <data key="d0">statement</data>
       <data key="d1">proposition</data>
@@ -687,6 +813,24 @@
       <data key="d4">calculus</data>
       <data key="d5">schema</data>
       <data key="d6">medium</data>
+    </node>
+    <node id="proposition.closed-interval-method">
+      <data key="d0">statement</data>
+      <data key="d1">proposition</data>
+      <data key="d2">extracted</data>
+      <data key="d3">present</data>
+      <data key="d4">calculus</data>
+      <data key="d5">criterion,pedagogical,schema</data>
+      <data key="d6">high</data>
+    </node>
+    <node id="proposition.concavity-test">
+      <data key="d0">statement</data>
+      <data key="d1">proposition</data>
+      <data key="d2">extracted</data>
+      <data key="d3">present</data>
+      <data key="d4">calculus</data>
+      <data key="d5">criterion,principle</data>
+      <data key="d6">high</data>
     </node>
     <node id="proposition.derivative-as-tangent-slope">
       <data key="d0">statement</data>
@@ -715,6 +859,15 @@
       <data key="d5">criterion,property</data>
       <data key="d6">high</data>
     </node>
+    <node id="proposition.first-derivative-test">
+      <data key="d0">statement</data>
+      <data key="d1">proposition</data>
+      <data key="d2">extracted</data>
+      <data key="d3">informal</data>
+      <data key="d4">calculus</data>
+      <data key="d5">criterion,principle</data>
+      <data key="d6">medium</data>
+    </node>
     <node id="proposition.horizontal-line-test">
       <data key="d0">statement</data>
       <data key="d1">proposition</data>
@@ -741,6 +894,15 @@
       <data key="d4">calculus</data>
       <data key="d5">principle,schema</data>
       <data key="d6">medium</data>
+    </node>
+    <node id="proposition.increasing-decreasing-test">
+      <data key="d0">statement</data>
+      <data key="d1">proposition</data>
+      <data key="d2">extracted</data>
+      <data key="d3">present</data>
+      <data key="d4">calculus</data>
+      <data key="d5">criterion,principle</data>
+      <data key="d6">high</data>
     </node>
     <node id="proposition.laws-of-exponents">
       <data key="d0">statement</data>
@@ -868,6 +1030,15 @@
       <data key="d5">principle,schema</data>
       <data key="d6">high</data>
     </node>
+    <node id="proposition.local-extreme-implies-critical-number">
+      <data key="d0">statement</data>
+      <data key="d1">proposition</data>
+      <data key="d2">extracted</data>
+      <data key="d3">present</data>
+      <data key="d4">calculus</data>
+      <data key="d5">criterion,principle</data>
+      <data key="d6">high</data>
+    </node>
     <node id="proposition.logarithmic-differentiation">
       <data key="d0">statement</data>
       <data key="d1">proposition</data>
@@ -894,6 +1065,15 @@
       <data key="d4">calculus</data>
       <data key="d5">pedagogical,principle,schema</data>
       <data key="d6">medium</data>
+    </node>
+    <node id="proposition.second-derivative-test">
+      <data key="d0">statement</data>
+      <data key="d1">proposition</data>
+      <data key="d2">extracted</data>
+      <data key="d3">present</data>
+      <data key="d4">calculus</data>
+      <data key="d5">criterion,principle</data>
+      <data key="d6">high</data>
     </node>
     <node id="proposition.vertical-line-test">
       <data key="d0">statement</data>
@@ -1012,6 +1192,15 @@
       <data key="d5">principle</data>
       <data key="d6">high</data>
     </node>
+    <node id="theorem.derivative-zero-implies-constant">
+      <data key="d0">statement</data>
+      <data key="d1">theorem</data>
+      <data key="d2">extracted</data>
+      <data key="d3">present</data>
+      <data key="d4">calculus</data>
+      <data key="d5">criterion,principle</data>
+      <data key="d6">high</data>
+    </node>
     <node id="theorem.derivatives-of-hyperbolic-functions">
       <data key="d0">statement</data>
       <data key="d1">theorem</data>
@@ -1084,6 +1273,33 @@
       <data key="d5">principle</data>
       <data key="d6">medium</data>
     </node>
+    <node id="theorem.extreme-value-theorem">
+      <data key="d0">statement</data>
+      <data key="d1">theorem</data>
+      <data key="d2">extracted</data>
+      <data key="d3">present</data>
+      <data key="d4">calculus</data>
+      <data key="d5">criterion,principle</data>
+      <data key="d6">high</data>
+    </node>
+    <node id="theorem.fermat">
+      <data key="d0">statement</data>
+      <data key="d1">theorem</data>
+      <data key="d2">extracted</data>
+      <data key="d3">present</data>
+      <data key="d4">calculus</data>
+      <data key="d5">criterion,principle</data>
+      <data key="d6">high</data>
+    </node>
+    <node id="theorem.general-antiderivative">
+      <data key="d0">statement</data>
+      <data key="d1">theorem</data>
+      <data key="d2">extracted</data>
+      <data key="d3">present</data>
+      <data key="d4">calculus</data>
+      <data key="d5">criterion,principle</data>
+      <data key="d6">high</data>
+    </node>
     <node id="theorem.intermediate-value-theorem">
       <data key="d0">statement</data>
       <data key="d1">theorem</data>
@@ -1102,6 +1318,15 @@
       <data key="d5">principle,relation</data>
       <data key="d6">high</data>
     </node>
+    <node id="theorem.l-hospital-rule">
+      <data key="d0">statement</data>
+      <data key="d1">theorem</data>
+      <data key="d2">extracted</data>
+      <data key="d3">present</data>
+      <data key="d4">calculus</data>
+      <data key="d5">criterion,principle</data>
+      <data key="d6">high</data>
+    </node>
     <node id="theorem.limit-of-reciprocal-power">
       <data key="d0">statement</data>
       <data key="d1">theorem</data>
@@ -1118,6 +1343,15 @@
       <data key="d3">present</data>
       <data key="d4">calculus</data>
       <data key="d5">property</data>
+      <data key="d6">high</data>
+    </node>
+    <node id="theorem.mean-value-theorem">
+      <data key="d0">statement</data>
+      <data key="d1">theorem</data>
+      <data key="d2">extracted</data>
+      <data key="d3">present</data>
+      <data key="d4">calculus</data>
+      <data key="d5">criterion,principle</data>
       <data key="d6">high</data>
     </node>
     <node id="theorem.number-e-as-limit">
@@ -1172,6 +1406,15 @@
       <data key="d3">present</data>
       <data key="d4">calculus</data>
       <data key="d5">principle</data>
+      <data key="d6">high</data>
+    </node>
+    <node id="theorem.rolle">
+      <data key="d0">statement</data>
+      <data key="d1">theorem</data>
+      <data key="d2">extracted</data>
+      <data key="d3">present</data>
+      <data key="d4">calculus</data>
+      <data key="d5">criterion,principle</data>
       <data key="d6">high</data>
     </node>
     <node id="theorem.squeeze-theorem">
@@ -1290,6 +1533,20 @@
       <data key="d7">specialization</data>
       <data key="d6">high</data>
     </node>
+    <node id="proof.derivative-zero-implies-constant.mvt">
+      <data key="d0">proof</data>
+      <data key="d1">proof</data>
+      <data key="d2">extracted</data>
+      <data key="d7">direct-from-mvt</data>
+      <data key="d6">high</data>
+    </node>
+    <node id="proof.derivatives-equal-implies-differ-by-constant.from-zero">
+      <data key="d0">proof</data>
+      <data key="d1">proof</data>
+      <data key="d2">extracted</data>
+      <data key="d7">direct-corollary</data>
+      <data key="d6">high</data>
+    </node>
     <node id="proof.derivatives-of-hyperbolic-functions.from-exponential-definition">
       <data key="d0">proof</data>
       <data key="d1">proof</data>
@@ -1353,6 +1610,27 @@
       <data key="d7">verification</data>
       <data key="d6">medium</data>
     </node>
+    <node id="proof.fermat.stewart">
+      <data key="d0">proof</data>
+      <data key="d1">proof</data>
+      <data key="d2">extracted</data>
+      <data key="d7">one-sided-limits</data>
+      <data key="d6">high</data>
+    </node>
+    <node id="proof.first-derivative-test.from-id-test">
+      <data key="d0">proof</data>
+      <data key="d1">proof</data>
+      <data key="d2">extracted</data>
+      <data key="d7">informal</data>
+      <data key="d6">medium</data>
+    </node>
+    <node id="proof.general-antiderivative.from-corollary">
+      <data key="d0">proof</data>
+      <data key="d1">proof</data>
+      <data key="d2">extracted</data>
+      <data key="d7">direct-corollary</data>
+      <data key="d6">high</data>
+    </node>
     <node id="proof.horizontal-line-test.stewart">
       <data key="d0">proof</data>
       <data key="d1">proof</data>
@@ -1365,6 +1643,13 @@
       <data key="d1">proof</data>
       <data key="d2">extracted</data>
       <data key="d7">algebraic-from-definition</data>
+      <data key="d6">high</data>
+    </node>
+    <node id="proof.increasing-decreasing-test.from-mvt">
+      <data key="d0">proof</data>
+      <data key="d1">proof</data>
+      <data key="d2">extracted</data>
+      <data key="d7">direct-from-mvt</data>
       <data key="d6">high</data>
     </node>
     <node id="proof.inverse-hyperbolic-as-logarithm.quadratic-in-exp">
@@ -1423,6 +1708,13 @@
       <data key="d7">geometric-squeeze</data>
       <data key="d6">medium</data>
     </node>
+    <node id="proof.mean-value-theorem.from-rolle">
+      <data key="d0">proof</data>
+      <data key="d1">proof</data>
+      <data key="d2">extracted</data>
+      <data key="d7">auxiliary-function</data>
+      <data key="d6">high</data>
+    </node>
     <node id="proof.number-e-as-limit.from-derivative-at-1">
       <data key="d0">proof</data>
       <data key="d1">proof</data>
@@ -1472,6 +1764,20 @@
       <data key="d7">direct</data>
       <data key="d6">high</data>
     </node>
+    <node id="proof.rolle.stewart">
+      <data key="d0">proof</data>
+      <data key="d1">proof</data>
+      <data key="d2">extracted</data>
+      <data key="d7">case-analysis</data>
+      <data key="d6">high</data>
+    </node>
+    <node id="proof.second-derivative-test.from-concavity">
+      <data key="d0">proof</data>
+      <data key="d1">proof</data>
+      <data key="d2">extracted</data>
+      <data key="d7">informal</data>
+      <data key="d6">medium</data>
+    </node>
     <node id="proof.sum-rule-derivative.stewart">
       <data key="d0">proof</data>
       <data key="d1">proof</data>
@@ -1486,6 +1792,48 @@
       <data key="d7">direct</data>
       <data key="d6">high</data>
     </node>
+    <edge source="corollary.derivatives-equal-implies-differ-by-constant" target="proof.general-antiderivative.from-corollary" id="0">
+      <data key="d8">uses</data>
+      <data key="d9">essential</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
+    </edge>
+    <edge source="corollary.derivatives-equal-implies-differ-by-constant" target="definition.derivative-function" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="corollary.derivatives-equal-implies-differ-by-constant" target="theorem.derivative-zero-implies-constant" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">specializes</data>
+    </edge>
+    <edge source="definition.absolute-maximum" target="proof.rolle.stewart" id="0">
+      <data key="d8">uses</data>
+      <data key="d9">definition</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
+    </edge>
+    <edge source="definition.absolute-maximum" target="definition.domain" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="definition.absolute-maximum" target="definition.function" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="definition.absolute-minimum" target="proof.rolle.stewart" id="0">
+      <data key="d8">uses</data>
+      <data key="d9">definition</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
+    </edge>
+    <edge source="definition.absolute-minimum" target="definition.domain" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="definition.absolute-minimum" target="definition.function" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
     <edge source="definition.absolute-value" target="proof.derivative-of-natural-log-absolute-value.cases" id="0">
       <data key="d8">uses</data>
       <data key="d9">definition</data>
@@ -1515,6 +1863,16 @@
       <data key="d9">uses_concept</data>
     </edge>
     <edge source="definition.algebraic-function" target="definition.rational-function" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="definition.antiderivative" target="proof.general-antiderivative.from-corollary" id="0">
+      <data key="d8">uses</data>
+      <data key="d9">definition</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
+    </edge>
+    <edge source="definition.antiderivative" target="definition.derivative-function" id="0">
       <data key="d8">depends_on</data>
       <data key="d9">uses_concept</data>
     </edge>
@@ -1576,6 +1934,34 @@
       <data key="d8">depends_on</data>
       <data key="d9">uses_concept</data>
     </edge>
+    <edge source="definition.concave-down" target="proof.second-derivative-test.from-concavity" id="0">
+      <data key="d8">uses</data>
+      <data key="d9">definition</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
+    </edge>
+    <edge source="definition.concave-down" target="definition.function" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="definition.concave-down" target="definition.tangent-line" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="definition.concave-up" target="proof.second-derivative-test.from-concavity" id="0">
+      <data key="d8">uses</data>
+      <data key="d9">definition</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
+    </edge>
+    <edge source="definition.concave-up" target="definition.function" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="definition.concave-up" target="definition.tangent-line" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
     <edge source="definition.continuity-at-point" target="proof.continuity-arithmetic.stewart" id="0">
       <data key="d8">uses</data>
       <data key="d9">essential</data>
@@ -1597,6 +1983,18 @@
     <edge source="definition.continuity-at-point" target="proof.differentiable-increment-formula.stewart" id="0">
       <data key="d8">uses</data>
       <data key="d9">notation</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
+    </edge>
+    <edge source="definition.continuity-at-point" target="proof.first-derivative-test.from-id-test" id="0">
+      <data key="d8">uses</data>
+      <data key="d9">essential</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
+    </edge>
+    <edge source="definition.continuity-at-point" target="proof.second-derivative-test.from-concavity" id="0">
+      <data key="d8">uses</data>
+      <data key="d9">essential</data>
       <data key="d10">high</data>
       <data key="d11">False</data>
     </edge>
@@ -1623,6 +2021,24 @@
     <edge source="definition.continuity-on-interval" target="definition.right-continuity" id="0">
       <data key="d8">depends_on</data>
       <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="definition.critical-number" target="definition.derivative-at-point" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="definition.critical-number" target="definition.domain" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="definition.critical-number" target="definition.function" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="definition.decreasing-function" target="proof.increasing-decreasing-test.from-mvt" id="0">
+      <data key="d8">uses</data>
+      <data key="d9">definition</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
     </edge>
     <edge source="definition.decreasing-function" target="definition.function" id="0">
       <data key="d8">depends_on</data>
@@ -1653,6 +2069,18 @@
       <data key="d11">False</data>
     </edge>
     <edge source="definition.derivative-at-point" target="proof.differentiable-increment-formula.stewart" id="0">
+      <data key="d8">uses</data>
+      <data key="d9">definition</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
+    </edge>
+    <edge source="definition.derivative-at-point" target="proof.fermat.stewart" id="0">
+      <data key="d8">uses</data>
+      <data key="d9">definition</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
+    </edge>
+    <edge source="definition.derivative-at-point" target="proof.fermat.stewart" id="1">
       <data key="d8">uses</data>
       <data key="d9">definition</data>
       <data key="d10">high</data>
@@ -1850,6 +2278,22 @@
       <data key="d8">depends_on</data>
       <data key="d9">uses_concept</data>
     </edge>
+    <edge source="definition.extreme-value" target="definition.absolute-maximum" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="definition.extreme-value" target="definition.absolute-minimum" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="definition.extreme-value" target="definition.local-maximum" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="definition.extreme-value" target="definition.local-minimum" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
     <edge source="definition.function" target="proof.vertical-line-test.stewart" id="0">
       <data key="d8">uses</data>
       <data key="d9">definition</data>
@@ -1972,6 +2416,12 @@
       <data key="d8">depends_on</data>
       <data key="d9">uses_concept</data>
     </edge>
+    <edge source="definition.increasing-function" target="proof.increasing-decreasing-test.from-mvt" id="0">
+      <data key="d8">uses</data>
+      <data key="d9">definition</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
+    </edge>
     <edge source="definition.increasing-function" target="definition.function" id="0">
       <data key="d8">depends_on</data>
       <data key="d9">uses_concept</data>
@@ -2015,6 +2465,18 @@
     <edge source="definition.infinite-limit" target="definition.limit-of-function" id="0">
       <data key="d8">depends_on</data>
       <data key="d9">extends</data>
+    </edge>
+    <edge source="definition.inflection-point" target="definition.concave-down" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="definition.inflection-point" target="definition.concave-up" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="definition.inflection-point" target="definition.continuity-at-point" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
     </edge>
     <edge source="definition.instantaneous-rate-of-change" target="definition.average-rate-of-change" id="0">
       <data key="d8">depends_on</data>
@@ -2146,6 +2608,12 @@
       <data key="d8">depends_on</data>
       <data key="d9">uses_concept</data>
     </edge>
+    <edge source="definition.left-hand-limit" target="proof.fermat.stewart" id="0">
+      <data key="d8">uses</data>
+      <data key="d9">definition</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
+    </edge>
     <edge source="definition.left-hand-limit" target="definition.function" id="0">
       <data key="d8">depends_on</data>
       <data key="d9">uses_concept</data>
@@ -2195,6 +2663,68 @@
       <data key="d9">uses_concept</data>
     </edge>
     <edge source="definition.linearization" target="definition.tangent-line" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="definition.local-maximum" target="proof.fermat.stewart" id="0">
+      <data key="d8">uses</data>
+      <data key="d9">definition</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
+    </edge>
+    <edge source="definition.local-maximum" target="proof.fermat.stewart" id="1">
+      <data key="d8">uses</data>
+      <data key="d9">definition</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
+    </edge>
+    <edge source="definition.local-maximum" target="proof.first-derivative-test.from-id-test" id="0">
+      <data key="d8">uses</data>
+      <data key="d9">definition</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
+    </edge>
+    <edge source="definition.local-maximum" target="proof.rolle.stewart" id="0">
+      <data key="d8">uses</data>
+      <data key="d9">definition</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
+    </edge>
+    <edge source="definition.local-maximum" target="proof.second-derivative-test.from-concavity" id="0">
+      <data key="d8">uses</data>
+      <data key="d9">definition</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
+    </edge>
+    <edge source="definition.local-maximum" target="definition.function" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="definition.local-minimum" target="proof.fermat.stewart" id="0">
+      <data key="d8">uses</data>
+      <data key="d9">definition</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
+    </edge>
+    <edge source="definition.local-minimum" target="proof.first-derivative-test.from-id-test" id="0">
+      <data key="d8">uses</data>
+      <data key="d9">definition</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
+    </edge>
+    <edge source="definition.local-minimum" target="proof.rolle.stewart" id="0">
+      <data key="d8">uses</data>
+      <data key="d9">definition</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
+    </edge>
+    <edge source="definition.local-minimum" target="proof.second-derivative-test.from-concavity" id="0">
+      <data key="d8">uses</data>
+      <data key="d9">definition</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
+    </edge>
+    <edge source="definition.local-minimum" target="definition.function" id="0">
       <data key="d8">depends_on</data>
       <data key="d9">uses_concept</data>
     </edge>
@@ -2304,6 +2834,18 @@
       <data key="d8">depends_on</data>
       <data key="d9">uses_concept</data>
     </edge>
+    <edge source="definition.newton-iteration" target="definition.derivative-at-point" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="definition.newton-iteration" target="definition.differentiable-at-point" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="definition.newton-iteration" target="definition.tangent-line" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
     <edge source="definition.normal-line" target="definition.tangent-line" id="0">
       <data key="d8">depends_on</data>
       <data key="d9">uses_concept</data>
@@ -2363,6 +2905,12 @@
     <edge source="definition.polynomial" target="proof.continuity-of-polynomials-and-rationals.stewart" id="0">
       <data key="d8">uses</data>
       <data key="d9">definition</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
+    </edge>
+    <edge source="definition.polynomial" target="proof.mean-value-theorem.from-rolle" id="0">
+      <data key="d8">uses</data>
+      <data key="d9">background</data>
       <data key="d10">high</data>
       <data key="d11">False</data>
     </edge>
@@ -2438,6 +2986,12 @@
       <data key="d8">depends_on</data>
       <data key="d9">uses_concept</data>
     </edge>
+    <edge source="definition.right-hand-limit" target="proof.fermat.stewart" id="0">
+      <data key="d8">uses</data>
+      <data key="d9">definition</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
+    </edge>
     <edge source="definition.right-hand-limit" target="definition.function" id="0">
       <data key="d8">depends_on</data>
       <data key="d9">uses_concept</data>
@@ -2446,13 +3000,33 @@
       <data key="d8">depends_on</data>
       <data key="d9">specializes</data>
     </edge>
+    <edge source="definition.secant-line" target="proof.mean-value-theorem.from-rolle" id="0">
+      <data key="d8">uses</data>
+      <data key="d9">definition</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
+    </edge>
     <edge source="definition.second-derivative" target="definition.derivative-function" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="definition.slant-asymptote" target="definition.function" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="definition.slant-asymptote" target="definition.linear-function" id="0">
       <data key="d8">depends_on</data>
       <data key="d9">uses_concept</data>
     </edge>
     <edge source="definition.tangent-line" target="proof.derivative-as-tangent-slope.stewart" id="0">
       <data key="d8">uses</data>
       <data key="d9">definition</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
+    </edge>
+    <edge source="definition.tangent-line" target="proof.second-derivative-test.from-concavity" id="0">
+      <data key="d8">uses</data>
+      <data key="d9">essential</data>
       <data key="d10">high</data>
       <data key="d11">False</data>
     </edge>
@@ -2538,6 +3112,42 @@
       <data key="d8">depends_on</data>
       <data key="d9">uses_concept</data>
     </edge>
+    <edge source="proposition.antiderivative-formulas-table" target="definition.antiderivative" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="proposition.antiderivative-formulas-table" target="theorem.constant-multiple-rule-derivative" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="proposition.antiderivative-formulas-table" target="theorem.derivative-of-natural-exponential" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="proposition.antiderivative-formulas-table" target="theorem.derivatives-of-hyperbolic-functions" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="proposition.antiderivative-formulas-table" target="theorem.derivatives-of-inverse-trigonometric-functions" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="proposition.antiderivative-formulas-table" target="theorem.derivatives-of-trigonometric-functions" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="proposition.antiderivative-formulas-table" target="theorem.general-antiderivative" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="proposition.antiderivative-formulas-table" target="theorem.power-rule-positive-integer" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="proposition.antiderivative-formulas-table" target="theorem.sum-rule-derivative" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
     <edge source="proposition.cancellation-equations" target="proof.change-of-base-formula.stewart" id="0">
       <data key="d8">uses</data>
       <data key="d9">essential</data>
@@ -2567,6 +3177,50 @@
       <data key="d9">uses_concept</data>
     </edge>
     <edge source="proposition.change-of-base-formula" target="proposition.laws-of-logarithms" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="proposition.closed-interval-method" target="definition.absolute-maximum" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="proposition.closed-interval-method" target="definition.absolute-minimum" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="proposition.closed-interval-method" target="definition.critical-number" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="proposition.closed-interval-method" target="proposition.local-extreme-implies-critical-number" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="proposition.closed-interval-method" target="theorem.extreme-value-theorem" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="proposition.concavity-test" target="proof.second-derivative-test.from-concavity" id="0">
+      <data key="d8">uses</data>
+      <data key="d9">essential</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
+    </edge>
+    <edge source="proposition.concavity-test" target="proof.second-derivative-test.from-concavity" id="1">
+      <data key="d8">uses</data>
+      <data key="d9">essential</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
+    </edge>
+    <edge source="proposition.concavity-test" target="definition.concave-down" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="proposition.concavity-test" target="definition.concave-up" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="proposition.concavity-test" target="definition.derivative-function" id="0">
       <data key="d8">depends_on</data>
       <data key="d9">uses_concept</data>
     </edge>
@@ -2623,6 +3277,26 @@
       <data key="d9">uses_concept</data>
     </edge>
     <edge source="proposition.direct-substitution-property" target="proposition.limit-power-of-x" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="proposition.first-derivative-test" target="definition.continuity-at-point" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="proposition.first-derivative-test" target="definition.critical-number" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="proposition.first-derivative-test" target="definition.derivative-function" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="proposition.first-derivative-test" target="definition.local-maximum" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="proposition.first-derivative-test" target="definition.local-minimum" id="0">
       <data key="d8">depends_on</data>
       <data key="d9">uses_concept</data>
     </edge>
@@ -2706,6 +3380,36 @@
       <data key="d8">depends_on</data>
       <data key="d9">uses_concept</data>
     </edge>
+    <edge source="proposition.increasing-decreasing-test" target="proof.first-derivative-test.from-id-test" id="0">
+      <data key="d8">uses</data>
+      <data key="d9">essential</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
+    </edge>
+    <edge source="proposition.increasing-decreasing-test" target="proof.first-derivative-test.from-id-test" id="1">
+      <data key="d8">uses</data>
+      <data key="d9">essential</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
+    </edge>
+    <edge source="proposition.increasing-decreasing-test" target="proof.first-derivative-test.from-id-test" id="2">
+      <data key="d8">uses</data>
+      <data key="d9">essential</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
+    </edge>
+    <edge source="proposition.increasing-decreasing-test" target="definition.decreasing-function" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="proposition.increasing-decreasing-test" target="definition.derivative-function" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="proposition.increasing-decreasing-test" target="definition.increasing-function" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
     <edge source="proposition.laws-of-exponents" target="proof.laws-of-logarithms.stewart" id="0">
       <data key="d8">uses</data>
       <data key="d9">essential</data>
@@ -2765,6 +3469,12 @@
     <edge source="proposition.limit-equality-near-point" target="definition.limit-of-function" id="0">
       <data key="d8">depends_on</data>
       <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="proposition.limit-exists-iff-one-sided-limits" target="proof.fermat.stewart" id="0">
+      <data key="d8">uses</data>
+      <data key="d9">essential</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
     </edge>
     <edge source="proposition.limit-exists-iff-one-sided-limits" target="definition.left-hand-limit" id="0">
       <data key="d8">depends_on</data>
@@ -2869,6 +3579,18 @@
     <edge source="proposition.limit-laws" target="definition.limit-of-function" id="0">
       <data key="d8">depends_on</data>
       <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="proposition.limit-monotonicity" target="proof.fermat.stewart" id="0">
+      <data key="d8">uses</data>
+      <data key="d9">essential</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
+    </edge>
+    <edge source="proposition.limit-monotonicity" target="proof.fermat.stewart" id="1">
+      <data key="d8">uses</data>
+      <data key="d9">essential</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
     </edge>
     <edge source="proposition.limit-monotonicity" target="definition.limit-of-function" id="0">
       <data key="d8">depends_on</data>
@@ -2980,6 +3702,18 @@
       <data key="d8">depends_on</data>
       <data key="d9">uses_concept</data>
     </edge>
+    <edge source="proposition.local-extreme-implies-critical-number" target="definition.critical-number" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="proposition.local-extreme-implies-critical-number" target="definition.local-maximum" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="proposition.local-extreme-implies-critical-number" target="definition.local-minimum" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
     <edge source="proposition.logarithmic-differentiation" target="proof.power-rule-general.logarithmic-differentiation" id="0">
       <data key="d8">uses</data>
       <data key="d9">essential</data>
@@ -3023,6 +3757,22 @@
       <data key="d9">uses_concept</data>
     </edge>
     <edge source="proposition.related-rates-strategy" target="theorem.chain-rule" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="proposition.second-derivative-test" target="definition.continuity-at-point" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="proposition.second-derivative-test" target="definition.derivative-function" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="proposition.second-derivative-test" target="definition.local-maximum" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="proposition.second-derivative-test" target="definition.local-minimum" id="0">
       <data key="d8">depends_on</data>
       <data key="d9">uses_concept</data>
     </edge>
@@ -3142,6 +3892,12 @@
       <data key="d10">high</data>
       <data key="d11">False</data>
     </edge>
+    <edge source="theorem.constant-multiple-rule-derivative" target="proof.fermat.stewart" id="0">
+      <data key="d8">uses</data>
+      <data key="d9">notation</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
+    </edge>
     <edge source="theorem.constant-multiple-rule-derivative" target="definition.derivative-function" id="0">
       <data key="d8">depends_on</data>
       <data key="d9">uses_concept</data>
@@ -3228,6 +3984,12 @@
       <data key="d8">depends_on</data>
       <data key="d9">uses_concept</data>
     </edge>
+    <edge source="theorem.continuity-of-polynomials-and-rationals" target="proof.mean-value-theorem.from-rolle" id="0">
+      <data key="d8">uses</data>
+      <data key="d9">essential</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
+    </edge>
     <edge source="theorem.continuity-of-polynomials-and-rationals" target="definition.continuity-at-point" id="0">
       <data key="d8">depends_on</data>
       <data key="d9">uses_concept</data>
@@ -3239,6 +4001,18 @@
     <edge source="theorem.continuity-of-polynomials-and-rationals" target="definition.rational-function" id="0">
       <data key="d8">depends_on</data>
       <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="theorem.derivative-of-constant" target="proof.mean-value-theorem.from-rolle" id="0">
+      <data key="d8">uses</data>
+      <data key="d9">essential</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
+    </edge>
+    <edge source="theorem.derivative-of-constant" target="proof.rolle.stewart" id="0">
+      <data key="d8">uses</data>
+      <data key="d9">essential</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
     </edge>
     <edge source="theorem.derivative-of-constant" target="definition.derivative-function" id="0">
       <data key="d8">depends_on</data>
@@ -3356,6 +4130,20 @@
       <data key="d8">depends_on</data>
       <data key="d9">uses_concept</data>
     </edge>
+    <edge source="theorem.derivative-zero-implies-constant" target="proof.derivatives-equal-implies-differ-by-constant.from-zero" id="0">
+      <data key="d8">uses</data>
+      <data key="d9">essential</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
+    </edge>
+    <edge source="theorem.derivative-zero-implies-constant" target="definition.derivative-function" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="theorem.derivative-zero-implies-constant" target="definition.differentiable-on-interval" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
     <edge source="theorem.derivatives-of-hyperbolic-functions" target="proof.derivatives-of-inverse-hyperbolic-functions.implicit" id="0">
       <data key="d8">uses</data>
       <data key="d9">essential</data>
@@ -3430,6 +4218,18 @@
       <data key="d8">depends_on</data>
       <data key="d9">uses_concept</data>
     </edge>
+    <edge source="theorem.difference-rule-derivative" target="proof.derivatives-equal-implies-differ-by-constant.from-zero" id="0">
+      <data key="d8">uses</data>
+      <data key="d9">essential</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
+    </edge>
+    <edge source="theorem.difference-rule-derivative" target="proof.mean-value-theorem.from-rolle" id="0">
+      <data key="d8">uses</data>
+      <data key="d9">essential</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
+    </edge>
     <edge source="theorem.difference-rule-derivative" target="definition.derivative-function" id="0">
       <data key="d8">depends_on</data>
       <data key="d9">uses_concept</data>
@@ -3439,6 +4239,18 @@
       <data key="d9">uses_concept</data>
     </edge>
     <edge source="theorem.differentiable-implies-continuous" target="proof.chain-rule.stewart" id="0">
+      <data key="d8">uses</data>
+      <data key="d9">essential</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
+    </edge>
+    <edge source="theorem.differentiable-implies-continuous" target="proof.derivative-zero-implies-constant.mvt" id="0">
+      <data key="d8">uses</data>
+      <data key="d9">essential</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
+    </edge>
+    <edge source="theorem.differentiable-implies-continuous" target="proof.increasing-decreasing-test.from-mvt" id="0">
       <data key="d8">uses</data>
       <data key="d9">essential</data>
       <data key="d10">high</data>
@@ -3490,6 +4302,62 @@
       <data key="d8">depends_on</data>
       <data key="d9">uses_concept</data>
     </edge>
+    <edge source="theorem.extreme-value-theorem" target="proof.rolle.stewart" id="0">
+      <data key="d8">uses</data>
+      <data key="d9">essential</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
+    </edge>
+    <edge source="theorem.extreme-value-theorem" target="proof.rolle.stewart" id="1">
+      <data key="d8">uses</data>
+      <data key="d9">essential</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
+    </edge>
+    <edge source="theorem.extreme-value-theorem" target="definition.absolute-maximum" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="theorem.extreme-value-theorem" target="definition.absolute-minimum" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="theorem.extreme-value-theorem" target="definition.continuity-on-interval" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="theorem.fermat" target="proof.rolle.stewart" id="0">
+      <data key="d8">uses</data>
+      <data key="d9">essential</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
+    </edge>
+    <edge source="theorem.fermat" target="proof.rolle.stewart" id="1">
+      <data key="d8">uses</data>
+      <data key="d9">essential</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
+    </edge>
+    <edge source="theorem.fermat" target="definition.derivative-at-point" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="theorem.fermat" target="definition.local-maximum" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="theorem.fermat" target="definition.local-minimum" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="theorem.general-antiderivative" target="definition.antiderivative" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="theorem.general-antiderivative" target="definition.derivative-function" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
     <edge source="theorem.intermediate-value-theorem" target="definition.continuity-on-interval" id="0">
       <data key="d8">depends_on</data>
       <data key="d9">uses_concept</data>
@@ -3503,6 +4371,14 @@
       <data key="d9">uses_concept</data>
     </edge>
     <edge source="theorem.inverse-hyperbolic-as-logarithm" target="definition.natural-logarithm" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="theorem.l-hospital-rule" target="definition.derivative-at-point" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="theorem.l-hospital-rule" target="definition.differentiable-on-interval" id="0">
       <data key="d8">depends_on</data>
       <data key="d9">uses_concept</data>
     </edge>
@@ -3542,6 +4418,40 @@
       <data key="d8">depends_on</data>
       <data key="d9">uses_concept</data>
     </edge>
+    <edge source="theorem.mean-value-theorem" target="proof.derivative-zero-implies-constant.mvt" id="0">
+      <data key="d8">uses</data>
+      <data key="d9">essential</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
+    </edge>
+    <edge source="theorem.mean-value-theorem" target="proof.increasing-decreasing-test.from-mvt" id="0">
+      <data key="d8">uses</data>
+      <data key="d9">essential</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
+    </edge>
+    <edge source="theorem.mean-value-theorem" target="proof.increasing-decreasing-test.from-mvt" id="1">
+      <data key="d8">uses</data>
+      <data key="d9">essential</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
+    </edge>
+    <edge source="theorem.mean-value-theorem" target="definition.continuity-on-interval" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="theorem.mean-value-theorem" target="definition.derivative-at-point" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="theorem.mean-value-theorem" target="definition.differentiable-on-interval" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="theorem.mean-value-theorem" target="definition.secant-line" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
     <edge source="theorem.number-e-as-limit" target="definition.limit-of-function" id="0">
       <data key="d8">depends_on</data>
       <data key="d9">uses_concept</data>
@@ -3575,6 +4485,12 @@
     <edge source="theorem.power-rule-general" target="definition.exponential-function" id="0">
       <data key="d8">depends_on</data>
       <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="theorem.power-rule-positive-integer" target="proof.mean-value-theorem.from-rolle" id="0">
+      <data key="d8">uses</data>
+      <data key="d9">essential</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
     </edge>
     <edge source="theorem.power-rule-positive-integer" target="definition.derivative-function" id="0">
       <data key="d8">depends_on</data>
@@ -3614,6 +4530,24 @@
       <data key="d8">depends_on</data>
       <data key="d9">uses_concept</data>
     </edge>
+    <edge source="theorem.rolle" target="proof.mean-value-theorem.from-rolle" id="0">
+      <data key="d8">uses</data>
+      <data key="d9">essential</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
+    </edge>
+    <edge source="theorem.rolle" target="definition.continuity-on-interval" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="theorem.rolle" target="definition.derivative-at-point" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
+    <edge source="theorem.rolle" target="definition.differentiable-on-interval" id="0">
+      <data key="d8">depends_on</data>
+      <data key="d9">uses_concept</data>
+    </edge>
     <edge source="theorem.squeeze-theorem" target="proof.limit-sin-over-x.squeeze" id="0">
       <data key="d8">uses</data>
       <data key="d9">essential</data>
@@ -3629,6 +4563,12 @@
       <data key="d9">uses_concept</data>
     </edge>
     <edge source="theorem.sum-rule-derivative" target="proof.difference-rule-derivative.stewart" id="0">
+      <data key="d8">uses</data>
+      <data key="d9">essential</data>
+      <data key="d10">high</data>
+      <data key="d11">False</data>
+    </edge>
+    <edge source="theorem.sum-rule-derivative" target="proof.mean-value-theorem.from-rolle" id="0">
       <data key="d8">uses</data>
       <data key="d9">essential</data>
       <data key="d10">high</data>
@@ -3684,6 +4624,12 @@
     <edge source="proof.derivative-of-natural-logarithm.from-general" target="theorem.derivative-of-natural-logarithm" id="0">
       <data key="d8">proves</data>
     </edge>
+    <edge source="proof.derivative-zero-implies-constant.mvt" target="theorem.derivative-zero-implies-constant" id="0">
+      <data key="d8">proves</data>
+    </edge>
+    <edge source="proof.derivatives-equal-implies-differ-by-constant.from-zero" target="corollary.derivatives-equal-implies-differ-by-constant" id="0">
+      <data key="d8">proves</data>
+    </edge>
     <edge source="proof.derivatives-of-hyperbolic-functions.from-exponential-definition" target="theorem.derivatives-of-hyperbolic-functions" id="0">
       <data key="d8">proves</data>
     </edge>
@@ -3711,10 +4657,22 @@
     <edge source="proof.exponential-growth-decay-solution.verification" target="theorem.exponential-growth-decay-solution" id="0">
       <data key="d8">proves</data>
     </edge>
+    <edge source="proof.fermat.stewart" target="theorem.fermat" id="0">
+      <data key="d8">proves</data>
+    </edge>
+    <edge source="proof.first-derivative-test.from-id-test" target="proposition.first-derivative-test" id="0">
+      <data key="d8">proves</data>
+    </edge>
+    <edge source="proof.general-antiderivative.from-corollary" target="theorem.general-antiderivative" id="0">
+      <data key="d8">proves</data>
+    </edge>
     <edge source="proof.horizontal-line-test.stewart" target="proposition.horizontal-line-test" id="0">
       <data key="d8">proves</data>
     </edge>
     <edge source="proof.hyperbolic-identities.from-exponential-definition" target="proposition.hyperbolic-identities" id="0">
+      <data key="d8">proves</data>
+    </edge>
+    <edge source="proof.increasing-decreasing-test.from-mvt" target="proposition.increasing-decreasing-test" id="0">
       <data key="d8">proves</data>
     </edge>
     <edge source="proof.inverse-hyperbolic-as-logarithm.quadratic-in-exp" target="theorem.inverse-hyperbolic-as-logarithm" id="0">
@@ -3741,6 +4699,9 @@
     <edge source="proof.limit-sin-over-x.squeeze" target="proposition.limit-sin-over-x" id="0">
       <data key="d8">proves</data>
     </edge>
+    <edge source="proof.mean-value-theorem.from-rolle" target="theorem.mean-value-theorem" id="0">
+      <data key="d8">proves</data>
+    </edge>
     <edge source="proof.number-e-as-limit.from-derivative-at-1" target="theorem.number-e-as-limit" id="0">
       <data key="d8">proves</data>
     </edge>
@@ -3760,6 +4721,12 @@
       <data key="d8">proves</data>
     </edge>
     <edge source="proof.quotient-rule.stewart" target="theorem.quotient-rule" id="0">
+      <data key="d8">proves</data>
+    </edge>
+    <edge source="proof.rolle.stewart" target="theorem.rolle" id="0">
+      <data key="d8">proves</data>
+    </edge>
+    <edge source="proof.second-derivative-test.from-concavity" target="proposition.second-derivative-test" id="0">
       <data key="d8">proves</data>
     </edge>
     <edge source="proof.sum-rule-derivative.stewart" target="theorem.sum-rule-derivative" id="0">

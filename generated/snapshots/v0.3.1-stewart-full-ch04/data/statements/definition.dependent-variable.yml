@@ -1,0 +1,100 @@
+schema_version: "0.3.1"
+id: definition.dependent-variable
+type: definition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Variable dependiente
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Dependent variable
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        El símbolo que representa un número en el rango de una función
+        f, dependiente de la elección de la variable independiente, se
+        llama variable dependiente.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        The symbol that represents a number in the range of a function
+        f, depending on the choice of independent variable, is called
+        the dependent variable.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    status: not_applicable
+    review_status: unreviewed
+
+proved_by: []
+depends_on:
+  - id: definition.function
+    role: uses_concept
+    confidence: high
+  - id: definition.range
+    role: uses_concept
+    confidence: high
+  - id: definition.independent-variable
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.1"
+    locator: "Sección 1.1 — variable independiente y dependiente"
+    source_language: es
+
+domains:
+  primary: [calculus]
+
+ambient:
+  structures: []
+
+ontology:
+  semantic_kind: [notation, pedagogical]
+  keywords: [variable, dependent, output, notation]
+
+generality:
+  - target: definition.independent-variable
+    relation: sibling
+    notes: Counterpart notational concept under the same Stewart paragraph.
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: medium
+  latex_confidence: null
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Sibling edge recorded on the alphabetically-later id per
+  policies/04-edge-role-taxonomy.md (sibling edges deduplicated by
+  alphabetical owner). Atomic per granularity policy.

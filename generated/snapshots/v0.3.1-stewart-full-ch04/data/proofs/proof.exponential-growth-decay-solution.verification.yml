@@ -1,0 +1,88 @@
+schema_version: "0.3.1"
+id: proof.exponential-growth-decay-solution.verification
+type: proof
+status: extracted
+
+proves: theorem.exponential-growth-decay-solution
+style: verification
+
+uses:
+  - id: theorem.derivative-of-natural-exponential
+    role: essential
+    confidence: high
+    notes: (d/dt) e^{kt} = k · e^{kt} via chain rule
+  - id: theorem.chain-rule
+    role: essential
+    confidence: high
+  - id: definition.exponential-function
+    role: definition
+    confidence: high
+
+parts:
+  - name: existence-direction
+    kind: subclaim
+    description: >
+      Verification that y(t) = C · e^{kt} satisfies dy/dt = k y.
+      Direct computation: y'(t) = C · k · e^{kt} = k · (C · e^{kt})
+      = k · y(t). Setting t = 0 yields y(0) = C, identifying C
+      as the initial value.
+    uses:
+      - id: theorem.derivative-of-natural-exponential
+        role: essential
+        confidence: high
+      - id: theorem.chain-rule
+        role: essential
+        confidence: high
+
+  - name: uniqueness-direction
+    kind: subclaim
+    description: >
+      Stewart asserts but does not prove in §3.8 that EVERY
+      solution of dy/dt = k y must have the form y(t) = y(0) e^{kt}.
+      The proof is explicitly deferred to §9.4 (separable ODEs).
+      Recorded as structural dependency on a §9.4 result not yet
+      in the graph.
+    uses: []
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.8"
+    locator: "Verificación inline previa al Teorema 2, p. 237; unicidad diferida a §9.4"
+    page: "237"
+    source_language: es
+
+sketch:
+  es:
+    text: >
+      Existencia: sea y(t) = C · e^{kt}. Entonces
+      y'(t) = C · k · e^{kt} = k · y(t), de modo que satisface
+      la ecuación. Además y(0) = C · e^0 = C, así que C = y(0).
+      Unicidad: Stewart enuncia que estas son LAS ÚNICAS
+      soluciones, pero relega la demostración a §9.4 (ecuaciones
+      diferenciales separables: si dy/y = k dt, integrando se
+      obtiene ln|y| = kt + const, luego |y| = e^{kt+const}, etc.).
+    is_original: true
+    origin: original
+    review_status: unreviewed
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: medium
+  semantic_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Partial proof: only the existence direction (verification) is
+  established in §3.8. The uniqueness direction is OPEN epistemic
+  debt to be retired in §9.4. dependency_confidence:medium
+  reflects this deliberate gap, NOT extraction uncertainty.

@@ -1,0 +1,115 @@
+schema_version: "0.3.1"
+id: definition.infinite-limit-precise
+type: definition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Definición precisa de límite infinito (positivo)
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Precise definition of (positive) infinite limit
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Sea f una función definida sobre algún intervalo abierto que
+        contiene al número a, excepto posiblemente en a misma.
+        Entonces lím_{x→a} f(x) = ∞ significa que para todo número
+        positivo M existe un número positivo δ tal que si
+        0 < |x − a| < δ entonces f(x) > M.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        Let f be a function defined on some open interval that
+        contains the number a, except possibly at a itself. Then
+        lim_{x→a} f(x) = ∞ means that for every positive number M
+        there is a positive number δ such that if 0 < |x − a| < δ
+        then f(x) > M.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      \lim_{x \to a} f(x) = \infty
+      \iff
+      \forall M > 0,\ \exists \delta > 0:\
+      0 < |x - a| < \delta \implies f(x) > M
+    status: present
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: definition.function
+    role: uses_concept
+    confidence: high
+  - id: definition.absolute-value
+    role: uses_concept
+    confidence: high
+  - id: definition.epsilon-delta-limit
+    role: extends
+    confidence: high
+    notes: extends the precise scheme to the divergent regime; ∞ is NOT a real number
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.4"
+    theorem_label: "Definición 6"
+    page: "115"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [real-analysis]
+
+ambient:
+  structures: [extended-real-line]
+
+ontology:
+  semantic_kind: [criterion, relation]
+  keywords: [limit, infinity, divergence, rigorous]
+
+generality:
+  - target: definition.negative-infinite-limit-precise
+    relation: sibling
+    notes: >
+      Symmetric divergence-to-minus-infinity rigorous variant.
+      Owned here per policy 04 (alphabetically earlier id).
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart §2.4 Definición 6. The equivalence with the informal §2.2
+  sibling definition.infinite-limit is recorded on the informal node
+  (alphabetically earlier id owns the equivalent edge).

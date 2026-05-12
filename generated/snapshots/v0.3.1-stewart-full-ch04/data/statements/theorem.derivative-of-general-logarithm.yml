@@ -1,0 +1,110 @@
+schema_version: "0.3.1"
+id: theorem.derivative-of-general-logarithm
+type: theorem
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Derivada de la función logarítmica general
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Derivative of the general logarithmic function
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Para cualquier base a > 0 con a ≠ 1, la derivada del
+        logaritmo en base a es (d/dx) log_a x = 1/(x ln a),
+        para x > 0.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        For any base a > 0 with a ≠ 1, the derivative of the
+        base-a logarithm is (d/dx) log_a x = 1/(x ln a),
+        for x > 0.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      \frac{d}{dx}\,\log_{a} x \;=\; \frac{1}{x\,\ln a}\qquad (a>0,\ a\neq 1,\ x>0)
+    status: present
+    review_status: unreviewed
+
+proved_by:
+  - proof.derivative-of-general-logarithm.implicit
+
+depends_on:
+  - id: definition.logarithmic-function
+    role: uses_concept
+    confidence: high
+  - id: definition.natural-logarithm
+    role: uses_concept
+    confidence: high
+  - id: definition.derivative-function
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.6"
+    theorem_label: "Ecuación 1"
+    page: "218"
+    source_language: es
+
+domains:
+  primary: [calculus]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [principle]
+  keywords: [logarithm, derivative, general-base, change-of-base]
+
+generality:
+  - target: theorem.derivative-of-natural-logarithm
+    relation: stronger_than
+    notes: >
+      Special case a = e gives ln a = 1, recovering
+      (d/dx) ln x = 1/x. Edge owned here per policy 04
+      (alphabetical: "general-logarithm" precedes
+      "natural-logarithm").
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart's Eq 1 of §3.6. Proved via implicit differentiation of
+  a^y = x using the general-exponential derivative (§3.4 Eq 5).
+  Structural counterpart of theorem.derivative-of-general-exponential
+  on the inverse side.

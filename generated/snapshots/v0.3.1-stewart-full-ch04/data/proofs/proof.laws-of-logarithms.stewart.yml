@@ -1,0 +1,82 @@
+schema_version: "0.3.1"
+id: proof.laws-of-logarithms.stewart
+type: proof
+status: extracted
+
+proves: proposition.laws-of-logarithms
+style: direct
+
+uses:
+  - id: proposition.laws-of-exponents
+    role: essential
+    confidence: high
+    implicit: false
+    notes: Each log law is derived by exponentiating both sides and applying the matching exponent law.
+  - id: definition.logarithmic-function
+    role: definition
+    confidence: high
+    implicit: false
+  - id: proposition.cancellation-equations
+    role: essential
+    confidence: high
+    implicit: false
+    notes: Used to discharge a^{logₐ x} = x and logₐ(a^y) = y at the start and end of each derivation.
+
+parts:
+  - name: product-law
+    kind: case
+    description: >
+      Set u = logₐ x, v = logₐ y so x = aᵘ, y = aᵛ. Then xy = a^{u+v}
+      and applying logₐ gives logₐ(xy) = u + v = logₐ x + logₐ y.
+    uses: []
+  - name: quotient-law
+    kind: case
+    description: >
+      Same setup; x/y = a^{u−v}, so logₐ(x/y) = u − v.
+    uses: []
+  - name: power-law
+    kind: case
+    description: >
+      x^r = (aᵘ)ʳ = a^{ru} via the (aˣ)ʸ = a^{xy} exponent law, so
+      logₐ(xʳ) = ru = r · logₐ x.
+    uses: []
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.6"
+    locator: "Justificación de las leyes de los logaritmos (sección 1.6)"
+    source_language: es
+
+sketch:
+  es:
+    text: >
+      Cada ley se obtiene escribiendo x = aᵘ, y = aᵛ con u = logₐ x,
+      v = logₐ y, aplicando la ley correspondiente de los exponentes
+      al lado a^?, y volviendo a tomar logₐ usando las ecuaciones de
+      cancelación.
+    is_original: true
+    origin: human
+    review_status: unreviewed
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  source_alignment_confidence: high
+  translation_confidence: null
+  latex_confidence: null
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Three cases share the same skeleton (substitute, apply exponent
+  law, take log). cancellation-equations is cited because each
+  step relies on logₐ ∘ aˣ = id and aˣ ∘ logₐ = id.

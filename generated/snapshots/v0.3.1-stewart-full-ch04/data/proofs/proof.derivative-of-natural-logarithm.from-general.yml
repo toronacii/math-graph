@@ -1,0 +1,53 @@
+schema_version: "0.3.1"
+id: proof.derivative-of-natural-logarithm.from-general
+type: proof
+status: extracted
+
+proves: theorem.derivative-of-natural-logarithm
+style: specialization
+
+uses:
+  - id: theorem.derivative-of-general-logarithm
+    role: essential
+    confidence: high
+    notes: substitute a = e
+  - id: definition.natural-logarithm
+    role: definition
+    confidence: high
+    notes: ln x ≡ log_e x and ln e = 1
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.6"
+    locator: "Derivación de la Ecuación 2 a partir de la Ecuación 1, p. 218"
+    page: "218"
+    source_language: es
+
+sketch:
+  es:
+    text: >
+      Aplicando la fórmula 1 con a = e, el factor ln a en el
+      denominador se convierte en ln e = 1, y se obtiene
+      directamente (d/dx) ln x = 1/x.
+    is_original: true
+    origin: original
+    review_status: unreviewed
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  One-line specialization: a = e in Eq 1 yields Eq 2.

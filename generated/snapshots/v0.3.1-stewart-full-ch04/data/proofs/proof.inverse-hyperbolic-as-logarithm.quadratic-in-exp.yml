@@ -1,0 +1,111 @@
+schema_version: "0.3.1"
+id: proof.inverse-hyperbolic-as-logarithm.quadratic-in-exp
+type: proof
+status: extracted
+
+proves: theorem.inverse-hyperbolic-as-logarithm
+style: solve-quadratic
+
+uses: []
+
+parts:
+  - name: arcsinh-as-log
+    kind: subclaim
+    description: >
+      senh⁻¹ x = ln(x + √(x² + 1)). Let y = senh⁻¹ x, so
+      x = (eʸ − e⁻ʸ)/2, i.e. eʸ − 2x − e⁻ʸ = 0. Multiplying by
+      eʸ gives e²ʸ − 2x eʸ − 1 = 0, a quadratic in eʸ with
+      solutions eʸ = x ± √(x² + 1). Since eʸ > 0 and
+      x − √(x² + 1) < 0, the negative branch is rejected, so
+      eʸ = x + √(x² + 1) and y = ln(x + √(x² + 1)). Stewart
+      Example 3, page 260.
+    uses:
+      - id: definition.inverse-hyperbolic-function
+        role: definition
+        confidence: high
+      - id: definition.hyperbolic-function
+        role: definition
+        confidence: high
+      - id: definition.natural-logarithm
+        role: definition
+        confidence: high
+        notes: y = ln eʸ used to recover y from eʸ
+
+  - name: arccosh-as-log
+    kind: subclaim
+    description: >
+      cosh⁻¹ x = ln(x + √(x² − 1)) for x ≥ 1, by the analogous
+      quadratic e²ʸ − 2x eʸ + 1 = 0. The positive root x + √(x² − 1)
+      is selected because the cosh⁻¹ branch convention y ≥ 0
+      corresponds to eʸ ≥ 1 ≥ x − √(x² − 1). Stewart Ex 26.
+    uses:
+      - id: definition.inverse-hyperbolic-function
+        role: definition
+        confidence: high
+      - id: definition.hyperbolic-function
+        role: definition
+        confidence: high
+      - id: definition.natural-logarithm
+        role: definition
+        confidence: high
+
+  - name: arctanh-as-log
+    kind: subclaim
+    description: >
+      tanh⁻¹ x = ½ ln((1 + x)/(1 − x)) for −1 < x < 1. Let
+      y = tanh⁻¹ x, so x = (eʸ − e⁻ʸ)/(eʸ + e⁻ʸ). Solving for
+      e²ʸ gives e²ʸ = (1 + x)/(1 − x); taking ln and dividing by
+      2 yields the formula. Stewart Ex 27.
+    uses:
+      - id: definition.inverse-hyperbolic-function
+        role: definition
+        confidence: high
+      - id: definition.hyperbolic-function
+        role: definition
+        confidence: high
+      - id: definition.natural-logarithm
+        role: definition
+        confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.11"
+    locator: "Ejemplo 3 (p. 260) + ejercicios 26 y 27"
+    page: "260"
+    source_language: es
+
+sketch:
+  es:
+    text: >
+      Bundle. arcsinh: y = senh⁻¹ x ⇒ x = senh y = (eʸ − e⁻ʸ)/2.
+      Multiplicando por eʸ y reordenando: (eʸ)² − 2x(eʸ) − 1 = 0.
+      Cuadrática en eʸ con solución eʸ = x ± √(x² + 1); como
+      eʸ > 0 y x − √(x² + 1) < 0, eʸ = x + √(x² + 1), luego
+      y = ln(x + √(x² + 1)). arccosh y arctanh: técnica análoga,
+      con la rama elegida según la convención del dominio.
+    is_original: true
+    origin: original
+    review_status: unreviewed
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Bundled proof. Stewart proves arcsinh in Example 3 fully and
+  defers arccosh and arctanh to Exercises 26 and 27 with the same
+  technique (the alternative method via Ex 9 / Ex 18 is also
+  possible but not modeled). The proof requires only algebra and
+  the inverse relation between exp and ln — no calculus.

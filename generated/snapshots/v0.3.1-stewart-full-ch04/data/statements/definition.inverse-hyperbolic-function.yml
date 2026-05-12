@@ -1,0 +1,119 @@
+schema_version: "0.3.1"
+id: definition.inverse-hyperbolic-function
+type: definition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Funciones hiperbólicas inversas (paquete bundled)
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Inverse hyperbolic functions (bundled)
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Las funciones hiperbólicas inversas se definen como las
+        inversas de las funciones hiperbólicas correspondientes,
+        previa restricción al subdominio en que son uno a uno:
+        senh⁻¹ es la inversa de senh : ℝ → ℝ;
+        cosh⁻¹ es la inversa de cosh restringida a [0, ∞);
+        tanh⁻¹ es la inversa de tanh : ℝ → (−1, 1);
+        csch⁻¹, sech⁻¹, coth⁻¹ se definen análogamente
+        (Ejercicio 28). Equivalentemente:
+        y = senh⁻¹ x ⇔ senh y = x;
+        y = cosh⁻¹ x ⇔ cosh y = x ∧ y ≥ 0;
+        y = tanh⁻¹ x ⇔ tanh y = x.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        The inverse hyperbolic functions are defined as the
+        inverses of the hyperbolic functions, restricted where
+        necessary to a one-to-one subdomain:
+        sinh⁻¹ is the inverse of sinh : ℝ → ℝ;
+        cosh⁻¹ is the inverse of cosh restricted to [0, ∞);
+        tanh⁻¹ is the inverse of tanh : ℝ → (−1, 1);
+        csch⁻¹, sech⁻¹, coth⁻¹ are defined analogously
+        (Exercise 28). Equivalently:
+        y = sinh⁻¹ x ⇔ sinh y = x;
+        y = cosh⁻¹ x ⇔ cosh y = x ∧ y ≥ 0;
+        y = tanh⁻¹ x ⇔ tanh y = x.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      \begin{aligned}
+        y = \sinh^{-1} x &\iff \sinh y = x,\\
+        y = \cosh^{-1} x &\iff \cosh y = x \;\wedge\; y \ge 0,\\
+        y = \tanh^{-1} x &\iff \tanh y = x.
+      \end{aligned}
+    status: present
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: definition.hyperbolic-function
+    role: uses_concept
+    confidence: high
+  - id: definition.inverse-function
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.11"
+    theorem_label: "Cuadro 2 — Funciones hiperbólicas inversas"
+    page: "260"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [analysis]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [object, construction]
+  keywords: [inverse-hyperbolic, arcsinh, arccosh, arctanh]
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Bundled per the trig-bundle policy. Stewart writes out senh⁻¹,
+  cosh⁻¹, tanh⁻¹ explicitly (Cuadro 2) and defers csch⁻¹, sech⁻¹,
+  coth⁻¹ to Exercise 28. The cosh⁻¹ branch convention y ≥ 0 is
+  required for invertibility; other branch conventions exist in
+  the literature.

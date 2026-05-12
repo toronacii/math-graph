@@ -1,0 +1,62 @@
+schema_version: "0.3.1"
+id: proof.differentiable-increment-formula.stewart
+type: proof
+status: extracted
+
+proves: proposition.differentiable-increment-formula
+style: direct
+
+uses:
+  - id: definition.derivative-at-point
+    role: definition
+    confidence: high
+    notes: defines f'(a) = lim Δy/Δx
+  - id: definition.differentiable-at-point
+    role: definition
+    confidence: high
+    notes: hypothesis
+  - id: definition.continuity-at-point
+    role: notation
+    confidence: high
+    notes: ε(0) := 0 makes ε continuous at Δx = 0
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.4"
+    locator: "Derivación inline (página 204)"
+    page: "204"
+    source_language: es
+
+sketch:
+  es:
+    text: >
+      Defina ε(Δx) = Δy/Δx − f'(a) para Δx ≠ 0 y ε(0) = 0.
+      Por la definición de derivada, lím_{Δx→0} ε(Δx) =
+      lím_{Δx→0} Δy/Δx − f'(a) = f'(a) − f'(a) = 0, así que
+      ε es continua en 0. Multiplicando por Δx:
+      ε(Δx)·Δx = Δy − f'(a)·Δx, es decir
+      Δy = f'(a)·Δx + ε(Δx)·Δx, con ε → 0 cuando Δx → 0.
+    is_original: true
+    origin: original
+    review_status: unreviewed
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  One-line algebraic rearrangement of the derivative definition
+  with explicit continuous-error term. Foundational lemma for
+  both the chain rule and the differential approximation in §3.10.

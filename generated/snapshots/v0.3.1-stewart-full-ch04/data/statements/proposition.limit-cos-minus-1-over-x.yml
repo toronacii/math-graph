@@ -1,0 +1,96 @@
+schema_version: "0.3.1"
+id: proposition.limit-cos-minus-1-over-x
+type: proposition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Límite trigonométrico (cos θ − 1)/θ
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Trigonometric limit (cos θ − 1)/θ
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        El límite del cociente (cos θ − 1)/θ cuando θ tiende a 0
+        es 0 (con θ medido en radianes).
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        The limit of (cos θ − 1)/θ as θ approaches 0 equals 0
+        (θ in radians).
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      \lim_{\theta \to 0} \frac{\cos \theta - 1}{\theta} \;=\; 0
+    status: present
+    review_status: unreviewed
+
+proved_by:
+  - proof.limit-cos-minus-1-over-x.algebraic
+
+depends_on:
+  - id: definition.trigonometric-function
+    role: uses_concept
+    confidence: high
+  - id: definition.limit-of-function
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.3"
+    theorem_label: "Ecuación 3"
+    page: "193"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [trigonometry, analysis]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [relation]
+  keywords: [trigonometric-limit, cosine, derivative-prerequisite]
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Derived from the fundamental sin-over-x limit by multiplying
+  numerator and denominator by (cos θ + 1) and using the
+  Pythagorean identity sin²θ + cos²θ = 1.

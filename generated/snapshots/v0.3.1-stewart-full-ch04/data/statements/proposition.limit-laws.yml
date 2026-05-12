@@ -1,0 +1,128 @@
+schema_version: "0.3.1"
+id: proposition.limit-laws
+type: proposition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Leyes de los límites (suma, diferencia, múltiplo constante, producto, cociente)
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Limit laws (sum, difference, constant multiple, product, quotient)
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Suponga que c es una constante y que lím_{x→a} f(x) y
+        lím_{x→a} g(x) existen. Entonces:
+        (1) Suma: lím[f(x) + g(x)] = lím f(x) + lím g(x).
+        (2) Diferencia: lím[f(x) − g(x)] = lím f(x) − lím g(x).
+        (3) Múltiplo constante: lím[c f(x)] = c · lím f(x).
+        (4) Producto: lím[f(x) g(x)] = lím f(x) · lím g(x).
+        (5) Cociente: lím[f(x)/g(x)] = lím f(x) / lím g(x), siempre
+        que lím g(x) ≠ 0.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        Suppose c is a constant and lim_{x→a} f(x) and lim_{x→a}
+        g(x) exist. Then:
+        (1) Sum: lim[f(x) + g(x)] = lim f(x) + lim g(x).
+        (2) Difference: lim[f(x) − g(x)] = lim f(x) − lim g(x).
+        (3) Constant multiple: lim[c f(x)] = c · lim f(x).
+        (4) Product: lim[f(x) g(x)] = lim f(x) · lim g(x).
+        (5) Quotient: lim[f(x)/g(x)] = lim f(x) / lim g(x), provided
+        lim g(x) ≠ 0.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      \begin{aligned}
+      &\lim_{x\to a}\bigl[f(x)+g(x)\bigr]
+        = \lim_{x\to a} f(x) + \lim_{x\to a} g(x), \\
+      &\lim_{x\to a}\bigl[f(x)-g(x)\bigr]
+        = \lim_{x\to a} f(x) - \lim_{x\to a} g(x), \\
+      &\lim_{x\to a}\bigl[c\,f(x)\bigr] = c \lim_{x\to a} f(x), \\
+      &\lim_{x\to a}\bigl[f(x)\,g(x)\bigr]
+        = \lim_{x\to a} f(x)\cdot \lim_{x\to a} g(x), \\
+      &\lim_{x\to a}\frac{f(x)}{g(x)}
+        = \frac{\lim_{x\to a} f(x)}{\lim_{x\to a} g(x)}
+        \quad \text{si } \lim_{x\to a} g(x) \neq 0.
+      \end{aligned}
+    status: present
+    review_status: unreviewed
+
+proved_by:
+  - proof.limit-laws.stewart
+
+depends_on:
+  - id: definition.limit-of-function
+    role: uses_concept
+    confidence: high
+  - id: definition.arithmetic-of-functions
+    role: uses_concept
+    confidence: high
+    notes: laws are about pointwise sum/diff/prod/quotient of f and g
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.3"
+    theorem_label: "Leyes de los límites 1–5"
+    page: "99"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [real-analysis]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [property, schema]
+  keywords: [limit-laws, sum, difference, product, quotient, constant-multiple]
+
+generality: []
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: medium
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Type-A bundle of five arithmetic limit laws sharing structure and
+  hypotheses (existence of lim f and lim g). Stewart bundles them
+  in the same boxed group and gives them as Laws 1–5. Carried as
+  explicit epistemic debt at dependency_confidence: medium —
+  splittable into proposition.limit-{sum,difference,constant-
+  multiple,product,quotient}-law if downstream proofs cite them
+  individually. Stewart's main text notes the proofs are in
+  Apéndice F (and Law 1 is to be proved in §2.4 from the precise
+  definition); no proof node authored in §2.3.

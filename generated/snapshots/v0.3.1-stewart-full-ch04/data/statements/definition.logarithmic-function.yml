@@ -1,0 +1,103 @@
+schema_version: "0.3.1"
+id: definition.logarithmic-function
+type: definition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Función logarítmica
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Logarithmic function
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Si a > 0 y a ≠ 1, la función logarítmica de base a, denotada
+        logₐ, es la inversa de la función exponencial f(x) = aˣ.
+        Su dominio es (0, ∞) y su rango es R, y se caracteriza por
+        logₐ(x) = y si y sólo si aʸ = x.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        If a > 0 and a ≠ 1, the logarithmic function with base a,
+        denoted logₐ, is the inverse of the exponential function
+        f(x) = aˣ. Its domain is (0, ∞) and its range is R, and it
+        is characterized by logₐ(x) = y if and only if aʸ = x.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      \log_a x = y \iff a^{y} = x, \qquad a > 0,\; a \ne 1
+    status: present
+    review_status: unreviewed
+
+proved_by: []
+depends_on:
+  - id: definition.exponential-function
+    role: uses_concept
+    confidence: high
+  - id: definition.inverse-function
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "1"
+    section: "1.6"
+    locator: "Funciones logarítmicas (sección 1.6)"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [real-analysis]
+
+ambient:
+  structures: [real-line]
+  notes: >
+    Defined as the inverse of an exponential function. Inherits the
+    informal-real-exponent debt of definition.exponential-function.
+
+ontology:
+  semantic_kind: [object, operator]
+  keywords: [logarithm, log, inverse-of-exponential]
+
+generality: []
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: medium
+  translation_confidence: medium
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Inherits informal real-exponent semantics from
+  definition.exponential-function. Future Rudin-side rigorous
+  log (via integral of 1/t on (0,∞)) becomes a sibling
+  formulation, not a merge.

@@ -1,0 +1,106 @@
+schema_version: "0.3.1"
+id: theorem.derivative-of-natural-exponential
+type: theorem
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Derivada de la función exponencial natural
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Derivative of the natural exponential function
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        La función exponencial natural f(x) = e^x es derivable en
+        todo R, y (d/dx) e^x = e^x. En particular, la pendiente de
+        la recta tangente a y = e^x en cualquier punto es igual a
+        la coordenada y de ese punto.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        The natural exponential function f(x) = e^x is differentiable
+        on all of R, and (d/dx) e^x = e^x. In particular, the slope
+        of the tangent line to y = e^x at any point equals the
+        y-coordinate of that point.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      \frac{d}{dx}\,e^{x} \;=\; e^{x}
+    status: present
+    review_status: unreviewed
+
+proved_by:
+  - proof.derivative-of-natural-exponential.stewart
+
+depends_on:
+  - id: definition.natural-exponential-function
+    role: uses_concept
+    confidence: high
+  - id: definition.derivative-function
+    role: uses_concept
+    confidence: high
+  - id: definition.number-e
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.1"
+    theorem_label: "Derivada de la función exponencial natural"
+    page: "180"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [analysis]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [principle]
+  keywords: [exponential-function, derivative, e, fixed-point-of-derivative]
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Immediate corollary of theorem.exponential-derivative-proportional
+  with a = e, since by definition.number-e we have f'(0) = 1.
+  Could be classified as corollary; kept as theorem because
+  Stewart presents it as a named, foundational rule. The
+  inherited debt (existence of f'(0) for a = e) is documented in
+  the parent theorem and the proof file.

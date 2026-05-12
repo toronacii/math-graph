@@ -1,0 +1,126 @@
+schema_version: "0.3.1"
+id: theorem.l-hospital-rule
+type: theorem
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Regla de l'Hospital
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: L'Hospital's Rule
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Suponga que f y g son derivables y g'(x) ≠ 0 sobre un
+        intervalo abierto I que contiene a a (excepto posiblemente
+        en a). Suponga que (i) lím_{x→a} f(x) = 0 y
+        lím_{x→a} g(x) = 0, o que (ii) lím_{x→a} f(x) = ±∞ y
+        lím_{x→a} g(x) = ±∞. Entonces
+        lím_{x→a} f(x)/g(x) = lím_{x→a} f'(x)/g'(x) si existe el
+        límite del lado derecho (o es +∞ o −∞). La regla también es
+        válida para límites unilaterales y para x → ±∞.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        Suppose f and g are differentiable and g'(x) ≠ 0 on an open
+        interval I containing a (except possibly at a). Suppose
+        either (i) lim_{x→a} f(x) = 0 and lim_{x→a} g(x) = 0, or
+        (ii) lim_{x→a} f(x) = ±∞ and lim_{x→a} g(x) = ±∞. Then
+        lim_{x→a} f(x)/g(x) = lim_{x→a} f'(x)/g'(x), provided the
+        right-hand limit exists (or is +∞ or −∞). The rule also holds
+        for one-sided limits and for x → ±∞.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      f, g \in D(I \setminus \{a\}),\ g'(x) \neq 0,\
+      \bigl(f, g \to 0\bigr) \;\vee\; \bigl(|f|, |g| \to \infty\bigr)
+      \;\Longrightarrow\;
+      \lim_{x \to a} \frac{f(x)}{g(x)} = \lim_{x \to a} \frac{f'(x)}{g'(x)}
+      \quad \text{(provided RHS exists in } \overline{\mathbb{R}}\text{)}
+    status: present
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: definition.derivative-at-point
+    role: uses_concept
+    confidence: high
+  - id: definition.differentiable-on-interval
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "4"
+    section: "4.4"
+    theorem_label: "Regla de l'Hospital"
+    page: "302"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [analysis]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [criterion, principle]
+  keywords: [l-hospital, indeterminate-form, 0-over-0, infinity-over-infinity, limit-evaluation]
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart §4.4 page 302. The boxed statement covers BOTH 0/0 and
+  ∞/∞ cases jointly; both are kept in this single node because
+  Stewart treats them in a single rule with parallel hypotheses.
+  Stewart's Note 3 sketches a proof of the SPECIAL CASE
+  (f(a) = g(a) = 0, f' and g' continuous, g'(a) ≠ 0) using the
+  alternative form of the derivative definition; the general proof
+  is explicitly deferred to Apéndice F ("Es más difícil demostrar
+  la versión general de la regla de l'Hospital. Véase el apéndice
+  F."). proved_by intentionally empty: the special-case sketch is
+  insufficient to discharge the theorem as stated, and the general
+  proof is not in Stewart's main text. Indeterminate-form
+  techniques (0·∞, ∞−∞, 0⁰, ∞⁰, 1^∞) are exposition (NOT
+  theorems): they are pedagogical strategies for rewriting limits
+  into 0/0 or ∞/∞ form so this rule applies; they introduce no
+  new entities. Stewart Ex 84 explicitly notes 0^∞ is NOT
+  indeterminate and proves it via an inequality argument (not a
+  separate theorem either). Multi-source disambiguation: Rudin
+  Theorem 5.13 is the more general version (Cauchy MVT-based) and
+  would be a separate node in any future merge.

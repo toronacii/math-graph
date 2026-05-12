@@ -1,0 +1,99 @@
+schema_version: "0.3.1"
+id: theorem.power-rule-chain
+type: theorem
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Regla de la potencia combinada con la regla de la cadena
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: General power rule (power rule combined with chain rule)
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Si n es cualquier número real y u = g(x) es derivable,
+        entonces (d/dx)[u^n] = n u^{n−1} (du/dx). Equivalentemente,
+        (d/dx)[g(x)]^n = n [g(x)]^{n−1} g'(x).
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        If n is any real number and u = g(x) is differentiable,
+        then (d/dx)[u^n] = n u^{n−1} (du/dx). Equivalently,
+        (d/dx)[g(x)]^n = n [g(x)]^{n−1} g'(x).
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      \frac{d}{dx}\bigl[g(x)\bigr]^{n}
+        \;=\; n\,\bigl[g(x)\bigr]^{n-1}\,g'(x)
+    status: present
+    review_status: unreviewed
+
+proved_by:
+  - proof.power-rule-chain.from-chain-rule
+
+depends_on:
+  - id: definition.derivative-function
+    role: uses_concept
+    confidence: high
+  - id: definition.composition-of-functions
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.4"
+    theorem_label: "Ecuación 4 — Regla de la potencia con regla de la cadena"
+    page: "201"
+    source_language: es
+
+domains:
+  primary: [calculus]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [principle]
+  keywords: [power-rule, chain-rule, composition, generalized-power-rule]
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Direct corollary of chain rule + general power rule. Often the
+  most-used special case in practice. Inherits the open debt of
+  theorem.power-rule-general (which is not proved for arbitrary
+  real n until §3.6).

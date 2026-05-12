@@ -1,0 +1,61 @@
+schema_version: "0.3.1"
+id: proof.derivative-of-natural-log-absolute-value.cases
+type: proof
+status: extracted
+
+proves: theorem.derivative-of-natural-log-absolute-value
+style: case-analysis
+
+uses:
+  - id: theorem.derivative-of-natural-logarithm
+    role: essential
+    confidence: high
+    notes: applied to x > 0 branch directly
+  - id: theorem.chain-rule
+    role: essential
+    confidence: high
+    notes: applied to ln(−x) on x < 0 branch — derivative = (1/(−x))·(−1) = 1/x
+  - id: definition.absolute-value
+    role: definition
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.6"
+    locator: "Ejemplo 6, pp. 219–220, resultado en Ecuación 4"
+    page: "220"
+    source_language: es
+
+sketch:
+  es:
+    text: >
+      Por definición de valor absoluto, f(x) = ln|x| es ln x si
+      x > 0 y ln(−x) si x < 0. En el primer caso f'(x) = 1/x
+      directamente. En el segundo caso, por la regla de la cadena,
+      f'(x) = (1/(−x)) · (−1) = 1/x. Por tanto f'(x) = 1/x para
+      todo x ≠ 0.
+    is_original: true
+    origin: original
+    review_status: unreviewed
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart's Example 6 of §3.6. The absolute-value definition
+  required as a dependency may not yet exist as an entity; if
+  validation flags this, treat as low-priority epistemic debt
+  (Stewart treats |x| as elementary in §1.1).

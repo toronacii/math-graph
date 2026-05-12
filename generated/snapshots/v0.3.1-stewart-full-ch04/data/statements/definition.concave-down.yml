@@ -1,0 +1,97 @@
+schema_version: "0.3.1"
+id: definition.concave-down
+type: definition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Cóncava hacia abajo
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Concave down
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Si la gráfica de f queda por abajo de todas sus rectas
+        tangentes sobre un intervalo I, se dice que f es cóncava
+        hacia abajo sobre I.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        If the graph of f lies below all of its tangent lines on an
+        interval I, then f is said to be concave downward on I.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      f \text{ concave down on } I \iff
+      \forall x_0 \in I,\ \forall x \in I:\ f(x) \le f(x_0) + f'(x_0)(x - x_0)
+    status: present
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: definition.tangent-line
+    role: uses_concept
+    confidence: high
+  - id: definition.function
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "4"
+    section: "4.3"
+    theorem_label: "Definición (parte cóncava hacia abajo)"
+    page: "293"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [analysis, convex-analysis]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [object, property]
+  keywords: [concavity, concave-down, concave, tangent-line]
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Sibling of definition.concave-up, split per §4.1 precedent.
+  Equivalent to "−f is concave up". Stewart's geometric definition
+  presupposes differentiability on I.

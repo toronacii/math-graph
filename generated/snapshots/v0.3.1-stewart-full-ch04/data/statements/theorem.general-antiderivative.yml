@@ -1,0 +1,107 @@
+schema_version: "0.3.1"
+id: theorem.general-antiderivative
+type: theorem
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Antiderivada general (F + C)
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Most General Antiderivative (F + C)
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Si F es una antiderivada de f sobre un intervalo I, entonces
+        la antiderivada más general de f sobre I es F(x) + C, donde C
+        es una constante arbitraria.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        If F is an antiderivative of f on an interval I, then the most
+        general antiderivative of f on I is F(x) + C, where C is an
+        arbitrary constant.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      \text{Si } F'(x) = f(x) \text{ en } I,\;
+      \text{entonces toda antiderivada de } f \text{ en } I
+      \text{ tiene la forma } F(x) + C,\; C \in \mathbb{R}.
+    status: present
+    review_status: unreviewed
+
+proved_by:
+  - proof.general-antiderivative.from-corollary
+
+depends_on:
+  - id: definition.antiderivative
+    role: uses_concept
+    confidence: high
+  - id: definition.derivative-function
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "4"
+    section: "4.9"
+    theorem_label: "Teorema 1"
+    page: "344"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [analysis, integration]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [principle, criterion]
+  keywords: [general-antiderivative, integration-constant, plus-c, family-of-antiderivatives]
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart §4.9 Teorema 1 page 344. Direct corollary of
+  corollary.derivatives-equal-implies-differ-by-constant (§4.2
+  Corolario 7) applied to two antiderivatives F, G of f. Could
+  be classified as a corollary; Stewart presents it as a numbered
+  theorem so we mirror that. The "+ C" appearing in every indefinite
+  integral and every solution to a first-order ODE in §4.9 / Ch5 / Ch9
+  is justified by this single result. Stewart's statement implicitly
+  assumes I is an interval (connectedness) — on a disconnected
+  domain (e.g. R \\ {0}) one obtains independent constants on each
+  component, as illustrated by the ln|x| example on the same page.

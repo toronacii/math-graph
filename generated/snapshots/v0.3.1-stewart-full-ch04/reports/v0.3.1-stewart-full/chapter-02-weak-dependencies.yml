@@ -1,0 +1,151 @@
+rerun_id: v0.3.1-stewart-full
+chapter: "2"
+generated_at: "2026-05-11"
+partial: false
+
+# ---------------------------------------------------------------------------
+# Weak dependencies — full Chapter 2.
+#
+# Categories:
+#   bundle_proof_debt       Type-A multi-claim statement with single bundled proof
+#   informal_definition     Informal version paired with rigorous sibling
+#   missing_proof           Statement without a proof node, by Stewart's choice
+#   pedagogical_node        Enumeration / heuristic / non-exhaustive classification
+#   ownership_exception     Generality edge that violates policy-04 alphabetical rule
+# ---------------------------------------------------------------------------
+
+bundle_proof_debt:
+  - id: proof.limit-laws.stewart
+    proves: proposition.limit-laws
+    laws_proven: [sum]
+    laws_deferred: [difference, constant-multiple, product, quotient]
+    dependency_confidence: medium
+    why: >
+      Stewart proves only Law 1 (sum) in §2.4 (after introducing
+      ε–δ); Laws 2–5 are deferred to Apéndice F. The proof file
+      uses parts[] with sum-only locality so future per-law proofs
+      can be added without restructuring.
+    closure_plan: split into 5 parts[] entries during Ch4 audit
+
+  - id: proof.continuity-arithmetic.stewart
+    proves: theorem.continuity-arithmetic
+    closure_laws_proven: [sum]
+    closure_laws_deferred: [difference, constant-multiple, product, quotient]
+    dependency_confidence: medium
+    why: >
+      Mirror of proof.limit-laws.stewart at the continuity layer.
+      Each closure law follows by the same template (apply the
+      corresponding limit law to lim_{x→a} (op(f,g))(x)). Bundled
+      because Stewart presents only the sum case explicitly.
+    closure_plan: parallel split alongside limit-laws split
+
+  - id: proof.limit-root-law.stewart
+    proves: proposition.limit-root-law
+    bundle: Stewart's Laws 10 (lim x^n) and 11 (lim ⁿ√x) treated jointly
+    dependency_confidence: medium
+    why: Stewart's text gives a continuity-of-elementary-functions argument that handles both cases simultaneously.
+
+  - id: definition.vertical-asymptote
+    bundle_size: 6
+    detail: 6 divergence conditions (lim_{x→a^±} f = ±∞ in each combination) bundled in one node
+    dependency_confidence: medium
+    why: Stewart's Definition 6 (§2.2) lists all six together as a single criterion.
+
+  - id: definition.infinite-limit-at-infinity
+    bundle_size: 4
+    detail: 4 cases (x → ±∞ paired with f → ±∞)
+    dependency_confidence: medium
+    why: Stewart bundles the four cases into one paragraph (§2.6).
+
+informal_definition_pairs:
+  - informal: definition.limit-of-function
+    rigorous: definition.epsilon-delta-limit
+    edge: equivalent
+    section_introducing: "2.2 / 2.4"
+  - informal: definition.left-hand-limit
+    rigorous: definition.left-hand-limit-precise
+    edge: equivalent
+  - informal: definition.right-hand-limit
+    rigorous: definition.right-hand-limit-precise
+    edge: equivalent
+  - informal: definition.infinite-limit
+    rigorous: definition.infinite-limit-precise
+    edge: equivalent
+  - informal: definition.negative-infinite-limit
+    rigorous: definition.negative-infinite-limit-precise
+    edge: equivalent
+  - informal: definition.limit-at-infinity
+    rigorous: definition.epsilon-n-limit-at-infinity
+    edge: equivalent
+  - informal: definition.negative-limit-at-infinity
+    rigorous: definition.epsilon-n-negative-limit-at-infinity
+    edge: equivalent
+
+missing_proofs:
+  - statement: proposition.limit-of-constant
+    reason: deferred — §2.4 exercise (ε–δ with arbitrary δ)
+  - statement: proposition.limit-of-identity
+    reason: deferred — §2.4 exercise (ε–δ with δ = ε)
+  - statement: proposition.limit-monotonicity
+    reason: Stewart defers to Apéndice F
+  - statement: theorem.squeeze-theorem
+    reason: Stewart defers to Apéndice F
+  - statement: proposition.limit-exists-iff-one-sided-limits
+    reason: stated as Theorem 1 §2.3 without proof in the main text
+  - statement: theorem.limit-of-reciprocal-power
+    reason: §2.6 Theorem 5; consequence of ε–N machinery, no proof in main text
+  - statement: theorem.intermediate-value-theorem
+    reason: Stewart defers to Apéndice F
+  - statement: theorem.continuity-of-elementary-functions
+    reason: stated as §2.5 Theorem 7 with no proof — relies on continuity of basic types established case-by-case in Stewart
+  - statement: proposition.direct-substitution-property
+    reason: linked to §2.5 Theorem 5 via equivalent edge; the substantive proof IS the polynomials-and-rationals argument
+
+pedagogical_nodes:
+  - id: proposition.non-differentiability-cases
+    semantic_confidence: medium
+    why: >
+      Stewart presents three typical ways f can fail to be
+      differentiable (corner, discontinuity, vertical tangent) but
+      does NOT prove this list is exhaustive. Wild functions (e.g.,
+      Weierstrass function, topologist's sine curve) need not fall
+      cleanly into the three buckets. Marked
+      semantic_kind:[criterion,pedagogical] to flag this.
+
+ownership_exceptions:
+  - on: definition.derivative-at-point
+    edge: equivalent → definition.instantaneous-rate-of-change
+    rule_violated: policy-04 alphabetical ownership (alphabetical earlier owner)
+    actually_followed: yes — derivative-at-point IS alphabetically earlier
+    note: not actually an exception; recorded here for cross-reference
+  - on: definition.nth-derivative
+    edge: stronger_than → definition.second-derivative
+    rule_violated: policy-04 alphabetical ownership
+    rationale: edge declared on the more general node so the specialization arrow points downward in narrative reading order
+    flagged_for: editorial review
+
+implicit_dependencies_remaining:
+  - statement: definition.differentiable-on-interval
+    implicit: definition.open-interval (not in corpus)
+    handled_via: notes only; no edge
+    note: Stewart never formalizes "open interval" as a separate definition
+
+unverified_concept_dependencies:
+  - any depends_on edge currently at confidence: medium for non-bundle reasons
+  - count_at_medium: 8
+  - audit_status: pending semantic-dependency review
+
+ch2_closures:
+  - proposition.limit-root-law: proof added in §2.5 (proof.limit-root-law.stewart)
+  - proposition.derivative-as-tangent-slope: proof added in §2.7 (proof.derivative-as-tangent-slope.stewart)
+  - theorem.differentiable-implies-continuous: proof added in §2.8 (proof.differentiable-implies-continuous.stewart)
+  - theorem.continuity-of-polynomials-and-rationals: proof added in §2.5
+  - theorem.continuity-of-composition: proof added in §2.5
+  - theorem.continuity-arithmetic: sum-case proof added in §2.5 (other cases bundled)
+  - proposition.limit-power-law: proof added in §2.3
+  - proposition.limit-power-of-x: proof added in §2.3
+
+next_chapter_will_resolve:
+  - bundle splits for limit-laws & continuity-arithmetic when chain rule and product rule require honest Law 4 (product) usage
+  - currently-orphan derivative nodes (acceleration, nth-derivative, differentiable-on-interval) will gain incoming edges from differentiation-rule statements
+  - definition.derivative-at-point is poised to become a top-five hub

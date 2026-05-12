@@ -1,0 +1,112 @@
+schema_version: "0.3.1"
+id: theorem.squeeze-theorem
+type: theorem
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Teorema de la compresión (sándwich)
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Squeeze theorem (sandwich theorem)
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Si f(x) ≤ g(x) ≤ h(x) cuando x tiende a a (excepto
+        posiblemente en a) y lím_{x→a} f(x) = lím_{x→a} h(x) = L,
+        entonces lím_{x→a} g(x) = L.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        If f(x) ≤ g(x) ≤ h(x) when x is near a (except possibly at
+        a) and lim_{x→a} f(x) = lim_{x→a} h(x) = L, then
+        lim_{x→a} g(x) = L.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      f(x) \le g(x) \le h(x) \text{ cerca de } a
+      \;\;\text{y}\;\;
+      \lim_{x \to a} f(x) = \lim_{x \to a} h(x) = L
+      \;\;\Longrightarrow\;\;
+      \lim_{x \to a} g(x) = L
+    status: present
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: definition.limit-of-function
+    role: uses_concept
+    confidence: high
+  - id: proposition.limit-monotonicity
+    role: uses_concept
+    confidence: medium
+    notes: closely related order-preservation principle; not literally cited
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.3"
+    theorem_label: "Teorema 3 — Teorema de la compresión"
+    page: "105"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [real-analysis]
+
+ambient:
+  structures: [ordered-real-line]
+
+ontology:
+  semantic_kind: [criterion, principle]
+  keywords: [squeeze, sandwich, limit, comparison]
+
+generality:
+  - target: proposition.limit-monotonicity
+    relation: stronger_than
+    notes: >
+      Squeeze gives the stronger conclusion (equality of g's limit
+      to L) from a tighter two-sided sandwich, while monotonicity
+      only yields an inequality.
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart Teorema 3 of §2.3. Stewart defers proof to Apéndice F;
+  no proof node authored at this stage. Used in Example 11 to
+  evaluate lim_{x→0} x² sin(1/x) = 0 — the canonical illustration.
+  Will be cited in Ch3 to prove lim_{x→0} sin(x)/x = 1
+  geometrically.

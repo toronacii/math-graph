@@ -1,0 +1,132 @@
+schema_version: "0.3.1"
+id: proof.derivatives-of-inverse-trigonometric-functions.implicit
+type: proof
+status: extracted
+
+proves: theorem.derivatives-of-inverse-trigonometric-functions
+style: implicit-differentiation
+
+uses: []
+
+parts:
+  - name: derivative-of-arcsine
+    kind: subclaim
+    description: >
+      (d/dx) sin⁻¹ x = 1/√(1 − x²) derived inline from
+      sin y = x via implicit differentiation. The branch
+      −π/2 ≤ y ≤ π/2 ensures cos y ≥ 0, so cos y = √(1 − sin² y) =
+      √(1 − x²). Stewart §3.5 page 213.
+    uses:
+      - id: proposition.implicit-differentiation
+        role: essential
+        confidence: high
+      - id: theorem.chain-rule
+        role: essential
+        confidence: high
+        notes: applied to sin y when differentiating sin y = x, with y a function of x
+      - id: definition.inverse-trigonometric-function
+        role: definition
+        confidence: high
+        notes: y = sin⁻¹ x ⇔ sin y = x for y ∈ [−π/2, π/2]
+      - id: theorem.derivatives-of-trigonometric-functions
+        role: essential
+        confidence: high
+        notes: (d/dy) sin y = cos y
+
+  - name: derivative-of-arctangent
+    kind: subclaim
+    description: >
+      (d/dx) tan⁻¹ x = 1/(1 + x²) derived inline from tan y = x
+      via implicit differentiation, using sec² y = 1 + tan² y =
+      1 + x². Stewart §3.5 page 214.
+    uses:
+      - id: proposition.implicit-differentiation
+        role: essential
+        confidence: high
+      - id: theorem.chain-rule
+        role: essential
+        confidence: high
+      - id: definition.inverse-trigonometric-function
+        role: definition
+        confidence: high
+        notes: y = tan⁻¹ x ⇔ tan y = x for y ∈ (−π/2, π/2)
+      - id: theorem.derivatives-of-trigonometric-functions
+        role: essential
+        confidence: high
+        notes: (d/dy) tan y = sec² y
+
+  - name: derivatives-of-arccos-arccot-arcsec-arccsc
+    kind: subclaim
+    description: >
+      (d/dx) cos⁻¹ x, cot⁻¹ x, sec⁻¹ x, csc⁻¹ x. Stewart relegates
+      these to exercises (Ex 64 for sec/csc — branch-convention
+      sensitive; arccos and arccot follow the same implicit-
+      differentiation pattern). Recorded here as bundled
+      structural dependency.
+    uses:
+      - id: proposition.implicit-differentiation
+        role: essential
+        confidence: medium
+        notes: same technique as arcsin/arctan applied to the other four inverse trig identities
+      - id: theorem.chain-rule
+        role: essential
+        confidence: medium
+      - id: definition.inverse-trigonometric-function
+        role: definition
+        confidence: high
+      - id: theorem.derivatives-of-trigonometric-functions
+        role: essential
+        confidence: medium
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.5"
+    locator: "Derivación inline (arcsin, arctan, pp. 213–214) + ejercicio 64 (arcsec, arccsc)"
+    page: "213"
+    source_language: es
+
+sketch:
+  es:
+    text: >
+      Bundle. Caso arcsin: sea y = sin⁻¹ x con y ∈ [−π/2, π/2],
+      luego sen y = x. Derivando implícitamente respecto a x y
+      aplicando regla de la cadena, cos y · (dy/dx) = 1, así
+      dy/dx = 1/cos y. Como y ∈ [−π/2, π/2], cos y ≥ 0, luego
+      cos y = √(1 − sen² y) = √(1 − x²), y por tanto
+      (d/dx) sin⁻¹ x = 1/√(1 − x²).
+      Caso arctan: sea y = tan⁻¹ x, tan y = x. Derivando,
+      sec² y · (dy/dx) = 1, así dy/dx = 1/sec² y =
+      1/(1 + tan² y) = 1/(1 + x²).
+      Casos arccos, arccot, arcsec, arccsc: análogos por la misma
+      técnica (Stewart los deja como ejercicios). Los signos
+      negativos de las cofunciones reflejan que cos⁻¹ y cot⁻¹ son
+      decrecientes; los factores 1/(x √(x² − 1)) en sec⁻¹/csc⁻¹
+      dependen de la convención de rama.
+    is_original: true
+    origin: original
+    review_status: unreviewed
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: medium
+  semantic_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Bundled proof. arcsin and arctan are explicit; arccos, arccot,
+  arcsec, arccsc are deferred to exercises. dependency_confidence:
+  medium reflects the partial textual coverage AND the implicit
+  hypothesis that the inverse of a differentiable bijection is
+  itself differentiable (Stewart asserts this informally:
+  "puede demostrarse que su función inversa f⁻¹ también es
+  derivable, excepto donde sus rectas tangentes son verticales").

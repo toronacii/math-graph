@@ -1,0 +1,109 @@
+schema_version: "0.3.1"
+id: theorem.extreme-value-theorem
+type: theorem
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Teorema del valor extremo
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Extreme Value Theorem
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Si f es continua sobre un intervalo cerrado [a, b], entonces
+        f alcanza un valor máximo absoluto f(c) y un valor mínimo
+        absoluto f(d) en algunos números c y d en [a, b].
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        If f is continuous on a closed interval [a, b], then f
+        attains an absolute maximum value f(c) and an absolute
+        minimum value f(d) at some numbers c and d in [a, b].
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      f \in C([a,b]) \implies \exists c, d \in [a,b]:\;
+      f(c) = \max_{[a,b]} f \;\wedge\; f(d) = \min_{[a,b]} f
+    status: present
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: definition.continuity-on-interval
+    role: uses_concept
+    confidence: high
+  - id: definition.absolute-maximum
+    role: uses_concept
+    confidence: high
+  - id: definition.absolute-minimum
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "4"
+    section: "4.1"
+    theorem_label: "Teorema 3 — Teorema del valor extremo"
+    page: "275"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [analysis, topology]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [principle, criterion]
+  keywords: [extreme-value-theorem, EVT, compact-interval, attainment, weierstrass]
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart Theorem 3 §4.1 page 275. The proof is explicitly omitted
+  ("aun cuando el teorema del valor extremo es muy aceptable a
+  nivel intuitivo, su demostración es difícil, por consiguiente,
+  se omite") — deferred to Apéndice F. Both hypotheses (continuity
+  AND closed interval) are necessary, as Stewart illustrates with
+  Figures 8 (discontinuous) and 9 (open interval). Multi-source
+  disambiguation note for future Rudin merge: this theorem is the
+  R-restriction of "continuous image of compact set is compact"
+  (Rudin Theorem 4.16); per the AGENTS.md disambiguation guide,
+  the more general topological version will be a SEPARATE node and
+  this theorem becomes a corollary via Heine-Borel.

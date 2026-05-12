@@ -1,0 +1,92 @@
+schema_version: "0.3.1"
+id: definition.secant-line
+type: definition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Recta secante
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Secant line
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Una recta secante (de la palabra latina secans, que significa
+        cortar) es una recta que interseca (corta) una curva en más
+        de un punto.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        A secant line (from the Latin secans, "to cut") is a line
+        that intersects (cuts) a curve in more than one point.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    status: not_applicable
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on: []
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.1"
+    locator: "El problema de la tangente (sección 2.1)"
+    page: "82"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [geometry]
+
+ambient:
+  structures: [euclidean-plane]
+
+ontology:
+  semantic_kind: [object]
+  keywords: [secant, line, curve, intersection]
+
+generality: []
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart introduces this in §2.1 as part of the tangent-line
+  motivation. The slope of the secant PQ is later limited to give
+  the tangent slope (§2.7). No formal `depends_on` because Stewart
+  treats "curve" and "line" as informal geometric primitives at
+  this stage.

@@ -1,0 +1,98 @@
+schema_version: "0.3.1"
+id: proposition.limit-monotonicity
+type: proposition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Monotonía del límite
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Monotonicity of the limit
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Si f(x) ≤ g(x) cuando x tiende a a (excepto posiblemente en
+        x = a) y los límites de f y g existen cuando x tiende a a,
+        entonces lím_{x→a} f(x) ≤ lím_{x→a} g(x).
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        If f(x) ≤ g(x) when x is near a (except possibly at x = a)
+        and both lim_{x→a} f(x) and lim_{x→a} g(x) exist, then
+        lim_{x→a} f(x) ≤ lim_{x→a} g(x).
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      f(x) \le g(x) \text{ cerca de } a
+      \;\;\Longrightarrow\;\;
+      \lim_{x \to a} f(x) \le \lim_{x \to a} g(x)
+    status: present
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: definition.limit-of-function
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "2"
+    section: "2.3"
+    theorem_label: "Teorema 2"
+    page: "105"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [real-analysis]
+
+ambient:
+  structures: [ordered-real-line]
+
+ontology:
+  semantic_kind: [property]
+  keywords: [limit, monotonicity, order-preservation]
+
+generality: []
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart Theorem 2 of §2.3. Stewart defers proof to Apéndice F.
+  No proof node authored at this stage; rigorous proof requires
+  definition.epsilon-delta-limit (§2.4).

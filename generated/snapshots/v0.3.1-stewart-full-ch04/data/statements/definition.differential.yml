@@ -1,0 +1,109 @@
+schema_version: "0.3.1"
+id: definition.differential
+type: definition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Diferencial de una función
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Differential of a function
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Sea y = f(x) una función derivable. La diferencial dx es
+        una variable independiente que toma cualquier valor real.
+        La diferencial dy se define en términos de dx por la
+        ecuación dy = f'(x) dx. Geométricamente, dy es la cantidad
+        en que se eleva o cae la recta tangente a y = f(x) en el
+        punto (x, f(x)) cuando la abscisa cambia en dx, mientras
+        que Δy = f(x + dx) − f(x) es la cantidad correspondiente
+        en que se eleva o cae la propia curva.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        Let y = f(x) be differentiable. The differential dx is an
+        independent variable taking any real value. The differential
+        dy is defined in terms of dx by the equation dy = f'(x) dx.
+        Geometrically, dy is the rise/fall of the tangent line to
+        y = f(x) at (x, f(x)) when the abscissa changes by dx,
+        whereas Δy = f(x + dx) − f(x) is the rise/fall of the curve
+        itself.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      dy \;=\; f'(x)\,dx
+    status: present
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: definition.derivative-function
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.10"
+    theorem_label: "Ecuación 3"
+    page: "253"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [analysis, differential-equations]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [object, notation]
+  keywords: [differential, leibniz-notation, infinitesimal, dy, dx]
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart's Eq 3, §3.10. With this definition, dy/dx is now
+  literally a quotient of differentials (Stewart's marginal
+  remark). Foundational for §3.9 related rates notation, §6
+  integration (∫f(x) dx as antidifferential), and §9.4 separable
+  ODEs. Differential rules (d(cu) = c du, d(u + v) = du + dv,
+  d(uv) = u dv + v du, d(u/v), d(x^n) = n x^{n−1} dx) follow
+  directly from the corresponding derivative rules and are not
+  modeled as a separate proposition (Stewart relegates them to
+  Exercise 41).

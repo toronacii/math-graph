@@ -1,0 +1,100 @@
+schema_version: "0.3.1"
+id: definition.antiderivative
+type: definition
+status: extracted
+
+language:
+  original: es
+  available: [es, en]
+
+title:
+  es:
+    text: Antiderivada
+    is_original: true
+    origin: original
+    review_status: unreviewed
+  en:
+    text: Antiderivative
+    is_original: false
+    origin: llm
+    generated_by: "llm:claude-opus-4.7"
+    review_status: unreviewed
+
+statement:
+  natural:
+    es:
+      text: >
+        Una función F recibe el nombre de antiderivada de f sobre un
+        intervalo I si F'(x) = f(x) para toda x en I.
+      is_original: true
+      origin: original
+      review_status: unreviewed
+    en:
+      text: >
+        A function F is called an antiderivative of f on an interval
+        I if F'(x) = f(x) for every x in I.
+      is_original: false
+      origin: llm
+      generated_by: "llm:claude-opus-4.7"
+      review_status: unreviewed
+  latex:
+    body: |
+      F \text{ es antiderivada de } f \text{ sobre } I
+      \iff
+      \forall x \in I,\; F'(x) = f(x)
+    status: present
+    review_status: unreviewed
+
+proved_by: []
+
+depends_on:
+  - id: definition.derivative-function
+    role: uses_concept
+    confidence: high
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "4"
+    section: "4.9"
+    theorem_label: "Definición (sin número)"
+    page: "344"
+    source_language: es
+
+domains:
+  primary: [calculus]
+  secondary: [analysis, integration]
+
+ambient:
+  structures: [real-line]
+
+ontology:
+  semantic_kind: [object, relation]
+  keywords: [antiderivative, primitive-function, integration, inverse-of-derivative]
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  translation_confidence: high
+  latex_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart §4.9 page 344. Foundational definition for Chapter 5
+  (indefinite integral, FTC). Stewart's definition is interval-local:
+  the same function f admits different antiderivatives on different
+  intervals (cf. ln|x| on (−∞,0) and (0,∞)). The "+ C" structure is
+  NOT part of this definition — it is captured separately by
+  theorem.general-antiderivative, whose proof uses
+  corollary.derivatives-equal-implies-differ-by-constant. Multi-source
+  note: in Rudin / standard analysis the term "primitive" is more
+  common; future merge would identify the nodes via title alias.

@@ -1,0 +1,290 @@
+rerun_id: v0.3.1-stewart-full
+chapter: "4"
+chapter_title:
+  es: Aplicaciones de la derivada
+  en: Applications of the Derivative
+sections_covered:
+  - "4.1"   # Valores máximos y mínimos
+  - "4.2"   # Teorema del valor medio
+  - "4.3"   # Cómo influyen las derivadas en la forma de una gráfica
+  - "4.4"   # Formas indeterminadas y la regla de l'Hospital
+  - "4.5"   # Resumen de trazado de curvas (only definition.slant-asymptote)
+  - "4.6"   # Graficación con cálculo y calculadoras (no entities — methodology)
+  - "4.7"   # Problemas de optimización (no entities — applied schema)
+  - "4.8"   # Método de Newton
+  - "4.9"   # Antiderivadas
+sections_pending: []
+partial: false
+snapshot_label: v0.3.1-stewart-full-ch04
+generated_at: "2026-05-11"
+
+counts:
+  total_nodes: 209
+  statements: 158
+  proofs: 51
+  by_type:
+    definition: 85
+    proposition: 33
+    theorem: 39
+    corollary: 1
+    proof: 51
+  ch4_only:
+    statements_first_introduced: 27
+    proofs_first_introduced: 9
+  by_section_statements_ch4:
+    "4.1": 10   # absolute-max/min, local-max/min, extreme-value, critical-number, fermat, EVT, local-extreme-implies-critical-number, closed-interval-method
+    "4.2": 4    # rolle, MVT, derivative-zero-implies-constant, derivatives-equal-implies-differ-by-constant
+    "4.3": 7    # concave-up, concave-down, inflection-point, increasing-decreasing-test, first-derivative-test, concavity-test, second-derivative-test
+    "4.4": 1    # l-hospital-rule
+    "4.5": 1    # slant-asymptote
+    "4.6": 0
+    "4.7": 0
+    "4.8": 1    # newton-iteration
+    "4.9": 3    # antiderivative, general-antiderivative, antiderivative-formulas-table
+  by_section_proofs_ch4:
+    "4.1": 1    # fermat.stewart
+    "4.2": 4    # rolle, MVT-from-rolle, derivative-zero-implies-constant.mvt, derivatives-equal-implies-differ-by-constant.from-zero
+    "4.3": 3    # increasing-decreasing-test.from-mvt, first-derivative-test.from-id-test, second-derivative-test.from-concavity
+    "4.4": 0    # l'Hôpital — deferred to Apéndice F
+    "4.5": 0
+    "4.6": 0
+    "4.7": 0
+    "4.8": 0    # Newton's method modeled as definition (constructive); convergence deferred
+    "4.9": 1    # general-antiderivative.from-corollary
+
+  total_edges: 636
+  edges_by_relation:
+    statement_proves: 51              # proof → statement (proves)
+    statement_depends_on: 360
+    statement_generality: 34
+    proof_uses: 225
+  depends_on_role_distribution:
+    uses_concept: 344
+    specializes: 7
+    extends: 6
+    instance_of: 3
+  proof_uses_role_distribution:
+    essential: 129
+    definition: 85
+    notation: 7
+    background: 3
+    existence: 1
+
+graph_density:
+  nodes: 209
+  edges: 636
+  density: 0.0146
+  components: 1
+
+hubs_post_chapter_4:
+  most_referenced_combined:
+    - id: definition.function
+      score: 61
+      role: universal hub (every statement uses "function")
+    - id: definition.derivative-function
+      score: 46
+      role: Ch3 super-hub, deepened by every Ch4 derivative-test proof
+    - id: definition.limit-of-function
+      score: 26
+      role: Ch2 foundational hub
+    - id: definition.domain
+      score: 19
+    - id: definition.continuity-at-point
+      score: 18
+      role: feeds EVT, IVT, continuity-arithmetic and Ch4 hypotheses
+    - id: theorem.chain-rule
+      score: 17
+    - id: definition.derivative-at-point
+      score: 16
+    - id: definition.differentiable-at-point
+      score: 16
+    - id: proposition.limit-laws
+      score: 16
+    - id: definition.local-maximum
+      score: 10
+      role: NEW Ch4 hub (§4.1) — feeds Fermat, derivative tests, EVT
+    - id: definition.local-minimum
+      score: 9
+      role: NEW Ch4 hub (§4.1)
+    - id: definition.exponential-function
+      score: 13
+    - id: definition.hyperbolic-function
+      score: 13
+    - id: definition.natural-logarithm
+      score: 11
+    - id: definition.absolute-value
+      score: 9
+    - id: proposition.implicit-differentiation
+      score: 9
+    - id: definition.tangent-line
+      score: 8
+  ch4_introduced_hubs:
+    - id: definition.local-maximum
+      inbound_total: 10
+    - id: definition.local-minimum
+      inbound_total: 9
+    - id: definition.absolute-maximum
+      inbound_total: 4
+    - id: definition.absolute-minimum
+      inbound_total: 4
+    - id: theorem.extreme-value-theorem
+      inbound_total: 3
+      role: foundation for closed-interval-method and §4.7 optimization
+    - id: theorem.mean-value-theorem
+      inbound_total: 3
+      role: NEW Ch4 super-theorem — feeds §4.2/§4.3 monotonicity tests
+    - id: definition.critical-number
+      inbound_total: 3
+    - id: definition.antiderivative
+      inbound_total: 3
+      role: NEW §4.9 — foundational for Ch5 (FTC) and Ch9 (ODEs)
+
+orphan_count: 0
+leaf_statement_count: 36
+leaf_explanation: >
+  No strict graph orphans. ~36 statements are leaves in the
+  depended-on/used-by sense, grouped by reason:
+  (a) Ch1 holdovers awaiting downstream use (parity, transformations,
+  abs-value pieces) — most will gain edges in Ch5–6 (integration);
+  (b) Ch2 entry-points for later chapters (epsilon-N machinery,
+  asymptotes, IVT, infinite-limit-at-infinity);
+  (c) Ch3 leaves still dangling: definition.acceleration (Ch4 §4.9
+  uses it conceptually but no formal edge), definition.normal-line,
+  proposition.related-rates-strategy, proposition.linear-approximation;
+  (d) NEW Ch4 leaves: definition.slant-asymptote (§4.5; only used in
+  curve-sketching examples not encoded), definition.newton-iteration
+  (§4.8; standalone constructive scheme), proposition.antiderivative-
+  formulas-table (§4.9; bundled criterion — leaf by design),
+  proposition.closed-interval-method (§4.1; pedagogical procedure),
+  theorem.l-hospital-rule (§4.4; no proof, hub for §4.4 worked
+  examples not encoded as nodes).
+
+quality_summary:
+  status_distribution:
+    extracted: 209
+  dependency_confidence_set: 209
+  semantic_confidence_set: 209
+  latex_present: 134
+  latex_informal: 11
+  latex_not_applicable: 13
+  latex_missing: 0
+  semantic_dependency_audit_status: pending
+
+provenance_audit:
+  schema_version_check:
+    "0.3.1": 209
+  rerun_id_check:
+    v0.3.1-stewart-full: 209
+  language_original_check:
+    es: 209
+  is_original_uniqueness: pass
+  source_locator_integrity: pass
+  page_locators_present_ch4: 36   # all 27 stmts + 9 proofs introduced in Ch4
+
+architectural_audit_application:
+  bundled_definition_splits:
+    applied:
+      - absolute-maximum / absolute-minimum kept as separate atomic
+        definitions (Stewart §4.1 distinguishes them as siblings)
+      - local-maximum / local-minimum kept as separate atomic
+        definitions (sibling pair)
+      - concave-up / concave-down split into two atomic siblings
+        (no umbrella term — explicit decision per 2026-05-11 audit)
+      - first-derivative-test / second-derivative-test kept as
+        separate propositions (Stewart presents them as distinct
+        criteria with different applicability conditions)
+      - increasing-decreasing-test and concavity-test kept atomic
+      - rolle and mean-value-theorem kept as separate theorems
+        (MVT proved from Rolle in proof.mean-value-theorem.from-rolle)
+      - derivative-zero-implies-constant and the corollary
+        derivatives-equal-implies-differ-by-constant kept as
+        separate nodes with explicit specializes edge
+      - antiderivative (definition) and general-antiderivative
+        (theorem) kept as separate nodes with explicit
+        proved_by → corollary chain
+    accepted_as_explicit_debt:
+      - proposition.antiderivative-formulas-table (Type-A bundle of
+        13 inverse-derivative formulas — mirrors Ch3 trig bundles)
+      - theorem.l-hospital-rule (covers both 0/0 and ∞/∞ in one
+        node — Stewart presents them as a single "Regla de l'Hospital")
+      - proposition.closed-interval-method (Type-B procedural schema)
+  proof_uses_role_precision: ok
+  honest_dependency_confidence: ok    # 6 statement-deps and 13 proof-uses at medium reflecting bundled debt + l-hospital implicit assumptions
+  generality_edge_ownership:
+    rule_followed_by_default: yes
+    deliberate_exceptions:
+      - corollary.derivatives-equal-implies-differ-by-constant owns
+        specializes → theorem.derivative-zero-implies-constant
+        (corollary explicitly subsumed under the more general theorem)
+
+semantic_debt_register_after_ch4:
+  type_A_bundles_open:
+    - proposition.antiderivative-formulas-table (NEW §4.9 — 13 rows)
+    - theorem.l-hospital-rule (NEW §4.4 — covers 0/0 and ∞/∞ in one node)
+    - (carried from Ch3) trig / inv-trig / hyperbolic / inv-hyperbolic
+      derivative bundles + hyperbolic-identities + inverse-hyperbolic-
+      as-logarithm
+  type_B_schemas_open:
+    - proposition.closed-interval-method (NEW §4.1 — pedagogical
+      procedure for finding absolute extrema on [a,b])
+    - (carried) proposition.related-rates-strategy, proposition.linear-
+      approximation
+  uniqueness_debts:
+    - (carried) theorem.exponential-growth-decay-solution
+  open_terminology_warning:
+    - "linear-function" terminology overload (carried from Ch1/Ch3)
+    - "antiderivative" vs "primitive": Stewart uses "antiderivada";
+      Rudin uses "primitive". Future merge will require title alias.
+  domain-of-validity gaps:
+    - proposition.antiderivative-formulas-table: row "1/x → ln|x|"
+      omits the disconnected-domain caveat (Stewart explicitly notes
+      it on p. 344 but the bundled node does not encode it)
+    - proposition.antiderivative-formulas-table: row "x^n / (n+1)"
+      uses general real n which depends on theorem.power-rule-general
+      (§3.6 logarithmic differentiation), not the elementary power
+      rule
+    - definition.slant-asymptote: requires m ≠ 0 (linear-function
+      terminology debt re-noted)
+
+deferred_proof_nodes:
+  - proves: theorem.extreme-value-theorem
+    reason: deferred to Apéndice F (Stewart §4.1 states without proof;
+      requires compactness machinery beyond Ch4)
+  - proves: proposition.concavity-test
+    reason: deferred to Apéndice F (Stewart §4.3 omits proof)
+  - proves: theorem.l-hospital-rule
+    reason: deferred to Apéndice F (general case via Cauchy MVT)
+  - proves: proposition.closed-interval-method
+    reason: pedagogical procedure (no formal proof obligation;
+      correctness follows immediately from EVT + Fermat)
+  - proves: definition.slant-asymptote
+    reason: definitional
+  - proves: definition.newton-iteration
+    reason: constructive scheme (no proof obligation; convergence
+      deferred to §11.11 Ex 39 via Taylor remainder)
+  - proves: definition.antiderivative
+    reason: definitional
+  - proves: proposition.antiderivative-formulas-table
+    reason: bundled inverse-derivative table (each row is one-line
+      verification by differentiating right column; no monolithic
+      proof produced)
+
+closed_in_ch4:
+  - theorem.fermat (proof.fermat.stewart §4.1)
+  - theorem.rolle (proof.rolle.stewart §4.2)
+  - theorem.mean-value-theorem (proof.mean-value-theorem.from-rolle §4.2)
+  - theorem.derivative-zero-implies-constant
+    (proof.derivative-zero-implies-constant.mvt §4.2)
+  - corollary.derivatives-equal-implies-differ-by-constant
+    (proof.derivatives-equal-implies-differ-by-constant.from-zero §4.2)
+  - proposition.local-extreme-implies-critical-number
+    (implicit corollary of Fermat + critical-number definition; no
+    separate proof node — captured via Fermat's proof)
+  - proposition.increasing-decreasing-test
+    (proof.increasing-decreasing-test.from-mvt §4.3)
+  - proposition.first-derivative-test
+    (proof.first-derivative-test.from-id-test §4.3 — informal)
+  - proposition.second-derivative-test
+    (proof.second-derivative-test.from-concavity §4.3 — informal)
+  - theorem.general-antiderivative
+    (proof.general-antiderivative.from-corollary §4.9)

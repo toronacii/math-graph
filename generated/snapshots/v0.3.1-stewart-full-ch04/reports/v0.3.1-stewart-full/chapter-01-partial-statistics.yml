@@ -1,0 +1,94 @@
+rerun_id: v0.3.1-stewart-full
+chapter: "1"
+chapter_title:
+  es: Funciones y modelos
+  en: Functions and Models
+sections_covered:
+  - "1.1"
+  - "1.2"
+sections_deferred:
+  - "1.3"   # Nuevas funciones a partir de funciones conocidas (transformaciones, composición)
+  - "1.5"   # Funciones exponenciales
+  - "1.6"   # Funciones inversas y logaritmos
+  - "1.4"   # Calculadoras y computadoras (no math content)
+partial: true
+snapshot_label: v0.3.1-stewart-full-ch1-partial
+generated_at: "2026-05-11"
+
+counts:
+  total_nodes: 21
+  statements: 20
+  proofs: 1
+  by_type:
+    definition: 19
+    proposition: 1
+    proof: 1
+  total_edges: 34
+  by_relation:
+    depends_on: 31      # uses_concept(30) + instance_of(1)
+    proof_uses: 2       # role: definition (proof.uses)
+    proved_by: 1
+  by_role:
+    uses_concept: 30
+    instance_of: 1
+    definition: 2
+
+graph_density:
+  nodes: 21
+  edges: 34
+  density: 0.0810       # edges / (n*(n-1))
+  components: 1
+
+hubs:
+  most_referenced:
+    - id: definition.function
+      in_degree: 17
+      role: foundational atom; cited by every Ch1 entity
+    - id: definition.domain
+      in_degree: 7
+      role: support atom for function attributes and rationals
+    - id: definition.polynomial
+      in_degree: 2
+    - id: proof.vertical-line-test.stewart
+      in_degree: 2       # via proved_by + listed reverse
+  most_depending:
+    - id: definition.dependent-variable
+      out_degree: 3
+    - id: definition.graph-of-function
+      out_degree: 3
+    - id: definition.rational-function
+      out_degree: 3
+
+quality_summary:
+  status_distribution:
+    extracted: 21
+  dependency_confidence_set: 21
+  semantic_confidence_set: 21
+  latex_present: 9
+  latex_not_applicable: 9
+  latex_informal: 1
+  semantic_dependency_audit_status: pending
+
+provenance_audit:
+  schema_version_check:
+    "0.3.1": 21
+  rerun_id_check:
+    v0.3.1-stewart-full: 21
+  language_original_check:
+    es: 21
+  is_original_uniqueness: pass
+  source_locator_integrity: pass    # all entities carry section + locator (page TBD)
+
+architectural_audit_application:
+  supremum_role_notation: not_applicable_in_ch1
+  bundled_definition_splits:
+    applied:
+      - definition.domain (split from definition.function)
+      - definition.range (split from definition.function)
+      - definition.independent-variable (split from definition.function)
+      - definition.dependent-variable (split from definition.function)
+      - definition.graph-of-function (split from definition.function)
+    pending:
+      - definition.trigonometric-function — six-function bundle awaiting per-function atomic split
+  proof_uses_role_precision: ok    # only one proof in batch; both `uses` carry role: definition
+  honest_dependency_confidence: ok

@@ -1,0 +1,70 @@
+schema_version: "0.3.1"
+id: proof.product-rule.stewart
+type: proof
+status: extracted
+
+proves: theorem.product-rule
+style: direct
+
+uses:
+  - id: definition.derivative-function
+    role: definition
+    confidence: high
+    notes: unfolds (d/dx)(uv) as the (Δx → 0) limit of Δ(uv)/Δx
+  - id: proposition.limit-laws
+    role: essential
+    confidence: high
+    notes: applies sum law and product law to split lim(uΔv/Δx + vΔu/Δx + ΔuΔv/Δx)
+  - id: theorem.differentiable-implies-continuous
+    role: essential
+    confidence: high
+    notes: ensures Δu → 0 as Δx → 0 (since f differentiable ⇒ continuous), so the cross term vanishes
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.2"
+    locator: "Derivación inline (páginas 184–186)"
+    page: "184"
+    source_language: es
+
+sketch:
+  es:
+    text: >
+      Sean u = f(x), v = g(x). Si x cambia en Δx, los cambios
+      en u y v son Δu = f(x+Δx) − f(x), Δv = g(x+Δx) − g(x).
+      El nuevo producto es (u+Δu)(v+Δv), de modo que
+      Δ(uv) = (u+Δu)(v+Δv) − uv = uΔv + vΔu + ΔuΔv.
+      Dividiendo entre Δx:
+      Δ(uv)/Δx = u·(Δv/Δx) + v·(Δu/Δx) + Δu·(Δv/Δx).
+      Tomando Δx → 0, por la ley de la suma y la del producto,
+      (d/dx)(uv) = u·(dv/dx) + v·(du/dx) + 0·(dv/dx)
+                 = u·v' + v·u'.
+      El término cruzado se anula porque Δu → 0 cuando Δx → 0
+      (f es derivable, luego continua). La interpretación
+      geométrica de áreas (figura 1) supone u, v > 0, pero el
+      álgebra es válida sin restricción de signo.
+    is_original: true
+    origin: original
+    review_status: unreviewed
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: high
+  semantic_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Standard algebraic Leibniz proof. The geometric rectangle
+  picture (Figure 1) is pedagogical — Stewart explicitly notes
+  that the algebraic identity holds for arbitrary signs.
+  Closes the PRODUCT case of the limit-laws bundled debt.

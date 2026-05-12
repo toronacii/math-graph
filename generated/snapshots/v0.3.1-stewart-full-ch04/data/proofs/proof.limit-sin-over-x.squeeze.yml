@@ -1,0 +1,78 @@
+schema_version: "0.3.1"
+id: proof.limit-sin-over-x.squeeze
+type: proof
+status: extracted
+
+proves: proposition.limit-sin-over-x
+style: geometric-squeeze
+
+uses:
+  - id: theorem.squeeze-theorem
+    role: essential
+    confidence: high
+    notes: applied to cos θ ≤ (sin θ)/θ ≤ 1 on (0, π/2), with both bounds tending to 1 as θ → 0
+  - id: definition.trigonometric-function
+    role: definition
+    confidence: high
+    notes: uses |BC| = sin θ on the unit circle
+  - id: proposition.limit-of-constant
+    role: essential
+    confidence: high
+    notes: lim 1 = 1 used as the upper bound of the squeeze
+  - id: theorem.continuity-of-elementary-functions
+    role: essential
+    confidence: medium
+    notes: continuity of cosine ⇒ lim_{θ→0} cos θ = 1 (lower bound of the squeeze)
+
+sources:
+  - work: Cálculo de una variable — Trascendentes tempranas
+    author: James Stewart
+    edition: "7"
+    chapter: "3"
+    section: "3.3"
+    locator: "Demostración inline (páginas 192–193)"
+    page: "192"
+    source_language: es
+
+sketch:
+  es:
+    text: >
+      Considérese un sector de la circunferencia unitaria con
+      ángulo central θ ∈ (0, π/2). Sean B el extremo del arco y
+      C el pie de la perpendicular desde B sobre OA. Por la
+      definición de medida en radianes el arco AB tiene longitud
+      θ, mientras |BC| = sen θ. Geométricamente |BC| < |AB| <
+      arco AB, de donde sen θ < θ y por tanto (sen θ)/θ < 1.
+      Considerando ahora el polígono circunscrito (tangentes en A
+      y B), la circunferencia es menor que el polígono, y se
+      obtiene θ < tan θ, es decir cos θ < (sen θ)/θ. Combinando,
+      cos θ < (sen θ)/θ < 1 para θ ∈ (0, π/2). Como
+      lím_{θ→0} cos θ = 1 (continuidad del coseno) y
+      lím 1 = 1, por el teorema de la compresión
+      lím_{θ→0⁺} (sen θ)/θ = 1. La función (sen θ)/θ es par,
+      luego el límite por la izquierda coincide y se concluye
+      lím_{θ→0} (sen θ)/θ = 1.
+    is_original: true
+    origin: original
+    review_status: unreviewed
+
+quality:
+  extraction_confidence: high
+  dependency_confidence: medium
+  semantic_confidence: high
+  source_alignment_confidence: high
+
+provenance:
+  schema_version: "0.3.1"
+  rerun_id: v0.3.1-stewart-full
+  extracted_by: "llm:claude-opus-4.7"
+  extracted_at: "2026-05-11"
+  derived_from: []
+
+notes: >
+  Stewart's geometric proof — relies on intuitive comparison of
+  arc length to chord and to circumscribed polygon. He explicitly
+  notes that Apéndice F gives a non-intuitive direct proof of
+  θ < tan θ from the formal definition of arc length.
+  dependency_confidence:medium reflects the geometric intuition
+  step. Closes part of the squeeze-theorem usage debt.
