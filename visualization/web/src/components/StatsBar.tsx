@@ -1,94 +1,89 @@
-import type { GraphData, EntityType } from "../types";
-import type { GraphMetrics } from "../graphAnalysis";
-import { TYPE_LABELS, UI_TEXT, type Locale } from "../i18n";
+// Top-bar stats. Total nodes/edges, breakdown by entity type and
+// edge relation, and selection size when a node is active.
+
+import { useMemo } from "react";
+import { useExplorer } from "../state/store";
+import type { GraphPayload } from "../data/types";
+import { RELATION_STYLES, TYPE_COLORS, TYPE_LABELS } from "../theme";
 
 interface Props {
-  data: GraphData;
-  metrics: GraphMetrics;
-  visibleStats: {
-    visibleNodes: number;
-    visibleEdges: number;
-    visibleTypeCounts: Record<EntityType, number>;
-    visibleRoots: number;
-    visibleLeaves: number;
-  };
-  typeCounts: Record<EntityType, number>;
-  longestChainPreview: {
-    length: number;
-    start: string;
-    end: string;
-  } | null;
-  locale: Locale;
+  payload: GraphPayload;
 }
 
-export default function StatsBar({
-  data,
-  metrics,
-  visibleStats,
-  typeCounts,
-  longestChainPreview,
-  locale,
-}: Props) {
-  const text = UI_TEXT[locale];
-  const statements = data.nodes.filter((n) => n.kind === "statement").length;
-  const proofs = data.nodes.filter((n) => n.kind === "proof").length;
+export default function StatsBar({ payload }: Props) {
+  const selectedId = useExplorer((s) => s.selectedId);
+
+  const summary = useMemo(() => {
+    const byType: Record<string, number> = {};
+    for (const n of payload.nodes) byType[n.type] = (byType[n.type] ?? 0) + 1;
+    const byRel: Record<string, number> = {};
+    for (const l of payload.links)
+      byRel[l.relation] = (byRel[l.relation] ?? 0) + 1;
+    return { byType, byRel };
+  }, [payload]);
 
   return (
-    <div className="stats-bar">
-      <div className="stat-card">
-        <span className="stat-label">{text.statsVisibleGraph}</span>
-        <strong>
-          {visibleStats.visibleNodes}/{data.nodes.length}
-        </strong>
-        <span className="stat-detail">
-          {text.nodes} · {visibleStats.visibleEdges}/{data.links.length} {text.edges}
-        </span>
-        <span className="stat-detail">
-          {visibleStats.visibleRoots} {text.visibleRoots} · {visibleStats.visibleLeaves} {text.visibleLeaves}
-        </span>
-      </div>
-
-      <div className="stat-card">
-        <span className="stat-label">{text.statsEntityMix}</span>
-        <strong>
-          {statements} {text.statements} · {proofs} {text.proofs}
-        </strong>
-        <span className="stat-detail">
-          {metrics.roots.size} {text.roots} · {metrics.leaves.size} {text.leaves}
+    <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
+      <div className="text-sm text-slate-700">
+        <span className="font-semibold">{payload.nodes.length}</span>
+        <span className="ml-1 text-slate-500">nodes</span>
+        <span className="mx-2 text-slate-300">·</span>
+        <span className="font-semibold">{payload.links.length}</span>
+        <span className="ml-1 text-slate-500">edges</span>
+        <span className="mx-2 text-slate-300">·</span>
+        <span className="text-[11px] uppercase tracking-wider text-slate-500">
+          v{payload.schema_version}
         </span>
       </div>
 
-      <div className="stat-card">
-        <span className="stat-label">{text.statsStructure}</span>
-        <strong>{metrics.components.length} {text.components}</strong>
-        <span className="stat-detail">
-          {metrics.isDag ? text.dagCompatible : text.cyclesDetected}
-        </span>
-      </div>
-
-      <div className="stat-card">
-        <span className="stat-label">{text.statsLongestChain}</span>
-        <strong>
-          {longestChainPreview ? `${longestChainPreview.length} ${text.hops}` : text.notAvailable}
-        </strong>
-        <span className="stat-detail">
-          {longestChainPreview
-            ? `${longestChainPreview.start} -> ${longestChainPreview.end}`
-            : text.notAvailable}
-        </span>
-      </div>
-
-      <div className="type-summary">
-        {Object.entries(typeCounts).map(([type, count]) => {
-          if (count === 0) return null;
-          const visibleCount = visibleStats.visibleTypeCounts[type as EntityType] ?? 0;
-          return (
-            <span key={type} className="type-summary-pill">
-              {TYPE_LABELS[locale][type as EntityType]} {visibleCount}/{count}
+      <div className="flex flex-wrap gap-1.5">
+        {Object.entries(summary.byType)
+          .sort((a, b) => b[1] - a[1])
+          .map(([t, n]) => (
+            <span
+              key={t}
+              className="inline-flex items-center gap-1 rounded-full bg-slate-100 px-2 py-0.5 text-[11px]"
+            >
+              <span
+                className="inline-block h-2 w-2 rounded-full"
+                style={{
+                  background:
+                    TYPE_COLORS[t as keyof typeof TYPE_COLORS] ?? "#94a3b8",
+                }}
+              />
+              <span className="text-slate-600">
+                {TYPE_LABELS[t as keyof typeof TYPE_LABELS] ?? t}
+              </span>
+              <span className="font-semibold text-slate-800">{n}</span>
             </span>
-          );
-        })}
+          ))}
       </div>
+
+      <div className="flex flex-wrap gap-1.5">
+        {Object.entries(summary.byRel).map(([r, n]) => (
+          <span
+            key={r}
+            className="inline-flex items-center gap-1 rounded-full bg-slate-100 px-2 py-0.5 text-[11px]"
+          >
+            <span
+              className="inline-block h-2 w-2 rounded-full"
+              style={{
+                background:
+                  RELATION_STYLES[r as keyof typeof RELATION_STYLES]?.color ??
+                  "#94a3b8",
+              }}
+            />
+            <span className="text-slate-600">{r}</span>
+            <span className="font-semibold text-slate-800">{n}</span>
+          </span>
+        ))}
+      </div>
+
+      {selectedId && (
+        <div className="ml-auto text-[11px] text-slate-500">
+          selected: <code className="text-slate-700">{selectedId}</code>
+        </div>
+      )}
     </div>
   );
 }
